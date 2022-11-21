@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "95538331ca667fc1",
+        "id": "e1009a83ed5c925b",
         "type": "tabs",
         "children": [
           {
-            "id": "a0184b8973fb370a",
+            "id": "aabab69d71d90588",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Combinatorics/Combination.md",
+                "mode": "preview",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#generating-function",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Combinatorics/Combination.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Combinatorics/Combination.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Combinatorics/Combination.md"
+              }
             }
           }
         ]
@@ -128,13 +136,15 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "a0184b8973fb370a",
+  "active": "aabab69d71d90588",
   "lastOpenFiles": [
+    "Combinatorics/Generating function.md",
     "Combinatorics/Permutation.md",
-    "Combinatorics/Binum.md",
     "Combinatorics/Combination.md",
-    "Graph Theory/מסקנה 5-4.md",
+    "Untitled.md",
     "Graph Theory/number of perfect matchings in complete graph.md",
-    "Graph Theory/Handshaking Theorem.md"
+    "Graph Theory/Handshaking Theorem.md",
+    "Combinatorics/Binum.md",
+    "Graph Theory/מסקנה 5-4.md"
   ]
 }

@@ -1,24 +1,25 @@
-## k-combination
+## k-combination (_n_ choose _k_)
 *binomial coefficient*
-$$C(n,k)=\binom{n}{k}=\frac{n!}{k!(n-k)!}$$
+$$C(n,k)=\binom{n}{k}=\binom{n}{n-k}=\frac{n!}{k!(n-k)!}$$
 
 ## combination with repetitions (Stars and Bars)
-**<u>There are those who exchange n with k!!!!</u>
-
-*k-combination with repetitions*, or *k-multicombination*, or *multisubst* or *צירופים עם חזרות*
+**Combination with Repetitions** also called *k-combination with repetitions*, or *k-multicombination*, or *multisubst* or *צירופים עם חזרות*. and could be pronounced _n_ multichoose _k_.
 
 **Stars and Bars** also called *sticks and stones*, *balls and bars*, and *dots and dividers*.
 
-how many ways there are to put **n indistinguishable balls into k distinguishable Bars**.
+how many ways there are to put **k indistinguishable balls into n distinguishable Bars**.
 
-$$\left(\!\!{k\choose n}\!\!\right)=\binom{n+k-1}{k-1}=\binom{n+k-1}{n}$$
-k = Bars (תאים) distinguishable (שונים)
-n = Balls (כדורים) indistinguishable (זהים)
+$$D(n,k)=\left(\!\!{n\choose k}\!\!\right)=\binom{n+k-1}{n-1}=\binom{n+k-1}{k}$$
+n = Bars (תאים) distinguishable (שונים)
+k = Balls (כדורים) indistinguishable (זהים)
 
-can also be used for number of **nonnegative** solutions of equation: $x_1+\cdots+x_k=n$.
+**<u>There are those who exchange n with k!!!!</u>
+
+can also be used for number of **nonnegative** solutions of equation: $x_1+\cdots+x_n=k$.
 
 #### Restrictions
-**positive** solutions ($x_i > 0$) for $x_1+\cdots+x_k=n$ is: 
-$$\binom{n-1}{k-1}$$
-note: if x_i >= r, so stars = n - r  
-e.g. if x_1 >= 2, and x_2 >= 1, so stars = 10 - 2 - 1 = 7.
+**Minimum restrictions**:
+e.g: **positive** solutions ($x_i > 0$) for $x_1+\cdots+x_n=k$ need to add $-1\cdot n$ to $k$
+$$\binom{k-1}{n-1}$$
+**Maximum restrictions**:
+see #generating-function
