@@ -10,7 +10,10 @@ $$P(n)=n!$$
 $$n^k$$
 
 
-## multiset permutation
-also called ***multinomial theorem*** or ***תמורה עם חזרות*** 
+## Permutations of multisets 
+also called ***multiset permutation*** or ***multinomial theorem*** or ***תמורה עם חזרות***.
 
-$$P(n;k_1,k_2,...,k_i)={n \choose k_1, k_2, \ldots, k_i} = \frac{n!}{k_1!\, k_2! \cdots k_i!}$$
+#multinomial-theorem
+$$P(n;k_1,k_2,...,k_i)={n \choose k_1, k_2, \ldots, k_i} = \frac{n!}{k_1!\, k_2! \cdots k_i!}={k_1\choose k_1}{k_1+k_2\choose k_2}\cdots{k_1+k_2+\cdots+k_i\choose k_i}$$
+
+

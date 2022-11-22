@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "e1009a83ed5c925b",
+        "id": "ec205312ebb28f55",
         "type": "tabs",
         "children": [
           {
-            "id": "aabab69d71d90588",
+            "id": "f28ac96bb57d2f0a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Combinatorics/Combination.md",
-                "mode": "preview",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -48,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#generating-function",
+                "query": "tag:#multinomial-theorem",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Combinatorics/Combination.md",
+                "file": "Combinatorics/Permutation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +98,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Combinatorics/Combination.md",
+                "file": "Combinatorics/Permutation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +121,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Combinatorics/Combination.md"
+                "file": "Combinatorics/Permutation.md"
               }
             }
           }
@@ -136,15 +132,16 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "aabab69d71d90588",
+  "active": "c032efbd88a78fbe",
   "lastOpenFiles": [
-    "Combinatorics/Generating function.md",
+    "Combinatorics/Binomial Coefficient.md",
     "Combinatorics/Permutation.md",
+    "Combinatorics/Generating function.md",
+    "Combinatorics/Binomial Theorem.md",
     "Combinatorics/Combination.md",
+    "Graph Theory/Handshaking Theorem.md",
     "Untitled.md",
     "Graph Theory/number of perfect matchings in complete graph.md",
-    "Graph Theory/Handshaking Theorem.md",
-    "Combinatorics/Binum.md",
     "Graph Theory/מסקנה 5-4.md"
   ]
 }

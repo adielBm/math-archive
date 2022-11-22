@@ -10,8 +10,9 @@ $$C(n,k)=\binom{n}{k}=\binom{n}{n-k}=\frac{n!}{k!(n-k)!}$$
 how many ways there are to put **k indistinguishable balls into n distinguishable Bars**.
 
 $$D(n,k)=\left(\!\!{n\choose k}\!\!\right)=\binom{n+k-1}{n-1}=\binom{n+k-1}{k}$$
-n = Bars (תאים) distinguishable (שונים)
-k = Balls (כדורים) indistinguishable (זהים)
+n = Bars (תאים) distinguishable (שונים).
+
+k = Balls (כדורים) indistinguishable (זהים).
 
 **<u>There are those who exchange n with k!!!!</u>
 
