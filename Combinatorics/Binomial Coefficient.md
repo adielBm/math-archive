@@ -15,11 +15,10 @@ $$\binom n1=\binom{n}{n-1}=n $$
 $$\binom n0 = \binom nn= 1 \quad \text{for } \ n\geq 0$$
 
 # multinomial coefficient
-
-#multinomial-theorem
-
 $${n \choose k_1, k_2, \ldots, k_i} = \frac{n!}{k_1!\, k_2! \cdots k_i!} = {k_1\choose k_1}{k_1+k_2\choose k_2}\cdots{k_1+k_2+\cdots+k_i\choose k_i}$$
 
+#multinomial-theorem 
+See also: [[Permutation#Permutations of multisets]]
 
 # Pascal's rule
 aldo called ***Pascal's-formula*** or ***Pascal's Recurrence*** or ***זהות פסקל***

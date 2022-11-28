@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "ec205312ebb28f55",
+        "id": "0ab953b2fa755837",
         "type": "tabs",
         "children": [
           {
-            "id": "f28ac96bb57d2f0a",
+            "id": "064e819ff9651926",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -44,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#multinomial-theorem",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Combinatorics/Permutation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Combinatorics/Permutation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -120,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Combinatorics/Permutation.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -132,16 +128,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c032efbd88a78fbe",
+  "active": "064e819ff9651926",
   "lastOpenFiles": [
-    "Combinatorics/Binomial Coefficient.md",
-    "Combinatorics/Permutation.md",
     "Combinatorics/Generating function.md",
-    "Combinatorics/Binomial Theorem.md",
     "Combinatorics/Combination.md",
-    "Graph Theory/Handshaking Theorem.md",
-    "Untitled.md",
+    "Set theory/Cardinality.md",
+    "Set theory/Set theroy.md",
+    "Set theory/Tuples.md",
+    "Graph Theory/Planar graphs (5).md",
+    "Graph Theory/corollary 5-4.md",
+    "Graph Theory/Tree.md",
     "Graph Theory/number of perfect matchings in complete graph.md",
-    "Graph Theory/מסקנה 5-4.md"
+    "Graph Theory/maximal matching.md"
   ]
 }

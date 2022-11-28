@@ -1,0 +1,1 @@
+Every graph with $n$ vertices and $k$ edges has at least $n-k$ components.
