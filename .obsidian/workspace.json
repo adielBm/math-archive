@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "0ab953b2fa755837",
+        "id": "329065bc0f84a861",
         "type": "tabs",
         "children": [
           {
-            "id": "064e819ff9651926",
+            "id": "e40e1b60d0ae2d21",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Combinatorics/Permutation.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -44,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "ball",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Combinatorics/Permutation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Combinatorics/Permutation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Combinatorics/Permutation.md"
+              }
             }
           }
         ]
@@ -128,17 +136,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "064e819ff9651926",
+  "active": "e40e1b60d0ae2d21",
   "lastOpenFiles": [
-    "Combinatorics/Generating function.md",
     "Combinatorics/Combination.md",
+    "Combinatorics/Permutation.md",
+    "Set theory/Tuples.md",
+    "Set theory/Relations.md",
+    "Graph Theory/Tree.md",
+    "Graph Theory/Planar graphs (5).md",
+    "Graph Theory/number of perfect matchings in complete graph.md",
     "Set theory/Cardinality.md",
     "Set theory/Set theroy.md",
-    "Set theory/Tuples.md",
-    "Graph Theory/Planar graphs (5).md",
-    "Graph Theory/corollary 5-4.md",
-    "Graph Theory/Tree.md",
-    "Graph Theory/number of perfect matchings in complete graph.md",
-    "Graph Theory/maximal matching.md"
+    "Combinatorics/Binomial Coefficient.md"
   ]
 }
