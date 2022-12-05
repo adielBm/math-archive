@@ -8,7 +8,6 @@ Number of binary relations on a **single set** $A$ (s.t. $|A|=n$ ). ^[https://en
 | Transitive   |          |
 | Reflexive or Irreflexive  | $2^{n^{2}-n}$        |
 | Symmetric   | $2^{\frac{n^2-1}{2}}$        |
-<!-- | Antisymetric | ${2^n} \cdot {3^{\frac{{{n^2} - n}}{2}}} = {2^n}\sqrt {{3^{n\left( {n - 1} \right)}}} .$ | -->
 | Asymmetric | $\sqrt {{3^{n\left( {n - 1} \right)}}}$ |
 | Equivalence relation   | [[Bell numbers]] |
 | Total Order | $n!$ |
