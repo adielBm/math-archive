@@ -36,4 +36,11 @@ or by another method: [[Generating function]]
 #### number solutions of inequality
 number of **nonnegative** solutions of equation $t_1+\cdots+t_n \leq k$. i.e. the number of solutions is: $$\binom{(n+1)+k-1}{(n+1)-1}=\binom{n+k}{n}$$
 
+### Combination with Repetitions ($k=n$)
+
+$$\left(\!\!{n\choose n}\!\!\right)=\binom{2n-1}{n-1}=\binom{2n-1}{n}=\frac{(2n-1)!}{n!\,(n-1)!}$$
+
+this is the [A088218](https://oeis.org/A088218) sequence, which is total number of leaves in all rooted ordered trees with n edges.
+$$1, 1, 3, 10, 35, 126, 462, 1716, 6435, 24310,...$$
+
 
