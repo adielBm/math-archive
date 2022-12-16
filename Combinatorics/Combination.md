@@ -27,11 +27,16 @@ $$\binom{k-1}{n-1}$$
 e.g for $t_1$.  solutions for $t_1+\cdots+t_n=k$ such that $t_1 \ge p$. 
 $$\binom{n+k-p-1}{k-p}$$
 
-##### Maximum restrictions
-e.g. for $t_1$: solutions for $t_1+\cdots+t_n=k$ such that $t_1 \le p$. 
-$$\binom{n+k-1}{k}-\binom{n+k-(p+1)-1}{k-(p+1)}$$
+e.g solutions for $t_1+\cdots+t_n=k$ such that $t_i \ge p$. for each $i \leq m$
+$$\binom{n+k-(p\cdot m)-1}{k-(p\cdot m)}$$
 
-or by another method: [[Generating function]]
+##### Maximum restrictions
+- by [[Generating function]]
+- by [[Inclusion–exclusion principle]] with Minimum restrictions. for e.g, the solutions for $t_1+\cdots+t_n=k$ such that $t_i \lt p$. for each $i \leq m$
+
+$$\begin{equation*}
+\binom{n+k-1}{k} -\binom{m}{1}\binom{n+k-( p\cdot 1) -1}{k-( p\cdot 1)} +\dotsc +( -1)^{m}\binom{m}{m}\binom{n+k-( p\cdot m) -1}{k-( p\cdot m)}
+\end{equation*}$$
 
 #### number solutions of inequality
 number of **nonnegative** solutions of equation $t_1+\cdots+t_n \leq k$. i.e. the number of solutions is: $$\binom{(n+1)+k-1}{(n+1)-1}=\binom{n+k}{n}$$

@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "01c7048c892a3f8b",
+        "id": "3ac2676fd637bf86",
         "type": "tabs",
         "children": [
           {
-            "id": "05ea0e592a3ec137",
+            "id": "713bf1bc09a48633",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Combinatorics/Relations.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -69,7 +65,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "3b1cb887929e9516",
@@ -85,7 +82,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Combinatorics/Relations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +98,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Combinatorics/Relations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +119,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Combinatorics/Relations.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -136,17 +129,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "05ea0e592a3ec137",
+  "active": "713bf1bc09a48633",
   "lastOpenFiles": [
-    "Combinatorics/Generating function.md",
-    "Combinatorics/Permutation.md",
-    "Combinatorics/Derangement.md",
-    "Set theory/Set theroy.md",
     "Combinatorics/Combination.md",
-    "Combinatorics/Stirling numbers.md",
-    "Combinatorics/Relations.md",
-    "Combinatorics/Binomial Coefficient.md",
-    "Combinatorics/Binomial Theorem.md",
-    "Set theory/Cardinality.md"
+    "Combinatorics/Inclusion–exclusion principle.md",
+    "Combinatorics/Generating function.md",
+    "Combinatorics/Pigeonhole principle.md",
+    "Combinatorics/Permutation.md",
+    "Graph Theory/Eulerian path.md",
+    "Graph Theory/Handshaking lemma.md",
+    "Graph Theory/Tree.md",
+    "Graph Theory/Complete graph.md",
+    "Graph Theory/Planar graphs.md"
   ]
 }
