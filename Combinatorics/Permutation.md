@@ -5,10 +5,8 @@ $k$ = number of objects selected
 ### n permute n (תמורה)
 $$P(n)=n!$$
 
-
 ## permutation with repetition
 $$n^k$$
-
 
 ## Permutations of multisets 
 also called ***multiset permutation*** or ***multinomial theorem*** or ***תמורה עם חזרות*** or **המקדם  המולטינומי**

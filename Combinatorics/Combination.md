@@ -1,8 +1,8 @@
-## k-combination (_n_ choose _k_)
+# k-combination (_n_ choose _k_)
 *binomial coefficient*
 $$C(n,k)=\binom{n}{k}=\binom{n}{n-k}=\frac{n!}{k!(n-k)!}$$
 
-## Combination with Repetitions (Stars and Bars)
+# Combination with Repetitions (Stars and Bars)
 combination with repetitions also called *k-combination with repetitions*, or *k-multicombination*, or *multisubst* or *צירופים עם חזרות*. and could be pronounced _n_ multichoose _k_.
 
 **Stars and Bars** also called *sticks and stones*, *balls and bars*, and *dots and dividers*.
@@ -17,7 +17,7 @@ k = Balls (כדורים) indistinguishable (זהים).
 **<u>There are those who exchange n with k!!!!</u>
 
 ### Usage for number of solutions of equation
-can also be used for number of **nonnegative** solutions^[for the equation $x_1+x_2=10$, there are also solution $6+4=10$ and $4+6=10$ and these are considered as two solution. for consider them as a single solution use in Partition https://en.wikipedia.org/wiki/Partition_(number_theory)] of equation $t_1+\cdots+t_n=k$. i.e. the number of solutions is: $$\binom{n+k-1}{k}=\binom{n+k-1}{n-1}$$.
+can also be used for number of **nonnegative** solutions^[for the equation $x_1+x_2=10$, there are also solution $6+4=10$ and $4+6=10$ and these are considered as two solution. for consider them as a single solution use in [[Generating function#Partition]]] of equation $t_1+\cdots+t_n=k$. i.e. the number of solutions is: $$\binom{n+k-1}{k}=\binom{n+k-1}{n-1}$$.
 
 #### Restrictions
 ##### Minimum restrictions
@@ -32,16 +32,18 @@ $$\binom{n+k-(p\cdot m)-1}{k-(p\cdot m)}$$
 
 ##### Maximum restrictions
 - by [[Generating function]]
-- by [[Inclusion–exclusion principle]] with Minimum restrictions. for e.g, the solutions for $t_1+\cdots+t_n=k$ such that $t_i \lt p$. for each $i \leq m$
+- by [[Inclusion–exclusion principle]] with Minimum restrictions. for e.g, the solutions for $t_1+\cdots+t_n=k$ such that $t_i \lt p$. for each $i \leq n$
 
 $$\begin{equation*}
-\binom{n+k-1}{k} -\binom{m}{1}\binom{n+k-( p\cdot 1) -1}{k-( p\cdot 1)} +\dotsc +( -1)^{m}\binom{m}{m}\binom{n+k-( p\cdot m) -1}{k-( p\cdot m)}
+\binom{n+k-1}{k} -\binom{n}{1}\binom{n+k-( p\cdot 1) -1}{k-( p\cdot 1)} +\dotsc +( -1)^{n}\binom{n}{n}\binom{n+k-( p\cdot n) -1}{k-( p\cdot n)}
 \end{equation*}$$
+or 
+$$\binom{n+k-1}{k}+\sum^{n}_{i=1}{(-1)^i\binom{n}{i}\binom{n+k-(p\cdot{i})-1}{k-(p\cdot{i})}}$$
 
 #### number solutions of inequality
 number of **nonnegative** solutions of equation $t_1+\cdots+t_n \leq k$. i.e. the number of solutions is: $$\binom{(n+1)+k-1}{(n+1)-1}=\binom{n+k}{n}$$
 
-### Combination with Repetitions ($k=n$)
+## Combination with Repetitions ($k=n$)
 
 $$\left(\!\!{n\choose n}\!\!\right)=\binom{2n-1}{n-1}=\binom{2n-1}{n}=\frac{(2n-1)!}{n!\,(n-1)!}$$
 

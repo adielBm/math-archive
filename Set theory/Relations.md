@@ -4,8 +4,8 @@ For all $a,b$ and $S\ne \emptyset :$
 - **Reflexive** - $aRa$
 - **Irreflexive** - not $aRa$
 - **Symmetric** - $aRb \implies bRA$
-- **Antisymmetric** - $aRb \land bRA \implies a=b$
-- **Asymmetric** - $aRb \implies$ not $bRa$
+- **Antisymmetric** ^[20476: אנטי סימטרי במובן הרחב] - $aRb \land bRA \implies a=b$
+- **Asymmetric** ^[20476: אנטי סימטרי] - $aRb \implies$ not $bRa$
 - **Connected** - $a=b \implies aRb \lor bRA$
 
 

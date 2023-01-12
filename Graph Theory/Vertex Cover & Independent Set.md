@@ -8,9 +8,8 @@ $$uv \in E \Rightarrow u \in V' \lor v \in V'$$
 
 
 # Independent Set
-An independent set is a set of vertices $S \subseteq V$ which contain no edge of $G$. That is
-$$\forall v,u \in S : vu \notin E$$
 Independent Set $S \subseteq V$ is a set of vertices in a graph, no two of which are adjacent.  
+$$\forall v,u \in S : vu \notin E$$
 
 ##### Maximum independent set
 - $\alpha(G)=|S|$ is number of vertices of maximum independent set.
@@ -20,7 +19,7 @@ maximal independent set ^[קבוצה בלתי תלויה מקסימלית להכ
 - A MIS is also a dominating set in the graph. ^[question 6a]
 
 # Dominating set
-dominating set $D \subseteq V$ of graph $G$ is, such that any vertex of $G$ is either in $D$, or has a neighbor in $D$.
+dominating set ^[קבוצה שלטת] $D \subseteq V$ of graph $G$ is, such that any vertex of $G$ is either in $D$, or has a neighbor in $D$.
 
 # Theorems
 
