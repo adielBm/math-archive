@@ -1,15 +1,25 @@
+## Definitions
+A tree is undirected graph $G=(V,E)$ that satisfies any of the following equivalent conditions:
+- $G$ is connected, acyclic (contain no cycles)
+- $G$ is connected, and $|E|=|V|-1$
+- $G$ has no simple cycles, and $|E|=|V|-1$
 
-### Theorems
+### Leaf
+- A leaf of an (unrooted) tree is a vertex degree 1
 
-- **Theorem 2.5 - Number of edges** - Let $G=(V,E)$ be tree, so $|E|=|V|-1$.
+## Theorems
 - Tree with at least 2 vertices has **at least 2 leaves**. (question 2.3)
-- 
 
 # Forest
-### Properties of Forest
-$k$ is num of components (or trees).
-$$k=|V|-|E| \text{ or } |E|=|V|-k$$
 
+## Definitions
+- **forest** is an acyclic graph
+- **forest** is an graph in which any two vertices are connected by at most one path
+
+## Properties of Forest
+- every of component in forest is tree
+- $k$ is number of components (trees) in forest
+$$k=|V|-|E| \text{ or } |E|=|V|-k$$
 
 # Cayley's formula
 
