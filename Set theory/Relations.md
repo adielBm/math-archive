@@ -1,4 +1,4 @@
-a### Properties
+### Properties
 
 For all $a,b$ and $S\ne \emptyset :$
 - **Reflexive** - $aRa$
