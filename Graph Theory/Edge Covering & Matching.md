@@ -1,4 +1,4 @@
-
+	
 # Edge Cover
 
 **Edge Cover** $F\subseteq E$ of a graph $G=(V,E)$ is a set of edges such that every vertex of the graph is incident to at least one edge of the set. 

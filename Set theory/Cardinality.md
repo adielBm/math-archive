@@ -44,8 +44,8 @@ $B^A$ is set of functions from $A$ to $B$
 - Quastion 21b - cardinality of set of infinite subsets of $\mathbb{N}$ is $\aleph$
 
 ### $\aleph{'}$
-
 - end of section 4.6 - $|\set{0,1}^{\mathbb{R}}|=|P(\mathbb{R})|=\aleph{'}$
+-  question 41 - $\aleph^{\aleph}=\aleph'$ 
 
 ## Cardinality inequalities
 
@@ -55,5 +55,13 @@ $B^A$ is set of functions from $A$ to $B$
 - **Corollary** (4.27) - if $A\subseteq B \subseteq C$, and $|A|=|C|$, then $|A|=|B|$ and $|B|=|C|$
 
 
- 
- 
+## Cardinal arithmetic
+- (Definition 4.36) $|A|\cdot{|B|}=|A\times{B|}$
+- (Theroem 4.37) $\aleph{\cdot{\aleph}}=\aleph$
+- (Theroem 4.37) $\aleph_0{\cdot{\aleph_0}}=\aleph_0$
+- (Theroem 4.38) $\kappa\lambda=\lambda\kappa$
+- (Theroem 4.38) $(\kappa\lambda)\mu=\kappa(\lambda\mu)$
+- (Theroem 4.39) $\kappa(\lambda+\mu)=\kappa\lambda+\kappa\mu$
+- (Theroem 4.42) $|P(A)|=2^{|A|}$ 
+- (Theroem 4.43) $\kappa<{2^\kappa}$ 
+- (Theroem 4.45) $\aleph^{\aleph_0}=\aleph$ 

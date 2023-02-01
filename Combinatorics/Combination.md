@@ -10,11 +10,8 @@ combination with repetitions also called *k-combination with repetitions*, or *k
 how many ways there are to put **k indistinguishable balls into n distinguishable Bars**.
 
 $$D(n,k)=\left(\!\!{n\choose k}\!\!\right)=\binom{n+k-1}{n-1}=\binom{n+k-1}{k}=\frac{(n+k-1)!}{k!\,(n-1)!}$$
-n = Bars (תאים) distinguishable (שונים).
-
-k = Balls (כדורים) indistinguishable (זהים).
-
-**<u>There are those who exchange n with k!!!!</u>
+- **n** - Bars (תאים) distinguishable (שונים).
+- **k** - Balls (כדורים) indistinguishable (זהים).
 
 ### Usage for number of solutions of equation
 can also be used for number of **nonnegative** solutions^[for the equation $x_1+x_2=10$, there are also solution $6+4=10$ and $4+6=10$ and these are considered as two solution. for consider them as a single solution use in [[Generating function#Partition]]] of equation $t_1+\cdots+t_n=k$. i.e. the number of solutions is: $$\binom{n+k-1}{k}=\binom{n+k-1}{n-1}$$.

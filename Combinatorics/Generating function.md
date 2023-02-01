@@ -34,18 +34,19 @@ $$1, 1, 2, 2, 3, 4, 5, 6, 8, 10,\ldots$$
 
 # Useful Generating functions
 
-|                      | Generating functions                                               | Sequence                             |
-| -------------------- | ------------------------------------------------------------------ | ------------------------------------ |
-| Binomial             | $(a+x)^n = \sum_{k=0}^n {n \choose k}a^{n-k}x^k$                   | ${n \choose k}a^{n-k}$               |
-| Binomial             | $(1+x)^n = \sum_{k=0}^n {n \choose k}x^k$                          | ${n \choose k}$                      |
-| multiset coefficient | $\frac{1}{(1-x)^n}=\sum_{k=0}^\infty {n+k-1 \choose k}x^k=(1+x+x^2+...)^n$         | ${n+k-1 \choose k}$                  |
-|                      | $\frac{1}{1-ax}=\sum_{k=0}^\infty a^k x^k = 1+ax+a^2x^2+{\cdots}$  | $a^0,a^1,a^2,a^3,...$                |
-|                      |   $\frac{1}{1-x^2}= 1+x^2+x^4{\cdots}$   |  $1,0,1,0,...$                                     |
-|                      | $\frac{x}{1-x^2}= x+x^3+x^5{\cdots}$                               | $0,1,0,1,...$                        |
-|                      | $\frac{1}{1+x}=\sum_{k=0}^{\infty}(-1)^k x^k=1-x+x^2-x^3+{\cdots}$ | $1,-1,1,-1,...$                      |
-| infinite             | $\frac{1}{1-x}=\sum_{k=0}^\infty x^k = 1+x+x^2+{\cdots}$           | $1,1,1,1,...$                        |
-| finite               | $\frac{1-x^{n+1}}{1-x}=\sum_{k=0}^n x^k = 1+x+x^2+{\cdots}+x^n$    | $1,1,1,1,...,n$                      |
-| ratio                | $\frac{1}{1-x^r}=\sum_{k=0}^\infty x^{kr}=1+x^r+x^{2r}+{\cdots}$   | $c_k=1$ if $r\vert k$ ;  otherwise 0 |
+|          | Generating functions                             | Sequence $c_0,c_1,c_2,\ldots$             |
+| -------- | ------------------------------------------------ | ---------------------- |
+| Binomial | $(a+x)^n = \sum_{k=0}^n {n \choose k}a^{n-k}x^k$ | ${n \choose k}a^{n-k}$ |
+| Binomial | $(1+x)^n = \sum_{k=0}^n {n \choose k}x^k$        | ${n \choose k}$        |
+| Binomial | $(1-x)^n = \sum_{k=0}^{n}{(-1)^k}{n \choose k}x^k$        | ${(-1)^k}{n \choose k}$        |
+| multiset coefficient | $\frac{1}{(1-x)^n}=\sum_{k=0}^\infty {n+k-1 \choose k}x^k=(1+x+x^2+...)^n$ | ${n+k-1 \choose k}$                  |
+|                      | $\frac{1}{1-ax}=\sum_{k=0}^\infty a^k x^k = 1+ax+a^2x^2+{\cdots}$          | $a^0,a^1,a^2,a^3,...$                |
+|                      | $\frac{1}{1-x^2}= 1+x^2+x^4{\cdots}$                                       | $1,0,1,0,...$                        |
+|                      | $\frac{x}{1-x^2}= x+x^3+x^5{\cdots}$                                       | $0,1,0,1,...$                        |
+|                      | $\frac{1}{1+x}=\sum_{k=0}^{\infty}(-1)^k x^k=1-x+x^2-x^3+{\cdots}$         | $1,-1,1,-1,...$                      |
+| infinite             | $\frac{1}{1-x}=\sum_{k=0}^\infty x^k = 1+x+x^2+{\cdots}$                   | $1,1,1,1,...$                        |
+| finite               | $\frac{1-x^{n+1}}{1-x}=\sum_{k=0}^n x^k = 1+x+x^2+{\cdots}+x^n$            | $1,1,1,1,...,n$                      |
+| ratio                | $\frac{1}{1-x^r}=\sum_{k=0}^\infty x^{kr}=1+x^r+x^{2r}+{\cdots}$           | $c_k=1$ if $r\vert k$ ;  otherwise 0 |
 
 
 		

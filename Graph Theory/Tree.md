@@ -27,3 +27,6 @@ $$k=|V|-|E| \text{ or } |E|=|V|-k$$
 - There is **Bijection between Prüfer Sequences and Labeled Trees.** That is, every labeled tree has a unique Prüfer sequence that defines it, and every Prüfer sequence defines just one labeled tree. 
 - **Cayley's formula** (2.9) - The number of labeled trees with $n$ vertices is $n^{n−2}$
 
+todo...
+התגים שמופיעים בסדרת פרופר הם לא עלים ודרגתם לפי מספר ההופעות.
+השאר שאינם בסדרה, הם עלים, כלומר דרגתם 1.
