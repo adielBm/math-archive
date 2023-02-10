@@ -1,4 +1,4 @@
-# Definetions 
+****# Definetions 
 
 For all $a,b$ and $R\ne \emptyset$
 - **Reflexive** - $aRa$
@@ -12,9 +12,9 @@ For all $a,b$ and $R\ne \emptyset$
 
 |                                                | Reflexive | Irreflexive | Symmetric | Antisymmetric | Asymmetric | Connected |
 | ---------------------------------------------- | --------- | ----------- | --------- | ------------- | ---------- | --------- |
-| [[#Equivalence relation]]                      | TRUE      |             | TRUE      |               |            |           |
-| **Strict partial order,(סדר חלקי 20476)** |           | TRUE        |           |               | TRUE       |           |
-|  **Strict total order, (יחס סדר מלא 20476)**                         |            | TRUE         |            |                | TRUE        | TRUE       |
+| [[#Equivalence relation]]                      | **TRUE**      |             | **TRUE**      |               |            |           |
+| **Strict partial order,(סדר חלקי 20476)** |           | **TRUE**        |           |               | **TRUE**       |           |
+|  **Strict total order, (יחס סדר מלא 20476)**                         |            | **TRUE**         |            |                | TRUE (because **Irreflexivity** and **transitivity**)        | **TRUE**       |
 
 
 # Theorems

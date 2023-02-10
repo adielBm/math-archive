@@ -4,6 +4,7 @@
 - **Circuit** (*מעגל, מסלול סגור*) - is a non-empty trail in which the first and last vertices are equal.
 - **Cycle** (*מעגל פשוט*) - is a non-empty trail in which only the first and last vertices are equal.
 - **Cycle graph** is a graph that consists of a single cycle.
+- A cycle with an even number of vertices is called an **even cycle**; a cycle with an odd number of vertices is called an **odd cycle**.
 
 ### Theorems
 - Let $G=(V,E)$ a [[connected graph]], and $|V|\leq|E|$, then there is a cycle in the graph.

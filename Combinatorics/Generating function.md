@@ -34,19 +34,36 @@ $$1, 1, 2, 2, 3, 4, 5, 6, 8, 10,\ldots$$
 
 # Useful Generating functions
 
-|          | Generating functions                             | Sequence $c_0,c_1,c_2,\ldots$             |
-| -------- | ------------------------------------------------ | ---------------------- |
-| Binomial | $(a+x)^n = \sum_{k=0}^n {n \choose k}a^{n-k}x^k$ | ${n \choose k}a^{n-k}$ |
-| Binomial | $(1+x)^n = \sum_{k=0}^n {n \choose k}x^k$        | ${n \choose k}$        |
-| Binomial | $(1-x)^n = \sum_{k=0}^{n}{(-1)^k}{n \choose k}x^k$        | ${(-1)^k}{n \choose k}$        |
-| multiset coefficient | $\frac{1}{(1-x)^n}=\sum_{k=0}^\infty {n+k-1 \choose k}x^k=(1+x+x^2+...)^n$ | ${n+k-1 \choose k}$                  |
-|                      | $\frac{1}{1-ax}=\sum_{k=0}^\infty a^k x^k = 1+ax+a^2x^2+{\cdots}$          | $a^0,a^1,a^2,a^3,...$                |
-|                      | $\frac{1}{1-x^2}= 1+x^2+x^4{\cdots}$                                       | $1,0,1,0,...$                        |
-|                      | $\frac{x}{1-x^2}= x+x^3+x^5{\cdots}$                                       | $0,1,0,1,...$                        |
-|                      | $\frac{1}{1+x}=\sum_{k=0}^{\infty}(-1)^k x^k=1-x+x^2-x^3+{\cdots}$         | $1,-1,1,-1,...$                      |
-| infinite             | $\frac{1}{1-x}=\sum_{k=0}^\infty x^k = 1+x+x^2+{\cdots}$                   | $1,1,1,1,...$                        |
-| finite               | $\frac{1-x^{n+1}}{1-x}=\sum_{k=0}^n x^k = 1+x+x^2+{\cdots}+x^n$            | $1,1,1,1,...,n$                      |
-| ratio                | $\frac{1}{1-x^r}=\sum_{k=0}^\infty x^{kr}=1+x^r+x^{2r}+{\cdots}$           | $c_k=1$ if $r\vert k$ ;  otherwise 0 |
+|                      | Generating function                                                            | Sequence $c_0,c_1,c_2,\ldots,c_k,\ldots$ |                                      |
+| -------------------- | ------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------ |
+| Infinite geometric   | $\frac{1}{1-x}=\sum_{k=0}^\infty x^k = 1+x+x^2+{\cdots}$                       | $1,1,1,1,...$                            |                                      |
+| Finite geometric     | $\frac{1-x^{n+1}}{1-x}=\sum_{k=0}^n x^k = 1+x+x^2+{\cdots}+x^n$                | $1,1,1,1,...,n$                          |                                      |
+| ratio                | $\frac{1}{1-x^r}=\sum_{k=0}^\infty x^{kr}=1+x^r+x^{2r}+{\cdots}$               |                                          | $c_k=1$ if $r\vert k$ ;  otherwise 0 |
+|                      | $\frac{1}{1-ax}=\sum_{k=0}^\infty a^k x^k = 1+ax+a^2x^2+{\cdots}$              | $a^0,a^1,a^2,a^3,...$                    | $a^k$                                |
+|                      | $\frac{1}{1-x^2}=\sum^{\infty}_{k=0}x^{2k}=1+x^2+x^4{\cdots}$                  | $1,0,1,0,...$                            |                                      |
+|                      | $\frac{x}{1-x^2}=\sum^{\infty}_{k=0}x^{2k+1}=x+x^3+x^5{\cdots}$                | $0,1,0,1,...$                            |                                      |
+|                      | $\frac{1}{1+x}=\sum_{k=0}^{\infty}(-1)^k x^k=1-x+x^2-x^3+{\cdots}$             | $1,-1,1,-1,...$                          |                                      |
+| exponential function | $e^x=\sum_{k=0}^\infty{x^k \over k!}=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots$ |                                          | $\frac{1}{k!}$                       |
+
+## Binomial coefficient
+
+|                         | Generating function                                |                         |
+| ----------------------- | -------------------------------------------------- | ----------------------- |
+| basic                   | $(1+x)^n = \sum_{k=0}^n {n \choose k}x^k$          | ${n \choose k}$         |
+| multiplied by $a^{n-k}$ | $(a+x)^n = \sum_{k=0}^n {n \choose k}a^{n-k}x^k$   | ${n \choose k}a^{n-k}$  |
+| multiplied by $(-1)^k$  | $(1-x)^n = \sum_{k=0}^{n}{(-1)^k}{n \choose k}x^k$ | ${(-1)^k}{n \choose k}$ |
+
+## Multiset coefficient
+
+| | Generating function | |
+| -- | -- | -- | -- | 
+| basic | $\frac{1}{(1-x)^n}=\sum_{k=0}^\infty {n+k-1 \choose k}x^k=(1+x+x^2+...)^n$ |                      | ${n+k-1 \choose k}$     |
+|  multiplied by $(-1)^k$    | $\frac{1}{(1+x)^n}=\sum_{k=0}^\infty (-1)^k{n+k-1 \choose k}x^k=(1-x+x^2-...)^n$ |                      | $(-1)^k{n+k-1 \choose k}$     |
+|  $n=2$                    | $\frac{1}{(1-x)^2}=\sum_{k=0}^\infty {(k+1)}x^k=1+2x+3x^2+\ldots$          | $1,2,3,\ldots$                           | $k+1$    |
+|  $n=2$, and multiplied by $x$                    | $\frac{x}{(1-x)^2}=\sum_{k=0}^\infty {k}x^k=x+2x^2+3x^3+\ldots$          | $0,1,2,\ldots$                           | $k$    |
+| multiplied by $a^k$  | $\frac{1}{(1-ax)^n}=\sum_{k=0}^\infty a^k{n+k-1 \choose k}x^k=(1+ax+a^2x^2+...)^n$ |                      | $a^k{n+k-1 \choose k}$     |
 
 
-		
+### some useful identities 
+- $(x^3+x^4+\cdots)=x^3(1+x+x^2+\cdots)$
+

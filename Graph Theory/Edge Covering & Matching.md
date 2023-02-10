@@ -30,3 +30,5 @@ A perfect matching is also a minimum-size edge cover. If there is a perfect matc
 A maximal matching is a matching $M$ of a graph $G$ that is not a subset of any other matching.
 
 
+#### Matching in Bipartite graph
+- see [[Bipartite graph#Matching in Bipartite graph|Matching in Bipartite graph]]

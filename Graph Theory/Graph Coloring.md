@@ -1,7 +1,7 @@
 
 - **vertex $k$-coloring** of the simple graph $G=(V,E)$ is a mapping $$c: V \to \left\{{1, 2, \ldots k}\right\}$$
 - A **proper $k$-vertex coloring** of a simple graph $G=(V, E)$ is defined as **vertex $k$-coloring** such that no two adjacent vertices share a common color. i.e. $$\forall e = \set {u, v} \in E:  c(u)\ne c(v)$$
-- The **chromatic number** $\chi(G)$ of a graph $G$ is the smallest positive integer $k$ such that there exists a **proper vertex $k$-coloring** of $G$.
+- The **chromatic number** $\chi(G)$ (מספר הצביעה) of a graph $G$ is the smallest positive integer $k$ such that there exists a **proper vertex $k$-coloring** of $G$.
 - A graph is said to be **$k$-colorable** if $\chi(G) \leq k$.
 
 ### Examples
