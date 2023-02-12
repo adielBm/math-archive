@@ -3,7 +3,7 @@ $$\left|\bigcup_{i=1}^n A_i\right| = \sum_{i=1}^n |A_i| - \sum_{1 \leqslant i < 
 
 ## Intersction form 
 
-remark: $S$ is a universal set
+>remark: $S$ is a universal set
 
 $$\left|\bigcap_{i=1}^n A^{\complement}_i\right| = \left|S \setminus \bigcup_{i=1}^n A_i \right| =|S| - \sum_{i=1}^n |A_i| + \sum_{1 \leqslant i < j \leqslant n} |A_i\cap A_j| - \cdots + (-1)^n |A_1\cap\cdots\cap A_n|$$
 

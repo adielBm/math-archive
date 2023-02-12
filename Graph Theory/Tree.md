@@ -23,16 +23,16 @@ $$k=|V|-|E| \text{ or } |E|=|V|-k$$
 
 # Cayley's formula
 
+- **Cayley's formula** (2.9) - The number of labeled trees with $n$ vertices is $n^{n−2}$
+	
+## Prüfer sequence
+
 - **Prüfer sequence** of a labeled tree is a unique sequence associated with the tree. The sequence for a tree on $n$ vertices has length $n−2$
 - There is **Bijection between Prüfer Sequences and Labeled Trees.** That is, every labeled tree has a unique Prüfer sequence that defines it, and every Prüfer sequence defines just one labeled tree. 
-- **Cayley's formula** (2.9) - The number of labeled trees with $n$ vertices is $n^{n−2}$
+- The labels that appear in the Prüfer sequence are **not leaves**, and their deggree is the number of **appearances in the sequence** $+1$.
+- The labels that **not appear** in the sequence are **leaves**, that is their deggree is 1.
 
-todo...
-1+התגים שמופיעים בסדרת פרופר הם לא עלים ודרגתם לפי מספר ההופעות.
-השאר שאינם בסדרה, הם עלים, כלומר דרגתם 1.
-
-
-## Labeled Tree from Prüfer Sequence
+## Prüfer Sequence to Labeled Tree 
 Given a Prüfer sequence, it is possible to generate a finite labeled tree corresponding to that sequence.
 
 Let $P=(a_1,a_2,\ldots,a_{n−2})$ be a Prüfer sequence. This will be called **the sequence**.
@@ -45,8 +45,7 @@ It is assumed the sequence is not empty.
 4. Find the **smallest number in the list** which is *not* in **the sequence**, and also the **first number in the the sequence**. Add an edge to the tree connecting the nodes whose labels correspond to those numbers.
 5. Delete the first of those numbers from **the list** and the second from **the sequence**. This leaves a smaller **list** and a shorter **sequence**. Then return to **step 3**.
 
-
-## Prüfer Sequence from Labeled Tree
+## Labeled Tree to Prüfer Sequence
 Given a finite labeled tree, it is possible to generate a Prüfer sequence corresponding to that tree.
 
 Let $T$ be a labeled tree of order $n$, where the labels are assigned the values $1$ to $n$.

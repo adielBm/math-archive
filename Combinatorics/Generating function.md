@@ -21,23 +21,14 @@ Number of solutions of equation $a_1 t_1+a_2 t_2+ \ldots + a_n t_n = k$. ^[quest
 The coefficient of $x^k$ in the following generating function is the number of solutions.
 $$f(x)=(1+x^{a_1}+x^{2a_1}+\ldots)(1+x^{a_2}+x^{2a_2}+\ldots)\cdots(1+x^{a_n}+x^{2a_n}+\ldots)$$
 ## Partition
-partition of a positive integer n, also called an integer partition, is a way of writing n as a sum of positive integers. Two sums that differ only in the order of their summands are considered the same partition. 
-
-The partition function $p(n)$ equals the number of possible partitions of a non-negative integer $n$.
-The values of this function for $1,2,3,\ldots$ are: (A000041)
-$$1, 1, 2, 3, 5, 7, 11, 15, 22, 30, 42, 56,\ldots$$
-
-#### Partition Q (distinct parts)
-$Q(n)$, also denoted $q(n)$, gives the number of ways of writing the integer $n$ as a sum of positive integers without regard to order with the constraint that **all integers in a given partition are distinct**. (A000009)
-$$1, 1, 2, 2, 3, 4, 5, 6, 8, 10,\ldots$$
-
+> See [[Partition]]
 
 # Useful Generating functions
 
 |                      | Generating function                                                            | Sequence $c_0,c_1,c_2,\ldots,c_k,\ldots$ |                                      |
 | -------------------- | ------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------ |
+| Finite geometric     | $\frac{1-x^{n+1}}{1-x}=\frac{x^{n+1}-1}{x-1}=\sum_{k=0}^n x^k = 1+x+x^2+{\cdots}+x^n$                | $1,1,1,1,...,n$                          |                                      |
 | Infinite geometric   | $\frac{1}{1-x}=\sum_{k=0}^\infty x^k = 1+x+x^2+{\cdots}$                       | $1,1,1,1,...$                            |                                      |
-| Finite geometric     | $\frac{1-x^{n+1}}{1-x}=\sum_{k=0}^n x^k = 1+x+x^2+{\cdots}+x^n$                | $1,1,1,1,...,n$                          |                                      |
 | ratio                | $\frac{1}{1-x^r}=\sum_{k=0}^\infty x^{kr}=1+x^r+x^{2r}+{\cdots}$               |                                          | $c_k=1$ if $r\vert k$ ;  otherwise 0 |
 |                      | $\frac{1}{1-ax}=\sum_{k=0}^\infty a^k x^k = 1+ax+a^2x^2+{\cdots}$              | $a^0,a^1,a^2,a^3,...$                    | $a^k$                                |
 |                      | $\frac{1}{1-x^2}=\sum^{\infty}_{k=0}x^{2k}=1+x^2+x^4{\cdots}$                  | $1,0,1,0,...$                            |                                      |

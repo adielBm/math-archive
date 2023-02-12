@@ -9,7 +9,8 @@ then the solution to the recurrence relation is
 - for **Distinct roots**: $a_n = ar_1^n + br_2^n$
 - for **Repeated roots:** $a_n = ar^n + bnr^n$
 
-where a and b are constants determined by the initial conditions of a recurrence relation.
+where $a$ and $b$ are constants determined by the initial conditions of a recurrence relation.
 
-
+___
+$r=\frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
 
