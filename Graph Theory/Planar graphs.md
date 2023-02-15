@@ -10,7 +10,6 @@
 - $K_5$ is nonplanar. (theorem 5.2)
 - the graph that derived from $K_5$ by remove some edge is planar. (q1)
 
-
 ## Subdivision
 
 -  The **Edge Subdivision** ^[elementary subdivision, עידון של קשת] operation for an edge $\set{u,v}\in E$ is the deletion of $\set{u,v}$ from $G$ and the addition of two edges $\set{u,w}$ and $\set{w,v}$ along with the new vertex $w$.
@@ -18,7 +17,7 @@
 - The graphs $G_1=(V_1,E_1)$ and $G_2=(V_2,E_2)$ are called **homeomorphic** if they can be obtained from the same graph by a sequence of edge subdivisions.
 
 ### Theorems
-- **Theorem** (5.7) - A graph $G$ is planar if and only if every subdivision of $G$ is planar.
-- **Kuratowski's theorem** (5.8) - A graph is planar if and only if it does not contain a subgraph that is a subdivision of $K_5$ or $K_{3,3}$.
+- **Theorem** (5.7) - A graph $G$ is planar, if and only if, every subdivision of $G$ is planar.
+- **Kuratowski's theorem** (5.8) - A graph is planar, if and only if, it does not contain a [[Basic#Subgraphs|subgraph]] that is a subdivision of $K_5$ or $K_{3,3}$.
 
 

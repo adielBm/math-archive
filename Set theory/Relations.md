@@ -1,5 +1,3 @@
-****# Definetions 
-
 For all $a,b$ and $R\ne \emptyset$
 - **Reflexive** - $aRa$
 - **Irreflexive** - not $aRa$
@@ -13,9 +11,8 @@ For all $a,b$ and $R\ne \emptyset$
 |                                                | Reflexive | Irreflexive | Symmetric | Antisymmetric | Asymmetric | Connected |
 | ---------------------------------------------- | --------- | ----------- | --------- | ------------- | ---------- | --------- |
 | [[#Equivalence relation]]                      | **TRUE**      |             | **TRUE**      |               |            |           |
-| **Strict partial order,(סדר חלקי 20476)** |           | **TRUE**        |           |               | **TRUE**       |           |
-|  **Strict total order, (יחס סדר מלא 20476)**                         |            | **TRUE**         |            |                | TRUE (because **Irreflexivity** and **transitivity**)        | **TRUE**       |
-
+| **Strict partial order,(סדר חלקי 20476)** |           | **TRUE**        |           |               | TRUE ^[because **Irreflexivity** and **transitivity**]      |           |
+|  **Strict total order, (יחס סדר מלא 20476)**                         |            | **TRUE**         |            |                | TRUE ^[because **Irreflexivity** and **transitivity**]        | **TRUE**       |
 
 # Theorems
 ## Reflexivity
@@ -35,19 +32,25 @@ For all $a,b$ and $R\ne \emptyset$
 - (question 27) - let $R$ relation, then $R\cap{R}^{-1}$ and $R\cup{R}^{-1}$ are symmetric
 - (defintion 2.10) - asymmetric implies antisymmetric
 - (question 29) - asymmetry implies **irreflexivity**
-- **Irreflexivity** and **transitivity** together imply asymmetry
+- (question 54a) - **Irreflexivity** and **transitivity** together imply asymmetry
+- (question 30a) - if $R$ is asymmetric, then $R^{-1}$ is also asymmetric
+- (question 30b) - if $R$ is antisymmetric, then $R^{-1}$ is also antisymmetric
+- (question 31a) -  if $R$ is asymmetric, then $S\subseteq{R}$ is also asymmetric.
+- (question 31b) -  if $R$ is antisymmetric, then $S\subseteq{R}$ is also antisymmetric.
+- (question 32b) - if $R,S$ are asymmetric, then $R\cap{S}$ is asymmetric
+- (question 33b) - if $R,S$ are antisymmetric, then $R\cap{S}$ is antisymmetric
 
 ## Transitivity
 
 - (theorem 2.12) $R$ is transitive if and only if $R^2\subseteq{R}$
-- (question 26) - if $R,S$ are transitive, then $R\cap{S}$ are also transitive
+- (question 36a) - if $R,S$ are transitive, then $R\cap{S}$ is transitive
 
 # Converse relation
 converse relation $R^{-1}$, of a binary relation $R$, is the relation that occurs when the order of the elements is switched in the relation
 
 - If a **relation** is reflexive, irreflexive, symmetric, antisymmetric, asymmetric, transitive, connected, trichotomous, a partial order, total order, strict weak order, total preorder (weak order), or an equivalence relation, **its converse is too**.
 - Let $R$ relation from $A$ to $B$, and $S$ relation from $B$ to $C$, then $(RS)^{-1}=S^{-1}R^{-1}$. ^[Question 69]
-- 
+
 
 # Complementary relation
 A binary relation $R$ defined as a subset of a product of sets $A\times B$. The complementary relation $\overline{R}$ is the set complement of $R$ in $A\times{B}$. The complement of relation $R$ can be written $\overline{R}=(A\times{B})\setminus{R}$.
@@ -66,10 +69,13 @@ $$aR^2b\Leftrightarrow\exists{x}\in{A}(aRx\land xRb)$$
 
 - An **equivalence relation** is a binary relation $R$ on $A$ that is **reflexive**, **symmetric** and **transitive**
 - The **quotient set** $A/R$ is the set of equivalence classes.
-- The **equivalence class** of $a\in{A}$ under equivalence relation $R$ is the set $[a] = \{x \in A : x R a\}$
+- The **equivalence class** of $a\in{A}$ under equivalence relation $R$ is the set $[a]=\{x \in A : x R a\}$ ^[20476 notation: $\overline{a}$]
 - The [[Bell numbers|Bell number]] $B_{n}$ counts **the number of different ways to partition a set** that has exactly $n$ elements, or equivalently, **the number of equivalence relations** on it.
+
+#### Theorems 
+- (question 43) if $E_1, E_2$ are equivalence relations on a set $A$, then $E_1\cap{E_2}$ is also equivalence relation on $A$.
 
 ## Partition of a set
  - A **partition of a set** (quotient set) is a grouping of its elements into non-empty subsets that called **cells** (equivalence classes), in such a way that every element is included in exactly one subset.
- - Every equivalence relation on a set defines a partition of this set, and every partition defines an equivalence relation.
+ - Every equivalence relation on a set defines a partition of this set, and every partition defines an equivalence relation. (theorem 2.16)
  - A partition $P_1$ is called a **refinement** ^[עידון] of the partition $P_2$ if every set in $P_1$ is a subset of one of the sets in $P_2$.

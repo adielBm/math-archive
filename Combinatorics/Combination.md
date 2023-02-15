@@ -9,7 +9,7 @@ Number of ways to distribute **$k$ identical Balls** into **$n$ distinct Boxes**
 
 $$D(n,k)=\left(\!\!{n\choose k}\!\!\right)=\binom{n+k-1}{n-1}=\binom{n+k-1}{k}=\frac{(n+k-1)!}{k!\,(n-1)!}$$
 
-## Usage for number of solutions of equation
+## Counting solutions of equation
 can also be used for number of **nonnegative** solutions^[for the equation $x_1+x_2=10$, there are also solution $6+4=10$ and $4+6=10$ and these are considered as two solution. for consider them as a single solution use in [[Generating function#Partition]]] of equation $t_1+\cdots+t_n=k$. i.e. the number of solutions is: $$\binom{n+k-1}{k}=\binom{n+k-1}{n-1}$$.
 
 ### Restrictions
@@ -31,6 +31,11 @@ $$\sum^{n}_{i=0}{(-1)^i\binom{n}{i}\binom{n+k-pi-1}{n-1}}$$
 
 #### number solutions of inequality
 number of **nonnegative** solutions of equation $t_1+\cdots+t_n \leq k$. i.e. the number of solutions is: $$\binom{(n+1)+k-1}{(n+1)-1}=\binom{n+k}{n}$$
+
+#### Sum of $a$ first terms greater than or equal to $b$
+- nonnegative solutions for $x_1+\cdots+x_n=k$, such that $x_1+\ldots+x_a\geq{b}$.
+$$\sum_{i=0}^{a-1}{\binom{a+b+i-1}{b+i}}\binom{n-a+k-(b+i)-1}{k-(b+i)}$$
+
 
 ## Combination with Repetitions ($k=n$)
 

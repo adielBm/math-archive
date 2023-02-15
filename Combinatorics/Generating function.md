@@ -43,6 +43,8 @@ $$f(x)=(1+x^{a_1}+x^{2a_1}+\ldots)(1+x^{a_2}+x^{2a_2}+\ldots)\cdots(1+x^{a_n}+x^
 | basic                   | $(1+x)^n = \sum_{k=0}^n {n \choose k}x^k$          | ${n \choose k}$         |
 | multiplied by $a^{n-k}$ | $(a+x)^n = \sum_{k=0}^n {n \choose k}a^{n-k}x^k$   | ${n \choose k}a^{n-k}$  |
 | multiplied by $(-1)^k$  | $(1-x)^n = \sum_{k=0}^{n}{(-1)^k}{n \choose k}x^k$ | ${(-1)^k}{n \choose k}$ |
+|                    | $(1+x^m)^n = \sum_{k=0}^n {n \choose k}x^{mk}$          | ${n \choose k}$         |
+|                    | $(1-x^m)^n = \sum_{k=0}^n (-1)^{k}{n \choose k}x^{mk}$          | ${n \choose k}$         |
 
 ## Multiset coefficient
 
@@ -55,6 +57,9 @@ $$f(x)=(1+x^{a_1}+x^{2a_1}+\ldots)(1+x^{a_2}+x^{2a_2}+\ldots)\cdots(1+x^{a_n}+x^
 | multiplied by $a^k$  | $\frac{1}{(1-ax)^n}=\sum_{k=0}^\infty a^k{n+k-1 \choose k}x^k=(1+ax+a^2x^2+...)^n$ |                      | $a^k{n+k-1 \choose k}$     |
 
 
-### some useful identities 
-- $(x^3+x^4+\cdots)=x^3(1+x+x^2+\cdots)$
+### useful identities of factoring out  
+- $(x^3+x^4+\cdots)^n=(x^3)^n(1+x+x^2+\cdots)^n$
+- $(x+x^2+x^4+x^5+x^7+\ldots)^n=(x+x^2)^n(1+x^3+x^6+\ldots)^n$
+- $(1+x^2+x^3+\cdots)^n=(\frac{1}{1-x}-x)^n=(1-x(1-x))^n{\frac{1}{(1-x)^n}}=(1-x+x^2)^n\frac{1}{(1-x)^n}$
+- $(1-x)^3=(1-x)(1+x+x^2)$
 

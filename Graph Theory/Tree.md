@@ -24,7 +24,7 @@ $$k=|V|-|E| \text{ or } |E|=|V|-k$$
 # Cayley's formula
 
 - **Cayley's formula** (2.9) - The number of labeled trees with $n$ vertices is $n^{n−2}$
-	
+
 ## Prüfer sequence
 
 - **Prüfer sequence** of a labeled tree is a unique sequence associated with the tree. The sequence for a tree on $n$ vertices has length $n−2$

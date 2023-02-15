@@ -4,7 +4,7 @@ Number of binary relations on a **single set** $A$ (s.t. $|A|=n$ ). ^[https://en
 
 | Relation type      | Number of relations on a **Single Set** of _n_-elemetns |
 | ----------- | ----------- | 
-| Any ^[it's same as the **number of functions** from $A$ to $P(A)$ ]     | $2^{n^{2}}$  |
+| Any ^[it's the same as the **number of functions** from $A$ to $P(A)$ ]     | $2^{n^{2}}$  |
 | Transitive   |          |
 | Reflexive or Irreflexive  | $2^{n^{2}-n}$        |
 | Symmetric   | $2^{\frac{n^2-1}{2}}$        |
@@ -12,7 +12,6 @@ Number of binary relations on a **single set** $A$ (s.t. $|A|=n$ ). ^[https://en
 | Asymmetric | $\sqrt {{3^{n\left( {n - 1} \right)}}}$ |
 | Equivalence relation   | [[Bell numbers]] |
 | Total Order | $n!$ |
-
 
 #### Number of any Relations from A to B 
 $$2^{\mid A \mid \cdot \mid B \mid} = {\mid}P(A\times B){\mid}$$  

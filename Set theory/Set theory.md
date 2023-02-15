@@ -1,3 +1,13 @@
+## Axiomes
+
+**Axiom of the Empty Set** - אקסיומת הקבוצה הריקה
+$$\exists x\, \forall y\, \lnot (y \in x)$$
+
+**Axiom of extensionality** - אקסיומת ההקף
+$$\forall A \, \forall B \, ( \forall X \, (X \in A \iff X \in B) \implies A = B)$$
+
+# Theorems 
+
 - (1.16a) - $A\cap{B}\subseteq{A}$ and $A\cap{B}\subseteq{B}$
 - (1.16b) - $A\cap{A}=A$
 - (1.16c) - $A\cap{\emptyset}=\emptyset$
@@ -13,9 +23,9 @@
 
 - De Morgan's laws (1.26a) - $(A\cup{B})^{\complement}=A^{\complement}\cap{B^{\complement}}$ 
 - De Morgan's laws (1.26b) - $(A\cap{B})^{\complement}=A^{\complement}\cup{B^{\complement}}$ 
-- 
-
 
 - $B\cap{(\bigcup_{a\in\Gamma}{A_a})}=\bigcup_{a\in\Gamma}$
+
+
 
 

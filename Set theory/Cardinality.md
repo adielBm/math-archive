@@ -1,11 +1,6 @@
-# Axioms
-
-- **Axiom of countable choice**
-
-# Definitions
-
 - Definition 4.1 - $A$ is countable if and only if there exists a bijection between $A$ and a subset of $\mathbb{N}$.
 - Definition 4.3 - Let $A$ be a set. $A$ is **countable** if and only if it is **finite** or **countably infinite**. 
+- **Axiom of countable choice**
 
 # Theorems
 
@@ -54,11 +49,12 @@ $B^A$ is set of functions from $A$ to $B$
 - In terms of the cardinality of the two sets, this classically implies that if $|A| ≤ |B|$ and $|B| ≤ |A|$, then $|A|=|B|$.
 - **Corollary** (4.27) - if $A\subseteq B \subseteq C$, and $|A|=|C|$, then $|A|=|B|$ and $|B|=|C|$
 
-
 ## Cardinal arithmetic
 - (Definition 4.36) $|A|\cdot{|B|}=|A\times{B|}$
 - (Theroem 4.37) $\aleph{\cdot{\aleph}}=\aleph$
 - (Theroem 4.37) $\aleph_0{\cdot{\aleph_0}}=\aleph_0$
+- (Question 4.38a) $1\leq\kappa\leq\aleph_0\Longrightarrow{\kappa\cdot\aleph_0=\aleph_0\cdot\kappa=\aleph_0}$ 
+- (Question 4.38b) $1\leq\kappa\leq\aleph\Longrightarrow{\kappa\cdot\aleph=\aleph\cdot\kappa=\aleph}$ 
 - (Theroem 4.38) $\kappa\lambda=\lambda\kappa$
 - (Theroem 4.38) $(\kappa\lambda)\mu=\kappa(\lambda\mu)$
 - (Theroem 4.39) $\kappa(\lambda+\mu)=\kappa\lambda+\kappa\mu$
