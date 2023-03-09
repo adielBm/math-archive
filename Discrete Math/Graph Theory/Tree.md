@@ -9,6 +9,7 @@ A tree is undirected graph $G=(V,E)$ that satisfies any of the following equival
 
 ## Theorems
 - Tree with at least 2 vertices has **at least 2 leaves**. (question 2.3)
+- Every tree is bipartite
 
 # Forest
 

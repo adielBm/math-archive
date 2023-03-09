@@ -7,7 +7,7 @@ ___
 
 ## Permutation with repetition
 
-Distribute $k$ distinct balls into $n$ distinct cells (when there is no restriction on the capacities of the boxes, that is, a cell can be empty. ^[If a cell cannot be empty and must contain at least one object, then the number is $n!{\lbrace\textstyle{k\atop n}\rbrace}$, which is also the [[Combinatorics/Functions#Number of Surjective (Onto) Functions ($k geq n$)|number of onto function]]] )
+Distribute $k$ distinct balls into $n$ distinct cells (when there is no restriction on the capacities of the boxes, that is, a cell can be empty. ^[If a cell cannot be empty and must contain at least one object, then the number is $n!{\lbrace\textstyle{k\atop n}\rbrace}$, which is also the [[Discrete Math/Combinatorics/Functions#Number of Surjective (Onto) Functions ($k geq n$)|number of onto function]]] )
 
 $$n^k$$
 #### Restrictions

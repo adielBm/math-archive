@@ -3,7 +3,8 @@ $p\rightarrow{q}$ is true unless, $p$ is true and $q$ is false.
 
 - Contraposition: $p\rightarrow{q}\equiv{(\lnot{q})\rightarrow{(\lnot{p})}}$
 - Import–export: $p\rightarrow(q\rightarrow{r})\equiv{(p\land{q})\rightarrow{r}}$
-- $p\rightarrow{q}\equiv{\lnot({p}\land(\lnot{q}))}\equiv{(\lnot{p}\lor{q})}$
+-  $p\rightarrow{q}\equiv{\lnot({p}\land(\lnot{q}))}$
+- Material implication $p\rightarrow{q}\equiv{(\lnot{p}\lor{q})}$
 - Transitivity: $(p \to q) \land (q \to r) \models p \to r$
 ## Tautology $\top$
 - $p\leftrightarrow{p}$
@@ -45,6 +46,7 @@ $p\rightarrow{q}$ is true unless, $p$ is true and $q$ is false.
 - 
 #### Theorem (6)
 - ***Modus ponens***: $P \to Q,\; P\;\; \vdash\;\; Q$
+- **Modus tollens**: $P \rightarrow Q \therefore\neg Q\rightarrow \neg P$
 
 ___
 more (not appear in the book)

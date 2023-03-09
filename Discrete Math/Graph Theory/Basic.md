@@ -30,6 +30,7 @@ A **complete graph** is a simple undirected graph in which every pair of distinc
 
 - Number of **Edges** in complete graph $K_n$ is $\frac{n(n-1)}{2}=\binom{n}{2}$. ^[Triangle number]
 - Number of [[Edge Covering & Matching|Perfect Matchings]] in complete graph $K_n$ is double-factorial $(n-1)!!$.
+- TODO: https://oeis.org/A031878 is maybe the longest path in complete graph 
 
 # Cycle & Path
 - **Walk** - is a finite or infinite sequence of edges which joins a sequence of vertices. 
