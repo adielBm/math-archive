@@ -26,5 +26,3 @@
 | $\Omega$   | $\omega$   | `\omega`   | `/oʊˈmiːɡə/`   |
 
 
-
-

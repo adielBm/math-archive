@@ -1,4 +1,6 @@
 
+# Defination 
+
 #### vector addition
 
 | Axioms of *vector addition* |                                                      |                                   |
@@ -20,6 +22,8 @@
 | Identity element                                                  | $1\mathbf{a}=\mathbf{a}$                  | $\forall{\mathbf{a}}\in{F^{n}}$                    |
 
 
+# Geometry of Vector Spaces
+
 #### Line or plane through point, and that is parallel to line or plane
 
 | name                                                                             | parametric form                                        |                                                            |
@@ -32,3 +36,17 @@
 | ------------------------------------------------------------- | -------------------------------------------------------------- | ----------------------------------------- |
 | **line** through $\mathbf{a}$ and $\mathbf{b}$                | $\mathbb{R}(\mathbf{a-b})+\mathbf{b}$                          | $\mathbf{a\neq{b}}$                       |
 | **plane** through $\mathbf{a}$, $\mathbf{b}$ and $\mathbf{c}$ | $\mathbb{R}(\mathbf{a-c})+\mathbb{R}(\mathbf{b-c})+\mathbf{c}$ | $\mathbf{a,b,c}$ are non-collinear points |
+
+
+# Basis
+
+- $S=\mathbf{a}_1,\mathbf{a}_2,\ldots,\mathbf{a}_n$ is called **spanning set/sequence** if any $\mathbf{b}\in{F^n}$ can be written as a *linear combination* $\mathbf{b}=b_1\mathbf{a_1}+b_2\mathbf{a_2}+\cdots+b_n\mathbf{a_n}$. And we say that $S$ spans $F^n$
+- $B\subseteq{F^{n}}$ is called **basis**, if is *spanning set*, and *linearly independent*
+- The vectors sequence $\mathbf{e}_1,\mathbf{e}_2,\ldots,\mathbf{e}_n$ is **the standart basis** of $F^n$. $$\begin{matrix}\mathbf{e}_1 & = & (1,0,0,\ldots,0) \\ \mathbf{e}_2 & = & (0,1,0,\ldots,0) \\ & \vdots \\ \mathbf{e}_n & = & (0,0,0,\ldots,1)\end{matrix}$$
+
+CHECK IT!
+> $S$ is set of vectors in vector space $F^n$. each 2 of 3 imply the other.
+> - $S$ is spanning set
+> - $S$ is linearly independent
+ >- size of $S$ is $n$
+
