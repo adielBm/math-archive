@@ -43,10 +43,12 @@
 - $S=\mathbf{a}_1,\mathbf{a}_2,\ldots,\mathbf{a}_n$ is called **spanning set/sequence** if any $\mathbf{b}\in{F^n}$ can be written as a *linear combination* $\mathbf{b}=b_1\mathbf{a_1}+b_2\mathbf{a_2}+\cdots+b_n\mathbf{a_n}$. And we say that $S$ spans $F^n$
 - $B\subseteq{F^{n}}$ is called **basis**, if is *spanning set*, and *linearly independent*
 - The vectors sequence $\mathbf{e}_1,\mathbf{e}_2,\ldots,\mathbf{e}_n$ is **the standart basis** of $F^n$. $$\begin{matrix}\mathbf{e}_1 & = & (1,0,0,\ldots,0) \\ \mathbf{e}_2 & = & (0,1,0,\ldots,0) \\ & \vdots \\ \mathbf{e}_n & = & (0,0,0,\ldots,1)\end{matrix}$$
+___
 
-CHECK IT!
-> $S$ is set of vectors in vector space $F^n$. each 2 of 3 imply the other.
-> - $S$ is spanning set
-> - $S$ is linearly independent
- >- size of $S$ is $n$
+$S$ is set of vectors in vector space $F^n$. each 2 of 3 imply the other.
+- $S$ is spanning set
+- $S$ is linearly independent
+- $|S|=n$ 
+
+
 
