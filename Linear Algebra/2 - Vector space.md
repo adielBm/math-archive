@@ -37,7 +37,6 @@
 | **line** through $\mathbf{a}$ and $\mathbf{b}$                | $\mathbb{R}(\mathbf{a-b})+\mathbf{b}$                          | $\mathbf{a\neq{b}}$                       |
 | **plane** through $\mathbf{a}$, $\mathbf{b}$ and $\mathbf{c}$ | $\mathbb{R}(\mathbf{a-c})+\mathbb{R}(\mathbf{b-c})+\mathbf{c}$ | $\mathbf{a,b,c}$ are non-collinear points |
 
-
 # Basis
 
 - $S=\mathbf{a}_1,\mathbf{a}_2,\ldots,\mathbf{a}_n$ is called **spanning set/sequence** if any $\mathbf{b}\in{F^n}$ can be written as a *linear combination* $\mathbf{b}=b_1\mathbf{a_1}+b_2\mathbf{a_2}+\cdots+b_n\mathbf{a_n}$. And we say that $S$ spans $F^n$

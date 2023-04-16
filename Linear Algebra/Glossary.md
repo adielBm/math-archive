@@ -54,6 +54,9 @@
 | Identity matrix        | מטריצת היחידה        | $I$  |
 | Scalar matrix          | מטריצה סקלרית        | $tI$ |
 | Commuting matrix       | מטריצה מתחלפת        |      |
+| diagonal matrix        | מטריצה אלכסונית      |      |
+| Invertible matrix      | מטריצה הפיכה         |      |
+| elementary matrix      | מטריצה אלמנטרית      |      |
 |                        |                      |      |
 
 

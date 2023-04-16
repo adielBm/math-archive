@@ -20,7 +20,7 @@
 | $\Sigma$   | $\sigma$   | `\sigma`   | `/ˈsɪɡmə/`     |
 | $T$        | $\tau$     | `\tau`     | `/taʊ/`        |
 | $\Upsilon$ | $\upsilon$ | `\upsilon` | `/ˈʌpsɪˌlɒn/`  |
-| $\Phi$     | $\phi$     | `\phi`     | `/faɪ/`        |
+| $\Phi$     | $\phi$ or $\varphi$     | `\phi` or `\varphi`    | `/faɪ/`        |
 | $X$        | $\chi$     | `\chi`     | `/ˈkaɪ/`       |
 | $\Psi$     | $\psi$     | `\psi`     | `/ˈ(p)saɪ/`    |
 | $\Omega$   | $\omega$   | `\omega`   | `/oʊˈmiːɡə/`   |
