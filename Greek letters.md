@@ -1,3 +1,4 @@
+
 | Upper Case | Lower Case | LaTeX      | IPA            |
 | ---------- | ---------- | ---------- | -------------- |
 | $A$        | $\alpha$   | `\alpha`   | `/ˈælfə/`      |
