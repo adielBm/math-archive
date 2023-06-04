@@ -11,3 +11,6 @@ $$(1+x)^n = \sum_{k=0}^n {n \choose k}x^k$$
 - $a^2+b^2=(a+b)^2-2ab=(a-b)^2+2ab$
 
 <img width="300" src="https://upload.wikimedia.org/wikipedia/commons/0/00/Binomial_expansion_visualisation.svg" />
+
+- $(a-b)^3=a^3-3a^2b+3ab^2-b^3$
+- 

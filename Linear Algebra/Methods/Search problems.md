@@ -1,6 +1,14 @@
-# Search problems 
 
-## Basis
+# Matrix 
+
+## Rank of Matrix $\rho{(A)}$
+
+- (d8.5.4) the rank $\rho{(A)}$ is the dim. of the row/column space of $A$
+- (q8.5.4) $\rho{(A)}=\rho{(A^n)}$
+- (q8.5.5) $\rho{(A_{m \times n})}\leq\min{\{ m,n \}}$
+- $\rho(A)$ is the number of the non-zero rows of row echelon form of $A$
+
+# Basis
 
 ### basis of the **solutions sub-space of** $A\textbf{x}=\textbf{0}$ (*Homogeneous System*) 
 
@@ -29,6 +37,7 @@
 - the basis of **the row space** of a matrix $B^t$, is the basis of **the column space** of a matrix $B$
 
 ### basis of the sub-space $U=\text{Sp}({\set{v_{1},v_{2},\dots,v_{k}   }})$ of ${F}^n$
+reducing a span set to a basis by removing a vectors 
 (q8.5.2b)
 
 - set the ${\set{v_{1},v_{2},\dots,v_{k}   }}$ as row vecor of matrix, and then follow [[#basis of the row space of a matrix $B$]] 
@@ -44,10 +53,14 @@ basis of the sub-space $U=\text{Sp}({\set{u_{1},u_{2},\dots,u_{p}   }})$ of $V$,
 ### Extending a linearly independent set to a basis by adding a vectors
 
 #todo 
+- Obtain the reduced row echelon form (RREF) of the matrix as row of vectors. and then complete it to identity matrix. (the rows for the complete are the vectors for complete to basis)
 - q8.3.6
 - q8.6.4 
 
-## Dimension 
+# Dimension 
+
+- (9.5.9) $V \cong W \iff \text{dim}{V}=\text{dim}{W}$ (on the same field, and infinite dim.)
+- (9.6.1) $\text{dim}{(\text{Ker}{T})}+\text{dim}{(\text{Im}{T})}=\text{dim}{V}$. ($T:V\to W$ is lin. trans.)
 
 ### dimension of row/column space of matrix (the rank)
 
@@ -57,56 +70,34 @@ basis of the sub-space $U=\text{Sp}({\set{u_{1},u_{2},\dots,u_{p}   }})$ of $V$,
 
 - Theorem 8.6.1 - $A\textbf{x}=\textbf{0}$, ($n$ variables, and $P$ is the solutions sub-space), then $\dim{P}=n-\rho{(A)}$
 
-## Coordinate vector
+# Coordinate vector
 
 > q8.4.1b (matrices space), q8.4.2b (polynomial space)
 
+# Linear Transformation
 
-# Decision problems
+## image of linear transformation
 
-## Linear systems
+- (9.3.6) let $\{ v_{1},\dots ,v_{n} \}$ spans $V$, then $\text{Im}{T}=\text{Sp}{(\{ T(v_{1}),\dots,T(v_{n}) \})}$
 
-### Linear systems consistent
+>q9.3.2c, q9.3.3, q9.4.2
 
-- Rouché–Capelli theorem (8.6.2) - A system of linear equations with $n$ variables has a solution if and only if the rank of its coefficient matrix $A$ is equal to the rank of its augmented matrix $[A|b]$. That is $\rho([A|B])=\rho(A)$
+>for Im of indep. subset of V (lin. trans. that is **one-to-one**). see 9.5.6 
 
-## Linear independence
+## kernel of linear transformation
 
-### Set of vectors $K=\set{{v}_1,\dots,{v}_k}$, is a linearly independent
-- by the defintion, $K$ is linearly independent, if  $\lambda_1{v}_1 + \lambda_2{v}_2 + \cdots + \lambda_k{v}_k = {0}\implies{\lambda_{1},\dots,{\lambda_{k}}}=0$.
-- in other words, check if the linear sys. has the only the trivial solution.
+- $\ker(T) = \{ v \in V : T(v) = 0_W\}$
 
-> q8.4.1a (matrices space), q8.4.2a (polynomial space)
+## linear transformation so that..
 
-####  Set of matrices, is linearly in/dependent
-- q8.2.5 (is dependent)
-- q8.4.1a (is independent)
+- linear transformation $T:V\to W$ s.t. $A=\{ v_{1},\dots ,v_{k} \}$ spans $\text{Ker{(T)}}$
+	- find basis to $\text{Ker{(T)}}$
+	- take the found basis, and extend it to basis of $F^n$
+	- set the Im of the basis 
+	- 
 
-## Spaces 
+### properties of linear transformation
 
-### Two spaces are equal $U=V$
+#### injective $\iff$ surjective $\iff$ isomorphism
 
-- Option 1: if $U\subseteq V$ then $U=V \iff \dim V=\dim U$. (8.3.4)
-
-
-
-## Basis
-
-### Set of vectors $K$, is a basis of the space $V$
-
-Make sure **TWO out of three** are fulfilled (T8.3.2)
-1. $K$ is indep. lin. 
-2. $\text{Sp}(K)=V$  (K spans V)
-3. $|K|=\dim{V}$ 
-
-
-### (8.4.5)
-
-let $B={(v_{1},v_{2},\dots,v_{n})}$ is a basis of the space $V$ ($n$-dim.), on $F$, then $B'={(u_{1},u_{2},\dots,u_{n})}$ is a basis of $V$, iff the transformation matrix from $B$ to $B'$ is invertible.
-
-## Span
-
-#### Set of vectors $K$, spans the space $V$
-
-https://math.stackexchange.com/questions/56201/how-to-tell-if-a-set-of-vectors-spans-a-space
-
+- (9.6.2) for $V,W$ with the same dim., there is equivalence between injective, surjective and isomorphism of $T:V\to W$
