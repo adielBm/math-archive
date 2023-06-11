@@ -35,6 +35,8 @@
 | Standard basis                    | בסיס סטנדרטי                   |                                                                                                                                                                                                                |
 |                                   | בסיס סדור                      |                                                                                                                                                                                                                |
 | direct sum of subspaces           | סכום ישר של תת מרחבים          |                                                                                                                                                                                                                |
+| Coordinate vector                 | וקטור קואורדינטות              |                                                                                                                                                                                                                |
+| null space of a matrix            | מרחב האפס של מטריצה            |                                                                                                                                                                                                                |
 |                                   |                                |                                                                                                                                                                                                                |
 
 
@@ -58,9 +60,9 @@
 | diagonal matrix        | מטריצה אלכסונית      |      |
 | Invertible matrix      | מטריצה הפיכה         |      |
 | elementary matrix      | מטריצה אלמנטרית      |      |
-|                        |                      |      |
-
-
+| transition matrix, ()  | מטריצת המעבר         |      |
+| Diagonalizable matrix  | מטריצה לכסינה        |      |
+| Matrix similarity      | דמיון מטריצות        |      |
 
 
 

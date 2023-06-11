@@ -19,6 +19,7 @@ $$A^n = \underbrace{ A \times A \times \cdots \times A }_{n}= \{ (x_1,\ldots,x_n
 ## 1.5 - Systems of Linear Equations
 
 ### Elementary Row Operation
-1. (Replacement) Replace one row by the sum of itself and a multiple of another row. ^[A common paraphrase of row replacement is “Add to one row a multiple of another row.”]
-2. (Interchange) Interchange two rows.
-3. (Scaling) Multiply all entries in a row by a nonzero constant.
+1. (**Replacement**) Replace one row by the sum of itself and a multiple of another row. ^[A common paraphrase of row replacement is “Add to one row a multiple of another row.”]
+2. (**Interchange**) Switch two rows.
+3. (**Scaling**) Multiply all entries in a row by a nonzero constant.
+
