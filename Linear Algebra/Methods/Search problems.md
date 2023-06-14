@@ -52,6 +52,19 @@ thorems
 
 - if $B=(v_{1}, v_{2},\dots,v_{n})$, then $[v_{1}|v_{2}|\dots|v_{n}]$ is the transition matrix from B to the standard basis
 
+
+## more.. 
+- #todo $A^k=M{D}^{k}M^{-1}$, ($D$ is a diagonal matrix)
+
+
+## Eigenvalues and Eigenvectors
+
+Finding Eigenvalues and Eigenvectors of matrix.
+
+#todo 
+
+https://math.libretexts.org/Bookshelves/Linear_Algebra/A_First_Course_in_Linear_Algebra_(Kuttler)/07%3A_Spectral_Theory/7.01%3A_Eigenvalues_and_Eigenvectors_of_a_Matrix#:~:text=the%20following%20procedure.-,Procedure,%3A%20Finding%20Eigenvalues%20and%20Eigenvectors,-Let
+
 # Basis
 
 ### basis of the **solutions sub-space of** $A\textbf{x}=\textbf{0}$ (*Homogeneous System*) 
