@@ -19,7 +19,7 @@
 | zero row                    |       | שורת אפס                  |
 
 
-# Vector space (2,7,8)
+# Vector space (2,7,8,)
 
 | vector space (linear space)       | **מרחב וקטורי** (מרחב ליניארי) | $F^n$                                                                                                                                                                                                          |
 | --------------------------------- | ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -37,9 +37,13 @@
 | direct sum of subspaces           | סכום ישר של תת מרחבים          |                                                                                                                                                                                                                |
 | Coordinate vector                 | וקטור קואורדינטות              |                                                                                                                                                                                                                |
 | null space of a matrix            | מרחב האפס של מטריצה            |                                                                                                                                                                                                                |
+| eigenvalue                        | ערך עצמי                       |                                                                                                                                                                                                                |
+| eigenvector                       | וקטור עצמי                     |                                                                                                                                                                                                                |
+| eigenspace                        | מרחב עצמי                      |                                                                                                                                                                                                                |
+| algebraic multiplicity            | ריבוי אלגברי                   |                                                                                                                                                                                                                |
+| geometric multiplicity            | ריבוי גיאומטרי                 |                                                                                                                                                                                                                |
+| norm                              | נורמה של וקטור                 |                                                                                                                                                                                                                |
 |                                   |                                |                                                                                                                                                                                                                |
-
-
 
 # 3 - Matrices
 
@@ -64,10 +68,7 @@
 | Diagonalizable matrix  | מטריצה לכסינה        |      |
 | Matrix similarity      | דמיון מטריצות        |      |
 
-
-
 # 6 - Complex numbers
-
 
 ## Polynomial
 
@@ -103,18 +104,11 @@
 |                 |       |
 
 
-
-
-
-
-
-
-
 ___
 
-#### Additional material.
+#### Additional material
 
 It's not study in the course
-|                 |               |
-| --------------- | ------------- |
-|  Cross product | מכפלה וקטורית | 
+
+- Cross product - מכפלה וקטורית
+- 

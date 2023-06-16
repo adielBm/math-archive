@@ -30,3 +30,6 @@ $\log_b{a}=x\quad\Longleftrightarrow\quad b^x=a$
 - $n^{1/\lg{n}}=2$
 - $(n/2)\lg(n/2)\leq\lg{(n!)}\leq{n\lg{n}}$
 	- $\implies\lg(n!)=\Theta{(n\lg{n})}$ ^[see CRLS: t8.1, e8.1-2]
+
+
+
