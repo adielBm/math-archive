@@ -95,8 +95,6 @@
 ### Derivative of polynomial
 
 
-
-
 | Derivative      | נגזרת |
 | --------------- | ----- |
 | differentiation | גזירה |

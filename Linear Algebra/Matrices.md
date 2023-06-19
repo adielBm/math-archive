@@ -4,16 +4,14 @@ whether two matrices are row equivalent #todo
 
 ## Rank of Matrix $\rho{(A)}$
 
-Defintions:
 - (d8.5.4) the rank $\rho{(A)}$ is the dim. of the row/column space of $A$
 - $\rho(A)$ is the number of the non-zero rows of row echelon form of $A$
 - $\rho(A)$ is the number of pivots in the RREF of $A$. 
-
-Properties:
 - (q8.5.4) $\rho{(A)}=\rho{(A^n)}$
 - (q8.5.5) $\rho{(A_{m \times n})}\leq\min{\{ m,n \}}$
 - (q10.5.3) $A,B$ are square matries of order $n$, then $\rho{(AB)}\geq \rho(A)+\rho(B)-n$
 - Only a zero matrix has rank zero. #todo 
+- row equivalent matrices must have the same rank #todo 
 
 ## Transition matrix
 
@@ -69,6 +67,11 @@ let A square matrix, find $A^{-1}$, see [[Decision problems#Invertibility]]
 	- (10.7.3) **similar matrices** have the same determinant
 	- (q11.3.1) $\det{A}=0$, if and only if, $\lambda=0$ is eigenvalue of $A$
 
+
+## Characteristic polynomial 
+
+- (q11.4.6-7) finding coefficients of **the characteristic polynomial** of a matrix
+
 ## Eigenvalues and Eigenvectors
 
 ### Finding Eigenvalues and Eigenvectors
@@ -94,14 +97,17 @@ To verify your work, make sure that $AX=\lambda X$ for each $\lambda$ and as
 - (11.4.1) $\lambda$ is an eigenvalue of $A$, if and only if, $\lambda$ is a solution of the **characteristic equation** $\det(\lambda I-A)$ is $0$
 -  #todo - $\lambda$ is an eigenvalue of $A$, if and only if, the system of equations $(\lambda I-A)v=0$ has nontrivial solutions.
 
-### eigenvector
 
+### algebraic & geometric multiplicity
 
-## characteristic polynomial 
+- (d11.5.2) The multiplicity of an eigenvalue $\lambda$ as a root of the characteristic equation is **the algebraic multiplicity** of $\lambda$ 
+-  The dimension of the eigenspace corresponding to $\lambda$ is called **the geometric multiplicity** of $\lambda$
+- (q11.5.2) the **geometric multiplicity** of $\lambda$ equals to $n-\rho(\lambda I-A)$
+- (11.5.3) the **geometric multiplicity** $\leq$ the **algebraic multiplicity**
+- finding the algebraic multiplicity of eigenvalue #todo 
+- finding the geometric multiplicity of eigenvalue #todo 
 
-- (q11.4.6-7) finding coefficients of characteristic polynomial of a matrix
-
-## trace 
+## Trace 
 
 - (10.7.6) $\text{tr}AB=\text{tr}BA$
 - (10.7.5) similar matrices have the same trace
@@ -109,7 +115,7 @@ To verify your work, make sure that $AX=\lambda X$ for each $\lambda$ and as
 - $\text{tr}(cA)=c\text{tr}(A)$ #todo 
 - $\text{tr}(A)=\text{tr}(A^t)$ #todo 
 
-## Matrix similarity
+## Similarity
 
 - Similarity is an equivalence relation on the space of square matrices. (wikipedia)
 - matrices are similar, if and only if, they represent the same linear operator with respect to (possibly) different bases. (wikipedia)
@@ -119,7 +125,7 @@ To verify your work, make sure that $AX=\lambda X$ for each $\lambda$ and as
 
 shared properties: determinant (10.7.3), trace (10.7.5), eigenvalues (11.3.3), algebraic multiplicities of eigenvalues ( #todo  ),  characteristic polynomial (11.4.3)
 
-## diagonalizable
+## Diagonalizable
 
 - (d11.3.4) if there exists an $n \times n$ invertible matrix $M$, such that $M^{-1}AM$ is a diagonal matrix, then $A$ is **diagonalizable matrix**
 - (d11.3.4) $A$ is diagonalizable, if and only if, $A$ is similar to a diagonal matrix

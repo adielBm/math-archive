@@ -67,29 +67,19 @@ whether $T:V\to W$ is isomorphism from $V$ to $W$
 
 ## eigenvalues 
 
-- finding the eigenvalues of a Linear Operator 
-	- choose any basis $B$ for $V$
-	- comput the eigenvalues of the matrix $[T]_{B}$
+finding the eigenvalues of a Linear Operator 
+1. choose some basis $B$ for $V$
+2. comput the eigenvalues of the matrix $[T]_{B}$ ([[Matrices#Finding Eigenvalues and Eigenvectors]])
 
-### eigenvalue 
-
+whether a scaler is an eigenvalue of a Linear Operator 
 - (d11.2.1) the scaler $\lambda$ is called **eigenvalue** of $T$, if there is a non-zero vector $v \in V$, such that: $T(v)=\lambda{v}$. And $v$ is called **eigenvector** of $T$ that related to the eigenvalue $\lambda$. 
 
-## algebraic multiplicity & geometric multiplicity
-
-- (q11.5.2) the **geometric multiplicity** of $\lambda$ equals to $n-\rho(\lambda I-A)$
-- (11.5.3) the **geometric multiplicity** $\leq$ the **algebraic multiplicity**
-- finding the algebraic multiplicity of eigenvalue #todo 
-- finding the geometric multiplicity of eigenvalue #todo 
 
 ## Diagonalizability
 
 - (d11.1.1) $T:V\to V$ is **diagonalizable**, if there is a basis for $V$, such that the matrix of $T$ (by this basis), is dianogal.
 - (11.2.5) let $T$ is lin. trans. of dim $n$. if $T$ has $n$ **distinct** eigenvalues, then $T$ is diagonalizable
 #todo  https://textbooks.math.gatech.edu/ila/diagonalization.html
-
-
-
 
 
 ## characteristic polynomial
