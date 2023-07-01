@@ -9,6 +9,10 @@ whether two matrices are row equivalent #todo
 - $\rho(A)$ is the number of pivots in the RREF of $A$. 
 - (q8.5.4) $\rho{(A)}=\rho{(A^n)}$
 - (q8.5.5) $\rho{(A_{m \times n})}\leq\min{\{ m,n \}}$
+- (q8.5.6) $\rho{(AB)}\leq\min{\{ \rho{(A)}, \rho{(B)} \}}$
+- (q8.5.7a) let $A_{m \times n}$, and $B_{n}$ invertable matrix, then $\rho(AB)=\rho(A)$ 
+- (q8.5.7b) let $A_{m \times n}$, and $B_{m}$ invertable matrix, then $\rho(BA)=\rho(A)$ 
+- (q8.5.8a) let $A$ square matrix of order $n$, then $\rho(A)=n \iff |A|\neq 0$  
 - (q10.5.3) $A,B$ are square matries of order $n$, then $\rho{(AB)}\geq \rho(A)+\rho(B)-n$
 - Only a zero matrix has rank zero. #todo 
 - row equivalent matrices must have the same rank #todo 
@@ -69,7 +73,7 @@ let A square matrix, find $A^{-1}$, see [[Decision problems#Invertibility]]
 
 
 ## Characteristic polynomial 
-
+$$\det \left( \lambda I -A \right)$$
 - (q11.4.6-7) finding coefficients of **the characteristic polynomial** of a matrix
 
 ## Eigenvalues and Eigenvectors
@@ -83,6 +87,7 @@ let A square matrix, find $A^{-1}$, see [[Decision problems#Invertibility]]
 To verify your work, make sure that $AX=\lambda X$ for each $\lambda$ and associated eigenvector $X$.
 
 **Theorms**:
+- if $\lambda$ is an eigenvalue of A, then the union of the zero vector $\mathbf{0}$ and the set of all eigenvectors corresponding to eigenvalues $\lambda$ is known as the **eigenspace** of $A$ associated with eigenvalue $\lambda$.
 - (11.4.1) $\lambda$ is an eigenvalue of $A$, if and only if, $\lambda$ is a solution of the **characteristic equation** $\det(\lambda I-A)=0$
 - similar matrices have the same eigenvalues (11.3.3), and the same algebraic multiplicities of eigenvalues ( #todo  )
 - the sum of eigenvalues of $A$ equals to $\text{tr}A$ #todo 
@@ -103,7 +108,7 @@ To verify your work, make sure that $AX=\lambda X$ for each $\lambda$ and as
 - (d11.5.2) The multiplicity of an eigenvalue $\lambda$ as a root of the characteristic equation is **the algebraic multiplicity** of $\lambda$ 
 -  The dimension of the eigenspace corresponding to $\lambda$ is called **the geometric multiplicity** of $\lambda$
 - (q11.5.2) the **geometric multiplicity** of $\lambda$ equals to $n-\rho(\lambda I-A)$
-- (11.5.3) the **geometric multiplicity** $\leq$ the **algebraic multiplicity**
+- (11.5.3, q11.5.3)  $1\leq$ the **geometric multiplicity** $\leq$ the **algebraic multiplicity**
 - finding the algebraic multiplicity of eigenvalue #todo 
 - finding the geometric multiplicity of eigenvalue #todo 
 
@@ -121,10 +126,13 @@ To verify your work, make sure that $AX=\lambda X$ for each $\lambda$ and as
 - matrices are similar, if and only if, they represent the same linear operator with respect to (possibly) different bases. (wikipedia)
 - (d10.7.1) If $A$ and $B$ are square matrices, then we say that $A$ **is similar to** $B$ if there is an invertible matrix $M$ such that $A=M^{-1}BM$ 
 - (10.7.2) $A$ and $B$ square matrices of order $n$ on filed F, represent the same linear transformation (n-dim. and on F), if and only if, they $A$ and $B$ are similar.
-- #todo to show that two matrices are similar, show that are similar to the sane diagonal matrix
+- #todo to show that two matrices are similar, show that are similar to the same diagonal matrix
+- #todo let $A$ and $B$ are diagonalizable, and they both have the same eigenvalues, then they're similar (because similarity is transitive) 
+- #todo let $A$ and $B$ are diagonalizable, and they both have the same characteristic polynomial, then they're similar (because similarity is transitive) 
+
 
 shared properties: determinant (10.7.3), trace (10.7.5), eigenvalues (11.3.3), algebraic multiplicities of eigenvalues ( #todo  ),  characteristic polynomial (11.4.3)
-
+	
 ## Diagonalizable
 
 - (d11.3.4) if there exists an $n \times n$ invertible matrix $M$, such that $M^{-1}AM$ is a diagonal matrix, then $A$ is **diagonalizable matrix**
@@ -134,5 +142,8 @@ shared properties: determinant (10.7.3), trace (10.7.5), eigenvalues (11.3.3), a
 - (11.3.7) $M$ is an $n \times n$ invertible matrix.  $M^{-1}AM$ is a diagonal matrix, (i.e. $A$ is diagonalizable), if and only if, the columns of $M$ are $n$ indpendent linearly eigenvectors of $A$. ^[in such case,  if the columns of $M$ are $v_{1},\dots,v_{n}$, and for each $i$ ($1\leq i\leq n$), $v_i$ is a eigenvector of $A$ that's related to the eigenvalue $\lambda_{i}$ , then $M^{-1}AM=\text{diag}{(\lambda_{1},\dots,\lambda_{{n}})}$]
 - (q11.3.7) $A$ on filed $F$ is diagonalizable, if and only if, $F^n$ has a basis that consists of eigenvectors of $A$ 
 - (q11.4.10) $A$ is diagonalizable, if and only if, $A^t$ is diagonalizable
-
+- (11.5.4') The matrix $A$ is diagonalizable, if and only if, (i) the characteristic polynomial factors completely into linear factors and (ii) the algebraic multiplicity of each eigenvalue of $A$ is equal to its geometric multiplicity.
+- #todo The matrix $A$ is diagonalizable, if and only if, the sum of the dimensions of the eigenspaces equals to $n$
 - #todo $A^k=M{D}^{k}M^{-1}$, ($D$ is a diagonal matrix)
+
+
