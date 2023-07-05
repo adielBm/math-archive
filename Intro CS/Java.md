@@ -1,8 +1,5 @@
-
-
 - compliations 
 	- Constructor call must be the first statement in a constructor
-
 
 downcasting runtime err 
 ```java
@@ -34,7 +31,6 @@ b.onlyChildProp = 2; // Compile-time error: onlyChildProp cannot be resolved or 
 ```
 
 
-
 ```java
 public class Parent {
     public int A() {
@@ -56,19 +52,16 @@ public class Child extends Parent {
 
 ```
 
-
 ```java
 public class Parent {
     public int A(Parent a) {
         return 1;
     }
 }
-
 public class Child extends Parent {
     public int A(Child a) {
         return 2;
     }
-
     public static void main(String[] args) {
         Parent a = new Child();
         Child ch = new Child();
@@ -77,3 +70,4 @@ public class Child extends Parent {
     }
 }
 ```
+

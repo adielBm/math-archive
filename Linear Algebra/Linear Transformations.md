@@ -3,8 +3,8 @@
 finding the image of a linear transformation $\text{Im}T$
 
 - (9.3.6) let $T:V\to W$, and $\text{Sp}\{ v_{1},\dots ,v_{n} \}=V$, then, $\text{Im}{T}=\text{Sp}{(\{ T(v_{1}),\dots,T(v_{n}) \})}$
-- (9.3.7) let $A_{m \times n}$ matrix on field $F$, and $T:F^n\to F^m$, where $T_{A}(v)=Av$, then, $\text{Im}(T_{A})=\text{Col}{(A)}$ (the colmun space of $A$)
-- (9.6.2) if $T:V\to W$ is isomorphism from $V$ to $W$, and the dimV=dimW, then $\text{Im}{T}=W$
+- (9.3.7) let $A_{m \times n}$ matrix on field $F$, and $T:F^n\to F^m$, where $T(v)=Av$, then, $\text{Im}(T)=\text{Col}{(A)}$ (the column space of $A$)
+- (9.6.2) if $T:V\to W$ is isomorphism, and the $\dim{V}=\dim{W}$, then $\text{Im}{T}=W$ (i.e. $T$ is onto)
 
 >q9.3.2c, q9.3.3, q9.4.2
 
@@ -29,7 +29,7 @@ finding the kernel of a linear transformation $\text{Ker}T$
 
 ## Matrix for a Linear Transformation 
 
-$T:V\to W$, and $B=(v_{1},\dots,v_{n})$ and $C=(w_{1},\dots,w_{n})$ are basises of $V$ and $W$. (respectively) 
+$T:V\to W$, and $B=(v_{1},\dots,v_{n})$ and $C=(w_{1},\dots,w_{n})$ are bases of $V$ and $W$. (respectively) 
 $$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T( {v_{n}})]_{C} \\ | & & | \end{array} \right]_{m\times n}$$
 
 ## Compute $T(v)$ Indirectly 
@@ -49,19 +49,18 @@ given $T:V\to W$
 
 >q9.4.1
 
-
 ## equivalence
 
-whether two linear transformations are equel 
+whether two linear transformations are equal 
 
 > 9.4.1
 
 ## isomorphism
 
-whether $T:V\to W$ is isomorphism from $V$ to $W$
-
-- (9.6.2) injective $\iff$ surjective $\iff$ isomorphism. (for $V,W$ with the same dim)
-- (10.5.2) if $[T]^B_{C}$ is invertible, then $T$ is isomorphism
+- Definition: linear transformation $T$ is called an isomorphism if is injective and surjective
+- Determine if $T:V\to W$ is an isomorphism.
+	- (9.6.2) injective $\iff$ surjective $\iff$ isomorphism. (for $V,W$ with the same dim)
+	- (10.5.2) if $[T]^B_{C}$ is invertible, then $T$ is isomorphism
 
 # Linear Operator $T:V \to V$
 
@@ -69,18 +68,16 @@ whether $T:V\to W$ is isomorphism from $V$ to $W$
 
 finding the eigenvalues of a Linear Operator 
 1. choose some basis $B$ for $V$
-2. comput the eigenvalues of the matrix $[T]_{B}$ ([[Matrices#Finding Eigenvalues and Eigenvectors]])
+2. compute the eigenvalues of the matrix $[T]_{B}$ ([[Matrices#Finding Eigenvalues and Eigenvectors]])
 
-whether a scaler is an eigenvalue of a Linear Operator 
-- (d11.2.1) the scaler $\lambda$ is called **eigenvalue** of $T$, if there is a non-zero vector $v \in V$, such that: $T(v)=\lambda{v}$. And $v$ is called **eigenvector** of $T$ that related to the eigenvalue $\lambda$. 
-
+whether a scalar is an eigenvalue of a Linear Operator 
+- (d11.2.1) the scalar $\lambda$ is called an **eigenvalue** of $T$, if there is a non-zero vector $v \in V$, such that: $T(v)=\lambda{v}$. And $v$ is called **eigenvector** of $T$ that related to the eigenvalue $\lambda$. 
 
 ## Diagonalizability
 
-- (d11.1.1) $T:V\to V$ is **diagonalizable**, if there is a basis for $V$, such that the matrix of $T$ (by this basis), is dianogal.
+- (d11.1.1) $T:V\to V$ is **diagonalizable**, if there is a basis for $V$, such that the matrix of $T$ (by this basis), is diagonal.
 - (11.2.5) let $T$ is lin. trans. of dim $n$. if $T$ has $n$ **distinct** eigenvalues, then $T$ is diagonalizable
 #todo  https://textbooks.math.gatech.edu/ila/diagonalization.html
-
 
 ## characteristic polynomial
 

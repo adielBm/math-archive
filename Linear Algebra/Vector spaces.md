@@ -1,40 +1,34 @@
-# Spaces 
 
-### Two spaces are equal, $U=V$
+# equivalence
 
-- Option 1: check if $U=\text{Sp}{(S)}$ is equel to $V=\text{Sp}{(T)}$
+- Determine if two spaces are equal, $U=V$
+	- Option 1: check if $U=\text{Sp}{(S)}$ is equal to $V=\text{Sp}{(T)}$
 	- check if the matrix by S as rows, is ***row-equivalent*** to the matrix by T as rows (7.5.12)
-- Option 2: if $U\subseteq V$ then $U=V \iff \dim V=\dim U$. (8.3.4)
+	- Option 2: if $U\subseteq V$ then $U=V \iff \dim V=\dim U$. (8.3.4)
 
-### Two vector spaces are isomorphic, $V\cong{W}$
 
-assumption: the spaces are on the same filed $F$  
+# Isomorphic Subspaces
 
-- (9.5.7, 9.5.9) $\dim{V}=\dim{W} \iff V\cong{W}$
-- (9.5.8) $\dim{V}=n\implies V\cong{F^n}$
-
+- def
+- Determine if two subspaces are isomorphic. $V\cong{W}$
+	assumption: the spaces are on the same filed $F$  
+	- (9.5.7, 9.5.9) $\dim{V}=\dim{W} \iff V\cong{W}$
+	- (9.5.8) $\dim{V}=n\implies V\cong{F^n}$
 
 # Dimension 
 
+- (8.3.6) $\dim(U+W)=\dim{U}+\dim{W}-\dim(U \cap W)$
 - (9.5.9) $V \cong W \iff \text{dim}{V}=\text{dim}{W}$ (on the same field, and infinite dim.)
-- (9.6.1) $\text{dim}{(\text{Ker}{T})}+\text{dim}{(\text{Im}{T})}=\text{dim}{V}$. ($T:V\to W$ is lin. trans.)
-
-### dimension of row/column space of a matrix
-
->see [[#Rank of Matrix $ rho{(A)}$]] 
-
-### dimension of solution sub-space of homogeneous system
-
-- (8.6.1) -let $A\textbf{x}=\textbf{0}$, ($n$ variables, and $P$ is the solutions sub-space), then $\dim{(P)}=n-\rho{(A)}$
-- this dim is called also nullity of A, or $\text{nul}{(A)}$
-
+- (9.6.1) **Rank–nullity** theorem  $\text{dim}{V}=\text{dim}{(\text{Ker}{T})}+\text{dim}{(\text{Im}{T})}$. ($T:V\to W$ is lin. trans.)
+- dimension of row/column space of a matrix is the rank of A
+- dimension of solution sub-space of homogeneous system (nul A) (see 8.6.1)
 
 # Linear independence
 
 ## whether a set of vectors $K=\set{{v}_1,\dots,{v}_k}$, is a linearly independent
 
-- by the defintion, $K$ is linearly independent, if  $\lambda_1{v}_1 + \lambda_2{v}_2 + \cdots + \lambda_k{v}_k = {0}\implies{\lambda_{1},\dots,{\lambda_{k}}}=0$.
-- in other words, check if the linear sys. has the only the trivial solution.
+- by the definition, $K$ is linearly independent, if  $\lambda_1{v}_1 + \lambda_2{v}_2 + \cdots + \lambda_k{v}_k = {0}\implies{\lambda_{1},\dots,{\lambda_{k}}}=0$.
+- in other words, check if the linear sys. has only the trivial solution.
 
 > q8.4.1a (matrices space), q8.4.2a (polynomial space)
 
@@ -47,7 +41,6 @@ assumption: the spaces are on the same filed $F$
 To check whether a list $(v_{1}, \dots , v_{k})$ in $F^n$ is linearly independent: 
 - Put the matrix $A=[v_{1} \cdots v_{k}]$ (each vector as column) in **REF**. 
 - $(v_{1}, \dots , v_{k})$ in $F^n$ is linearly independent **if and only if** there is a pivot in every column of the **REF**. 
-
 
 # Span
 
@@ -90,7 +83,7 @@ To check whether a list $(v_{1}, \dots , v_{k})$ in $F^n$ is linearly independen
 reducing a span set to a basis by removing a vectors 
 (q8.5.2b)
 
-- set the ${\set{v_{1},v_{2},\dots,v_{k}   }}$ as row vecor of matrix, and then follow [[#basis of the row space of a matrix $B$]] 
+- set the ${\set{v_{1},v_{2},\dots,v_{k}   }}$ as row vector of matrix, and then follow [[#basis of the row space of a matrix $B$]] 
 
  **OR:**
 

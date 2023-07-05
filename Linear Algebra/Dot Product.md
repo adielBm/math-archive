@@ -19,7 +19,7 @@
 - (q12.1.7) $|\textbf{a}\cdot\textbf{b}| =  \| \textbf{a} \| \cdot{\| \textbf{b} \|} \iff \textbf{a},\textbf{b}$ are linearly inpendent 
 - (q12.1.8) Triangle inequality for vectors $\| \textbf{a} + \textbf{b} \| \leq \| \textbf{a} \| +{\| \textbf{b} \|}$
 
-# Orthogonality 
+# Orthogonality  
 
 - (d12.2.1) Two vectors $\textbf{a}$ and $\textbf{b}$ are called orthogonal if $\textbf{a}\cdot\textbf{b}=0$ (This relationship is denoted $\textbf{a}\perp\textbf{b}$)
 - (q12.2.3) Generalized Theorem of Pythagoras - if $\textbf{a}\perp\textbf{b}$, then  $\| \textbf{a} + \textbf{b} \|^2 = \| \textbf{a} \|^2 +{\| \textbf{b} \|}^2$
@@ -40,7 +40,7 @@
 - A **Unit vector** is a vector $\textbf{v}$ such that $\| \textbf{v} \|=1$
 - (12.4.2) Every orthogonal set in $\mathbb{R}^n$ is independent set
 - (q12.4.3a) Every orthogonal set in $\mathbb{R}^n$ has at most $n$ vectors
-- (12.4.5) let $B=(u_{1}, \dots ,u_{n})$ orderd basis of $\mathbb{R}^n$, then the following properties are equivalence:
+- (12.4.5) let $B=(u_{1}, \dots ,u_{n})$ ordered basis of $\mathbb{R}^n$, then the following properties are equivalence:
 	- $B$ is orthonormal basis
 	- $\textbf{a}=\sum^{n}_{i=1}{(\mathbf{a\cdot u}_{i})\cdot{\mathbf{u}_{i}}}$
 	- $\mathbf{a\cdot b}=\sum^{n}_{i=1}{(\mathbf{a\cdot u}_{i})\cdot(\mathbf{b\cdot u}_{i})}$
@@ -60,7 +60,7 @@ Convert a basis $\{ \mathbf{u}_{1},\dots,\mathbf{u}_{k} \}$ into an orthogonal b
 $$\mathbf{v}_{1}=\mathbf{u}_{1}$$
 $$\mathbf{v}_{i}=\mathbf{u}_{i}-\frac{\mathbf{u}_{i}\cdot\mathbf{v}_{1}}{{\| \mathbf{v}_{1} \|^2}}\mathbf{v}_{1}-\frac{\mathbf{u}_{i}\cdot\mathbf{v}_{2}}{{\| \mathbf{v}_{2} \|^2}}\mathbf{v}_{2}-\dots-\frac{\mathbf{u}_{i}\cdot\mathbf{v}_{i-1}}{{\| \mathbf{v}_{i-1} \|^2}}\mathbf{v}_{i-1}$$
 
-- during the computation you can mulitple $\mathbf{v}_{i}$ by a scalar (note before q12.5.4)
+- during the computation you can multiple $\mathbf{v}_{i}$ by a scalar (note before q12.5.4)
 - To convert the orthogonal basis into an orthonormal basis see (q12.4.2)
-- for depdentent set see q12.5.3
+- for dependent set see q12.5.3
 - expanding orthogonal set of $k<n$ vectors into orthogonal basis see q12.5.4
