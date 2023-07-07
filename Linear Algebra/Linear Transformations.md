@@ -27,9 +27,11 @@ finding the kernel of a linear transformation $\text{Ker}T$
 	- 
 	
 
-## Matrix for a Linear Transformation 
+## Transformation matrix
 
-$T:V\to W$, and $B=(v_{1},\dots,v_{n})$ and $C=(w_{1},\dots,w_{n})$ are bases of $V$ and $W$. (respectively) 
+Matrix Representations of Linear Transformation
+
+- (d10.1.1) $T:V\to W$, and $B=(v_{1},\dots,v_{n})$ and $C=(w_{1},\dots,w_{n})$ are bases of $V$ and $W$. (respectively) 
 $$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T( {v_{n}})]_{C} \\ | & & | \end{array} \right]_{m\times n}$$
 
 ## Compute $T(v)$ Indirectly 

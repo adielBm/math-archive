@@ -1,5 +1,7 @@
 ## Row equivalence
 
+- row equivalence is equivalence relation
+
 whether two matrices are row equivalent #todo 
 
 ## Rank of Matrix $\rho{(A_{{m \times n}})}$
@@ -20,19 +22,13 @@ whether two matrices are row equivalent #todo
 	- (q8.5.8a) let $A$ square matrix of order $n$, then $\rho(A)=n \iff |A|\neq 0$  
 	- (q10.5.3) $A,B$ are square matrices of order $n$, then $\rho{(AB)}\geq \rho(A)+\rho(B)-n$
 
-## Transition matrix
 
-Theorems 
-- ()
+## Transformation matrix
 
-1. Form the partitioned matrix $[\text{new basis} | \text {old basis}]$ in which the basis vectors (or coordinate vectors) are in column form. 
-2. Use elementary row operations to reduce the matrix in Step 1 to **RREF**.
-3. The resulting matrix will be $[{I} | \text{transition matrix from old to new}]$ where $I$ is an identity matrix.
-4. Extract the matrix on the right side of the matrix obtained in Step 3. 
+Matrix Representations of Linear Transformation
 
-### Transition matrix from a basis B to the standard basis
-
-- if $B=(v_{1}, v_{2},\dots,v_{n})$, then $[v_{1}|v_{2}|\dots|v_{n}]$ is the transition matrix from B to the standard basis
+- (d10.1.1) $T:V\to W$, and $B=(v_{1},\dots,v_{n})$ and $C=(w_{1},\dots,w_{n})$ are bases of $V$ and $W$. (respectively) 
+$$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T( {v_{n}})]_{C} \\ | & & | \end{array} \right]_{m\times n}$$
 
 # Square Matrices
 
@@ -51,6 +47,8 @@ Let $A$ be an $n \times n$ square matrix.
 	- The rows of A are linearly independent.
 	- The columns of A span $F^n$
 	- The rows of A span $F^n$
+	- The columns of A is a basis $F^n$
+	- The rows of A a basis $F^n$
 	- #todo 
 	- (4.4.1) The determinant of A is nonzero: $\det{A}\neq0$
 	- (4.4.1, and q11.3.1) The number $0$ **is not an eigenvalue** of $A$. 
@@ -160,3 +158,31 @@ shared properties: determinant (10.7.3), trace (10.7.5), eigenvalues (11.3.3), a
 - (d3.2.6) ${A}\text{ is symmetric} \iff A=A^t$
 
 >**WolframAlpha** is `[matrix]` a symmetric matrix?
+
+## Change of Basis matrix (Transition matrix) 
+also *change-of-coordinates matrix*
+
+**Definition:**
+- (d8.4.6) Let $B=(v_{1},\dots ,v_{n})$ and $B'=(u_{1},\dots ,u_{n})$ bases of $V$. if $$\begin{align}
+u_{1} &= a_{11}v_{1}+\dots+a_{n1}v_{n} \\ \vdots \notag \\ u_{n} &= a_{1n}v_{1}+\dots+a_{nn}v_{n}  \\ \end{align}$$then $$M=\begin{bmatrix} a_{11}  & \dots & a_{1n} \\    \vdots &  \ddots & \vdots \\ a_{n1}  & \dots & a_{nn} \end{bmatrix}$$ is the **transition matrix** from basis $B$ to basis $B'$. 
+- the **transition matrix** from basis $B$ to basis $B'$ is the matrix that its columns are the coordinate vectors of the $B'$ vectors by $B$.
+
+**Properties:**
+- transition matrix is square matrix of $n$-order, which $n=\dim V$
+- transition matrix is invertible matrix (by 8.4.5)
+- #todoooo   The transition matrix is actually the representative matrix of the identity map with respect to the two bases.
+
+**Theorems:**
+- (8.4.8) if $A$ is square matrix, and $[v]_{B}=A[v]_{B'}$ then $A$ is the transition matrix from $B$ to $B'$.  
+- (8.4.8) if $M$ is the transition matrix from $B$ to $B'$, then $M^{-1}$ is the transition matrix from $B'$ to $B$
+
+
+>[!example] Finding the transition matrix from an old basis to a new basis 
+>1. Form the partitioned matrix $[\text{new basis} | \text {old basis}]$ in which the basis vectors (or coordinate vectors) are in column form. 
+>2. Use elementary row operations to reduce the matrix in Step 1 to **RREF**.
+>3. The resulting matrix will be $[{I} | \text{transition matrix from old to new}]$ where $I$ is an identity matrix.
+>4. Extract the matrix on the right side of the matrix obtained in Step 3. 
+
+### Transition matrix from a basis B to the standard basis
+
+- if $B=(v_{1}, v_{2},\dots,v_{n})$, then $[v_{1}|v_{2}|\dots|v_{n}]$ is the transition matrix from B to the standard basis
