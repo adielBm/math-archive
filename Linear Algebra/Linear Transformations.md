@@ -1,3 +1,15 @@
+### whether a transformation is a linear transformation
+
+given $T:V\to W$
+- firstly, check if $T(0_{V})=0_{W}$. 
+	- if not, then it's not linearly (9.1.2a). 
+	- else, check by d9.1.1, or equivalently by 9.1.3
+		- (9.1.3)  $T(\lambda_{1}v_{1}+\lambda_{2}v_{2})=\lambda_{1}T(v_{1})+\lambda_{2}T(v_{2})$
+
+>q9.4.1
+
+# Linear Transformations
+
 ## Image
 
 finding the image of a linear transformation $\text{Im}T$
@@ -18,14 +30,13 @@ finding the kernel of a linear transformation $\text{Ker}T$
 
 >see 9.6.2 
 
+
 ## linear transformation so that..
 
 - linear transformation $T:V\to W$ s.t. $A=\{ v_{1},\dots ,v_{k} \}$ spans $\text{Ker{(T)}}$
 	- find basis to $\text{Ker{(T)}}$
 	- take the found basis, and extend it to basis of $F^n$
 	- set the Im of the basis 
-	- 
-	
 
 ## Transformation matrix
 
@@ -40,33 +51,27 @@ $$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T
 2. Compute $[T(v)]_{C}=[T]_{C}^{B}[v]_{B}$
 3. Reconstruct $T(v)$ from its coordinate vector $[T(v)]_{C}$
 
+## Equality
 
-## whether a transformation is a linear transformation
+- (9.4.1) $T,S:V\to W$, and $B=\{ v_{1},\dots,v_{n} \}$ spans $V$. then $T=S \iff \forall{v\in B}:{T(v)=S(v)}$ 
 
-given $T:V\to W$
-- firstly, check if $T(0_{V})=0_{W}$. 
-	- if not, then it's not linearly (9.1.2a). 
-	- else, check by d9.1.1, or equivalently by 9.1.3
-		- (9.1.3)  $T(\lambda_{1}v_{1}+\lambda_{2}v_{2})=\lambda_{1}T(v_{1})+\lambda_{2}T(v_{2})$
+## Isomorphism
 
->q9.4.1
+- Definition: An **isomorphism** is an **invertible linear transformation** (i.e. bijective linear transformation).
 
-## equivalence
-
-whether two linear transformations are equal 
-
-> 9.4.1
-
-## isomorphism
-
-- Definition: linear transformation $T$ is called an isomorphism if is injective and surjective
-- Determine if $T:V\to W$ is an isomorphism.
-	- (9.6.2) injective $\iff$ surjective $\iff$ isomorphism. (for $V,W$ with the same dim)
+- Determine if $T:V\to W$ is an isomorphism?
+	- (9.6.2)  if $\dim{V}=\dim{W}$ (finite-dimensional) then,  injective $\iff$ surjective $\iff$ isomorphism
 	- (10.5.2) if $[T]^B_{C}$ is invertible, then $T$ is isomorphism
+	- (9.9.2) if exists $S:W\to V$ such that $ST=I_{V}$ and $TS=I_{W}$, then, $T$ is an isomorphism, $S=T^{-1}$
+	- (9.6.2)  if $\dim{V}=\dim{W}$, then the following statements are **equivalent**:
+		- $T$ is an isomorphism
+		- there is $S:W\to V$ such that $ST=I_{V}$
+		- there is $S:W\to V$ such that $TS=I_{W}$
 
-# Linear Operator $T:V \to V$
 
-## eigenvalues 
+## Linear Operator $T:V \to V$
+
+### eigenvalues 
 
 finding the eigenvalues of a Linear Operator 
 1. choose some basis $B$ for $V$
@@ -75,13 +80,13 @@ finding the eigenvalues of a Linear Operator
 whether a scalar is an eigenvalue of a Linear Operator 
 - (d11.2.1) the scalar $\lambda$ is called an **eigenvalue** of $T$, if there is a non-zero vector $v \in V$, such that: $T(v)=\lambda{v}$. And $v$ is called **eigenvector** of $T$ that related to the eigenvalue $\lambda$. 
 
-## Diagonalizability
+### Diagonalizability
 
 - (d11.1.1) $T:V\to V$ is **diagonalizable**, if there is a basis for $V$, such that the matrix of $T$ (by this basis), is diagonal.
 - (11.2.5) let $T$ is lin. trans. of dim $n$. if $T$ has $n$ **distinct** eigenvalues, then $T$ is diagonalizable
 #todo  https://textbooks.math.gatech.edu/ila/diagonalization.html
 
-## characteristic polynomial
+### characteristic polynomial
 
 - (d11.4.4) the characteristic polynomial of $T:V\to V$ is the characteristic polynomial of the transformation matrix by some basis
 - 2
