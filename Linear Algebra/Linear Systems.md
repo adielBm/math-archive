@@ -2,11 +2,16 @@
 
 - Gaussian elimination (REF)
 - Gauss–Jordan elimination (RREF)
-- If $A$ is an invertible $n×n$ matrix, then for every $n×1$ matrix $\textbf{b}$, the system of equations $A\textbf{x}=\textbf{b}$ has exactly one solution, namely, $\textbf{x}=A^{−1}\textbf{b}$ 
-- (4.6.1) Cramer's rule 
 
-## consistency 
+## Consistency 
 
-whether a linear system is consistent 
+- (8.6.2) **Rouché–Capelli theorem** - $A\mathbf{x}=\mathbf{b}$ is **consistent**, if and only if,  $\rho([A|\mathbf{b}])=\rho(A)$
 
-- Rouché–Capelli theorem (8.6.2) - A system of linear equations with $n$ variables has a solution, if and only if, the rank of its coefficient matrix $A$ is equal to the rank of its augmented matrix $[A|b]$. That is $\rho([A|B])=\rho(A)$
+
+# Square System
+
+
+
+- $A$ an invertible, if and only if, for each $\textbf{b}$, the system of equations $A\textbf{x}=\textbf{b}$ has exactly one solution, namely, $\textbf{x}=A^{−1}\textbf{b}$. 
+	- (4.6.1) Cramer's rule: in that case, $\mathbf{x}=(x_{1},\dots,x_{n})$, $x_i = \frac{\det(A_i)}{\det(A)}$, $i = 1, \ldots, n$, where $A_{i}$ is the matrix formed by replacing the $i$-th column of $A$ by the column vector $\mathbf{b}$.
+

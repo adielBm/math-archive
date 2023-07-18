@@ -1,4 +1,12 @@
 
+# Aritmetic
+
+$U,W\subseteq{V}$
+
+- $U + W = \{u+w \mid u\in U , w \in W \}. \tag{4.4.1}$
+- **Direct sum**:  $U\oplus{W}=V \iff U+{W}=V$ and $U \cap W=\{ 0 \}$
+	- (8.3.7) if $V=U+W$, then $V=U\oplus W \iff \dim V= \dim U+\dim W$ 
+
 # Equivalence
 
 - Determine if two spaces are equal, $U=V$
@@ -18,29 +26,20 @@
 # Dimension 
 
 - (8.3.6) $\dim(U+W)=\dim{U}+\dim{W}-\dim(U \cap W)$
+- (8.3.7) if $V=U+W$, then $V=U\oplus W \iff \dim V= \dim U+\dim W$ 
 - (9.5.9) $V \cong W \iff \text{dim}{V}=\text{dim}{W}$ (on the same field, and infinite dim.)
-- (9.6.1) **Rank–nullity** theorem  $\text{dim}{V}=\text{dim}{(\text{Ker}{T})}+\text{dim}{(\text{Im}{T})}$. ($T:V\to W$ is lin. trans.)
+- (9.6.1) **Rank–nullity theorem** $\text{dim}{V}=\text{dim}{(\text{Ker}{T})}+\text{dim}{(\text{Im}{T})}$. ($T:V\to W$ is lin. trans.)
 - dimension of row/column space of a matrix is the rank of A
 - dimension of solution sub-space of homogeneous system (nul A) (see 8.6.1)
 
 # Linear independence
 
-## whether a set of vectors $K=\set{{v}_1,\dots,{v}_k}$, is a linearly independent
+Whether $K=\set{{v}_1,\dots,{v}_k}\subseteq V$ is **linearly independent**?
 
-- by the definition, $K$ is linearly independent, if  $\lambda_1{v}_1 + \lambda_2{v}_2 + \cdots + \lambda_k{v}_k = {0}\implies{\lambda_{1},\dots,{\lambda_{k}}}=0$.
-- in other words, check if the linear sys. has only the trivial solution.
-
-> q8.4.1a (matrices space), q8.4.2a (polynomial space)
-
-####  Set of matrices, is linearly in/dependent
-- q8.2.5 (is dependent)
-- q8.4.1a (is independent)
-
-## in the $F^n$ space
-
-To check whether a list $(v_{1}, \dots , v_{k})$ in $F^n$ is linearly independent: 
-- Put the matrix $A=[v_{1} \cdots v_{k}]$ (each vector as column) in **REF**. 
-- $(v_{1}, \dots , v_{k})$ in $F^n$ is linearly independent **if and only if** there is a pivot in every column of the **REF**. 
+- Definition: $K$ is said to be **linearly independent**, if the vector equation $\lambda_1{v}_1 + \lambda_2{v}_2 + \cdots + \lambda_k{v}_k = {0}\implies{\lambda_{1},\dots,{\lambda_{k}}}=0$. In other words, if the linear system $Ax=[v_{1},\dots, v_{k}][\lambda_{1},\dots,{\lambda_{k}}]=0$ has only the trivial solution.
+- if $V$ is not the $F^n$ space, (for e.g. *matrices space* or *polynomial space*), then replace the **vecotrs** in the **coordinate vectors**. (q8.2.5, q8.4.1a, q8.4.2a)
+- if $0\in{K}$, then $K$ is linearly dependent.
+- $K$ is linearly independent, if and only if, there is a pivot in every column of the **REF** form of $A$. #todo 
 
 # Span
 
@@ -81,9 +80,12 @@ To check whether a list $(v_{1}, \dots , v_{k})$ in $F^n$ is linearly independen
 
 ### basis of the column space of a matrix $B$
 
-- the basis of **the row space** of a matrix $B^t$, is the basis of **the column space** of a matrix $B$
+-  the basis of **the column space** of a matrix $B$, is the basis of **the row space** of a matrix $B^t$,
 
-### basis of the sub-space $U=\text{Sp}({\set{v_{1},v_{2},\dots,v_{k}   }})$ of ${F}^n$
+### basis of the sub-space 
+
+finding basis for $U=\text{Sp}({\set{v_{1},v_{2},\dots,v_{k}   }})\subseteq {F}^n$
+
 reducing a span set to a basis by removing a vectors 
 (q8.5.2b)
 
@@ -105,7 +107,7 @@ basis of the sub-space $U=\text{Sp}({\set{u_{1},u_{2},\dots,u_{p}   }})$ of $V$,
 - $w_{1},w_{2},\dots,{w_{k}}\in{F^n}$, are coordinate vectors by $B$ of $v_{1},v_{2},\dots,{v_{k}}\in{V}$. (respectively)
 - $\set{v_{1},v_{2},\dots,{v_{k}}}$ are the basis of $U$
 
-### Extending a linearly independent set to a basis by adding a vectors
+### Extending a linearly independent set to a basis by adding vectors
 
 #todo 
 - Obtain the reduced row echelon form (RREF) of the matrix as row of vectors. and then complete it to identity matrix. (the rows for the complete are the vectors for complete to basis)
@@ -134,23 +136,8 @@ Make sure **TWO out of three** are fulfilled (8.3.2)
 
 > q8.4.1b (matrices space), q8.4.2b (polynomial space)
 
-- coordinate vector of image (10.2.1) - $[T(v)]_{C}=[T]^{B}_{C}[v]_{B}$
-
-
-
-
-
-
-
-___
-
-
-
-
-
-
-
-
+- (8.4.4) Vectors are *linearly independent*, if and only if, its coordinate vectors are *linearly independent*.
+- (10.2.1) coordinate vector of image - $[T(v)]_{C}=[T]^{B}_{C}[v]_{B}$
 
 # Orthogonality 
 
@@ -159,14 +146,12 @@ ___
 
 ## Orthogonal Complement
 
-
-
 - (d12.2.4) The **Orthogonal Complement** -  $U^{\perp}=\set{\mathbf{v}\in \mathbb{R}^n  \mid \mathbf{v} \cdot \mathbf{u} = 0, \forall{\mathbf{u} \in U }}$
 	- (q12.2.7) ${U^{\perp}}\cap{U}=\{ \mathbf{0} \}$
 - (12.3.1) The **row space** of $A$ and the **null space** of $A$ are orthogonal complements
 - (12.3.2) The **Orthogonal Decomposition** of the Euclidean space of dimension $n$. 
 	- (12.3.2a) ${U^{\perp}}\oplus{U}=\mathbb{R}^n$
-	- (12.3.2a) $\dim U^{\perp}=n-\dim U$
+	- (12.3.2a) $\dim U^{\perp}+\dim U=n$
 	- (12.3.2b) $(U^\perp)^{\perp}=U$
 
 ## Orthogonal Projection
@@ -193,6 +178,7 @@ ___
 
 
 ## orthogonal set
+
 - (d12.4.1a) let $K=\{ \textbf{u}_{1}, \dots,\textbf{u}_{k} \} \subseteq\mathbb{R}^n$. we say that $K$ is a **orthogonal set**, if $\textbf{0}\notin{K}$, and $\forall{j\neq i}:\textbf{u}_{i}\cdot\textbf{u}_{j}=0$
 - (12.4.2) Every orthogonal set in $\mathbb{R}^n$ is independent set
 - (q12.4.3a) Every orthogonal set in $\mathbb{R}^n$ has at most $n$ vectors
@@ -226,48 +212,3 @@ $$\mathbf{v}_{i}=\mathbf{u}_{i}-\frac{\mathbf{u}_{i}\cdot\mathbf{v}_{1}}{{\| \ma
 
 
 ___
-
-# Ways of Viewing
-
-- $A$ is an $m\times n$ matrix
-
-|                            | Matrix view        | System view                                                           | Transformation view          |
-| -------------------------- | ------------------ | --------------------------------------------------------------------- | ---------------------------- |
-|                            | $\text{row}({A})$  |                                                                       |                              |
-| subspace of $\mathbb{R}^n$ | $\text{null}({A})$ | the solution space of $A\mathbf{x}=\mathbf{0}$                        | $\text{Ker}(T)$              |
-| subspace of $\mathbb{R}^m$ | $\text{col}({A})$  | all $\mathbf{b}$ in $\mathbb{R}^m$ for which $A\mathbf{x}=\mathbf{b}$ | $\text{Im}({T})$             |
-|                            | zero matrix        |                                                                       | zero transformation          |
-
-- $A$ and $B$ are an $m\times n$ matrix that represent $T_{A},T_{B}:V\to W$
-
-| Matrix view                               | Transformation view                                             |
-| ----------------------------------------- | --------------------------------------------------------------- |
-| $A$ and $B$ are equivalent (row & column) | $T_{A}$ and $T_{B}$ are the same transformation (in diff bases) |
-| $A$ and $B$ are row equivalent            |                                                                 |
-
-## Square matrix
-
-- $A$ is an $n\times n$ matrix, $T:V\to V$ 
-
-| Matrix view           | Transformation view |
-| --------------------- | ------------------- |
-| idintity metrix       | identity operator   |
-| diagonalizable matrix |   **todo**                  |
-
-- $A$ is an $n\times n$ matrix, $T:V\to W$
-
-| Matrix view       | Transformation view          |
-| ----------------- | ---------------------------- |
-| invertible matrix | isomorphism (invertible map) |
-
-- $A$ and $B$ are an $n\times n$ matrix that represent $T_{A},T_{B}:V\to W$
-
-| Matrix view             | Transformation view                  |
-| ----------------------- | ------------------------------------ |
-| $A$ and $B$ are similar | the same transformation (diff bases) |
-
-- $A$ and $B$ are an $n\times n$ matrix that represent $T_{A},T_{B}:V\to V$
-
-| Matrix view | Transformation view |
-| ----------- | ------------------- |
-|             |                     |

@@ -1,13 +1,23 @@
+
+## Row Echelon form (REF)
+
+- (1.11.1) every REF matrix is row row equivalence to the RREF matrix
+- (8.5.1) The nonzero rows of REF matrix are a basis for its row space.
+
+### Reduced Row Echelon form (RREF)
+
+
+
 ## Row equivalence
 
 - row equivalence is equivalence relation
 
 whether two matrices are row equivalent #todo 
 
-## Rank of Matrix $\rho{(A_{{m \times n}})}$
+## Rank
 
-- Other notation: $\text{rank}{(A)}$
-- (d8.5.4) the rank $\rho{(A)}$ is the dim. of the row/column space of $A$
+- **Notation**: $\text{rank}{(A)}=\rho{(A)}$
+- (d8.5.4) $\rho{(A)}=\dim(\text{row-space(A)})=\dim(\text{column-space(A)})$
 - $\rho(A)$ is the number of the non-zero rows of REF of $A$
 - $\rho(A)$ is the number of pivots in the RREF of $A$. 
 - (q8.5.4) $\rho{(A)}=\rho{(A^t)}$
@@ -15,10 +25,10 @@ whether two matrices are row equivalent #todo
 - (q8.5.6) $\rho{(AB)}\leq\min{\{ \rho{(A)}, \rho{(B)} \}}$
 - (q8.5.7a) let $A_{m \times n}$, and $B_{n}$ invertible matrix, then $\rho(AB)=\rho(A)$ 
 - (q8.5.7b) let $A_{m \times n}$, and $B_{m}$ invertible matrix, then $\rho(BA)=\rho(A)$ 
-- (8.6.1) **Rank–nullity** theorem  $n=\dim(\text{nul}{(A)})+\rho(A)$
+- (8.6.1) **Rank–nullity** theorem  $\rho(A)+\dim(\text{nul}{(A)})=n$
 - Only a zero matrix has rank zero. #todo 
 - row equivalent matrices must have the same rank #todo 
-- rank of **square matrix**
+	- rank of **square matrix**
 	- (q8.5.8a) let $A$ square matrix of order $n$, then $\rho(A)=n \iff |A|\neq 0$  
 	- (q10.5.3) $A,B$ are square matrices of order $n$, then $\rho{(AB)}\geq \rho(A)+\rho(B)-n$
 
@@ -30,6 +40,16 @@ Matrix Representations of Linear Transformation
 - (d10.1.1) $T:V\to W$, and $B=(v_{1},\dots,v_{n})$ and $C=(w_{1},\dots,w_{n})$ are bases of $V$ and $W$. (respectively) 
 $$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T( {v_{n}})]_{C} \\ | & & | \end{array} \right]_{m\times n}$$
 
+
+
+## Transpose
+
+- (3.2.4)  $(A^t)^t=A$
+- $(A+B)^t=A^t+B^t$
+- $(AB)^t=B^tA^t$
+- $(cA)^{t}=cA^{t}$
+- 
+
 # Square Matrices
 
 Let $A$ be an $n \times n$ square matrix.
@@ -37,7 +57,14 @@ Let $A$ be an $n \times n$ square matrix.
 ## Invertibility 
 
 - **Theorem 3.10.6**: Let $A$ be a $n$-ordered square matrix over a field $F$. The following statements are **equivalent**:
+	- $A$ is an **invertible matrix**
+	- $A$ can be expressed as a finite product of elementary matrices.
 	- $A$ is row-equivalent to the identity matrix $I$
+	- There exists a $B$ such that $BA=I$
+	- There exists a $B$ such that $AB=I$
+	- There exists a $B$ such that $AB=BA=I$, (in such case $A^{-1}=B$, and $B^{-1}=A$) ()
+	- $A$ is row-equivalent to $I$.
+	- $A$ is column-equivalent to $I$.
 	- The RREF of $A$ is $I$
 	- The columns of A are linearly independent.
 	- The rows of A are linearly independent.
@@ -45,13 +72,20 @@ Let $A$ be an $n \times n$ square matrix.
 	- The rows of A span $F^n$
 	- The columns of A is a basis $F^n$
 	- The rows of A a basis $F^n$
-	- #todo 
+	- $A^t$ is an **invertible matrix** (in such case $(A^t)^{-1}=(A^{-1})^{t}$) (3.8.4b)
 	- (4.4.1) The determinant of A is nonzero: $\det{A}\neq0$
 	- (4.4.1, and q11.3.1) The number $0$ **is not an eigenvalue** of $A$. 
 	- (q8.5.8b) $A$ has a full rank: $\rho(A)=n$
 	- (10.5.1, and 9.6.2) $A$ has trivial kernel: $\ker(A)=\{ 0 \}$
+	- The linear transformation mapping $\mathbf{x}$ to $A\mathbf{x}$ is **surjective**; that is, the equation $A\mathbf{x}=\mathbf{b}$ has at least one solution for each $\mathbf{b}$ in $F^n$.
+	- The linear transformation mapping $\mathbf{x}$ to $A\mathbf{x}$ is **injective**; that is, the equation $A\mathbf{x}=\mathbf{b}$ has at most one solution for each $\mathbf{b}$ in $F^n$.
+	- The linear transformation mapping $\mathbf{x}$ to $A\mathbf{x}$ is **bijective**; that is, the equation $A\mathbf{x}=\mathbf{b}$ has exactly one solution for each $\mathbf{b}$ in $F^n$. ($A\mathbf{x}=\mathbf{b}\implies \mathbf{x}=A^{-1}\mathbf{b}$)
 
 - (4.5.2) $A,B$ are square matries, and $AB=I$, then $A$ and $B$ are both invetible, and $A^{-1}=B$, and $B^{-1}=A$, and $AB=BA=I$
+- (3.8.3) if $A$ is invertible, then $AB=AC\implies B=C$, and $BA=CA\implies B=C$
+- (3.8.4c) if $A,B$ are invertible (the same order), then $AB$ is also invertible. (in such case $(AB)^{-1}=B^{-1}A^{-1}$) 
+- (3.8.4d) if $A$ is invertible, and $s\neq 0$, then $sA$ is also invertible. (in such case $(sA)^{-1}=\frac{1}{s}A^{-1}$)
+
 
 > [!example] **Procedure:** determine whether a square matrix $A$ is invertible and, if so, find $A^{−1}$: 
 >	- Form the augmented matrix $[A | I_{n}]$ and put it into RREF. 
@@ -60,19 +94,28 @@ Let $A$ be an $n \times n$ square matrix.
 
 > **WolframAlpha** `inverse [matrix]`
 
+## Elementary matrix
+
+- $A$ is called an **elementary matrix** if it can be obtained from an identity matrix by performing a single elementary row operation. 
+- Every elementary matrix is invertible, and the inverse is also an elementary matrix. 
+
 ## Determinant 
 
 - $\det A=|A|$ 
 - **Theorems:**
+	- (4.5.1) $\det (AB)=\det (A) \det (B)$
+	- (4.3.1) $\det (A)=\det(A^t)$
+	- (4.3.5) if $A$ has two equal rows (or colmuns), then $\det A=0$
 	- (4.3.8) if $A_{n}=[a_{ij}]$ is a triangular matrix, then $\det A=a_{11}a_{22} \cdots a_{nn}$
-	- (4.5.1) $|AB|=|A||B|$
 	- (10.7.3) **similar matrices** have the same determinant
 	- (q11.3.1) $\det{A}=0$, if and only if, $\lambda=0$ is eigenvalue of $A$
 	- Row Operations
 		- If a multiple of one row of $A$ is **added** to another row to produce a matrix $B$, then $\det B=\det A$
 		- If two rows of $A$ are **interchanged** to produce $B$, then $\det B=-\det A$
 		- if one row of $A$ is **multiplied** by $k$ to produce $B$, then $\det B=k \cdot \det A$ 
+	- (q4.3.3) $\det (tA)=t^n \det A$
 	- $\det A$ is equal to the product of its eigenvalues (see q11.4.7)
+
 
 
 > [!example]  Procedure: computing the detrminant
@@ -124,6 +167,7 @@ $$\det \left( \lambda I -A \right)$$
 
 ## Trace
 
+- $\operatorname{tr}({A}) = \sum_{i=1}^n a_{ii} = a_{11} + a_{22} + \dots + a_{nn}$
 - $\text{tr} A$ is the sum of its eigenvalues #todo 
 - (10.7.6) $\text{tr}(AB)=\text{tr}(BA)$
 - (10.7.5) similar matrices have the same trace
@@ -164,8 +208,12 @@ shared properties: determinant (10.7.3), trace (10.7.5), eigenvalues (11.3.3), a
 ## Symmetric matrix
 
 - (d3.2.6) ${A}\text{ is symmetric} \iff A=A^t$
-
->**WolframAlpha** is `[matrix]` a symmetric matrix?
+- (q3.2.3) ${A}\text{ is symmetric} \implies {A}\text{ is square}$
+- (q3.2.4) ${A}\text{ is diagonal} \implies {A}\text{ is symmetric}$
+- (q3.2.4) sum of symmetric matries is symmetric matrix
+- (q3.4.6) $A$ and $B$ are symmetric matries, then ${AB}\text{ is symmetric} \iff {AB=BA}$
+- (q.4.3.10)  ${A}\text{ is anti-symmetric} \iff A^t=-A$
+	- if $A_{n}$ is anti-symmetric, and $n$ is odd, then $\det A=0$ 
 
 ## Change of Basis matrix (Transition matrix) 
 also *change-of-coordinates matrix*
@@ -199,3 +247,9 @@ u_{1} &= a_{11}v_{1}+\dots+a_{n1}v_{n} \\ \vdots \notag \\ u_{n} &= a_{1n}v_{1}+
 ## Triangular matrix
 
 - (4.3.8) if $A_{n}=[a_{ij}]$ is a triangular matrix, then $\det A=a_{11}a_{22} \cdots a_{nn}$
+
+
+## Orthogonality
+
+#todo Orthogonal matrix - This is not taught in the course.
+

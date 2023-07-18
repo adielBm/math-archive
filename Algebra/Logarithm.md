@@ -1,4 +1,4 @@
-$\log_b{a}=x\quad\Longleftrightarrow\quad b^x=a$
+$$\large \log_b{a}=x\quad\Longleftrightarrow\quad b^x=a$$
 
 | name              | identity                                                                                  |
 | ----------------- | ----------------------------------------------------------------------------------------- |

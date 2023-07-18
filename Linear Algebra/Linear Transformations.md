@@ -1,4 +1,4 @@
-### whether a transformation is a linear transformation
+whether a transformation is a linear transformation?
 
 given $T:V\to W$
 - firstly, check if $T(0_{V})=0_{W}$. 
@@ -8,15 +8,15 @@ given $T:V\to W$
 
 >q9.4.1
 
-# Linear Transformations
-
 ## Image
 
 finding the image of a linear transformation $\text{Im}T$
 
+- Definition: $\operatorname{Im}(T) = \{\,w \in W: w = T(v), v \in V\,\}$
 - (9.3.6) let $T:V\to W$, and $\text{Sp}\{ v_{1},\dots ,v_{n} \}=V$, then, $\text{Im}{T}=\text{Sp}{(\{ T(v_{1}),\dots,T(v_{n}) \})}$
 - (9.3.7) let $A_{m \times n}$ matrix on field $F$, and $T:F^n\to F^m$, where $T(v)=Av$, then, $\text{Im}(T)=\text{Col}{(A)}$ (the column space of $A$)
 - (9.6.2) if $T:V\to W$ is isomorphism, and the $\dim{V}=\dim{W}$, then $\text{Im}{T}=W$ (i.e. $T$ is onto)
+- $\text{Im}T$ is subspace of $W$
 
 >q9.3.2c, q9.3.3, q9.4.2
 
@@ -24,19 +24,11 @@ finding the image of a linear transformation $\text{Im}T$
 
 ## Kernel 
 
-finding the kernel of a linear transformation $\text{Ker}T$
-
-- $\ker(T) = \{ v \in V : T(v) = 0_W\}$
+- Definition: $\ker(T) = \{ v \in V : T(v) = 0_W\}$
+- (9.3.5) $\ker T$ is subspace of $V$
+- (9.5.2) $T:V\to W$ is injective, if and only if, $\ker{T}=\{ 0 \}$
 
 >see 9.6.2 
-
-
-## linear transformation so that..
-
-- linear transformation $T:V\to W$ s.t. $A=\{ v_{1},\dots ,v_{k} \}$ spans $\text{Ker{(T)}}$
-	- find basis to $\text{Ker{(T)}}$
-	- take the found basis, and extend it to basis of $F^n$
-	- set the Im of the basis 
 
 ## Transformation matrix
 
@@ -45,22 +37,24 @@ Matrix Representations of Linear Transformation
 - (d10.1.1) $T:V\to W$, and $B=(v_{1},\dots,v_{n})$ and $C=(w_{1},\dots,w_{n})$ are bases of $V$ and $W$. (respectively) 
 $$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T( {v_{n}})]_{C} \\ | & & | \end{array} \right]_{m\times n}$$
 
-## Compute $T(v)$ Indirectly 
 
-1. Compute the coordinate vector $[v]_{B}$
-2. Compute $[T(v)]_{C}=[T]_{C}^{B}[v]_{B}$
-3. Reconstruct $T(v)$ from its coordinate vector $[T(v)]_{C}$
+> [!example] Compute $T(v)$ Indirectly 
+> 1. Compute the coordinate vector $[v]_{B}$
+> 2. Compute $[T(v)]_{C}=[T]_{C}^{B}[v]_{B}$
+> 3. Reconstruct $T(v)$ from its coordinate vector $[T(v)]_{C}$
 
 ## Equality
 
 - (9.4.1) $T,S:V\to W$, and $B=\{ v_{1},\dots,v_{n} \}$ spans $V$. then $T=S \iff \forall{v\in B}:{T(v)=S(v)}$ 
+
+# dimV=dimW
 
 ## Isomorphism
 
 - Definition: An **isomorphism** is an **invertible linear transformation** (i.e. bijective linear transformation).
 
 - Determine if $T:V\to W$ is an isomorphism?
-	- (9.6.2)  if $\dim{V}=\dim{W}$ (finite-dimensional) then,  injective $\iff$ surjective $\iff$ isomorphism
+	- (9.6.2)  if $\dim{V}=\dim{W}$ (finite-dimensional) then, injective $\iff$ surjective $\iff$ isomorphism
 	- (10.5.2) if $[T]^B_{C}$ is invertible, then $T$ is isomorphism
 	- (9.9.2) if exists $S:W\to V$ such that $ST=I_{V}$ and $TS=I_{W}$, then, $T$ is an isomorphism, $S=T^{-1}$
 	- (9.6.2)  if $\dim{V}=\dim{W}$, then the following statements are **equivalent**:
@@ -68,6 +62,7 @@ $$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T
 		- there is $S:W\to V$ such that $ST=I_{V}$
 		- there is $S:W\to V$ such that $TS=I_{W}$
 
+- (9.5.2) $T:V\to W$ is injective, if and only if, $\ker{T}=\{ 0 \}$
 
 ## Linear Operator $T:V \to V$
 
