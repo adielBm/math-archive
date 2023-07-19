@@ -18,8 +18,9 @@ whether two matrices are row equivalent #todo
 
 - **Notation**: $\text{rank}{(A)}=\rho{(A)}$
 - (d8.5.4) $\rho{(A)}=\dim(\text{row-space(A)})=\dim(\text{column-space(A)})$
+- The rank is the maximal number of linearly independent row vectors
 - $\rho(A)$ is the number of the non-zero rows of REF of $A$
-- $\rho(A)$ is the number of pivots in the RREF of $A$. 
+- $\rho(A)$ is the number of pivots in the RREF of $A$.
 - (q8.5.4) $\rho{(A)}=\rho{(A^t)}$
 - (q8.5.5) $\rho{(A_{m \times n})}\leq\min{\{ m,n \}}$
 - (q8.5.6) $\rho{(AB)}\leq\min{\{ \rho{(A)}, \rho{(B)} \}}$
@@ -32,6 +33,9 @@ whether two matrices are row equivalent #todo
 	- (q8.5.8a) let $A$ square matrix of order $n$, then $\rho(A)=n \iff |A|\neq 0$  
 	- (q10.5.3) $A,B$ are square matrices of order $n$, then $\rho{(AB)}\geq \rho(A)+\rho(B)-n$
 
+## Nulity 
+
+- (8.6.1) $\mathrm{nullity}(A)=\dim{\mathrm{(null(A))}}=n-\rho({A})$
 
 ## Transformation matrix
 
@@ -149,14 +153,6 @@ $$\det \left( \lambda I -A \right)$$
 > 
 > To verify your work, make sure that $Av=\lambda v$ for each $\lambda$ and associated eigenvector $v$.
 
-### Whether a scalar is an eigenvalue of $A$
-
-- (d11.3.1) the scalar $\lambda$ is called an **eigenvalue** of $A$, if there is a non-zero **column** vector $v$, such that: $Av=\lambda{v}$. (in such case, $v$ is called an **eigenvector** of $A$ that related to the eigenvalue $\lambda$.) 
-- (q11.3.2a) if $\lambda$ is an eigenvalue of $A$, then for each $\mu$, $\mu\lambda$ is an eigenvalue of $\mu A$
-- (q11.3.2b) if $\lambda$ is an eigenvalue of $A$, then , $\lambda^k$ is a eigenvalue of $A^k$. (for each natural $k$ )
-- (11.4.1) $\lambda$ is an eigenvalue of $A$, if and only if, $\lambda$ is a solution of the **characteristic equation** $\det(\lambda I-A)$ is $0$
--  #todo - $\lambda$ is an eigenvalue of $A$, if and only if, the system of equations $(\lambda I-A)v=0$ has nontrivial solutions.
-
 ### Algebraic & geometric multiplicity
 
 - (d11.5.2) The multiplicity of an eigenvalue $\lambda$ as a root of the characteristic equation is **the algebraic multiplicity** of $\lambda$ 
@@ -164,6 +160,14 @@ $$\det \left( \lambda I -A \right)$$
 - (11.5.3, q11.5.3)  $1\leq$ the **geometric multiplicity** $\leq$ the **algebraic multiplicity**
 - finding the algebraic multiplicity of eigenvalue #todo 
 - finding the geometric multiplicity of eigenvalue #todo 
+
+### Whether a scalar is an eigenvalue of $A$
+
+- (d11.3.1) the scalar $\lambda$ is called an **eigenvalue** of $A$, if there is a non-zero **column** vector $v$, such that: $Av=\lambda{v}$. (in such case, $v$ is called an **eigenvector** of $A$ that related to the eigenvalue $\lambda$.) 
+- (q11.3.2a) if $\lambda$ is an eigenvalue of $A$, then for each $\mu$, $\mu\lambda$ is an eigenvalue of $\mu A$
+- (q11.3.2b) if $\lambda$ is an eigenvalue of $A$, then , $\lambda^k$ is a eigenvalue of $A^k$. (for each natural $k$ )
+- (11.4.1) $\lambda$ is an eigenvalue of $A$, if and only if, $\lambda$ is a solution of the **characteristic equation** $\det(\lambda I-A)$ is $0$
+-  #todo - $\lambda$ is an eigenvalue of $A$, if and only if, the system of equations $(\lambda I-A)v=0$ has nontrivial solutions.
 
 ## Trace
 

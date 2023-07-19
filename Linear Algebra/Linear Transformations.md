@@ -8,6 +8,9 @@ given $T:V\to W$
 
 >q9.4.1
 
+
+- $T(v)=T(u)\iff T(v-u)=0$
+
 ## Image
 
 finding the image of a linear transformation $\text{Im}T$
@@ -65,6 +68,8 @@ $$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T
 - (9.5.2) $T:V\to W$ is injective, if and only if, $\ker{T}=\{ 0 \}$
 
 ## Linear Operator $T:V \to V$
+
+- $T^2=0\implies\mathrm{Im}T\subseteq\mathrm{Ker}T$
 
 ### eigenvalues 
 

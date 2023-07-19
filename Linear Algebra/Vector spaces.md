@@ -7,13 +7,10 @@ $U,W\subseteq{V}$
 - **Direct sum**:  $U\oplus{W}=V \iff U+{W}=V$ and $U \cap W=\{ 0 \}$
 	- (8.3.7) if $V=U+W$, then $V=U\oplus W \iff \dim V= \dim U+\dim W$ 
 
-# Equivalence
+# Equality
 
-- Determine if two spaces are equal, $U=V$
-	- Option 1: check if $U=\text{Sp}{(S)}$ is equal to $V=\text{Sp}{(T)}$
-	- check if the matrix by S as rows, is ***row-equivalent*** to the matrix by T as rows (7.5.12)
-	- Option 2: if $U\subseteq V$ then $U=V \iff \dim V=\dim U$. (8.3.4)
-
+- (7.5.12) let $U=\text{Sp}{(S)}$ and $V=\text{Sp}{(T)}$, if the matrix by $S$ as rows, is ***row-equivalent*** to the matrix by $T$ as rows, then $U=V$
+- (8.3.4) if $U\subseteq V$ then $U=V \iff \dim V=\dim U$. 
 
 # Isomorphic Subspaces
 
@@ -29,115 +26,7 @@ $U,W\subseteq{V}$
 - (8.3.7) if $V=U+W$, then $V=U\oplus W \iff \dim V= \dim U+\dim W$ 
 - (9.5.9) $V \cong W \iff \text{dim}{V}=\text{dim}{W}$ (on the same field, and infinite dim.)
 - (9.6.1) **Rank–nullity theorem** $\text{dim}{V}=\text{dim}{(\text{Ker}{T})}+\text{dim}{(\text{Im}{T})}$. ($T:V\to W$ is lin. trans.)
-- dimension of row/column space of a matrix is the rank of A
-- dimension of solution sub-space of homogeneous system (nul A) (see 8.6.1)
-
-# Linear independence
-
-Whether $K=\set{{v}_1,\dots,{v}_k}\subseteq V$ is **linearly independent**?
-
-- Definition: $K$ is said to be **linearly independent**, if the vector equation $\lambda_1{v}_1 + \lambda_2{v}_2 + \cdots + \lambda_k{v}_k = {0}\implies{\lambda_{1},\dots,{\lambda_{k}}}=0$. In other words, if the linear system $Ax=[v_{1},\dots, v_{k}][\lambda_{1},\dots,{\lambda_{k}}]=0$ has only the trivial solution.
-- if $V$ is not the $F^n$ space, (for e.g. *matrices space* or *polynomial space*), then replace the **vecotrs** in the **coordinate vectors**. (q8.2.5, q8.4.1a, q8.4.2a)
-- if $0\in{K}$, then $K$ is linearly dependent.
-- $K$ is linearly independent, if and only if, there is a pivot in every column of the **REF** form of $A$. #todo 
-
-# Span
-
-- $\text{Sp}{(K)}=\text{Sp}{(T)}\iff{K\subseteq\text{Sp}{(T)}\land{T\subseteq\text{Sp}{(K)}}}$
-- $K\subseteq{\text{Sp}{(T)}}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(T)}}$
-- $K \subseteq{T}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(T)}}$
-
-### whether a set of vectors $K$, spans the space $V$
-
-- https://math.stackexchange.com/questions/56201/how-to-tell-if-a-set-of-vectors-spans-a-space
-
-
-# Basis
-
-## finding a basis
-
-### basis of the **solutions sub-space of** $A\textbf{x}=\textbf{0}$ (*Homogeneous System*) 
-
-(q8.2.4)
-- Transformation $A$ to reduced row echelon form	
-- find the solutions space
-- find a span of the solutions space
-- check if the span is linearly independent
-- if so, then the span is basis of the solutions space
-
-(q8.6.3)
-- Obtain the reduced row echelon form (RREF) of $A$
-- find the general solution
-- extract the variables from the general solution
-- the number of variables is the size of the basis
-- #todo 
-
-### basis of the row space of a matrix $B$
-(q8.5.2b)
-
-- Transformation $B$ to row echelon form $A$
-- then, the **non-zero rows** of $A$ are the basis of the row space of $A$, and therefore of $B$. and their number is the rank $\rho{(B)=}\rho{(A)}$
-
-### basis of the column space of a matrix $B$
-
--  the basis of **the column space** of a matrix $B$, is the basis of **the row space** of a matrix $B^t$,
-
-### basis of the sub-space 
-
-finding basis for $U=\text{Sp}({\set{v_{1},v_{2},\dots,v_{k}   }})\subseteq {F}^n$
-
-reducing a span set to a basis by removing a vectors 
-(q8.5.2b)
-
-- set the ${\set{v_{1},v_{2},\dots,v_{k}   }}$ as row vector of matrix, and then follow [[#basis of the row space of a matrix $B$]] 
-
- **OR:**
-
-#todo check if it's correct 
-Let $(v_{1}, \dots , v_{k})$ be a list of vectors in $F^n$. To find a basis $B$ for $\text{Sp}(v_{1}, \dots , v_{k})$: 
-- Put $A = [v_{1} · · · v_{k}]$ (each vector as column) in **RREF**. 
-- If the $i$-th column contains a pivot, include $v_{i}$ in $B$. 
-
-
-### basis of the sub-space 
-basis of the sub-space $U=\text{Sp}({\set{u_{1},u_{2},\dots,u_{p}   }})$ of $V$, on field $F$ ($\dim{V}=n$)
-
-- choose some basis $B$ of $V$. (usually the standard basis) 
-- find a basis $\set{w_{1},w_{2},\dots,{w_{k}}}$ of the sub-space $W=\text{Sp}(\set{[u_{1}]_{B},[u_{2}]_{B},\dots,[u_{p}]_{B}})$ of $F^n$, 
-- $w_{1},w_{2},\dots,{w_{k}}\in{F^n}$, are coordinate vectors by $B$ of $v_{1},v_{2},\dots,{v_{k}}\in{V}$. (respectively)
-- $\set{v_{1},v_{2},\dots,{v_{k}}}$ are the basis of $U$
-
-### Extending a linearly independent set to a basis by adding vectors
-
-#todo 
-- Obtain the reduced row echelon form (RREF) of the matrix as row of vectors. and then complete it to identity matrix. (the rows for the complete are the vectors for complete to basis)
-- q8.3.6
-- q8.6.4 
-
-### basis for ImT
-
-### basis for KerT
-
-## whether a set of vectors $K$, is a basis of the space $V$
-
-### method 1
-
-Make sure **TWO out of three** are fulfilled (8.3.2)
-1. $K$ is indep. lin. 
-2. $\text{Sp}(K)=V$  (K spans V)
-3. $|K|=\dim{V}$ 
-
-### method 2
-
-- (8.4.5) - let $B={(v_{1},v_{2},\dots,v_{n})}$ is a basis of the space $V$ ($n$-dim.), on $F$, then $B'={(u_{1},u_{2},\dots,u_{n})}$ is a basis of $V$, **iff** the transition matrix from $B$ to $B'$ is invertible.
-
-
-# Coordinate vector
-
-> q8.4.1b (matrices space), q8.4.2b (polynomial space)
-
-- (8.4.4) Vectors are *linearly independent*, if and only if, its coordinate vectors are *linearly independent*.
-- (10.2.1) coordinate vector of image - $[T(v)]_{C}=[T]^{B}_{C}[v]_{B}$
+- (d8.5.4) $\rho{(A)}=\dim(\text{row-space(A)})=\dim(\text{column-space(A)})$
 
 # Orthogonality 
 
@@ -177,13 +66,13 @@ Make sure **TWO out of three** are fulfilled (8.3.2)
 > 	- then $\textbf{u}=\sum^{k}_{i=1}{{(\mathbf{a}\cdot \mathbf{u}_{i})}\textbf{u}_{i}}=\text{proj}_{U^{\perp}}\mathbf{a}$
 
 
-## orthogonal set
+## Orthogonal set
 
 - (d12.4.1a) let $K=\{ \textbf{u}_{1}, \dots,\textbf{u}_{k} \} \subseteq\mathbb{R}^n$. we say that $K$ is a **orthogonal set**, if $\textbf{0}\notin{K}$, and $\forall{j\neq i}:\textbf{u}_{i}\cdot\textbf{u}_{j}=0$
 - (12.4.2) Every orthogonal set in $\mathbb{R}^n$ is independent set
 - (q12.4.3a) Every orthogonal set in $\mathbb{R}^n$ has at most $n$ vectors
 
-## orthonormal set
+## Orthonormal set
 
 - (d12.4.1b) $K=\{ \textbf{u}_{1}, \dots,\textbf{u}_{k} \}$ is **orthonormal set** if, $\| \textbf{u}_{i} \|=1$ for each $i$, ($1\leq i\leq k$)
 - (q12.4.2) **Normalizing** - if $K=\{ \mathbf{u}_{1}, \dots,\textbf{u}_{k} \}$ is orthogonal set, then $L=\{ \frac{\textbf{u}_{1}}{\|\textbf{u}_{1} \|},\dots,\frac{\textbf{u}_{k}}{\|\textbf{u}_{k} \|} \}$ is orthonormal set, and $\text{Sp}(K)=\text{Sp}(L)$
