@@ -57,7 +57,7 @@ Row equivalence is an *equivalence relation*
 	- if $\rho{(A)}=\min{\{ m,n \}}$ then $A$ has **full rank**.
 		- if $\rho{(A)}=n$ then $A$ has **full column rank**. ($f(\mathbf{x})=A\mathbf{x}$ is injective)
 		- if $\rho{(A)}=m$ then $A$ has **full row rank**. ($f(\mathbf{x})=A\mathbf{x}$ is surjective) (A's rows are linearly indepndent #todo )
-	- Otherwise if $\rho{(A)}=\min{\{ m,n \}}$, then $A$ has **rank deficient**. 
+	- Otherwise if $\rho{(A)}<\min{\{ m,n \}}$, then $A$ has **rank deficient**. 
 - (q8.5.6) $\rho{(AB)}\leq\min{\{ \rho{(A)}, \rho{(B)} \}}$
 - (q8.5.7a) let $A_{m \times n}$, and $B_{n}$ invertible matrix, then $\rho(AB)=\rho(A)$ 
 - (q8.5.7b) let $A_{m \times n}$, and $B_{m}$ invertible matrix, then $\rho(BA)=\rho(A)$ 
@@ -86,7 +86,23 @@ $$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T
 - $(A+B)^t=A^t+B^t$
 - (3.4.5) $(AB)^t=B^tA^t$
 - $(cA)^{t}=cA^{t}$
-- 
+
+## Equivalence
+
+>[!warning] This term is beyond the scope of the course. 
+
+Matrix equivalence is an equivalence relation on the space of rectangular matrices.
+
+Two $m\times n$ matrices $A$ and $A'$ are called **equivalent** if $$A'=P^{-1}AQ$$for some $n\times n$ matrix $Q$ and $m\times m$ matrix $P$.
+
+Equivalent matrices represent the same linear transformation $T:V\to{W}$ under two different choices of a pair of bases of $V$ and $W$, with $Q$ and $P$ being the change of basis matrices in $V$ and $W$ respectively.
+
+- $B,C$ are **old bases** of $V,W$ (respectively)
+- $B',C'$ are **new bases** of $V,W$ (respectively)
+- $Q$ is change-of-basis $n\times n$ invertible matrix of $V$ from $B$ to $B'$
+- $P$ is change-of-basis $m\times m$ invertible matrix of $W$ from $C$ to $C'$
+- $A=[T]^{B}_{C}$ is the transformation matrix by the **old bases**
+- $A'=[T]^{B'}_{C'}$ is the transformation matrix by the **new bases**
 
 # Square Matrices
 
