@@ -1,6 +1,5 @@
 $\large A$ is $m\times n$ matrix 
 
-
 The following statements are **equivalent**:
 - For each $\mathbf{b}\in\mathbb{R}^m$, the equation $A\mathbf{x}=\mathbf{b}$ has a solution
 - Each $\mathbf{b}\in\mathbb{R}^m$ is a linear combination of the colmuns of $A$

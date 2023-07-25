@@ -1,3 +1,5 @@
+$\large A$ is $m\times n$ matrix 
+
 ## Arithmetic 
 
 ### Matrix addition & multiplication 
@@ -38,23 +40,30 @@ Row equivalence is an *equivalence relation*
 
 ## Rank
 
-- **Notation**: $\text{rank}{(A)}=\rho{(A)}$
+**Notation**: $\text{rank}{(A)}=\rho{(A)}$
+
+**Definitions:**
 - (d8.5.4) $\rho{(A)}=\dim(\text{row-space(A)})=\dim(\text{column-space(A)})$
-- The rank is the maximal number of linearly independent row vectors
-- $\rho(A)$ is the number of the non-zero rows of REF of $A$
-- $\rho(A)$ is the number of pivots in the RREF of $A$.
+- The rank of $A$ is the maximal number of linearly independent rows
+- The rank of $A$ is the maximal number of linearly independent columns
+- The rank of $A$ is $\dim(\text{Im}(T_{A}))$
+- $\rho(A)=n-\dim(\text{nul}{(A)})$
+- $\rho(A)$ is the number of the non-zero rows of $\text{REF}(A)$
+- $\rho(A)$ is the number of pivots in $\text{RREF}(A)$
+
+**Theorems:**
 - (q8.5.4) $\rho{(A)}=\rho{(A^t)}$
 - (q8.5.5) $\rho{(A_{m \times n})}\leq\min{\{ m,n \}}$
 	- if $\rho{(A)}=\min{\{ m,n \}}$ then $A$ has **full rank**.
 		- if $\rho{(A)}=n$ then $A$ has **full column rank**. ($f(\mathbf{x})=A\mathbf{x}$ is injective)
-		- if $\rho{(A)}=m$ then $A$ has **full row rank**. ($f(\mathbf{x})=A\mathbf{x}$ is surjective)
+		- if $\rho{(A)}=m$ then $A$ has **full row rank**. ($f(\mathbf{x})=A\mathbf{x}$ is surjective) (A's rows are linearly indepndent #todo )
 	- Otherwise if $\rho{(A)}=\min{\{ m,n \}}$, then $A$ has **rank deficient**. 
 - (q8.5.6) $\rho{(AB)}\leq\min{\{ \rho{(A)}, \rho{(B)} \}}$
 - (q8.5.7a) let $A_{m \times n}$, and $B_{n}$ invertible matrix, then $\rho(AB)=\rho(A)$ 
 - (q8.5.7b) let $A_{m \times n}$, and $B_{m}$ invertible matrix, then $\rho(BA)=\rho(A)$ 
 - (8.6.1) **Rank–nullity** theorem  $\rho(A)+\dim(\text{nul}{(A)})=n$
-- Only a zero matrix has rank zero. #todo 
-- row equivalent matrices must have the same rank #todo 
+- $A=0\iff \rho(A)=0$. #todo 
+- Row equivalent matrices have the same rank #todo 
 - rank of **square matrix:**
 	- (q8.5.8a) let $A$ square matrix of order $n$, then $\rho(A)=n \iff |A|\neq 0$  
 	- (q10.5.3) $A,B$ are square matrices of order $n$, then $\rho{(AB)}\geq \rho(A)+\rho(B)-n$
