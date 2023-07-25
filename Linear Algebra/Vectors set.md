@@ -1,4 +1,7 @@
 $$\large{K=\set{{v}_1,\dots,{v}_m}\subseteq V}, \quad \dim{V}=n$$
+- $A_{R}$ is $K$'s vectors as **rows** 
+- $A_{C}$ is $K$'s vectors as **comluns** 
+- $B$ is some basis of $V$ 
 
 # Linear independence
 
@@ -13,16 +16,17 @@ Whether $K$ is **linearly independent**?
 - $0\in{K}\implies K\text{ is linearly {\bf dependent}}$
 - $m>n\implies K\text{ is linearly {\bf dependent}}$
 
-- if $V$ is not the $F^n$ space, (for e.g. *matrices space* or *polynomial space*), then replace the **vecotrs** in the **coordinate vectors**. (q8.2.5, q8.4.1a, q8.4.2a)
+- (8.4.4) $K\text{ is linearly {\bf independent}}\iff \{ [v_{1}]_{B},\dots,[v_{m}]_{B} \}\text{ is linearly {\bf independent}}$
 - $K$ is linearly independent, if and only if, there is a pivot in every column of the **REF** form of $A$. #todo 
 
 # Span
 
-Whether a set of vectors $K$, spans $V$
+Whether $K$, spans $V$ ?
+
 - $K\text{ spans }V \iff \text{rank}(\text{REF}(A))=\dim{V}$.   ($A$ is $K$'s vectors as rows)
-- $K\text{ spans }V \iff A\mathbf{x}=\mathbf{b}\text{ is consistent}$.   ($A$ is $K$'s vectors as colmuns)
+- $K\text{ spans }V \iff A\mathbf{x}=\mathbf{b}\text{ is consistent}$.   ($A$ is $K$'s vectors as columns)
 - $B\subseteq{\text{Sp}{(K)}}\implies{K\text{ spans }V}$. (where $\text{Sp}({B})=V$)
-- $|{K}|<n\implies K\text{ is {\bf not} span }V$
+- $m<n\implies K\text{ is {\bf not} span }V$
 
 **Theorems:**
 - $\text{Sp}{(K)}=\text{Sp}{(T)}\iff{K\subseteq\text{Sp}{(T)}\land{T\subseteq\text{Sp}{(K)}}}$
@@ -31,33 +35,37 @@ Whether a set of vectors $K$, spans $V$
 
 # Basis
 
+Whether $K$ is a basis of $V$ ?
+
+Make sure **TWO out of three** are fulfilled (8.3.2)
+1. $K\text{ is linearly {\bf independent}}$
+2. $\text{Sp}(K)=V$  (K spans V)
+3. $m=n$ 
+
+### method 2
+
+- (8.4.5) - let $B={(v_{1},v_{2},\dots,v_{n})}$ is a basis of the space $V$ ($n$-dim.), on $F$, then $B'={(u_{1},u_{2},\dots,u_{n})}$ is a basis of $V$, **iff** the transition matrix from $B$ to $B'$ is invertible.
+
+
 ### finding a basis
 
-#### basis of the **solutions sub-space of** $A\textbf{x}=\textbf{0}$ (*Homogeneous System*) 
+basis of the $\text{null}{(A_{C})}$ 
 
 (q8.2.4)
-- Transformation $A$ to reduced row echelon form	
-- find the solutions space
-- find a span of the solutions space
-- check if the span is linearly independent
-- if so, then the span is basis of the solutions space
+- find span to $\text{null}({\text{RREF}(A)})$
+- reduce the span until it will be also linearly independent
 
 (q8.6.3)
-- Obtain the reduced row echelon form (RREF) of $A$
-- find the general solution
+- find the general solution of ${\text{RREF}(A)}$
 - extract the variables from the general solution
 - the number of variables is the size of the basis
 - #todo 
 
-### basis of the row space of a matrix $B$
-(q8.5.2b)
 
-- Transformation $B$ to row echelon form $A$
-- then, the **non-zero rows** of $A$ are the basis of the row space of $A$, and therefore of $B$. and their number is the rank $\rho{(B)=}\rho{(A)}$
-
-### basis of the column space of a matrix $B$
-
--  the basis of **the column space** of a matrix $B$, is the basis of **the row space** of a matrix $B^t$,
+- (q8.5.2b) A basis of $\text{row-space}({A})$. 
+	- The **non-zero** rows of $\text{REF}(A)$ are a basis of $\text{row-space}({A})$.
+-  A basis of $\text{column-space}({A})$.
+	- The **non-zero** rows of $\text{REF}(A^t)$ are a basis of $\text{column-space}({A})$.
 
 ### basis of the sub-space 
 
@@ -66,7 +74,7 @@ finding basis for $U=\text{Sp}({\set{v_{1},v_{2},\dots,v_{k}   }})\subseteq {F}^
 reducing a span set to a basis by removing a vectors 
 (q8.5.2b)
 
-- set the ${\set{v_{1},v_{2},\dots,v_{k}   }}$ as row vector of matrix, and then follow [[#basis of the row space of a matrix $B$]] 
+- set the ${\set{v_{1},v_{2},\dots,v_{k}   }}$ as row vector of matrix, and then follow basis of the row space of a matrix $B$ 
 
  **OR:**
 
@@ -95,21 +103,46 @@ basis of the sub-space $U=\text{Sp}({\set{u_{1},u_{2},\dots,u_{p}   }})$ of $V$,
 
 ### basis for KerT
 
-## whether a set of vectors $K$, is a basis of the space $V$
 
-### method 1
-
-Make sure **TWO out of three** are fulfilled (8.3.2)
-1. $K$ is indep. lin. 
-2. $\text{Sp}(K)=V$  (K spans V)
-3. $|K|=\dim{V}$ 
-
-### method 2
-
-- (8.4.5) - let $B={(v_{1},v_{2},\dots,v_{n})}$ is a basis of the space $V$ ($n$-dim.), on $F$, then $B'={(u_{1},u_{2},\dots,u_{n})}$ is a basis of $V$, **iff** the transition matrix from $B$ to $B'$ is invertible.
 
 # Orthogonality  
 
-- (d12.2.1) orthogonality of two vectors - $\textbf{a}$ and $\textbf{b}$ are called orthogonal if $\textbf{a}\cdot\textbf{b}=0$ (This relationship is denoted $\textbf{a}\perp\textbf{b}$)
-- (q12.2.3) Generalized Theorem of Pythagoras - if $\textbf{a}\perp\textbf{b}$, then  $\| \textbf{a} + \textbf{b} \|^2 = \| \textbf{a} \|^2 +{\| \textbf{b} \|}^2$
-- (d12.2.2) $\mathbf{v} \perp U$ if for all vectors $\mathbf{u} \in U$, $\mathbf{v} \cdot \mathbf{u} = 0$
+## Orthogonal set
+
+- (d12.4.1a) let $K=\{ \textbf{u}_{1}, \dots,\textbf{u}_{k} \} \subseteq\mathbb{R}^n$. we say that $K$ is a **orthogonal set**, if $\textbf{0}\notin{K}$, and $\forall{j\neq i}:\textbf{u}_{i}\cdot\textbf{u}_{j}=0$
+- (12.4.2) Every orthogonal set in $\mathbb{R}^n$ is independent set
+- (q12.4.3a) Every orthogonal set in $\mathbb{R}^n$ has at most $n$ vectors
+
+### Orthogonal basis
+
+
+
+## Orthonormal set
+
+- (d12.4.1b) $K=\{ \textbf{u}_{1}, \dots,\textbf{u}_{k} \}$ is **orthonormal set** if, $\| \textbf{u}_{i} \|=1$ for each $i$, ($1\leq i\leq k$)
+- (q12.4.2) **Normalizing** - if $K=\{ \mathbf{u}_{1}, \dots,\textbf{u}_{k} \}$ is orthogonal set, then $L=\{ \frac{\textbf{u}_{1}}{\|\textbf{u}_{1} \|},\dots,\frac{\textbf{u}_{k}}{\|\textbf{u}_{k} \|} \}$ is orthonormal set, and $\text{Sp}(K)=\text{Sp}(L)$
+- **The normalized vector** $\mathbf{\hat{u}}$ of a non-zero vector $\mathbf{{u}}$ is the unit vector in the direction of $\mathbf{{u}}$. i.e. $\mathbf{\hat{u}} = \frac{\mathbf{u}}{\|\mathbf{u}\|}$
+- A **Unit vector** is a vector $\textbf{v}$ such that $\| \textbf{v} \|=1$
+
+### Orthonormal basis
+
+- (12.4.5) let $B=(u_{1}, \dots ,u_{n})$ ordered basis of $\mathbb{R}^n$, then the following properties are equivalence:
+	- $B$ is **orthonormal basis**
+	- $\textbf{a}=\sum^{n}_{i=1}{(\mathbf{a\cdot u}_{i})\cdot{\mathbf{u}_{i}}}$
+	- $\mathbf{a\cdot b}=\sum^{n}_{i=1}{(\mathbf{a\cdot u}_{i})\cdot(\mathbf{b\cdot u}_{i})}$
+	- $\| \textbf{a} \|^2=\sum^n_{i=1}(\mathbf{a\cdot u}_{i})^2$
+- (q12.4.10) #todo generalition of 12.4.5 for orthogonal bases
+
+## **Gram–Schmidt process** (12.5.2) 
+
+Convert a basis $\{ \mathbf{u}_{1},\dots,\mathbf{u}_{k} \}$ into an orthogonal basis $\{ \mathbf{v}_{1},\dots,\mathbf{v}_{k} \}$:
+
+$$\mathbf{v}_{1}=\mathbf{u}_{1}$$
+$$\mathbf{v}_{i}=\mathbf{u}_{i}-\frac{\mathbf{u}_{i}\cdot\mathbf{v}_{1}}{{\| \mathbf{v}_{1} \|^2}}\mathbf{v}_{1}-\frac{\mathbf{u}_{i}\cdot\mathbf{v}_{2}}{{\| \mathbf{v}_{2} \|^2}}\mathbf{v}_{2}-\dots-\frac{\mathbf{u}_{i}\cdot\mathbf{v}_{i-1}}{{\| \mathbf{v}_{i-1} \|^2}}\mathbf{v}_{i-1}$$
+
+- during the computation you can multiple $\mathbf{v}_{i}$ by a scalar (note before q12.5.4)
+- To convert the orthogonal basis into an orthonormal basis see (q12.4.2)
+- for dependent set see q12.5.3
+- expanding orthogonal set of $k<n$ vectors into orthogonal basis see q12.5.4
+
+

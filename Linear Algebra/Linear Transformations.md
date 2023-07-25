@@ -1,13 +1,14 @@
-whether a transformation is a linear transformation?
+## Linearly
 
-given $T:V\to W$
-- firstly, check if $T(0_{V})=0_{W}$. 
-	- if not, then it's not linearly (9.1.2a). 
-	- else, check by d9.1.1, or equivalently by 9.1.3
-		- (9.1.3)  $T(\lambda_{1}v_{1}+\lambda_{2}v_{2})=\lambda_{1}T(v_{1})+\lambda_{2}T(v_{2})$
+Whether a transformation $T:V\to W$ is a **linear** transformation?
+
+- (Definition 9.1.1) 
+	1. **Additivity:** $T(v_{1}+v_{2})=T(v_{1})+T(v_{2})$
+	2. **Homogeneity:** $\alpha T(v)=T(\alpha{v})$
+- $T(\lambda_{1}v_{1}+\lambda_{2}v_{2})=\lambda_{1}T(v_{1})+\lambda_{2}T(v_{2})$ (9.1.3, equivalent to d9.1.1) 
+- (9.1.2a) if $T(0_{V})\neq0_{W}$, then $T$ is not linearly
 
 >q9.4.1
-
 
 - $T(v)=T(u)\iff T(v-u)=0$
 

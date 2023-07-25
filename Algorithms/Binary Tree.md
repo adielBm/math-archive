@@ -5,7 +5,7 @@
 | **Complete** Binary Tree | **Nearly Complete** Binary Tree | ![cBt\|110](completeBT.svg) |
 | **Perfect** Binary Tree  | **Complete** Binary Tree        | ![pBt\|110](perfectBT.svg)  |
 
->**Common terminology** will be used below
+>[!warning] **Common terminology** will be used below
 
 >**Notation:**  $n$ nodes,   $l$ leaves,   $h$ height,    $n_{k}$ nodes at depth $k$, 
 

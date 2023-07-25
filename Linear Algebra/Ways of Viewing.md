@@ -15,10 +15,10 @@
 
 | Matrix view                               | Transformation view                                             |
 | ----------------------------------------- | --------------------------------------------------------------- |
-| $A$ and $B$ are equivalent (row & column) | $T_{A}$ and $T_{B}$ are the same transformation (in diff bases) |
+| $A$ and $B$ are equivalent | $T_{A}$ and $T_{B}$ are the same transformation (in diff bases) |
 | $A$ and $B$ are row equivalent            |                                                                 |
 
-## Square matrix
+## Square matrix: $\dim{V}=\dim{W}=n$
 
 - $A$ is an $n\times n$ matrix, $T:V\to W$
 

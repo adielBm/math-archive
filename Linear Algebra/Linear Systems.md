@@ -1,12 +1,30 @@
-## Solving Linear Systems 
+$\large A$ is $m\times n$ matrix 
 
-- Gaussian elimination (REF)
-- Gauss–Jordan elimination (RREF)
+
+The following statements are **equivalent**:
+- For each $\mathbf{b}\in\mathbb{R}^m$, the equation $A\mathbf{x}=\mathbf{b}$ has a solution
+- Each $\mathbf{b}\in\mathbb{R}^m$ is a linear combination of the colmuns of $A$
+- The colmuns of $A$ span $\mathbb{R}^m$
+- $A$ has a pivot position in every row
 
 ## Consistency 
 
-- (8.6.2) **Rouché–Capelli theorem** - $A\mathbf{x}=\mathbf{b}$ is **consistent**, if and only if,  $\rho([A|\mathbf{b}])=\rho(A)$
+The following statements are **equivalent**:
+- $A\mathbf{x}=\mathbf{b}$ is **consistent**
+- (8.6.2) **Rouché–Capelli theorem** $\rho([A|\mathbf{b}])=\rho(A)$
+- $\text{REF}[A|\mathbf{b}]$ has no row $\left[\begin{array}& 0 & \cdots & 0 & b \end{array}\right]$ with $b$ nonzero 
+- $\mathbf{b}$ is a linear combination of the colmuns of $A$
 
+**Properties of consistent system:**
+- **number of soltions:**
+	- if there are no free variables, there is a unique solution
+	- if there is at least one free variable, there are infinitely many solutions
+
+
+## Homogeneous system
+$$\large A\mathbf{x}=\mathbf{0}$$
+- homogeneous system is consistent
+- $A$ has a nontrivial solution if and only if it has at least one free variable.
 
 # Square System
 

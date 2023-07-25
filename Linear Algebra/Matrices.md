@@ -1,18 +1,40 @@
+## Arithmetic 
+
+### Matrix addition & multiplication 
+
+- **Commutative (addition)** $A+B=B+A$
+- **Commutative (multiplication)** see [[#Commuting]]
+- **Associative (addition)** $A+(B+C)=(A+B)+C$
+- **Associative (multiplication)** $A(BC)=(AB)C$
+- **distributive (left)** $A(B+C)=AB+AC$
+- **distributive (right)** $(B+C)A=BA+CA$
+
+###  Matrix–Vector Product
+
+- $A(\mathbf{u}+\mathbf{v})=A\mathbf{u}+A\mathbf{v}$
+- $A(c\mathbf{u})=c(A\mathbf{u})$
 
 ## Row Echelon form (REF)
 
-- (1.11.1) every REF matrix is row row equivalence to the RREF matrix
-- (8.5.1) The nonzero rows of REF matrix are a basis for its row space.
+- (1.11.1) $\text{REF}(A)$ is row equivalence to $\text{RREF}(A)$
+- (8.5.1) The nonzero rows of $\text{REF}(A)$ are a basis for $\text{row-space(A)}$.
 
 ### Reduced Row Echelon form (RREF)
 
-
+- **Uniqueness:** Each matrix is row equivalent to one and only one reduced echelon matrix. 
 
 ## Row equivalence
 
-- row equivalence is equivalence relation
+Row equivalence is an *equivalence relation*
 
-whether two matrices are row equivalent #todo 
+**Definitions:**
+- Two matrices $A$ and $B$ are row equivalent if it is possible to transform $A$ into $B$ by a sequence of elementary row operations.
+- $A$ and $B$ are row equivalent, if and only if, they have **the same row space**
+- $A$ and $B$ are row equivalent, if and only if, they have **the same null space**
+- $A$ and $B$ are row equivalent, if and only if, there exists an invertible matrix $P$ such that $A=PB$.
+
+**Properties:**
+- Row equivalent matrices have the same rank
 
 ## Rank
 
@@ -23,13 +45,17 @@ whether two matrices are row equivalent #todo
 - $\rho(A)$ is the number of pivots in the RREF of $A$.
 - (q8.5.4) $\rho{(A)}=\rho{(A^t)}$
 - (q8.5.5) $\rho{(A_{m \times n})}\leq\min{\{ m,n \}}$
+	- if $\rho{(A)}=\min{\{ m,n \}}$ then $A$ has **full rank**.
+		- if $\rho{(A)}=n$ then $A$ has **full column rank**. ($f(\mathbf{x})=A\mathbf{x}$ is injective)
+		- if $\rho{(A)}=m$ then $A$ has **full row rank**. ($f(\mathbf{x})=A\mathbf{x}$ is surjective)
+	- Otherwise if $\rho{(A)}=\min{\{ m,n \}}$, then $A$ has **rank deficient**. 
 - (q8.5.6) $\rho{(AB)}\leq\min{\{ \rho{(A)}, \rho{(B)} \}}$
 - (q8.5.7a) let $A_{m \times n}$, and $B_{n}$ invertible matrix, then $\rho(AB)=\rho(A)$ 
 - (q8.5.7b) let $A_{m \times n}$, and $B_{m}$ invertible matrix, then $\rho(BA)=\rho(A)$ 
 - (8.6.1) **Rank–nullity** theorem  $\rho(A)+\dim(\text{nul}{(A)})=n$
 - Only a zero matrix has rank zero. #todo 
 - row equivalent matrices must have the same rank #todo 
-	- rank of **square matrix**
+- rank of **square matrix:**
 	- (q8.5.8a) let $A$ square matrix of order $n$, then $\rho(A)=n \iff |A|\neq 0$  
 	- (q10.5.3) $A,B$ are square matrices of order $n$, then $\rho{(AB)}\geq \rho(A)+\rho(B)-n$
 
@@ -45,12 +71,11 @@ Matrix Representations of Linear Transformation
 $$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T( {v_{n}})]_{C} \\ | & & | \end{array} \right]_{m\times n}$$
 
 
-
 ## Transpose
 
 - (3.2.4)  $(A^t)^t=A$
 - $(A+B)^t=A^t+B^t$
-- $(AB)^t=B^tA^t$
+- (3.4.5) $(AB)^t=B^tA^t$
 - $(cA)^{t}=cA^{t}$
 - 
 
@@ -63,13 +88,12 @@ Let $A$ be an $n \times n$ square matrix.
 - **Theorem 3.10.6**: Let $A$ be a $n$-ordered square matrix over a field $F$. The following statements are **equivalent**:
 	- $A$ is an **invertible matrix**
 	- $A$ can be expressed as a finite product of elementary matrices.
-	- $A$ is row-equivalent to the identity matrix $I$
 	- There exists a $B$ such that $BA=I$
 	- There exists a $B$ such that $AB=I$
 	- There exists a $B$ such that $AB=BA=I$, (in such case $A^{-1}=B$, and $B^{-1}=A$) ()
 	- $A$ is row-equivalent to $I$.
 	- $A$ is column-equivalent to $I$.
-	- The RREF of $A$ is $I$
+	- $\text{RREF}(A)=I$
 	- The columns of A are linearly independent.
 	- The rows of A are linearly independent.
 	- The columns of A span $F^n$
@@ -121,7 +145,6 @@ Let $A$ be an $n \times n$ square matrix.
 	- $\det A$ is equal to the product of its eigenvalues (see q11.4.7)
 
 
-
 > [!example]  Procedure: computing the detrminant
 > 
 > 1. convert $A$ into an upper triangular matrix $B$ via row operations of **switching rows**, and **adding multiplication of another row**. (but **NOT** scaling of row by scalar)
@@ -130,7 +153,7 @@ Let $A$ be an $n \times n$ square matrix.
 > 3. $\det{A}=(−1)^kb_{11} · · · b_{nn}$
 
 ## Characteristic polynomial 
-$$\det \left( \lambda I -A \right)$$
+$$p_{A}=\det \left( \lambda I -A \right)$$
 - (q11.4.6-7) finding coefficients of **the characteristic polynomial** of a matrix
 	- The **free coefficient** of the characteristic polynomial of $A$ is $\det-A =(-1)^n\det{A}$
 	- 
@@ -181,25 +204,40 @@ $$\det \left( \lambda I -A \right)$$
 
 ## Similarity
 
-- (d10.7.1) If $A$ and $B$ are square matrices, then we say that $A$ **is similar to** $B$ if there is an invertible matrix $M$ such that $A=M^{-1}BM$ 
-- Similarity is an equivalence relation on the space of square matrices.
-- (10.7.2) $A$ and $B$ square matrices of order $n$ on filed F are **similar**, if and only if, they represent the same linear transformation with respect to (possibly) different bases.
+Similarity is an *equivalence relation* on the space of square matrices.
+
+**Definitions:**
+- (d10.7.1) If $A$ and $B$ are square matrices, then we say that $A$ **is similar to** $B$ if there is an invertible matrix $P$ such that $A=P^{-1}BP$ 
+- (10.7.2) $A$ and $B$ are **similar**, if and only if, they represent **the same linear transformation**. (possibly different bases)
+
+**Theorems:**
 - #todo to show that two matrices are similar, show that are similar to the same diagonal matrix
 - #todo let $A$ and $B$ are diagonalizable, and they both have the same eigenvalues, then they're similar (because similarity is transitive) 
 - #todo let $A$ and $B$ are diagonalizable, and they both have the same characteristic polynomial, then they're similar (because similarity is transitive) 
 
-shared properties: determinant (10.7.3), trace (10.7.5), eigenvalues (11.3.3), algebraic multiplicities of eigenvalues ( #todo  ),  characteristic polynomial (11.4.3)
-	
+**Properties:**
+- If the matrices $A$ and $B$ are similar, then
+	- $A=I\iff B=I$ #todo 
+	- $A=0\iff B=0$ #todo 
+	- $A$ is **invertible**, if and only if $B$ is also **invertible** #todo 
+	- $\det(A)=\det(B)$ (10.7.3)
+	- $\text{tr}(A)=\text{tr}(B)$ (10.7.5)
+	- $A$ and $B$ have the same **eigenvalues** (11.3.3)
+	- $A$ and $B$ have the same **algebraic multiplicities** of eigenvalues #todo 
+	- $A$ and $B$ have the same **characteristic polynomial** (11.4.3)
+
 ## Diagonalizable
 
-- (d11.3.4) if there exists an $n \times n$ invertible matrix $M$, such that $M^{-1}AM$ is a diagonal matrix, then $A$ is a **diagonalizable matrix**
-- (d11.3.4) $A$ is diagonalizable, if and only if, $A$ is similar to a diagonal matrix
-- (11.3.5) $T:V\to V$ is diagonalizable, if and only if, $A$ is diagonalizable
+- (**Definition** 11.3.4) $A$ is a **diagonalizable matrix**, if there exists an $n \times n$ invertible matrix $M$, such that $M^{-1}AM$ is a diagonal matrix. (i.e. $A$ is similar to a diagonal matrix)
+	- (11.3.7) $A$ is a diagonalizable, if and only if, the columns of $M$ are $n$ independent linearly eigenvectors of $A$. 
+	- The **columns** of $M$ are $v_{1},\dots,v_{n}$, and $v_i$ is a **eigenvector** of $A$ that's related to the **eigenvalue** $\lambda_{i}$.
+	- $M^{-1}AM=\text{diag}{(\lambda_{1},\dots,\lambda_{{n}})}$
 - (11.3.6) An $n \times n$ matrix with $n$ **distinct** eigenvalues is **diagonalizable**. 
-- (11.3.7) $M$ is an $n \times n$ invertible matrix.  $M^{-1}AM$ is a diagonal matrix, (i.e. $A$ is diagonalizable), if and only if, the columns of $M$ are $n$ independent linearly eigenvectors of $A$. ^[in such case,  if the columns of $M$ are $v_{1},\dots,v_{n}$, and for each $i$ ($1\leq i\leq n$), $v_i$ is a eigenvector of $A$ that's related to the eigenvalue $\lambda_{i}$ , then $M^{-1}AM=\text{diag}{(\lambda_{1},\dots,\lambda_{{n}})}$]
 - (q11.3.7) $A$ on a field $F$ is diagonalizable, if and only if, $F^n$ has a basis that consists of eigenvectors of $A$ 
+- (11.3.5) $T:V\to V$ is diagonalizable, if and only if, $A$ is diagonalizable
 - (q11.4.10) $A$ is diagonalizable, if and only if, $A^t$ is diagonalizable
 - (11.5.4') The matrix $A$ is diagonalizable, if and only if, (i) the characteristic polynomial factors completely into linear factors and (ii) the algebraic multiplicity of each eigenvalue of $A$ is equal to its geometric multiplicity.
+
 - #todo The matrix $A$ is diagonalizable, if and only if, the sum of the dimensions of the eigenspaces equals to $n$
 - #todo $A^k=M{D}^{k}M^{-1}$, ($D$ is a diagonal matrix)
 
@@ -222,20 +260,18 @@ shared properties: determinant (10.7.3), trace (10.7.5), eigenvalues (11.3.3), a
 ## Change of Basis matrix (Transition matrix) 
 also *change-of-coordinates matrix*
 
-**Definition:**
-- (d8.4.6) Let $B=(v_{1},\dots ,v_{n})$ and $B'=(u_{1},\dots ,u_{n})$ bases of $V$. if $$\begin{align}
-u_{1} &= a_{11}v_{1}+\dots+a_{n1}v_{n} \\ \vdots \notag \\ u_{n} &= a_{1n}v_{1}+\dots+a_{nn}v_{n}  \\ \end{align}$$then $$M=\begin{bmatrix} a_{11}  & \dots & a_{1n} \\    \vdots &  \ddots & \vdots \\ a_{n1}  & \dots & a_{nn} \end{bmatrix}$$ is the **transition matrix** from basis $B$ to basis $B'$. 
-- the **transition matrix** from basis $B$ to basis $B'$ is the matrix that its columns are the coordinate vectors of the $B'$ vectors by $B$.
-
-**Properties:**
-- transition matrix is square matrix of $n$-order, which $n=\dim V$
-- transition matrix is invertible matrix (by 8.4.5)
+- (d8.4.6) Let $B=(v_{1},\dots ,v_{n})$ and $C=(u_{1},\dots ,u_{n})$ bases of $V$. if $$\begin{align}
+u_{1} &= a_{11}v_{1}+\dots+a_{n1}v_{n} \\ \vdots \notag \\ u_{n} &= a_{1n}v_{1}+\dots+a_{nn}v_{n}  \\ \end{align}$$then $$M=\begin{bmatrix} a_{11}  & \dots & a_{1n} \\    \vdots &  \ddots & \vdots \\ a_{n1}  & \dots & a_{nn} \end{bmatrix}=\left[\begin{array}{ccc} | & & | \\ [{u_{1}}]_{B} & \cdots & [{u_{n}}]_{B} \\ | & & | \end{array} \right]$$ is the **transition matrix** from basis $B$ to basis $C$. 
+- the **transition matrix** from basis $B$ to basis $C$ is the matrix that its columns are the coordinate vectors of the $C$ vectors by $B$.
+- $\forall{v}\in{V} :M[v]_{C}=[v]_{B}, \quad [v]_{C}=M^{-1}[v]_{B}$
+- (8.4.9) $M^{-1}$ is the transition matrix from $C$ to $B$
+- transition matrix is square matrix of $n$-order, where $n=\dim V$
+- (by 8.4.5) transition matrix is invertible matrix 
 
 **Theorems:**
-- (8.4.8) if $A$ is square matrix, and $[v]_{B}=A[v]_{B'}$ then $A$ is the transition matrix from $B$ to $B'$.  
-- (8.4.8) if $M$ is the transition matrix from $B$ to $B'$, then $M^{-1}$ is the transition matrix from $B'$ to $B$
-- (10.6.1) $T:V\to V$ and $B$ and $B'$ are bases of $V$. if $M$ transition matrix from $B$ to $B'$, then $[T]_{B'}=M^{-1}[T]_{B}M$. (or symmetrically $[T]_{B}=M[T]_{B'}M^{-1}$)
-	- transition matrix from $B$ to $B'$ is $[I]^{B'}_{B}$, therefore $[T]_{B'}=[I]^{B}_{B'}[T]_{B}[I]^{B'}_{B}$
+- (8.4.8) if $A$ is square matrix, and $[v]_{B}=M[v]_{C}$ for each $v\in{V}$, then $M$ is the transition matrix from $B$ to $C$. 
+- (10.6.1) $T:V\to V$ and $B$ and $C$ are bases of $V$. if $M$ transition matrix from $B$ to $C$, then $[T]_{C}=M^{-1}[T]_{B}M$. (or symmetrically $[T]_{B}=M[T]_{C}M^{-1}$)
+	- transition matrix from $B$ to $C$ is $[I]^{C}_{B}$, therefore $[T]_{C}=[I]^{B}_{C}[T]_{B}[I]^{C}_{B}$
 
 >[!example] Finding the transition matrix from an old basis to a new basis 
 >1. Form the partitioned matrix $[\text{new basis} | \text {old basis}]$ in which the basis vectors (or coordinate vectors) are in column form. 
@@ -247,13 +283,24 @@ u_{1} &= a_{11}v_{1}+\dots+a_{n1}v_{n} \\ \vdots \notag \\ u_{n} &= a_{1n}v_{1}+
 
 - if $B=(v_{1}, v_{2},\dots,v_{n})$, then $[v_{1}|v_{2}|\dots|v_{n}]$ is the transition matrix from $B$ to the standard basis
 
-
 ## Triangular matrix
 
-- (4.3.8) if $A_{n}=[a_{ij}]$ is a triangular matrix, then $\det A=a_{11}a_{22} \cdots a_{nn}$
 
+**Properties:**
+-  if $A_{n}=[a_{ij}]$ is a triangular matrix, then
+	- $\det A=a_{11}a_{22} \cdots a_{nn}$ (4.3.8)
+	- the eigenvalues of $A$ are $a_{11},a_{22},\dots,a_{nn}$ 
+		- each eigenvalue occurs exactly k times on the diagonal, where k is its algebraic multiplicity
+	- the characteristic polynomial of $A$ is $p_{A}=(x-a_{11})(x-a_{22})\cdots(x-a_{nn})$
+	- 
 
 ## Orthogonality
 
 #todo Orthogonal matrix - This is not taught in the course.
 
+
+
+## Commuting
+
+- (d3.6.2) $A$ and $B$ are said to commute if $AB=BA$
+- (3.6.3) $(tI)A=A(tI)$
