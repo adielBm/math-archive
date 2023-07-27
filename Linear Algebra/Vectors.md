@@ -1,13 +1,18 @@
 # Aritmetic & Properties
 
 ## Dot Product
+also *Euclidean inner product*
 
+**Definition:**
+- If $\mathbf{u}=(u_{1},u_{2},\dots,u_{n}), \quad\mathbf{v}=(v_{1},v_{2},\dots,v_{n})\in{\mathbb{R}^n}$, then $\mathbf{u}+\mathbf{v}=u_{1}v_{1}+u_{2}v_{2}+\dots+u_{n}v_{n}$
+
+**Properties:**
+- Symmetry $\textbf{a}\cdot\textbf{b}=\textbf{b}\cdot\textbf{a}$
+- Distributive $(\textbf{a}+\textbf{b})\cdot{\textbf{c}}=\textbf{a}\cdot\textbf{c}+\textbf{b}\cdot\textbf{c}$
+- Homogeneity $(t\textbf{a})\cdot\textbf{b}=t(\textbf{a}\cdot\textbf{b})$
+- Positivity $\textbf{a}\cdot\textbf{a}\geq 0$
+	- $\textbf{a}\cdot\textbf{a}= 0 \iff \textbf{a}=\textbf{0}$
 - $\textbf{0}\cdot\textbf{a}=\textbf{a}\cdot\textbf{0}=0$
-- $\textbf{a}\cdot\textbf{b}=\textbf{b}\cdot\textbf{a}$
-- $(\textbf{a}+\textbf{b})\cdot{\textbf{c}}=\textbf{a}\cdot\textbf{c}+\textbf{b}\cdot\textbf{c}$
-- $(t\textbf{a})\cdot\textbf{b}=t(\textbf{a}\cdot\textbf{b})$
-- $\textbf{a}\cdot\textbf{a}\geq 0$
-- $\textbf{a}\cdot\textbf{a}= 0 \iff \textbf{a}=\textbf{0}$
 
 ## Norm of a Vector
 
@@ -18,6 +23,7 @@
 - Cauchy–Schwarz inequality (12.1.4) $|\textbf{a}\cdot\textbf{b}| \leq  \| \textbf{a} \| \cdot{\| \textbf{b} \|}$
 - (q12.1.7) $|\textbf{a}\cdot\textbf{b}| =  \| \textbf{a} \| \cdot{\| \textbf{b} \|} \iff \textbf{a},\textbf{b}$ are linearly inpendent 
 - (q12.1.8) Triangle inequality for vectors $\| \textbf{a} + \textbf{b} \| \leq \| \textbf{a} \| +{\| \textbf{b} \|}$
+- Parallelogram Equation for Vectors $\|\textbf{u}+\textbf{v} \|^2+\|\textbf{u}-\textbf{v} \|^2=2(\|\textbf{u}\|^2+\|\textbf{v}\|^2)$
 
 ## Coordinate vector
 

@@ -11,6 +11,8 @@ $\large A$ is $m\times n$ matrix
 - **distributive (left)** $A(B+C)=AB+AC$
 - **distributive (right)** $(B+C)A=BA+CA$
 
+- Matrix multiplication - $A_{m\times n}B_{n\times p}=C_{m \times p}=[c_{ij}]$, where $c_{ij}$ is the dot product of the $i$th row of $A$ and the $j$th column of $B$ 
+
 ###  Matrix–Vector Product
 
 - $A(\mathbf{u}+\mathbf{v})=A\mathbf{u}+A\mathbf{v}$
@@ -134,6 +136,7 @@ Let $A$ be an $n \times n$ square matrix.
 	- The linear transformation mapping $\mathbf{x}$ to $A\mathbf{x}$ is **injective**; that is, the equation $A\mathbf{x}=\mathbf{b}$ has at most one solution for each $\mathbf{b}$ in $F^n$.
 	- The linear transformation mapping $\mathbf{x}$ to $A\mathbf{x}$ is **bijective**; that is, the equation $A\mathbf{x}=\mathbf{b}$ has exactly one solution for each $\mathbf{b}$ in $F^n$. ($A\mathbf{x}=\mathbf{b}\implies \mathbf{x}=A^{-1}\mathbf{b}$)
 
+**Properties:**
 - (4.5.2) $A,B$ are square matries, and $AB=I$, then $A$ and $B$ are both invetible, and $A^{-1}=B$, and $B^{-1}=A$, and $AB=BA=I$
 - (3.8.3) if $A$ is invertible, then $AB=AC\implies B=C$, and $BA=CA\implies B=C$
 - (3.8.4c) if $A,B$ are invertible (the same order), then $AB$ is also invertible. (in such case $(AB)^{-1}=B^{-1}A^{-1}$) 
@@ -154,11 +157,12 @@ Let $A$ be an $n \times n$ square matrix.
 
 ## Determinant 
 
-- $\det A=|A|$ 
+- **Notation:** $\det A=|A|$ 
 - **Theorems:**
 	- (4.5.1) $\det (AB)=\det (A) \det (B)$
 	- (4.3.1) $\det (A)=\det(A^t)$
 	- (4.3.5) if $A$ has two equal rows (or colmuns), then $\det A=0$
+	- (4.4.1) $\det{A}\neq0 \iff A\text{ is invertible}$
 	- (4.3.8) if $A_{n}=[a_{ij}]$ is a triangular matrix, then $\det A=a_{11}a_{22} \cdots a_{nn}$
 	- (10.7.3) **similar matrices** have the same determinant
 	- (q11.3.1) $\det{A}=0$, if and only if, $\lambda=0$ is eigenvalue of $A$
@@ -166,9 +170,9 @@ Let $A$ be an $n \times n$ square matrix.
 		- If a multiple of one row of $A$ is **added** to another row to produce a matrix $B$, then $\det B=\det A$
 		- If two rows of $A$ are **interchanged** to produce $B$, then $\det B=-\det A$
 		- if one row of $A$ is **multiplied** by $k$ to produce $B$, then $\det B=k \cdot \det A$ 
-	- (q4.3.3) $\det (tA)=t^n \det A$
+	- (q4.3.3) **Homogeneity:** $\det (tA)=t^n \det A$
 	- $\det A$ is equal to the product of its eigenvalues (see q11.4.7)
-
+	- 
 
 > [!example]  Procedure: computing the detrminant
 > 
@@ -185,15 +189,34 @@ $$p_{A}=\det \left( \lambda I -A \right)$$
 
 ## Eigenvalues and Eigenvectors
 
-- (d11.3.1) A nonzero column vector $v$ in $A$ that satisfies $Av=\lambda v$ for some scalar $\lambda$, is called an **eigenvector of** $A$, and $\lambda$ is the **eigenvalue associated with** $v$
-- $\{ \mathbf{v}:(A-\lambda I) \mathbf{v}= \mathbf{0} \}$ is the **eigenspace of** $A$ **associated with its eigenvalue** $\lambda$. in other words, the set of all eigenvectors corresponding to eigenvalues $\lambda$, with the zero vector $\mathbf{0}$.
+Definitions of the **eigenspace of** $A$ **associated with its eigenvalue** $\lambda$.
+- $\{ \mathbf{v}\mid(A-\lambda I) \mathbf{v}= \mathbf{0} \}$
+- $\{ \mathbf{v}\mid A\mathbf{v}=\lambda \mathbf{v} \}$
+- $\{ \text{eigenvectors corresponding to } \lambda \}\cup \{ \mathbf{0} \}$
+- $\text{null}(\lambda I-A)$
+
+Definitions of **eigenvector**. The following statements are **equivalent**:
+- $v$ is an **eigenvector** of $A$ that related to $\lambda$
+- (d11.3.1) $v$ is nonzero vector in $\mathbb{R}^n$ such that $Av=\lambda v$
+
+Definitions of **eigenvalue**. The following statements are **equivalent**:
+-  $\lambda$ is an **eigenvalue** of $A$
+- (d11.3.1) There is a **non-zero** vector $v$ such that $Av=\lambda{v}$. (in such case, $v$ is called an **eigenvector** of $A$ that related to the eigenvalue $\lambda$) 
+- $(A-\lambda I)$ is singular
+- $\text{rank}(A-\lambda I)<n$
+- $(\lambda I-A)v=0$ has nontrivial solutions
+- (11.4.1) The **characteristic equation** $\det(\lambda I-A)=0$
+- $\lambda$ is a solution of the characteristic equation $\det(\lambda I-A)=0$
+
 
 **Theorems**:
-- (11.4.1) $\lambda$ is an eigenvalue of $A$, if and only if, $\lambda$ is a solution of the **characteristic equation** $\det(\lambda I-A)=0$
-- similar matrices have the same eigenvalues (11.3.3), and the same algebraic multiplicities of eigenvalues ( #todo  )
-- the sum of eigenvalues of $A$ equals to $\text{tr}A$ #todo 
-- the multiplication of eigenvalues of $A$ equals to $\text{det}A$ #todo  
-- the eigenvalues of diagonal matrix $\text{diag}{(\lambda_{1},\dots,\lambda_{{n}})}$, are $\lambda_{1},\dots,\lambda_{{n}}$   #todo 
+- Similar matrices have the same eigenvalues (11.3.3), the same **characteristic polynomial** (11.4.3), and the same algebraic multiplicities of eigenvalues ( #todo  ) 
+- The sum of eigenvalues of $A$ equals to $\text{tr}A$ #todo 
+- The product of eigenvalues of $A$ equals to $\text{det}A$ #todo  
+- The eigenvalues of diagonal matrix $\text{diag}{(\lambda_{1},\dots,\lambda_{{n}})}$, are $\lambda_{1},\dots,\lambda_{{n}}$   #todo 
+- (q11.3.2a) if $\lambda$ is an eigenvalue of $A$, then for each $\mu$, $\mu\lambda$ is an eigenvalue of $\mu A$
+- (q11.3.2b) if $\lambda$ is an eigenvalue of $A$, then , $\lambda^k$ is a eigenvalue of $A^k$. (for each natural $k$ )
+
 
 >[!example] **Procedure**: Finding Eigenvalues and Eigenvectors
 > 1. First, find the eigenvalues $\lambda$ of $A$ by solving the **characteristic equation** $\det \left( \lambda I -A \right) = 0$.
@@ -208,14 +231,6 @@ $$p_{A}=\det \left( \lambda I -A \right)$$
 - (11.5.3, q11.5.3)  $1\leq$ the **geometric multiplicity** $\leq$ the **algebraic multiplicity**
 - finding the algebraic multiplicity of eigenvalue #todo 
 - finding the geometric multiplicity of eigenvalue #todo 
-
-### Whether a scalar is an eigenvalue of $A$
-
-- (d11.3.1) the scalar $\lambda$ is called an **eigenvalue** of $A$, if there is a non-zero **column** vector $v$, such that: $Av=\lambda{v}$. (in such case, $v$ is called an **eigenvector** of $A$ that related to the eigenvalue $\lambda$.) 
-- (q11.3.2a) if $\lambda$ is an eigenvalue of $A$, then for each $\mu$, $\mu\lambda$ is an eigenvalue of $\mu A$
-- (q11.3.2b) if $\lambda$ is an eigenvalue of $A$, then , $\lambda^k$ is a eigenvalue of $A^k$. (for each natural $k$ )
-- (11.4.1) $\lambda$ is an eigenvalue of $A$, if and only if, $\lambda$ is a solution of the **characteristic equation** $\det(\lambda I-A)$ is $0$
--  #todo - $\lambda$ is an eigenvalue of $A$, if and only if, the system of equations $(\lambda I-A)v=0$ has nontrivial solutions.
 
 ## Trace
 
@@ -251,6 +266,17 @@ Similarity is an *equivalence relation* on the space of square matrices.
 	- $A$ and $B$ have the same **algebraic multiplicities** of eigenvalues #todo 
 	- $A$ and $B$ have the same **characteristic polynomial** (11.4.3)
 
+
+## Diagonal matrix
+
+- **Addition:** $\text{diag}{(a_{1},\dots ,a_{n})}+\text{diag}{(b_{1},\dots ,b_{n})}=\text{diag}{(a_{1}+b_{1},\dots ,a_{n}+b_{n})}$
+- **Multiplication** $\text{diag}{(a_{1},\dots ,a_{n})}\text{diag}{(b_{1},\dots ,b_{n})}=\text{diag}{(a_{1}b_{1},\dots ,a_{n}b_{n})}$
+- Powers of a matrix  $(\text{diag}{(a_{1},\dots,a_{{n}})})^k=\text{diag}{(a_{1}^k,\dots,a_{n}^k)}$
+- $\text{diag}{(a_{1},\dots ,a_{n})}\text{ is invertible}\iff a_{1},\dots,a_{n}\neq 0$. in such case $\text{diag}{(a_{1},\dots ,a_{n})^{-1}}=\text{diag}{(a_{1}^{-1},\dots ,a_{n}^{-1})}$
+- A matrix is diagonal, if and only if, it is both *upper-* and *lower-triangular*.
+- A diagonal matrix is symmetric.
+- $\det(\text{diag}{(a_{1},\dots ,a_{n})})=a_{1}\cdots a_{n}$
+
 ## Diagonalizable
 
 - (**Definition** 11.3.4) $A$ is a **diagonalizable matrix**, if there exists an $n \times n$ invertible matrix $M$, such that $M^{-1}AM$ is a diagonal matrix. (i.e. $A$ is similar to a diagonal matrix)
@@ -265,6 +291,7 @@ Similarity is an *equivalence relation* on the space of square matrices.
 
 - #todo The matrix $A$ is diagonalizable, if and only if, the sum of the dimensions of the eigenspaces equals to $n$
 - #todo $A^k=M{D}^{k}M^{-1}$, ($D$ is a diagonal matrix)
+
 
 
 >[!example] Given a matrix $A$ which some of its values are $a$. For which value of $a$ is $A$ matrix diagonalizable?
@@ -329,3 +356,4 @@ u_{1} &= a_{11}v_{1}+\dots+a_{n1}v_{n} \\ \vdots \notag \\ u_{n} &= a_{1n}v_{1}+
 
 - (d3.6.2) $A$ and $B$ are said to commute if $AB=BA$
 - (3.6.3) $(tI)A=A(tI)$
+- $A$ and $B$ share the same $n$ independent eigenvectors if and only if $AB=BA$.
