@@ -181,57 +181,6 @@ Let $A$ be an $n \times n$ square matrix.
 > 2. let $k$ be the number of times two rows are switched
 > 3. $\det{A}=(−1)^kb_{11} · · · b_{nn}$
 
-## Characteristic polynomial 
-$$p_{A}=\det \left( \lambda I -A \right)$$
-- (q11.4.6-7) finding coefficients of **the characteristic polynomial** of a matrix
-	- The **free coefficient** of the characteristic polynomial of $A$ is $\det-A =(-1)^n\det{A}$
-	- 
-
-## Eigenvalues and Eigenvectors
-
-Definitions of the **eigenspace of** $A$ **associated with its eigenvalue** $\lambda$.
-- $\{ \mathbf{v}\mid(A-\lambda I) \mathbf{v}= \mathbf{0} \}$
-- $\{ \mathbf{v}\mid A\mathbf{v}=\lambda \mathbf{v} \}$
-- $\{ \text{eigenvectors corresponding to } \lambda \}\cup \{ \mathbf{0} \}$
-- $\text{null}(\lambda I-A)$
-
-Definitions of **eigenvector**. The following statements are **equivalent**:
-- $v$ is an **eigenvector** of $A$ that related to $\lambda$
-- (d11.3.1) $v$ is nonzero vector in $\mathbb{R}^n$ such that $Av=\lambda v$
-
-Definitions of **eigenvalue**. The following statements are **equivalent**:
--  $\lambda$ is an **eigenvalue** of $A$
-- (d11.3.1) There is a **non-zero** vector $v$ such that $Av=\lambda{v}$. (in such case, $v$ is called an **eigenvector** of $A$ that related to the eigenvalue $\lambda$) 
-- $(A-\lambda I)$ is singular
-- $\text{rank}(A-\lambda I)<n$
-- $(\lambda I-A)v=0$ has nontrivial solutions
-- (11.4.1) The **characteristic equation** $\det(\lambda I-A)=0$
-- $\lambda$ is a solution of the characteristic equation $\det(\lambda I-A)=0$
-
-
-**Theorems**:
-- Similar matrices have the same eigenvalues (11.3.3), the same **characteristic polynomial** (11.4.3), and the same algebraic multiplicities of eigenvalues ( #todo  ) 
-- The sum of eigenvalues of $A$ equals to $\text{tr}A$ #todo 
-- The product of eigenvalues of $A$ equals to $\text{det}A$ #todo  
-- The eigenvalues of diagonal matrix $\text{diag}{(\lambda_{1},\dots,\lambda_{{n}})}$, are $\lambda_{1},\dots,\lambda_{{n}}$   #todo 
-- (q11.3.2a) if $\lambda$ is an eigenvalue of $A$, then for each $\mu$, $\mu\lambda$ is an eigenvalue of $\mu A$
-- (q11.3.2b) if $\lambda$ is an eigenvalue of $A$, then , $\lambda^k$ is a eigenvalue of $A^k$. (for each natural $k$ )
-
-
->[!example] **Procedure**: Finding Eigenvalues and Eigenvectors
-> 1. First, find the eigenvalues $\lambda$ of $A$ by solving the **characteristic equation** $\det \left( \lambda I -A \right) = 0$.
-> 2. For each $\lambda$, find the basic eigenvectors $v \neq 0$ by finding the basic solutions to $\left( \lambda I - A \right) v = 0$.
-> 
-> To verify your work, make sure that $Av=\lambda v$ for each $\lambda$ and associated eigenvector $v$.
-
-### Algebraic & geometric multiplicity
-
-- (d11.5.2) The multiplicity of an eigenvalue $\lambda$ as a root of the characteristic equation is **the algebraic multiplicity** of $\lambda$ 
-- (q11.5.2) The dimension of the eigenspace corresponding to $\lambda$ is called **the geometric multiplicity** of $\lambda$, which is $\dim{(\lambda I-A)}=n-\text{rank}(\lambda I-A)$     
-- (11.5.3, q11.5.3)  $1\leq$ the **geometric multiplicity** $\leq$ the **algebraic multiplicity**
-- finding the algebraic multiplicity of eigenvalue #todo 
-- finding the geometric multiplicity of eigenvalue #todo 
-
 ## Trace
 
 - $\operatorname{tr}({A}) = \sum_{i=1}^n a_{ii} = a_{11} + a_{22} + \dots + a_{nn}$
@@ -241,6 +190,63 @@ Definitions of **eigenvalue**. The following statements are **equivalent**:
 - $\text{tr}(A+B)=\text{tr}(A)+\text{tr}(B)$ 
 - $\text{tr}(cA)=c\text{tr}(A)$ #todo 
 - $\text{tr}(A)=\text{tr}(A^t)$ #todo 
+
+## Characteristic polynomial 
+$$p_{A}=\det \left( \lambda I -A \right)$$
+- (q11.4.6-7) finding coefficients of **the characteristic polynomial** of a matrix
+	- The **free coefficient** of the characteristic polynomial of $A$ is $\det-A =(-1)^n\det{A}$
+	- 
+
+## Eigenvalues
+
+Definitions of **eigenvalue**. The following statements are **equivalent**:
+-  $\lambda$ is an **eigenvalue** of $A$
+- (d11.3.1) There is a **non-zero** vector $v$ such that $Av=\lambda{v}$. (in such case, $v$ is called an **eigenvector** of $A$ that related to the eigenvalue $\lambda$) 
+- $(A-\lambda I)$ is singular
+- $\text{rank}(A-\lambda I)<n$
+- $(\lambda I-A)v=0$ has nontrivial solutions, i.e. $\text{null}(\lambda I-A)\neq \{ 0 \}$
+- (11.4.1) The **characteristic equation** $\det(\lambda I-A)=0$
+- $\lambda$ is a root of the characteristic equation $\det(xI-A)=0$
+
+**Theorems**:
+- Similar matrices have the same eigenvalues (11.3.3), the same **characteristic polynomial** (11.4.3), and the same algebraic multiplicities of eigenvalues ( #todo  ) 
+- The sum of eigenvalues of $A$ equals to $\text{tr}A$ #todo 
+- The product of eigenvalues of $A$ equals to $\text{det}A$ #todo  
+- The eigenvalues of diagonal matrix $\text{diag}{(\lambda_{1},\dots,\lambda_{{n}})}$, are $\lambda_{1},\dots,\lambda_{{n}}$   #todo 
+- (q11.3.2a) if $\lambda$ is an eigenvalue of $A$, then for each $\mu$, $\mu\lambda$ is an eigenvalue of $\mu A$
+- (q11.3.2b) if $\lambda$ is an eigenvalue of $A$, then , $\lambda^k$ is a eigenvalue of $A^k$. (for each natural $k$ )
+
+### Eigenvectors 
+
+Definitions of **eigenvector**. The following statements are **equivalent**:
+- $v$ is an **eigenvector** of $A$ that related to $\lambda$
+- (d11.3.1) $v$ is nonzero vector in $\mathbb{R}^n$ such that $Av=\lambda v$
+
+### Eigenspace 
+
+Definitions of the **eigenspace of** $A$ **associated with its eigenvalue** $\lambda$.
+- $\{ \mathbf{v}\mid(A-\lambda I) \mathbf{v}= \mathbf{0} \}$
+- $\{ \mathbf{v}\mid A\mathbf{v}=\lambda \mathbf{v} \}$
+- $\{ \text{eigenvectors corresponding to } \lambda \}\cup \{ \mathbf{0} \}$
+- $\text{null}(\lambda I-A)$
+
+### Algebraic & geometric multiplicity
+
+- (d11.5.2) The multiplicity of an eigenvalue $\lambda$ as a root of the characteristic equation is **the algebraic multiplicity** of $\lambda$ 
+- (q11.5.2) The dimension of the eigenspace corresponding to $\lambda$ is called **the geometric multiplicity** of $\lambda$, which is $\dim{(\lambda I-A)}=n-\text{rank}(\lambda I-A)$     
+
+- (11.5.3, q11.5.3)  $1\leq$ the **geometric multiplicity** $\leq$ the **algebraic multiplicity**
+
+- finding the algebraic multiplicity of eigenvalue #todo 
+- finding the geometric multiplicity of eigenvalue #todo 
+
+
+>[!example] **Procedure**: Finding Eigenvalues and Eigenvectors
+> 1. First, find the eigenvalues $\lambda$ of $A$ by solving the **characteristic equation** $\det \left( \lambda I -A \right) = 0$.
+> 2. For each $\lambda$, find the basic eigenvectors $v \neq 0$ by finding the basic solutions to $\left( \lambda I - A \right) v = 0$.
+> 
+> To verify your work, make sure that $Av=\lambda v$ for each $\lambda$ and associated eigenvector $v$.
+
 
 ## Similarity
 
@@ -266,6 +272,17 @@ Similarity is an *equivalence relation* on the space of square matrices.
 	- $A$ and $B$ have the same **algebraic multiplicities** of eigenvalues #todo 
 	- $A$ and $B$ have the same **characteristic polynomial** (11.4.3)
 
+
+## Triangular matrix
+
+
+**Properties:**
+-  if $A_{n}=[a_{ij}]$ is a triangular matrix, then
+	- $\det A=a_{11}a_{22} \cdots a_{nn}$ (4.3.8)
+	- the eigenvalues of $A$ are $a_{11},a_{22},\dots,a_{nn}$ 
+		- each eigenvalue occurs exactly k times on the diagonal, where k is its algebraic multiplicity
+	- the characteristic polynomial of $A$ is $p_{A}=(x-a_{11})(x-a_{22})\cdots(x-a_{nn})$
+	- 
 
 ## Diagonal matrix
 
@@ -334,17 +351,6 @@ u_{1} &= a_{11}v_{1}+\dots+a_{n1}v_{n} \\ \vdots \notag \\ u_{n} &= a_{1n}v_{1}+
 ### Transition matrix from a basis B to the standard basis
 
 - if $B=(v_{1}, v_{2},\dots,v_{n})$, then $[v_{1}|v_{2}|\dots|v_{n}]$ is the transition matrix from $B$ to the standard basis
-
-## Triangular matrix
-
-
-**Properties:**
--  if $A_{n}=[a_{ij}]$ is a triangular matrix, then
-	- $\det A=a_{11}a_{22} \cdots a_{nn}$ (4.3.8)
-	- the eigenvalues of $A$ are $a_{11},a_{22},\dots,a_{nn}$ 
-		- each eigenvalue occurs exactly k times on the diagonal, where k is its algebraic multiplicity
-	- the characteristic polynomial of $A$ is $p_{A}=(x-a_{11})(x-a_{22})\cdots(x-a_{nn})$
-	- 
 
 ## Orthogonality
 
