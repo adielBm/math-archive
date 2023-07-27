@@ -1,6 +1,6 @@
 $$\large{K=\set{{v}_1,\dots,{v}_m}\subseteq V}, \quad \dim{V}=n$$
-- $A_{R}$ is $K$'s vectors as **rows** 
-- $A_{C}$ is $K$'s vectors as **comluns** 
+- $A$ is $K$'s vectors as **rows** 
+- $A_{C}=A^t$ is $K$'s vectors as **comluns** 
 - $B$ is some basis of $V$ 
 
 # Linear independence
@@ -35,62 +35,35 @@ Whether $K$, spans $V$ ?
 
 # Basis
 
-Whether $K$ is a basis of $V$ ?
+Definitions of **basis**. The following statements are **equivalent**:
+- $K$ is a basis of $V$
+- every element of $V$ may be written in a unique way as a finite linear combination of elements of $K$.
+- **two** out of three are fulfilled (8.3.2)
+	1. $K\text{ is linearly {\bf independent}}$
+	2. $\text{Sp}(K)=V$  (K spans V)
+	3. $m=\dim V$ 
+- (8.4.5) $m=\dim V$, and the transition matrix from some basis $B$ to $K$ is invertible
 
-Make sure **TWO out of three** are fulfilled (8.3.2)
-1. $K\text{ is linearly {\bf independent}}$
-2. $\text{Sp}(K)=V$  (K spans V)
-3. $m=n$ 
+### Finding a basis
 
-### method 2
-
-- (8.4.5) - let $B={(v_{1},v_{2},\dots,v_{n})}$ is a basis of the space $V$ ($n$-dim.), on $F$, then $B'={(u_{1},u_{2},\dots,u_{n})}$ is a basis of $V$, **iff** the transition matrix from $B$ to $B'$ is invertible.
-
-
-### finding a basis
-
-basis of the $\text{null}{(A_{C})}$ 
-
-(q8.2.4)
-- find span to $\text{null}({\text{RREF}(A)})$
-- reduce the span until it will be also linearly independent
-
-(q8.6.3)
-- find the general solution of ${\text{RREF}(A)}$
-- extract the variables from the general solution
-- the number of variables is the size of the basis
-- #todo 
-
-
-- (q8.5.2b) A basis of $\text{row-space}({A})$. 
-	- The **non-zero** rows of $\text{REF}(A)$ are a basis of $\text{row-space}({A})$.
+- A basis of $\text{row-space}({A})=\text{Sp}(K)$. 
+	- The **non-zero** rows of $\text{REF}(A)$ (q8.5.2b)
+	- the $i$-s corresponding columns in $A^t$ such that in $\text{RREF}(A^t)$ are contain a pivot.
 -  A basis of $\text{column-space}({A})$.
-	- The **non-zero** rows of $\text{REF}(A^t)$ are a basis of $\text{column-space}({A})$.
+	- The **non-zero** rows of $\text{REF}(A^t)$
+	- the $i$-s corresponding columns in $A$ such that in $\text{RREF}(A)$ are contain a pivot.
+- A basis of the $\text{null}{(A^t)}$ 
+	- https://math.stackexchange.com/questions/88301/finding-the-basis-of-a-null-space
+	- Bases for the Fundamental Spaces in Elementary Linear Algebra ANTON  
+	- (q8.2.4)
+		- find span to $\text{null}({\text{RREF}(A)})$
+		- reduce the span until it will be also linearly independent
+	- (q8.6.3)
+		- find the general solution of ${\text{RREF}(A)}$
+		- extract the variables from the general solution
+		- the number of variables is the size of the basis
+		- #todo 
 
-### basis of the sub-space 
-
-finding basis for $U=\text{Sp}({\set{v_{1},v_{2},\dots,v_{k}   }})\subseteq {F}^n$
-
-reducing a span set to a basis by removing a vectors 
-(q8.5.2b)
-
-- set the ${\set{v_{1},v_{2},\dots,v_{k}   }}$ as row vector of matrix, and then follow basis of the row space of a matrix $B$ 
-
- **OR:**
-
-#todo check if it's correct 
-Let $(v_{1}, \dots , v_{k})$ be a list of vectors in $F^n$. To find a basis $B$ for $\text{Sp}(v_{1}, \dots , v_{k})$: 
-- Put $A = [v_{1} · · · v_{k}]$ (each vector as column) in **RREF**. 
-- If the $i$-th column contains a pivot, include $v_{i}$ in $B$. 
-
-
-### basis of the sub-space 
-basis of the sub-space $U=\text{Sp}({\set{u_{1},u_{2},\dots,u_{p}   }})$ of $V$, on field $F$ ($\dim{V}=n$)
-
-- choose some basis $B$ of $V$. (usually the standard basis) 
-- find a basis $\set{w_{1},w_{2},\dots,{w_{k}}}$ of the sub-space $W=\text{Sp}(\set{[u_{1}]_{B},[u_{2}]_{B},\dots,[u_{p}]_{B}})$ of $F^n$, 
-- $w_{1},w_{2},\dots,{w_{k}}\in{F^n}$, are coordinate vectors by $B$ of $v_{1},v_{2},\dots,{v_{k}}\in{V}$. (respectively)
-- $\set{v_{1},v_{2},\dots,{v_{k}}}$ are the basis of $U$
 
 ### Extending a linearly independent set to a basis by adding vectors
 
@@ -99,9 +72,8 @@ basis of the sub-space $U=\text{Sp}({\set{u_{1},u_{2},\dots,u_{p}   }})$ of $V$,
 - q8.3.6
 - q8.6.4 
 
-### basis for ImT
-
-### basis for KerT
+- #todo  basis for ImT
+- #todo  basis for KerT
 
 
 

@@ -38,7 +38,12 @@ Row equivalence is an *equivalence relation*
 - $A$ and $B$ are row equivalent, if and only if, there exists an invertible matrix $P$ such that $A=PB$.
 
 **Properties:**
-- Row equivalent matrices have the same rank
+
+If A and B are row equivalent matrices, then: 
+- A given set of column vectors of $A$ is linearly independent if and only if the corresponding column vectors of $B$ are linearly independent. 
+- A given set of column vectors of $A$ forms a basis for the column space of $A$ if and only if the corresponding column vectors of $B$ form a basis for the column space of $B$. 
+- $A$ and $B$ have the same rank
+
 
 ## Rank
 
