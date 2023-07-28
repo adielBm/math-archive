@@ -1,6 +1,7 @@
 $$\large{K=\set{{v}_1,\dots,{v}_m}\subseteq V}, \quad \dim{V}=n$$
 - $A$ is $K$'s vectors as **rows** 
-- $A_{C}=A^t$ is $K$'s vectors as **comluns** 
+- $A^t$ is $K$'s vectors as **comluns** 
+- $r=\text{rank}(A)$
 - $B$ is some basis of $V$ 
 
 # Linear independence
@@ -44,25 +45,18 @@ Definitions of **basis**. The following statements are **equivalent**:
 	3. $m=\dim V$ 
 - (8.4.5) $m=\dim V$, and the transition matrix from some basis $B$ to $K$ is invertible
 
-### Finding a basis
+### Bases for the Fundamental Spaces
 
-- A basis of $\text{row-space}({A})=\text{Sp}(K)$. 
+- A basis of $\text{row-space}({A})=\text{Sp}(K)$
 	- The **non-zero** rows of $\text{REF}(A)$ (q8.5.2b)
-	- the $i$-s corresponding columns in $A^t$ such that in $\text{RREF}(A^t)$ are contain a pivot.
+	- The $r$ columns in $A^t$, such that in $\text{RREF}(A^t)$ are contain a pivot.
 -  A basis of $\text{column-space}({A})$.
 	- The **non-zero** rows of $\text{REF}(A^t)$
-	- the $i$-s corresponding columns in $A$ such that in $\text{RREF}(A)$ are contain a pivot.
-- A basis of the $\text{null}{(A^t)}$ 
-	- https://math.stackexchange.com/questions/88301/finding-the-basis-of-a-null-space
-	- Bases for the Fundamental Spaces in Elementary Linear Algebra ANTON  
-	- (q8.2.4)
-		- find span to $\text{null}({\text{RREF}(A)})$
-		- reduce the span until it will be also linearly independent
-	- (q8.6.3)
-		- find the general solution of ${\text{RREF}(A)}$
-		- extract the variables from the general solution
-		- the number of variables is the size of the basis
-		- #todo 
+	- The $r$ columns in $A$, such that in $\text{RREF}(A)$ are contain a pivot.
+- A basis of the $\text{null}{(A)}$ 
+	- The $n-r$ vectors that span the solution space of $(\text{RREF}(A))\mathbf{x}=\mathbf{0}$. 
+- A basis of the $\text{null}{(A^t)}=\text{left-null}{(A^t)}$ 
+	- The $m-r$ vectors that span the solution space of $(\text{RREF}(A^t))\mathbf{x}=\mathbf{0}$. 
 
 
 ### Extending a linearly independent set to a basis by adding vectors
