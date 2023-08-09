@@ -1,45 +1,50 @@
 $$\large{K=\set{{v}_1,\dots,{v}_m}\subseteq V}, \quad \dim{V}=n$$
 - $A$ is $K$'s vectors as **rows** 
-- $A^t$ is $K$'s vectors as **comluns** 
+- $A^{\top}$ is $K$'s vectors as **comluns** 
 - $r=\text{rank}(A)$
 - $B$ is some basis of $V$ 
 
 # Linear independence
 
-Whether $K$ is **linearly independent**?
+Definitions of **linearly independent**. The following statements are **equivalent**:
+- $K$ is **linearly independent**
+- $\lambda_1{v}_1 + \lambda_2{v}_2 + \cdots + \lambda_m{v}_m = {0}\implies{\lambda_{1},\dots,{\lambda_{m}}}=0$
+- $A^{\top}\mathbf{x}=\mathbf{0}\implies \mathbf{x}=\mathbf{0}$
+- $\text{rank}({A})=m\leq n$
+- (8.4.4) $\{ [v_{1}]_{B},\dots,[v_{m}]_{B} \}\text{ is linearly {\bf independent}}$
+- $\text{REF}(A^\top)$ has a pivot position in every column #todo 
 
-- **Definition**: $K$ is said to be **linearly independent**, if: $$\lambda_1{v}_1 + \lambda_2{v}_2 + \cdots + \lambda_m{v}_m = {0}\implies{\lambda_{1},\dots,{\lambda_{m}}}=0$$ 
-- In other words, if the linear system $Ax=[v_{1},\dots, v_{m}][\lambda_{1},\dots,{\lambda_{m}}]=0$ has only the trivial solution. ($A$ is vectors as comluns)
-
-
-- ($A$ is $K$'s vectors as **rows**) $\text{rank}({A})=m\leq n\iff K\text{ is linearly {\bf independent}}$.
-- if $m=n$, then, $K\text{ is linearly {\bf independent}}\iff A \text{ is {\bf invertible} matrix}$. ($A$ is vectors as comluns/rows)
+**Theorems:**
 - $0\in{K}\implies K\text{ is linearly {\bf dependent}}$
 - $m>n\implies K\text{ is linearly {\bf dependent}}$
-
-- (8.4.4) $K\text{ is linearly {\bf independent}}\iff \{ [v_{1}]_{B},\dots,[v_{m}]_{B} \}\text{ is linearly {\bf independent}}$
-- $K$ is linearly independent, if and only if, there is a pivot in every column of the **REF** form of $A$. #todo 
+- $K\text{ is linearly {\bf dependent}}\implies$
+	- $\dim\text{Sp}(K)< m$
+- $K\text{ is linearly {\bf independent}}\implies$
+	- $\dim\text{Sp}(K)= m$
+- if $m=n$, then: 
+	- $A$ or $A^{\top}$ is invertible matrix, if and only if, $K\text{ is linearly {\bf independent}}$
+	- $K\text{ is linearly {\bf independent}}$, if and only if, $\det{(A)}\neq 0$, 
 
 # Span
 
-Whether $K$, spans $V$ ?
-
-- $K\text{ spans }V \iff \text{rank}(\text{REF}(A))=\dim{V}$.   ($A$ is $K$'s vectors as rows)
-- $K\text{ spans }V \iff A\mathbf{x}=\mathbf{b}\text{ is consistent}$.   ($A$ is $K$'s vectors as columns)
-- $B\subseteq{\text{Sp}{(K)}}\implies{K\text{ spans }V}$. (where $\text{Sp}({B})=V$)
-- $m<n\implies K\text{ is {\bf not} span }V$
+Definitions. The following statements are **equivalent**:
+- $K\text{ spans }V$, that is $\text{Sp}(K)=V$
+- $\text{rank}(\text{REF}(A))=\dim{V}$.   ($A$ is $K$'s vectors as rows)
+- $A\mathbf{x}=\mathbf{b}\text{ is consistent}$.   ($A$ is $K$'s vectors as columns)
 
 **Theorems:**
-- $\text{Sp}{(K)}=\text{Sp}{(T)}\iff{K\subseteq\text{Sp}{(T)}\land{T\subseteq\text{Sp}{(K)}}}$
-- $K\subseteq{\text{Sp}{(T)}}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(T)}}$
-- $K \subseteq{T}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(T)}}$
-
+- $\text{Sp}(K)$ is [[Vector spaces|subspace]]
+- $B\subseteq{\text{Sp}{(K)}}\implies{K\text{ spans }V}$. (where $\text{Sp}({B})=V$)
+- $m<n\implies K\text{ is {\bf not} span }V$
+- (7.5.4) $\text{Sp}{(K)}=\text{Sp}{(L)}\iff{K\subseteq\text{Sp}{(L)}\land{L\subseteq\text{Sp}{(K)}}}$
+- (7.5.1) $K\subseteq{\text{Sp}{(L)}}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(L)}}$
+- $K \subseteq{L}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(L)}}$
 # Basis
 
 Definitions of **basis**. The following statements are **equivalent**:
 - $K$ is a basis of $V$
 - every element of $V$ may be written in a unique way as a finite linear combination of elements of $K$.
-- **two** out of three are fulfilled (8.3.2)
+- **Two** out of three are fulfilled (8.3.2)
 	1. $K\text{ is linearly {\bf independent}}$
 	2. $\text{Sp}(K)=V$  (K spans V)
 	3. $m=\dim V$ 
@@ -59,38 +64,43 @@ Definitions of **basis**. The following statements are **equivalent**:
 	- The $m-r$ vectors that span the solution space of $(\text{RREF}(A^t))\mathbf{x}=\mathbf{0}$. 
 
 
-### Extending a linearly independent set to a basis by adding vectors
 
-#todo 
-- Obtain the reduced row echelon form (RREF) of the matrix as row of vectors. and then complete it to identity matrix. (the rows for the complete are the vectors for complete to basis)
-- q8.3.6
-- q8.6.4 
-
-- #todo  basis for ImT
-- #todo  basis for KerT
-
-
+- #todo  Let $K$ is linearly independent, then $K\cup\set{\mathbf{e}_{i}\mid {i}\text{th column is not a pivot column in REF}(A)}$ forms a basis for $V$.
 
 # Orthogonality  
 
+(12.2.3) The following statements are **equivalent**:
+- $\mathbf{u}$ orthogonal to $K$
+- $\forall\mathbf{v}\in{K}:\mathbf{u}\cdot \mathbf{v}=\mathbf{0}$
+- $\mathbf{u} \perp K$
+- $\mathbf{u} \perp \text{Sp}(K)$
+- $\mathbf{u}\in{(\text{Sp}(K))^\perp}$
+- $\mathbf{u}\in{\text{null}(A)}$
+- $A\mathbf{u}=\mathbf{0}$
 ## Orthogonal set
 
+**Definition:**
 - (d12.4.1a) let $K=\{ \textbf{u}_{1}, \dots,\textbf{u}_{k} \} \subseteq\mathbb{R}^n$. we say that $K$ is a **orthogonal set**, if $\textbf{0}\notin{K}$, and $\forall{j\neq i}:\textbf{u}_{i}\cdot\textbf{u}_{j}=0$
-- (12.4.2) Every orthogonal set in $\mathbb{R}^n$ is independent set
-- (q12.4.3a) Every orthogonal set in $\mathbb{R}^n$ has at most $n$ vectors
+
+**Properties:**
+$K=\{ \textbf{u}_{1}, \dots,\textbf{u}_{k} \} \subseteq\mathbb{R}^n$ is orthogonal set. then:
+- (12.4.2) $K$ is independent set
+- (q12.4.3a) $K$ has at most $n$ vectors
+- $K$ is a basis of $\text{Sp}(K)$
+
+
 
 ### Orthogonal basis
 
 
-
-## Orthonormal set
+### Orthonormal set
 
 - (d12.4.1b) $K=\{ \textbf{u}_{1}, \dots,\textbf{u}_{k} \}$ is **orthonormal set** if, $\| \textbf{u}_{i} \|=1$ for each $i$, ($1\leq i\leq k$)
 - (q12.4.2) **Normalizing** - if $K=\{ \mathbf{u}_{1}, \dots,\textbf{u}_{k} \}$ is orthogonal set, then $L=\{ \frac{\textbf{u}_{1}}{\|\textbf{u}_{1} \|},\dots,\frac{\textbf{u}_{k}}{\|\textbf{u}_{k} \|} \}$ is orthonormal set, and $\text{Sp}(K)=\text{Sp}(L)$
 - **The normalized vector** $\mathbf{\hat{u}}$ of a non-zero vector $\mathbf{{u}}$ is the unit vector in the direction of $\mathbf{{u}}$. i.e. $\mathbf{\hat{u}} = \frac{\mathbf{u}}{\|\mathbf{u}\|}$
 - A **Unit vector** is a vector $\textbf{v}$ such that $\| \textbf{v} \|=1$
 
-### Orthonormal basis
+#### Orthonormal basis
 
 - (12.4.5) let $B=(u_{1}, \dots ,u_{n})$ ordered basis of $\mathbb{R}^n$, then the following properties are equivalence:
 	- $B$ is **orthonormal basis**
@@ -98,6 +108,10 @@ Definitions of **basis**. The following statements are **equivalent**:
 	- $\mathbf{a\cdot b}=\sum^{n}_{i=1}{(\mathbf{a\cdot u}_{i})\cdot(\mathbf{b\cdot u}_{i})}$
 	- $\| \textbf{a} \|^2=\sum^n_{i=1}(\mathbf{a\cdot u}_{i})^2$
 - (q12.4.10) #todo generalition of 12.4.5 for orthogonal bases
+
+## Orthogonality of Sets
+
+- $\forall a \in A, b \in B: a \perp b\iff A\perp B$
 
 ## **Gram–Schmidt process** (12.5.2) 
 

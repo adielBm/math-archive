@@ -1,44 +1,52 @@
-## Linearly
+## Linearity
 
-Whether a transformation $T:V\to W$ is a **linear** transformation?
+- Definitions of linearity of transformation. The following statements are **equivalent**:
+	- $T$ is **linear** transformation
+	- $T$ is additive and homogeneous (9.1.1)
+		1. **Additivity:** $T(v_{1}+v_{2})=T(v_{1})+T(v_{2})$
+		2. **Homogeneity:** $\alpha T(v)=T(\alpha{v})$
+	- $T(\lambda_{1}v_{1}+\lambda_{2}v_{2})=\lambda_{1}T(v_{1})+\lambda_{2}T(v_{2})$ (9.1.3, equivalent to d9.1.1) 
+	- There exists $A$ such that $Tv=Av$ for each $v\in{V}$
 
-- (Definition 9.1.1) 
-	1. **Additivity:** $T(v_{1}+v_{2})=T(v_{1})+T(v_{2})$
-	2. **Homogeneity:** $\alpha T(v)=T(\alpha{v})$
-- $T(\lambda_{1}v_{1}+\lambda_{2}v_{2})=\lambda_{1}T(v_{1})+\lambda_{2}T(v_{2})$ (9.1.3, equivalent to d9.1.1) 
-- (9.1.2a) if $T(0_{V})\neq0_{W}$, then $T$ is not linearly
+**Theorems:**
+- (9.1.2a) if $T(0_{V})\neq0_{W}$, then $T$ is not linear
 
->q9.4.1
-
+**Properties:**
 - $T(v)=T(u)\iff T(v-u)=0$
+
+___
+$$\large T:V\to W$$
+- $A_{m\times n}=[T]^B_{C}$
+- $Tv=Av$
+- $\dim{V}=n,  \quad\dim{W}=m$
+- $B=(v_{1},\dots,v_{n})$ and $C=(w_{1},\dots,w_{m})$ are bases of $V$ and $W$. (respectively) 
 
 ## Image
 
-finding the image of a linear transformation $\text{Im}T$
+- Definition:
+	- $\operatorname{Im}(T) = \{\ T(v) \mid v \in V\,\}$
 
-- Definition: $\operatorname{Im}(T) = \{\,w \in W: w = T(v), v \in V\,\}$
+
 - (9.3.6) let $T:V\to W$, and $\text{Sp}\{ v_{1},\dots ,v_{n} \}=V$, then, $\text{Im}{T}=\text{Sp}{(\{ T(v_{1}),\dots,T(v_{n}) \})}$
 - (9.3.7) let $A_{m \times n}$ matrix on field $F$, and $T:F^n\to F^m$, where $T(v)=Av$, then, $\text{Im}(T)=\text{Col}{(A)}$ (the column space of $A$)
-- (9.6.2) if $T:V\to W$ is isomorphism, and the $\dim{V}=\dim{W}$, then $\text{Im}{T}=W$ (i.e. $T$ is onto)
+- (9.6.2) if $T:V\to W$ is isomorphism, then $\text{Im}{T}=W$
 - $\text{Im}T$ is subspace of $W$
 
 >q9.3.2c, q9.3.3, q9.4.2
 
->for Im of indep. subset of V (lin. trans. that is **one-to-one**). see 9.5.6 
+- (9.5.6) if $T$ is injective, and $K\subseteq{V}$ independent linearly set, then $T(K)\subseteq{W}$ is also independent linearly set.
 
 ## Kernel 
 
 - Definition: $\ker(T) = \{ v \in V : T(v) = 0_W\}$
 - (9.3.5) $\ker T$ is subspace of $V$
-- (9.5.2) $T:V\to W$ is injective, if and only if, $\ker{T}=\{ 0 \}$
+- (9.5.2) $T$ is injective, if and only if, $\ker{T}=\{ 0 \}$
 
 >see 9.6.2 
 
 ## Transformation matrix
 
-Matrix Representations of Linear Transformation
-
-- (d10.1.1) $T:V\to W$, and $B=(v_{1},\dots,v_{n})$ and $C=(w_{1},\dots,w_{n})$ are bases of $V$ and $W$. (respectively) 
+(d10.1.1)  Matrix Representations of Linear Transformation
 $$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T( {v_{n}})]_{C} \\ | & & | \end{array} \right]_{m\times n}$$
 
 
@@ -51,22 +59,51 @@ $$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T
 
 - (9.4.1) $T,S:V\to W$, and $B=\{ v_{1},\dots,v_{n} \}$ spans $V$. then $T=S \iff \forall{v\in B}:{T(v)=S(v)}$ 
 
+## Surjective (Onto)
+
+The following statements are **equivalent**:
+- $T:V\to W$ is surjective
+- $A$ columns spans $W$ 
+- $\dim V =\dim \text{im} T$
+- (T is right-cancellable) $RT=ST\implies R=S$ 
+- (T is right-invertible) There exists $S:W\to V$ such that $TS=I$ 
+
+
+Theorems: 
+- if $\dim{V}<\dim{W}$ then $T$ cannot be onto 
+
+## Injective (One-to-One)
+
+Definition: The following statements are **equivalent**:
+- $T:V\to W$ is injective
+- (9.5.2) $\text{ker}(T)=\set{0}$
+- $\dim(\ker{T})=0$
+- $T(u)=T(v)\implies u=v$
+- The colmuns of $A$ are linearly independent
+- (T is left-cancellable) $TR=TS\implies R=S$ 
+- (T is left-invertible) There exists $S:W\to V$ such that $ST=I$ 
+
+Theorems: 
+- if $\dim{W}<\dim{V}$ then $T$ cannot be one-to-one 
 # dimV=dimW
 
+## Theorems
+
+- (9.4.2) Let $B=(v_1,\dots,v_n)$ be a basis of $V$ and $(w_1,\dots,w_n)$ an arbitrary list of vectors in $W$. Then there **exists** a **unique** linear map $T:V\to W$ such that $T(v_{i})=w_{i}$
 ## Isomorphism
 
-- Definition: An **isomorphism** is an **invertible linear transformation** (i.e. bijective linear transformation).
+- Definition: The following statements are **equivalent** (9.6.2)
+	- $T$ is an **isomorphism** (invertible linear transformation)
+	- $T$ is **injective**
+	- $T$ is **surjective**
+	- $T$ is **bijective**
+	- There is $T^{-1}:W\to V$ such that $T^{-1}T=I_{V}$
+	- There is $T^{-1}:W\to V$ such that $TT^{-1}=I_{W}$
+	- (10.5.1-2) $A=[T]^B_{C}$ is invertible, i.e. $A^{-1}=[T^{-1}]^C_{B}$ exists
+	- (9.9.2) the inverse $T^{-1}:W\to V$ exists, such that $T^{-1}T=I_{V}$ and $TT^{-1}=I_{W}$
 
-- Determine if $T:V\to W$ is an isomorphism?
-	- (9.6.2)  if $\dim{V}=\dim{W}$ (finite-dimensional) then, injective $\iff$ surjective $\iff$ isomorphism
-	- (10.5.2) if $[T]^B_{C}$ is invertible, then $T$ is isomorphism
-	- (9.9.2) if exists $S:W\to V$ such that $ST=I_{V}$ and $TS=I_{W}$, then, $T$ is an isomorphism, $S=T^{-1}$
-	- (9.6.2)  if $\dim{V}=\dim{W}$, then the following statements are **equivalent**:
-		- $T$ is an isomorphism
-		- there is $S:W\to V$ such that $ST=I_{V}$
-		- there is $S:W\to V$ such that $TS=I_{W}$
-
-- (9.5.2) $T:V\to W$ is injective, if and only if, $\ker{T}=\{ 0 \}$
+**Propreties:**
+- 
 
 ## Linear Operator $T:V \to V$
 

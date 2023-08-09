@@ -1,6 +1,13 @@
 
 ![trigo\|250](https://upload.wikimedia.org/wikipedia/commons/7/72/Sinus_und_Kosinus_am_Einheitskreis_1.svg)
 
+$$
+\begin{align} 
+\sin\theta=\cos\left(\frac{\pi}{2} - \theta \right) \\
+\cos\theta = \sin\left(\frac{\pi}{2} - \theta \right)  \\
+\tan\theta = \frac{\sin \theta}{\cos \theta} \\
+\end{align}
+$$
 ### Pythagorean identities
 $$
 \begin{align}
@@ -43,3 +50,7 @@ $$
 
 - Multiple-angle formula #todo 
 - Product-to-sum and sum-to-product identities #todo 
+
+## Common Trigonometric Values
+
+![410](https://upload.wikimedia.org/wikipedia/commons/4/4c/Unit_circle_angles_color.svg)

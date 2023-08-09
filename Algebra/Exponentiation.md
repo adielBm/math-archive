@@ -14,5 +14,3 @@
 - if $n$ is odd, then $\sqrt[n]{a^n}=a$
 - if $n$ is even, then $\sqrt[n]{a^n}=|a|$
 
-
-

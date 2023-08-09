@@ -21,5 +21,10 @@ $$\large z=a+bi$$
 	- $z-\overline{z}=2ib$
 	- $z=\overline{z}\iff z\in\mathbb{R}$
 - **Polar representation** $z=r(\cos\theta+i\sin\theta)$
+	- $r=\sqrt{ a^{2}+b^{2}}$
+	- $\tan\theta=\frac{b}{a}$
+	- $a=r\cos \theta$
+	- $b=r\sin \theta$
 - **De Moivre's formula** - $\big(\cos x + i \sin x\big)^n = \cos nx + i \sin nx$
+
 
