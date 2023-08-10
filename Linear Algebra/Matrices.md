@@ -7,6 +7,8 @@ $\large A$ is $m\times n$ matrix
 **Definitions:**
 - Matrix addition - $A+B=C$ where $a_{ij}+b_{ij}=c_{ij}$
 - Matrix multiplication - $A_{m\times n}B_{n\times p}=C_{m \times p}=[c_{ij}]$, where $c_{ij}$ is the dot product of the $i$th row of $A$ and the $j$th column of $B$ 
+	- (3.4.3) $[A]^{r}_{i}B=[C]^{r}_{i}$ and $A[B]^{c}_{j}=[C]^{c}_{j}$
+	- (3.4.4) $[A]^{r}_{i}=0\implies [C]^{r}_{i}=0$ and $[B]^{c}_{j}=0\implies [C]^{c}_{j}=0$ 
 
 **Properties:**
 - **Commutative (addition)** $A+B=B+A$
@@ -131,6 +133,7 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 	- The equation $A\mathbf{x}=\mathbf{b}$ has a unique least-squares for each $\mathbf{b}$ in $\mathbb{R}^m$
 	- The columns of $A$ are linearly indepndent
 	- The matrix $A^tA$ is invertible 
+
 
 - $AB=0\iff \text{column-space}(B)\subseteq{\text{null}(A)}$
 
@@ -413,3 +416,4 @@ u_{1} &= a_{11}v_{1}+\dots+a_{n1}v_{n} \\ \vdots \notag \\ u_{n} &= a_{1n}v_{1}+
 - (d3.6.2) $A$ and $B$ are said to commute if $AB=BA$
 - (3.6.3) $(tI)A=A(tI)$
 - $A$ and $B$ share the same $n$ independent eigenvectors if and only if $AB=BA$.
+

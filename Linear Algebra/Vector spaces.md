@@ -96,6 +96,7 @@ Let $U+{W}=V$, then the following statements are **equivalent**:
 	- (12.3.2a) $\dim U^{\perp}+\dim U=n$
 	- (12.3.2b) $(U^\perp)^{\perp}=U$
 
+#todo ${(U+W)}^{\perp}=U^{\perp}\cap W^{\perp}$
 ### Orthogonal Projection
 
 - Definition: the **orthogonal projection** of $\mathbf{a}$ onto $\mathbf{u}$ is $\frac{\mathbf{a}\cdot \mathbf{u}}{\mathbf{u}\cdot \mathbf{u}}\mathbf{u}$.
@@ -106,9 +107,10 @@ Let $U+{W}=V$, then the following statements are **equivalent**:
 	- if $(\mathbf{u}_{1},\dots,\mathbf{u}_{k})$ is **orthonormal** basis of $U$, then $\textbf{u}=\sum^{k}_{i=1}{{(\mathbf{a}\cdot \mathbf{u}_{i})}\textbf{u}_{i}}=\text{proj}_{U}\mathbf{a}$
 - Projection Theorem - if $\mathbf{v}$ and $\mathbf{u}$ are vectors in $\mathbb{R}^n$, and $\mathbf{u}\neq \mathbf{0}$, then $\mathbf{v}$ can be expressed in excatly one way in the form $\mathbf{v}=t\mathbf{u}+\mathbf{w}$, where $t$ is a scalar, and $\mathbf{w}\perp\mathbf{u}$.
 
-- (12.5.1) $\{ \mathbf{u}_{1},\dots,\mathbf{u}_{k} \}$ is orthogonal set in $\mathbb{R}^n$. and $P(\mathbf{a})$ is the orthogonal projaction of some vector $\mathbf{a}\in \mathbb{R}^n$ onto $\text{Sp}(\{ \mathbf{u}_{1},\dots,\mathbf{u}_{k} \})$, and $\mathbf{v}=\mathbf{a}-P(\mathbf{a})$, then:
-	1.  $\mathbf{v}\perp{\{ \mathbf{u}_{1},\dots,\mathbf{u}_{k} \}}$, and $\mathbf{v}\perp{\text{Sp}(\{ \mathbf{u}_{1},\dots,\mathbf{u}_{k} \})}$
-	2. $\mathbf{v}=\mathbf{0}\iff \mathbf{a}\in{\text{Sp}(\{ \mathbf{u}_{1},\dots,\mathbf{u}_{k} \})}$
+
+- (12.5.1) $K=\{ \mathbf{u}_{1},\dots,\mathbf{u}_{k} \}$ is orthogonal set, and $U=\text{Sp}(K)$ and $\mathbf{v}=\mathbf{a}-\text{proj}_{U}\mathbf{a}$, then:
+	1.  $\mathbf{v}\perp K$, and $\mathbf{v}\perp U$
+	2. $\mathbf{v}=\mathbf{0}\iff \mathbf{a}\in U$
 
 
 > [!example] Methods
