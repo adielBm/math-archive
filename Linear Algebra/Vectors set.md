@@ -64,7 +64,6 @@ Definitions of **basis**. The following statements are **equivalent**:
 	- The $m-r$ vectors that span the solution space of $(\text{RREF}(A^t))\mathbf{x}=\mathbf{0}$. 
 
 
-
 - #todo  Let $K$ is linearly independent, then $K\cup\set{\mathbf{e}_{i}\mid {i}\text{th column is not a pivot column in REF}(A)}$ forms a basis for $V$.
 
 # Orthogonality  
@@ -87,7 +86,6 @@ $K=\{ \textbf{u}_{1}, \dots,\textbf{u}_{k} \} \subseteq\mathbb{R}^n$ is orthogon
 - (12.4.2) $K$ is independent set
 - (q12.4.3a) $K$ has at most $n$ vectors
 - $K$ is a basis of $\text{Sp}(K)$
-
 
 
 ### Orthogonal basis

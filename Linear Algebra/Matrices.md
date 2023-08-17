@@ -41,7 +41,7 @@ Row equivalence is an *equivalence relation*
 
 **Definitions:** - The following statements are **equivalent**:
 - $A$ and $B$ are row equivalent
-- it is possible to transform $A$ into $B$ by a sequence of elementary row operations
+- It is possible to transform $A$ into $B$ by a sequence of elementary row operations
 - $\text{row-space}(A)=\text{row-space}(B)$
 - $\text{null}(A)=\text{null}(B)$
 - There exists an invertible matrix $P$ such that $A=PB$.
@@ -53,14 +53,33 @@ If $A$ and $B$ are row equivalent matrices, then:
 - A given set of column vectors of $A$ forms a basis for the column space of $A$ if and only if the corresponding column vectors of $B$ form a basis for the column space of $B$. 
 - $A$ and $B$ have the same rank
 
-## Rank
+## Fundamental Spaces
 
-**Notation**: $\text{rank}{(A)}=\rho{(A)}$
+### Row space
 
 **Definitions:**
-- (d8.5.4) $\rho{(A)}=\dim(\text{row-space(A)})=\dim(\text{column-space(A)})$
-- $\rho(A)$ is the maximal number of linearly independent **rows**
-- $\rho(A)$ is the maximal number of linearly independent **columns**
+- $\text{row-space}(A)=$
+
+**Theorems:**
+- $\text{row-space}(A+B)\subseteq\text{row-space}(A)+\text{row-space}(B)$
+
+### Null space
+
+**Definitions:**
+- $\text{null}(A)=\{ v \mid Av=0 \}$
+
+**Theorems:**
+- (9.8.7b) $\text{null}(A) \subseteq \text{null}(BA)$
+- 
+
+## Rank
+
+**Notation**: $\operatorname{rank}{(A)}=\rho{(A)}$
+
+**Definitions:**
+- (d8.5.4) $\rho{(A)}=\dim(\operatorname{row-space(A)})=\dim(\operatorname{column-space(A)})$
+- $\rho(A)$ is the number of linearly independent **rows**
+- $\rho(A)$ is the number of linearly independent **columns**
 - $\rho(A)=\dim(\text{Im}(T_{A}))$
 - $\rho(A)=n-\dim(\text{null}{(A)})$
 - $\rho(A)$ is the number of the non-zero rows of $\text{REF}(A)$
@@ -73,15 +92,21 @@ If $A$ and $B$ are row equivalent matrices, then:
 		- if $\rho{(A)}=n$ then $A$ has **full column rank**. ($f(\mathbf{x})=A\mathbf{x}$ is injective)
 		- if $\rho{(A)}=m$ then $A$ has **full row rank**. ($f(\mathbf{x})=A\mathbf{x}$ is surjective) (A's rows are linearly indepndent #todo )
 	- Otherwise if $\rho{(A)}<\min{\{ m,n \}}$, then $A$ has **rank deficient**. 
+
 - (q8.5.6) $\rho{(AB)}\leq\min{\{ \rho{(A)}, \rho{(B)} \}}$
 - (q8.5.7a) let $A_{m \times n}$, and $B_{n}$ invertible matrix, then $\rho(AB)=\rho(A)$ 
 - (q8.5.7b) let $A_{m \times n}$, and $B_{m}$ invertible matrix, then $\rho(BA)=\rho(A)$ 
-- (8.6.1) **Rank–nullity** theorem  $\rho(A)+\dim(\text{nul}{(A)})=n$
+- (8.6.1) **Rank–nullity** theorem  $\rho(A)+\dim(\text{null}{(A)})=n$
 - $A=0\iff \rho(A)=0$. #todo 
 - Row equivalent matrices have the same rank #todo 
-- rank of **square matrix:**
-	- (q8.5.8a) let $A$ square matrix of order $n$, then $\rho(A)=n \iff |A|\neq 0$  
-	- (q10.5.3) $A,B$ are square matrices of order $n$, then $\rho{(AB)}\geq \rho(A)+\rho(B)-n$
+- $\rho(A+B)\leq \rho(A)+\rho(B)$
+
+
+- rank of **square matrix:** let $A,B$ are square matrices of order $n$, then:
+	- (q8.5.8a) $\rho(A)=n \iff \det(A)\neq 0$  
+	- (q10.5.3) Sylvester’s inequality $\rho(A)+\rho(B)\leq \rho(AB)+n$
+	- $\rho(B)-\dim(\text{null}(A))\leq \rho(AB)$. (from Sylvester’s inequality and  Rank–nullity theorem)
+	- $AB=0\implies \rho(A)+\rho(B)\leq n$
 
 ## Nullity 
 
@@ -185,7 +210,8 @@ Let $A$ be an $n \times n$ square matrix.
 	- $A^{-1}=B$
 	- $B^{-1}=A$
 	- $AB=BA=I$
-- 
+-  (q3.10.2) $A,B$ are invertible, if and only if, $AB$ is invertible
+
 
 > [!example] **Procedure:** determine whether a square matrix $A$ is invertible and, if so, find $A^{−1}$: 
 >	- Form the augmented matrix $[A | I_{n}]$ and put it into RREF. 
@@ -212,7 +238,9 @@ Let $A$ be an $n \times n$ square matrix.
  
 - **Theorems:**
 	- (4.5.1) $\det (AB)=\det (A) \det (B)$
+	- $\det (AB)=\det (BA)$
 	- (4.3.1) $\det (A)=\det(A^t)$
+	- $\det(A^{-1})=\frac{1}{\det(A)}$
 	- (4.3.5) if $A$ has two equal rows (or colmuns), then $\det A=0$
 	- (4.4.1) $\det{A}\neq0 \iff A\text{ is invertible}$
 	- (4.3.8) if $A_{n}=[a_{ij}]$ is a triangular matrix, then $\det A=a_{11}a_{22} \cdots a_{nn}$
@@ -252,9 +280,10 @@ $$p_{A}=\det \left( \lambda I -A \right)$$
 
 ## Eigenvalues
 
-Definitions of **eigenvalue**. The following statements are **equivalent**:
+Equivalent definitions of **eigenvalue**.
 -  $\lambda$ is an **eigenvalue** of $A$
-- (d11.3.1) There is a **non-zero** vector $v$ such that $Av=\lambda{v}$. (in such case, $v$ is called an **eigenvector** of $A$ that related to the eigenvalue $\lambda$) 
+- (d11.3.1) There exists a **non-zero** vector $v$ such that $Av=\lambda{v}$. 
+	- (in such case, $v$ is called an **eigenvector** of $A$ that related to the eigenvalue $\lambda$) 
 - $(A-\lambda I)$ is singular
 - $\text{rank}(A-\lambda I)<n$
 - $(\lambda I-A)v=0$ has nontrivial solutions, i.e. $\text{null}(\lambda I-A)\neq \{ 0 \}$
@@ -309,7 +338,8 @@ $A$ and $B$ are square matrices
 
 Definitions of **similarity**. The following statements are **equivalent**:
 - $A$ and $B$ are similar
-- (d10.7.1) There is an invertible matrix $P$ such that $A=P^{-1}BP$ 
+- (d10.7.1) There exists an invertible matrix $P$ such that $A=P^{-1}BP$ 
+	- $P$ being the change of basis matrix
 - (10.7.2) $A$ and $B$ represent **the same linear transformation**. (possibly different bases)
 
 **Theorems:**
