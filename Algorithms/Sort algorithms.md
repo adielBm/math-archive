@@ -9,7 +9,7 @@
 | Merge sort     | $n \lg n$ | $n \lg n$ | $n \lg n$ | $n$     | Yes    |        |       |
 | Quicksort      | $n \lg n$ | $n \lg n$ | $n^2$     | $\lg n$ | No     |        |       |
 
-- Theorem (8.1) - Any comparison sort algorithm requires $\Omega{(n \lg n)}$ comparisons in the *worst case*.
+- Theorem (8.1) - Any comparison sort algorithm requires $\Omega{(n \lg n)}$ comparisons in the *worst case*. 
 - Corollary (8.2) - *Heapsort* and *merge sort* are asymptotically optimal comparison sorts.
 
 #### Decision tree

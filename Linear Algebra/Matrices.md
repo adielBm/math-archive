@@ -119,7 +119,6 @@ Matrix Representations of Linear Transformation
 - (d10.1.1) $T:V\to W$, and $B=(v_{1},\dots,v_{n})$ and $C=(w_{1},\dots,w_{n})$ are bases of $V$ and $W$. (respectively) 
 $$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T( {v_{n}})]_{C} \\ | & & | \end{array} \right]_{m\times n}$$
 
-
 ## Transpose
 
 - Notation: $A^t$, $A^\top$
@@ -144,7 +143,6 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 - $P$ is change-of-basis $m\times m$ invertible matrix of $W$ from $C$ to $C'$
 - $A=[T]^{B}_{C}$ is the transformation matrix by the **old bases**
 - $A'=[T]^{B'}_{C'}$ is the transformation matrix by the **new bases**
-
 
 ## Theorems 
 
