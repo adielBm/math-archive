@@ -1,4 +1,10 @@
 
+
+- **dictionary** operations - insert, delete, search
+- **dynamic set** operations - dictionary operations (insert, delete, search), minimun, maximum, successor, predecessor
+
+____
+
 # Binary Search Tree (BST)
 
 - Sorted data structure
@@ -21,9 +27,3 @@ Red-Black tree properties:
 
 - **dynamic set operations** take $O(\lg{n})$ time
 
-___
-
-
-- **dictionary** operations - insert, delete, search
-- **dynamic set** operations - dictionary operations (insert, delete, search), minimun, maximum, successor, predecessor
-- 
