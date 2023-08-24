@@ -7,6 +7,7 @@ $$\large \log_b{a}=x\quad\Longleftrightarrow\quad b^x=a$$
 | Log of a product  | $\log_{c}({\color{red}a}{\color{blue}b})=\log_{c}{\color{red}a}+\log_{c}{\color{blue}b}$  |
 | Log of a fraction | $\log_{c}({\color{red}a}/{\color{blue}b})=\log_{c}{\color{red}a}-\log_{c}{\color{blue}b}$ |
 | Log of a power    | $\log_b{a^{\color{red}n}}={\color{red}n}\log_b{a}$                                        |
+| Log of a nth root     | $\log_{b}(\sqrt[n]{x})=\frac{\log_{b}x}{n}$                                                                                          |
 | Change of base    | $\log_{\color{blue}b}{\color{red}a}=\frac{\log_c{\color{red}a}}{\log_c{\color{blue}b}}$   |
 |                   | $\log_b{(1/a)}=-\log_b{a}$                                                                |
 |                   | $\log_b{a}=\frac{1}{\log_a{b}}$                                                           |

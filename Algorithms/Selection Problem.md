@@ -1,8 +1,9 @@
 
 - The $i$th **order statistic** of a set $A$ of $n$ elements is the $i$th smallest element.
-- The **minimum** of a set is the first order statistic ($i=1$)
-- The **maximum** of a set is the $n$th order statistic ($i=n$)
-- The **median** is $i=\lfloor (n+1)/2 \rfloor$
+	- The **minimum** of a set is the first order statistic ($i=1$)
+	- The **maximum** of a set is the $n$th order statistic ($i=n$)
+	- The **median** is $i=\lfloor (n+1)/2 \rfloor$
+- The **rank** $r$ of an element is its position in the linear order of the set
 
 ## Problem
 
@@ -18,3 +19,4 @@
 - General case:
 	- $\text{Randomized-Select}$ takes $\Theta(n)$ in average case
 	- $\text{Select}$ takes $\Theta(n)$ time in the worst case
+	- Using in **order-statistic tree** (RB Tree with additional node field: *size*). $\text{OS-Select}$ takes $O(\lg{n})$ time in the worst case. 
