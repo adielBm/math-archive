@@ -1,18 +1,16 @@
 
-- $T(n)=T(n/2)+\Theta(1)=O(\lg{n})$
-
-- $T(n)=2T(n/2)+\Theta(1)=O(n)$
-
-- $T(n)=2T(\lfloor{n/2}\rfloor)+\Theta(n)=O(n \lg n)$ 
-- $T(n)=3T({n/2})+\Theta(n)=O(n^{\lg 3})$ 
-- $T(n)=4T({n/2})+\Theta(n)=O(n^2)$ 
-
-
-- $T(n)=2T(n/2)+\Theta(n)=\Theta(n \lg n)$
-
-- $T(n)=T(n-1)+n=O(n^2)$
 - $T(n)=2T(n/2+17)+n=O(n\lg{n})$
-- $T(n)=2T(n/3)+\Theta(n)=\Theta(n)$
+
+## Substitution method
+
+- $T(n)=T(n-1)+n=O(n^2)$ (quick sort worst case (e7.2-1))
+- $T(n)=T(n-1)+1=O(n)$ (worst-case of Random in Ramdomized-Quicksort (e7.3-2))
+- $T(n)=2T(\lfloor\sqrt{  n }\rfloor)+\lg n=\Theta(\lg{n}\lg\lg n)$ (4.1)
+- $T(n)=T(\lceil{n/2}\rceil)+1=\Theta(\lg{n})$ (e4.1-1)
+- 
+## Rucursion-tree method
+
+- dsd
 
 
 ## Master Theorem
@@ -43,10 +41,16 @@ $$\large T(n)=aT(n/b)+\Theta(n^k \log^p n)$$
 - **Case 1:**
 	- ($a=4,b=2,k=1,p=0$) $T(n)=4T(n/2)+\Theta(n)=\Theta(n^{\log_{2}4})=\Theta(n^2)$
 	- ($a=9,b=3,k=1,p=0$) $T(n)=9T(n/3)+n=\Theta(n^{\log_{3}9})=\Theta(n^2)$
+	- $T(n)=4T({n/2})+\Theta(n)=\Theta(n^2)$
+	- $T(n)=2T(n/2)+\Theta(1)=\Theta(n)$ (best-case of Random in Ramdomized-Quicksort (e7.3-2))
+	- $T(n)=3T({n/2})+\Theta(n)=O(n^{\lg 3})$
 - **Case 2:**
 	- **(2a)**
-		- ($a=1,b=\frac{2}{3},p=0>-1,k=0$)  $T(n)=T(2n/3)+1=\Theta(n^{\log _{2/3}1}\lg{n})=\Theta(n^{0}\lg{n})=\Theta(\lg{n})$
+		- ($a=1,b=\frac{2}{3},p=0>-1,k=0$)  $T(n)=T(2n/3)+\Theta(1)=\Theta(n^{\log _{2/3}1}\lg{n})=\Theta(n^{0}\lg{n})=\Theta(\lg{n})$ (max-heapify)
+		- $T(n)=2T({n/2})+\Theta(n)=\Theta(n \lg n)$ (quick-sort best case; merge-sort)
+		- $T(n)=T(n/2)+\Theta(1)=O(\lg{n})$
 - **Case 3:**
 	- **(3a)**
 		- ($a=1,b=2,k=2,p=0$) $T(n)=T(n/2)+n^2=\Theta(n^2\log^0n)=\Theta(n^2)$
-		- #todo  ($a=4,b=3,k=1,p=1\geq 0$) $T(n)=4T(n/3)+n\lg n=\Theta(n \lg  n)$ 
+		- ($a=3,b=4,k=1,p=1\geq 0$) $T(n)=3T(n/4)+n\lg n=\Theta(n \lg  n)$
+		- $T(n)=2T(n/3)+\Theta(n)=\Theta(n)$

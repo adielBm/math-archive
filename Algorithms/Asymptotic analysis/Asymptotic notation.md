@@ -33,15 +33,29 @@
 
 
 ___
-draft:
-- $O(g(n))=\set{f(n):0\leq{f(n)}\leq{cg(n)},\forall{n\geq{n_0}}}$
-- $f(n)=O(g(n))\implies{g(n)=\Omega{(f(n))}}$
 
-
+- $O(g(n)):=\set{f(n):0\leq{f(n)}\leq{cg(n)},\forall{n\geq{n_0}}}$
 - $f(n)=o(g(n))\iff{\lim_{ n \to \infty }{\frac{f(n)}{g(n)}=0}}$
 - $f(n)=\omega(g(n))\iff{\lim_{ n \to \infty }{\frac{f(n)}{g(n)}=\infty}}$
 
+
+
+- $cf(n)=O(f(n))$. (where $c>0$)
+- $c\cdot O(f(n))=O(f(n))$ (where $c>0$)
+- $c\cdot g(n)=O(f(n))\iff g(n)=O(f(n))$  (where $c>0$)
+
+- $O(f_{1}(n))+\dots+O(f_{k}(n))=O(f_{1}(n)+\dots+f_{k}(n))$
+- $O(f_{1}(n))+\dots+O(f_{k}(n))=O(\max\set{f_{1}(n),\dots ,f_{k}(n)})$
+- $O(f_{1}(n))\cdots O(f_{k}(n))=O(f_{1}(n)\cdots f_{k}(n))$
+
+- $f(n)=O(g(n))\implies{g(n)=\Omega{(f(n))}}$
+
+
 - $f(n)=o(g(n))\iff g(n)=\omega(g(n))$
-
-
 - $f(n)=o(g(n))\implies{\log f(n)=O(\log g(n))}$
+
+- $(n+a)^b=\Theta(n^b)$ ($b>0$) (e3.1-2)
+- $o(g(n))\cap \omega(g(n))=\emptyset$ (e3.1-7)
+
+- $2^{n+1}=O(2^n)$ (e3.1-4)
+

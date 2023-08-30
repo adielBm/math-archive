@@ -399,7 +399,6 @@ Definitions of **similarity**. The following statements are **equivalent**:
 - #todo $A^k=P{D}^{k}P^{-1}$, ($D$ is a diagonal matrix)
 
 
-
 ## Symmetric matrix
 
 - (d3.2.6) ${A}\text{ is symmetric} \iff A=A^t$
