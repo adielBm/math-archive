@@ -1,5 +1,6 @@
-
 - $T(n)=2T(n/2+17)+n=O(n\lg{n})$
+
+
 
 ## Substitution method
 
@@ -12,6 +13,13 @@
 
 - dsd
 
+## Changing variables 
+
+- Given $T(n)=aT(n^{1/2})+\lg^{q}{n}$
+- Define: $m=\lg{n}\implies 2^m=n$
+- Therefore, $T(2^m)=aT(2^{m/2})+{m^q}$
+
+
 
 ## Master Theorem
 
@@ -23,6 +31,8 @@ $${\large T(n)=aT(n/b)+f(n)} \quad( a\geq 1,\quad b>1)$$
 | 2.  | $f(n)=\Theta(n^{\log_{b}a})$                                                                                                                            | $T(n)=\Theta(n^{\log_{b}a}\lg{n})$ |
 | 3.  | $f(n)=\Omega(n^{\log_{b}a+\epsilon})$ for some constant $\epsilon>0$, and if $af(n/b)\leq cf(n)$ for some constant $c<1$ and all sufficiently large $n$ | $T(n)=\Theta(f(n))$                |
 
+
+2  - 
 
 $$\large T(n)=aT(n/b)+\Theta(n^k \log^p n)$$
 

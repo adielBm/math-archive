@@ -5,7 +5,7 @@
 | Selection sort | $n^2$     | $n^2$     | $n^2$     |         |        |        |       |
 | Bubble sort    | $n$       | $n^2$     | $n^2$     | 1       |        |        |       |
 | Insertion sort | $n$       | $n^2$     | $n^2$     | 1       | Yes    |        |       |
-| [[Heapsort]]       | $n \lg n$ | $n \lg n$ | $n \lg n$ | 1       | No     |        |       |
+| Heapsort      | $n \lg n$ | $n \lg n$ | $n \lg n$ | 1       | No     |        |       |
 | Merge sort     | $n \lg n$ | $n \lg n$ | $n \lg n$ | $n$     | Yes    |        |       |
 | Quicksort      | $n \lg n$ | $n \lg n$ | $n^2$     | $\lg n$ | No     |        |       |
 

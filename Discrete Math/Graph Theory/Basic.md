@@ -10,6 +10,7 @@
 - The **neighbourhood of a vertex $v$** ^[קבוצת השכנים של צומת]. $$\Gamma(v) = \set{u \in V \mid (v,u) \in E}$$
 - The **neighbourhood of set** ^[קבוצת השכנים של קבוצת צמתים] $A\subseteq{V}$ is the union of the neighbourhoods of the vertices of $A$. $$\Gamma(A)=\bigcup_{v\in{A}}\Gamma(v)$$
 # Complement graph
+
 Let $G=(V,E)$ be a simple graph.
 the complement of $G$ is the simple graph $\overline{G}=(V,\overline{E})$ which consists of:
 
