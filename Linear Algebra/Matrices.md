@@ -39,8 +39,8 @@ $\large A$ is $m\times n$ matrix
 
 Row equivalence is an *equivalence relation*
 
-**Definitions:** - The following statements are **equivalent**:
-- $A$ and $B$ are row equivalent
+**Equivalent Definitions:** 
+- $A$ and $B$ are **row equivalent**
 - It is possible to transform $A$ into $B$ by a sequence of elementary row operations
 - $\text{row-space}(A)=\text{row-space}(B)$
 - $\text{null}(A)=\text{null}(B)$

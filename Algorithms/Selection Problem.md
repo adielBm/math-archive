@@ -14,7 +14,7 @@
 - The **General case**:
 	- $\text{Randomized-Select}$ takes $\Theta(n)$ in average case
 	- $\text{Select}$ takes $\Theta(n)$ time in the worst case
-	- Using in **order-statistic tree** (RB Tree with additional node field: *size*). $\text{OS-Select}$ takes $O(\lg{n})$ time in the worst case. 
+	- Using in [[Data Structures#Order-statistic tree|Order-statistic tree]] (RB Tree with additional node field: *size*). $\text{OS-Select}$ takes $O(\lg{n})$ time in the worst case. 
 - Speical cases:
 	- (9.1) finding min and max simultaneously in $3\lfloor{n/2}\rfloor=O(n)$ comparisons 
 	- (e9.1.1) finding the **second smallest** in $n+\lceil{\lg{n}}\rceil-2$ comparisons
