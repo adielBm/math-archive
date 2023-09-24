@@ -29,7 +29,7 @@ $\large A$ is $m\times n$ matrix
 ## Row Echelon form (REF)
 
 - (1.11.1) $\text{REF}(A)$ is row equivalence to $\text{RREF}(A)$
-- (8.5.1) The nonzero rows of $\text{REF}(A)$ are a basis for $\text{row-space(A)}$.
+- (8.5.1) The non-zero rows of $\text{REF}(A)$ are a basis for $\text{row-space(A)}$.
 
 ### Reduced Row Echelon form (RREF)
 
@@ -42,13 +42,12 @@ Row equivalence is an *equivalence relation*
 **Equivalent Definitions:** 
 - $A$ and $B$ are **row equivalent**
 - It is possible to transform $A$ into $B$ by a sequence of elementary row operations
-- $\text{row-space}(A)=\text{row-space}(B)$
+- (q7.5.12) $\text{row-space}(A)=\text{row-space}(B)$
 - $\text{null}(A)=\text{null}(B)$
 - There exists an invertible matrix $P$ such that $A=PB$.
 
 **Properties:**
 If $A$ and $B$ are row equivalent matrices, then: 
-- (q7.5.12) $\text{row-space}(A)=\text{row-space}(B)$
 - A given set of column vectors of $A$ is linearly independent if and only if the corresponding column vectors of $B$ are linearly independent. 
 - A given set of column vectors of $A$ forms a basis for the column space of $A$ if and only if the corresponding column vectors of $B$ form a basis for the column space of $B$. 
 - $A$ and $B$ have the same rank
@@ -62,15 +61,18 @@ If $A$ and $B$ are row equivalent matrices, then:
 
 **Theorems:**
 - $\text{row-space}(A+B)\subseteq\text{row-space}(A)+\text{row-space}(B)$
+### Column space
 
+**Theorems:**
+- (9.8.7a) $\text{column-spcae}(BA) \subseteq \text{column-spcae}(B)$
+- (9.8.7c) $\text{column-spcae}(BA)=B(\text{column-spcae}(A))$
 ### Null space
 
 **Definitions:**
-- $\text{null}(A)=\{ v \mid Av=0 \}$
+- $\text{null}(A)=\{ v \mid Av=0 \}$. (in the book it's notated as $P(A)$ (!!) )
 
 **Theorems:**
 - (9.8.7b) $\text{null}(A) \subseteq \text{null}(BA)$
-- 
 
 ## Rank
 
@@ -99,8 +101,8 @@ If $A$ and $B$ are row equivalent matrices, then:
 - (8.6.1) **Rank–nullity** theorem  $\rho(A)+\dim(\text{null}{(A)})=n$
 - $A=0\iff \rho(A)=0$. #todo 
 - Row equivalent matrices have the same rank #todo 
-- $\rho(A+B)\leq \rho(A)+\rho(B)$
-
+- #todo  $\rho(A+B)\leq \rho(A)+\rho(B)$
+- (8.3.4a+8.6.1) $\text{null}(AB) \subseteq \text{null}(B)\implies \rho(B)\leq \rho(AB)$
 
 - rank of **square matrix:** let $A,B$ are square matrices of order $n$, then:
 	- (q8.5.8a) $\rho(A)=n \iff \det(A)\neq 0$  
@@ -118,7 +120,6 @@ Matrix Representations of Linear Transformation
 
 - (d10.1.1) $T:V\to W$, and $B=(v_{1},\dots,v_{n})$ and $C=(w_{1},\dots,w_{n})$ are bases of $V$ and $W$. (respectively) 
 $$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T( {v_{n}})]_{C} \\ | & & | \end{array} \right]_{m\times n}$$
-
 ## Transpose
 
 - Notation: $A^t$, $A^\top$
@@ -163,7 +164,13 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 
 # Square Matrices
 
+
 Let $A$ be an $n \times n$ square matrix.
+
+**theorems:**
+- $A^2=0\implies\text{column-space}(A)\subseteq\text{null}(A)$
+- $\text{row-space}(A)=\text{column-space}(A)\implies \text{column-space}(A)\oplus\text{null}(A)=\mathbb{R}^n$ (by 9.3.7, 12.3.1, 12.3.2a, e2023a85q1a)
+
 
 ## Invertibility 
 
@@ -183,7 +190,7 @@ Let $A$ be an $n \times n$ square matrix.
 	- The columns of A is a basis $F^n$
 	- The rows of A a basis $F^n$
 	- $A^t$ is an **invertible matrix** (in such case $(A^t)^{-1}=(A^{-1})^{t}$) (3.8.4b)
-	- (4.4.1) The determinant of A is nonzero: $\det{A}\neq0$
+	- (4.4.1, q10.7.7 for l.t.) The determinant of A is non-zero: $\det{A}\neq0$
 	- (4.4.1, and q11.3.1) The number $0$ **is not an eigenvalue** of $A$. 
 	- (q8.5.8b) $A$ has a full rank: $\rho(A)=n$
 	- (10.5.1, and 9.6.2) $\text{null}(A)=\{ 0 \}$
@@ -280,6 +287,7 @@ $$p_{A}=\det \left( \lambda I -A \right)$$
 
 Equivalent definitions of **eigenvalue**.
 -  $\lambda$ is an **eigenvalue** of $A$
+
 - (d11.3.1) There exists a **non-zero** vector $v$ such that $Av=\lambda{v}$. 
 	- (in such case, $v$ is called an **eigenvector** of $A$ that related to the eigenvalue $\lambda$) 
 - $(A-\lambda I)$ is singular
@@ -292,15 +300,20 @@ Equivalent definitions of **eigenvalue**.
 - Similar matrices have the same eigenvalues (11.3.3), the same **characteristic polynomial** (11.4.3), and the same algebraic multiplicities of eigenvalues ( #todo  ) 
 - The sum of eigenvalues of $A$ equals to $\text{tr}A$ #todo 
 - The product of eigenvalues of $A$ equals to $\text{det}A$ #todo  
-- The eigenvalues of diagonal matrix $\text{diag}{(\lambda_{1},\dots,\lambda_{{n}})}$, are $\lambda_{1},\dots,\lambda_{{n}}$   #todo 
 - (q11.3.2a) if $\lambda$ is an eigenvalue of $A$, then for each $\mu$, $\mu\lambda$ is an eigenvalue of $\mu A$
 - (q11.3.2b) if $\lambda$ is an eigenvalue of $A$, then , $\lambda^k$ is a eigenvalue of $A^k$. (for each natural $k$ )
+- The eigenvalues of a triangular matrix equal the values on its diagonal.
+- (q11.3.5b) The eigenvalues of diagonal matrix $\text{diag}{(\lambda_{1},\dots,\lambda_{{n}})}$, are $\lambda_{1},\dots,\lambda_{{n}}$
+- (q11.3.5b, q11.3.6) The eigenvalues of diagonalizable matrix (that similar to  $\text{diag}{(\lambda_{1},\dots,\lambda_{{n}})}$) are  $\lambda_{1},\dots,\lambda_{{n}}$
+- if $A^n=I$ for some natural $n$, then $A$ has at most the eigenvalues $1,-1$ ( #todo  by q11.2.4)
+- (11.2.6) $A$ has at most $n$ distinct eigenvalues 
+- (4.4.1+q11.3.1+left-multiple with A) if $A$ is invertible, then $\lambda$ is an **eigenvalue** of $A$, if and only if, $\lambda^{-1}$ is an **eigenvalue** of $A^{-1}$. (with the same eigenvectors)
 
-### Eigenvectors 
+### Eigenvectors
 
 Definitions of **eigenvector**. The following statements are **equivalent**:
 - $v$ is an **eigenvector** of $A$ that related to $\lambda$
-- (d11.3.1) $v$ is nonzero vector in $\mathbb{R}^n$ such that $Av=\lambda v$
+- (d11.3.1) $v$ is non-zero vector in $\mathbb{R}^n$ such that $Av=\lambda v$
 
 ### Eigenspace 
 
@@ -313,7 +326,7 @@ Definitions of the **eigenspace of** $A$ **associated with its eigenvalue** $\la
 ### Algebraic & geometric multiplicity
 
 - (d11.5.2) The **algebraic multiplicity** of $\lambda$ is the multiplicity of an eigenvalue $\lambda$ as a root of the characteristic equation.
-- (q11.5.2) The **geometric multiplicity** of $\lambda$, is the dimension of the eigenspace corresponding to $\lambda$, which is $\dim{(\lambda I-A)}=n-\text{rank}(\lambda I-A)$     
+- (q11.5.2) The **geometric multiplicity** of $\lambda$, is the dimension of the eigenspace corresponding to $\lambda$, which is $\dim{(\text{null}(\lambda I-A))}=n-\text{rank}(\lambda I-A)$     
 
 - (11.5.3, q11.5.3)  $1\leq$ the **geometric multiplicity** $\leq$ the **algebraic multiplicity**
 
@@ -341,6 +354,7 @@ Definitions of **similarity**. The following statements are **equivalent**:
 - (10.7.2) $A$ and $B$ represent **the same linear transformation**. (possibly different bases)
 
 **Theorems:**
+- (q10.7.8) *zero matrix* is similar only to itself. *identify matrix* is similar only to itself. 
 - #todo to show that two matrices are similar, show that are similar to the same diagonal matrix
 - #todo let $A$ and $B$ are diagonalizable, and they both have the same eigenvalues, then they're similar (because similarity is transitive) 
 - #todo let $A$ and $B$ are diagonalizable, and they both have the same characteristic polynomial, then they're similar (because similarity is transitive) 
@@ -371,11 +385,17 @@ Definitions of **similarity**. The following statements are **equivalent**:
 
 ## Diagonal matrix
 
+Diagonal equivalent definitions.
+- $A$ is a diagonal matrix
+- $A$ is both *upper-* and *lower-triangular*
+- see q11.1.1
+
+
+**Properties:**
 - **Addition:** $\text{diag}{(a_{1},\dots ,a_{n})}+\text{diag}{(b_{1},\dots ,b_{n})}=\text{diag}{(a_{1}+b_{1},\dots ,a_{n}+b_{n})}$
 - **Multiplication** $\text{diag}{(a_{1},\dots ,a_{n})}\text{diag}{(b_{1},\dots ,b_{n})}=\text{diag}{(a_{1}b_{1},\dots ,a_{n}b_{n})}$
 - Powers of a matrix  $(\text{diag}{(a_{1},\dots,a_{{n}})})^k=\text{diag}{(a_{1}^k,\dots,a_{n}^k)}$
 - $\text{diag}{(a_{1},\dots ,a_{n})}\text{ is invertible}\iff a_{1},\dots,a_{n}\neq 0$. in such case $\text{diag}{(a_{1},\dots ,a_{n})^{-1}}=\text{diag}{(a_{1}^{-1},\dots ,a_{n}^{-1})}$
-- A matrix is diagonal, if and only if, it is both *upper-* and *lower-triangular*.
 - A diagonal matrix is symmetric.
 - $\det(\text{diag}{(a_{1},\dots ,a_{n})})=a_{1}\cdots a_{n}$
 

@@ -12,18 +12,18 @@ Definitions of **linearly independent**. The following statements are **equivale
 - $A^{\top}\mathbf{x}=\mathbf{0}\implies \mathbf{x}=\mathbf{0}$
 - $\text{rank}({A})=m\leq n$
 - (8.4.4) $\{ [v_{1}]_{B},\dots,[v_{m}]_{B} \}\text{ is linearly {\bf independent}}$
-- $\text{REF}(A^\top)$ has a pivot position in every column #todo 
+- $\text{REF}(A^\top)$ has a pivot position in every column #todo
 
 **Theorems:**
 - $0\in{K}\implies K\text{ is linearly {\bf dependent}}$
 - $m>n\implies K\text{ is linearly {\bf dependent}}$
-- $K\text{ is linearly {\bf dependent}}\implies$
-	- $\dim\text{Sp}(K)< m$
-- $K\text{ is linearly {\bf independent}}\implies$
-	- $\dim\text{Sp}(K)= m$
+- Dimension of the Span:
+	- $K\text{ is linearly {\bf dependent}}\impliedby\dim\text{Sp}(K)< m$
+	- $K\text{ is linearly {\bf independent}}\implies\dim\text{Sp}(K)= m$
 - if $m=n$, then: 
 	- $A$ or $A^{\top}$ is invertible matrix, if and only if, $K\text{ is linearly {\bf independent}}$
 	- $K\text{ is linearly {\bf independent}}$, if and only if, $\det{(A)}\neq 0$, 
+- (11.2.4) Eigenvectors corresponding to distinct eigenvalues are linearly independent
 
 # Span
 
@@ -43,8 +43,8 @@ Definitions. The following statements are **equivalent**:
 
 Definitions of **basis**. The following statements are **equivalent**:
 - $K$ is a basis of $V$
-- every element of $V$ may be written in a unique way as a finite linear combination of elements of $K$.
-- **Two** out of three are fulfilled (8.3.2)
+- (8.2.5) every element of $V$ may be written in a unique way as a finite linear combination of elements of $K$.
+- (8.3.2) **Two** out of three are fulfilled 
 	1. $K\text{ is linearly {\bf independent}}$
 	2. $\text{Sp}(K)=V$  (K spans V)
 	3. $m=\dim V$ 
@@ -100,7 +100,7 @@ $K=\{ \textbf{u}_{1}, \dots,\textbf{u}_{k} \} \subseteq\mathbb{R}^n$ is orthogon
 
 #### Orthonormal basis
 
-- (12.4.5) let $B=(u_{1}, \dots ,u_{n})$ ordered basis of $\mathbb{R}^n$, then the following properties are equivalence:
+- (12.4.5) Let $B=(u_{1}, \dots ,u_{n})$ ordered basis of $\mathbb{R}^n$, then the following properties are equivalence:
 	- $B$ is **orthonormal basis**
 	- $\textbf{a}=\sum^{n}_{i=1}{(\mathbf{a\cdot u}_{i})\cdot{\mathbf{u}_{i}}}$
 	- $\mathbf{a\cdot b}=\sum^{n}_{i=1}{(\mathbf{a\cdot u}_{i})\cdot(\mathbf{b\cdot u}_{i})}$
@@ -122,5 +122,4 @@ $$\mathbf{v}_{i}=\mathbf{u}_{i}-\frac{\mathbf{u}_{i}\cdot\mathbf{v}_{1}}{{\| \ma
 - To convert the orthogonal basis into an orthonormal basis see (q12.4.2)
 - for dependent set see q12.5.3
 - expanding orthogonal set of $k<n$ vectors into orthogonal basis see q12.5.4
-
 

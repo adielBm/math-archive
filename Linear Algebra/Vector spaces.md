@@ -59,7 +59,8 @@ Let $U+{W}=V$, then the following statements are **equivalent**:
 ## Equality
 
 - (7.5.12) If $A$ and $B$ are row equivalent matrices, then $\text{row-space}(A)=\text{row-space}(B)$
-- (8.3.4) if $U\subseteq V$ then, $U=V \iff \dim V=\dim U$. 
+- (8.3.4a) $U\subseteq V\implies\dim U\leq\dim V$. 
+- (8.3.4b) if $U\subseteq V$ then, $U=V \iff \dim V=\dim U$. 
 
 ## Isomorphic Subspaces
 
@@ -72,7 +73,7 @@ Let $U+{W}=V$, then the following statements are **equivalent**:
 
 **Theorems:**
  - (9.5.8) $\dim{V}=n\implies V\cong{F^n}$
-## Dimension 
+## Dimension
 
 - (8.3.6) $\dim(U+W)=\dim{U}+\dim{W}-\dim(U \cap W)$
 - (8.3.7) if $V=U+W$, then $V=U\oplus W \iff \dim V= \dim U+\dim W$ 

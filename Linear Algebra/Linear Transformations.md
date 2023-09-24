@@ -85,6 +85,7 @@ Definition: The following statements are **equivalent**:
 
 Theorems: 
 - if $\dim{W}<\dim{V}$ then $T$ cannot be one-to-one 
+
 # dimV=dimW
 
 ## Theorems
@@ -109,19 +110,49 @@ Theorems:
 
 - $T^2=0\implies\mathrm{Im}T\subseteq\mathrm{Ker}T$
 
-### eigenvalues 
 
-finding the eigenvalues of a Linear Operator 
-1. choose some basis $B$ for $V$
-2. compute the eigenvalues of the matrix $[T]_{B}$ ([[Matrices#Finding Eigenvalues and Eigenvectors]])
 
-whether a scalar is an eigenvalue of a Linear Operator 
-- (d11.2.1) the scalar $\lambda$ is called an **eigenvalue** of $T$, if there is a non-zero vector $v \in V$, such that: $T(v)=\lambda{v}$. And $v$ is called **eigenvector** of $T$ that related to the eigenvalue $\lambda$. 
+### Eigenvalues 
+
+Equivalent definitions of **eigenvalue** for the linear transformation $T: V \to V$. 
+- (d11.2.1) $\lambda$ is an **eigenvalue** of $T$ 
+- (d11.2.1) There exists a **non-zero** vector $\mathbf{v}$ in $V$ such that $T(\mathbf{v}) = \lambda\mathbf{v}$. 
+- (In such a case, $\mathbf{v}$ is called an **eigenvector** of $T$ related to the eigenvalue $\lambda$) 
+- The operator $(T - \lambda I)$ is singular. 
+- $\text{rank}(T - \lambda I) < \dim(V)$ 
+- $(\lambda I - T)(\mathbf{v}) = \mathbf{0}$ has nontrivial solutions, i.e., $\text{null}(\lambda I - T) \neq \{ \mathbf{0} \}$ 
+- (11.4.1) The **characteristic equation** $\det(\lambda I - T) = 0$ 
+- $\lambda$ is a root of the characteristic equation $\det(xI - T) = 0$
+
+
+**Theorems**:
+- (q11.2.4a) if $\lambda$ is an eigenvalue of $T$, then for each $\mu$, $\mu\lambda$ is an eigenvalue of $\mu T:V\to V$
+- (q11.2.4b) if $\lambda$ is an eigenvalue of $T$, then , $\lambda^k$ is a eigenvalue of $T^k:V\to V$. (for each natural $k$ )
+- (11.2.6) $T$ has at most $n$ distinct eigenvalues 
+- if $T^n=I$ for some natural $n$, then $T$ has at most the eigenvalues $1,-1$ ( #todo  by q11.2.4)
+
+
+#### Eigenvectors 
+Definitions of **eigenvector**. The following statements are **equivalent**: 
+- (d11.2.1) $\mathbf{v}$ is an **eigenvector** of $T$ related to $\lambda$. 
+- (d11.2.1) $\mathbf{v}$ is a non-zero vector in $V$ such that $T(\mathbf{v}) = \lambda\mathbf{v}$.
+
+#### Eigenspace 
+
+Definitions of the **eigenspace of** $T$ **associated with its eigenvalue** $\lambda$.
+- (d11.2.2) $V_{\lambda}=\{ \mathbf{v} \in V \mid T(\mathbf{v}) = \lambda \mathbf{v} \}$
+- $\{ \text{eigenvectors corresponding to } \lambda \} \cup \{ \mathbf{0} \}$
+
+
 
 ### Diagonalizability
 
-- (d11.1.1) $T:V\to V$ is **diagonalizable**, if there is a basis for $V$, such that the matrix of $T$ (by this basis), is diagonal.
-- (11.2.5) let $T$ is lin. trans. of dim $n$. if $T$ has $n$ **distinct** eigenvalues, then $T$ is diagonalizable
+- (d11.1.1) $T:V\to V$ is **diagonalizable**
+- $V$ has a basis such that the matrix of $T$ (by that basis), is diagonal
+- (11.2.3) $V$ has a basis in which all its vectors are eigenvectors of $T$
+
+
+- (11.2.5) if $T$ has $n$ **distinct** eigenvalues, then $T$ is diagonalizable
 #todo  https://textbooks.math.gatech.edu/ila/diagonalization.html
 
 ### characteristic polynomial
