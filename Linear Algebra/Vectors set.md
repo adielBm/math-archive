@@ -29,7 +29,7 @@ Definitions of **linearly independent**. The following statements are **equivale
 
 Definitions. The following statements are **equivalent**:
 - $K\text{ spans }V$, that is $\text{Sp}(K)=V$
-- $\text{rank}(\text{REF}(A))=\dim{V}$.   ($A$ is $K$'s vectors as rows)
+- $\text{rank}(A)=\dim{\text{Sp(K)}}$.   ($A$ is $K$'s vectors as rows)
 - $A\mathbf{x}=\mathbf{b}\text{ is consistent}$.   ($A$ is $K$'s vectors as columns)
 
 **Theorems:**
@@ -37,8 +37,11 @@ Definitions. The following statements are **equivalent**:
 - $B\subseteq{\text{Sp}{(K)}}\implies{K\text{ spans }V}$. (where $\text{Sp}({B})=V$)
 - $m<n\implies K\text{ is {\bf not} span }V$
 - (7.5.4) $\text{Sp}{(K)}=\text{Sp}{(L)}\iff{K\subseteq\text{Sp}{(L)}\land{L\subseteq\text{Sp}{(K)}}}$
-- (7.5.1) $K\subseteq{\text{Sp}{(L)}}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(L)}}$
-- $K \subseteq{L}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(L)}}$
+- (7.5.1, q7.5.16b) $K\subseteq{\text{Sp}{(L)}}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(L)}}$
+- (q7.5.16a) $K \subseteq{L}\implies{\text{Sp}{(K)}\subseteq\text{Sp}{(L)}}$
+- (q7.5.17a) $\text{Sp}(K)\cup\text{Sp}(L)\subseteq\text{Sp}(K\cup L)$
+- (q7.5.17b) $\text{Sp}(K\cap L)\subseteq\text{Sp}(K)\cap\text{Sp}(L)$
+
 # Basis
 
 Definitions of **basis**. The following statements are **equivalent**:

@@ -10,9 +10,16 @@
 
 **Theorems:**
 - (9.1.2a) if $T(0_{V})\neq0_{W}$, then $T$ is not linear
+- (9.7.1) let $S$ and $T$ linear transformations, then $f(v)=S(v)+T(v)$ is also linear transformation
+- 
 
-**Properties:**
+Arithmetic **Properties:**
 - $T(v)=T(u)\iff T(v-u)=0$
+- (q9.7.2a) addition commutativity: $T+S=S+T$
+- (q9.7.2b) Addition Associativity $(T_{1}+T_{2})+T_{3}=T_{1}+(T_{2}+T_{3})$
+- (q9.7.3) $T+0=0+T=T$
+- #todo SEE CHPATER 9.7
+
 
 ___
 $$\large T:V\to W$$
@@ -28,8 +35,8 @@ $$\large T:V\to W$$
 
 
 - (9.3.6) let $T:V\to W$, and $\text{Sp}\{ v_{1},\dots ,v_{n} \}=V$, then, $\text{Im}{T}=\text{Sp}{(\{ T(v_{1}),\dots,T(v_{n}) \})}$
-- (9.3.7) let $A_{m \times n}$ matrix on field $F$, and $T:F^n\to F^m$, where $T(v)=Av$, then, $\text{Im}(T)=\text{Col}{(A)}$ (the column space of $A$)
-- (9.6.2) if $T:V\to W$ is isomorphism, then $\text{Im}{T}=W$
+- (9.3.7) $\text{Im}(T)=\text{column-space}{(A)}$
+- (9.6.2) if $T:V\to W$ is isomorphism, if and only if, $\text{Im}{T}=W$
 - $\text{Im}T$ is subspace of $W$
 
 >q9.3.2c, q9.3.3, q9.4.2
@@ -61,6 +68,8 @@ $$[T]_{C}^{B}=\left[\begin{array}{ccc} | & & | \\ [T({v_{1}})]_{C} & \cdots & [T
 
 ## Surjective (Onto)
 
+aka: epimorphism
+
 The following statements are **equivalent**:
 - $T:V\to W$ is surjective
 - $A$ columns spans $W$ 
@@ -74,6 +83,8 @@ Theorems:
 
 ## Injective (One-to-One)
 
+aka: monomorphism
+
 Definition: The following statements are **equivalent**:
 - $T:V\to W$ is injective
 - (9.5.2) $\text{ker}(T)=\set{0}$
@@ -83,18 +94,24 @@ Definition: The following statements are **equivalent**:
 - (T is left-cancellable) $TR=TS\implies R=S$ 
 - (T is left-invertible) There exists $S:W\to V$ such that $ST=I$ 
 
-Theorems: 
+Theorems: ($T:V\to W$ is injective)
 - if $\dim{W}<\dim{V}$ then $T$ cannot be one-to-one 
+- (q9.6.3c) $v_{1},\dots ,v_{n}\in V$ are linearly independent, if and only if, $T(v_{1}),\dots ,T(v_{n})\in V$
+
+## Isomorphism
+
+- Definition: The following statements are **equivalent** (9.6.2)
+	- $T$ is an **isomorphism** (invertible linear transformation) from $V$ on $W$
+	- $T$ is both **injective** and **surjective**. (bijective)
 
 # dimV=dimW
 
-## Theorems
-
+Theorems
 - (9.4.2) Let $B=(v_1,\dots,v_n)$ be a basis of $V$ and $(w_1,\dots,w_n)$ an arbitrary list of vectors in $W$. Then there **exists** a **unique** linear map $T:V\to W$ such that $T(v_{i})=w_{i}$
 ## Isomorphism
 
 - Definition: The following statements are **equivalent** (9.6.2)
-	- $T$ is an **isomorphism** (invertible linear transformation)
+	- $T$ is an **isomorphism** (invertible linear transformation) from $V$ on $W$
 	- $T$ is **injective**
 	- $T$ is **surjective**
 	- $T$ is **bijective**
@@ -109,7 +126,6 @@ Theorems:
 ## Linear Operator $T:V \to V$
 
 - $T^2=0\implies\mathrm{Im}T\subseteq\mathrm{Ker}T$
-
 
 
 ### Eigenvalues 

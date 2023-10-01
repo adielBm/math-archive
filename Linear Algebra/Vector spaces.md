@@ -64,6 +64,8 @@ Let $U+{W}=V$, then the following statements are **equivalent**:
 
 ## Isomorphic Subspaces
 
+Isomorphic is an *equivalence relation*
+
 (Assumption: the spaces are on the same filed $F$)
 
 **Definition**; The following statements are **equivalent**:
@@ -96,8 +98,8 @@ Let $U+{W}=V$, then the following statements are **equivalent**:
 	- (12.3.2a) ${U^{\perp}}\oplus{U}=\mathbb{R}^n$
 	- (12.3.2a) $\dim U^{\perp}+\dim U=n$
 	- (12.3.2b) $(U^\perp)^{\perp}=U$
+ - ${(U+W)}^{\perp}=U^{\perp}\cap W^{\perp}$
 
-#todo ${(U+W)}^{\perp}=U^{\perp}\cap W^{\perp}$
 ### Orthogonal Projection
 
 - Definition: the **orthogonal projection** of $\mathbf{a}$ onto $\mathbf{u}$ is $\frac{\mathbf{a}\cdot \mathbf{u}}{\mathbf{u}\cdot \mathbf{u}}\mathbf{u}$.

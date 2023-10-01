@@ -1,4 +1,10 @@
-$\large A$ is $m\times n$ matrix 
+ $\large A$ is $m\times n$ matrix 
+
+
+## Equivalence
+
+- (d1.7.1) two linear systems are equivalent if and only if they have the same solution set.
+
 ## Consistency 
 
 The following statements are **equivalent**: (For each $\mathbf{b}\in\mathbb{R}^m$)

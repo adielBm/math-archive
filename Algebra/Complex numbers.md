@@ -9,13 +9,13 @@ $$\large z=a+bi$$
 - **Absolute value** $|{z}|=\sqrt{a^2+b^2}$
 	- $|w||z|=|wz|$
 	- $|w+z|\leq|w|+|z|$
-	- 
+	- $|z^{-1}|=|z|^{-1}$ where ($z\neq 0$)
 - **Complex conjugate** $\overline{z}=a-bi$
 	- $\overline{z + w}=\overline{z}+\overline{w}$
 	- $\overline{z - w}=\overline{z}-\overline{w}$
 	- $\overline{zw}=\overline{z}\cdot\overline{w}$
 	- $\overline{\left(\frac{z}{w}\right)}=\frac{\overline{z}}{\overline{w}}$ if $w\neq 0$
-	- $z\overline{z} = {\left| z \right|}^2\geq 0$
+	- $0\leq z\overline{z} = {\left| z \right|}^2\in \mathbb{R}$
 	- $|z|= {\left|  \overline{z} \right|}$
 	- $z+\overline{z}=2a$
 	- $z-\overline{z}=2ib$

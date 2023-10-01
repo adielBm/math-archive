@@ -51,6 +51,7 @@ If $A$ and $B$ are row equivalent matrices, then:
 - A given set of column vectors of $A$ is linearly independent if and only if the corresponding column vectors of $B$ are linearly independent. 
 - A given set of column vectors of $A$ forms a basis for the column space of $A$ if and only if the corresponding column vectors of $B$ form a basis for the column space of $B$. 
 - $A$ and $B$ have the same rank
+- (4.2.2) $\det{A}=0\iff\det{B}=0$
 
 ## Fundamental Spaces
 
@@ -96,10 +97,11 @@ If $A$ and $B$ are row equivalent matrices, then:
 	- Otherwise if $\rho{(A)}<\min{\{ m,n \}}$, then $A$ has **rank deficient**. 
 
 - (q8.5.6) $\rho{(AB)}\leq\min{\{ \rho{(A)}, \rho{(B)} \}}$
-- (q8.5.7a) let $A_{m \times n}$, and $B_{n}$ invertible matrix, then $\rho(AB)=\rho(A)$ 
-- (q8.5.7b) let $A_{m \times n}$, and $B_{m}$ invertible matrix, then $\rho(BA)=\rho(A)$ 
+- if $A_{n}$ is invertible matrix, then 
+	- (q8.5.7a) $\rho(BA)=\rho(B)$ for any matrix $B_{m \times n}$
+	- (q8.5.7b) $\rho(AB)=\rho(B)$ for any matrix $B_{n \times m}$
 - (8.6.1) **Rank–nullity** theorem  $\rho(A)+\dim(\text{null}{(A)})=n$
-- $A=0\iff \rho(A)=0$. #todo 
+- $A=0\iff \rho(A)=0$
 - Row equivalent matrices have the same rank #todo 
 - #todo  $\rho(A+B)\leq \rho(A)+\rho(B)$
 - (8.3.4a+8.6.1) $\text{null}(AB) \subseteq \text{null}(B)\implies \rho(B)\leq \rho(AB)$
@@ -161,16 +163,14 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 
 - $AB=0\iff \text{column-space}(B)\subseteq{\text{null}(A)}$
 
-
 # Square Matrices
 
-
-Let $A$ be an $n \times n$ square matrix.
+- Let $A$ be an $n \times n$ square matrix.
+- $A=[T]_{B}$ where $B$ is a basis of $V$  
 
 **theorems:**
 - $A^2=0\implies\text{column-space}(A)\subseteq\text{null}(A)$
 - $\text{row-space}(A)=\text{column-space}(A)\implies \text{column-space}(A)\oplus\text{null}(A)=\mathbb{R}^n$ (by 9.3.7, 12.3.1, 12.3.2a, e2023a85q1a)
-
 
 ## Invertibility 
 
@@ -201,13 +201,17 @@ Let $A$ be an $n \times n$ square matrix.
 	- The linear transformation mapping $\mathbf{x}$ to $A\mathbf{x}$ is **bijective**; that is, the equation $A\mathbf{x}=\mathbf{b}$ has exactly one solution for each $\mathbf{b}$ in $F^n$. ($A\mathbf{x}=\mathbf{b}\implies \mathbf{x}=A^{-1}\mathbf{b}$
 	- $A\mathbf{x}=\mathbf{0}\implies \mathbf{x}=\mathbf{0}$
 
-**Properties:**
-- (3.8.3) if $A$ is invertible, then:
-	- (left-cancellable) $AB=AC\implies B=C$ 
-	- (right-cancellable) $BA=CA\implies B=C$
-- (3.8.4c) if $A,B$ are invertible (the same order), then $AB$ is also invertible. (in such case $(AB)^{-1}=B^{-1}A^{-1}$) 
-- (3.8.4d) if $A$ is invertible, and $s\neq 0$, then $sA$ is also invertible. (in such case $(sA)^{-1}=\frac{1}{s}A^{-1}$)
-- if $A$ and $B$ are invertible, then they are row equivalent
+**Properties:** 
+- for $A_{n}$ invertible matrix 
+	- (3.8.3)
+		- (left-cancellable) $AB=AC\implies B=C$ 
+		- (right-cancellable) $BA=CA\implies B=C$
+	- (3.8.4d) if $s\neq 0$, then $sA$ is also invertible. (in such case $(sA)^{-1}=\frac{1}{s}A^{-1}$)
+	- (q8.5.7a) $\rho(BA)=\rho(B)$ for any matrix $B_{m \times n}$
+	- (q8.5.7b) $\rho(AB)=\rho(B)$ for any matrix $B_{n \times m}$
+- if $A$ and $B$ are invertible, (in order $n$)
+	- $A$ and $B$ are row equivalent
+	- (3.8.4c) $AB$ is also invertible. and $(AB)^{-1}=B^{-1}A^{-1}$
 
 **Theorems:**
 - (4.5.2) $A,B$ are square matries, and $AB=I$, then:
@@ -216,6 +220,8 @@ Let $A$ be an $n \times n$ square matrix.
 	- $B^{-1}=A$
 	- $AB=BA=I$
 -  (q3.10.2) $A,B$ are invertible, if and only if, $AB$ is invertible
+
+
 
 
 > [!example] **Procedure:** determine whether a square matrix $A$ is invertible and, if so, find $A^{−1}$: 
@@ -242,22 +248,26 @@ Let $A$ be an $n \times n$ square matrix.
 	- $C_{ij}=(-1)^{i+j}M_{ij}$ is **cofactor** of entry $a_{ij}$
  
 - **Theorems:**
-	- (4.5.1) $\det (AB)=\det (A) \det (B)$
-	- $\det (AB)=\det (BA)$
 	- (4.3.1) $\det (A)=\det(A^t)$
-	- $\det(A^{-1})=\frac{1}{\det(A)}$
+	- (4.2.2) if $A$ has zero row/column, then $\det{A}=0$
 	- (4.3.5) if $A$ has two equal rows (or colmuns), then $\det A=0$
+	- (4.5.1) Multiplicative Property: $\det (AB)=\det (A) \det (B)$
+	- (by 4.5.1) $\det (AB)=\det (BA)$
+	- (4.5.3) $\det(A^k)=\det{(A)^k}$
+	- (4.5.4) $\det(A^{-1})=\frac{1}{\det(A)}$
 	- (4.4.1) $\det{A}\neq0 \iff A\text{ is invertible}$
+	- (q4.4.4) if the sum of each of $A$s rows is zero, then $\det{A}=0$
 	- (4.3.8) if $A_{n}=[a_{ij}]$ is a triangular matrix, then $\det A=a_{11}a_{22} \cdots a_{nn}$
 	- (10.7.3) **similar matrices** have the same determinant
 	- (q11.3.1) $\det{A}=0$, if and only if, $\lambda=0$ is eigenvalue of $A$
 	- Row Operations
-		- If a multiple of one row of $A$ is **added** to another row to produce a matrix $B$, then $\det B=\det A$
-		- If two rows of $A$ are **interchanged** to produce $B$, then $\det B=-\det A$
-		- if one row of $A$ is **multiplied** by $k$ to produce $B$, then $\det B=k \cdot \det A$ 
-	- (q4.3.3) **Homogeneity:** $\det (tA)=t^n \det A$
+		- (4.3.6) If a multiple of one row of $A$ is **added** to another row to produce a matrix $B$, then $\det B=\det A$
+		- (4.3.2) If two rows of $A$ are **interchanged** to produce $B$, then $\det B=-\det A$
+		- (4.3.3) if one row of $A$ is **multiplied** by $k$ to produce $B$, then $\det B=k \cdot \det A$ 
+	- (q4.3.3b) **Homogeneity:** $\det (tA)=t^n \det A$
 	- $\det A$ is equal to the product of its eigenvalues (see q11.4.7)
-
+	- (q4.3.10) determinant of an odd dimension anti-symmetric matrix is zero
+	- (4.3.4) Let A, B, and C be n x n matrices that differ only in a single row, say the rth, and assume that the rth row of C can be obtained by adding corresponding entries in the rth rows of A and B. Then $\det(C) = \det(A) + \det(B)$ The same result holds for columns.
 
 > [!example]  Procedure: computing the detrminant
 > 
@@ -287,7 +297,6 @@ $$p_{A}=\det \left( \lambda I -A \right)$$
 
 Equivalent definitions of **eigenvalue**.
 -  $\lambda$ is an **eigenvalue** of $A$
-
 - (d11.3.1) There exists a **non-zero** vector $v$ such that $Av=\lambda{v}$. 
 	- (in such case, $v$ is called an **eigenvector** of $A$ that related to the eigenvalue $\lambda$) 
 - $(A-\lambda I)$ is singular
@@ -295,6 +304,7 @@ Equivalent definitions of **eigenvalue**.
 - $(\lambda I-A)v=0$ has nontrivial solutions, i.e. $\text{null}(\lambda I-A)\neq \{ 0 \}$
 - (11.4.1) The **characteristic equation** $\det(\lambda I-A)=0$
 - $\lambda$ is a root of the characteristic equation $\det(xI-A)=0$
+-  $\lambda$ is an **eigenvalue** of $T_{A}$
 
 **Theorems**:
 - Similar matrices have the same eigenvalues (11.3.3), the same **characteristic polynomial** (11.4.3), and the same algebraic multiplicities of eigenvalues ( #todo  ) 
@@ -314,6 +324,7 @@ Equivalent definitions of **eigenvalue**.
 Definitions of **eigenvector**. The following statements are **equivalent**:
 - $v$ is an **eigenvector** of $A$ that related to $\lambda$
 - (d11.3.1) $v$ is non-zero vector in $\mathbb{R}^n$ such that $Av=\lambda v$
+- (11.3.2) $[v]_{B}$ is an **eigenvector** of $T_{A}$ that related to $\lambda$
 
 ### Eigenspace 
 
@@ -339,7 +350,6 @@ Definitions of the **eigenspace of** $A$ **associated with its eigenvalue** $\la
 > 2. For each $\lambda$, find the basic eigenvectors $v \neq 0$ by finding the basic solutions to $\left( \lambda I - A \right) v = 0$.
 > 
 > To verify your work, make sure that $Av=\lambda v$ for each $\lambda$ and associated eigenvector $v$.
-
 
 ## Similarity
 
@@ -426,7 +436,7 @@ Diagonal equivalent definitions.
 - (q3.2.4) ${A}\text{ is diagonal} \implies {A}\text{ is symmetric}$
 - (q3.2.4) sum of symmetric matries is symmetric matrix
 - (q3.4.6) $A$ and $B$ are symmetric matries, then ${AB}\text{ is symmetric} \iff {AB=BA}$
-- (q.4.3.10)  ${A}\text{ is anti-symmetric} \iff A^t=-A$
+- (q4.3.10)  ${A}\text{ is anti-symmetric} \iff A^t=-A$
 	- if $A_{n}$ is anti-symmetric, and $n$ is odd, then $\det A=0$ 
 
 ## Change of Basis matrix (Transition matrix) 

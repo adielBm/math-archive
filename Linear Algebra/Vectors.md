@@ -6,7 +6,7 @@ also *Euclidean inner product*
 **Definition:**
 - If $\mathbf{u}=(u_{1},u_{2},\dots,u_{n}), \quad\mathbf{v}=(v_{1},v_{2},\dots,v_{n})\in{\mathbb{R}^n}$, then $\mathbf{u}+\mathbf{v}=u_{1}v_{1}+u_{2}v_{2}+\dots+u_{n}v_{n}$
 
-**Properties:**
+**Properties:** (12.1.2)
 - Symmetry $\textbf{a}\cdot\textbf{b}=\textbf{b}\cdot\textbf{a}$
 - Distributive $(\textbf{a}+\textbf{b})\cdot{\textbf{c}}=\textbf{a}\cdot\textbf{c}+\textbf{b}\cdot\textbf{c}$
 - Homogeneity $(t\textbf{a})\cdot\textbf{b}=t(\textbf{a}\cdot\textbf{b})$
