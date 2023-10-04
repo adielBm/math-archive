@@ -287,11 +287,13 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 - $\text{tr}(A)=\text{tr}(A^t)$ #todo 
 
 ## Characteristic polynomial 
-$$p_{A}=\det \left( \lambda I -A \right)$$
+$$p(t)_{A}=\det \left( t I -A \right)$$
 **Properties:**
-- The **coefficient of** $\lambda^{n}$ is $1$
-- (q11.4.6) The **coefficient of** $\lambda^{n-1}$ equals $\text{tr}(-A)=-\text{tr}(A)$ 
+- The characteristic polynomial is a monic polynomial of degree  
+- (q11.5.4) The **coefficient of** $t^{n}$ is $1$
+- (q11.4.6) The **coefficient of** $t^{n-1}$ equals $\text{tr}(-A)=-\text{tr}(A)$ 
 - (q11.4.7) The **free coefficient** equals $\det(-A) =(-1)^n\det{(A)}$
+- The characteristic polynomial of $A_{2}$ is $t^2-\text{tr}(A)t+\det(A)$
 
 ## Eigenvalues
 
@@ -325,6 +327,10 @@ Definitions of **eigenvector**. The following statements are **equivalent**:
 - $v$ is an **eigenvector** of $A$ that related to $\lambda$
 - (d11.3.1) $v$ is non-zero vector in $\mathbb{R}^n$ such that $Av=\lambda v$
 - (11.3.2) $[v]_{B}$ is an **eigenvector** of $T_{A}$ that related to $\lambda$
+#### Eigenbasis 
+
+- An eigenbasis of $A$, is a basis of $F^n$ consisting of eigenvectors of $A$.
+- if $\lambda_{1},\lambda_{2},\dots ,\lambda_k$ are distinct eigenvalues of a matrix $A$ with corresponding eigenspaces, $\mathcal{E}_{1},\mathcal{E}_{2},\dots \mathcal{E}_{k},$ spanned by bases $\mathcal{B}_{1},\mathcal{B}_{2},\dots \mathcal{B}_{k},$ respectively, then the union $\mathcal{B}_{1}\cup\mathcal{B}_{2}\cup\dots\cup\mathcal{B}_{k}$ is linearly independent set of eigenvectors of $A$. thereby if the size of the union is $n$, then is also an **eigenbasis** of $A$
 
 ### Eigenspace 
 
@@ -336,10 +342,16 @@ Definitions of the **eigenspace of** $A$ **associated with its eigenvalue** $\la
 
 ### Algebraic & geometric multiplicity
 
-- (d11.5.2) The **algebraic multiplicity** of $\lambda$ is the multiplicity of an eigenvalue $\lambda$ as a root of the characteristic equation.
-- (q11.5.2) The **geometric multiplicity** of $\lambda$, is the dimension of the eigenspace corresponding to $\lambda$, which is $\dim{(\text{null}(\lambda I-A))}=n-\text{rank}(\lambda I-A)$     
 
-- (11.5.3, q11.5.3)  $1\leq$ the **geometric multiplicity** $\leq$ the **algebraic multiplicity**
+-  $\lambda$ is an **eigenvalue** of $A$
+	- (d11.5.2) The **algebraic multiplicity** of $\lambda$ is: 
+		- the multiplicity of $\lambda$ as a root of the characteristic equation
+		- the highest power of $(x−λ)$ that divides the characteristic polynomial of $A$ 
+	- (q11.5.2) The **geometric multiplicity** of $\lambda$, is: 
+		- the dimension of the eigenspace corresponding to $\lambda$, 
+		- $\dim{(\text{null}(\lambda I-A))}=n-\text{rank}(\lambda I-A)$     
+	- #todo if $A$ is diagonalizable, then the geometric and algebraic multiplicity of $\lambda$ is the number that $\lambda$ appears in the diagonalization of $A$
+	- (11.5.3, q11.5.3)  $1\leq$ the **geometric multiplicity** $\leq$ the **algebraic multiplicity**
 
 - finding the algebraic multiplicity of eigenvalue #todo 
 - finding the geometric multiplicity of eigenvalue #todo 
@@ -408,6 +420,7 @@ Diagonal equivalent definitions.
 - $\text{diag}{(a_{1},\dots ,a_{n})}\text{ is invertible}\iff a_{1},\dots,a_{n}\neq 0$. in such case $\text{diag}{(a_{1},\dots ,a_{n})^{-1}}=\text{diag}{(a_{1}^{-1},\dots ,a_{n}^{-1})}$
 - A diagonal matrix is symmetric.
 - $\det(\text{diag}{(a_{1},\dots ,a_{n})})=a_{1}\cdots a_{n}$
+- the rank of a diagonal matrix is simply the number of nonzero entries (the eigenvalues)
 
 ## Diagonalizable
 

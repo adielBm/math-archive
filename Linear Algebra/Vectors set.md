@@ -25,6 +25,11 @@ Definitions of **linearly independent**. The following statements are **equivale
 	- $K\text{ is linearly {\bf independent}}$, if and only if, $\det{(A)}\neq 0$, 
 - (11.2.4) Eigenvectors corresponding to distinct eigenvalues are linearly independent
 
+
+	
+- let $L,K\subseteq V$, and $K\subseteq{\text{Sp}{(L)}}$, and $L$ is linearly dependent, then $K$ is also linearly dependent (by 7.5.1, 8.3.4)
+
+
 # Span
 
 Definitions. The following statements are **equivalent**:
