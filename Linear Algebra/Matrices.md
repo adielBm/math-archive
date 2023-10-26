@@ -219,9 +219,9 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 	- $A^{-1}=B$
 	- $B^{-1}=A$
 	- $AB=BA=I$
--  (q3.10.2) $A,B$ are invertible, if and only if, $AB$ is invertible
-
-
+- (q3.10.2) $A,B$ are invertible, if and only if, $AB$ is invertible
+- $A,B, C$ are square matries
+	- if $AB-AC$ is invertible and $AB$ is singular, then $B$ is singular
 
 
 > [!example] **Procedure:** determine whether a square matrix $A$ is invertible and, if so, find $A^{−1}$: 
@@ -341,7 +341,6 @@ Definitions of the **eigenspace of** $A$ **associated with its eigenvalue** $\la
 - $\text{null}(\lambda I-A)$
 
 ### Algebraic & geometric multiplicity
-
 
 -  $\lambda$ is an **eigenvalue** of $A$
 	- (d11.5.2) The **algebraic multiplicity** of $\lambda$ is: 

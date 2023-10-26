@@ -1,10 +1,31 @@
+## Definitions
 
-**Transitivity:** 
+- $f(n)=o(g(n))$
+	- $\forall{(c>0)}\,\exists(n_{0}>0)\,\text{ s.t. }(0\leq{f(n)}<cg(n))\,\forall n>n_{0}$
+	- $\lim _{n\to \infty }{\frac {f(n)}{g(n)}}=0$ 
+- ***asymptotic upper bound*** $f(n)=O(g(n))$
+	- $\forall{(c>0)}\,\exists(n_{0}>0)\,\text{ s.t. }(0\leq{f(n)}\leq{cg(n)})\,\forall n>n_{0}$
+- ***asymptotically tight bounds*** $f(x)=\Theta({g(n)})$
+	- ${{f(n)=O(g(n))}\land{f(n)=\Omega{(g(n))}}}$
+- ***asymptotic lower bound*** $f(n)=\Omega(g(n))$
+	- $\forall{(c>0)}\,\exists(n_{0}>0)\,\text{ s.t. }(0\leq{cg(n)}\leq{f(n)})\,\forall n>n_{0}$
+- $f(n)=\omega(g(n))$
+	- $g(n)=o(f(n))$
+	- ${\lim_{ n \to \infty }{\frac{f(n)}{g(n)}=\infty}}$
+
+## Theorems 
+
+### Transitivity
+
 - $f(n)=\Theta(g(n))\land g(n)=\Theta(h(n))\implies f(n)=\Theta(h(n))$
 - $f(n)=O(g(n))\land g(n)=O(h(n))\implies f(n)=O(h(n))$
 - the same for $\Omega ,o,\omega$
 
+### Reflexivity
 
+- $f(n)=\Theta(f(n))$
+- $f(n)=O(f(n))$
+- $f(n)=\Omega(f(n))$
 
 
 - $n!=o(n^n)$
@@ -26,17 +47,6 @@
 | quadratic time       |                     | $O({n^2})$             |
 | cubic time           |                     | $O({n^3})$             |
 | exponential time     |                     | $O(c^n), c>1$          |
-
-
-- Theorem 3.1 - $f(x)=\Theta({g(n)})\iff{{f(n)=O(g(n))}\land{f(n)=\Omega{(g(n))}}}$
-
-
-
-___
-
-- $O(g(n)):=\set{f(n):0\leq{f(n)}\leq{cg(n)},\forall{n\geq{n_0}}}$
-- $f(n)=o(g(n))\iff{\lim_{ n \to \infty }{\frac{f(n)}{g(n)}=0}}$
-- $f(n)=\omega(g(n))\iff{\lim_{ n \to \infty }{\frac{f(n)}{g(n)}=\infty}}$
 
 
 

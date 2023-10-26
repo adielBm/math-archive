@@ -1,5 +1,12 @@
 
+
+
+
 ![trigo\|250](https://upload.wikimedia.org/wikipedia/commons/7/72/Sinus_und_Kosinus_am_Einheitskreis_1.svg)
+
+
+
+- **SOH-CAH-TOA**
 
 $$
 \begin{align} 
