@@ -1,3 +1,17 @@
+
+- Asymmetric
+	- openu.20476: אנטי סימטרי
+	- he.wikipedia: א-סימטרי, אנטי-סימטרי חזק
+- Antisymmetric
+	- openu.20476: אנטי סימטרי במובן הרחב
+	- he.wikipedia: אנטי-סימטרי, אנטי-סימטרי חלש
+- Strict total order
+	- openu.20476: סדר מלא
+- Strict partial order
+	- openu.20476: סדר חלקי
+	- he.wikipedia: סדר חלקי חזק
+
+
 # Logic 
 
 | **  English  **                               | **  עברית  **                               |

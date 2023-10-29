@@ -2,54 +2,64 @@ For all $a,b$ and $R\ne \emptyset$
 - **Reflexive** - $aRa$
 - **Irreflexive** - not $aRa$
 - **Symmetric** - $aRb \implies bRA$
-- **Antisymmetric** ^[20476: אנטי סימטרי במובן הרחב] - $aRb \land bRA \implies a=b$
-- **Asymmetric** ^[20476: אנטי סימטרי] - $aRb \implies$ not $bRa$
+- **Antisymmetric** - $aRb \land bRA \implies a=b$
+- **Asymmetric** - $aRb \implies$ not $bRa$
 - **Connected** - $a\neq{b} \implies aRb \lor bRA$
 
 ## Transitive Relations 
 
-|                                                | Reflexive | Irreflexive | Symmetric | Antisymmetric | Asymmetric | Connected |
-| ---------------------------------------------- | --------- | ----------- | --------- | ------------- | ---------- | --------- |
-| [[#Equivalence relation]]                      | **TRUE**      |             | **TRUE**      |               |            |           |
-| **Strict partial order,(סדר חלקי 20476)** |           | **TRUE**        |           |               | TRUE ^[because **Irreflexivity** and **transitivity**]      |           |
-|  **Strict total order, (יחס סדר מלא 20476)**                         |            | **TRUE**         |            |                | TRUE ^[because **Irreflexivity** and **transitivity**]        | **TRUE**       |
+> **TRUE** means this property is assigned by definition, or it follows from the definition (for example, Asymmetry follows from transitivity and irreflexivity; irreflexivity follows from asymmetry). Otherwise (empty cell), it indicates that the property is not guaranteed in general; it might or might not hold.
+
+
+|                                             | Reflexive | Irreflexive | Symmetric | Antisymmetric | Asymmetric | Connected |
+| ------------------------------------------- | --------- | ----------- | --------- | ------------- | ---------- | --------- |
+| [[#Equivalence relation]]                   | TRUE  |             | TRUE  |               |            |           |
+| **Strict partial order**   |           | TRUE    |           | TRUE        | TRUE     |           |
+| **Strict total order** |           | TRUE    |           | TRUE        | TRUE     | TRUE  |
+
+- **strict partial order** definitions
+	- transitive, irreflexive
+	- transitive, asymmetric
+- **strict total order** definitions
+	- transitive, connected, irreflexive
+	- transitive, connected, asymmetric
 
 # Theorems
 ## Reflexivity
 
-- (question 18) - if $R$ reflexive, then $R\subseteq{R^2}$
-- (question 20a) - if $R\subseteq{S}$ reflexive, then $S$ also reflexive
-- (question 20b) - if $R$ reflexive, then ${R^2}$ also reflexive
-- (question 20c) - $R$ reflexive, if and only if, $R^{-1}$ also reflexive 
-- (question 20d) - if $R,S$ are reflexive, then $R\cap{S},R\cup{S}$ are reflexive
-- (question 22) - if $R$ is irreflexive, then $S\subseteq{R}$ is also irreflexive
+- (q18) - if $R$ reflexive, then $R\subseteq{R^2}$
+- (q20a) - if $R\subseteq{S}$ reflexive, then $S$ also reflexive
+- (q20b) - if $R$ reflexive, then ${R^2}$ also reflexive
+- (q20c) - $R$ reflexive, if and only if, $R^{-1}$ also reflexive 
+- (q20d) - if $R,S$ are reflexive, then $R\cap{S},R\cup{S}$ are reflexive
+- (q22) - if $R$ is irreflexive, then $S\subseteq{R}$ is also irreflexive
 
 ## Symmetry
 
-- (question 23) - $R$ is symmetric if and only if $R^{-1} = R$ 
-- (question 24) - composite of symmetric relations is symmetric
-- (question 26) - if $R,S$ are symmetric, then $R\cap{S},R\cup{S}$ are symmetric
-- (question 27) - let $R$ relation, then $R\cap{R}^{-1}$ and $R\cup{R}^{-1}$ are symmetric
-- (defintion 2.10) - asymmetric implies antisymmetric
-- (question 29) - asymmetry implies **irreflexivity**
-- (question 54a) - **Irreflexivity** and **transitivity** together imply asymmetry
-- (question 30a) - if $R$ is asymmetric, then $R^{-1}$ is also asymmetric
-- (question 30b) - if $R$ is antisymmetric, then $R^{-1}$ is also antisymmetric
-- (question 31a) -  if $R$ is asymmetric, then $S\subseteq{R}$ is also asymmetric.
-- (question 31b) -  if $R$ is antisymmetric, then $S\subseteq{R}$ is also antisymmetric.
-- (question 32b) - if $R,S$ are asymmetric, then $R\cap{S}$ is asymmetric
-- (question 33b) - if $R,S$ are antisymmetric, then $R\cap{S}$ is antisymmetric
+- (q23) - $R$ is symmetric if and only if $R^{-1} = R$ 
+- (q24) - composite of symmetric relations is symmetric
+- (q26) - if $R,S$ are symmetric, then $R\cap{S},R\cup{S}$ are symmetric
+- (q27) - let $R$ relation, then $R\cap{R}^{-1}$ and $R\cup{R}^{-1}$ are symmetric
+- (d2.10) - asymmetric implies antisymmetric
+- (q29) - asymmetry implies **irreflexivity**
+- (q54a) - **Irreflexivity** and **transitivity** together imply asymmetry
+- (q30a) - if $R$ is asymmetric, then $R^{-1}$ is also asymmetric
+- (q30b) - if $R$ is antisymmetric, then $R^{-1}$ is also antisymmetric
+- (q31a) -  if $R$ is asymmetric, then $S\subseteq{R}$ is also asymmetric.
+- (q31b) -  if $R$ is antisymmetric, then $S\subseteq{R}$ is also antisymmetric.
+- (q32b) - if $R,S$ are asymmetric, then $R\cap{S}$ is asymmetric
+- (q33b) - if $R,S$ are antisymmetric, then $R\cap{S}$ is antisymmetric
 
 ## Transitivity
 
 - (theorem 2.12) $R$ is transitive if and only if $R^2\subseteq{R}$
-- (question 36a) - if $R,S$ are transitive, then $R\cap{S}$ is transitive
+- (q36a) - if $R,S$ are transitive, then $R\cap{S}$ is transitive
 
 # Converse relation
 converse relation $R^{-1}$, of a binary relation $R$, is the relation that occurs when the order of the elements is switched in the relation
 
 - If a **relation** is reflexive, irreflexive, symmetric, antisymmetric, asymmetric, transitive, connected, trichotomous, a partial order, total order, strict weak order, total preorder (weak order), or an equivalence relation, **its converse is too**.
-- Let $R$ relation from $A$ to $B$, and $S$ relation from $B$ to $C$, then $(RS)^{-1}=S^{-1}R^{-1}$. ^[Question 69]
+- Let $R$ relation from $A$ to $B$, and $S$ relation from $B$ to $C$, then $(RS)^{-1}=S^{-1}R^{-1}$. ^[q69]
 
 
 # Complementary relation
@@ -73,7 +83,7 @@ $$aR^2b\Leftrightarrow\exists{x}\in{A}(aRx\land xRb)$$
 - The [[Bell numbers|Bell number]] $B_{n}$ counts **the number of different ways to partition a set** that has exactly $n$ elements, or equivalently, **the number of equivalence relations** on it.
 
 #### Theorems 
-- (question 43) if $E_1, E_2$ are equivalence relations on a set $A$, then $E_1\cap{E_2}$ is also equivalence relation on $A$.
+- (q43) if $E_1, E_2$ are equivalence relations on a set $A$, then $E_1\cap{E_2}$ is also equivalence relation on $A$.
 
 ## Partition of a set
  - A **partition of a set** (quotient set) is a grouping of its elements into non-empty subsets that called **cells** (equivalence classes), in such a way that every element is included in exactly one subset.

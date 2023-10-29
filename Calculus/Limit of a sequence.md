@@ -1,6 +1,9 @@
 - (2.17) A sequence obtained by changing a finite number of terms
 	- they has the same limit 
 
+
+- (d2.8) $N_{\varepsilon}(a):=\set{x\in\mathbb{R}: |x-a|<\varepsilon}$ where $\varepsilon>0$ and a is real number is $\varepsilon$-**neighborhood** of the real number $a$
+
 ## Null Sequence 
 
 definitions 
@@ -95,14 +98,26 @@ theorems:
 		- (q2.44b) $a_{n}=o(b_{n})\implies a_{n}=O(b_{n})$
 		- (q2.44c) $a_{n}=O(1)\iff{(a_{n})}$ is bounded
 		- (q2.45c) **Transitivity** - $a_{n}=o(b_{n})\land{b_{n}=o(c_{n})}\implies a_{n}=o(c_{n})$
-		- (2.50) for each $k$ natural, and $r>1$ real: $n^k=o(r^n)$ 
+		- (2.49) for each $k$ natural, and $r>1$ real: $\lim_{ n \to \infty }\left( \frac{n^k}{r^n} \right)=0$ (*i.e.* $n^k=o(r^n)$, 2.50) 
 
 # Ratio test
 
 - $(a_{n})$ is sequence (all are nonzero)
 
 - if $\lim _{n\to \infty }\left|{\frac {a_{n+1}}{a_{n}}}\right|<1$ then $\lim_{ n \to \infty }(a_{n})=0$
-- if $\lim _{n\to \infty }{\frac {a_{n+1}}{a_{n}}}>1$ (or $=\infty$) and $a_{n}>0$, then $\lim_{ n \to \infty }(a_{n})=\infty$
+	- if $\lim _{n\to \infty }{\frac {a_{n+1}}{a_{n}}}>1$ (or $=\infty$) and $a_{n}>0$, then $\lim_{ n \to \infty }(a_{n})=\infty$
+	 
 
+##  Mean Sequences
+
+-  Arithmetic Mean Sequence
+	- (2.51) if $b_n=\frac{1}{n}\sum^{n}_{i=1}{a_i}$ then $(b_{n})$ is the **arithmetic mean sequence** of $(a_{n})$
+		- $\lim_{ n \to \infty }(a_{n})=L\in\mathbb{R}\implies \lim_{ n \to \infty }(b_{n})=L$
+		- $a_{n}\to \infty\implies b_{n}\to \infty$
+		- $a_{n}\to -\infty\implies b_{n}\to -\infty$
+
+-  Geometric Mean Sequence
+	- (2.52) if $c_n=\sqrt[n]{\prod^{n}_{i=1}{a_i}}$ then $(c_{n})$ is the **geometric mean sequence** of $(a_{n})$
+		- #todo 
 
 

@@ -49,7 +49,6 @@
 | exponential time     |                     | $O(c^n), c>1$          |
 
 
-
 - $cf(n)=O(f(n))$. (where $c>0$)
 - $c\cdot O(f(n))=O(f(n))$ (where $c>0$)
 - $c\cdot g(n)=O(f(n))\iff g(n)=O(f(n))$  (where $c>0$)
