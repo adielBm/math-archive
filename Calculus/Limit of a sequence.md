@@ -24,6 +24,12 @@ properties of null sequence $(a_{n})$
 
 
 - (2.16) every convergent sequence is bounded
+
+
+
+
+
+
 # Limit of a sequence
 
 - $\lim_{ n \to \infty }{a_{n}}=L$

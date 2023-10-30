@@ -1,3 +1,8 @@
+
+- bounded above
+	- (קבוצה) חסומה מלעיל
+- bounded below 
+	- (קבוצה) חסומה מלרע
 - Upper bound
 	- חסם מלעיל
 - Lower bound 
