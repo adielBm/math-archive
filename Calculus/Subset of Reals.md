@@ -1,13 +1,8 @@
 
 $$\large A\subseteq\mathbb{R}$$
-
-
 # Greatest element and least element
 
 - max(A), min(A)
-
-
-
 
 # Upper and lower bounds
 
@@ -36,9 +31,7 @@ $$\large A\subseteq\mathbb{R}$$
 	- (3.10) $\sup{(A+B)}=\sup{A}+\sup{B}$
 
 
-
-> *Least-upper-bound property* (3.6) is follow from the completeness axiom. but the opposite is also true. #todo 🔴🔴 see q3.14
-
+> *Least-upper-bound property* (3.6) is follow from the completeness axiom. but the opposite is also true. see q3.14
 
 ### Infimum (greatest lower bound)
 
