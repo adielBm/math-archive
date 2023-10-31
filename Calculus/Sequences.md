@@ -1,23 +1,10 @@
-- (2.17) A sequence obtained by changing a finite number of terms
-	- they has the same limit 
 
+- (2.17) A sequence obtained by changing a finite number of terms they has the same limit 
 
 - (d2.8) $N_{\varepsilon}(a):=\set{x\in\mathbb{R}: |x-a|<\varepsilon}$ where $\varepsilon>0$ and a is real number is $\varepsilon$-**neighborhood** of the real number $a$
 
-## Null Sequence 
 
-definitions 
-- (d2.21) $(a_{n})$ is null sequence 
-- $\lim_{n \mathop \to \infty} {a}_n=0$
-- (q2.20a) $(|a_{n}|)$ is null sequence
-
-properties of null sequence $(a_{n})$
-- $(a_{n})$ is bounded sequence
-
-
-- (2.22) product of **null** and **bounded** sequences is **null** sequence
-
-## Bound
+# Bound
 
 - (q2.19a,b,f) The sum/difference/product of two bounded sequences is a sequence bounded
 - (q2.19d) The sum of bounded sequence and unbounded sequence and is unbounded sequence
@@ -25,12 +12,24 @@ properties of null sequence $(a_{n})$
 
 - (2.16) every convergent sequence is bounded
 
+# Monotonicity
 
+**definitions**
+- monotone sequence (either increaseing or decreaseing)
+	- monotonically increasing: $a_{n}+1≥a_n$ for all $n\in\mathbb{N}$
+		- strictly monotonically increasing: $a_{n}+1>a_n$ for all $n\in\mathbb{N}$
+	- monotonically decreasing: $a_{n}+1\leq a_n$ for all $n\in\mathbb{N}$
+		- strictly monotonically decreasing: $a_{n}+1<a_n$ for all $n\in\mathbb{N}$
 
+**Theorems**
+- (3.16) if $(a_{n})$ is a **monotone** and **bounded** sequence, then it's convergent
+	-  if $(a_{n})$ is **increasing** bounded, then $\lim_{ n \to \infty }(a_{n})=\sup(a_{n})$
+	-  if $(a_{n})$ is **decreasing** bounded, then $\lim_{ n \to \infty }(a_{n})=\inf(a_{n})$
+- (3.17) if $(a_{n})$ is a **monotone** and **not-bounded** sequence, then
+	-  if $(a_{n})$ is **increasing**, then $\lim_{ n \to \infty }(a_{n})=\infty$
+	-  if $(a_{n})$ is **decreasing**, then $\lim_{ n \to \infty }(a_{n})=-\infty$
 
-
-
-# Limit of a sequence
+# Convergence & Limit
 
 - $\lim_{ n \to \infty }{a_{n}}=L$
 - The sequence $(a_n)$ is said to **converge to** or **tend to** the limit $L$.
@@ -60,6 +59,22 @@ properties of null sequence $(a_{n})$
 - (q2.29) let $a_{1},\dots ,a_{k}\geq 0$, then $\lim_{n\to\infty} \sqrt[n]{\sum_{i=1}^k a_{i}^n}=\max\set{a_{1},\dots ,a_{k}}$
 
 - #todo For any continuous function $f$, if $\lim _{n\to \infty }a_{n}$ exists, then $\lim _{n\to \infty }f\left(a_{n}\right)$ exists too.
+
+
+## Null Sequence 
+
+definitions 
+- (d2.21) $(a_{n})$ is null sequence 
+- $\lim_{n \mathop \to \infty} {a}_n=0$
+- (q2.20a) $(|a_{n}|)$ is null sequence
+
+properties of null sequence $(a_{n})$
+- $(a_{n})$ is bounded sequence
+
+
+- (2.22) product of **null** and **bounded** sequences is **null** sequence
+
+
 
 ## Infinite limits
 
@@ -114,7 +129,7 @@ theorems:
 	- if $\lim _{n\to \infty }{\frac {a_{n+1}}{a_{n}}}>1$ (or $=\infty$) and $a_{n}>0$, then $\lim_{ n \to \infty }(a_{n})=\infty$
 	 
 
-##  Mean Sequences
+#  Mean Sequences
 
 -  Arithmetic Mean Sequence
 	- (2.51) if $b_n=\frac{1}{n}\sum^{n}_{i=1}{a_i}$ then $(b_{n})$ is the **arithmetic mean sequence** of $(a_{n})$
