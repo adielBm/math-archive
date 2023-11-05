@@ -1,10 +1,10 @@
 
 $$\large A\subseteq\mathbb{R}$$
-# Greatest element and least element
+# Greatest element & least element
 
 - max(A), min(A)
 
-# Upper and lower bounds
+# Upper & lower bounds
 
 
 ### Upper bound
@@ -31,7 +31,9 @@ $$\large A\subseteq\mathbb{R}$$
 	- (3.10) $\sup{(A+B)}=\sup{A}+\sup{B}$
 
 
-> *Least-upper-bound property* (3.6) is follow from the completeness axiom. but the opposite is also true. see q3.14
+> *Least-upper-bound property* (3.6) is follow from the completeness axiom. but the opposite is also true. 
+> Also **many books** called to Least-upper-bound property as (a1.52) **completeness axiom**. (see q3.14).
+> The rationals $\mathbb{Q}$ **does not have** the least upper bound property.
 
 ### Infimum (greatest lower bound)
 
@@ -48,3 +50,21 @@ $$\large A\subseteq\mathbb{R}$$
 ### theorems
 
 - (q3.13) if $A$ is **non-empty** and **bounded**, then $\inf{A}\leq\sup{A}$
+
+# Closed & Open Sets
+
+- open set
+	- equivalent **definitions** 
+		- $\forall{a\in{A}},{\exists{\varepsilon>0}}:(a-\varepsilon,a+\varepsilon)\subseteq{A}$
+		- $A\subseteq\mathbb{R}$ is **open set** 
+	- theorems 
+		- d
+
+- closed set
+	- equivalent definitions
+		- $A\subseteq\mathbb{R}$ is **closed set** 
+		- if given convergent sequence $(x_{n})$ of $A$ elements, we have also $\lim_{ n \to \infty }x_{n}\in{A}$
+		- $A^{\complement}=\mathbb{R}\setminus{A}$ is *open set*
+	- theorems 
+		- The set of subsequential limits is closed
+		- $[a,b]$ is closed

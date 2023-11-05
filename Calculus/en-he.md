@@ -1,6 +1,4 @@
 
-
-
 - **bounded above**
 	- bounded above
 	- חסומה מלעיל
@@ -21,5 +19,9 @@
 	- חסם תחתון
 - **Least-upper-bound property** 
 	- תכונת החסם העליון של המספרים הממשיים
-
-
+- **Limit inferior**
+	- infimum limit, limit infimum, liminf, inferior limit, lower limit
+	- גבול תחתון
+- **Limit superior**
+	- supremum limit, limit supremum, limsup, superior limit, upper limit, outer limit
+	- גבול עליון

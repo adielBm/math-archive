@@ -22,12 +22,13 @@
 		- strictly monotonically decreasing: $a_{n}+1<a_n$ for all $n\in\mathbb{N}$
 
 **Theorems**
-- (3.16) if $(a_{n})$ is a **monotone** and **bounded** sequence, then it's convergent
-	-  if $(a_{n})$ is **increasing** bounded, then $\lim_{ n \to \infty }(a_{n})=\sup(a_{n})$
-	-  if $(a_{n})$ is **decreasing** bounded, then $\lim_{ n \to \infty }(a_{n})=\inf(a_{n})$
-- (3.17) if $(a_{n})$ is a **monotone** and **not-bounded** sequence, then
-	-  if $(a_{n})$ is **increasing**, then $\lim_{ n \to \infty }(a_{n})=\infty$
-	-  if $(a_{n})$ is **decreasing**, then $\lim_{ n \to \infty }(a_{n})=-\infty$
+- Monotone convergence theorem
+	- (3.16) if $(a_{n})$ is a **monotone** and **bounded** sequence, then it's convergent
+		-  if $(a_{n})$ is **increasing** bounded, then $\lim_{ n \to \infty }(a_{n})=\sup(a_{n})$
+		-  if $(a_{n})$ is **decreasing** bounded, then $\lim_{ n \to \infty }(a_{n})=\inf(a_{n})$
+	- (3.17) if $(a_{n})$ is a **monotone** and **not-bounded** sequence, then
+		-  if $(a_{n})$ is **increasing**, then $\lim_{ n \to \infty }(a_{n})=\infty$
+		-  if $(a_{n})$ is **decreasing**, then $\lim_{ n \to \infty }(a_{n})=-\infty$
 
 # Convergence & Limit
 
@@ -45,14 +46,13 @@
 		- $\lim_{n\to\infty} a_n^k =  \left( \lim_{n\to\infty} a_n \right)^k$
 
 
-
 **theorems**
 
-- (2.29) Let $(a_n)_{n=1}^{\infty}$ be a sequence, and let $(b_n)^{\infty}_{n=1}$ be the sequence obtained from it by a shift. The sequences $(a_n)$ and $(b_n)$ converge and diverge together; if they converge, then $\lim_{n\to\infty} a_n = \lim_{n\to\infty} b_n$.
+- (2.29) **Shift Rule** Let $N$ be a natural number. Let $(a_{n})$ be a sequence. Then $a_{n} → a$ if and only if the *shifted* sequence $a_{N+n}→a$.
 - Let $(a_n)$ and $(b_n)$ be two convergent sequences:
 	- (2.30) if $\lim_{n \to \infty} a_n <\lim_{n \to \infty} b_n$ then, for almost all $n$, we have $a_n < b_n$
 	- (2.31) if $a_n \leq b_n$ for each $n$, then $\lim_{n \to \infty} a_n \leq\lim_{n \to \infty} b_n$
-- **Squeeze theorem** (2.32) - let $(a_n)$, $(b_n)$, and $(c_n)$ sequences, where (1.) $a_{n}\leq b_{n}\leq c_{n}$ for almost all $n$. (2.)   $(a_n)$, and $(c_n)$ are convergent. (3.) $\lim_{n \to \infty} a_n =\lim_{n \to \infty} c_n=L$. **then**, $\lim_{n \to \infty} b_n=L$
+- (2.32) **Squeeze theorem**  - let $(a_n)$, $(b_n)$, and $(c_n)$ sequences, where (1.) $a_{n}\leq b_{n}\leq c_{n}$ for almost all $n$. (2.)   $(a_n)$, and $(c_n)$ are convergent. (3.) $\lim_{n \to \infty} a_n =\lim_{n \to \infty} c_n=L$. **then**, $\lim_{n \to \infty} b_n=L$
 - (2.33) $-1<a<1\implies\lim_{n \to \infty}a^n=0$
 - (2.34) $a>0\implies\lim_{n \to \infty}\sqrt[n]{ a }=1$
 - $\lim_{n\rightarrow\infty}\sqrt[n]n=1$
@@ -102,6 +102,7 @@ theorems:
 	- ${a_{n}\to \infty}\land{b_{n}\to \infty}\implies a_{n}b_{n}\to \infty$
 	- ${a_{n}\to \infty}\land{\lim_{ n \to \infty }b_{n}>0}\implies a_{n}b_{n}\to \infty$
 	- ${a_{n}\to \infty}\implies 1/a_{n}\to0$
+	- (q2.57a) ${|a_{n}|\to \infty}\implies 1/a_{n}\to0$
 	- ${a_{n}\to 0}\land{a_{n}>0} \implies 1/a_{n}\to{\infty}$
 	- ${a_{n}\to \infty}\land{b_{n}\to (-\infty)} \implies a_{n}b_{n}\to{(-\infty)}$
 	- ${a_{n}\to (-\infty)}\land{b_{n}\to (-\infty)} \implies a_{n}b_{n}\to{\infty}\land  a_{n}+b_{n}\to{(-\infty)}$
@@ -140,5 +141,44 @@ theorems:
 -  Geometric Mean Sequence
 	- (2.52) if $c_n=\sqrt[n]{\prod^{n}_{i=1}{a_i}}$ then $(c_{n})$ is the **geometric mean sequence** of $(a_{n})$
 		- #todo 
+
+- (3.22) **Cantor's intersection** theorem (Cantor's Lemma)
+	- Let $(I_{n})^{\infty}_{n=1}$ be a sequence of non-empty, closed intervals, $I_{n}=[a_{n},b_{n}]$, satisfying $I_{1}\supseteq I_{2}\supseteq I_{3}\supseteq\dots$ and $\lim_{ n \to \infty }(b_{n}-a_{n})=0$, then, $\bigcap_{n=1}^{\infty}I_{n}=\{ x \}$, and $x=\lim_{ n \to \infty }(a_{n})=\lim_{ n \to \infty }(b_{n})$
+	- Let $(a_{n})^{\infty}_{n=1}$ and $(b_{n})^{\infty}_{n=1}$ be two sequence of real numbers that satisfy: $a_{n}\leq a_{n+1} < b_{n+1}\leq b_{n}$ for every $n\in\mathbb{N}$, and $\lim(b_{n}-a_{n})=0$. Then there exists a real number $c$ such that $\lim a_{n}=\lim b_{n}=c$. The number $c$ is the unique real number that satisfies $a_{n} \leq c\leq b_{n}$
+
+
+# Subsequence
+
+- (d3.24) Let $(a_{n})$ be a sequence of real numbers and let $n_{1}<n_{2}<\dots<n_{k}<\dots$ be a strictly increasing sequence of real numbers. Then the sequence $(a_{n_{k}})$ given by $(a_{n_{1}},a_{n_{2}},\dots,a_{n_{k}},\dots)$ is called **subsequence of** $(a_{n})$
+
+- (3.25) if $(a_{n})$ converges to $x$ (or $\pm \infty$) then every subsequence of $(a_{n})$ is also converges to $x$ (or $\pm \infty$)
+- (3.32) **Bolzano–Weierstrass theorem** - Every bounded sequence has a convergent subsequence
+- (3.33) Every sequence has a *convergent* (or *tends to infinity*) subsequence
+- (q3.48) **Monotone Subsequence Theorem** - Every sequence has a monotonic subsequence
+
+# Subsequential Limit
+
+- (E.D) of subsequential limit  
+	- $L\in\mathbb{R}$ is **subsequential limit** of $(a_{n})^{\infty}_{n=1}$ 
+	- (d3.26) There exists subsequence $(a_{n_{k}})^{\infty}_{k=1}$ such that $a_{n_{k}}\to L$
+	- (3.27) $\forall{ε>0}$ there are infinite $n$ values for which $|a_n-L|<ε$
+	- (3.27) $\forall{ε>0},\forall{N\in\mathbb{N}},\exists{n>N},|a_n-L|<ε$
+	- (3.27 geometrically) For every neighborhood of $L$ there are infinite terms of $(a_{n})$
+
+- examples:
+	- $\set{0,1}$ is the set of subsequential limits of $a_n = \begin{cases} {1}/{n} & \text{if } n \text{ is even} \\ {n}/{(n+1)} & \text{if } n \text{ is odd} \end{cases}$
+	- (by 3.25) if convergent sequence $(a_{n})\to{L}$ then $L$ is the only subsequential limit. 
+	- (3.34) A bounded sequence is convergent, if and only if, it has exactly one subsequential limit.
+
+
+- (3.32) **Bolzano–Weierstrass theorem** - Every bounded sequence has a subsequential limit.
+
+# Limit Inferior & Limit Superior
+	
+- The **limit inferior** of a sequence $(a_{n})$
+	- $\displaystyle  {\displaystyle \liminf _{n\to \infty }a_{n}:=\lim _{n\to \infty }\!{\Big (}\inf _{m\geq n}a_{m}{\Big )}}$
+- The **limit superior** of a sequence $(a_{n})$
+	- $\displaystyle  {\displaystyle \limsup _{n\to \infty }a_{n}:=\lim _{n\to \infty }\!{\Big (}\sup _{m\geq n}a_{m}{\Big )}}$
+
 
 

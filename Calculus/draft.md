@@ -1,4 +1,9 @@
-- (1.59) AM-GM Inequality 
+
+
+
+___
+
+
 
 
 |              | Set              | Field Axioms | Order Axioms | Completeness Axiom |
