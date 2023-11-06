@@ -4,13 +4,41 @@
 - (d2.8) $N_{\varepsilon}(a):=\set{x\in\mathbb{R}: |x-a|<\varepsilon}$ where $\varepsilon>0$ and a is real number is $\varepsilon$-**neighborhood** of the real number $a$
 
 
-# Bound
+# Bounded Sequence
 
-- (q2.19a,b,f) The sum/difference/product of two bounded sequences is a sequence bounded
-- (q2.19d) The sum of bounded sequence and unbounded sequence and is unbounded sequence
-
+- (d2.15) A sequence $(a_{n})$ is bounded if $\exists{M>0}:\forall{n}, |a_{n}|<M$
 
 - (2.16) every convergent sequence is bounded
+
+
+- **Arithmetic**
+	- (q2.19a,b,f) The sum/difference/product of two bounded sequences is a sequence bounded
+	- (q2.19d) The sum of bounded sequence and unbounded sequence and is unbounded sequence
+
+## Limit Inferior & Limit Superior
+
+
+- The **limit superior** of a bounded sequence $(a_{n})$ 
+	- $\displaystyle{\varlimsup _{n\to \infty }a_{n}} =  {\displaystyle \limsup _{n\to \infty }a_{n}:=\lim _{n\to \infty }\!{\Big (}\sup _{m\geq n}a_{m}{\Big )}}$
+	- The maximal subsequential limit of $(a_{n})$
+- The **limit inferior** of a bounded sequence $(a_{n})$
+	- $\displaystyle {\varliminf _{n\to \infty }x_{n}}={  \liminf _{n\to \infty }a_{n}:=\lim _{n\to \infty }\!{\Big (}\inf _{m\geq n}a_{m}{\Big )}}$
+	- The minimal subsequential limit of $(a_{n})$
+
+
+Theorems
+
+- (3.40) 
+	- If $\displaystyle c>\varlimsup _{n\to \infty }a_{n}$ then for almost all $n$ we have $a_{n}<c$
+	- If $c<\varlimsup _{n\to \infty }a_{n}$ then there are $\infty$ values of $n$ such that $a_{n}>c$ 
+	- $\displaystyle\varlimsup _{n\to \infty }(a_{n}+b_{n})\leq\varlimsup _{n\to \infty }(a_{n})+\varlimsup _{n\to \infty }(b_{n})$ (see q3.57 for the equality case)
+	- if $c>0$ then $\displaystyle\varlimsup _{n\to \infty }(ca_{n})=c\varlimsup _{n\to \infty }(a_{n})$
+	- if $a_{n}\leq b_{n}$ for each $n$ then $\displaystyle\varlimsup _{n\to \infty }a_{n}\leq\varlimsup _{n\to \infty }b_{n}$
+- (3.38) A bounded sequence has a limit superior and limit inferior
+- (q3.56) $\displaystyle  {\displaystyle \liminf _{n\to \infty }a_{n}=\limsup _{n\to \infty }a_{n}}$ if and only if $(a_{n})$ is convergent
+- (q3.59) $\displaystyle\varlimsup _{n\to \infty }a_{n}=-\infty \implies \lim_{ n \to \infty }a_{n}=-\infty$
+- $\displaystyle\varliminf _{n\to \infty }a_{n}=\infty \implies \lim_{ n \to \infty }a_{n}=\infty$
+- $\displaystyle  {\displaystyle \inf _{n}x_{n}\leq \liminf _{n\to \infty }x_{n}\leq \limsup _{n\to \infty }x_{n}\leq \sup _{n}x_{n}.}$
 
 # Monotonicity
 
@@ -59,6 +87,14 @@
 - (q2.29) let $a_{1},\dots ,a_{k}\geq 0$, then $\lim_{n\to\infty} \sqrt[n]{\sum_{i=1}^k a_{i}^n}=\max\set{a_{1},\dots ,a_{k}}$
 
 - #todo For any continuous function $f$, if $\lim _{n\to \infty }a_{n}$ exists, then $\lim _{n\to \infty }f\left(a_{n}\right)$ exists too.
+- (2.16) every convergent sequence is bounded
+- (q3.56) $\displaystyle  {\displaystyle \liminf _{n\to \infty }a_{n}=\limsup _{n\to \infty }a_{n}}$ if and only if $(a_{n})$ is convergent
+
+## Cauchy sequence
+
+- (d3.35) A sequence $(a_{n})$ is a **Cauchy sequence** if $\forall{\varepsilon>0}\;\exists{N\in\mathbb{N}}:{m,n>N}\implies{|{a_{n}-a_{m}}|<\varepsilon}$.
+
+- (3.36) A sequence is *convergent* iff is *cauchy*
 
 
 ## Null Sequence 
@@ -109,6 +145,16 @@ theorems:
 	- ${a_{n}\to 0}\land{a_{n}<0} \implies 1/a_{n}\to{(-\infty)}$
 	- ${a_{n}\to \infty}$ and ${b_{n}}$ is bounded $\implies a_{n}+b_{n}\to \infty$
 
+
+## Ratio test
+
+- $(a_{n})$ is sequence (all are nonzero)
+
+- (2.48) if $\lim _{n\to \infty }\left|{\frac {a_{n+1}}{a_{n}}}\right|<1$ then $\lim_{ n \to \infty }(a_{n})=0$
+	- if $\lim _{n\to \infty }{\frac {a_{n+1}}{a_{n}}}>1$ (or $=\infty$) and $a_{n}>0$, then $\lim_{ n \to \infty }(a_{n})=\infty$
+	 
+
+
 # Order
 
 - $(a_{n})$ and $(b_{n})$ are **positive (!!!)**
@@ -122,13 +168,6 @@ theorems:
 		- (q2.45c) **Transitivity** - $a_{n}=o(b_{n})\land{b_{n}=o(c_{n})}\implies a_{n}=o(c_{n})$
 		- (2.49) for each $k$ natural, and $r>1$ real: $\lim_{ n \to \infty }\left( \frac{n^k}{r^n} \right)=0$ (*i.e.* $n^k=o(r^n)$, 2.50) 
 
-# Ratio test
-
-- $(a_{n})$ is sequence (all are nonzero)
-
-- if $\lim _{n\to \infty }\left|{\frac {a_{n+1}}{a_{n}}}\right|<1$ then $\lim_{ n \to \infty }(a_{n})=0$
-	- if $\lim _{n\to \infty }{\frac {a_{n+1}}{a_{n}}}>1$ (or $=\infty$) and $a_{n}>0$, then $\lim_{ n \to \infty }(a_{n})=\infty$
-	 
 
 #  Mean Sequences
 
@@ -151,6 +190,7 @@ theorems:
 
 - (d3.24) Let $(a_{n})$ be a sequence of real numbers and let $n_{1}<n_{2}<\dots<n_{k}<\dots$ be a strictly increasing sequence of real numbers. Then the sequence $(a_{n_{k}})$ given by $(a_{n_{1}},a_{n_{2}},\dots,a_{n_{k}},\dots)$ is called **subsequence of** $(a_{n})$
 
+theorems 
 - (3.25) if $(a_{n})$ converges to $x$ (or $\pm \infty$) then every subsequence of $(a_{n})$ is also converges to $x$ (or $\pm \infty$)
 - (3.32) **Bolzano–Weierstrass theorem** - Every bounded sequence has a convergent subsequence
 - (3.33) Every sequence has a *convergent* (or *tends to infinity*) subsequence
@@ -172,13 +212,6 @@ theorems:
 
 
 - (3.32) **Bolzano–Weierstrass theorem** - Every bounded sequence has a subsequential limit.
-
-# Limit Inferior & Limit Superior
-	
-- The **limit inferior** of a sequence $(a_{n})$
-	- $\displaystyle  {\displaystyle \liminf _{n\to \infty }a_{n}:=\lim _{n\to \infty }\!{\Big (}\inf _{m\geq n}a_{m}{\Big )}}$
-- The **limit superior** of a sequence $(a_{n})$
-	- $\displaystyle  {\displaystyle \limsup _{n\to \infty }a_{n}:=\lim _{n\to \infty }\!{\Big (}\sup _{m\geq n}a_{m}{\Big )}}$
 
 
 

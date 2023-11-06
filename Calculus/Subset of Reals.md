@@ -9,22 +9,19 @@ $$\large A\subseteq\mathbb{R}$$
 
 ### Upper bound
 
-- (d3.1) real number $c$ is called **upper bound** of $A$, if for every $a\in{A}$, $c\geq a$ 
-
-
+- (d3.1) real number $c$ is called **upper bound** of $A$, if $\forall a\in{A}: c\geq a$ 
 
 ### Lower bound 
 
-- (d3.1) real number $c$ is called **lowe bound** of $A$, if for every $a\in{A}$, $c\leq{a}$ 
-
-
+- (d3.1) real number $c$ is called **lowe bound** of $A$, if $\forall a\in{A}: c\leq a$
 ### Supremum (Least-upper-bound)
 
 - definitions
-	- $y=\sup{A}$
-	- (d3.7) $y$ is minimal upper bound of $A$
-	- (3.9) $y$ is upper bound of $A$, and for every $\varepsilon>0$ there exists $x\in{A}$ such that $x>y-c$
-- theorems 
+	- $c=\sup{A}$. ($c$ is the **supremum** of $A$)
+	- (d3.7) $c$ is minimal upper bound of $A$
+	- (3.9) (1.) $c$ is an upper bound of $A$ (2.) $\forall\varepsilon>0 \;\exists{x\in{A}}:x>c-\varepsilon$
+	- (3.9) (1.) $c$ is an upper bound of $A$ (2.) $c\leq d$ for all upper bounds $d$ of $A$
+- theorems
 	- (3.6. ***Least-upper-bound property***) if $A$ is **non-empty** and **bounded above**, then $A$ has **supremum**
 	- $a<b\implies \sup(a,b)=b$
 	- (3.8) if $A$ has maximum, then $\sup{A}=\max{A}$
