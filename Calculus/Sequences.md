@@ -178,6 +178,8 @@ theorems:
 	- (2.52) if $c_n=\sqrt[n]{\prod^{n}_{i=1}{a_i}}$ then $(c_{n})$ is the **geometric mean sequence** of $(a_{n})$
 		- #todo 
 
+# Cantor's Lemma
+
 - (3.22) **Cantor's intersection** theorem (Cantor's Lemma, Nested Intervals Theorem)
 	- A **sequence of nested intervals** is a sequence $(I_{n})^{\infty}_{n=1}$ of non-empty, closed intervals, $I_{n}=[a_{n},b_{n}]$, satisfying:
 		- $I_{1}\supseteq I_{2}\supseteq I_{3}\supseteq\dots$ 

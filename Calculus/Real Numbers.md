@@ -29,7 +29,14 @@
 	- $\forall{a}\in{A}$, $a\leq{x}$
 	- $\forall{b}\in{B}$, $x\leq{b}$
 
->See 3.16
+
+>See 3.16 about the term of "Completeness Axiom"
+
+> [!info] The rational numbers $\mathbb{Q}$ does not satisfy the completeness Axiom, therefore, the theorems that follow from this axiom do not hold in $\mathbb{Q}$. 
+> - Cauchy theorem - In $\mathbb{Q}$ a cauchy sequence doesn't necessarily converge (to rational number).
+> - Least-upper-bound property - in $\mathbb{Q}$ can be non-empty upper-bounded set **without** **supremum**
+> - Monotone convergence theorem - There can be monotone bounded sequence of rationals that does not converge to a rational number.
+> - Cantor's Lemma - The **intersection** of a sequence of nested intervals (with rational endpoints) in which the endpoints differences tend to zero **is not necessarily rational**.
 
 # Theorems & Properties
 
