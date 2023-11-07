@@ -63,7 +63,7 @@
 
 ## Density
 
-- (d1.65) $A\subseteq\mathbb{R}$ is dense in $\mathbb{R}$ if for every reals $x<y$ there exists $a\in{A}$ such that $a\in(x,y)$
+- (d1.65) $A\subseteq\mathbb{R}$ **is dense in** $\mathbb{R}$ if for every reals $x<y$ there exists $a\in{A}$ such that $a\in(x,y)$
 	- (1.66) $\mathbb{Q}$ is dense in $\mathbb{R}$ (between any two distinct real numbers there is a rational number. )
 	- (q1.62) $\mathbb{R\setminus{Q}}$ is dense in $\mathbb{R}$. (between any two distinct real numbers there is an irrational number. )
 

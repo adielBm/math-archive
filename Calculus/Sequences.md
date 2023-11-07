@@ -60,21 +60,29 @@ Theorems
 
 # Convergence & Limit
 
-- $\lim_{ n \to \infty }{a_{n}}=L$
-- The sequence $(a_n)$ is said to **converge to** or **tend to** the limit $L$.
-- For each real number $\varepsilon >0$, there exists a natural number $N$ such that, for every natural number $n>N$, we have ${\displaystyle |a_{n}-L|<\varepsilon }$
-- $\forall \varepsilon > 0 \left(\exists N \in \mathbb{N} \left(\forall n \in\mathbb{N}\left(n \geq N \implies |a_n - L| < \varepsilon \right)\right)\right)$
+## Convergent Sequence
 
-- Arithmetic (2.28)
-	- $(a_{n})_{n=1}^{\infty}$ and $(b_{n})_{n=1}^{\infty}$ are convergent
-		- $(c\cdot a_{n})_{n=1}^{\infty}$ is convergent, and $\lim_{ n \to \infty }({ca_{n})}=c\cdot\lim_{ n \to \infty }{a_{n}}$
-		- $\lim_{n\to\infty} (a_n \pm b_n) =  \lim_{n\to\infty} a_n \pm \lim_{n\to\infty} b_n$
-		- $\lim_{n\to\infty} (a_n \cdot b_n) =  \left(\lim_{n\to\infty} a_n \right)\cdot \left( \lim_{n\to\infty} b_n \right)$
-		- $\lim_{n\to\infty} \left(\frac{a_n}{b_n}\right) = \frac{\lim\limits_{n\to\infty} a_n}{\lim\limits_{n\to\infty} b_n}$ (provided $\lim_{n\to\infty} b_n \ne 0$)
-		- $\lim_{n\to\infty} a_n^k =  \left( \lim_{n\to\infty} a_n \right)^k$
+- Definitions: $(a_n)$ converges to $L$
+	- $\displaystyle\lim_{ n \to \infty }{a_{n}}=L$
+	- The sequence $(a_n)$ **converges to** (or **tends to**) the limit $L$
+	- For each real number $\varepsilon >0$, there exists a natural number $N$ such that, for every natural number $n>N$, we have ${\displaystyle |a_{n}-L|<\varepsilon }$
+	- $\forall \varepsilon > 0 \left(\exists N \in \mathbb{N} \left(\forall n \in\mathbb{N}\left(n \geq N \implies |a_n - L| < \varepsilon \right)\right)\right)$
+- Definitions: Convergent Sequence 
+	- $(a_n)$ is **Convergent sequence** 
+	- $\exists{x\in\mathbb{R}}:\displaystyle\lim_{ n \to \infty }{a_{n}}=x$
+	- (3.36) $(a_n)$ is **Cauchy sequence** 
+	- (3.36) $\forall{\varepsilon>0}\;\exists{N\in\mathbb{N}}:{m,n>N}\implies{|{a_{n}-a_{m}}|<\varepsilon}$
 
+Arithmetic (2.28)
 
-**theorems**
+- $(a_{n})_{n=1}^{\infty}$ and $(b_{n})_{n=1}^{\infty}$ are convergent
+	- $(c\cdot a_{n})_{n=1}^{\infty}$ is convergent, and $\lim_{ n \to \infty }({ca_{n})}=c\cdot\lim_{ n \to \infty }{a_{n}}$
+	- $\lim_{n\to\infty} (a_n \pm b_n) =  \lim_{n\to\infty} a_n \pm \lim_{n\to\infty} b_n$
+	- $\lim_{n\to\infty} (a_n \cdot b_n) =  \left(\lim_{n\to\infty} a_n \right)\cdot \left( \lim_{n\to\infty} b_n \right)$
+	- $\lim_{n\to\infty} \left(\frac{a_n}{b_n}\right) = \frac{\lim\limits_{n\to\infty} a_n}{\lim\limits_{n\to\infty} b_n}$ (provided $\lim_{n\to\infty} b_n \ne 0$)
+	- $\lim_{n\to\infty} a_n^k =  \left( \lim_{n\to\infty} a_n \right)^k$
+
+Theorems
 
 - (2.29) **Shift Rule** Let $N$ be a natural number. Let $(a_{n})$ be a sequence. Then $a_{n} → a$ if and only if the *shifted* sequence $a_{N+n}→a$.
 - Let $(a_n)$ and $(b_n)$ be two convergent sequences:
@@ -85,32 +93,21 @@ Theorems
 - (2.34) $a>0\implies\lim_{n \to \infty}\sqrt[n]{ a }=1$
 - $\lim_{n\rightarrow\infty}\sqrt[n]n=1$
 - (q2.29) let $a_{1},\dots ,a_{k}\geq 0$, then $\lim_{n\to\infty} \sqrt[n]{\sum_{i=1}^k a_{i}^n}=\max\set{a_{1},\dots ,a_{k}}$
-
 - #todo For any continuous function $f$, if $\lim _{n\to \infty }a_{n}$ exists, then $\lim _{n\to \infty }f\left(a_{n}\right)$ exists too.
 - (2.16) every convergent sequence is bounded
 - (q3.56) $\displaystyle  {\displaystyle \liminf _{n\to \infty }a_{n}=\limsup _{n\to \infty }a_{n}}$ if and only if $(a_{n})$ is convergent
 
-## Cauchy sequence
-
-- (d3.35) A sequence $(a_{n})$ is a **Cauchy sequence** if $\forall{\varepsilon>0}\;\exists{N\in\mathbb{N}}:{m,n>N}\implies{|{a_{n}-a_{m}}|<\varepsilon}$.
-
-- (3.36) A sequence is *convergent* iff is *cauchy*
-
-
-## Null Sequence 
+### Null Sequence 
 
 definitions 
 - (d2.21) $(a_{n})$ is null sequence 
-- $\lim_{n \mathop \to \infty} {a}_n=0$
+- $\displaystyle \lim_{n \mathop \to \infty} {a}_n=0$
 - (q2.20a) $(|a_{n}|)$ is null sequence
 
 properties of null sequence $(a_{n})$
 - $(a_{n})$ is bounded sequence
 
-
 - (2.22) product of **null** and **bounded** sequences is **null** sequence
-
-
 
 ## Infinite limits
 
@@ -181,10 +178,13 @@ theorems:
 	- (2.52) if $c_n=\sqrt[n]{\prod^{n}_{i=1}{a_i}}$ then $(c_{n})$ is the **geometric mean sequence** of $(a_{n})$
 		- #todo 
 
-- (3.22) **Cantor's intersection** theorem (Cantor's Lemma)
-	- Let $(I_{n})^{\infty}_{n=1}$ be a sequence of non-empty, closed intervals, $I_{n}=[a_{n},b_{n}]$, satisfying $I_{1}\supseteq I_{2}\supseteq I_{3}\supseteq\dots$ and $\lim_{ n \to \infty }(b_{n}-a_{n})=0$, then, $\bigcap_{n=1}^{\infty}I_{n}=\{ x \}$, and $x=\lim_{ n \to \infty }(a_{n})=\lim_{ n \to \infty }(b_{n})$
-	- Let $(a_{n})^{\infty}_{n=1}$ and $(b_{n})^{\infty}_{n=1}$ be two sequence of real numbers that satisfy: $a_{n}\leq a_{n+1} < b_{n+1}\leq b_{n}$ for every $n\in\mathbb{N}$, and $\lim(b_{n}-a_{n})=0$. Then there exists a real number $c$ such that $\lim a_{n}=\lim b_{n}=c$. The number $c$ is the unique real number that satisfies $a_{n} \leq c\leq b_{n}$
+- (3.22) **Cantor's intersection** theorem (Cantor's Lemma, Nested Intervals Theorem)
+	- A **sequence of nested intervals** is a sequence $(I_{n})^{\infty}_{n=1}$ of non-empty, closed intervals, $I_{n}=[a_{n},b_{n}]$, satisfying:
+		- $I_{1}\supseteq I_{2}\supseteq I_{3}\supseteq\dots$ 
+		- $\lim_{ n \to \infty }(b_{n}-a_{n})=0$
+	- The intersection of a sequence $(I_{n})^{\infty}_{n=1}$ of nested intervals is $\bigcap_{n=1}^{\infty}I_{n}=\{ x \}$, and $x=\lim_{ n \to \infty }(a_{n})=\lim_{ n \to \infty }(b_{n})$
 
+> Other form of **Cantor's intersection** theorem: Let $(a_{n})^{\infty}_{n=1}$ and $(b_{n})^{\infty}_{n=1}$ be two sequence of real numbers that satisfy: $a_{n}\leq a_{n+1} < b_{n+1}\leq b_{n}$ for every $n\in\mathbb{N}$, and $\lim(b_{n}-a_{n})=0$. Then there exists a real number $c$ such that $\lim a_{n}=\lim b_{n}=c$. The number $c$ is the unique real number that satisfies $a_{n} \leq c\leq b_{n}$
 
 # Subsequence
 
