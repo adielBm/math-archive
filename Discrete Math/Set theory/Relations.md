@@ -24,7 +24,6 @@ For all $a,b$ and $R\ne \emptyset$
 	- transitive, connected, irreflexive
 	- transitive, connected, asymmetric
 
-
 > in general, *strict* means *irreflexive*, *total* means *connected*, *partial* means not (necessarily) *total*.
 
 # Theorems

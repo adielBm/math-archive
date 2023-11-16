@@ -21,11 +21,12 @@ $$\large A\subseteq\mathbb{R}$$
 	- (d3.7) $c$ is minimal upper bound of $A$
 	- (3.9) (1.) $c$ is an upper bound of $A$ (2.) $\forall\varepsilon>0 \;\exists{x\in{A}}:x>c-\varepsilon$
 	- (3.9) (1.) $c$ is an upper bound of $A$ (2.) $c\leq d$ for all upper bounds $d$ of $A$
-- theorems
-		- (3.6. ***Least-upper-bound property***) if $A$ is **non-empty** and **bounded above**, then $A$ has **supremum**
-	- $a<b\implies \sup(a,b)=b$
+- Theorems
+	- (3.6 **Least-upper-bound property**, see note below) 
+		- If $A$ is **non-empty** and **bounded above**, then $A$ has **supremum**
 	- (3.8) if $A$ has maximum, then $\sup{A}=\max{A}$
 	- (3.10) $\sup{(A+B)}=\sup{A}+\sup{B}$
+	- $a<b\implies \sup(a,b)=b$
 
 
 > *Least-upper-bound property* (3.6) is follow from the completeness axiom. but the opposite is also true. 

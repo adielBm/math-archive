@@ -21,8 +21,6 @@
 3. $a<b\implies a+c<b+c$
 4. $a<b \land c>0\implies ac<bc$
 
-
-
 ## Completeness Axiom
 
 - (a1.52) if $\emptyset\neq A,B\subseteq\mathbb{R}$ such that $\forall{a}\in{A}$ and $\forall{b}\in{B}$ we have $a\leq b$. then there exists $x\in\mathbb{R}$ such that:
@@ -63,10 +61,28 @@
 
 ## Archimedean property
 
-- (1.61) for each $0<a,b\in\mathbb{R}$ there exists $n\in\mathbb{N}$ such that $na>b$
+- (1.61) $\forall{a}\in\mathbb{R^{+}},\;\forall{b}\in\mathbb{R},\;\exists n\in\mathbb{N}\;:\;na>b$
 
 ## Absolut Value 
 
+
+
+- Definition:  $\displaystyle  {\displaystyle |a|={\begin{cases}a &  a\geq 0\\-a & a<0\end{cases}}}$
+- $|a|=\max\set{a,-a}$
+- $-|a|\leq{a}\leq{|a|}$
+- Evenness $|a|=|{-}a|$
+- $|a|<r\iff{-r<a<r}$
+- 
+- Identity of indiscernibles $\displaystyle  |a-b|=0\iff a=b$
+- $|ab|=|a||b|$
+- Triangle inequality $|a+b|\leq|a|+|b|$
+	- $(|a+b|=|a|+|b|)\iff{(a\geq 0 \land{b\geq 0})\lor(a\leq 0 \land{b\leq 0})}$
+	- $\displaystyle{\left|\sum_{i=1}^n{x_{i}}\right|\leq \sum_{i=1}^n |x_{i}|}$
+	- $|a-b|\leq{|a|+|b|}$
+	- $||a|-|b||\leq{|a-b|}$
+	- $|a^n|=|a|^n$
+	- $\displaystyle  \left|{\frac {a}{b}}\right|={\frac {|a|}{|b|}}$ if $b\neq 0$
+	- 
 
 ## Density
 

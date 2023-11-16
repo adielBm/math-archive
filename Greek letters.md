@@ -5,7 +5,7 @@
 | $B$        | $\beta$    | `\beta`    | `/ˈbeɪtə/`     |
 | $\Gamma$   | $\gamma$   | `\gamma`   | `/ˈɡæmə/`      |
 | $\Delta$   | $\delta$   | `\delta`   | `/ˈdɛltə/`     |
-| $E$        | $\epsilon$ | `\epsilon` | `/ɛpˈsaɪlən/`  |
+| $E$        | $\epsilon,\varepsilon$  | `\epsilon,\varepsilon` | `/ɛpˈsaɪlən/`  |
 | $Z$        | $\zeta$    | `\zeta`    | `/ˈzeɪtə/`     |
 | $H$        | $\eta$     | `\eta`     | `/ˈeɪtə/`      |
 | $\Theta$   | $\theta$   | `\theta`   | `/ˈθeɪtə/`     |

@@ -1,8 +1,9 @@
 
 - (2.17) A sequence obtained by changing a finite number of terms they has the same limit 
 
-- (d2.8) $N_{\varepsilon}(a):=\set{x\in\mathbb{R}: |x-a|<\varepsilon}$ where $\varepsilon>0$ and a is real number is $\varepsilon$-**neighborhood** of the real number $a$
+- (d2.8) $N_{\varepsilon}(a):=\set{x\in\mathbb{R}: |x-a|<\varepsilon}$ (where $\varepsilon>0$ and $a$ is real number) is $\varepsilon$-**neighborhood** of $a$
 
+- (d4.26) $N^{*}_{\varepsilon}(a):=\set{x\in N_{\varepsilon}(a):x\neq{a}}$ is **deleted** (punctured) $\varepsilon$-**neighborhood** of $a$
 
 # Bounded Sequence
 
@@ -70,8 +71,8 @@ Theorems
 - Definitions: Convergent Sequence 
 	- $(a_n)$ is **Convergent sequence** 
 	- $\exists{x\in\mathbb{R}}:\displaystyle\lim_{ n \to \infty }{a_{n}}=x$
-	- (3.36) $(a_n)$ is **Cauchy sequence** 
-	- (3.36) $\forall{\varepsilon>0}\;\exists{N\in\mathbb{N}}:{m,n>N}\implies{|{a_{n}-a_{m}}|<\varepsilon}$
+	- (3.36. Cauchy's convergence test) $\forall{\varepsilon>0}\;\exists{N\in\mathbb{N}}:{m,n>N}\implies{|{a_{n}-a_{m}}|<\varepsilon}.$ (in words: $(a_n)$ is **Cauchy sequence** )
+	- (3.34 #todo) $(a_n)$ is bounded and has only one **subsequential limit**
 
 Arithmetic (2.28)
 
@@ -84,6 +85,7 @@ Arithmetic (2.28)
 
 Theorems
 
+- (2.12) Uniqueness of limit of convergent sequence - $((a_n) \underset{n \to \infty}{\longrightarrow} L\land{(a_n) \underset{n \to \infty}{\longrightarrow} M})\implies{L=M}$
 - (2.29) **Shift Rule** Let $N$ be a natural number. Let $(a_{n})$ be a sequence. Then $a_{n} → a$ if and only if the *shifted* sequence $a_{N+n}→a$.
 - Let $(a_n)$ and $(b_n)$ be two convergent sequences:
 	- (2.30) if $\lim_{n \to \infty} a_n <\lim_{n \to \infty} b_n$ then, for almost all $n$, we have $a_n < b_n$

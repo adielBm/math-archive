@@ -9,7 +9,7 @@
 	- חסם מלעיל
 - **Lower bound** 
 	- חסם מלרע
-- **Supremum**, 
+- **Supremum**
 	- least upper bound (LUB)
 	- חסם מלעיל מינימלי
 	- חסם עליון

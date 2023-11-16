@@ -1,4 +1,4 @@
-
+	
 
 
 
@@ -54,8 +54,12 @@ $$
 \end{align}
 $$
 
-
-- Multiple-angle formula #todo 
+- Multiple-angle formula
+	- Double-angle formula
+		- $\sin(2\alpha)=2\sin\alpha\cos\alpha=(\sin \alpha+\cos \alpha)^2-1$
+		- $\cos(2\alpha)=\cos^2\alpha-\sin^2\alpha-1=1-2\sin^2\alpha$
+	- Triple-angle formula #todo 
+	- Half-angle formula #todo 
 - Product-to-sum and sum-to-product identities #todo 
 
 ## Common Trigonometric Values

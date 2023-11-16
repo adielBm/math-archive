@@ -1,27 +1,18 @@
-- $(Ax+B)^2=(Ax)^2+2ABx+B^2$
+## Definitions 
 
-## Binomial Theorem
-$$(a+b)^n = \sum_{k=0}^n {n \choose k}a^{n-k}b^k = \sum_{k=0}^n {n \choose k}a^{k}b^{n-k}$$
-Binomial Theorem for $(1+x)^n$
-$$(1+x)^n = \sum_{k=0}^n {n \choose k}x^k$$
+- A **polynomial function of degree** $n$ is a function of the form $p(x)=\displaystyle  {\displaystyle \sum _{i=0}^{n}a_{i}x^{i}}$ where $n$ is a nonnegative integer and and $a_{n}\neq 0$,
+- $a_{0},a_{1},\dots,a_{n}$ are called the **coefficients** of the polynomial
+	- $a_{0}$ is the **constant coefficient** or **constant term**
+	- $a_{n}$ is the **leading coefficient**, and $a_{n}x^n$ is the **leading term**
+- $n=\deg{p}$ is the polynomial degree 
+- A number $c$ is called **a root of** $p(x)$ if $p(c)=0$
+- $p(x)=0$ is the zero polynomial. (its degree is $-1$, $-\infty$ or undefined)
+- $p_{2}\mid{p_{1}}$ ($p_{2}$ **divides** $p_{1}$, or $p_{1}$ **is divided by** $p_{2}$) if there exists polynomial $q$ such that $p_{1}=p_{2}q$
 
+## Theorems 
 
-
-- **square** of sum/difference 
-	- $(a+b)^2=a^2+2ab+b^2=(-a-b)^2$     
-	- $(a-b)^2=a^2-2ab+b^2$
-
-- **cube** of sum/difference 
-	- $(a-b)^3=a^3-3a^2b+3ab^2-b^3$
-	- $(a+b)^3=a^3+3a^2b+3ab^2+b^3$
-
-- **Difference of squares** $a^2-b^2=(a-b)(a+b)$
-- **Sum of squares** $a^2+b^2=(a+b)^2-2ab=(a-b)^2+2ab$
-
-- Sum/difference of cubes (SOAP)
-	- $a^3\pm{b^3}=(a\pm{b})({a^2\mp{ab}+{b^2}})$
-
-
-
-<img width="300" src="https://upload.wikimedia.org/wikipedia/commons/0/00/Binomial_expansion_visualisation.svg" />
+- **Factor theorem:** $p(c)=0\iff p(x)=(x-c)q(x)$. (where $\deg{q}=(n-1)$
+	- In words: $c$ is a root of the polynomial $p$ (of degree n) if and only if $(x−c)$ is a factor of $p$
+- if $\deg{p}=n\geq 0$ then $p$ has at most $n$ real roots
+ 
 

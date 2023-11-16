@@ -12,8 +12,6 @@
 	- openu.20476: סדר חלקי
 	- he.wikipedia: סדר חלקי חזק
 
-x
-
 # Logic 
 
 | **  English  **                               | **  עברית  **                               |
