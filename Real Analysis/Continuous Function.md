@@ -46,6 +46,10 @@ Theorems ($f$ is continuous over the interval $I=[a,b]$)
 - **Intermediate value theorem** (IVT)
 	- $(\displaystyle  {\displaystyle \min(f(a),f(b))<t<\max(f(a),f(b))})\implies{\exists~{c}\in{[a,b]}:f(c)=t}$
 - (5.32) **Brouwer's Fixed Point Theorem** (1 dim) - If $f:[a,b]\to[a,b]$ is continuous then $\exists{x}\in{[a,b]}:f(x)=x$
-- (5.34) Preservation of intervals - $f(I)= \set{f(x):x\in{I}}$ is either an interval or a point
-
-
+- (5.34, 5.38) Preservation of intervals - $f(I)= \set{f(x):x\in{I}}$ is either an **closed interval** or a **point**
+- (5.35) Boundedness theorem 
+	- $f$ is **bounded** on $I=[a,b]$
+	- $\exists{m,M}: \displaystyle  {\displaystyle m\leq f(x)\leq M\quad \forall x\in [a,b]}$
+- (5.37) **Extreme value theorem** (EVT) 
+	- $f$ must attain a maximum and a minimum, each at least once
+	- There exist $c,d\in[a,b]:f(c)\geq f(x) \geq{f(d)}~~\forall{x}\in[a,b]$
