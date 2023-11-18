@@ -14,5 +14,4 @@
 - **Factor theorem:** $p(c)=0\iff p(x)=(x-c)q(x)$. (where $\deg{q}=(n-1)$
 	- In words: $c$ is a root of the polynomial $p$ (of degree n) if and only if $(x−c)$ is a factor of $p$
 - if $\deg{p}=n\geq 0$ then $p$ has at most $n$ real roots
- 
-
+- Let $p(x)$ be a polynomial of odd degree. Then $p$ has at least one real root.

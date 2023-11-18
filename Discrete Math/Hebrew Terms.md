@@ -7,10 +7,17 @@
 	- he.wikipedia: אנטי-סימטרי, אנטי-סימטרי חלש
 - Strict total order
 	- openu.20476: סדר מלא
-	- openu.20476: סדר מלא
 - Strict partial order
 	- openu.20476: סדר חלקי
 	- he.wikipedia: סדר חלקי חזק
+
+
+- Strict partial order set
+	- openu.20476: קבוצה סדורה חלקית
+- Strict total order set
+	- openu.20476: קבוצה סדורה
+- Partial order set
+	- he.wikipedia: קבוצה סדורה חלקית
 
 # Logic 
 
