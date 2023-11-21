@@ -5,6 +5,7 @@
 - ${(a\cdot{b})}^n=a^n\cdot{b^n}$
 - ${(\frac{a}{b})}^n=\frac{a^n}{b^n}$
 - ${(\frac{a}{b})}^{-n}={(\frac{b}{a})}^n$
+- $a>1\land n>m\implies a^n>a^m$
 
 ## $n$th root
 

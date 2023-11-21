@@ -13,3 +13,7 @@
 	- (2.34) $\lim_{ n \to \infty }\sqrt[n]{a}=1$
 - $a>1$
 	- (2.41) $\lim_{ n \to \infty }a^n=\infty$
+
+
+- (6.4) if $(q_{n})^{\infty}_{{n=1}}$ is a sequence of rationals which tends to 0, and $a>0$, then $\displaystyle\lim_{ n \to \infty }a^{q_{n}}=1$
+

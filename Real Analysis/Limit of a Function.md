@@ -11,24 +11,33 @@
 
 Theorems
 
-- (4.31) Uniqueness of limit of function - $(f(x) \underset{n \to x_{0}}{\longrightarrow} L\land{f(x) \underset{n \to x_{0}}{\longrightarrow} M})\implies{L=M}$
-- (4.33) Limit of **Linear Function** - Let $f$ a linear function then for each $x_{0}\in\mathbb{R}$, we have $\displaystyle\lim_{ x \to {x_{0}} }f(x)=f(x_{0})$
-- (4.34) if $\displaystyle\lim_{x\to{x_0}}{f(x)}$ is defined, and $f(x)=g(x)$ for each $x$ such that $x_0-\delta<x\neq{x_0}<{x_0}+\delta$, then $\displaystyle\lim_{x\to{x_0}}{f(x)}=\lim_{x\to{x_0}}{g(x)}$.
+
+
+- (4.31) **Uniqueness** of the limit of function 
+	- $(f(x) \underset{n \to x_{0}}{\longrightarrow} L\land{f(x) \underset{n \to x_{0}}{\longrightarrow} M})\implies{L=M}$
+- (4.33) Limit of **Linear Function** 
+	- Let $f$ a linear function then for each $x_{0}\in\mathbb{R}$, we have $\displaystyle\lim_{ x \to {x_{0}} }f(x)=f(x_{0})$
+- (4.34) if $\displaystyle\lim_{x\to{x_0}}{f(x)}$ is defined, and $f(x)=g(x)$ for each $x$ such that $x_0-\delta<x\neq{x_0}<{x_0}+\delta$, then $\displaystyle\lim_{x\to{x_0}}{f(x)}=\lim_{x\to{x_0}}{g(x)}$
+- (4.43) Squeeze theorem for functions
+	- $\Big(f(x)\leq g(x)\leq h(x)\Big)\land\Big({\displaystyle\lim_{ x \to x_{0} }f(x)=\lim_{ x \to x_{0} }h(x)=L}\Big)\implies{\displaystyle\lim_{ x \to x_{0} }g(x)=L}$
 
 
 
-- $\displaystyle\lim _{x\to x_{0}}(f(x)\pm g(x))=\displaystyle \lim _{x\to x_{0}}f(x)\pm\lim _{x\to x_{0}}g(x)$
-- $\displaystyle\lim _{x\to x_{0}}(f(x)\cdot g(x))=\displaystyle \lim _{x\to x_{0}}f(x)\cdot\lim _{x\to x_{0}}g(x)$
-- $\displaystyle\lim _{x\to x_{0}}(f/g)(x)=\displaystyle \lim _{x\to x_{0}}f(x)/\lim _{x\to x_{0}}g(x)$ where $\lim _{x\to x_{0}}g(x)\neq 0$
+| Limit Laws       |                                                                                                                   |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Sum / Difference | $\displaystyle\lim _{x\to x_{0}}(f(x)\pm g(x))=\displaystyle \lim _{x\to x_{0}}f(x)\pm\lim _{x\to x_{0}}g(x)$     |
+| Product          | $\displaystyle\lim _{x\to x_{0}}(f(x)\cdot g(x))=\displaystyle \lim _{x\to x_{0}}f(x)\cdot\lim _{x\to x_{0}}g(x)$ |
+|                  | $\displaystyle\lim _{x\to x_{0}}(f(x)\cdot c)=\displaystyle \lim _{x\to x_{0}}f(x)\cdot c$                        |
+|                  |  $\displaystyle\lim _{x\to x_{0}}(f(x))^n=\Big(\displaystyle \lim _{x\to x_{0}}f(x)\Big)^{n}$                                                                                                                  |
+| Quotient          | $\displaystyle\lim _{x\to x_{0}}(f/g)(x)=\displaystyle \lim _{x\to x_{0}}f(x)/\lim _{x\to x_{0}}g(x)$ where $\displaystyle\lim _{x\to x_{0}}g(x)\neq 0$ |
 
 
 
 - (q4.62) $\displaystyle\lim_{x\to0}{f(x)}=L\implies\lim_{x\to 0}{f(x^2)}=L$
-- (q4.63) $\displaystyle\lim_{x\to0}{f(x)}=\lim_{x\to 0}{f(xk)}$ where $k\neq 0$
-
-- Limit of a Composite Function: $\lim_{ t \to t_{0} }f(g(t))=\displaystyle\lim_{ x \to {(\lim_{ t \to t_{0} }g(t))} }f(x)$
-- (4.43) Squeeze theorem for functions
-	- $\Big(f(x)\leq g(x)\leq h(x)\Big)\land\Big({\displaystyle\lim_{ x \to x_{0} }f(x)=\lim_{ x \to x_{0} }h(x)=L}\Big)\implies{\displaystyle\lim_{ x \to x_{0} }g(x)=L}$
+-  (q4.63) $\displaystyle\lim_{x\to0}{f(x)}=\lim_{x\to 0}{f(xk)}$  (where $k\neq 0$ and the limits exists)
+- Limit of a Composite Function: $\displaystyle\lim_{ t \to t_{0} }f(g(t))=\displaystyle\lim_{ x \to {(\lim_{ t \to t_{0} }g(t))} }f(x)$
+ 
+   
 
 ### Examples
 

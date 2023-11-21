@@ -33,7 +33,7 @@ $$\large A\subseteq\mathbb{R}$$
 > Also **many books** called to Least-upper-bound property as (a1.52) **completeness axiom**. (see q3.14).
 > The rationals $\mathbb{Q}$ **does not have** the least upper bound property.
 
-### Infimum (greatest lower bound)
+### Infimum (Greatest-lower-bound)
 
 - definitions
 	- $y=\inf{A}$

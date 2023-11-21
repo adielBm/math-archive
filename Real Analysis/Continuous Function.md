@@ -1,7 +1,6 @@
 
 # Continuous at Point
 
-
 Definitions
 
 - $f$ is **continuous** in $x_{0}$
@@ -16,6 +15,7 @@ Theorems
 
 - (q5.2) If $f(x)=g(x)$ for all $x$ in some neighborhood of $x_0$, then $f$ is continuous in $x_0$ iff $g$ is continuous in $x_0$ 
 - (5.15) if $g$ is continuous in $t_{0}$, and $f$ is continuous in $x_{0}$ where $x_{0}=g(t_{0})$, then $f(g(x))$ is continuous in $t_{0}$
+- (7.9) if $f$ is differentiable at $x_{0}$, then it continuous at $x_{0}$
 
 ## One Side
 
@@ -23,7 +23,6 @@ Theorems
 	- $\displaystyle\lim_{ x \to x^{-}_{0} }f(x)=f(x_{0})$
 - $f$ is **right-continuous at** $x_{0}$
 	- $\displaystyle\lim_{ x \to x^{+}_{0} }f(x)=f(x_{0})$
-
 
 ## Discontinuity point 
 
@@ -35,10 +34,10 @@ Theorems
 
 Definitions ($f$ is defiened in the interval $I$)
 
-- $f$ is continuous over the interval $I$ 
+- $f$ is continuous on the interval $I$ 
 - $f$ is **continuous** on **every inferior point** in $I$, and **right-continuous at** the **left-endpoint** (if exists), and **left-continuous at** the **right-endpoint** (if exists).
-- For each sequence $(x_{n})^{\infty}_{n=1}$ of points in the interval $I$. we have $\displaystyle\lim_{ n \to \infty }x_{n}=x_{0}\in{I}\implies{\lim_{ n \to \infty }}f(x_{n})=f(x_{0})$
 - $(\forall{x_{0}\in{I}})(\forall{\varepsilon>0})(\exists\delta>0):(\forall{x\in{I}}),~|x-x_{0}|<\delta\implies{|f(x)-f(x_{0})|<\varepsilon}$
+- For each sequence $(x_{n})^{\infty}_{n=1}$ of points in the interval $I$. we have $\displaystyle\lim_{ n \to \infty }x_{n}=x_{0}\in{I}\implies{\lim_{ n \to \infty }}f(x_{n})=f(x_{0})$
 
 
 Theorems ($f$ is continuous over the interval $I=[a,b]$)
@@ -51,5 +50,17 @@ Theorems ($f$ is continuous over the interval $I=[a,b]$)
 	- $f$ is **bounded** on $I=[a,b]$
 	- $\exists{m,M}: \displaystyle  {\displaystyle m\leq f(x)\leq M\quad \forall x\in [a,b]}$
 - (5.37) **Extreme value theorem** (EVT) 
-	- $f$ must attain a maximum and a minimum, each at least once
+	- $f$ has both a maximum and a minimum on $I=[a,b]$
 	- There exist $c,d\in[a,b]:f(c)\geq f(x) \geq{f(d)}~~\forall{x}\in[a,b]$
+
+
+## Uniform continuity
+
+Definition
+- $f$ is **uniformly continuous** on the interval $I$
+- (d5.46) $(\forall{\varepsilon>0})(\exists\delta>0):(\forall{x,y\in{I}}),~|x-y|<\delta\implies{|f(x)-f(y)|<\varepsilon}$
+
+Theorems
+- (5.47) if $f$ is uniformly continuous on $I$, then it is $f$ is continuous on $I$
+- (5.48) **Heine–Cantor theorem** - if $f$ is continuous on the closed interval $I=[a,b]$, then $f$ is uniformly continuous on it.
+- (5.48) If $f$ is defined on the open interval $I=(a,b)$, then $f$ is uniformly continuous on it, if and only if, $f$ is continuous on it, and the one-side limits $\displaystyle\lim_{ x \to a^{+} }f(x)$ and $\displaystyle\lim_{ x \to b^{-} }f(x)$ are defined.
