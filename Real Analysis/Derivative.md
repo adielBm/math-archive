@@ -31,11 +31,12 @@
 
 ### Derivative Rules
 
-- Derivative Sum Rule $(f+g)'(x_{0})=f'(x_{0})+g'(x_{0})$ 
-- Derivative Product Rule $(fg)'={fg'}+{f'g}$
-	- Derivative Constant Multiple Rule $(cf)'(x_{0})=c\cdot f'(x_{0})$
+- Sum Rule $(f+g)'(x_{0})=f'(x_{0})+g'(x_{0})$ 
+- Product Rule $(fg)'={fg'}+{f'g}$
+	- Constant Multiple Rule $(cf)'(x_{0})=c\cdot f'(x_{0})$
 	- $(f^{n})'(x)=nf^{n-1}(x)\cdot f'(x)$
-- Derivative Quotient Rule $\displaystyle\left( \frac{f}{g} \right)'(x_{0})=\frac{f'g-fg'}{g^2}$ 
-
-
-
+- Quotient Rule $\displaystyle\left( \frac{f}{g} \right)'(x_{0})=\frac{f'g-fg'}{g^2}$ 
+	- (7.19) **Reciprocal rule** - 
+		- $\displaystyle\left( \frac{1}{f} \right)'=\frac{{-f'}}{f^2}$
+		- $\displaystyle\frac{d}{dx}\left[ \frac{1}{f(x)} \right]=\frac{{-f'(x)}}{[f(x)]^2}$
+		- if $f$ is differentiable at $x=x_{0}$, and $f(x_{0})\neq 0$, then $\frac{1}{f(x)}$ is differentiable at $x=x_{0}$, and $\left( \frac{1}{f(x_{0})} \right)'=-\frac{f'(x_{0})}{f^2(x_{0})}$

@@ -58,7 +58,6 @@
 - (1.55) For every real $c>0$ and every natural $n$ there is **one and only one** real positive $x\geq 0$ such that $x^n=c$. 
 	- (d1.56) $x$ is called the $n$th root of $c$. and noted $x=\sqrt[n]{c}$
 
-
 ## Archimedean property
 
 - (1.61) $\forall{a}\in\mathbb{R^{+}},\;\forall{b}\in\mathbb{R},\;\exists n\in\mathbb{N}\;:\;na>b$
