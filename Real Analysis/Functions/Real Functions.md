@@ -50,12 +50,25 @@ ___
 ___
 
 
+- $x_{0}$ is a **critical point** of $f$ if either $f'(x_{0})=0$ or $f'(x_{0})$ is undefined
+	- $x_{0}$ is a **stationary point** of $f$ if $f'(x)=0$
+
+
+___
+
 ## Extremum (maximum & minimum)
 
-- $x_{0}\in{X}$ is a **global maximum** point of function $\displaystyle  f:X\to \mathbb {R} ,$ if  $\displaystyle  (\forall x\in X)\,f(x_{0})\geq f(x)$
-- $x_{0}\in{X}$ is a **global minimum** point of function $\displaystyle  f:X\to \mathbb {R} ,$ if  $\displaystyle  (\forall x\in X)\,f(x_{0})\leq f(x)$
+> $f$ is defined on interval $I$
 
-#todo 
-- $x_{0}$ is a **local maximum** point of function
-- $x_{0}$ is a **local minimum** point of function 
+> Some say *relative* instead of *local*, and *absolut* instead of *global*
+
+- Extremum
+	- A function $f$ is said to have a **maximum** (resp. **minimum**) at the interval $I$ if $\exists x_{0}\in{I}$ s.t. $\displaystyle  \forall (x\in I),\,f(x_{0})\geq f(x)$ (resp. $f(x_{0})\leq f(x)$)
+- Local Extremum
+	- A function $f$ is said to have a **local maximum** (resp. **local minimum**) at $x_{0}\in{\operatorname {dom} (f)}$ if there exists an open interval $I\subseteq{\operatorname {dom} (f)}$ containing $x_{0}$ such that $\forall{x\in{I}}$, $f(x_{0}) \geq f (x)$ (resp. $f(x_{0})\leq f(x)$)
+
+- (8.3) Extremum on $I$ is either *local extremum* of $f$ or *endpoint* of $I$
+- (8.4) **Fermat's theorem** (interior extremum theorem) - if $x_{0}\in{I}$ is local extremum of $f$, and $f$ is differentiable at $x_{0}$, then $f'(x_{0})=0$
+
+
 

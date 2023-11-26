@@ -5,16 +5,30 @@
 ![trigo\|250](https://upload.wikimedia.org/wikipedia/commons/7/72/Sinus_und_Kosinus_am_Einheitskreis_1.svg)
 
 
+- $\cos:\mathbb{R}\to[-1,1]$
+- $\sin:\mathbb{R}\to[-1,1]$
 
 - **SOH-CAH-TOA**
 
-$$
-\begin{align} 
-\sin\theta=\cos\left(\frac{\pi}{2} - \theta \right) \\
-\cos\theta = \sin\left(\frac{\pi}{2} - \theta \right)  \\
-\tan\theta = \frac{\sin \theta}{\cos \theta} \\
-\end{align}
-$$
+## Fundamental Identities 
+
+- $\displaystyle\sin\theta=\cos\left(\frac{\pi}{2} - \theta \right)$
+- $\displaystyle\cos\theta = \sin\left(\frac{\pi}{2} - \theta \right)$
+
+### Quotient Identities 
+
+- $\displaystyle\tan\theta = \frac{\sin \theta}{\cos \theta}$
+- $\displaystyle\cot\theta = \frac{\cos \theta}{\sin \theta}$
+
+### Reciprocal Identities 
+
+- $\displaystyle\sec\theta=\frac{1}{\cos \theta}$
+- $\displaystyle\csc\theta=\frac{1}{\sin \theta}$
+
+### Inverse trigonometric functions
+
+- $\arcsin(x),~ \arccos(x), ~\arctan(x)$
+
 ### Pythagorean identities
 $$
 \begin{align}

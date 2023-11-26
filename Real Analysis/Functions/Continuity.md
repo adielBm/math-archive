@@ -40,7 +40,7 @@ Definitions ($f$ is defiened in the interval $I$)
 - For each sequence $(x_{n})^{\infty}_{n=1}$ of points in the interval $I$. we have $\displaystyle\lim_{ n \to \infty }x_{n}=x_{0}\in{I}\implies{\lim_{ n \to \infty }}f(x_{n})=f(x_{0})$
 
 
-Theorems ($f$ is continuous over the interval $I=[a,b]$)
+**Theorems** ($f$ is continuous over the interval $I=[a,b]$)
 
 - **Intermediate value theorem** (IVT)
 	- $(\displaystyle  {\displaystyle \min(f(a),f(b))<t<\max(f(a),f(b))})\implies{\exists~{c}\in{[a,b]}:f(c)=t}$
@@ -52,7 +52,7 @@ Theorems ($f$ is continuous over the interval $I=[a,b]$)
 - (5.37) **Extreme value theorem** (EVT) 
 	- $f$ has both a maximum and a minimum on $I=[a,b]$
 	- There exist $c,d\in[a,b]:f(c)\geq f(x) \geq{f(d)}~~\forall{x}\in[a,b]$
-
+- (q8.25) $f$ is **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$ 
 
 ## Uniform continuity
 

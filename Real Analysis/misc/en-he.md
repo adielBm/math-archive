@@ -25,3 +25,8 @@
 - **Limit superior**
 	- supremum limit, limit supremum, limsup, superior limit, upper limit, outer limit
 	- גבול עליון
+
+
+- point of tangency
+	- נקודת השקה
+

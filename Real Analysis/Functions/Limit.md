@@ -12,7 +12,6 @@
 Theorems
 
 
-
 - (4.31) **Uniqueness** of the limit of function 
 	- $(f(x) \underset{n \to x_{0}}{\longrightarrow} L\land{f(x) \underset{n \to x_{0}}{\longrightarrow} M})\implies{L=M}$
 - (4.33) Limit of **Linear Function** 
@@ -103,3 +102,13 @@ Theorems
 
 - #todo $\infty$ is the **limit** of $f$ at $\infty$
 - #todo $\infty$ is the **limit** of $f$ at $-\infty$
+
+# L'Hôpital's rule
+
+- Suppose $f$ and $g$ are differentiable and $g'(x)\neq 0$ on an open interval $I$ that contains $a$ (except possibly at $a$). 
+	- "$\displaystyle\frac{0}{0}$" - If $\displaystyle\lim_{ x \to x_{0} }f(x)=\lim_{ x \to x_{0} }g(x)=0$, then $\displaystyle\lim_{ x \to x_{0} }\frac{f(x)}{g(x)}=\lim_{ x \to x_{0} }\frac{f'(x)}{g'(x)}$ (if the limit on the right side exists (finite, or is $\infty$ or $-\infty$)
+
+
+	- "$\displaystyle\frac{\infty}{\infty}$" - If $\displaystyle\lim_{ x \to x_{0} }f(x)=\lim_{ x \to x_{0} }g(x)=0$, then $\displaystyle\lim_{ x \to x_{0} }\frac{f(x)}{g(x)}=\lim_{ x \to x_{0} }\frac{f'(x)}{g'(x)}$ (if the limit on the right side exists (finite, or is $\infty$ or $-\infty$)
+
+> There's similar theorems for one-side limits, limit *at-infinity*, 

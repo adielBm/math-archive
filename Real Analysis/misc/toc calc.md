@@ -38,12 +38,12 @@ Unit 6: Exponential function
 
 Unit 7: Derivative
 7.1 Background to the Concept of Derivative
-7.2 Definition of the Derivative and First Conclusions
+7.2 Definition of the Derivative
 7.3 Derivatives of Sum, Difference, Product, and Quotient
 7.4 The Chain Rule and the Derivative of the Inverse Function
 7.5 The Tangent and the Differential
 
-Unit 8: Properties of Derivative Functions
+Unit 8: Properties of Differentiable Functions
 8.1 Minimum and Maximum
 8.2 Mean Value Theorems (Rolle's theorem, Lagrange's theorem, Cauchy theorem, Darboux's theorem)
 8.3 L'Hôpital's Rule
