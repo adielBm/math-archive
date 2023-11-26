@@ -49,13 +49,6 @@ ___
 
 ___
 
-
-- $x_{0}$ is a **critical point** of $f$ if either $f'(x_{0})=0$ or $f'(x_{0})$ is undefined
-	- $x_{0}$ is a **stationary point** of $f$ if $f'(x)=0$
-
-
-___
-
 ## Extremum (maximum & minimum)
 
 > $f$ is defined on interval $I$
@@ -72,3 +65,6 @@ ___
 
 
 
+- $x_{0}$ is a **critical point** of $f$ if either $f'(x_{0})=0$ or $f'(x_{0})$ is undefined
+	- $x_{0}$ is a **stationary point** of $f$ if $f'(x)=0$
+- (8.19) if $x_{0}$ is local extremum (interior point) then $x_{0}$ a critical point

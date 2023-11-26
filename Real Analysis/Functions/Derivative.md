@@ -80,15 +80,16 @@
 	- **Rolle's theorem** - $f(a)=f(b)\implies\exists c\in(a,b):f'(c )=0$
 	- **Mean value theorem** (MVT, Lagrange) - $\exists c\in(a,b):f'(c )=\frac{{f(b)-f(a)}}{b-a}$
 
-- $f$ is continuous on $(a,b)$ (or $[a,b]$), differentiable on the $(a,b)$
-	- (8.7, q7.12) $(\forall{x\in{(a,b)},f'(x)=0})\iff$ $f$ is constant on $(a,b)$ (or $[a,b]$)
-	- $(\forall{x\in{(a,b)},f'(x)\geq 0})\iff$ $f$ is **increasing** on $(a,b)$ (or $[a,b]$)
-		- (8.17a) $(\forall{x\in{(a,b)},f'(x)>0})\implies$ $f$ is **strictly increasing** on $(a,b)$ (or $[a,b]$)
-	- $(\forall{x\in{(a,b)},f'(x)\leq0})\iff$ $f$ is **decreasing** on $(a,b)$ (or $[a,b]$)
-		- (8.17b) $(\forall{x\in{(a,b)},f'(x)<0})\implies$ $f$ is **strictly decreasing** on $(a,b)$ (or $[a,b]$)
-
+- $f$ is continuous on $(a,b)$, differentiable on the $(a,b)$
+	- (8.7, q7.12) $(\forall{x\in{(a,b)},f'(x)=0})\iff$ $f$ is constant on $(a,b)$ 
+	- (q8.28) $(\forall{x\in{(a,b)},f'(x)\geq 0})\iff$ $f$ is **increasing** on $(a,b)$
+		- (8.18) $(\forall{x\in{(a,b)},f'(x)>0})\implies$ $f$ is **strictly increasing** on $(a,b)$
+	- $(\forall{x\in{(a,b)},f'(x)\leq0})\iff$ $f$ is **decreasing** on $(a,b)$
+		- (8.18) $(\forall{x\in{(a,b)},f'(x)<0})\implies$ $f$ is **strictly decreasing** on $(a,b)$
 
 > Note: $a$ and $b$ can be $-\infty$ and $\infty$ (resp.)
+
+> By (q8.25) if $f$ is continuous on $[a,b]$ and **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$ 
 
 - $f$ and $g$ is continuous on $[a,b]$, differentiable on the $(a,b)$
 	- **Cauchy's mean value theorem** - if $\forall{x\in{(a,b)}},\, g'(x)\neq 0$, then:
@@ -100,7 +101,6 @@
 
 - **Darboux's theorem** - $f$ is differentiable on the $(a,b)$ then $f'$ has the intermediate value property.
 	- 
-
 
 ### Concavity #todo 
 
