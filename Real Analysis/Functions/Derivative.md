@@ -1,6 +1,5 @@
-
 # Differentiability 
-	
+
 > $\operatorname{dom}(f)$ contains an open interval $I$ containing $x_{0}$
 
 - $f(x)$ is **differentiable at a point** $x_{0}\in\operatorname{dom}(f)$
@@ -46,9 +45,13 @@
 	- $\displaystyle  {\frac {dz}{dx}}={\frac {dz}{dy}}\cdot {\frac {dy}{dx}}$
 
 
+## Inverse functions
 
-## Inverse functions #todo 
+> assuming: $f$ is *continuous* and *monotonic* on $I$
 
+- (7.27) $\big(f^{−1}\big)'(x)=\frac{1}{f'\big(f^{−1}(x)\big)}$
+
+- if $f'(x_{0})=0$ then $(f^{-1})'(f(x_{0}))$ is undefined 
 
 ## Trigonometric Functions 
 
@@ -80,7 +83,7 @@
 	- **Rolle's theorem** - $f(a)=f(b)\implies\exists c\in(a,b):f'(c )=0$
 	- **Mean value theorem** (MVT, Lagrange) - $\exists c\in(a,b):f'(c )=\frac{{f(b)-f(a)}}{b-a}$
 
-- $f$ is continuous on $(a,b)$, differentiable on the $(a,b)$
+- $f$ is *continuous* and *differentiable* on $(a,b)$
 	- (8.7, q7.12) $(\forall{x\in{(a,b)},f'(x)=0})\iff$ $f$ is constant on $(a,b)$ 
 	- (q8.28) $(\forall{x\in{(a,b)},f'(x)\geq 0})\iff$ $f$ is **increasing** on $(a,b)$
 		- (8.18) $(\forall{x\in{(a,b)},f'(x)>0})\implies$ $f$ is **strictly increasing** on $(a,b)$
@@ -110,3 +113,11 @@
 - A point $(c,f(c))$ where the graph of a function has a tangent line and where the concavity changes is a **point of inflection**
 - The Second Derivative Test for Concavity #todo 
 - At a point of inflection (c, ƒ(c)), either ƒ″(c) = 0 or ƒ″(c) fails to exist.
+
+
+# Second Derivative 
+
+- (8.23) if $f'(x_{0})=0$ and $f''(x_{0})\neq 0$ then $x_{0}$ is local extremum of $f$
+	- if $f''(x_{0})> 0$ then $x_{0}$ is local minimum of $f$
+	- if $f''(x_{0})< 0$ then $x_{0}$ is local maximum of $f$
+

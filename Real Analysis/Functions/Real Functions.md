@@ -10,7 +10,6 @@
 		- $f$ is **strictly decreasing** if $\forall x_{1},x_{2}\in{I},~~ x_{1}<x_{2}\implies{f(x_{1})> f(x_{2})}$
 	- $f$ is **monotonic** if it's increasing or decreasing
 
-
 ## Bounded function 
 
 - $f$ is a real function that defined on a set $D$ is called **bounded** on $D$ if $f(D)$ is **bounded**.
@@ -45,7 +44,8 @@ ___
 - (5.41) **Discontinuity of Monotonic Function** is Jump Discontinuity
 	- if $f$ is monotonic in $(a,b)$ and let $x_{0}\in{(a.b)}$ be a discontinuity point, then it's the *jump discontinuity* point
 - (5.42) $f$ is monotonic on $I$. if the interval image $f(I)$ is also an interval, then $f$ is continuous on $I$
-- (5.43) $f$ is monotonic and continuous on $I$ then there exist a inverse fucntion $f^{-1}$ whose domain is $f(I)$ and its image is $I$ which $f^{-1}$ itself is monotonic and continuous on $f(I)$. ($f^{-1}$ is increasing of $f$ is decreasing, and vice versa)
+- $f$ is monotonic and continuous on $I$ then: 
+	- (5.43) there exist a inverse fucntion $f^{-1}$ whose domain is $f(I)$ and its image is $I$ which $f^{-1}$ itself is monotonic and continuous on $f(I)$. ($f^{-1}$ is increasing if $f$ is decreasing, and vice versa)
 
 ___
 
@@ -62,7 +62,6 @@ ___
 
 - (8.3) Extremum on $I$ is either *local extremum* of $f$ or *endpoint* of $I$
 - (8.4) **Fermat's theorem** (interior extremum theorem) - if $x_{0}\in{I}$ is local extremum of $f$, and $f$ is differentiable at $x_{0}$, then $f'(x_{0})=0$
-
 
 
 - $x_{0}$ is a **critical point** of $f$ if either $f'(x_{0})=0$ or $f'(x_{0})$ is undefined

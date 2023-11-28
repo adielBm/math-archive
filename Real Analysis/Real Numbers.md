@@ -64,24 +64,25 @@
 
 ## Absolut Value 
 
+- **Definition**:  $\displaystyle  {\displaystyle |a|={\begin{cases}a &  a\geq 0\\-a & a<0\end{cases}}}=\max\set{a,-a}$
 
-
-- Definition:  $\displaystyle  {\displaystyle |a|={\begin{cases}a &  a\geq 0\\-a & a<0\end{cases}}}$
-- $|a|=\max\set{a,-a}$
-- $-|a|\leq{a}\leq{|a|}$
-- Evenness $|a|=|{-}a|$
-- $|a|<r\iff{-r<a<r}$
-- 
-- Identity of indiscernibles $\displaystyle  |a-b|=0\iff a=b$
-- $|ab|=|a||b|$
-- Triangle inequality $|a+b|\leq|a|+|b|$
+- Non-negativity $|a|\geq 0$
+- Positive-definiteness $|a|=0\iff a=0$
+	- Identity of indiscernibles (equivalent to positive-definiteness) $\displaystyle  |a-b|=0\iff a=b$
+- Multiplicativity $|ab|=|a||b|$
+	- Preservation of division $\displaystyle  \left|{\frac {a}{b}}\right|={\frac {|a|}{|b|}}$ if $b\neq 0$
+	- Power Rule $|a^n|=|a|^n$
+- Subadditivity (specifically the triangle inequality) $|a+b|\leq|a|+|b|$
+	- Reverse triangle inequality $\displaystyle  |a-b|\geq {\bigl |}\left|a\right|-\left|b\right|{\bigr |}$
+	- Triangle inequality $\displaystyle  |a-b|\leq |a-c|+|c-b|$
 	- $(|a+b|=|a|+|b|)\iff{(a\geq 0 \land{b\geq 0})\lor(a\leq 0 \land{b\leq 0})}$
 	- $\displaystyle{\left|\sum_{i=1}^n{x_{i}}\right|\leq \sum_{i=1}^n |x_{i}|}$
-	- $|a-b|\leq{|a|+|b|}$
-	- $||a|-|b||\leq{|a-b|}$
-	- $|a^n|=|a|^n$
-	- $\displaystyle  \left|{\frac {a}{b}}\right|={\frac {|a|}{|b|}}$ if $b\neq 0$
-	- 
+- Idempotence ${\bigl|}{\left|a\right|}{\bigr |}=|a|$
+- Evenness $\displaystyle  \left|-a\right|=|a|$
+- Inequities
+	- $\displaystyle  |a|\leq b\iff -b\leq a\leq b$
+	- $\displaystyle  |a|\geq b\iff a\leq -b \lor a\geq b$
+	- $-|a|\leq{a}\leq{|a|}$
 
 ## Density
 
