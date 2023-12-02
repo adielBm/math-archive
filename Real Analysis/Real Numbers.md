@@ -99,3 +99,13 @@
 - (1.59) **Mean Inequalities** $HM\leq GM\leq AM$. $x_{1},\dots ,x_{n}$ are positive reals
   $$\frac{n}{\sum^{n}_{i=1}{\frac{1}{x_{i}}}}\quad\leq\quad{\sqrt[n]{ \prod^{n}_{i=1}x_{i}}}\quad\leq\quad \frac{1}{n}\sum^{n}_{i=1}x_{i}$$
 
+
+- $\forall x,y\in \mathbb{R}\quad  |\sqrt{|x|}-\sqrt{|y|}|\leq\sqrt{|x-y|}\leq\sqrt{|x|}+\sqrt{|y|}$
+
+## Floor & Ceiling
+
+-  $\text{floor}(x)=\displaystyle  \lfloor x\rfloor :=\max\{m\in \mathbb {Z} \mid m\leq x\}$ (also called *integral part* or *integer part*)
+	- $x-1<\lfloor x\rfloor\leq{x}< \lfloor x\rfloor+1$
+	- 
+-  $\text{ceil}(x)=\displaystyle  \lceil x\rceil :=\min\{n\in \mathbb {Z} \mid n\geq x\}$
+

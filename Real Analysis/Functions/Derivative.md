@@ -45,6 +45,11 @@
 	- $\displaystyle  {\frac {dz}{dx}}={\frac {dz}{dy}}\cdot {\frac {dy}{dx}}$
 
 
+## Root Function 
+
+- $(\sqrt{ x })'=\frac{1}{2\sqrt{ x }}$
+- $(\sqrt{ f(x) })'=\frac{f'(x)}{2\sqrt{ f(x) }}$
+
 ## Inverse functions
 
 > assuming: $f$ is *continuous* and *monotonic* on $I$

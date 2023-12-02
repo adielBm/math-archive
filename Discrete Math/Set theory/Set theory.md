@@ -8,6 +8,7 @@ $$\forall A \, \forall B \, ( \forall X \, (X \in A \iff X \in B) \implies A = B
 
 # Theorems 
 
+- **The Well-Ordering Principle** - Every nonempty subset of $\mathbb{N}$ has a smallest element
 - (1.16a) - $A\cap{B}\subseteq{A}$ and $A\cap{B}\subseteq{B}$
 - (1.16b) - $A\cap{A}=A$
 - (1.16c) - $A\cap{\emptyset}=\emptyset$

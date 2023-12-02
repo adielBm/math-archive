@@ -1,5 +1,5 @@
 $$\large \log_b{a}=x\quad\Longleftrightarrow\quad b^x=a$$
-## Logarithmic identities
+### Logarithmic identities
 
 - Log of the Base    $\log_{b}b=1 {\color{gray}\impliedby b^1=b}$
 - Log of Product   $\log_{c}({\color{red}a}{\color{blue}b})=\log_{c}{\color{red}a}+\log_{c}{\color{blue}b}$  
@@ -12,6 +12,7 @@ $$\large \log_b{a}=x\quad\Longleftrightarrow\quad b^x=a$$
 - Power of a Log ${\color{red}a}^{\log_b{\color{blue}c}}={\color{blue}c}^{\log_b{\color{red}a}}$ 
 	- $b^{\log_b{a}}=a$ (special case c=b)
 - Logarithm of Reciprocal $\log_b{(1/a)}=-\log_b{a}$
+- $\log_{b}{b^x}=x$
 
 ### Notation 
 
@@ -19,7 +20,12 @@ $$\large \log_b{a}=x\quad\Longleftrightarrow\quad b^x=a$$
 - $\lg^{(k)}{n}$
 	- $\lg{\lg{n}}=\lg({\lg{n}})=\lg^{(2)}{n}$
 
-# Binary logarithm $\log_2{n}=\lg{n}$
+
+## Natural logarithm
+
+- $\ln {x}=\log _{e}{(x)}$
+
+## Binary logarithm $\log_2{n}=\lg{n}$
 
 - $(\lg{n})^{\lg{n}}=n^{\lg\lg{n}}$
 - $2^{\lg\lg{n}}=\lg{n}$

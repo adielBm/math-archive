@@ -67,3 +67,44 @@ ___
 - $x_{0}$ is a **critical point** of $f$ if either $f'(x_{0})=0$ or $f'(x_{0})$ is undefined
 	- $x_{0}$ is a **stationary point** of $f$ if $f'(x)=0$
 - (8.19) if $x_{0}$ is local extremum (interior point) then $x_{0}$ a critical point
+
+# Exponential Functions
+
+- $f(x)=a^x$ where $a>0$
+	- $\text{dom}(f)=\mathbb{R}$
+	- $f$ is continuous on $\mathbb{R}$
+	- one-to-one function
+	- x-intercept: none
+	- y-intercept:  $(0,1)$
+	- $\text{Im}f=(0,\infty)$
+	- Inverse Function $f^{-1}=\log_{a}(x)$ (where $a\neq 1$)
+	- Limit  
+		- (Increasing) $a>1\implies$ 
+			- $\displaystyle\lim_{ x \to -\infty }f(x)=0$
+			- $\displaystyle\lim_{ x \to \infty }f(x)=\infty$
+		- (Decreasing) $0<a<1\implies$ 
+			- $\displaystyle\lim_{ x \to -\infty }f(x)=\infty$
+			- $\displaystyle\lim_{ x \to \infty }f(x)=0$
+	- [[Derivative#Exponential functions|Derivative]]
+
+# Logarithmic Functions
+
+- $f(x)=\log_{a}(x)$ where $a>0$ and $a\neq 1$
+	- $\text{dom}f=(0,\infty)$
+	- $\text{Im}f=\mathbb{R}$
+	- $f$ is continuous on $(0,\infty)$
+	- one-to-one function
+	- X-intercept: $(1,0)$
+	- Y-intercept: none
+	- Asymptotes
+		- Vertical asymptote at $x=0$
+		- Horizontal asymptote as $x$ approaches infinity
+	- Inverse Function $f^{-1}=a^x$
+	- Limit  
+		- (Increasing) $a>1\implies$ 
+			- $\displaystyle\lim_{ x \to 0^+}f(x)= -\infty$
+			- $\displaystyle\lim_{ x \to \infty }f(x)=\infty$
+		- (Decreasing) $0<a<1\implies$ 
+			- $\displaystyle\lim_{ x \to 0^+ }f(x)=\infty$
+			- $\displaystyle\lim_{ x \to \infty }f(x)=-\infty$
+	- [[Derivative#Logarithmic functions|Derivative]]

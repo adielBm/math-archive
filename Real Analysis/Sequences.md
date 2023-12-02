@@ -59,9 +59,7 @@ Theorems
 		-  if $(a_{n})$ is **increasing**, then $\lim_{ n \to \infty }(a_{n})=\infty$
 		-  if $(a_{n})$ is **decreasing**, then $\lim_{ n \to \infty }(a_{n})=-\infty$
 
-# Convergence & Limit
-
-## Convergent Sequence
+# Limit & Convergence
 
 - Definitions: $(a_n)$ converges to $L$
 	- $\displaystyle\lim_{ n \to \infty }{a_{n}}=L$
@@ -69,35 +67,39 @@ Theorems
 	- For each real number $\varepsilon >0$, there exists a natural number $N$ such that, for every natural number $n>N$, we have ${\displaystyle |a_{n}-L|<\varepsilon }$
 	- $\forall \varepsilon > 0 \left(\exists N \in \mathbb{N} \left(\forall n \in\mathbb{N}\left(n \geq N \implies |a_n - L| < \varepsilon \right)\right)\right)$
 - Definitions: Convergent Sequence 
-	- $(a_n)$ is **Convergent sequence** 
+	- $(a_n)$ is a **convergent sequence** 
 	- $\exists{x\in\mathbb{R}}:\displaystyle\lim_{ n \to \infty }{a_{n}}=x$
+	- $\exists{x\in\mathbb{R}}:\forall \varepsilon > 0 \left(\exists N \in \mathbb{N} \left(\forall n \in\mathbb{N}\left(n \geq N \implies |a_n - x| < \varepsilon \right)\right)\right)$
 	- (3.36. Cauchy's convergence test) $\forall{\varepsilon>0}\;\exists{N\in\mathbb{N}}:{m,n>N}\implies{|{a_{n}-a_{m}}|<\varepsilon}.$ (in words: $(a_n)$ is **Cauchy sequence** )
 	- (3.34 #todo) $(a_n)$ is bounded and has only one **subsequential limit**
+	- (q3.56) $\displaystyle  {\displaystyle \liminf _{n\to \infty }a_{n}=\limsup _{n\to \infty }a_{n}}$
 
 Arithmetic (2.28)
 
-- $(a_{n})_{n=1}^{\infty}$ and $(b_{n})_{n=1}^{\infty}$ are convergent
-	- $(c\cdot a_{n})_{n=1}^{\infty}$ is convergent, and $\lim_{ n \to \infty }({ca_{n})}=c\cdot\lim_{ n \to \infty }{a_{n}}$
-	- $\lim_{n\to\infty} (a_n \pm b_n) =  \lim_{n\to\infty} a_n \pm \lim_{n\to\infty} b_n$
-	- $\lim_{n\to\infty} (a_n \cdot b_n) =  \left(\lim_{n\to\infty} a_n \right)\cdot \left( \lim_{n\to\infty} b_n \right)$
-	- $\lim_{n\to\infty} \left(\frac{a_n}{b_n}\right) = \frac{\lim\limits_{n\to\infty} a_n}{\lim\limits_{n\to\infty} b_n}$ (provided $\lim_{n\to\infty} b_n \ne 0$)
-	- $\lim_{n\to\infty} a_n^k =  \left( \lim_{n\to\infty} a_n \right)^k$
+> $(a_{n})_{n=1}^{\infty}$ and $(b_{n})_{n=1}^{\infty}$ are convergent
 
-Theorems
+- $(c\cdot a_{n})_{n=1}^{\infty}$ is convergent, and $\displaystyle\lim_{ n \to \infty }({ca_{n})}=c\cdot\lim_{ n \to \infty }{a_{n}}$
+- $\displaystyle\lim_{n\to\infty} (a_n \pm b_n) =  \lim_{n\to\infty} a_n \pm \lim_{n\to\infty} b_n$
+- $\displaystyle\lim_{n\to\infty} (a_n \cdot b_n) =  \left(\lim_{n\to\infty} a_n \right)\cdot \left( \lim_{n\to\infty} b_n \right)$
+- $\displaystyle\lim_{n\to\infty} \left(\frac{a_n}{b_n}\right) = \frac{\lim\limits_{n\to\infty} a_n}{\lim\limits_{n\to\infty} b_n}$ (provided $\displaystyle\lim_{n\to\infty} b_n \ne 0$)
+- $\displaystyle\lim_{n\to\infty} a_n^k =  \left( \lim_{n\to\infty} a_n \right)^k$
+- $\displaystyle\lim_{n\to\infty} \sqrt{ a_{n} } =  \sqrt{    \lim_{n\to\infty} a_n}$ (provided $\forall{n},a_{n}>0$ )
 
-- (2.12) Uniqueness of limit of convergent sequence - $((a_n) \underset{n \to \infty}{\longrightarrow} L\land{(a_n) \underset{n \to \infty}{\longrightarrow} M})\implies{L=M}$
+
+Theorems:
+
 - (2.29) **Shift Rule** Let $N$ be a natural number. Let $(a_{n})$ be a sequence. Then $a_{n} → a$ if and only if the *shifted* sequence $a_{N+n}→a$.
+
+- Let $(a_n)$ be a convergent sequence
+	- (2.12) **Uniqueness** of the limit - $((a_n) \underset{n \to \infty}{\longrightarrow} L\land{(a_n) \underset{n \to \infty}{\longrightarrow} M})\implies{L=M}$
+	- (2.16) $(a_n)$ is bounded
+
 - Let $(a_n)$ and $(b_n)$ be two convergent sequences:
-	- (2.30) if $\lim_{n \to \infty} a_n <\lim_{n \to \infty} b_n$ then, for almost all $n$, we have $a_n < b_n$
-	- (2.31) if $a_n \leq b_n$ for each $n$, then $\lim_{n \to \infty} a_n \leq\lim_{n \to \infty} b_n$
-- (2.32) **Squeeze theorem**  - let $(a_n)$, $(b_n)$, and $(c_n)$ sequences, where (1.) $a_{n}\leq b_{n}\leq c_{n}$ for almost all $n$. (2.)   $(a_n)$, and $(c_n)$ are convergent. (3.) $\lim_{n \to \infty} a_n =\lim_{n \to \infty} c_n=L$. **then**, $\lim_{n \to \infty} b_n=L$
-- (2.33) $-1<a<1\implies\lim_{n \to \infty}a^n=0$
-- (2.34) $a>0\implies\lim_{n \to \infty}\sqrt[n]{ a }=1$
-- $\lim_{n\rightarrow\infty}\sqrt[n]n=1$
-- (q2.29) let $a_{1},\dots ,a_{k}\geq 0$, then $\lim_{n\to\infty} \sqrt[n]{\sum_{i=1}^k a_{i}^n}=\max\set{a_{1},\dots ,a_{k}}$
-- #todo For any continuous function $f$, if $\lim _{n\to \infty }a_{n}$ exists, then $\lim _{n\to \infty }f\left(a_{n}\right)$ exists too.
-- (2.16) every convergent sequence is bounded
-- (q3.56) $\displaystyle  {\displaystyle \liminf _{n\to \infty }a_{n}=\limsup _{n\to \infty }a_{n}}$ if and only if $(a_{n})$ is convergent
+	- (2.30) if $\displaystyle\lim_{n \to \infty} a_n <\lim_{n \to \infty} b_n$ then, for almost all $n$, we have $a_n < b_n$
+	- (2.31) if $a_n \leq b_n$ for each $n$, then $\displaystyle\lim_{n \to \infty} a_n \leq\lim_{n \to \infty} b_n$
+	- (2.32) **Squeeze theorem**  - Let $(x_n)$ be a sequence, where $a_{n}\leq x_{n}\leq b_{n}$ for almost all $n$, then, $\displaystyle\lim_{n \to \infty} a_n =\lim_{n \to \infty} b_n=L\implies\displaystyle\lim_{n \to \infty} x_n=L$
+
+> [[Sequence Limit Examples]]
 
 ### Null Sequence 
 
@@ -111,38 +113,48 @@ properties of null sequence $(a_{n})$
 
 - (2.22) product of **null** and **bounded** sequences is **null** sequence
 
-## Infinite limits
+## Infinite Limits
 
-**equivalent definitions**
-- $(a_{n})$ is said to **tend to infinity**, written $a_{n}\to \infty$, or $\lim _{n\to \infty }a_{n}=\infty$
-- For every real number $K$, there is a natural number $N$ such that for every natural number $n\geq N$, we have  $a_{n}>K$; that is, the sequence terms are eventually larger than any fixed $K$.
-- $\forall K\in \mathbb {R} \left(\exists N\in \mathbb {N} \left(\forall n\in \mathbb {N} \left(n\geq N\implies a_{n}>K\right)\right)\right).$
-- (2.39) $\lim_{n\to\infty}(-a_{n})=-\infty$
-
-**properties**
-- (2.40) If a sequence tends to infinity or minus infinity, then it is unbounded.
-- (2.41) If a sequence tends to infinity or minus infinity, then it is divergent.
-
-
+- **Infinity**
+	- $\displaystyle\lim _{n\to \infty }a_{n}=\infty$
+	- $a_{n}\to \infty$
+	- $(a_{n})$ is **tend to infinity**
+	- For every real number $K$, there is a natural number $N$ such that for every natural number $n\geq N$, we have  $a_{n}>K$; that is, the sequence terms are eventually larger than any fixed $K$.
+	- $\forall K\in \mathbb {R} \left(\exists N\in \mathbb {N} \left(\forall n\in \mathbb {N} \left(n\geq N\implies a_{n}>K\right)\right)\right)$
+	- (2.39) $\displaystyle\lim_{n\to\infty}(-a_{n})=-\infty$
+- **Minus Infinity**
+	- $\displaystyle\lim _{n\to \infty }a_{n}=-\infty$
+	- $a_{n}\to -\infty$
+	- $(a_{n})$ is **tend to minus infinity**
 
 theorems:
+
+- If a sequence tends to infinity or minus infinity, then:
+	- (2.40) it is unbounded
+	- (2.41 it is divergent
+
 - (2.44) #todo like 2.29 but for infinite limit 
 -  **Squeeze Theorem** for infinite limit 
 	- (2.45) if $a_{n}\to \infty$ and $b_{n}\geq a_{n}$ for almost all $n$, then $b_{n}\to \infty$
 	- (q2.40) if $a_{n}\to -\infty$ and $b_{n}\leq a_{n}$ for almost all $n$, then $b_{n}\to -\infty$
 
+
+
 - (2.43, q2.39) **arithmetics of infinite limits**
-	- ${a_{n}\to \infty}\land{b_{n}\to \infty}\implies a_{n}+b_{n}\to \infty$
-	- ${a_{n}\to \infty}\land{\lim_{ n \to \infty }b_{n}\in \mathbb{R}}\implies a_{n}+b_{n}\to \infty$
-	- ${a_{n}\to \infty}\land{b_{n}\to \infty}\implies a_{n}b_{n}\to \infty$
-	- ${a_{n}\to \infty}\land{\lim_{ n \to \infty }b_{n}>0}\implies a_{n}b_{n}\to \infty$
-	- ${a_{n}\to \infty}\implies 1/a_{n}\to0$
-	- (q2.57a) ${|a_{n}|\to \infty}\implies 1/a_{n}\to0$
-	- ${a_{n}\to 0}\land{a_{n}>0} \implies 1/a_{n}\to{\infty}$
-	- ${a_{n}\to \infty}\land{b_{n}\to (-\infty)} \implies a_{n}b_{n}\to{(-\infty)}$
-	- ${a_{n}\to (-\infty)}\land{b_{n}\to (-\infty)} \implies a_{n}b_{n}\to{\infty}\land  a_{n}+b_{n}\to{(-\infty)}$
-	- ${a_{n}\to 0}\land{a_{n}<0} \implies 1/a_{n}\to{(-\infty)}$
-	- ${a_{n}\to \infty}$ and ${b_{n}}$ is bounded $\implies a_{n}+b_{n}\to \infty$
+
+| $a_{n}$   | $b_{n}$          | $\implies$ | $a_{n}+b_{n}$ | $a_{n}b_{n}$ |
+| --------- | ---------------- | ---------- | ------------- | ------------ |
+| $\infty$  | $\infty$         |            | $\infty$      | $\infty$     |
+| $-\infty$ | $-\infty$        |            | $-\infty$     | $\infty$     |
+| $-\infty$ | $\infty$         |            |               | $-\infty$    |
+| $\infty$  | $L\in\mathbb{R}$ |            | $\infty$      |              |
+| $\infty$  | $L>0$            |            |               | $\infty$     |
+
+- ${a_{n}\to \infty}\implies 1/a_{n}\to0$
+- (q2.57a) ${|a_{n}|\to \infty}\implies 1/a_{n}\to0$
+- ${a_{n}\to 0}\land{a_{n}>0} \implies 1/a_{n}\to{\infty}$
+- ${a_{n}\to 0}\land{a_{n}<0} \implies 1/a_{n}\to{(-\infty)}$
+- ${a_{n}\to \infty}$ and ${b_{n}}$ is bounded $\implies a_{n}+b_{n}\to \infty$
 
 
 ## Ratio test
@@ -153,32 +165,6 @@ theorems:
 	- if $\lim _{n\to \infty }{\frac {a_{n+1}}{a_{n}}}>1$ (or $=\infty$) and $a_{n}>0$, then $\lim_{ n \to \infty }(a_{n})=\infty$
 	 
 
-
-# Order
-
-- $(a_{n})$ and $(b_{n})$ are **positive (!!!)**
-	- definitions
-		- $a_{n}=O(b_{n})\iff \exists{c>0}:{a_{n}\leq cb_{n}}$ (for all $n$) $\iff$ $(a_{n}/b_{n})$ is bounded (q2.44a)
-		- $a_{n}=o(b_{n})\iff {\lim_{ n \to \infty }(a_{n}/b_{n})=0}\iff{\lim_{ n \to \infty }(b_{n}/a_{n})=\infty}$
-	- theorems
-		- (q2.45a) $\lim_{ n \to \infty }(a_{n}/b_{n})=c\in{\mathbb{R}}\implies a_{n}=O(b_{n})$
-		- (q2.44b) $a_{n}=o(b_{n})\implies a_{n}=O(b_{n})$
-		- (q2.44c) $a_{n}=O(1)\iff{(a_{n})}$ is bounded
-		- (q2.45c) **Transitivity** - $a_{n}=o(b_{n})\land{b_{n}=o(c_{n})}\implies a_{n}=o(c_{n})$
-		- (2.49) for each $k$ natural, and $r>1$ real: $\lim_{ n \to \infty }\left( \frac{n^k}{r^n} \right)=0$ (*i.e.* $n^k=o(r^n)$, 2.50) 
-
-
-#  Mean Sequences
-
--  Arithmetic Mean Sequence
-	- (2.51) if $b_n=\frac{1}{n}\sum^{n}_{i=1}{a_i}$ then $(b_{n})$ is the **arithmetic mean sequence** of $(a_{n})$
-		- $\lim_{ n \to \infty }(a_{n})=L\in\mathbb{R}\implies \lim_{ n \to \infty }(b_{n})=L$
-		- $a_{n}\to \infty\implies b_{n}\to \infty$
-		- $a_{n}\to -\infty\implies b_{n}\to -\infty$
-
--  Geometric Mean Sequence
-	- (2.52) if $c_n=\sqrt[n]{\prod^{n}_{i=1}{a_i}}$ then $(c_{n})$ is the **geometric mean sequence** of $(a_{n})$
-		- #todo 
 
 # Cantor's Lemma
 
@@ -218,4 +204,30 @@ theorems
 - (3.32) **Bolzano–Weierstrass theorem** - Every bounded sequence has a subsequential limit.
 
 
+
+# Order
+
+- $(a_{n})$ and $(b_{n})$ are **positive (!!!)**
+	- definitions
+		- $a_{n}=O(b_{n})\iff \exists{c>0}:{a_{n}\leq cb_{n}}$ (for all $n$) $\iff$ $(a_{n}/b_{n})$ is bounded (q2.44a)
+		- $a_{n}=o(b_{n})\iff {\lim_{ n \to \infty }(a_{n}/b_{n})=0}\iff{\lim_{ n \to \infty }(b_{n}/a_{n})=\infty}$
+	- theorems
+		- (q2.45a) $\lim_{ n \to \infty }(a_{n}/b_{n})=c\in{\mathbb{R}}\implies a_{n}=O(b_{n})$
+		- (q2.44b) $a_{n}=o(b_{n})\implies a_{n}=O(b_{n})$
+		- (q2.44c) $a_{n}=O(1)\iff{(a_{n})}$ is bounded
+		- (q2.45c) **Transitivity** - $a_{n}=o(b_{n})\land{b_{n}=o(c_{n})}\implies a_{n}=o(c_{n})$
+		- (2.49) for each $k$ natural, and $r>1$ real: $\lim_{ n \to \infty }\left( \frac{n^k}{r^n} \right)=0$ (*i.e.* $n^k=o(r^n)$, 2.50) 
+
+
+#  Mean Sequences
+
+-  Arithmetic Mean Sequence
+	- (2.51) if $b_n=\frac{1}{n}\sum^{n}_{i=1}{a_i}$ then $(b_{n})$ is the **arithmetic mean sequence** of $(a_{n})$
+		- $\lim_{ n \to \infty }(a_{n})=L\in\mathbb{R}\implies \lim_{ n \to \infty }(b_{n})=L$
+		- $a_{n}\to \infty\implies b_{n}\to \infty$
+		- $a_{n}\to -\infty\implies b_{n}\to -\infty$
+
+-  Geometric Mean Sequence
+	- (2.52) if $c_n=\sqrt[n]{\prod^{n}_{i=1}{a_i}}$ then $(c_{n})$ is the **geometric mean sequence** of $(a_{n})$
+		- #todo 
 
