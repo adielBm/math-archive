@@ -161,7 +161,7 @@ theorems:
 
 - $(a_{n})$ is sequence (all are nonzero)
 
-- (2.48) if $\lim _{n\to \infty }\left|{\frac {a_{n+1}}{a_{n}}}\right|<1$ then $\lim_{ n \to \infty }(a_{n})=0$
+- (2.48) $\displaystyle\lim _{n\to \infty }\left|{\frac {a_{n+1}}{a_{n}}}\right|<1\implies\lim_{ n \to \infty }(a_{n})=0$
 	- if $\lim _{n\to \infty }{\frac {a_{n+1}}{a_{n}}}>1$ (or $=\infty$) and $a_{n}>0$, then $\lim_{ n \to \infty }(a_{n})=\infty$
 	 
 
