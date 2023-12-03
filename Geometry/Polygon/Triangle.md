@@ -1,6 +1,8 @@
 
+- A **triangle** (symbol $△$) is the union of three line segments that are determined by three noncollinear points.
+
 - All triangles are convex
-- The sum of the angles in each triangle is $180^\circ$.
+- In a triangle, the sum of the measures of the interior angles is $180^\circ$
 - **The Triangle Inequality** - The length of each side in a triangle is less than the sum of the lengths of the other sides.
 - If $a$, $b$, $c$ are positive real numbers each of which is less than the sum of the other two, then you can build a triangle whose side lengths are $a$, $b$, and $c$.
 
@@ -9,18 +11,29 @@
 - $\displaystyle\frac{{h_{b}b}}{2}$
 - **Heron formula** - Given a triangle whose side lengths are $a$, $b$, and $c$, let $p = \frac{a + b + c}{2}$ and then $S = \sqrt{p(p-a)(p-b)(p-c)}$ is the area of the triangle.
 
+# Triangle Classification 
+### Triangles Classified by Congruent Sides
 
-# Types
-
-- **Equilateral triangle** 
-	- In a triangle, all of whose sides are equal to each other, all the angles are also equal to each other.
-- **Isosceles triangle**
+- **Scalene triangle** - None of Congruent Sides
+- **Isosceles triangle** - Two of Congruent Sides
 	- In an isosceles triangle, the base angles are equal to each other.
 	- If two angles in a triangle are equal in size, then the opposite sides are equal in length.
 	- A triangle is isosceles if and only if two of its angles are equal to each other
 	- Let $\triangle{ABC}$ be an isosceles triangle, suppose $\overline{AB} = \overline{AC}$. then the altitude, median, and angle bisector from the vertex $A$ all coincide
-- **Right triangle**
+- **Equilateral triangle** - Three of Congruent Sides
+	- In a triangle, all of whose sides are equal to each other, all the angles are also equal to each other.
+	- Each angle of an equiangular triangle measures 60°
+
+
+### Triangles Classified by Angles
+
+- **Right triangle** - One right angle
 	- **Pythagoras theorem** - In a right-angled triangle, the square of the hypotenuse is equal to the sum of the squares of the lengths of the perpendiculars: $a^2 + b^2 = c^2$
+	- The acute angles of a right triangle are complementary.
+	- The area of a right triangle with legs of lengths $a$ and $b$ is given by $\frac{ab}{2}$.
+- Equiangular - All angles congruent
+- Acute - All angles acute
+- Obtuse - One obtuse angle
 
 # Line Segments
 
@@ -30,8 +43,9 @@
 	- The three altitudes in a triangular triangle (or their continuations) meet at one point.
 - The **perpendicular bisector** of a line segment is a line which meets the segment at its midpoint perpendicularly.
 
-
-
+- The three perpendicular bisectors of the sides of a triangle are concurrent
+- The three altitudes of a triangle are concurrent.
+- The three medians of a triangle are concurrent at a point that is two-thirds the distance from any vertex to the midpoint of the opposite side.
 # Congruence $\cong$
 
 - Triangle Congruence Theorem

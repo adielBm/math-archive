@@ -1,13 +1,36 @@
 
-# Angles 
+- An **angle** is the union of two rays that share a common endpoint
+- The **bisector of an angle** is the ray that separates the given angle into two congruent angles.
+	- There is one and only one bisector for a given angle.
+
+
+
+- **Protractor Postulate** - The measure of an angle is a unique positive number
+
+
+
+## Angle Classification
+
+- Acute angle
+- Right angle
+- Obtuse angle
+- Straight angle
+- Reflex angle
+
+
+## Angle Relationships
 
 - Complementary angles are two angles with a sum of $90^\circ$
 - Supplementary angles are two angles with a sum of $180^\circ$
-- Adjacent Angles are two angles that have a common side and a common vertex, and don't overlap
+- Two angles are **adjacent** if they have a common vertex and a common side between them.
+- **Congruent angles** are two angles with the same measure
 
+### intersection of two lines
 
 - **Vertical angles** are the pair of congruent and opposing (non-adjacent) angles formed at the intersection of two lines. 
 	- Vertical angles are equal to each other
+
+### line that intersect two lines
 
 - **Corresponding angles** are angles which occupy the same relative position at each intersection where a straight line crosses two others. If the two lines are parallel, the corresponding angles are equal.
 	- Corresponding angles formed between two parallel lines are equal to each other.
