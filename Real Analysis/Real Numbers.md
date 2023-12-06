@@ -84,6 +84,7 @@
 	- $\displaystyle  |a|\geq b\iff a\leq -b \lor a\geq b$
 	- $-|a|\leq{a}\leq{|a|}$
 
+
 ## Density
 
 - (d1.65) $A\subseteq\mathbb{R}$ **is dense in** $\mathbb{R}$ if for every reals $x<y$ there exists $a\in{A}$ such that $a\in(x,y)$

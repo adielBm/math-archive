@@ -109,4 +109,4 @@ ___
 It's not study in the course
 
 - Cross product - מכפלה וקטורית
-- 
+	- $\displaystyle  \mathbf {a} \times \mathbf {b} =\|\mathbf {a} \|\|\mathbf {b} \|\sin(\theta )\,\mathbf {n}$

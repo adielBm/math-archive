@@ -1,10 +1,12 @@
 # Aritmetic & Properties
 
-## Dot Product
+## Dot Product (scalar product)
+
 also *Euclidean inner product*
 
 **Definition:**
-- If $\mathbf{u}=(u_{1},u_{2},\dots,u_{n}), \quad\mathbf{v}=(v_{1},v_{2},\dots,v_{n})\in{\mathbb{R}^n}$, then $\mathbf{u}+\mathbf{v}=u_{1}v_{1}+u_{2}v_{2}+\dots+u_{n}v_{n}$
+- $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\sum _{i=1}^{n}a_{i}b_{i}=a_{1}b_{1}+a_{2}b_{2}+\cdots +a_{n}b_{n}}$
+- $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\left\|\mathbf {a} \right\|\left\|\mathbf {b} \right\|\cos \theta ,}$
 
 **Properties:** (12.1.2)
 - Symmetry $\textbf{a}\cdot\textbf{b}=\textbf{b}\cdot\textbf{a}$

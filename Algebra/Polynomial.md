@@ -8,6 +8,9 @@
 - A number $c$ is called **a root of** $p(x)$ if $p(c)=0$
 - $p(x)=0$ is the zero polynomial. (its degree is $-1$, $-\infty$ or undefined)
 - $p_{2}\mid{p_{1}}$ ($p_{2}$ **divides** $p_{1}$, or $p_{1}$ **is divided by** $p_{2}$) if there exists polynomial $q$ such that $p_{1}=p_{2}q$
+- A **monic polynomial** is a non-zero polynomial in which the leading coefficient is equal to 1.
+	- $\displaystyle  x^{n}+c_{n-1}x^{n-1}+\cdots +c_{2}x^{2}+c_{1}x+c_{0},$
+
 
 ## Theorems 
 

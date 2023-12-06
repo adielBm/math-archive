@@ -76,14 +76,15 @@ Theorems
 
 Arithmetic (2.28)
 
-> $(a_{n})_{n=1}^{\infty}$ and $(b_{n})_{n=1}^{\infty}$ are convergent
+> Assuming $(a_{n})$ and $(b_{n})$ are convergent
 
-- $(c\cdot a_{n})_{n=1}^{\infty}$ is convergent, and $\displaystyle\lim_{ n \to \infty }({ca_{n})}=c\cdot\lim_{ n \to \infty }{a_{n}}$
-- $\displaystyle\lim_{n\to\infty} (a_n \pm b_n) =  \lim_{n\to\infty} a_n \pm \lim_{n\to\infty} b_n$
-- $\displaystyle\lim_{n\to\infty} (a_n \cdot b_n) =  \left(\lim_{n\to\infty} a_n \right)\cdot \left( \lim_{n\to\infty} b_n \right)$
-- $\displaystyle\lim_{n\to\infty} \left(\frac{a_n}{b_n}\right) = \frac{\lim\limits_{n\to\infty} a_n}{\lim\limits_{n\to\infty} b_n}$ (provided $\displaystyle\lim_{n\to\infty} b_n \ne 0$)
-- $\displaystyle\lim_{n\to\infty} a_n^k =  \left( \lim_{n\to\infty} a_n \right)^k$
-- $\displaystyle\lim_{n\to\infty} \sqrt{ a_{n} } =  \sqrt{    \lim_{n\to\infty} a_n}$ (provided $\forall{n},a_{n}>0$ )
+- **Multiple Rule** $(c\cdot a_{n})_{n=1}^{\infty}$ is convergent, and $\displaystyle\lim_{ n \to \infty }({ca_{n})}=c\cdot\lim_{ n \to \infty }{a_{n}}$
+- **Sum Rule** - $\displaystyle\lim_{n\to\infty} (a_n \pm b_n) =  \lim_{n\to\infty} a_n \pm \lim_{n\to\infty} b_n$
+- **Product Rule** - $\displaystyle\lim_{n\to\infty} (a_n \cdot b_n) =  \left(\lim_{n\to\infty} a_n \right)\cdot \left( \lim_{n\to\infty} b_n \right)$
+- **Quotient Rule** - $\displaystyle\lim_{n\to\infty} \left(\frac{a_n}{b_n}\right) = \frac{\lim\limits_{n\to\infty} a_n}{\lim\limits_{n\to\infty} b_n}$ (provided $\displaystyle\lim_{n\to\infty} b_n \ne 0$)
+	- **Reciprocal Rule** - $\displaystyle\lim_{n\to\infty} \left(\frac{1}{a_n}\right) = \frac{1}{\lim\limits_{n\to\infty} a_n}$
+- $\forall k\in \mathbb{N}, \displaystyle\lim_{n\to\infty} a_n^k =  \left( \lim_{n\to\infty} a_n \right)^k$
+- $(\forall{n},a_{n}>0)\implies\displaystyle\lim_{n\to\infty} \sqrt{ a_{n} } =  \sqrt{    \lim_{n\to\infty} a_n}$
 
 
 Theorems:
@@ -101,17 +102,21 @@ Theorems:
 
 > [[Sequence Limit Examples]]
 
-### Null Sequence 
+## Null Sequence 
 
-definitions 
-- (d2.21) $(a_{n})$ is null sequence 
+- (d2.21) $(a_{n})$ is **null sequence** 
 - $\displaystyle \lim_{n \mathop \to \infty} {a}_n=0$
 - (q2.20a) $(|a_{n}|)$ is null sequence
+- $\forall \varepsilon > 0,\exists N \in \mathbb{N}: \forall n \in\mathbb{N},(n \geq N \implies |a_n| < \varepsilon)$
 
-properties of null sequence $(a_{n})$
-- $(a_{n})$ is bounded sequence
-
+- A null sequence is bounded sequence
 - (2.22) product of **null** and **bounded** sequences is **null** sequence
+- **Squeeze theorem** - if $(b_{n})$ is null sequence and $|a_{n}|<b_{n}$ for all $n$, then, $(a_{n})$ is null sequence
+
+> [!Strategy] Strategy for using the definition of null sequence 
+> - To show that $(a_{n})$ is **null**, solve the inequality $|a_{n}|<\varepsilon$ to find a number $N$ (generally depending on $\varepsilon$) such that $|a_{n}|<\varepsilon$ for all $n > N$.
+> - To show that $(a_{n})$ is **not null**, find ONE value of $\varepsilon$ for which there is NO number $N$ such that $|a_{n}|<\varepsilon$, for all $n > N$.
+
 
 ## Infinite Limits
 

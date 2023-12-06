@@ -1,4 +1,4 @@
-### vector addition
+### Vector Addition
 
 | Axioms of *vector addition* |                                                      |                                   |
 | --------------------------- | ---------------------------------------------------- | --------------------------------- |
@@ -8,7 +8,7 @@
 | Identity element            | ${\exists}\mathbf{0}\in{F^{n}:{\mathbf{a+0=0+a=a}}}$ | $\forall{\mathbf{a}\in{F^n}}$     |
 | Inverse elements            | ${\exists}\mathbf{-a}\in{F^{n}:{\mathbf{a+(-a)=0}}}$ | $\forall{\mathbf{a}\in{F^n}}$     |
 
-### scalar multiplication
+### Scalar Multiplication
 
 | Axioms of *scalar multiplication*                                 |                                           |                                                    |
 | ----------------------------------------------------------------- | ----------------------------------------- | -------------------------------------------------- |
