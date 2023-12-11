@@ -64,14 +64,16 @@ $p\rightarrow{q}$ is true unless, $p$ is true and $q$ is false.
 - $p\leftrightarrow{q}\equiv{q\leftrightarrow{p}\equiv{(p\rightarrow{q})\land{(q\rightarrow{p})}\equiv{(p\land{q})\lor{((\lnot{p})\land{(\lnot{q})})}}}}$
 
 ## Logical consequence 
+
 #### (Defintion 3)
 
 #### Theorem (5)
 - 
 #### Theorem (6)
-- ***Modus ponens***: $P \to Q,\; P\;\; \vdash\;\; Q$
-- **Modus tollens**: $P \rightarrow Q \therefore\neg Q\rightarrow \neg P$
 
-
+- Modus ponens (MP)
+	- $P \to Q,\; P\;\; \vdash\;\; Q$
+- Modus tollens (MT)
+	- $\displaystyle  P\rightarrow Q,\neg Q  \therefore \neg P$
 
 - $((a\rightarrow{b})\rightarrow{c})\vdash(a\rightarrow({b}\rightarrow{c}))$

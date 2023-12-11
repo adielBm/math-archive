@@ -236,3 +236,5 @@ theorems
 	- (2.52) if $c_n=\sqrt[n]{\prod^{n}_{i=1}{a_i}}$ then $(c_{n})$ is the **geometric mean sequence** of $(a_{n})$
 		- #todo 
 
+
+- (q2.62) **Stolz–Cesàro theorem** - if $(b_{n})$ is a strictly monotone and divergent sequence, then $\displaystyle  \lim _{n\to \infty }{\frac {a_{n+1}-a_{n}}{b_{n+1}-b_{n}}}=\displaystyle  \lim _{n\to \infty }{\frac {a_{n}}{b_{n}}}$
