@@ -65,11 +65,12 @@ $p\rightarrow{q}$ is true unless, $p$ is true and $q$ is false.
 
 ## Logical consequence 
 
-#### (Defintion 3)
 
-#### Theorem (5)
-- 
-#### Theorem (6)
+- **Syntactic consequence**: $\vdash$
+- **Semantic consequence**: $\models$
+
+
+
 
 - Modus ponens (MP)
 	- $P \to Q,\; P\;\; \vdash\;\; Q$

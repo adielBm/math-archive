@@ -105,8 +105,7 @@
 
 ## Floor & Ceiling
 
--  $\text{floor}(x)=\displaystyle  \lfloor x\rfloor :=\max\{m\in \mathbb {Z} \mid m\leq x\}$ (also called *integral part* or *integer part*)
-	- $x-1<\lfloor x\rfloor\leq{x}< \lfloor x\rfloor+1$
-	- 
--  $\text{ceil}(x)=\displaystyle  \lceil x\rceil :=\min\{n\in \mathbb {Z} \mid n\geq x\}$
+- $\text{floor}(x)=\displaystyle  \lfloor x\rfloor :=\max\{m\in \mathbb {Z} \mid m\leq x\}$ (also called *integral part* or *integer part*)
+	- (1.64) $x-1<\lfloor x\rfloor\leq{x}< \lfloor x\rfloor+1$
+- $\text{ceil}(x)=\displaystyle  \lceil x\rceil :=\min\{n\in \mathbb {Z} \mid n\geq x\}$
 

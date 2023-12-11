@@ -83,7 +83,26 @@ A formal system is said to be recursive (i.e. effective) or recursively enumerab
 -  #todo  (Grammar) $\set{V_{T}, V_N , S, R}$, where $V_T$ is the set of terminal elements, $V_N$ is the set of non-terminals, $S$ is a member of $V_N$, and $R$ is a finite set of rules
 
 
-- A **context-free grammar** $G$ is defined by $\displaystyle  G=(V,\Sigma ,R,S)$, where
+## Unrestricted Grammar
+
+An **unrestricted grammar** is a formal grammar $\displaystyle {\textstyle G=(N,T,P,S)}$, where
+
+- $\displaystyle N$ is a finite set of nonterminal symbols,
+- $\displaystyle T$ is a finite set of terminal symbols with $\displaystyle N$ and $\displaystyle T$ disjoint,
+- $\displaystyle P$ is a finite set of production rules of the form $\displaystyle \alpha \to \beta$ , where $\displaystyle \alpha$ and $\displaystyle \beta$ are strings of symbols in $\displaystyle N\cup T$ and $\displaystyle \alpha$ is not the empty string, and
+- $\displaystyle S\in N$ is a specially designated start symbol
+
+As the name implies, there are no real restrictions on the types of production rules that unrestricted grammars can have.
+
+
+
+## Context-sensitive Grammar (CSG)
+
+- A **context-sensitive grammar** is a formal grammar in which the left-hand sides and right-hand sides of any production rules may be surrounded by a context of terminal and nonterminal symbols. 
+
+## Context-Free Grammar (CFG)
+
+- A **context-free grammar** is defined by $\displaystyle  G=(V,\Sigma ,R,S)$, where
 	- $V$ is a finite set; each element $\displaystyle v\in V$ is called a **nonterminal character** or a variable. 
 		- Each variable represents a different type of phrase or clause in the sentence. 
 		- Variables are also sometimes called syntactic categories. 
@@ -111,3 +130,16 @@ A formal system is said to be recursive (i.e. effective) or recursively enumerab
 ___
 
 - **formation rules** are rules for describing which strings of symbols formed from the alphabet of a formal language are syntactically valid within the language.
+
+
+
+- A **proof calculus** (or **proof system**) includes the components
+	- Formal language: The set L of formulas admitted by the system, for example, propositional logic or first-order logic.
+	- Rules of inference: List of rules that can be employed to prove theorems from axioms and theorems.
+	- Axioms: Formulas in L assumed to be valid. All theorems are derived from axioms.
+
+
+- Let L be a formal language. A **proof system** P for L comprises: Axioms and/or axiom schemata; Rules of inference for deriving theorems.
+	- Also known as: axiom system, mathematical theory
+
+- Formal Proof
