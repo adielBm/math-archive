@@ -21,7 +21,7 @@
 > In some applications, especially in logic, the **alphabet** is also known as the **vocabulary** and **words** are known as **formulas** or **sentences**; this breaks the letter/word metaphor and replaces it by a word/sentence metaphor.
 
 
-> #todo  Some of the elements of the vocabulary cannot be replaced by other symbols. These are called **terminals**, and the other members of the vocabulary, which can be replaced by other symbols, are called **nonterminals**.
+
 
 # Formal Language
 
@@ -82,6 +82,8 @@ A formal system is said to be recursive (i.e. effective) or recursively enumerab
 
 -  #todo  (Grammar) $\set{V_{T}, V_N , S, R}$, where $V_T$ is the set of terminal elements, $V_N$ is the set of non-terminals, $S$ is a member of $V_N$, and $R$ is a finite set of rules
 
+
+> #todo  Some of the elements of the vocabulary cannot be replaced by other symbols. These are called **terminals**, and the other members of the vocabulary, which can be replaced by other symbols, are called **nonterminals**.
 
 ## Unrestricted Grammar
 
