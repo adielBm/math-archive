@@ -11,7 +11,6 @@
 - A **monic polynomial** is a non-zero polynomial in which the leading coefficient is equal to 1.
 	- $\displaystyle  x^{n}+c_{n-1}x^{n-1}+\cdots +c_{2}x^{2}+c_{1}x+c_{0},$
 
-
 ## Theorems 
 
 - **Fundamental Theorem of Algebra** - every non-zero, single-variable, degree $n$ polynomial with complex coefficients has, counted with multiplicity, exactly $n$ complex roots

@@ -2,7 +2,7 @@
 
 >  consts: $a$ = constant acceleration, $v_{0}$ = inital velocity, $x_{0}$ = inital position
 
-### Zero Acceleration (Const Velocity)
+### Zero Acceleration
 
 - $v=v_{0}$
 - $x=x_{0}+v_{0}t$
