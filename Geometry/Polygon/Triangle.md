@@ -7,29 +7,56 @@
 - If $a$, $b$, $c$ are positive real numbers each of which is less than the sum of the other two, then you can build a triangle whose side lengths are $a$, $b$, and $c$.
 
 
-| Triangle                   |                                              |
-| -------------------------- | -------------------------------------------- |
-| Area                       | $A=\frac{h_{b}b}{2}=\sqrt{p(p-a)(p-b)(p-c)}=\frac{1}{2}rP$ |
-| Base                       | $b$                                          |
-| Height                     | $h_{b}$                                      |
-| Sides Length               | $a,b,c$                                      |
-| Semiperimeter              | $p=\frac{a+b+c}{2}$                          |
-| Perimeter                  | $P=a+b+c$                                             |
-| Radius of inscribed circle | $r$                                          |
+| Triangle      |                                                                |
+| ------------- | -------------------------------------------------------------- |
+| Area          | $A=\frac{h_{b}b}{2}=\sqrt{p(p-a)(p-b)(p-c)}=rp=\frac{abc}{4R}$ |
+| Base          | $b$                                                            |
+| Height        | $h_{b}$                                                        |
+| Sides Length  | $a,b,c$                                                        |
+| Semiperimeter | $p=\frac{a+b+c}{2}$                                            |
+| Perimeter     | $P=a+b+c$                                                      |
+| Inradius      | $\displaystyle{r=\frac{A}{p}}$                                 |
+| Circumradius  | $R=\frac{abc}{4A}=$                                            |
+
+
+- The **incircle** (or **inscribed circle**) of a triangle is the largest circle that can be contained in the triangle; it touches (is tangent to) the three sides. 
+	- The center of the incircle is a triangle center called the triangle's incenter
+- The **circumcircle** (or **circumscribed circle**) of a triangle is a circle that passes through all three vertices. 
+	- The center of this circle is called the **circumcenter** of the triangle 
+	- Its radius is called the **circumradius**
 
 # Triangle Classification 
 ### Triangles Classified by Congruent Sides
 
+#### Scalene triangle
+
 - **Scalene triangle** - None of Congruent Sides
+
+#### Isosceles triangle
+
 - **Isosceles triangle** - Two of Congruent Sides
 	- In an isosceles triangle, the base angles are equal to each other.
 	- If two angles in a triangle are equal in size, then the opposite sides are equal in length.
 	- A triangle is isosceles if and only if two of its angles are equal to each other
 	- Let $\triangle{ABC}$ be an isosceles triangle, suppose $\overline{AB} = \overline{AC}$. then the altitude, median, and angle bisector from the vertex $A$ all coincide
+
+#### Equilateral triangle
+
 - **Equilateral triangle** - Three of Congruent Sides
 	- In a triangle, all of whose sides are equal to each other, all the angles are also equal to each other.
 	- Each angle of an equiangular triangle measures 60°
 
+
+| Equilateral triangle |                                                                          |
+| -------------------- | ------------------------------------------------------------------------ |
+| Angle                | $60^{\circ}=\frac{\pi}{3}$                                               |
+| Area                 | $\displaystyle A=\frac{\sqrt{ 3 }}{4}a^2={\frac {3{\sqrt {3}}}{4}}R^{2}$ |
+| Height               | $h=\frac{\sqrt{ 3 }}{2}a$                                                |
+| Sides Length         | $a=b=c$                                                                  |
+| Permiter             | $P=3a$                                                                   |
+| Inradius             | $r=\frac{\sqrt{ 3 }}{6}a=\frac{R}{2}=\frac{h}{3}$                        |
+| Circumradius         | $R=\frac{a}{\sqrt{ 3 }}=\frac{2h}{3}$                                    |
+| Apothem                     | $\displaystyle\frac{h}{3}$                                                                         |
 
 ### Triangles Classified by Angles
 
@@ -40,16 +67,16 @@
 	- The area of a right triangle with legs of lengths $a$ and $b$ is given by $\frac{ab}{2}$.
 
 
-| Right Triangle                   |                      |
-| -------------------------- | -------------------- |
-| Area                       | $A=\frac{ab}{2}$     |
-| Legs                       | $a,b$                |
-| Hypotenuse                 | $c=\sqrt{ a^2+b^2 }$ |
-| Sides Length               | $a,b,c$              |
-| Semiperimeter              | $p=\frac{a+b+c}{2}$  |
-| Perimeter                  | $P=a+b+c$            |
-| Radius of inscribed circle | $r$                  |
-
+| Right Triangle |                      |
+| -------------- | -------------------- |
+| Area           | $A=\frac{ab}{2}$     |
+| Legs           | $a,b$                |
+| Hypotenuse     | $c=\sqrt{ a^2+b^2 }$ |
+| Sides Length   | $a,b,c$              |
+| Semiperimeter  | $p=\frac{a+b+c}{2}$  |
+| Perimeter      | $P=a+b+c$            |
+| Inradius       | $r=$                 |
+| Circumradius   |  $R=$                    |
 
 
 - Equiangular - All angles congruent
