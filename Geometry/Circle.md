@@ -5,8 +5,9 @@
 - Arc
 - Chord
 - Diameters
-- Inscribed Angle
-- Circumscribed circle (or circumcircle)
+- Inscribed Angle 
+- **incircle** or **inscribed circle** (מעגל חסום)
+- Circumscribed circle (or circumcircle) (מעגל חוסם)
 - A **locus** is the set of all points and only those points that satisfy a given condition (or set of conditions)
 
 - A **segment** of a circle is a region bounded by a chord and its minor (or major) arc.

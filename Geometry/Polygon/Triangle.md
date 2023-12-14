@@ -6,10 +6,16 @@
 - **The Triangle Inequality** - The length of each side in a triangle is less than the sum of the lengths of the other sides.
 - If $a$, $b$, $c$ are positive real numbers each of which is less than the sum of the other two, then you can build a triangle whose side lengths are $a$, $b$, and $c$.
 
-## Area
 
-- $\displaystyle\frac{{h_{b}b}}{2}$
-- **Heron formula** - Given a triangle whose side lengths are $a$, $b$, and $c$, let $p = \frac{a + b + c}{2}$ and then $S = \sqrt{p(p-a)(p-b)(p-c)}$ is the area of the triangle.
+| Triangle                   |                                              |
+| -------------------------- | -------------------------------------------- |
+| Area                       | $A=\frac{h_{b}b}{2}=\sqrt{p(p-a)(p-b)(p-c)}=\frac{1}{2}rP$ |
+| Base                       | $b$                                          |
+| Height                     | $h_{b}$                                      |
+| Sides Length               | $a,b,c$                                      |
+| Semiperimeter              | $p=\frac{a+b+c}{2}$                          |
+| Perimeter                  | $P=a+b+c$                                             |
+| Radius of inscribed circle | $r$                                          |
 
 # Triangle Classification 
 ### Triangles Classified by Congruent Sides
@@ -28,9 +34,24 @@
 ### Triangles Classified by Angles
 
 - **Right triangle** - One right angle
+
 	- **Pythagoras theorem** - In a right-angled triangle, the square of the hypotenuse is equal to the sum of the squares of the lengths of the perpendiculars: $a^2 + b^2 = c^2$
 	- The acute angles of a right triangle are complementary.
 	- The area of a right triangle with legs of lengths $a$ and $b$ is given by $\frac{ab}{2}$.
+
+
+| Right Triangle                   |                      |
+| -------------------------- | -------------------- |
+| Area                       | $A=\frac{ab}{2}$     |
+| Legs                       | $a,b$                |
+| Hypotenuse                 | $c=\sqrt{ a^2+b^2 }$ |
+| Sides Length               | $a,b,c$              |
+| Semiperimeter              | $p=\frac{a+b+c}{2}$  |
+| Perimeter                  | $P=a+b+c$            |
+| Radius of inscribed circle | $r$                  |
+
+
+
 - Equiangular - All angles congruent
 - Acute - All angles acute
 - Obtuse - One obtuse angle

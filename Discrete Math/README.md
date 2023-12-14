@@ -1,3 +1,6 @@
+- good notebook  https://publish.obsidian.md/mth225/START+HERE
+
+## Terms 
 
 - Asymmetric
 	- openu.20476: אנטי סימטרי
