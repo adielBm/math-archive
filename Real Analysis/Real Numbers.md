@@ -102,6 +102,11 @@
 
 
 - $\forall x,y\in \mathbb{R}\quad  |\sqrt{|x|}-\sqrt{|y|}|\leq\sqrt{|x-y|}\leq\sqrt{|x|}+\sqrt{|y|}$
+- $x>0\implies \frac{1}{x}>0$
+- $a>b>0\implies{0<\frac{1}{a}<\frac{1}{b}}$
+- $x>0\implies x+\frac{1}{x}\geq 2$
+- $a,b>0\implies \frac{a}{b}>0$
+- $a,b\geq 0\implies{(a>b\iff{a^n>b^n})}$
 
 ## Floor & Ceiling
 
