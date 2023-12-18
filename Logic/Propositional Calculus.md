@@ -1,12 +1,3 @@
-## Material conditional $\rightarrow$
-$p\rightarrow{q}$ is true unless, $p$ is true and $q$ is false.
-
-- Contraposition: $p\rightarrow{q}\equiv{(\lnot{q})\rightarrow{(\lnot{p})}}$
-- Import–export: $p\rightarrow(q\rightarrow{r})\equiv{(p\land{q})\rightarrow{r}}$
--  $p\rightarrow{q}\equiv{\lnot({p}\land(\lnot{q}))}$
-- Material implication $p\rightarrow{q}\equiv{\lnot{p}\lor{q}}$
-- Transitivity: $(p \to q) \land (q \to r) \models p \to r$
-
 
 ## Propositional Equivalences 
 
@@ -20,11 +11,25 @@ $p\rightarrow{q}$ is true unless, $p$ is true and $q$ is false.
 - The compound propositions $p$ and $q$ are called **logically equivalent** if $p\leftrightarrow{q}$ is a tautology. The notation $p \equiv q$ denotes that $p$ and $q$ are logically equivalent. 
 
 
+##  Logical Connectives (Logical Operator)
+
+- Logical conjunction $\land$
+- Logical disjunction $\lor$
+- logical complement (Negation) $\lnot$
+
+- Material conditional $\rightarrow$
+	- $p\rightarrow{q}$ is true unless, $p$ is true and $q$ is false.
+	- Contraposition: $p\rightarrow{q}\equiv{(\lnot{q})\rightarrow{(\lnot{p})}}$
+	- Import–export: $p\rightarrow(q\rightarrow{r})\equiv{(p\land{q})\rightarrow{r}}$
+	-  $p\rightarrow{q}\equiv{\lnot({p}\land(\lnot{q}))}$
+	- Material implication $p\rightarrow{q}\equiv{\lnot{p}\lor{q}}$
+	- Transitivity: $(p \to q) \land (q \to r) \models p \to r$
+
+
 >***Tautology** is Negation of Contradiction. 
 >**Contradiction** is Negation of Tautology.*
 
-
-### Logical Equivalences
+## Logical Equivalences
 
 - Double negation law 
 	- $\lnot\lnot{p}\equiv{p}$
