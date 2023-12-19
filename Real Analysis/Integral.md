@@ -6,6 +6,15 @@ $${\color{gray} f=F'\implies}\displaystyle\int f(x) dx=F(x)+C$$
 - The process of finding a function from its derivative (i.e. finding an antiderivative) is called **antidifferentiation** (or **integration**)
 - A procedure for finding areas via *antidifferentiation* is called the **antiderivative method**
 
+
+### Properties 
+
+- Suppose that $F(x)$ and $G(x)$ are antiderivatives of $f(x)$ and $g(x)$, respectively
+	- $\displaystyle\int cf(x) \, dx=cF(x)+C$
+	- $\displaystyle \int [f(x)\pm g(x)] \, dx=F(x)\pm G(x)+C$
+
+
+
 ## Definite Integral
 
 - $f(x)$ is continuous on $[a ,b]$
@@ -24,7 +33,13 @@ $$\displaystyle{\int^{b}_{a} f(x) \, dx=\lim_{ n \to \infty }\sum^{n}_{i=1} f(x^
 
 ## The Area Problem 
 
+
+
+
 - Given a function $f$ that is continuous and nonnegative on an interval $[a, b]$, find the area $A$ of the region that lies between the graph of $f$ and the interval $[a, b]$ on the $x$-axis.
+
+- Find antiderivative $F$ of $f$ on $[a,b]$, and then $\displaystyle\int^{b}_{a} f(x) \, dx=F(b)-F(a)$ is the area.
+
 
 
 - Rectangle Approximation Method

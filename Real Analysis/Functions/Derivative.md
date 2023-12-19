@@ -110,6 +110,9 @@
 - **Darboux's theorem** - $f$ is differentiable on the $(a,b)$ then $f'$ has the intermediate value property.
 	- 
 
+- **Constant Difference Theorem** #not-in-course If $f$ and $g$ are differentiable on an interval, and if $f'(x)=g'(x)$ for all $x$ in that interval, then $f − g$ is constant on the interval; that is, there is a constant k such that $f(x) − g(x) = k$ or, equivalently, $f(x) = g(x) + k$ for all $x$ in the interval. 
+
+
 ### Concavity #todo 
 
 - The graph of a differentiable function y = ƒ(x) is
@@ -118,7 +121,6 @@
 - A point $(c,f(c))$ where the graph of a function has a tangent line and where the concavity changes is a **point of inflection**
 - The Second Derivative Test for Concavity #todo 
 - At a point of inflection (c, ƒ(c)), either ƒ″(c) = 0 or ƒ″(c) fails to exist.
-
 
 # Second Derivative 
 
