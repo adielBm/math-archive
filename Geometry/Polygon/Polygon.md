@@ -6,15 +6,12 @@
 - The **perimeter of a polygon** is the sum of the lengths of all sides of the polygon.
 - The sum of the measures of the exterior angles of a polygon, one at each vertex, is 360°
 
-
 - An **inscribed circle** (also called an **incircle**) is a circle that is tangent to each of the polygon's sides. 
 
 
 | Polygon              | Formula |
 | -------------------- | ------- |
 | # of Sides, Vertices | $n$     |
-
-
 
 
 # Classification

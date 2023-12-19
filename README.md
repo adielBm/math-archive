@@ -8,12 +8,3 @@ This is my math notebook, I started writing in the fall of 2022.
 I'd welcome any suggestions for improvement.
 
 Written using [obsidian.md](https://obsidian.md/) 💜
-
-
-
-
-**ריבוע**            
- $n=4 \implies (1/2)*nR^2*\sin(2π/n) \implies  2R^2*\sin(2π/4)\implies2R^2$  
-
-**משולש ש"צ** 
-- $n=3 \implies \frac{3}{2} R^2\sin(2π/3) \implies  \frac{3\sqrt{ 3 }}{4}R^2$  

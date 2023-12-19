@@ -21,3 +21,6 @@ $$(1+x)^n = \sum_{k=0}^n {n \choose k}x^k$$
 ## Compositions of _n_ 
 - The **_k_-composition** of $n$, (the number ways of writing $n$ as the sum of a sequence in length $k$ of (strictly) positive integers.) is ${n-1 \choose k-1}$.
 - Total number of **compositions**^[Also see: https://en.wikipedia.org/wiki/Composition_(combinatorics)#Number_of_compositions] of $n$:   $\sum_{k=1}^n {n-1 \choose k-1} = 2^{n-1}$
+
+
+ 

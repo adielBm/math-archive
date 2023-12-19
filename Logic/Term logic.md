@@ -1,13 +1,11 @@
 > term logic, also known as traditional logic, syllogistic logic or Aristotelian logic
 
-
 - Propositions:
 	- Apodictic
 	- Assertoric
 	- Categorical
 
 - Square of opposition
-
 
 ## Syllogism
 
