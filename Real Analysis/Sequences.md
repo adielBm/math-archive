@@ -1,10 +1,3 @@
-
-- (2.17) A sequence obtained by changing a finite number of terms they has the same limit 
-
-- (d2.8) $N_{\varepsilon}(a):=\set{x\in\mathbb{R}: |x-a|<\varepsilon}$ (where $\varepsilon>0$ and $a$ is real number) is $\varepsilon$-**neighborhood** of $a$
-
-- (d4.26) $N^{*}_{\varepsilon}(a):=\set{x\in N_{\varepsilon}(a):x\neq{a}}$ is **deleted** (punctured) $\varepsilon$-**neighborhood** of $a$
-
 # Bounded Sequence
 
 - (d2.15) A sequence $(a_{n})$ is bounded if $\exists{M>0}:\forall{n}, |a_{n}|<M$
@@ -15,31 +8,6 @@
 - **Arithmetic**
 	- (q2.19a,b,f) The sum/difference/product of two bounded sequences is a sequence bounded
 	- (q2.19d) The sum of bounded sequence and unbounded sequence and is unbounded sequence
-
-## Limit Inferior & Limit Superior
-
-
-- The **limit superior** of a bounded sequence $(a_{n})$ 
-	- $\displaystyle{\varlimsup _{n\to \infty }a_{n}} =  {\displaystyle \limsup _{n\to \infty }a_{n}:=\lim _{n\to \infty }\!{\Big (}\sup _{m\geq n}a_{m}{\Big )}}$
-	- The maximal subsequential limit of $(a_{n})$
-- The **limit inferior** of a bounded sequence $(a_{n})$
-	- $\displaystyle {\varliminf _{n\to \infty }x_{n}}={  \liminf _{n\to \infty }a_{n}:=\lim _{n\to \infty }\!{\Big (}\inf _{m\geq n}a_{m}{\Big )}}$
-	- The minimal subsequential limit of $(a_{n})$
-
-
-Theorems
-
-- (3.40) 
-	- If $\displaystyle c>\varlimsup _{n\to \infty }a_{n}$ then for almost all $n$ we have $a_{n}<c$
-	- If $c<\varlimsup _{n\to \infty }a_{n}$ then there are $\infty$ values of $n$ such that $a_{n}>c$ 
-	- $\displaystyle\varlimsup _{n\to \infty }(a_{n}+b_{n})\leq\varlimsup _{n\to \infty }(a_{n})+\varlimsup _{n\to \infty }(b_{n})$ (see q3.57 for the equality case)
-	- if $c>0$ then $\displaystyle\varlimsup _{n\to \infty }(ca_{n})=c\varlimsup _{n\to \infty }(a_{n})$
-	- if $a_{n}\leq b_{n}$ for each $n$ then $\displaystyle\varlimsup _{n\to \infty }a_{n}\leq\varlimsup _{n\to \infty }b_{n}$
-- (3.38) A bounded sequence has a limit superior and limit inferior
-- (q3.56) $\displaystyle  {\displaystyle \liminf _{n\to \infty }a_{n}=\limsup _{n\to \infty }a_{n}}$ if and only if $(a_{n})$ is convergent
-- (q3.59) $\displaystyle\varlimsup _{n\to \infty }a_{n}=-\infty \implies \lim_{ n \to \infty }a_{n}=-\infty$
-- $\displaystyle\varliminf _{n\to \infty }a_{n}=\infty \implies \lim_{ n \to \infty }a_{n}=\infty$
-- $\displaystyle  {\displaystyle \inf _{n}x_{n}\leq \liminf _{n\to \infty }x_{n}\leq \limsup _{n\to \infty }x_{n}\leq \sup _{n}x_{n}.}$
 
 # Monotonicity
 
@@ -72,7 +40,7 @@ Theorems
 	- $\exists{x\in\mathbb{R}}:\forall \varepsilon > 0 \left(\exists N \in \mathbb{N} \left(\forall n \in\mathbb{N}\left(n \geq N \implies |a_n - x| < \varepsilon \right)\right)\right)$
 	- (3.36. Cauchy's convergence test) $\forall{\varepsilon>0}\;\exists{N\in\mathbb{N}}:{m,n>N}\implies{|{a_{n}-a_{m}}|<\varepsilon}.$ (in words: $(a_n)$ is **Cauchy sequence** )
 	- (3.34 #todo) $(a_n)$ is bounded and has only one **subsequential limit**
-	- (q3.56) $\displaystyle  {\displaystyle \liminf _{n\to \infty }a_{n}=\limsup _{n\to \infty }a_{n}}$
+	- (q3.56) $(a_n)$ is bounded and $\displaystyle  {\displaystyle \liminf _{n\to \infty }a_{n}=\limsup _{n\to \infty }a_{n}}$
 
 Arithmetic (2.28)
 
@@ -92,13 +60,17 @@ Theorems:
 - (2.29) **Shift Rule** Let $N$ be a natural number. Let $(a_{n})$ be a sequence. Then $a_{n} → a$ if and only if the *shifted* sequence $a_{N+n}→a$.
 
 - Let $(a_n)$ be a convergent sequence
-	- (2.12) **Uniqueness** of the limit - $((a_n) \underset{n \to \infty}{\longrightarrow} L\land{(a_n) \underset{n \to \infty}{\longrightarrow} M})\implies{L=M}$
+	- (2.12) **Limit Uniqueness** $((a_n) \underset{n \to \infty}{\longrightarrow} L\land{(a_n) \underset{n \to \infty}{\longrightarrow} M})\implies{L=M}$
 	- (2.16) $(a_n)$ is bounded
+	- (2.17) A sequence $(b_{n})$ that obtained by changing a finite number of terms of $(a_{n})$, has the same limit as $(a_{n})$ 
+
 
 - Let $(a_n)$ and $(b_n)$ be two convergent sequences:
 	- (2.30) if $\displaystyle\lim_{n \to \infty} a_n <\lim_{n \to \infty} b_n$ then, for almost all $n$, we have $a_n < b_n$
 	- (2.31) if $a_n \leq b_n$ for each $n$, then $\displaystyle\lim_{n \to \infty} a_n \leq\lim_{n \to \infty} b_n$
 	- (2.32) **Squeeze theorem**  - Let $(x_n)$ be a sequence, where $a_{n}\leq x_{n}\leq b_{n}$ for almost all $n$, then, $\displaystyle\lim_{n \to \infty} a_n =\lim_{n \to \infty} b_n=L\implies\displaystyle\lim_{n \to \infty} x_n=L$
+
+
 
 > [[Sequence Limit Examples]]
 
@@ -116,7 +88,6 @@ Theorems:
 > [!Strategy] Strategy for using the definition of null sequence 
 > - To show that $(a_{n})$ is **null**, solve the inequality $|a_{n}|<\varepsilon$ to find a number $N$ (generally depending on $\varepsilon$) such that $|a_{n}|<\varepsilon$ for all $n > N$.
 > - To show that $(a_{n})$ is **not null**, find ONE value of $\varepsilon$ for which there is NO number $N$ such that $|a_{n}|<\varepsilon$, for all $n > N$.
-
 
 ## Infinite Limits
 
@@ -170,7 +141,6 @@ theorems:
 	- if $\lim _{n\to \infty }{\frac {a_{n+1}}{a_{n}}}>1$ (or $=\infty$) and $a_{n}>0$, then $\lim_{ n \to \infty }(a_{n})=\infty$
 	 
 
-
 # Cantor's Lemma
 
 - (3.22) **Cantor's intersection** theorem (Cantor's Lemma, Nested Intervals Theorem)
@@ -184,6 +154,10 @@ theorems:
 # Subsequence
 
 - (d3.24) Let $(a_{n})$ be a sequence of real numbers and let $n_{1}<n_{2}<\dots<n_{k}<\dots$ be a strictly increasing sequence of real numbers. Then the sequence $(a_{n_{k}})$ given by $(a_{n_{1}},a_{n_{2}},\dots,a_{n_{k}},\dots)$ is called **subsequence of** $(a_{n})$
+
+
+- if $(a_{n_{k}})$ and $(a_{m_{k}})$ are subsequece of $(a_{n})$, we say that they **cover** $(a_{n})$ if $\set{n_{k}}\cup\set{m_{k}}=\mathbb{N}$
+
 
 theorems 
 - (3.25) if $(a_{n})$ converges to $x$ (or $\pm \infty$) then every subsequence of $(a_{n})$ is also converges to $x$ (or $\pm \infty$)
@@ -208,6 +182,35 @@ theorems
 
 - (3.32) **Bolzano–Weierstrass theorem** - Every bounded sequence has a subsequential limit.
 
+## Limit Superior & Inferior 
+
+#### Limit Superior
+
+- The **limit superior** of $(a_{n})$ 
+- $\displaystyle{\varlimsup _{n\to \infty }a_{n}} =\limsup _{n\to \infty }a_{n}:=\lim _{n\to \infty }\!{\Big (}\sup _{m\geq n}a_{m}{\Big )}=\lim_{ n \to \infty }\Big(\sup\set{a_{m}:m\geq n}\Big)$
+- The maximal subsequential limit of $(a_{n})$
+
+#### Limit Inferior
+
+- The **limit inferior** of $(a_{n})$
+- $\displaystyle {\varliminf _{n\to \infty }x_{n}}={  \liminf _{n\to \infty }a_{n}:=\lim _{n\to \infty }\!{\Big (}\inf _{m\geq n}a_{m}{\Big )}}=\lim_{ n \to \infty }\Big(\inf\set{a_{m}:m\geq n}\Big)$
+- The minimal subsequential limit of $(a_{n})$
+
+#### Theorems
+
+- (3.41, 3.38) **Existence** - Each sequence has a limit superior and limit inferior
+	- if it's bounded above, then $\lim\sup$ is finite, else is $\infty$ 
+	- if it's bounded below, then $\lim\inf$ is finite, else is $-\infty$
+- (3.40) 
+	- If $\displaystyle c>\varlimsup _{n\to \infty }a_{n}$ then for almost all $n$ we have $a_{n}<c$
+	- If $\displaystyle c<\varlimsup _{n\to \infty }a_{n}$ then there are $\infty$ values of $n$ such that $a_{n}>c$ 
+	- $\displaystyle\varlimsup _{n\to \infty }(a_{n}+b_{n})\leq\varlimsup _{n\to \infty }(a_{n})+\varlimsup _{n\to \infty }(b_{n})$
+	- if $c>0$ then $\displaystyle\varlimsup _{n\to \infty }(ca_{n})=c\varlimsup _{n\to \infty }(a_{n})$
+	- if $a_{n}\leq b_{n}$ for each $n$ then $\displaystyle\varlimsup _{n\to \infty }a_{n}\leq\varlimsup _{n\to \infty }b_{n}$
+- (q3.56) $\displaystyle  {\displaystyle \liminf _{n\to \infty }a_{n}=\limsup _{n\to \infty }a_{n}}$ if and only if $(a_{n})$ is convergent
+- (q3.59) $\displaystyle\varlimsup _{n\to \infty }a_{n}=-\infty \implies \lim_{ n \to \infty }a_{n}=-\infty$
+	- $\displaystyle\varliminf _{n\to \infty }a_{n}=\infty \implies \lim_{ n \to \infty }a_{n}=\infty$
+- $\displaystyle  {\displaystyle \inf _{n}x_{n}\leq \liminf _{n\to \infty }x_{n}\leq \limsup _{n\to \infty }x_{n}\leq \sup _{n}x_{n}.}$
 
 
 # Order
@@ -222,7 +225,6 @@ theorems
 		- (q2.44c) $a_{n}=O(1)\iff{(a_{n})}$ is bounded
 		- (q2.45c) **Transitivity** - $a_{n}=o(b_{n})\land{b_{n}=o(c_{n})}\implies a_{n}=o(c_{n})$
 		- (2.49) for each $k$ natural, and $r>1$ real: $\lim_{ n \to \infty }\left( \frac{n^k}{r^n} \right)=0$ (*i.e.* $n^k=o(r^n)$, 2.50) 
-
 
 #  Mean Sequences
 

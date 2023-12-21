@@ -19,8 +19,11 @@
 		- (2.10) $\displaystyle\lim_{ n \to \infty } \frac{1}{n}=0$
 - $c>1$
 	- (2.41) $\displaystyle\lim_{ n \to \infty }c^n=\infty$
+- $|c|>1$
+	- $\displaystyle\lim_{ n \to \infty }\frac{1}{c^n}=0$ (by 2.33,q2.20)
 
 
-- (6.4) if $(q_{n})^{\infty}_{{n=1}}$ is a sequence of rationals which tends to 0, and $a>0$, then $\displaystyle\lim_{ n \to \infty }a^{q_{n}}=1$
+
+- (6.4) if $(q_{n})^{\infty}_{{n=1}}$ is a sequence of rationals that tends to 0, and $a>0$, then $\displaystyle\lim_{ n \to \infty }a^{q_{n}}=1$
 - (q2.29) Let $a_{1},\dots ,a_{k}\geq 0$, then $\displaystyle\lim_{n\to\infty} \sqrt[n]{\sum_{i=1}^k a_{i}^n}=\max\set{a_{1},\dots ,a_{k}}$
 - #todo For any continuous function $f$, if $\lim _{n\to \infty }a_{n}$ exists, then $\lim _{n\to \infty }f\left(a_{n}\right)$ exists too.

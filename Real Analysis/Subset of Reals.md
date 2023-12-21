@@ -1,10 +1,10 @@
 
 $$\large A\subseteq\mathbb{R}$$
-# Greatest element & least element
+# Greatest Element & Least Element
 
 - max(A), min(A)
 
-# Upper & lower bounds
+# Upper & Lower Bounds
 
 
 ### Upper bound
@@ -16,17 +16,20 @@ $$\large A\subseteq\mathbb{R}$$
 - (d3.1) real number $c$ is called **lowe bound** of $A$, if $\forall a\in{A}: c\leq a$
 ### Supremum (Least-upper-bound)
 
-- definitions
-	- $c=\sup{A}$. ($c$ is the **supremum** of $A$)
-	- (d3.7) $c$ is minimal upper bound of $A$
-	- (3.9) (1.) $c$ is an upper bound of $A$ (2.) $\forall\varepsilon>0 \;\exists{x\in{A}}:x>c-\varepsilon$
-	- (3.9) (1.) $c$ is an upper bound of $A$ (2.) $c\leq d$ for all upper bounds $d$ of $A$
-- Theorems
-	- (3.6 **Least-upper-bound property**, see note below) 
-		- If $A$ is **non-empty** and **bounded above**, then $A$ has **supremum**
-	- (3.8) if $A$ has maximum, then $\sup{A}=\max{A}$
-	- (3.10) $\sup{(A+B)}=\sup{A}+\sup{B}$
-	- $a<b\implies \sup(a,b)=b$
+  Definitions
+
+- $c=\sup{A}$. ($c$ is the **supremum** of $A$)
+- (d3.7) $c$ is minimal upper bound of $A$
+- (3.9) (1.) $c$ is an upper bound of $A$ (2.) $\forall\varepsilon>0 \;\exists{x\in{A}}:x>c-\varepsilon$
+- (3.9) (1.) $c$ is an upper bound of $A$ (2.) $c\leq d$ for all upper bounds $d$ of $A$
+
+Theorems
+
+- (3.6 **Least-upper-bound property**, see note below) 
+	- If $A$ is **non-empty** and **bounded above**, then $A$ has **supremum**
+- (3.8) if $A$ has maximum, then $\sup{A}=\max{A}$
+- (3.10) $\sup{(A+B)}=\sup{A}+\sup{B}$
+- $a<b\implies \sup(a,b)=b$
 
 
 > *Least-upper-bound property* (3.6) is follow from the completeness axiom. but the opposite is also true. 
@@ -62,7 +65,7 @@ $$\large A\subseteq\mathbb{R}$$
 	- equivalent definitions
 		- $A\subseteq\mathbb{R}$ is **closed set** 
 		- if given convergent sequence $(x_{n})$ of $A$ elements, we have also $\lim_{ n \to \infty }x_{n}\in{A}$
-		- $A^{\complement}=\mathbb{R}\setminus{A}$ is *open set*
+		- $A^{\complement}=\mathbb{R}\setminus{A}$ is open set
 	- theorems 
 		- The set of subsequential limits is closed
 		- $[a,b]$ is closed

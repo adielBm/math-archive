@@ -25,6 +25,17 @@
 	- The center of this circle is called the **circumcenter** of the triangle 
 	- Its radius is called the **circumradius**
 
+
+## Triangle centers
+
+|                                        | intersect/centered | Trilinear coordinates  |
+| -------------------------------------- | ------------------ | ---------------------- |
+| Angle bisectors and incircle           | $I$ - Incenter     | $1:1:1$                |
+| Medians                                | $G$ - Centroid     | $bc:ca:ab$             |
+| Perpendicular bisectors & circumcircle | $O$ - circumcenter | $\cos A:\cos B:\cos C$ |
+| Altitudes                              | $H$ - orthocenter  | $\sec A:\sec B:\sec C$ |
+
+
 # Triangle Classification 
 ### Triangles Classified by Congruent Sides
 

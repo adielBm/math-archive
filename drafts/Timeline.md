@@ -1,7 +1,6 @@
 
+```mermaid
 
-
-```
 gantt
     title Mathematical Analysis
     dateFormat YYYY
