@@ -48,9 +48,9 @@ The Project: to write an assembler for a specific assembly language defined here
 
 The structure of the first word is always the same. The structure of the first word in an instruction is as follows:
 
-| `0 1`   | `2 3`                     | `4 5`                | `6 7 8 9` | `10 11 12 13` |
-| ------- | ------------------------- | -------------------- | --------- | ------------- |
-| `A, R, E` | Operand Ad. (Destination) | Operand Ad. (Source) | `opcode`    | Not used      |
+| Bits | `0 1`   | `2 3`                     | `4 5`                | `6 7 8 9` | `10 11 12 13` |
+| --| ------- | ------------------------- | -------------------- | --------- | ------------- |
+| **Field** | `A, R, E` | Operand Ad. (Destination) | Operand Ad. (Source) | `opcode`    | Not used      |
 
 
 - Bits `0-1` (the '`A, R, E`' field):
@@ -87,7 +87,7 @@ The structure of the first word is always the same. The structure of the first w
 
 ### Addressing Modes 
 
-In our language, there are four addressing modes, marked with the numbers 0, 1, 2, and 3.
+In our language, there are four addressing modes, marked with the numbers `0`, `1`, `2`, and `3`.
 
 Using addressing modes requires encoding additional data words in the machine code of the instruction.
 
@@ -97,20 +97,37 @@ If a command has two operands, there may be two additional data words, or one sh
 
 When encoding the instruction, if there are two additional data words, the first data word refers to the source operand, and the second refers to the destination operand.
 
-In each additional data word, bits 0-1 represent the A, R, E fields.
-
-The following is a description of the addressing modes in our machine:
+- In each additional data word, bits `0-1` represent the `A, R, E` field.
 
 
-| Value | Addressing Mode                         | content of the additional information-word    |     |
-| ----- | --------------------------------------- | --- | --- |
-| `0`   | מיעון מיידי - Immediate Addressing      |    |     |
-| `1`   | מיעון ישיר                              |     |     |
-| `2`   | מיעון אינדקס קבוע                       |     |     |
-| `3`   | מיעון רגיסטר ישיר - Register Addressing |     |     |
+Description of the addressing modes in our machine:
 
+| Value | Addressing Mode                         |
+| ----- | --------------------------------------- |
+| `0`   | מיעון מיידי - Immediate Addressing      |
+| `1`   | מיעון ישיר                              |
+| `2`   | מיעון אינדקס קבוע                       |
+| `3`   | מיעון רגיסטר ישיר - Register Addressing |
 
- The additional information-word of the instruction contains the operand itself, which is an integer using the 2's complement method, represented with a width of 12 bits, to which bits of the field A,R,E are added (the value of this field is always 00 for immediate addressing).
+#### `0` Immediate Addressing (מיעון מיידי) 
+
+- Another information word of the instruction contains the operand itself, which is an integer using the 2's complement method, represented with a width of 12 bits, to which a pair of bits of the field `A,R,E` are added (the value of this field is always `00` for immediate addressing).
+- The operand starts with the character `#` and after it and next to it appears a whole number in decimal base. There is also a possibility that the constant name defined in the program by `.define` will appear instead of the number (see details below [[#Constant Definition Statement (משפט הגדרת קבוע)]]).
+- examples:
+	- `mov #-1,r2` in this example the first operand of the command is given in an immediate addressing method. The instruction writes the value 1 to register r2 
+	- given the definition of the constant: `.define size = 8` so in the instruction: `mov #size, r1` the first operand is immediate, when the number `8` is represented by the constant name size. The instruction writes the value `8` to register `r1`
+
+#### `1` Immediate Addressing (מיעון ישיר) 
+
+#todo 
+
+#### `2` TODO Addressing (מיעון אינדקס קבוע) 
+
+#todo 
+
+#### `3` Register Addressing (מיעון רגיסטר ישיר) 
+
+#todo 
 
 ### Machine instructions specification
 
@@ -193,39 +210,38 @@ ___
 ### Macros
 
 Reusable, symbolic names representing a sequence of instructions or other statements.
+
+#todo 
+
 ### Statements
 
 
-- A **source file** consist of lines (max length `80`) that contains statements. (each sentence is on a separate line, using `\n`)
+- A **source file** consist of lines (max length `80`) that contains statements. (each statements is on a separate line, using `\n`)
 - A **statement** is individual line or units of code in a program.
 
 
   - Statement Types
 	- **Empty Statement** - This is a line that contains only whitespace characters, i.e. only the characters ` ` and `\t` (spaces and tabs). The line may not contain any characters (except for the `\n` character), which means the line is empty.
 	- **Comment Statement** - This is a line in which the first character is `;` (semicolon). The assembler should completely ignore this line.
-	- **Directive Statement** - instructs the assembler what to do when it runs on the source program. (There are several types of directive sentences. which?? #todo  ). A directive statement may cause the allocation of memory and the initialization of program variables, but it does not produce an encoding of machine instructions intended to be executed when the program runs.
-	- **Instruction Statement** - This is a sentence that produces a coding of machine instructions to be executed when the program runs. The statement consists of the name of an instruction that the processor must execute, and a description of the instruction's operands.
+	- **Directive Statement** - instructs the assembler what to do when it runs on the source program. (There are several types of directive statements. which?? #todo  ). A directive statement may cause the allocation of memory and the initialization of program variables, but it does not produce an encoding of machine instructions intended to be executed when the program runs.
+	- **Instruction Statement** - This is a statement that produces a coding of machine instructions to be executed when the program runs. The statement consists of the name of an instruction that the processor must execute, and a description of the instruction's operands.
 	- **Constant Definition Statement** - This is a statement that can be used to define a symbolic name that represents a numerical constant. During the coding of the program, wherever the name appears in the code, it will be replaced by the numerical constant. This statement by itself does not generate code and does not allocate memory.
 
 #### Directive Statement (משפטי הנחיה)
 
-##### Structure 
+- Structure 
+	- A **label** definition can appear optionally at the beginning of the statement. 
+	- The **name** of the directive appears
+		- A directive's name begins with the character `.` (period) followed by lower case characters only.
+	- **Parameters** will appear after the name of the directive (the number of parameters according to the directive).
 
-- A **label** definition can appear optionally at the beginning of the sentence. 
-- The **name** of the directive appears
-	- A directive's name begins with the character `.` (period) followed by lower case characters only.
-- **Parameters** will appear after the name of the directive (the number of parameters according to the directive).
+> **Important:** the words in the machine code that are created from the directive statement are not attached a pair of bits `A, R, E`, And the encoding fills all 14 bits of the word.
 
-> **Important:** the words in the machine code that are created from the directive sentence are not attached a pair of bits `A, R, E`, And the encoding fills all 14 bits of the word.
-
-##### Types 
-
-#todo 
-
-- `.data`
-- `.string`
-- `.entry`
-- `.extern`
+- Types #todo 
+	- `.data`
+	- `.string`
+	- `.entry`
+	- `.extern`
 
 #### Instruction Statement (משפטי הוראה)
 
@@ -264,28 +280,42 @@ Reusable, symbolic names representing a sequence of instructions or other statem
 - The character `=` separates the name of the constant and the numerical constant. White characters are allowed on both sides of the character. 
 - The **numerical constant** is an integer in decimal base. 
 
-
-The constant name can be used anywhere in the assembly program where a numerical constant can appear, (i.e. an index in the direct index addressing method, or a value in the immediate addressing method, or an operand of the data landing.) 
-
-- Examples, (given the constant definitions above): 
+- The constant name can be used anywhere in the assembly program where a numerical constant can appear, (i.e. an index in the direct index addressing method, or a value in the immediate addressing method, or an operand of the data landing.)  :Examples, (given the constant definitions above): 
 	 - `mov x[len], r3` will copy the element at index `4` in the array `x` to register `r3`.
 	 - `mov #init, r2` place the immediate value `-3` into register `r2`. 
 	 - `.data len` assign a word in memory with an initial value of `4`.
 
 ____
 
-- **Specification of Fields in Assembly Statements:**
-   - **Labels:**
-     - Symbolic names assigned to memory locations or instructions for reference in the program.
-   - **Definition of Labels:**
-     - Explanation or assignment of symbolic labels to specific memory locations or instructions.
-   - **Additional Information:**
-     - Supplementary details including data, strings, data counters, instruction counters, and externals.
+## **Specification of Fields in Assembly Statements:**
 
-- Marking the Dictionary in Machine Language Using the "A,R,E" Attribute
-    - a=absolute
-    - r=relocatable
-    - e=external
+
+- A **label** is a symbol that is defined at the beginning of an instruction statements, or at the beginning of a `.data` or `.string` directive
+	- A valid label begins with an alphabetic letter (uppercase or lowercase), followed by some series of alphabetic letters (uppercase or lowercase) and/or digits.
+	- maximum length: 31 characters
+	- A label definition ends with `:` (colon). This character is not part of the label, but only a mark indicating the end of the definition. The letter `:` must be adjacent to the label (without spaces).
+	- The same label must not be defined more than once (of course in different lines). Uppercase and lowercase letters are treated differently.
+	- Examples: `hEllo:`, `x:`, `He78902:`
+	- Please note: Assembly language reserved words (that is, the name of an operation or directive, or the name of a register) cannot also be used as a label name. 
+	- Also, the same symbol must not be used both as a label and as the name of a macro or constant. 
+	- The label receives its value according to the context in which it is defined. A label defined in the directives `.data`, `.string`, will receive the current value of the *data counter*, while a label defined in an instruction line will receive the value of the current *instruction counter*. 
+	- Attention: it is allowed in an instruction statement to use an operand that is a symbol that is not defined as a label in the current file, as long as the symbol is characterized as external (using some extern directive in the current file). 
+- **Number**: valid number starts with an optional sign: `-` or `+` followed by some sequence of digits in decimal base. 
+	- For example: `-5`, `76`, `+123` are valid numbers. 
+	- Our assembly language does not support representation in a base other than decimal, and there is no support for non-integer numbers. 
+- **String**: A valid string is a sequence of visible (printable) ASCII characters, enclosed in double quotes (the quotes are not considered part of the string). e.g. `"hello world"`.
+
+### Marking the words in the machine code with the "A,R,E" property 
+
+
+#todo  see above [[#The first word]]
+
+At each word in the machine code of an instruction (not of data), the assembler inserts information for the linking and loading process. This is the A,R,E field. The information will be used to make corrections to the code every time it is loaded into memory for execution. The assembler builds from scratch code that is intended to be loaded starting from the start address. The fixes will make it possible to load the code in a different place each time, without having to repeat the assembly process.
+
+- The two bits in the `A,R,E` field will contain one of the binary values: `00`, `10`, or `01`.
+	- `A` (absolute) - comes to indicate that the content of the word does not depend on the place in memory where the machine code of the program will actually be loaded during its execution (for example a word containing an immediate operand). In this case the two right bits will contain the value `00`.
+	- `R` (relocatable) - comes to indicate that the content of the word depends on the place in memory where the machine code of the program will actually be loaded when it is executed (for example, a word containing the address of a label defined in the source file). In this case the two right bits will contain the value `10`.
+	- `E` (external)- indicates that the content of the word depends on the value of an external symbol (for example, a word containing the address of an external label, i.e. a label that is not defined in the source file). In this case the two right bits will contain the value `01`.
 
 # Assembler
 
@@ -294,6 +324,24 @@ ____
 		1. Construct a file containing machine code from a given file of a program written in assembly language.
 		2. Linkage. (Not part of the project)
 		3. Loading. (Not part of the project)
+
+
+### Pre-Assembler
+
+#todo 
+
+When the assembler receives an assembly language program as input, it must first handle the deployment of the macros, and only then go over the program to which the macros were deployed. That is, the withdrawal of the macros will be done in the "pre-assembler" phase, before the assembler phase (described later). If the program does not contain a macro, the retirement program will be the same as the source program.
+
+
+An example of a pre-assembler step. The assembler accepts the following assembly language program:
+
+```
+.define  sz = 2  
+MAIN:            mov     r3, LIST[sz]  
+LOOP:   jmp  L1  mcr  m_mcr         cmp     r3, #sz      bne   END  endmcr       prn  #-5      mov  STR[5], STR[2]      sub  r1, r4      m_mcr  L1:    inc  K      bne   LOOP         END:   hlt  .define len = 4  STR:   .string “abcdef”  LIST: .data  6, -9, len  K:    .data  22  
+```
+
+
 
 ## Pre-Assembler Algorithm
 
