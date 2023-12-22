@@ -65,29 +65,27 @@ The structure of the first word is always the same. The structure of the first w
 - Bits `6-9`: In the first word of the instruction, these bits represent the **operation code** (opcode). Each opcode is symbolically represented in assembly language by an **operation name**.
 
 | opcode | Operation Name |
-| -------------- | -------------- |
-| 0              | mov            |
-| 1              | cmp            |
-| 2              | add            |
-| 3              | sub            |
-| 4              | not            |
-| 5              | clr            |
-| 6              | lea            |
-| 7              | inc            |
-| 8              | dec            |
-| 9              | jmp            |
-| 10             | bne            |
-| 11             | red            |
-| 12             | prn            |
-| 13             | jsr            |
-| 14             | rts            |
-| 15             | hlt            |
+| ------ | -------------- |
+| 0      | mov            |
+| 1      | cmp            |
+| 2      | add            |
+| 3      | sub            |
+| 4      | not            |
+| 5      | clr            |
+| 6      | lea            |
+| 7      | inc            |
+| 8      | dec            |
+| 9      | jmp            |
+| 10     | bne            |
+| 11     | red            |
+| 12     | prn            |
+| 13     | jsr            |
+| 14     | rts            |
+| 15     | hlt            |
 
 - Bits `10-13`: not used and their value is `0`.
 
 ### Addressing Modes 
-
-
 
 In our language, there are four addressing modes, marked with the numbers 0, 1, 2, and 3.
 
@@ -103,10 +101,16 @@ In each additional data word, bits 0-1 represent the A, R, E fields.
 
 The following is a description of the addressing modes in our machine:
 
-- מיעון מיידי - Immediate Addressing
-- מיעון ישיר 
-- מיעון אינדקס קבוע - 
-- מיעון רגיסטר ישיר - Register Addressing
+
+| Value | Addressing Mode                         | content of the additional information-word    |     |
+| ----- | --------------------------------------- | --- | --- |
+| `0`   | מיעון מיידי - Immediate Addressing      |    |     |
+| `1`   | מיעון ישיר                              |     |     |
+| `2`   | מיעון אינדקס קבוע                       |     |     |
+| `3`   | מיעון רגיסטר ישיר - Register Addressing |     |     |
+
+
+ The additional information-word of the instruction contains the operand itself, which is an integer using the 2's complement method, represented with a width of 12 bits, to which bits of the field A,R,E are added (the value of this field is always 00 for immediate addressing).
 
 ### Machine instructions specification
 
@@ -189,17 +193,86 @@ ___
 ### Macros
 
 Reusable, symbolic names representing a sequence of instructions or other statements.
-
 ### Statements
 
- - Individual lines or units of code in a program.
 
-  - 5 Types
-	- Empty Statement
-	- Comment Statement
-	- Directive Statement
-	- Instruction Statement
-	- Definition of a Constant Statement
+- A **source file** consist of lines (max length `80`) that contains statements. (each sentence is on a separate line, using `\n`)
+- A **statement** is individual line or units of code in a program.
+
+
+  - Statement Types
+	- **Empty Statement** - This is a line that contains only whitespace characters, i.e. only the characters ` ` and `\t` (spaces and tabs). The line may not contain any characters (except for the `\n` character), which means the line is empty.
+	- **Comment Statement** - This is a line in which the first character is `;` (semicolon). The assembler should completely ignore this line.
+	- **Directive Statement** - instructs the assembler what to do when it runs on the source program. (There are several types of directive sentences. which?? #todo  ). A directive statement may cause the allocation of memory and the initialization of program variables, but it does not produce an encoding of machine instructions intended to be executed when the program runs.
+	- **Instruction Statement** - This is a sentence that produces a coding of machine instructions to be executed when the program runs. The statement consists of the name of an instruction that the processor must execute, and a description of the instruction's operands.
+	- **Constant Definition Statement** - This is a statement that can be used to define a symbolic name that represents a numerical constant. During the coding of the program, wherever the name appears in the code, it will be replaced by the numerical constant. This statement by itself does not generate code and does not allocate memory.
+
+#### Directive Statement (משפטי הנחיה)
+
+##### Structure 
+
+- A **label** definition can appear optionally at the beginning of the sentence. 
+- The **name** of the directive appears
+	- A directive's name begins with the character `.` (period) followed by lower case characters only.
+- **Parameters** will appear after the name of the directive (the number of parameters according to the directive).
+
+> **Important:** the words in the machine code that are created from the directive sentence are not attached a pair of bits `A, R, E`, And the encoding fills all 14 bits of the word.
+
+##### Types 
+
+#todo 
+
+- `.data`
+- `.string`
+- `.entry`
+- `.extern`
+
+#### Instruction Statement (משפטי הוראה)
+
+- **label** (optional)
+	- If a label is defined on the instruction line, then it will be inserted into the **symbol table** (what is? #todo ). The value of the label will be from the *first word* of the instruction within the code image that the assembler builds.
+- `opcode` of **operation-name** 
+	- lower case
+	- 16 operations - see [[Assembler Project#Machine instructions specification]]
+	- separated from the first operand using space(s) or tab(s).
+- **operand(s)** 
+	- 0-2, depending on operation type
+	- separated by `,`. (can be space(s) and tab(s) on both sides the comma)
+
+- Structure 
+	- (2 operands) `label: opcode source-operand, target-operand` (e.g. `HELLO: add r7, B`)
+	- (1 operand) `label: opcode target-operand` (e.g.  `HELLO: bne XYZ`)
+	- (no operand) `label: opcode` (e.g. `END: hlt`)
+
+
+
+#### Constant Definition Statement (משפט הגדרת קבוע)
+
+- syntax: `.define constant-name = numeric constant`
+- examples: 
+	- `.define len = 4`
+	- `.define init = -3`
+- The idea is to represent a numerical constant using a symbolic name. Anywhere in the program where the name of a constant appears, the assembler will replace the name with the numerical constant to which it was defined when encoding the command into machine code.
+- The reserved word `.define` is lowercase.
+- The constant must be defined before its first use. 
+- You must not define a label on a line that is a *constant definition statement*.
+- **constant-name**
+	- The syntax of the constant name is the same as that of a label. 
+	- You must not define the same constant name more than once. 
+	- The same symbol cannot be used both as the name of a constant and as a label in the same program. 
+	- Assembly language reserved words (name of a register, name of a machine instruction or name of a directive) cannot be used as the name of a constant. 
+- The character `=` separates the name of the constant and the numerical constant. White characters are allowed on both sides of the character. 
+- The **numerical constant** is an integer in decimal base. 
+
+
+The constant name can be used anywhere in the assembly program where a numerical constant can appear, (i.e. an index in the direct index addressing method, or a value in the immediate addressing method, or an operand of the data landing.) 
+
+- Examples, (given the constant definitions above): 
+	 - `mov x[len], r3` will copy the element at index `4` in the array `x` to register `r3`.
+	 - `mov #init, r2` place the immediate value `-3` into register `r2`. 
+	 - `.data len` assign a word in memory with an initial value of `4`.
+
+____
 
 - **Specification of Fields in Assembly Statements:**
    - **Labels:**
