@@ -1,5 +1,8 @@
 The Project: to write an assembler for a specific assembly language defined here specifically for this project.
 
+
+#todo see this https://www.cs.cmu.edu/~ab/15-123S09/lectures/Lecture%2023%20-%20Assembler%20Fundamentals.pdf
+
 ## Hardware
 
 - "The computer in the project" 
@@ -331,8 +334,6 @@ mov A,r1
 	- (1 operand) `label: opcode target-operand` (e.g.  `HELLO: bne XYZ`)
 	- (no operand) `label: opcode` (e.g. `END: hlt`)
 
-
-
 #### Constant Definition Statement (משפט הגדרת קבוע)
 
 - syntax: `.define constant-name = numeric constant`
@@ -401,33 +402,76 @@ At each word in the machine code of an instruction (not of data), the assembler 
 
 #todo 
 
-When the assembler receives an assembly language program as input, it must first handle the deployment of the macros, and only then go over the program to which the macros were deployed. That is, the withdrawal of the macros will be done in the "pre-assembler" phase, before the assembler phase (described later). If the program does not contain a macro, the retirement program will be the same as the source program.
-
+- When the assembler receives an assembly language program as input, it must first handle the deployment of the macros, and only then go over the program to which the macros were deployed. That is, the deployment of the macros will be done in the "pre-assembler" phase, before the assembler phase (described later). 
+- If the program does not contain a macro, the retirement program will be the same as the source program.
 
 An example of a pre-assembler step. The assembler accepts the following assembly language program:
 
 ```
-.define  sz = 2  
-MAIN:            mov     r3, LIST[sz]  
-LOOP:   jmp  L1  mcr  m_mcr         cmp     r3, #sz      bne   END  endmcr       prn  #-5      mov  STR[5], STR[2]      sub  r1, r4      m_mcr  L1:    inc  K      bne   LOOP         END:   hlt  .define len = 4  STR:   .string “abcdef”  LIST: .data  6, -9, len  K:    .data  22  
+.define sz=2
+MAIN:       mov     r3,LIST[sz]
+LOOP:       jmp     L1
+            mcr m_mcr
+                    cmp     r3, #sz
+            bne     END
+            endmcr
+            prn     #-5
+            mov     STR[5], STR[2]
+            sub     r1, r4
+            m_mcr
+L1:         inc     K
+            bne     LOOP
+END:        hlt
+.define len=4
+STR:        .string "abcdef"
+LIST:  .data 6,-9, len    
+K:          .data   22
 ```
 
+First, the assembler goes through the program and deploys all the macros present in it. Only if this process ends successfully, you can move on to the next step. 
 
+In this example, the program after the macros deployment will look like this:
 
-## Pre-Assembler Algorithm
+```
+.define sz=2
+MAIN:       mov     r3,LIST[sz]
+LOOP:       jmp     L1
+            prn     #-5
+            mov     STR[5], STR[2]
+            sub     r1, r4
+            cmp     r3,#sz
+            bne     END
+L1:         inc     K
+            bne     LOOP
+END:        hlt
+.define len=4
+STR:        .string "abcdef"
+LIST:  .data 6,-9, len    
+K:          .data   22
+```
+
+The program code, after deployment, will be saved in a new file, as will be explained later.
+
+### Pre-Assembler Algorithm
+
+This is a skeletal algorithm for the pre-assembler process. 
+
+>  Note: there is no obligation to use this particular algorithm
 
 1. Read the next line from the source file. If the file ends, go to 9 (end).
-2. Is the first field a macro name appearing in the macro table (e.g., `m_mcr`)? If yes, replace the macro name and copy all corresponding lines from the table to the file, go to 1. Otherwise, continue.
+2. Is the first field a macro name appearing in the macro table (e.g. `m_mcr`)? If yes, replace the macro name and copy all corresponding lines from the table to the file, go to 1. Otherwise, continue.
 3. Is the first field `mcr` (start of macro definition)? If not, go to 6.
-4. Set the "mcr exists" flag.
+4. Set the `mcr exists` flag.
 5. (Macro definition exists) Enter the macro table with the macro name (e.g., `m_mcr`).
 6. Read the next line from the source file. If the source file ends, go to 9 (end).
    If the "mcr exists" flag is on and the endmcr label is not found, insert the line into the macro table and delete the line from the file. Otherwise (not a macro), go to 1.
-7. Is the endmcr label found? If yes, delete the label from the file and continue. If not, go to 6.
-8. Turn off the "mcr exists" flag. Go to 1. (End of macro definition saving).
+7. Is the `endmcr` label found? If yes, delete the label from the file and continue. If not, go to 6.
+8. Turn off the `mcr exists` flag. Go to 1. (End of macro definition saving).
 9. End: Save the expanded macro file.
 
 ### Two-Pass Assembler
+
+#todo 
 
 - An assembler that processes the source code in two passes, allowing it to resolve symbols and addresses more efficiently.
 
@@ -436,19 +480,33 @@ LOOP:   jmp  L1  mcr  m_mcr         cmp     r3, #sz      bne   END  endmcr      
 - Separation of instruction and data
 
 
-## Errors
+### Errors
 
-## Assembler Algorithm
+#todo 
+
+
+
+### Assembler Algorithm
+
+#todo 
 
 - First pass (18 steps)
 - Second pass (10 steps)
 
 
-- Input and Output Files of the Assembler
-- Operation of the Assembler
-- Object File Format
-- Entries File Format
-- Externals File Format
+### Input and Output Files of the Assembler
+
+
+### Operation of the Assembler
+
+### Object File Format
+
+### Entries File Format
+
+
+### Externals File Format
+
+
 
 # Summary & General Instructions
 
