@@ -17,6 +17,7 @@ Theorems
 - (5.15) if $g$ is continuous in $t_{0}$, and $f$ is continuous in $x_{0}$ where $x_{0}=g(t_{0})$, then $f(g(x))$ is continuous in $t_{0}$
 - (7.9) if $f$ is differentiable at $x_{0}$, then it continuous at $x_{0}$
 
+
 ## One Side
 
 - $f$ is **left-continuous at** $x_{0}$

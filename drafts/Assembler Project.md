@@ -100,34 +100,53 @@ When encoding the instruction, if there are two additional data words, the first
 - In each additional data word, bits `0-1` represent the `A, R, E` field.
 
 
+
 Description of the addressing modes in our machine:
 
 | Value | Addressing Mode                         |
 | ----- | --------------------------------------- |
 | `0`   | מיעון מיידי - Immediate Addressing      |
-| `1`   | מיעון ישיר                              |
-| `2`   | מיעון אינדקס קבוע                       |
+| `1`   | מיעון ישיר - Direct Addressing                              |
+| `2`   | מיעון אינדקס קבוע - Index Addressing           |
 | `3`   | מיעון רגיסטר ישיר - Register Addressing |
 
 #### `0` Immediate Addressing (מיעון מיידי) 
 
 - Another information word of the instruction contains the operand itself, which is an integer using the 2's complement method, represented with a width of 12 bits, to which a pair of bits of the field `A,R,E` are added (the value of this field is always `00` for immediate addressing).
 - The operand starts with the character `#` and after it and next to it appears a whole number in decimal base. There is also a possibility that the constant name defined in the program by `.define` will appear instead of the number (see details below [[#Constant Definition Statement (משפט הגדרת קבוע)]]).
-- examples:
-	- `mov #-1,r2` in this example the first operand of the command is given in an immediate addressing method. The instruction writes the value 1 to register r2 
+- Examples:
+	- `mov #-1,r2` in this example the first operand of the command is given in an immediate addressing method. The instruction writes the value `1` to register `r2` 
 	- given the definition of the constant: `.define size = 8` so in the instruction: `mov #size, r1` the first operand is immediate, when the number `8` is represented by the constant name size. The instruction writes the value `8` to register `r1`
 
-#### `1` Immediate Addressing (מיעון ישיר) 
+#### `1` Direct Addressing (מיעון ישיר) 
 
-#todo 
+- The extra-info-word of the instruction contains the address of a word in memory. This word in memory is the operand. The address is represented as an unsigned number with a width of `12` bits, to which a pair of bits of the `A,R,E` field is added (the value of this field is either `01` or `10`, depending on the type of address - *external* or *internal*).
+- The operand is a label that has already been declared or will be declared later in the file. The statement is made by writing a label at the beginning of the landing `.data` or `.string` or at the beginning of an instruction of the program, or using an operand of the `.extern`
+- Example: given `x: .data 23`, then the instruction `dec x` decreases by 1 the content of the word at address `x` in memory (the variable `x`).
 
-#### `2` TODO Addressing (מיעון אינדקס קבוע) 
+#### `2` Index Addresing (מיעון אינדקס קבוע) 
 
-#todo 
 
-#### `3` Register Addressing (מיעון רגיסטר ישיר) 
+- This addressing method is used to access an array member by index. The array is in memory. Each member of the array is a word in size. 
+	- In this addressing method, there are two additional information words in the instruction coding. 
+		- The first extra word contains the starting address of the array. 
+		- The second additional word contains the index of the element in the array to be accessed. 
+	- The values in the two additional data words are represented with a width of `12` bits, to which a pair of bits from the `A,R,E` field is added (the value of this field in the first data word is as in (מיעון ישיר), and in the second data word as in (מיעון מידי).
 
-#todo 
+- The operand consists of a label indicating the starting address of the array, followed by the index in the array to be accessed in square brackets. The index can be given by a numerical constant defined with `.define`. The indexes in the array start from 0.
+- Examples:
+	- Given the definition `x: .data 23,25,19,30`, then the instruction `mov x[2],r2` will copy the number `19` found in index `2` in the array `x` to the register `.r2`
+	- Given the definition of the array `x` above, as well as the constant definition `.define k=1` then the instruction: `mov r2,x[k]` will copy the content of the register `r2` to the word at index `1` in the array `x` (the previous content `25` will be overwritten)
+
+#### `3` Register Addressing (מיעון רגיסטר ישיר)
+
+- The operand is a register. If the register is used as a destination operand, an additional data word of the command will encode in bits `2-4` the number of the register. Whereas if the register is used as a source operand, the register number will be encoded in bits `5-7` of the data word. If the command has two operands and both are direct register addressing, they will share one common data word, where bits `2-4` are for the destination register, and bits `5-7` are for the source register. A pair of bits of the field `A,R,E` are added to the data word (the value of this field is always `00` for this addressing mode). Other unused bits in the data word will contain 0s.
+- The operand is a name of register.
+- Example: the instruction `mov r1,r2` copies the contents of register `r1` to register `r2`. In this example, both operands are in the direct register addressing method, so they will share one additional data word in common.
+
+___
+
+> Note: It is allowed to refer to the label even before it is declared, but provided that it is indeed declared somewhere in the file.
 
 ### Machine instructions specification
 
@@ -211,10 +230,62 @@ ___
 
 Reusable, symbolic names representing a sequence of instructions or other statements.
 
-#todo 
+- **Macros** are pieces of code that include statements.
+	- In the program you can define a macro and use it in different places in the program. The use of a macro from a certain place in the program will cause the macro to be allocated to that place. 
+
+#### Defining & Using
+
+In the following example the name of the macro is `m_mcr`
+
+```
+mcr m_mcr
+    inc r2     
+	mov  A,r1  
+endmcr   
+```
+
+Using a macro is simply mentioning its name. For example, if somewhere in the program it is written:
+
+```
+.
+.
+.
+m_mcr
+.
+.
+m_mcr
+.
+.
+.
+```
+
+Then the program after macro retirement will look like this.
+
+```
+.
+.
+.
+inc r2     
+mov  A,r1  
+.
+.
+inc r2     
+mov A,r1  
+.
+.
+.
+```
+
+
+#### Assumptions & guidelines
+
+- There are no nested macro definitions in the system (no need to check this).
+- The name of an instruction or directive cannot be the name of a macro.
+- It can be assumed that each macro line in the source code has a closure with an `endmcr` line (there is no need to check this).
+- Defining a macro will always be before calling the macro (no need to check it).
+- It is required that the pre-assembler create a file with the extended code that includes the (פרישה של המאקרו) (extension of the source file described below). The "extended source file" is a "source file" after the macro has been removed, compared to an "initial source file" which is the input file to the system, including the definition of the macros.
 
 ### Statements
-
 
 - A **source file** consist of lines (max length `80`) that contains statements. (each statements is on a separate line, using `\n`)
 - A **statement** is individual line or units of code in a program.

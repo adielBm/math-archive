@@ -1,13 +1,26 @@
 
 - Propositional calculus (propositional logic)
-	- **Proposition** (statement) - A declarative sentence that is either true or false, but not both. 
-		- A statement is **atomic** if it cannot be divided into smaller statements, otherwise it is called **molecular**.
-	- A **well-formed formula** (WFF) (Recursive definition):
-		1. Any atomic statement is a WFF
-		2. Any WFF preceded by $¬$ is a WFF
-		3. Any two WFFs can be made into another WFF by writing one of these symbols between them, $∧, ∨, →, ↔$ and enclosing the result in parentheses
-		4. Nothing else is a WFF
-	- Logical connective
+
+
+- **Proposition** (statement) - A declarative sentence that is either true or false, but not both. 
+	- A statement is **atomic** if it cannot be divided into smaller statements, otherwise it is called **molecular**.
+
+
+- A **well-formed formula** (WFF) (Recursive definition):
+	1. Any atomic statement is a WFF
+	2. Any WFF preceded by $¬$ is a WFF
+	3. Any two WFFs can be made into another WFF by writing one of these symbols between them, $∧, ∨, →, ↔$ and enclosing the result in parentheses
+	4. Nothing else is a WFF
+
+- A **well-formed formula** is a finite sequence of symbols from a finite alphabet that is part of a formal language and validly constructed from the rules of that language. 
+
+
+
+
+- Logical connective
+
+
+
 - **First-order logic (predicate logic)** - An extension of *propositional calculus* which permits quantifiers over elements
 - Predicate
 
