@@ -102,6 +102,9 @@ Theorems:
 	- $\displaystyle\lim _{n\to \infty }a_{n}=-\infty$
 	- $a_{n}\to -\infty$
 	- $(a_{n})$ is **tend to minus infinity**
+	- $\forall K\in \mathbb {R} \left(\exists N\in \mathbb {N} \left(\forall n\in \mathbb {N} \left(n\geq N\implies a_{n}<K\right)\right)\right)$
+
+
 
 theorems:
 
@@ -132,6 +135,7 @@ theorems:
 - ${a_{n}\to 0}\land{a_{n}<0} \implies 1/a_{n}\to{(-\infty)}$
 - ${a_{n}\to \infty}$ and ${b_{n}}$ is bounded $\implies a_{n}+b_{n}\to \infty$
 
+- $\displaystyle\frac{a_n}{b_n} \to 1\land a_{n}\to 0\implies b_{n}\to 0$
 
 ## Ratio test
 

@@ -3,6 +3,8 @@
 
 
 - **Proposition** (statement) - A declarative sentence that is either true or false, but not both. 
+
+
 	- A statement is **atomic** if it cannot be divided into smaller statements, otherwise it is called **molecular**.
 
 

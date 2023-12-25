@@ -9,10 +9,8 @@
 
 ## Syllogism
 
-A categorical syllogism consists of three parts:
 
-- Major premise
-- Minor premise
-- Conclusion
+- A **Categorical Syllogism** is a particular kind of argument containing three categorical propositions, two of them premises, one a conclusion.
+	- And each categorical proposition contains two categorical terms.
 
-Each part is a categorical proposition, and each categorical proposition contains two categorical terms.
+- A **categorical proposition** is a statement that can be proven factual when comparing one set to another

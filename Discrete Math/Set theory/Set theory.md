@@ -22,6 +22,9 @@ $$\forall A \, \forall B \, ( \forall X \, (X \in A \iff X \in B) \implies A = B
 - (q22) - $A\cup{B}=A\cup{C}\land{A\cap{B}=A\cap{C}}\implies{B=C}$
 - (q24) - $A\subseteq{B}\land{C\subseteq{D}}\implies{A\cup{C}\subseteq{B\cup{D}}}\land{A\cap{C}\subseteq{B\cap{D}}}$
 
+- $(A\subseteq B)\land (B\subseteq C)\implies A\subseteq C$
+
+
 - De Morgan's laws (1.26a) - $(A\cup{B})^{\complement}=A^{\complement}\cap{B^{\complement}}$ 
 - De Morgan's laws (1.26b) - $(A\cap{B})^{\complement}=A^{\complement}\cup{B^{\complement}}$ 
 

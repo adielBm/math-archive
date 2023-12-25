@@ -42,14 +42,11 @@ Theorems
 -  (q4.63) $\displaystyle\lim_{x\to0}{f(x)}=\lim_{x\to 0}{f(xk)}$  (where $k\neq 0$ and the limits exists)
 - Limit of a Composite Function: $\displaystyle\lim_{ t \to t_{0} }f(g(t))=\displaystyle\lim_{ x \to {(\lim_{ t \to t_{0} }g(t))} }f(x)$
  
-   
-
 ### Examples
 
 - (4.44a) $\displaystyle\lim_{ x \to 0 }\sin x=0$
 - (4.44b) $\displaystyle\lim_{ x \to 0 }\cos x=1$
 - (4.45) $\displaystyle\lim_{ x \to 0 }{\frac{\sin x}{x}}=\lim_{ x \to 0 }{\frac{x}{\sin x}}=1$
-
 
 ## One-Sided Limits
 
@@ -106,8 +103,15 @@ Theorems
 	- $\displaystyle  {\displaystyle (\forall \varepsilon >0)\,(\exists M)\,(\forall x\in \mathbb {R} )\,(x<M \implies |f(x)-L|<\varepsilon )}$ 
 	- $\forall(x_{n})^{\infty}_{n=1}~~\displaystyle\lim_{ n \to \infty}x_{n}=-\infty\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
 
-- #todo $\infty$ is the **limit** of $f$ at $\infty$
+-  $\infty$ is the **limit** of $f$ at $\infty$
+	- $\displaystyle\lim_{ x \to \infty }f(x)=\infty$
+	- $\displaystyle  {\displaystyle (\forall M_{1} \in\mathbb{R})\,(\exists M_{2} \in\mathbb{R})\,(\forall x\in \mathbb {R} )\,(x>M_{2} \implies f(x)>M_{1} )}$ 
+	- $\forall(x_{n})^{\infty}_{n=1}~~\displaystyle\lim_{ n \to \infty}x_{n}=\infty\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=\infty$
+
+
 - #todo $\infty$ is the **limit** of $f$ at $-\infty$
+
+
 
 # L'Hôpital's rule
 
