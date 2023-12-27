@@ -1,34 +1,4 @@
-# Bounded Sequence
-
-- (d2.15) A sequence $(a_{n})$ is bounded if $\exists{M>0}:\forall{n}, |a_{n}|<M$
-
-- (2.16) every convergent sequence is bounded
-
-
-- **Arithmetic**
-	- (q2.19a,b,f) The sum/difference/product of two bounded sequences is a sequence bounded
-	- (q2.19d) The sum of bounded sequence and unbounded sequence and is unbounded sequence
-
-# Monotonicity
-
-**definitions**
-- monotone sequence (either increaseing or decreaseing)
-	- monotonically increasing: $a_{n}+1≥a_n$ for all $n\in\mathbb{N}$
-		- strictly monotonically increasing: $a_{n}+1>a_n$ for all $n\in\mathbb{N}$
-	- monotonically decreasing: $a_{n}+1\leq a_n$ for all $n\in\mathbb{N}$
-		- strictly monotonically decreasing: $a_{n}+1<a_n$ for all $n\in\mathbb{N}$
-
-**Theorems**
-- Monotone convergence theorem
-	- (3.16) if $(a_{n})$ is a **monotone** and **bounded** sequence, then it's convergent
-		-  if $(a_{n})$ is **increasing** bounded, then $\lim_{ n \to \infty }(a_{n})=\sup(a_{n})$
-		-  if $(a_{n})$ is **decreasing** bounded, then $\lim_{ n \to \infty }(a_{n})=\inf(a_{n})$
-	- (3.17) if $(a_{n})$ is a **monotone** and **not-bounded** sequence, then
-		-  if $(a_{n})$ is **increasing**, then $\lim_{ n \to \infty }(a_{n})=\infty$
-		-  if $(a_{n})$ is **decreasing**, then $\lim_{ n \to \infty }(a_{n})=-\infty$
-
-# Limit & Convergence
-
+	
 - Definitions: $(a_n)$ converges to $L$
 	- $\displaystyle\lim_{ n \to \infty }{a_{n}}=L$
 	- The sequence $(a_n)$ **converges to** (or **tends to**) the limit $L$
@@ -42,7 +12,7 @@
 	- (3.34 #todo) $(a_n)$ is bounded and has only one **subsequential limit**
 	- (q3.56) $(a_n)$ is bounded and $\displaystyle  {\displaystyle \liminf _{n\to \infty }a_{n}=\limsup _{n\to \infty }a_{n}}$
 
-Arithmetic (2.28)
+## Arithmetic (2.28)
 
 > Assuming $(a_{n})$ and $(b_{n})$ are convergent
 
@@ -55,7 +25,7 @@ Arithmetic (2.28)
 - $(\forall{n},a_{n}>0)\implies\displaystyle\lim_{n\to\infty} \sqrt{ a_{n} } =  \sqrt{    \lim_{n\to\infty} a_n}$
 
 
-Theorems:
+## Theorems
 
 - (2.29) **Shift Rule** Let $N$ be a natural number. Let $(a_{n})$ be a sequence. Then $a_{n} → a$ if and only if the *shifted* sequence $a_{N+n}→a$.
 
@@ -69,7 +39,6 @@ Theorems:
 	- (2.30) if $\displaystyle\lim_{n \to \infty} a_n <\lim_{n \to \infty} b_n$ then, for almost all $n$, we have $a_n < b_n$
 	- (2.31) if $a_n \leq b_n$ for each $n$, then $\displaystyle\lim_{n \to \infty} a_n \leq\lim_{n \to \infty} b_n$
 	- (2.32) **Squeeze theorem**  - Let $(x_n)$ be a sequence, where $a_{n}\leq x_{n}\leq b_{n}$ for almost all $n$, then, $\displaystyle\lim_{n \to \infty} a_n =\lim_{n \to \infty} b_n=L\implies\displaystyle\lim_{n \to \infty} x_n=L$
-
 
 
 > [[Sequence Limit Examples]]
@@ -137,7 +106,47 @@ theorems:
 
 - $\displaystyle\frac{a_n}{b_n} \to 1\land a_{n}\to 0\implies b_{n}\to 0$
 
-## Ratio test
+
+# Examples 
+	
+- (2.37) $\displaystyle\lim_{ n \to \infty }n=\infty$
+- (e2.11) $\displaystyle\lim_{ n \to \infty } \frac{n}{n+1}=1$
+- (e2.12) $\displaystyle\lim_{ n \to \infty } \frac{1}{\sqrt{ n }}=0$
+- $\displaystyle\lim_{ n \to \infty }\sqrt[n]{ n }=1$
+
+- $e=\displaystyle\lim_{ n \to \infty }\left(1+ \frac{1}{n} \right)^n$
+- $e^x=\displaystyle\lim_{ n \to \infty }\left( 1+\frac{x}{n} \right)^n$ For any real value of x
+
+- $c\in{\mathbb{R}}$
+	- $\displaystyle\lim_{ n \to \infty }{\frac{c^n}{n!}}=0$
+- $-1<c<1\equiv|c|<1$
+	- (q2.54) $\displaystyle\lim_{ n \to \infty }(1+c+\dots+c^n)=\frac{1}{1+c}$
+	- (2.33) $\displaystyle\lim_{ n \to \infty }c^n=0$
+- $c>0$
+	- (2.34) $\displaystyle\lim_{ n \to \infty }\sqrt[n]{c}=1$
+	- $\displaystyle\lim_{ n \to \infty }{\frac{n^c}{n!}}=0$
+	- $\displaystyle\lim_{ n \to \infty } \frac{1}{n^c}=0$
+		- (2.10) $\displaystyle\lim_{ n \to \infty } \frac{1}{n}=0$
+- $c>1$
+	- (2.41) $\displaystyle\lim_{ n \to \infty }c^n=\infty$
+- $|c|>1$
+	- $\displaystyle\lim_{ n \to \infty }\frac{1}{c^n}=0$ (by 2.33,q2.20)
+
+
+- (6.19) $\displaystyle\lim_{ n \to \infty }\left( 1+\frac{c}{n} \right)=e^c$
+	- (special case c=1) $\displaystyle\lim_{ n \to \infty }\left( 1+\frac{1}{n} \right)=e$
+
+
+
+
+
+- (6.4) if $(q_{n})^{\infty}_{{n=1}}$ is a sequence of rationals that tends to 0, and $a>0$, then $\displaystyle\lim_{ n \to \infty }a^{q_{n}}=1$
+- (q2.29) Let $a_{1},\dots ,a_{k}\geq 0$, then $\displaystyle\lim_{n\to\infty} \sqrt[n]{\sum_{i=1}^k a_{i}^n}=\max\set{a_{1},\dots ,a_{k}}$
+- #todo For any continuous function $f$, if $\lim _{n\to \infty }a_{n}$ exists, then $\lim _{n\to \infty }f\left(a_{n}\right)$ exists too.
+
+
+
+# Ratio test
 
 - $(a_{n})$ is sequence (all are nonzero)
 
@@ -155,19 +164,6 @@ theorems:
 
 > Other form of **Cantor's intersection** theorem: Let $(a_{n})^{\infty}_{n=1}$ and $(b_{n})^{\infty}_{n=1}$ be two sequence of real numbers that satisfy: $a_{n}\leq a_{n+1} < b_{n+1}\leq b_{n}$ for every $n\in\mathbb{N}$, and $\lim(b_{n}-a_{n})=0$. Then there exists a real number $c$ such that $\lim a_{n}=\lim b_{n}=c$. The number $c$ is the unique real number that satisfies $a_{n} \leq c\leq b_{n}$
 
-# Subsequence
-
-- (d3.24) Let $(a_{n})$ be a sequence of real numbers and let $n_{1}<n_{2}<\dots<n_{k}<\dots$ be a strictly increasing sequence of real numbers. Then the sequence $(a_{n_{k}})$ given by $(a_{n_{1}},a_{n_{2}},\dots,a_{n_{k}},\dots)$ is called **subsequence of** $(a_{n})$
-
-
-- if $(a_{n_{k}})$ and $(a_{m_{k}})$ are subsequece of $(a_{n})$, we say that they **cover** $(a_{n})$ if $\set{n_{k}}\cup\set{m_{k}}=\mathbb{N}$
-
-
-theorems 
-- (3.25) if $(a_{n})$ converges to $x$ (or $\pm \infty$) then every subsequence of $(a_{n})$ is also converges to $x$ (or $\pm \infty$)
-- (3.32) **Bolzano–Weierstrass theorem** - Every bounded sequence has a convergent subsequence
-- (3.33) Every sequence has a *convergent* (or *tends to infinity*) subsequence
-- (q3.48) **Monotone Subsequence Theorem** - Every sequence has a monotonic subsequence
 
 # Subsequential Limit
 
@@ -216,31 +212,3 @@ theorems
 	- $\displaystyle\varliminf _{n\to \infty }a_{n}=\infty \implies \lim_{ n \to \infty }a_{n}=\infty$
 - $\displaystyle  {\displaystyle \inf _{n}x_{n}\leq \liminf _{n\to \infty }x_{n}\leq \limsup _{n\to \infty }x_{n}\leq \sup _{n}x_{n}.}$
 
-
-# Order
-
-- $(a_{n})$ and $(b_{n})$ are **positive (!!!)**
-	- definitions
-		- $a_{n}=O(b_{n})\iff \exists{c>0}:{a_{n}\leq cb_{n}}$ (for all $n$) $\iff$ $(a_{n}/b_{n})$ is bounded (q2.44a)
-		- $a_{n}=o(b_{n})\iff {\lim_{ n \to \infty }(a_{n}/b_{n})=0}\iff{\lim_{ n \to \infty }(b_{n}/a_{n})=\infty}$
-	- theorems
-		- (q2.45a) $\lim_{ n \to \infty }(a_{n}/b_{n})=c\in{\mathbb{R}}\implies a_{n}=O(b_{n})$
-		- (q2.44b) $a_{n}=o(b_{n})\implies a_{n}=O(b_{n})$
-		- (q2.44c) $a_{n}=O(1)\iff{(a_{n})}$ is bounded
-		- (q2.45c) **Transitivity** - $a_{n}=o(b_{n})\land{b_{n}=o(c_{n})}\implies a_{n}=o(c_{n})$
-		- (2.49) for each $k$ natural, and $r>1$ real: $\lim_{ n \to \infty }\left( \frac{n^k}{r^n} \right)=0$ (*i.e.* $n^k=o(r^n)$, 2.50) 
-
-#  Mean Sequences
-
--  Arithmetic Mean Sequence
-	- (2.51) if $b_n=\frac{1}{n}\sum^{n}_{i=1}{a_i}$ then $(b_{n})$ is the **arithmetic mean sequence** of $(a_{n})$
-		- $\lim_{ n \to \infty }(a_{n})=L\in\mathbb{R}\implies \lim_{ n \to \infty }(b_{n})=L$
-		- $a_{n}\to \infty\implies b_{n}\to \infty$
-		- $a_{n}\to -\infty\implies b_{n}\to -\infty$
-
--  Geometric Mean Sequence
-	- (2.52) if $c_n=\sqrt[n]{\prod^{n}_{i=1}{a_i}}$ then $(c_{n})$ is the **geometric mean sequence** of $(a_{n})$
-		- #todo 
-
-
-- (q2.62) **Stolz–Cesàro theorem** - if $(b_{n})$ is a strictly monotone and divergent sequence, then $\displaystyle  \lim _{n\to \infty }{\frac {a_{n+1}-a_{n}}{b_{n+1}-b_{n}}}=\displaystyle  \lim _{n\to \infty }{\frac {a_{n}}{b_{n}}}$
