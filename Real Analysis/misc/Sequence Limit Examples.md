@@ -23,6 +23,12 @@
 	- $\displaystyle\lim_{ n \to \infty }\frac{1}{c^n}=0$ (by 2.33,q2.20)
 
 
+- (6.19) $\displaystyle\lim_{ n \to \infty }\left( 1+\frac{c}{n} \right)=e^c$
+	- (special case c=1) $\displaystyle\lim_{ n \to \infty }\left( 1+\frac{1}{n} \right)=e$
+
+
+
+- 
 
 - (6.4) if $(q_{n})^{\infty}_{{n=1}}$ is a sequence of rationals that tends to 0, and $a>0$, then $\displaystyle\lim_{ n \to \infty }a^{q_{n}}=1$
 - (q2.29) Let $a_{1},\dots ,a_{k}\geq 0$, then $\displaystyle\lim_{n\to\infty} \sqrt[n]{\sum_{i=1}^k a_{i}^n}=\max\set{a_{1},\dots ,a_{k}}$

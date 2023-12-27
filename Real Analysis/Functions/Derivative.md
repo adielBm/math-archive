@@ -30,21 +30,18 @@
 
 ## Derivative Rules
 
-- Sum Rule $(f+g)'(x_{0})=f'(x_{0})+g'(x_{0})$ 
-- Product Rule $(fg)'={fg'}+{f'g}$
-	- Constant Multiple Rule $(cf)'(x_{0})=c\cdot f'(x_{0})$
-	- (7.17) $(f^{n})'(x)=nf^{n-1}(x)\cdot f'(x)$ 
-	- (7.20) Power Rule $(x^n)'=nx^{n-1}$ ( #todo  integer $n\neq 0$ )
-- Quotient Rule $\displaystyle\left( \frac{f}{g} \right)'(x_{0})=\frac{f'g-fg'}{g^2}$ 
-	- (7.19) **Reciprocal rule**
-		- $\displaystyle\left( \frac{1}{f} \right)'=\frac{{-f'}}{f^2}$
-		- $\displaystyle\frac{d}{dx}\left[ \frac{1}{f(x)} \right]=\frac{{-f'(x)}}{[f(x)]^2}$
-- Chain Rule 
-	- $(f(g(x)))'=f'(g(x))\cdot g'(x)$
-	- $(f(g(h(x))))'=f'(g(h(x))) \cdot g'(h(x)) \cdot h'(x)$
-	- $\displaystyle  {\frac {dz}{dx}}={\frac {dz}{dy}}\cdot {\frac {dy}{dx}}$
-
-
+| Derivative Rules |  |
+| ---- | ---- |
+| **Sum Rule** | $(f+g)'(x_{0})=f'(x_{0})+g'(x_{0})$ |
+| **Product Rule** | $(fg)'={fg'}+{f'g}$ |
+| ---- Constant Multiple Rule | $(cf)'(x_{0})=c\cdot f'(x_{0})$ |
+| ---- (7.17) | $(f^{n})'(x)=nf^{n-1}(x)\cdot f'(x)$ |
+| ---- Power Rule (7.20) | $(x^n)'=nx^{n-1}$ ( #todo  integer $n\neq 0$ ) |
+| **Quotient Rule** | $\displaystyle\left( \frac{f}{g} \right)'(x_{0})=\frac{f'g-fg'}{g^2}$ |
+| ---- (7.19) Reciprocal rule | $\displaystyle\left( \frac{1}{f} \right)'=\frac{{-f'}}{f^2}$<br>$\displaystyle\frac{d}{dx}\left[ \frac{1}{f(x)} \right]=\frac{{-f'(x)}}{[f(x)]^2}$ |
+| **Chain Rule** | $(f(g(x)))'=f'(g(x))\cdot g'(x)$ |
+|  | $(f(g(h(x))))'=f'(g(h(x))) \cdot g'(h(x)) \cdot h'(x)$ |
+|  | $\displaystyle  {\frac {dz}{dx}}={\frac {dz}{dy}}\cdot {\frac {dy}{dx}}$ |
 ## Root Function 
 
 - $(\sqrt{ x })'=\frac{1}{2\sqrt{ x }}$

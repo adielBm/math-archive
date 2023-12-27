@@ -23,7 +23,11 @@ $$\large \log_b{a}=x\quad\Longleftrightarrow\quad b^x=a$$
 
 ## Natural logarithm
 
-- $\ln {x}=\log _{e}{(x)}$
+- $\ln {x}:=\log _{e}{(x)}$
+- $\ln(1)=0$
+- $\ln(e)=1$
+
+
 
 ## Binary logarithm $\log_2{n}=\lg{n}$
 

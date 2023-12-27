@@ -74,6 +74,9 @@
 	- Power Rule $|a^n|=|a|^n$
 - Subadditivity (specifically the triangle inequality) $|a+b|\leq|a|+|b|$
 	- Reverse triangle inequality $\displaystyle  |a-b|\geq {\bigl |}\left|a\right|-\left|b\right|{\bigr |}$
+	- $|a-b|\leq|a|+|b|$
+	- $|a-b|\geq|a|-|b|$
+	- $|a-b|\geq|b|-|a|$
 	- Triangle inequality $\displaystyle  |a-b|\leq |a-c|+|c-b|$
 	- $(|a+b|=|a|+|b|)\iff{(a\geq 0 \land{b\geq 0})\lor(a\leq 0 \land{b\leq 0})}$
 	- $\displaystyle{\left|\sum_{i=1}^n{x_{i}}\right|\leq \sum_{i=1}^n |x_{i}|}$

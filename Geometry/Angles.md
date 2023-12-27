@@ -25,12 +25,12 @@
 - Two angles are **adjacent** if they have a common vertex and a common side between them.
 - **Congruent angles** are two angles with the same measure
 
-### intersection of two lines
+### Intersection of Two Lines
 
 - **Vertical angles** are the pair of congruent and opposing (non-adjacent) angles formed at the intersection of two lines. 
 	- Vertical angles are equal to each other
 
-### line that intersect two lines
+### Line Intersects Two Lines
 
 - **Corresponding angles** are angles which occupy the same relative position at each intersection where a straight line crosses two others. If the two lines are parallel, the corresponding angles are equal.
 	- Corresponding angles formed between two parallel lines are equal to each other.

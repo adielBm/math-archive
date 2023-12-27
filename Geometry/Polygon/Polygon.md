@@ -72,10 +72,9 @@ Non-convex and simple.
 
 #### Convex Regular Polygon
 
-| Convex Regular Polygon | Formula                                                                                                                                                                                                                 |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Area                   | $\displaystyle  A={\tfrac {1}{2}}nsa={\tfrac {1}{2}}pa={\tfrac {1}{4}}ns^{2}\cot \left({\tfrac {\pi }{n}}\right)=na^{2}\tan \left({\tfrac {\pi }{n}}\right)={\tfrac {1}{2}}nR^{2}\sin \left({\tfrac {2\pi }{n}}\right)$ |
-|                        |                                                                                                                                                                                                                         |
+| Convex Regular Polygon | Formula |
+| ---- | ---- |
+| Area | $\displaystyle  A={\tfrac {1}{2}}nsa={\tfrac {1}{2}}pa={\tfrac {1}{4}}ns^{2}\cot \left({\tfrac {\pi }{n}}\right)=na^{2}\tan \left({\tfrac {\pi }{n}}\right)={\tfrac {1}{2}}nR^{2}\sin \left({\tfrac {2\pi }{n}}\right)$ |
 
 ### Cyclic Polygon
 

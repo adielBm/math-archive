@@ -6,7 +6,6 @@
 - **The Triangle Inequality** - The length of each side in a triangle is less than the sum of the lengths of the other sides.
 - If $a$, $b$, $c$ are positive real numbers each of which is less than the sum of the other two, then you can build a triangle whose side lengths are $a$, $b$, and $c$.
 
-
 | Triangle      |                                                                |
 | ------------- | -------------------------------------------------------------- |
 | Area          | $A=\frac{h_{b}b}{2}=\sqrt{p(p-a)(p-b)(p-c)}=rp=\frac{abc}{4R}$ |
@@ -16,7 +15,7 @@
 | Semiperimeter | $p=\frac{a+b+c}{2}$                                            |
 | Perimeter     | $P=a+b+c$                                                      |
 | Inradius      | $\displaystyle{r=\frac{A}{p}}$                                 |
-| Circumradius  | $R=\frac{abc}{4A}=$                                            |
+| Circumradius  | $R=\frac{abc}{4A}$                                            |
 
 
 - The **incircle** (or **inscribed circle**) of a triangle is the largest circle that can be contained in the triangle; it touches (is tangent to) the three sides. 
@@ -26,14 +25,14 @@
 	- Its radius is called the **circumradius**
 
 
-## Triangle centers
+## Triangle Centers
 
-|                                        | intersect/centered | Trilinear coordinates  |
+|                                        | Intersect / Centered | Trilinear Coordinates  |
 | -------------------------------------- | ------------------ | ---------------------- |
 | Angle bisectors and incircle           | $I$ - Incenter     | $1:1:1$                |
 | Medians                                | $G$ - Centroid     | $bc:ca:ab$             |
-| Perpendicular bisectors & circumcircle | $O$ - circumcenter | $\cos A:\cos B:\cos C$ |
-| Altitudes                              | $H$ - orthocenter  | $\sec A:\sec B:\sec C$ |
+| Perpendicular bisectors & circumcircle | $O$ - Circumcenter | $\cos A:\cos B:\cos C$ |
+| Altitudes                              | $H$ - Orthocenter  | $\sec A:\sec B:\sec C$ |
 
 
 # Triangle Classification 
