@@ -114,11 +114,15 @@ theorems:
 - (e2.12) $\displaystyle\lim_{ n \to \infty } \frac{1}{\sqrt{ n }}=0$
 - $\displaystyle\lim_{ n \to \infty }\sqrt[n]{ n }=1$
 
-- $e=\displaystyle\lim_{ n \to \infty }\left(1+ \frac{1}{n} \right)^n$
-- $e^x=\displaystyle\lim_{ n \to \infty }\left( 1+\frac{x}{n} \right)^n$ For any real value of x
+
+
 
 - $c\in{\mathbb{R}}$
 	- $\displaystyle\lim_{ n \to \infty }{\frac{c^n}{n!}}=0$
+	- $\displaystyle\lim_{ n \to \infty }\left( 1+\frac{c}{n} \right)^n=e^c$
+		- $\displaystyle\lim_{ n \to \infty }\left(1+ \frac{1}{n} \right)^n=e$
+
+
 - $-1<c<1\equiv|c|<1$
 	- (q2.54) $\displaystyle\lim_{ n \to \infty }(1+c+\dots+c^n)=\frac{1}{1+c}$
 	- (2.33) $\displaystyle\lim_{ n \to \infty }c^n=0$
@@ -136,9 +140,11 @@ theorems:
 - (6.19) $\displaystyle\lim_{ n \to \infty }\left( 1+\frac{c}{n} \right)=e^c$
 	- (special case c=1) $\displaystyle\lim_{ n \to \infty }\left( 1+\frac{1}{n} \right)=e$
 
+- (6.15) $\displaystyle\lim_{ n \to \infty }\left(a_{n}^{b_{n}}\right)=\left(\lim_{ n \to \infty }a_{n}\right)^{\left(\displaystyle\lim_{ n \to \infty }b_{n}\right)}$ (assuming $\lim a_{n}>0$, and $\lim b_{n}\in\mathbb{R}$)
 
 
-
+- (2.49) assuming $k\in\mathbb{N}$, and $1<r\in\mathbb{R}$ 
+	- $\displaystyle\lim_{ n \to \infty }\left( \frac{n^k}{r^n} \right)=0$
 
 - (6.4) if $(q_{n})^{\infty}_{{n=1}}$ is a sequence of rationals that tends to 0, and $a>0$, then $\displaystyle\lim_{ n \to \infty }a^{q_{n}}=1$
 - (q2.29) Let $a_{1},\dots ,a_{k}\geq 0$, then $\displaystyle\lim_{n\to\infty} \sqrt[n]{\sum_{i=1}^k a_{i}^n}=\max\set{a_{1},\dots ,a_{k}}$

@@ -38,7 +38,6 @@
 -  (q4.63) $\displaystyle\lim_{x\to0}{f(x)}=\lim_{x\to 0}{f(xk)}$  (where $k\neq 0$ and the limits exists)
 
 
-
 # One-Sided Limits
 
 - $L$ is the **right-hand limit** of $f$ at $x_{0}$
@@ -73,7 +72,14 @@
 	- $\displaystyle\lim_{x\to{x_{0}}^{-}}f(x)=\infty$
 	- $\displaystyle  {\displaystyle (\forall M\in\mathbb{R})\,(\exists \delta >0)\,(\forall x\in \mathbb {R} )\,(x\in(x_{0}-\delta,x_{0}) \implies f(x)>M )}$
 	- $\forall(x_{n})^{\infty}_{n=1}~~(\displaystyle\lim_{ n \to \infty }(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}< x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=\infty$
-
+- $-\infty$ is the **right-hand limit** of $f$ at $x_{0}$
+	- $\displaystyle\lim_{x\to{x_{0}}^{+}}f(x)=-\infty$
+	- $\displaystyle  {\displaystyle (\forall M\in\mathbb{R})\,(\exists \delta >0)\,(\forall x\in \mathbb {R} )\,(x_{0}<x<x_{0}+\delta) \implies f(x)<M )}$
+	- $\forall(x_{n})^{\infty}_{n=1}~~(\displaystyle\lim_{ n \to \infty }(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}> x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=-\infty$
+- $-\infty$ is the **left-hand limit** of $f$ at $x_{0}$
+	- $\displaystyle\lim_{x\to{x_{0}}^{-}}f(x)=-\infty$
+	- $\displaystyle  {\displaystyle (\forall M\in\mathbb{R})\,(\exists \delta >0)\,(\forall x\in \mathbb {R} )\,(x_{0}-\delta<x<x_{0}) \implies f(x)<M )}$
+	- $\forall(x_{n})^{\infty}_{n=1}~~(\displaystyle\lim_{ n \to \infty }(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}< x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=-\infty$
 
 ## Arithmetic of Infinite limits
 
@@ -183,6 +189,8 @@
 	- (6.18) $\displaystyle\lim_{ x \to 0 }(1+x)^{1/x}=e$
 
 
+- $\displaystyle\frac{x^r}{a^x}$ (assuming $a>1$, and $r\in\mathbb{R}$)
+	- $\displaystyle\lim_{ x \to \infty }\frac{x^r}{a^x}=0$
 
 # Asymptotes
 
