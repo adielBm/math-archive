@@ -11,6 +11,12 @@
 	- $\lnot\exists{x}P(x)\equiv \forall x\lnot P(x)$
 
 
+
+- $\lnot\forall{x(p(x))\equiv{\exists{x(\lnot{p(x)})}}}$
+- $\lnot\exists{x(p(x))\equiv{\forall{x(\lnot{p(x)})}}}$
+- $\forall{x(p(x))\equiv{\lnot\exists{x(\lnot{p(x)})}}}$
+
+
 - #todo Ken Rosen - Discrete Mathematics
 	- 1.5 Nested Quantifeirs 
 	- 1.6 Rules of Inference 

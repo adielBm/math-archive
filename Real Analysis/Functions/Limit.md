@@ -95,7 +95,7 @@
 
 - $L$ is the **limit** of $f$ at $\infty$
 	- $\displaystyle\lim_{ x \to \infty }f(x)=L$
-	- $\displaystyle  {\displaystyle (\forall \varepsilon >0)\,(\exists M)\,(\forall x\in \mathbb {R} )\,(x>M \implies |f(x)-L|<\varepsilon )}$ 
+	- ${\displaystyle (\forall \varepsilon >0)\,(\exists M)\,(\forall x\in \mathbb {R} )\,(x>M \implies |f(x)-L|<\varepsilon )}$ 
 	- $\forall(x_{n})^{\infty}_{n=1}~~\displaystyle\lim_{ n \to \infty}x_{n}=\infty\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
 - $L$ is the **limit** of $f$ at $-\infty$
 	- $\displaystyle\lim_{ x \to -\infty }f(x)=L$
@@ -110,6 +110,11 @@
 
 - #todo $\infty$ is the **limit** of $f$ at $-\infty$
 
+
+- Limit at Infinity of **Rational Function** $\displaystyle \frac{f(x)}{g(x)}=\frac{a_{n}x^n+\dots+a_{0}}{b_{m}x^m+\dots+b_{0}}$
+	- $\displaystyle\deg(f)<\deg(g)\implies\displaystyle\lim_{x\to\infty}\frac{\frac{a_nx^n}{x^m}+...+\frac{a_0}{x^m}}{\frac{b_mx^m}{x^m}+...+\frac{b_0}{x^m}}=\frac{0+...+0}{b_m+...+0}=\frac{0}{b_m}=0$
+	- $\displaystyle\deg(f)=\deg(g)\implies\displaystyle\lim_{x\to\infty}\frac{\frac{a_nx^n}{x^n}+...+\frac{a_0}{x^n}}{\frac{b_nx^n}{x^n}+...+\frac{b_0}{x^n}}=\frac{a_{n}+...+0}{b_n+...+0}=\frac{a_{n}}{b_n}$
+	- $\displaystyle\deg(f)>\deg(g)\implies\lim_{x\rightarrow \infty}\frac{f(x)}{g(x)}=\pm \infty$ (depending on the sign of $\frac{a_{n}}{b_{m}}$)
 
 # L'Hôpital's rule
 
