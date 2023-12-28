@@ -1,8 +1,5 @@
 The Project: to write an assembler for a specific assembly language defined here specifically for this project.
 
-
-#todo see this https://www.cs.cmu.edu/~ab/15-123S09/lectures/Lecture%2023%20-%20Assembler%20Fundamentals.pdf
-
 ## Hardware
 
 - "The computer in the project" 
@@ -28,7 +25,7 @@ The Project: to write an assembler for a specific assembly language defined here
 
 - 8 general registers named `r0, r1, r2, r3, r4, r5, r6, r7`
 - Register: 14 bits. 
-	- The least significant bit denoted as bit 0 and the most significant bit as bit 13. 
+	- The least significant bit is denoted as bit 0 and the most significant bit as bit 13. 
 	- The register names are always written with a lowercase `r`
 - A register named **Program Status Word** (PSW), which contains flags characterizing the processor's state at any given moment.
 
@@ -58,7 +55,7 @@ The structure of the first word is always the same. The structure of the first w
 
 - Bits `0-1` (the '`A, R, E`' field):
 	- In the first word of an instruction, these bits are always set to zero (`00`).
-	- The 'A, R, E' field is added to each word in the instruction encoding (see the addressing modes details). 
+	- The 'A, R, E' field is added to each word in the instruction encoding (see see the details of the addressing mode). 
 	- This field indicates the type of encoding for the word: **Absolute**, **External**, or **Relocatable**.
 		- The value `00` means that the word is encoded **absolutely** (requiring no changes in the linkage and loading stages). 
 		- The value `01` means that the encoding is for an **external address** (requiring changes in the linkage and loading stages). 
@@ -130,7 +127,7 @@ Description of the addressing modes in our machine:
 #### `2` Index Addresing (מיעון אינדקס קבוע) 
 
 
-- This addressing method is used to access an array member by index. The array is in memory. Each member of the array is a word in size. 
+- This addressing method is used to access an array member by index. The array is in memory. Each member of the array is a size word
 	- In this addressing method, there are two additional information words in the instruction coding. 
 		- The first extra word contains the starting address of the array. 
 		- The second additional word contains the index of the element in the array to be accessed. 

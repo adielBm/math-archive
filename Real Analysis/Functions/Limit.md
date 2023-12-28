@@ -95,7 +95,7 @@
 
 - $L$ is the **limit** of $f$ at $\infty$
 	- $\displaystyle\lim_{ x \to \infty }f(x)=L$
-	- ${\displaystyle (\forall \varepsilon >0)\,(\exists M)\,(\forall x\in \mathbb {R} )\,(x>M \implies |f(x)-L|<\varepsilon )}$ 
+	- ${\displaystyle (\forall \varepsilon >0)\,(\exists M)\,(\forall x\in \mathbb {R} )\,(x>M \implies |f(x)-L|<\varepsilon )}$
 	- $\forall(x_{n})^{\infty}_{n=1}~~\displaystyle\lim_{ n \to \infty}x_{n}=\infty\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
 - $L$ is the **limit** of $f$ at $-\infty$
 	- $\displaystyle\lim_{ x \to -\infty }f(x)=L$
