@@ -1,5 +1,4 @@
 The Project: to write an assembler for a specific assembly language defined here specifically for this project.
-
 ## Hardware
 
 - "The computer in the project" 
