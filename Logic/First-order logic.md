@@ -1,3 +1,10 @@
+ 
+
+- **First-order logic** (aka: predicate logic) is an extension of *propositional calculus* which permits quantifiers over elements
+
+
+- Predicate
+
 
 # Quantifiers
 
