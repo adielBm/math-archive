@@ -2,7 +2,7 @@
 
 - **Proposition** (statement) - A declarative sentence that is either true or false, but not both. 
 	- A statement is **atomic** if it cannot be divided into smaller statements, otherwise it is called **molecular**.
-- A **well-formed formula** (WFF) (Recursive definition):
+- A **well-formed formula** (WFF)
 	1. Any atomic statement is a WFF
 	2. Any WFF preceded by $¬$ is a WFF
 	3. Any two WFFs can be made into another WFF by writing one of these symbols between them, $∧, ∨, →, ↔$ and enclosing the result in parentheses
@@ -50,6 +50,7 @@
 - A language $L$ is said to be **context-free** if and only if there is a context-free grammar $G$ such that $L=L(G)$
 
 - A **formal theory** is a set of sentences expressed in a formal language
+- A **formal theory** is an axiomatic system (usually formulated within model theory) that describes a set of sentences that is closed under logical implication
 
 - regular language #todo  choose good definition!!!
 	- A **regular language** over $\Sigma$ is a formal language over $\Sigma$ which is accepted by some DFA.

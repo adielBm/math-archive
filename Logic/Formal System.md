@@ -5,10 +5,18 @@
 
 # Formal System
 
-- **Formal System** (aka: _logical calculus_, _logical system_)
+- **Formal System**
 	- A **formal system** is an abstract structure or formalization of an *axiomatic system* used for inferring theorems from axioms by a set of inference rules.
 	- A **formal system** consists of a formal language together with a *deductive apparatus* (also called a _deductive system_).
 	- A **formal system** is a formal language $L$ together with a deductive apparatus for $L$
+	- A **formal system** is $(D, R)$ where D is a set of data structures, and R is a set of rules which determine which transitions between objects in D are allowed.
+	- A **formal system** is any well-defined system of abstract thought based on the model of mathematics
+	- A **formal system** $S=(K,P,V)$ consists of three finite and disjoint sets of symbols $K,P,V$ and two additional separate symbols $⇒$ for "implication" and , a comma for punctuation. 
+		- K is the set of target symbols, 
+		- P is the set of predicate symbols, 
+		- and V is the set of variables. 
+		- A formal system will usually have associated with it a finite set of strings of symbols from $K∪P∪V∪{,⇒}$ . Strings in this set are called axioms.
+
 
 
 - A formal system is **sound** if and only if every well-formed formula that can be proven in the system is logically valid with respect to the logical semantics of the system.
@@ -26,4 +34,3 @@
 
 - An example of deductive system is first order logic.
 
-# Axiomatic System
