@@ -1,18 +1,36 @@
 
+- A **propositional variable** (aka: sentential variable, sentential letter) is an input variable (that can either be true or false) of a truth function. 
+	- Propositional variables are the basic building-blocks of propositional formulas
+	- Propositional variables are the atomic formulas of propositional logic
+- **Propositional Formula** (propositional expression, sentence, sentential formula, proposition)
+	- A **propositional formula** is a type of syntactic formula which is well formed and has a truth value. 
+	- If the values of all variables in a propositional formula are given, it determines a unique truth value. 
+	- Propositional formulas are the formulas of propositional calculus
+- A **compound proposition** is a proposition constructed by combining propositions using logical connectives 
 
-- A compound proposition that is always true, no matter what the truth values of the propositional variables that occur in it, is called a **tautology** $\top$
-	- Examples: $p\leftrightarrow{p},\quad p\rightarrow{p},\quad p\lor{(\lnot{p})},\quad p\rightarrow{T},\quad F\rightarrow{p}$
-- A compound proposition that is always false is called a **contradiction**  $\bot$
-	- Examples: $p\land\lnot{p}$
-- A compound proposition that is neither a tautology nor a contradiction is called a **contingency**. 
-	- Examples: $p\lor{q}$
+- A **truth assignment** (or **valuation function**) is a function that maps propositional variables to true or false.
+
+
+- Tautology
+	- A compound proposition P is a **tautology** $\top$ if every truth assignment satisfies P, i.e. all entries of its truth table are true.
+		- Examples: $p\leftrightarrow{p},\quad p\rightarrow{p},\quad p\lor{(\lnot{p})},\quad p\rightarrow{T},\quad F\rightarrow{p}$
+	- in propositional logic **valid** formula is tautology
+- Satisfiability 
+	- A compound proposition P is **satisfiable** if there is a truth assignment that satisfies P; that is, at least one entry of its truth table is true
+- Contradiction
+	- A compound proposition P is a **contradiction** $\bot$ (or **unsatisfiable**) if it is not satisfiable; that is, all entries of its truth table are false.
+		- Examples: $p\land\lnot{p}$
+- Contingency
+	- A compound proposition that is neither a tautology nor a contradiction is called a **contingency**. 
+		- Examples: $p\lor{q}$
 
 
 - Negation of a tautology is always a contradiction
 - Negation of a contradiction is always a tautology
 
 
-- The compound propositions $p$ and $q$ are **logically equivalent** if $p\leftrightarrow{q}$ is a tautology. The notation $p \equiv q$ (or $p \dashv \vdash q$) denotes that $p$ and $q$ are logically equivalent. 
+- Logical Equivalence
+	- The compound propositions $p$ and $q$ are **logically equivalent** if $p\leftrightarrow{q}$ is a tautology. (i.e. they always have the same truth values ) The notation $p \equiv q$ (or $p \dashv \vdash q$) denotes that $p$ and $q$ are logically equivalent. 
 
 ##  Logical Connectives (Logical Operator)
 
