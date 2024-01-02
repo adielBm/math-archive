@@ -51,20 +51,23 @@ Theorems
 
 
 - (assuming $f$ is continuous on the interval $I=[a,b]$)
-	- **Intermediate value theorem** (IVT)
+	- (5.31) **Intermediate Value Theorem** (IVT)
 		- $(\displaystyle  {\displaystyle \min(f(a),f(b))<t<\max(f(a),f(b))})\implies{\exists~{c}\in{[a,b]}:f(c)=t}$
-	- (5.32) **Brouwer's Fixed Point Theorem** (1 dim) - If $f:[a,b]\to[a,b]$ is continuous then $\exists{x}\in{[a,b]}:f(x)=x$
+	- (5.32) **Brouwer's Fixed Point Theorem** (1 dim) 
+		- $f:[a,b]\to[a,b]\implies\exists{x}\in{[a,b]}:f(x)=x$
 	- (5.34, 5.38) Preservation of intervals - $f(I)= \set{f(x):x\in{I}}$ is either an **closed interval** or a **point**
-	- (5.35) Boundedness theorem 
+	- (5.35) Boundedness theorem (*Weierstrass 1*)
 		- $f$ is **bounded** on $I=[a,b]$
 		- $\exists{m,M}: \displaystyle  {\displaystyle m\leq f(x)\leq M\quad \forall x\in [a,b]}$
-	- (5.37) **Extreme value theorem** (EVT) 
+	- (5.37) **Extreme value theorem** (EVT) (*Weierstrass 2*)
 		- $f$ has both a maximum and a minimum on $I=[a,b]$
 		- There exist $c,d\in[a,b]:f(c)\geq f(x) \geq{f(d)}~~\forall{x}\in[a,b]$
 	- (q8.25) if $f$ is **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$ 
 
-### Examples
+## Examples
 
+- (e5.2) $f(x)=|x|$ is continuous everywhere
+- (5.5) $f(x)=\sqrt{ x }$ is continuous on $(0,\infty)$
 - (5.7) $\sin$ and $\cos$ are continuous everywhere
 - (5.12a) All **polynomial functions** are continuous everywhere 
 - (5.12b) All **rational functions** are continuous over their domain
