@@ -17,6 +17,7 @@ Theorems
 - (5.15) if $g$ is continuous in $t_{0}$, and $f$ is continuous in $x_{0}$ where $x_{0}=g(t_{0})$, then $f(g(x))$ is continuous in $t_{0}$
 - (7.9) if $f$ is differentiable at $x_{0}$, then it continuous at $x_{0}$
 
+- (5.11) **Continuous Arithmetic** - If $f$ and $g$ are continuous at $x_{0}$, then $f\pm g$, $f\cdot g$, and $f/g$ (given $g\neq 0$), are continuous at $x_{0}$,
 
 ## One Side
 
@@ -26,6 +27,8 @@ Theorems
 	- $\displaystyle\lim_{ x \to x^{+}_{0} }f(x)=f(x_{0})$
 
 ## Discontinuity point 
+
+#not-in-course 
 
 - **Removable discontinuity** - $\displaystyle\lim_{ x \to x_{0} }f(x)=L\in\mathbb{R}$, and $f(x_{0})\neq L$ (or $f(x_{0})$ is undefined)
 - **Jump discontinuity** (first kind) - $\displaystyle\lim_{ x \to x_{0}^{-} }f(x)\neq\lim_{ x \to x_{0}^{+} }f(x)$
@@ -59,6 +62,12 @@ Theorems
 		- $f$ has both a maximum and a minimum on $I=[a,b]$
 		- There exist $c,d\in[a,b]:f(c)\geq f(x) \geq{f(d)}~~\forall{x}\in[a,b]$
 	- (q8.25) if $f$ is **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$ 
+
+### Examples
+
+- (5.7) $\sin$ and $\cos$ are continuous everywhere
+- (5.12a) All **polynomial functions** are continuous everywhere 
+- (5.12b) All **rational functions** are continuous over their domain
 
 ## Uniform continuity
 

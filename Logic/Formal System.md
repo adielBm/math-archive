@@ -1,4 +1,3 @@
-
 # Rule of inference
 
 - A **rule of inference** is a logical form consisting of a function which takes premises, analyzes their syntax, and returns a conclusion (or conclusions).

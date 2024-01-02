@@ -93,22 +93,31 @@
 
 # Limits at Infinity
 
-- $L$ is the **limit** of $f$ at $\infty$
-	- $\displaystyle\lim_{ x \to \infty }f(x)=L$
-	- ${\displaystyle (\forall \varepsilon >0)\,(\exists M)\,(\forall x\in \mathbb {R} )\,(x>M \implies |f(x)-L|<\varepsilon )}$
-	- $\forall(x_{n})^{\infty}_{n=1}~~\displaystyle\lim_{ n \to \infty}x_{n}=\infty\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
-- $L$ is the **limit** of $f$ at $-\infty$
-	- $\displaystyle\lim_{ x \to -\infty }f(x)=L$
-	- $\displaystyle  {\displaystyle (\forall \varepsilon >0)\,(\exists M)\,(\forall x\in \mathbb {R} )\,(x<M \implies |f(x)-L|<\varepsilon )}$ 
-	- $\forall(x_{n})^{\infty}_{n=1}~~\displaystyle\lim_{ n \to \infty}x_{n}=-\infty\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
-
--  $\infty$ is the **limit** of $f$ at $\infty$
-	- $\displaystyle\lim_{ x \to \infty }f(x)=\infty$
-	- $\displaystyle  {\displaystyle (\forall M_{1} \in\mathbb{R})\,(\exists M_{2} \in\mathbb{R})\,(\forall x\in \mathbb {R} )\,(x>M_{2} \implies f(x)>M_{1} )}$ 
-	- $\forall(x_{n})^{\infty}_{n=1}~~\displaystyle\lim_{ n \to \infty}x_{n}=\infty\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=\infty$
+- $L$ is the **limit** of $f$ 
+	- at $\infty$
+		- $\displaystyle\lim_{ x \to \infty }f(x)=L$
+		- ${\displaystyle \forall \varepsilon >0,\,\exists M:\,\forall x\in \mathbb {R},\,(x>M \implies |f(x)-L|<\varepsilon )}$
+		- $\forall(x_{n})^{\infty}_{n=1}~~\displaystyle\lim_{ n \to \infty}x_{n}=\infty\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
+	- at $-\infty$
+		- $\displaystyle\lim_{ x \to -\infty }f(x)=L$
+		- $\displaystyle  {\displaystyle (\forall \varepsilon >0)\,(\exists M)\,(\forall x\in \mathbb {R} )\,(x<M \implies |f(x)-L|<\varepsilon )}$ 
+		- $\forall(x_{n})^{\infty}_{n=1}~~\displaystyle\lim_{ n \to \infty}x_{n}=-\infty\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
 
 
-- #todo $\infty$ is the **limit** of $f$ at $-\infty$
+-  $\infty$ is the **limit** of $f$ 
+	- at $\infty$
+		- $\displaystyle\lim_{ x \to \infty }f(x)=\infty$
+		- $\displaystyle  {\displaystyle (\forall M_{1} \in\mathbb{R})\,(\exists M_{2} \in\mathbb{R})\,(\forall x\in \mathbb {R} )\,(x>M_{2} \implies f(x)>M_{1} )}$ 
+		- $\forall(x_{n})^{\infty}_{n=1}~~\displaystyle\lim_{ n \to \infty}x_{n}=\infty\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=\infty$
+	- at $-\infty$ #todo
+
+
+-  $-\infty$ is the **limit** of $f$ 
+	- at $\infty$ #todo
+	- at $-\infty$ #todo
+
+
+____
 
 
 - Limit at Infinity of **Rational Function** $\displaystyle \frac{f(x)}{g(x)}=\frac{a_{n}x^n+\dots+a_{0}}{b_{m}x^m+\dots+b_{0}}$
