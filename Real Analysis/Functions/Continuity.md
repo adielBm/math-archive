@@ -61,8 +61,9 @@ Theorems
 		- $\exists{m,M}: \displaystyle  {\displaystyle m\leq f(x)\leq M\quad \forall x\in [a,b]}$
 	- (5.37) **Extreme value theorem** (EVT) (*Weierstrass 2*)
 		- $f$ has both a maximum and a minimum on $I=[a,b]$
-		- There exist $c,d\in[a,b]:f(c)\geq f(x) \geq{f(d)}~~\forall{x}\in[a,b]$
+		- $\exists c,d\in[a,b]:\forall{x}\in[a,b],~f(c)\geq f(x) \geq{f(d)}$
 	- (q8.25) if $f$ is **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$ 
+	- (5.48) **Heine–Cantor theorem** - $f$ is uniformly continuous on it.
 
 ## Examples
 
@@ -73,6 +74,8 @@ Theorems
 - (5.12b) All **rational functions** are continuous over their domain
 
 ## Uniform continuity
+
+ #not-in-course 
 
 Definition
 - $f$ is **uniformly continuous** on the interval $I$
