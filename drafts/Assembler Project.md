@@ -282,7 +282,7 @@ mov A,r1
 - The name of an instruction or directive cannot be the name of a macro.
 - It can be assumed that each macro line in the source code has a closure with an `endmcr` line (there is no need to check this).
 - Defining a macro will always be before calling the macro (no need to check it).
-- It is required that the pre-assembler create a file with the extended code that includes the (פרישה של המאקרו) (extension of the source file described below). The "extended source file" is a "source file" after the macro has been removed, compared to an "initial source file" which is the input file to the system, including the definition of the macros.
+- It is required that the pre-assembler create a file with the extended code that includes the macro expansion. (extension of the source file described below). The "extended source file" is a "source file" after the macro has been removed, compared to an "initial source file" which is the input file to the system, including the definition of the macros.
 
 ### Statements
 
@@ -387,21 +387,21 @@ At each word in the machine code of an instruction (not of data), the assembler 
 
 # Assembler
 
-#todo 
-
-- Assembler 
-	- Process: 
-		1. Construct a file containing machine code from a given file of a program written in assembly language.
-		2. Linkage. (Not part of the project)
-		3. Loading. (Not part of the project)
-
+- Assembler Process 
+	- Construct a file containing machine code from a given file of a program written in assembly language.
+		- Pre-Assembler
+			- macro expansion
+		- Assembler
+	- Linkage. (Not part of the project)
+	- Loading. (Not part of the project)
 
 ### Pre-Assembler
 
-#todo 
-
-- When the assembler receives an assembly language program as input, it must first handle the deployment of the macros, and only then go over the program to which the macros were deployed. That is, the deployment of the macros will be done in the "pre-assembler" phase, before the assembler phase (described later). 
+- When the assembler receives an assembly language program as input, it must first handle the macro expansion, and only then go over the program to which the macros were expanded. That is, the macro expansion will be done in the "pre-assembler" phase, before the assembler phase (described later). 
 - If the program does not contain a macro, the retirement program will be the same as the source program.
+- #todo 
+
+#### Example
 
 An example of a pre-assembler step. The assembler accepts the following assembly language program:
 
@@ -426,9 +426,9 @@ LIST:  .data 6,-9, len
 K:          .data   22
 ```
 
-First, the assembler goes through the program and deploys all the macros present in it. Only if this process ends successfully, you can move on to the next step. 
+First, the assembler goes through the program and expands all the macros present in it. Only if this process ends successfully, you can move on to the next step. 
 
-In this example, the program after the macros deployment will look like this:
+In this example, the program after the macro expansion will look like this:
 
 ```
 .define sz=2
@@ -448,9 +448,9 @@ LIST:  .data 6,-9, len
 K:          .data   22
 ```
 
-The program code, after deployment, will be saved in a new file, as will be explained later.
+The program code, after macro expansion, will be saved in a new file, as will be explained later.
 
-### Pre-Assembler Algorithm
+#### Pre-Assembler Algorithm
 
 This is a skeletal algorithm for the pre-assembler process. 
 
@@ -469,18 +469,20 @@ This is a skeletal algorithm for the pre-assembler process.
 
 ### Two-Pass Assembler
 
-- A **symbol table** (טבלת הסמלים) is a mapping in which each symbol in the source program is associated with a numerical value, which is a memory address or a constant value defined by `.define`.
+- The **symbol table** (טבלת הסמלים) is a data structure that associates symbols in the source code with a numerical value (memory address or a constant value defined by `.define`)
 
 - In the first pass of the assembler, the symbols (labels) that appear in the program must be identified, and each symbol must be given a numerical value which is the memory address that the symbol represents. 
 - In the second pass, using the symbol values, as well as the opcodes and register numbers, it builds the machine code. 
 
-- Replaceing the names of the operations `mov, jmp, prn, sub, cmp, inc, bne, hlt` with the appropriate opcode. 
+- Replaceing the operations names with the corresponding opcode. 
+	- In the [[#Example]]: the operations names `mov, jmp, prn, sub, cmp, inc, bne, hlt` 
+- Replaceing symbols with the names of the places in memory where each data or instruction is located respectively
+	- In the example: the symbols `K,STR, LIST, LI, MAIN, LOOP, END`
+- Replaceing the names of the constants defined by `.define` with the numerical constants that are the values of the corresponding constants. 
+	- in the example: the constants are `len` and `sz`
 
-Also, the assembler must replace the symbols `K,STR, LIST, LI, MAIN, LOOP, END` with the names of the places in memory where each data or instruction is located respectively. 
-
-In addition, the assembler must replace the names of the constants defined by define (in the example the constants are len and sz), with the numerical constants that are the values of the respective constants, wherever they appear. Assume that the above code snippet (instructions and data) will be loaded into memory starting at address 100 (in base 10). In this case we will get the following "translation":
-
-
+  Assume that the code snippet in the above example (instructions and data) is loaded into memory starting at address 100 (in base 10). In this case we get the following "translation":
+  
 | Decimal Address | Source Code | Explanation | Binary Machine Code <br>(14 bits) |
 | ---- | ---- | ---- | ---- |
 | 0100<br>0101<br>0102<br>0103 | `MAIN: mov r3, LIST[sz]` | First word of instruction<br>Source register 3<br>Address of label `LIST` (integer array)<br>Value of constant `sz` (index 2) | 00000000111000<br>00000001100000<br>00001000010010<br>00000000001000 |
@@ -540,6 +542,8 @@ For example, in the code above, the assembler **cannot** know that the symbol `E
 
 ##### The First Pass
 
+#todo 
+
 - In the first pass, rules are required to determine which address will be associated with each symbol.
 - The basic principle is to count the places in memory that the instructions occupy. If each instruction is loaded in memory to the location following the previous instruction, such a count will indicate the address of the next instruction. 
 - The counting is done by the assembler and held in the instruction counter (IC). 
@@ -547,25 +551,30 @@ For example, in the code above, the assembler **cannot** know that the symbol `E
 
 ##### The Second Pass
 
-#todo  
+#todo 
 
+ We saw that in the first pass, the assembler cannot construct the machine code of operands that use symbols that have not yet been defined. Only after the assembler has gone through the entire program, so that all symbols have already entered the symbol table, can the assembler complete the machine code of all operands. For this purpose, the assembler performs an additional pass (second pass) over the entire source file, and updates the machine code of the operands that use symbols, using the symbol values from the symbol table. At the end of the second pass, the program will be completely translated into machine code.
 
 ##### Separation of instruction and data
 
 #todo 
-### Errors
+
+Separation of instructions and data In the program, two types of content are distinguished: instructions and data. The machine code must be organized so that there is separation between the data and the instructions. Separating the instructions and data into different sections of memory is a better method than attaching the data definitions to the instructions that use them. One of the dangers inherent in not separating the instructions from the data is that sometimes the processor may, following a logical error in the program, try to "execute" the data as if they were legal instructions. For example, an error that can cause such a phenomenon is incorrect branching. The program will of course not work correctly, but most of the time the damage is
+Worse, because a hardware exception occurs as soon as the processor performs an illegal operation.
+Our assembler must separate, in the machine code it generates, the data section from the instruction section. That is, in the output file (in the machine code) there will be a separation of instructions and data into two separate sections, while in the input file there is no obligation to have such a separation. Next, the assembler's algorithm is described, with details on how to perform the separation.
+
+#### Errors
 
 #todo 
 
 
 
-### Assembler Algorithm
+#### Two-Pass Assembler Algorithm
 
 #todo 
 
 - First pass (18 steps)
 - Second pass (10 steps)
-
 
 ### Input and Output Files of the Assembler
 
