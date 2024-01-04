@@ -387,6 +387,8 @@ At each word in the machine code of an instruction (not of data), the assembler 
 
 # Assembler
 
+#todo 
+
 - Assembler 
 	- Process: 
 		1. Construct a file containing machine code from a given file of a program written in assembly language.
@@ -467,15 +469,90 @@ This is a skeletal algorithm for the pre-assembler process.
 
 ### Two-Pass Assembler
 
+- A **symbol table** (טבלת הסמלים) is a mapping in which each symbol in the source program is associated with a numerical value, which is a memory address or a constant value defined by `.define`.
+
+- In the first pass of the assembler, the symbols (labels) that appear in the program must be identified, and each symbol must be given a numerical value which is the memory address that the symbol represents. 
+- In the second pass, using the symbol values, as well as the opcodes and register numbers, it builds the machine code. 
+
+- Replaceing the names of the operations `mov, jmp, prn, sub, cmp, inc, bne, hlt` with the appropriate opcode. 
+
+Also, the assembler must replace the symbols `K,STR, LIST, LI, MAIN, LOOP, END` with the names of the places in memory where each data or instruction is located respectively. 
+
+In addition, the assembler must replace the names of the constants defined by define (in the example the constants are len and sz), with the numerical constants that are the values of the respective constants, wherever they appear. Assume that the above code snippet (instructions and data) will be loaded into memory starting at address 100 (in base 10). In this case we will get the following "translation":
+
+
+| Decimal Address | Source Code | Explanation | Binary Machine Code <br>(14 bits) |
+| ---- | ---- | ---- | ---- |
+| 0100<br>0101<br>0102<br>0103 | `MAIN: mov r3, LIST[sz]` | First word of instruction<br>Source register 3<br>Address of label `LIST` (integer array)<br>Value of constant `sz` (index 2) | 00000000111000<br>00000001100000<br>00001000010010<br>00000000001000 |
+| 0104<br>0105 | `LOOP: jmp L1` | Address of label L1 | 00001001000100<br>00000111100010 |
+| 0106<br>0107 | `prn #-5` | Immediate value -5 | 00001100000000<br>11111111101100 |
+| 0108<br>0109<br>0110<br>0111<br>0112 | `mov STR[5], STR[2]` | Address of label `STR` (string)<br>Index 5<br>Address of label `STR`<br>Index 2 | 00000000101000<br>00000111110010<br>00000000010100<br>00000111110010<br>00000000001000 |
+| 0113<br>0114 | `sub r1, r4` | Source register 1 and target register 4 | 00000011111100<br>00000000110000 |
+| 0115<br>0116<br>0117 | `cmp r3, #sz` | Source register 3<br>Value of constant `sz` (immediate `#2`) | 00000001110000<br>00000001100000<br>00000000001000 |
+| 0118<br>0119 | `bne END` | Address of label `END` | 00001010000100<br>00000111110010 |
+| 0120<br>0121 | `L1: inc K` | Address of label `K` (integer) | 00000111000100<br>00001000011110 |
+| 0122<br>0123 | `bne LOOP` | Address of label `LOOP` | 00001010000100<br>00000110100010 |
+| 0124 | `END: hlt` |  | 00001111000000 |
+| 0125 | `STR: .string "abcdef"` | ASCII code `'a'` | 00000001100001 |
+| 0126 |  | ASCII code `'b'` | 00000001100010 |
+| 0127 |  | ASCII code `'c'` | 00000001100011 |
+| 0128 |  | ASCII code `'d'` | 00000001100100 |
+| 0129 |  | ASCII code `'e'` | 00000001100101 |
+| 0130 |  | ASCII code `'f'` | 00000001100110 |
+| 0131 |  | ASCII code `'\0'` (end of string) | 00000000000000 |
+| 0132<br>0133<br>0134 | `LIST: .data 6, -9, len` | Integer 6 (first in array of 3 words)<br>Integer -9<br>Value of constant `len` (integer 4) | 00000000000110<br>11111111110111<br>00000000000100 |
+| 0135 | `K: .data 22` | Integer 22 (single word) | 00000000010110 |
+
+
+- The assembler maintains a table in which all the operation names of the instructions and their corresponding binary codes are listed, so the operation names can be easily converted to binary code. 
+
+
+When an operation name is called, one can simply browse the table and find the opcode. 
+To perform binary conversion of operands written in addressing methods that use symbols (labels), it is necessary to build a table containing the values of all symbols.
+
+However, unlike the opcodes, which are known in advance, the answers in memory for the symbols used by the program are not known, until the source program has read in its entirety and all the definitions of the symbols have been discovered. 
+
+For example, in the code above, the assembler **cannot** know that the symbol `END` is associated with `124` (decimal), and that the symbol `K` is associated with `135`, but only after all the lines of the program have been read. That is why the assembler's treatment of symbols is separated into two stages. 
+
+- In the first step, a table of all the symbols is built, with their associated numerical values, and in the second step, all the symbols that appear in the operands of the program's instructions are replaced with their numerical values. Performing these two steps involves two scans (called "passes") of the source file. 
+- In the first pass, a symbol table is built in memory. In the example above, the symbol table after the first pass is:
+
+```
+| symbol | value |
+|--------|-------|
+| SZ     | 2     |
+| MAIN   | 100   |
+| LOOP   | 104   |
+| L1     | 120   |
+| END    | 124   |
+| len    | 4     |
+| STR    | 125   |
+| LIST   | 132   |
+| K      | 135   |
+```
+
+
+- In the second pass, the source code is converted to machine code. 
+	- At the beginning of the second pass, the values of the symbols should already be known.
+
+
+ > [!info] Note: the role of the assembler, in its two passes, is to translate a source file into machine code.  At the end of the assembler operation, the program is not yet ready to be loaded into memory for execution. The machine code must go to the linking/loading stages, and only then to the execution stage (these stages are not part of this project). 
+
+##### The First Pass
+
+- In the first pass, rules are required to determine which address will be associated with each symbol.
+- The basic principle is to count the places in memory that the instructions occupy. If each instruction is loaded in memory to the location following the previous instruction, such a count will indicate the address of the next instruction. 
+- The counting is done by the assembler and held in the instruction counter (IC). 
+- The initial value of IC is 100 (decimal), so the machine code of the first instruction is constructed so that it is loaded into memory starting at address 100. The IC is updated on each line an instruction that allocates space in memory. After the assembler determines the length of the instruction, the IC is increased by the number of cells (words) occupied by the instruction, and thus it points to the next free cell. As mentioned, in order to code the instructions in machine language, the assembler maintains a table, which has a corresponding code for each operation name. During translation, the assembler replaces each operation name with its code, and each operand is replaced with a suitable encoding, but this replacement operation is not so simple. The instructions use a variety of addressing methods for operands. The same action can have different meanings, in each of the addressing methods, and therefore different codings will suit it according to the addressing methods. For example, the move operation mov can refer to copying the contents of a memory cell to a register, or copying the contents of a register to another register, and so on. A different encoding may be appropriate for each such option of mov. The assembler must scan the instruction line in its entirety, and decide on the encoding according to the operands. Usually the coding is divided into the field of the name of the operation, and additional fields that contain information about the addressing methods. All the fields together require one or more words in the machine code. When the assembler encounters the label that appears at the beginning of the line, it knows that it has a definition of a label in front of it, and then it associates it with Maan - the current content of the IC. This is how all the labels receive their punishments during the definition. These labels are inserted into the symbol table, which contains, in addition to the label name, the addressee and other characteristics. When there is a reference to a label in the operand of some instruction, the assembler will be able to retrieve the appropriate address from the symbol table. An instruction can also refer to a symbol that has not yet been defined in the program, but will only be defined later in the program. Below is an example, a branching instruction for that is defined by the label A that appears only later in the code:
+
+##### The Second Pass
+
+#todo  
+
+
+##### Separation of instruction and data
+
 #todo 
-
-- An assembler that processes the source code in two passes, allowing it to resolve symbols and addresses more efficiently.
-
-- First pass
-- Second pass
-- Separation of instruction and data
-
-
 ### Errors
 
 #todo 

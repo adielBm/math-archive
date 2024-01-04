@@ -289,7 +289,7 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 ## Characteristic polynomial 
 $$p(t)_{A}=\det \left( t I -A \right)$$
 **Properties:**
-- The characteristic polynomial is a monic polynomial of degree  
+- The characteristic polynomial is a monic polynomial of degree $n$
 - (q11.5.4) The **coefficient of** $t^{n}$ is $1$
 - (q11.4.6) The **coefficient of** $t^{n-1}$ equals $\text{tr}(-A)=-\text{tr}(A)$ 
 - (q11.4.7) The **free coefficient** equals $\det(-A) =(-1)^n\det{(A)}$
