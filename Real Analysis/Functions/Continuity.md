@@ -14,10 +14,12 @@ Definitions
 Theorems 
 
 - (q5.2) If $f(x)=g(x)$ for all $x$ in some neighborhood of $x_0$, then $f$ is continuous in $x_0$ iff $g$ is continuous in $x_0$ 
-- (5.15) if $g$ is continuous in $t_{0}$, and $f$ is continuous in $x_{0}$ where $x_{0}=g(t_{0})$, then $f(g(x))$ is continuous in $t_{0}$
+
 - (7.9) if $f$ is differentiable at $x_{0}$, then it continuous at $x_{0}$
 
 - (5.11) **Continuous Arithmetic** - If $f$ and $g$ are continuous at $x_{0}$, then $f\pm g$, $f\cdot g$, and $f/g$ (given $g\neq 0$), are continuous at $x_{0}$,
+- (5.15) **Composition Function** - if $g$ is continuous in $t_{0}$, and $f$ is continuous in $x_{0}$ where $x_{0}=g(t_{0})$, then $f(g(x))$ is continuous in $t_{0}$
+
 
 ## One Side
 

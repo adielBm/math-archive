@@ -24,6 +24,8 @@
 - if $\displaystyle  {\displaystyle (\forall \varepsilon >0)\,(\exists \delta >0)\,(\forall x\in \mathbb {R} )\,(0<|x-x_{0}|<\delta \implies |f(x)-L|<K\varepsilon )}$ where $K$ is a positive real number that does not depend on $\varepsilon$ or $x$ then $\displaystyle\lim_{ x \to x_{0} }f(x)=L$ 
 ### Arithmetic
 
+>Assuming $f,g$ are defined on $N^{*}_{\varepsilon}(x_{0})$, and their limits are exist
+
 | Limit Laws |  |
 | ---- | ---- |
 | Sum / Difference | $\displaystyle\lim _{x\to x_{0}}(f(x)\pm g(x))=\displaystyle \lim _{x\to x_{0}}f(x)\pm\lim _{x\to x_{0}}g(x)$ |

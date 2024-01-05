@@ -20,7 +20,7 @@
 - Through three noncollinear points, there is exactly one plane
 
 
-- Axiom 1 Given a pair of straight lines $\ell_1$ and $\ell_2$, there are three possibilities:
+- Axiom 1 - Given a pair of straight lines $\ell_1$ and $\ell_2$, there are three possibilities:
 	- The lines converge: $\ell_2 = \ell_1$.
 	- The lines are parallel: $\ell_2 \parallel \ell_1$.
 	- The lines intersect at exactly one point.
