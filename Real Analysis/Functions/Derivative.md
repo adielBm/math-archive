@@ -36,7 +36,7 @@
 | **Product Rule** | $(fg)'={fg'}+{f'g}$ |
 | ---- Constant Multiple Rule | $(cf)'(x_{0})=c\cdot f'(x_{0})$ |
 | ---- (7.17) | $(f^{n})'(x)=nf^{n-1}(x)\cdot f'(x)$ |
-| ---- Power Rule (7.20) | $(x^n)'=nx^{n-1}$ ( #todo  integer $n\neq 0$ ) |
+| ---- Power Rule | $(x^n)'=nx^{n-1}$ (integer $n\neq 0$, *7.20*) <br>$(x^r)'=rx^{r-1}$ ($r\in\mathbb{R}$, $x>0$, *7.31*) |
 | **Quotient Rule** | $\displaystyle\left( \frac{f}{g} \right)'(x_{0})=\frac{f'g-fg'}{g^2}$ |
 | ---- (7.19) Reciprocal rule | $\displaystyle\left( \frac{1}{f} \right)'=\frac{{-f'}}{f^2}$<br>$\displaystyle\frac{d}{dx}\left[ \frac{1}{f(x)} \right]=\frac{{-f'(x)}}{[f(x)]^2}$ |
 | **Chain Rule** | $(f(g(x)))'=f'(g(x))\cdot g'(x)$ |

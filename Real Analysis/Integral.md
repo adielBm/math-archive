@@ -6,14 +6,16 @@ $${\color{gray} f=F'\implies}\displaystyle\int f(x) dx=F(x)+C$$
 - The process of finding a function from its derivative (i.e. finding an antiderivative) is called **antidifferentiation** (or **integration**)
 - A procedure for finding areas via *antidifferentiation* is called the **antiderivative method**
 
-
 ### Properties 
 
 - Suppose that $F(x)$ and $G(x)$ are antiderivatives of $f(x)$ and $g(x)$, respectively
-	- $\displaystyle\int cf(x) \, dx=cF(x)+C$
-	- $\displaystyle \int [f(x)\pm g(x)] \, dx=F(x)\pm G(x)+C$
 
-
+|  | Formula |  |
+| ---- | ---- | ---- |
+| Constant Multiplication | $\displaystyle\int cf(x)dx=c\int f(x)dx$ | $c\in\mathbb{R}$ |
+|  | $\displaystyle\int x^n \, dx=\frac{x^{n+1}}{n+1}+C$ | (for integers $n\geq 0$) |
+| Sum | $\displaystyle \int [f(x)\pm g(x)]dx= \int f(x)dx\pm \int  g(x)dx$ |  |
+| U-Substitution | $\displaystyle\int f(g(x)) g'(x)=F(g(x))+C$ |  |
 
 ## Definite Integral
 
@@ -32,8 +34,6 @@ $$\displaystyle{\int^{b}_{a} f(x) \, dx=\lim_{ n \to \infty }\sum^{n}_{i=1} f(x^
 		- $\displaystyle\int^{b}_{a} f(x) \, dx=F(b)-F(a)$
 
 ## The Area Problem 
-
-
 
 
 - Given a function $f$ that is continuous and nonnegative on an interval $[a, b]$, find the area $A$ of the region that lies between the graph of $f$ and the interval $[a, b]$ on the $x$-axis.
