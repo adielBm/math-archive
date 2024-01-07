@@ -211,7 +211,7 @@ ____
 # Asymptotes
 
 - The vertical line $x=x_{0}$ is a **vertical asymptote** of the function $y = f(x)$ if
-	- $\displaystyle \lim _{x\to x_{0}^{-}}f(x)=\pm \infty$, or
+	- $\displaystyle\lim_{x\to~x_{0}^{-}}f(x)=\pm \infty$, or
 	- $\displaystyle \lim _{x\to x_{0}^{+}}f(x)=\pm \infty$ 
 
 -  The horizontal line $y=c$ is a **horizontal asymptote** of the function $y=f(x)$ if
