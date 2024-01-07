@@ -6,6 +6,9 @@
 - Predicate
 
 
+- A wff is **valid** if it is true in all possible interpretations
+
+
 # Quantifiers
 
 - Universal quantification $\large\forall$

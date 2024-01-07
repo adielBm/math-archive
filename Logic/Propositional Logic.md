@@ -11,6 +11,8 @@
 - A **truth assignment** (or **valuation function**) is a function that maps propositional variables to true or false.
 
 
+
+
 - Tautology
 	- A compound proposition P is a **tautology** $\top$ if every truth assignment satisfies P, i.e. all entries of its truth table are true.
 		- Examples: $p\leftrightarrow{p},\quad p\rightarrow{p},\quad p\lor{(\lnot{p})},\quad p\rightarrow{T},\quad F\rightarrow{p}$

@@ -11,10 +11,8 @@ The Project: to write an assembler for a specific assembly language defined here
 			- cell (word) size: 14 bits, 
 			- The bits in each word are numbered similarly to the register.
 
-
-
 - This computer operates only with positive and negative integers; there is no support for floating-point numbers. 
-- Arithmetic is performed using the two's complement method.
+- Arithmetic is performed using the [[Data Storage#Two's complement|Two's complement]] method.
 - There is also support for characters, represented in ASCII code
 
 # CPU
@@ -82,7 +80,7 @@ The structure of the first word is always the same. The structure of the first w
 ### Machine instructions specification
 
 - **Program Counter** (PC)
-	- This is an **internal register** of the processor (not a **general register**), which at any given moment contains the memory address where the current instruction being executed is located (always referring to the address of the first word of the instruction).
+	- This is an **internal register** of the processor (not a general register), which at any given moment contains the memory address where the current instruction being executed is located (always referring to the address of the first word of the instruction).
 
 The machine instructions are divided into three groups, according to the number of operands required for the operation.
 
@@ -187,7 +185,11 @@ Description of the addressing modes in our machine:
 
 #### (0) Immediate Addressing (מיעון מיידי) 
 
-- Additional information word of the instruction contains the operand itself, which is an integer using the 2's complement method, represented with a width of 12 bits, to which a pair of bits of the field `A,R,E` are added (the value of this field is always `00` for immediate addressing).
+- Additional information word in the instruction encoding: 
+	- `xxxxxxxxxxxx.00`
+	- `0-1` bits - for [[#A.R.E. field]]. in this mode always `00` (absolut)
+	- `2-13` bits - contains the operand itself, which is an integer using the 2's complement method, represented with a width of 12 bits
+
 - The operand starts with the character `#` and after it and next to it appears a whole number in decimal base. There is also a possibility that the constant name defined in the program by `.define` will appear instead of the number (see details below [[#Constant Definition Statement (משפט הגדרת קבוע)]]).
 - Examples:
 	- `mov #-1,r2` in this example the first operand of the command is given in an immediate addressing mode. The instruction writes the value `1` to register `r2` 
@@ -203,7 +205,7 @@ Description of the addressing modes in our machine:
 #### (2) Index Addresing (מיעון אינדקס קבוע) 
 
 - This addressing mode is used to access an array member by index. The array is in memory. Each member of the array is a size word
-	- Additional information word(s) in the instruction encoding: 
+	- Additional information words in the instruction encoding: 
 		- The 1st additional word contains the starting address of the array. 
 		- The 2nd additional word contains the index of the element in the array to be accessed. 
 	- The values in the two additional data words are represented with a width of `12` bits, to which a pair of bits from the `A,R,E` field is added (the value of this field in the first data word is as in (מיעון ישיר), and in the second data word as in (מיעון מידי).
