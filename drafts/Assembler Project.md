@@ -49,9 +49,8 @@ The structure of the first word is always the same. The structure of the first w
 | **Field** | Not used | `opcode` | Operand Ad. (Source) | Operand Ad. (Destination) | `A, R, E` |
 
 
-- Bits `0-1` (the '`A.R.E`' field):
+- Bits `0-1` (the [[#A.R.E field]]):
 	- In the first word of an instruction, these bits are always set to zero (`00`).
-
 - Bits `2-3`: Encode the number of the addressing mode for the **destination operand**. If there is no destination operand in the instruction, the value of these bits is `0`.
 - Bits `4-5`: Encode the number of the addressing mode for the **source operand**. If there is no source operand in the instruction, the value of these bits is `0`.
 - Bits `6-9`: In the first word of the instruction, these bits represent the **operation code** (opcode). Each opcode is symbolically represented in assembly language by an **operation name**.
@@ -185,41 +184,61 @@ Description of the addressing modes in our machine:
 
 #### (0) Immediate Addressing (מיעון מיידי) 
 
+- The operand begins with `#` followed by a decimal integer
+	- Example: `mov #-1,r2`. The first operand is given in an immediate addressing. The instruction writes the value `-1` to register `r2` 
+- The constant name defined in the program by `.define` will appear instead of the number (see [[#Constant Definition Statement (משפט הגדרת קבוע)]]).
+	- Example: given the definition of the constant: `.define size = 8`, then in the instruction: `mov #size, r1` the first operand is given in an immediate addressing, when the number `8` is represented by the constant named `size`. The instruction writes the value `8` to register `r1`
+
 - Additional information word in the instruction encoding: 
 	- `xxxxxxxxxxxx.00`
-	- `0-1` bits - for [[#A.R.E. field]]. in this mode always `00` (absolut)
+	- `0-1` bits - for [[#A.R.E. field]]. in this mode always `00` (absolute)
 	- `2-13` bits - contains the operand itself, which is an integer using the 2's complement method, represented with a width of 12 bits
-
-- The operand starts with the character `#` and after it and next to it appears a whole number in decimal base. There is also a possibility that the constant name defined in the program by `.define` will appear instead of the number (see details below [[#Constant Definition Statement (משפט הגדרת קבוע)]]).
-- Examples:
-	- `mov #-1,r2` in this example the first operand of the command is given in an immediate addressing mode. The instruction writes the value `1` to register `r2` 
-	- given the definition of the constant: `.define size = 8` so in the instruction: `mov #size, r1` the first operand is immediate, when the number `8` is represented by the constant name size. The instruction writes the value `8` to register `r1`
 
 #### (1) Direct Addressing (מיעון ישיר) 
 
 
-- The additional information word of the instruction contains the address of a word in memory. This word in memory is the operand. The address is represented as an unsigned number with a width of `12` bits, to which a pair of bits of the `A,R,E` field is added (the value of this field is either `01` or `10`, depending on the type of address - *external* or *internal*).
+- Additional information word in the instruction encoding: 
+	- `xxxxxxxxxxxx.xx`
+	- `0-1` bits - for [[#A.R.E. field]]. in this mode is either `10` (relocatable) or `01` (external). (depending on the type of address - internal or external)
+	- `2-13` bits - The address of the operand represented as an unsigned number (12 bits)
+
+
+
 - The operand is a label that has already been declared or will be declared later in the file. The statement is made by writing a label at the beginning of the landing `.data` or `.string` or at the beginning of an instruction of the program, or using an operand of the `.extern`
+
+
 - Example: given `x: .data 23`, then the instruction `dec x` decreases by 1 the content of the word at address `x` in memory (the variable `x`).
 
 #### (2) Index Addresing (מיעון אינדקס קבוע) 
 
-- This addressing mode is used to access an array member by index. The array is in memory. Each member of the array is a size word
-	- Additional information words in the instruction encoding: 
-		- The 1st additional word contains the starting address of the array. 
-		- The 2nd additional word contains the index of the element in the array to be accessed. 
-	- The values in the two additional data words are represented with a width of `12` bits, to which a pair of bits from the `A,R,E` field is added (the value of this field in the first data word is as in (מיעון ישיר), and in the second data word as in (מיעון מידי).
+- Usage: This addressing mode is used to access to an array member by index. The array is in memory. Each member of the array is a size word (14 bits)
 
-- The operand consists of a label indicating the starting address of the array, followed by the index in the array to be accessed in square brackets. The index can be given by a numerical constant defined with `.define`. The indexes in the array start from 0.
+- Additional information words in the instruction encoding: 
+	- The **1st additional word** consists of the **base address** (the address of the beginning of the array) (12 bits), and the ARE field (2 bits). (as in the additional word in [[#(1) Direct Addressing (מיעון ישיר)]]) 
+	- The **2nd additional word** consists of the index of the element in the array to be accessed (12 bits), and the ARE field (2 bits).  (as in the additional word in [[#(0) Immediate Addressing (מיעון מיידי)]])
+
+
+- The operand consists of a label indicating the **base address** (the address of the beginning of the array), followed by the index in the array to be accessed in square brackets. (The index can be given by a numerical constant defined with `.define`) 
+- The array indexes start from 0
 - Examples:
-	- Given the definition `x: .data 23,25,19,30`, then the instruction `mov x[2],r2` will copy the number `19` found in index `2` in the array `x` to the register `.r2`
+	- Given a definition of an array `x: .data 23,25,19,30`, then the instruction `mov x[2],r2` will copy the number `19` found in index `2` in the array `x` to the register `.r2`
 	- Given the definition of the array `x` above, as well as the constant definition `.define k=1` then the instruction: `mov r2,x[k]` will copy the content of the register `r2` to the word at index `1` in the array `x` (the previous content `25` will be overwritten)
 
 #### (3) Register Addressing (מיעון רגיסטר ישיר)
 
-- The operand is a register. If the register is used as a destination operand, an additional data word of the command will encode in bits `2-4` the number of the register. Whereas if the register is used as a source operand, the register number will be encoded in bits `5-7` of the data word. If the command has two operands and both are direct register addressing, they will share one common data word, where bits `2-4` are for the destination register, and bits `5-7` are for the source register. A pair of bits of the field `A,R,E` are added to the data word (the value of this field is always `00` for this addressing mode). Other unused bits in the data word will contain 0s.
+
 - The operand is a name of register.
-- Example: the instruction `mov r1,r2` copies the contents of register `r1` to register `r2`. In this example, both operands are in the direct register addressing mode, so they will share one additional data word in common.
+
+- The instruction encoding: 
+	- If the register is used as a destination operand, an additional data word will encode in bits `2-4` the number of the register. 
+		- `000000000.xxx.00`
+	- Whereas if the register is used as a source operand, the register number will be encoded in bits `5-7` of the data word. 
+		- `000000.xxx.000.00`
+	- If the command has two operands and both are direct register addressing, they will share one common data word, where bits `2-4` are for the destination register, and bits `5-7` are for the source register. 
+		- `000000.xxx.xxx.00`
+		- Example: the instruction `mov r1,r2` copies the contents of register `r1` to register `r2`. the encoding will be `000000.010.001.00` (In this example, both operands are in the direct register addressing mode, so they will share one additional data word in common.) 
+	- A pair of bits of the A.R.E field are added to the data word (the value of this field is always `00` for this addressing mode). 
+	- Other unused bits in the data word will contain 0s.
 
 ___
 
