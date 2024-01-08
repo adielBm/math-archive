@@ -2,7 +2,7 @@
 
 - $f(n)=o(g(n))$
 	- $\forall{(c>0)}\,\exists(n_{0}>0)\,\text{ s.t. }(0\leq{f(n)}<cg(n))\,\forall n>n_{0}$
-	- $\lim _{n\to \infty }{\frac {f(n)}{g(n)}}=0$ 
+	- $\lim_{n\to \infty }{\frac {f(n)}{g(n)}}=0$ 
 - ***asymptotic upper bound*** $f(n)=O(g(n))$
 	- $\forall{(c>0)}\,\exists(n_{0}>0)\,\text{ s.t. }(0\leq{f(n)}\leq{cg(n)})\,\forall n>n_{0}$
 - ***asymptotically tight bounds*** $f(x)=\Theta({g(n)})$

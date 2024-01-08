@@ -7,7 +7,7 @@
 - ((ε, δ)-definition of limit. Cauchy) 
 	- $\displaystyle  {\displaystyle (\forall \varepsilon >0)\,(\exists \delta >0)\,(\forall x\in \mathbb {R} )\,(0<|x-x_{0}|<\delta \implies |f(x)-L|<\varepsilon )}$ 
 - (The Sequential Criterion for a Limit of a Function. Heine) 
-	- $\forall(x_{n})^{\infty}_{n=1}~~(\displaystyle\lim_{ n \to \infty}(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}\neq x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
+	- $\displaystyle\forall(x_{n})^{\infty}_{n=1}(\lim_{n\to \infty}(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}\neq x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
 - (**left** & **right**-hand limit) (4.47)
 	- $\displaystyle\lim_{x\to{x_{0}}^{-}}f(x)=\displaystyle\lim_{x\to{x_{0}}^{+}}f(x)=L$
 - (4.40) $\displaystyle\lim_{h\to 0}{f(x_0+h)}=L$
@@ -28,11 +28,11 @@
 
 | Limit Laws |  |
 | ---- | ---- |
-| Sum / Difference | $\displaystyle\lim _{x\to x_{0}}(f(x)\pm g(x))=\displaystyle \lim _{x\to x_{0}}f(x)\pm\lim _{x\to x_{0}}g(x)$ |
-| Product | $\displaystyle\lim _{x\to x_{0}}(f(x)\cdot g(x))=\displaystyle \lim _{x\to x_{0}}f(x)\cdot\lim _{x\to x_{0}}g(x)$ |
-|  | $\displaystyle\lim _{x\to x_{0}}(f(x)\cdot c)=\displaystyle \lim _{x\to x_{0}}f(x)\cdot c$ |
-|  | $\displaystyle\lim _{x\to x_{0}}(f(x))^n=\Big(\displaystyle \lim _{x\to x_{0}}f(x)\Big)^{n}$ |
-| Quotient | $\displaystyle\lim _{x\to x_{0}}(f/g)(x)=\displaystyle \lim _{x\to x_{0}}f(x)/\lim _{x\to x_{0}}g(x)$ where $\displaystyle\lim _{x\to x_{0}}g(x)\neq 0$ |
+| Sum / Difference | $\displaystyle\lim_{x\to x_{0}}(f(x)\pm g(x))=\displaystyle \lim_{x\to x_{0}}f(x)\pm\lim_{x\to x_{0}}g(x)$ |
+| Product | $\displaystyle\lim_{x\to x_{0}}(f(x)\cdot g(x))=\displaystyle \lim_{x\to x_{0}}f(x)\cdot\lim_{x\to x_{0}}g(x)$ |
+|  | $\displaystyle\lim_{x\to x_{0}}(f(x)\cdot c)=\displaystyle \lim_{x\to x_{0}}f(x)\cdot c$ |
+|  | $\displaystyle\lim_{x\to x_{0}}(f(x))^n=\Big(\displaystyle \lim_{x\to x_{0}}f(x)\Big)^{n}$ |
+| Quotient | $\displaystyle\lim_{x\to x_{0}}(f/g)(x)=\displaystyle \lim_{x\to x_{0}}f(x)/\lim_{x\to x_{0}}g(x)$ where $\displaystyle\lim_{x\to x_{0}}g(x)\neq 0$ |
 | Composite Function | $\displaystyle\lim_{ t \to t_{0} }f(g(t))=\displaystyle\lim_{ x \to {(\lim_{ t \to t_{0} }g(t))} }f(x)$ |
 
 
@@ -46,12 +46,12 @@
 	- $\displaystyle\lim_{x\to{x_{0}}^{+}}f(x)=L$
 	- $\displaystyle  {\displaystyle (\forall \varepsilon >0)\,(\exists \delta >0)\,(\forall x\in \mathbb {R} )\,(x\in(x_{0},x_{0}+\delta)\implies{f(x)}\in(L-\varepsilon,L+\varepsilon))}$ 
 	- Sequential Criterion (*Heine*)
-		- $\forall(x_{n})^{\infty}_{n=1}~~(\displaystyle\lim_{ n \to \infty }(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}>x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
+		- $\forall(x_{n})^{\infty}_{n=1}(\displaystyle\lim_{ n \to \infty }(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}>x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
 - $L$ is the **left-hand limit** of $f$ at $x_{0}$
 	- $\displaystyle\lim_{x\to{x_{0}}^{-}}f(x)=L$
 	- $\displaystyle  {\displaystyle (\forall \varepsilon >0)\,(\exists \delta >0)\,(\forall x\in \mathbb {R} )\,(x\in(x_{0}-\delta,x_{0})\implies{f(x)}\in(L-\varepsilon,L+\varepsilon))}$
 	- Sequential Criterion (*Heine*)
-		- $\forall(x_{n})^{\infty}_{n=1}~~(\displaystyle\lim_{ n \to \infty }(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}<x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
+		- $\forall(x_{n})^{\infty}_{n=1}(\displaystyle\lim_{ n \to \infty }(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}<x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
 
 
 # Infinite limits
@@ -59,7 +59,7 @@
 - $\displaystyle\lim_{ x \to x_{0} }f(x)=\infty$ 
 - $\displaystyle  {\displaystyle (\forall M\in\mathbb{R})\,(\exists \delta >0)\,(\forall x\in \mathbb {R} )\,(0<|x-x_{0}|<\delta \implies f(x)>M )}$
 	- (Note: It's sufficient to ensure for $M>0$.)
-- $\forall(x_{n})^{\infty}_{n=1}~~(\displaystyle\lim_{ n \to \infty }(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}\neq x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=\infty$
+- $\forall(x_{n})^{\infty}_{n=1}(\displaystyle\lim_{ n \to \infty }(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}\neq x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=\infty$
 - $\displaystyle\lim_{x\to{x_{0}}^{-}}f(x)=\infty=\displaystyle\lim_{x\to{x_{0}}^{+}}f(x)$
 
 > $\displaystyle\lim_{ x \to x_{0} }f(x)=-\infty$ (or one-sided Limits) defined the same, just replace $f(x)>m$ with $f(x)<m$ 
@@ -73,15 +73,15 @@
 - $\infty$ is the **left-hand limit** of $f$ at $x_{0}$
 	- $\displaystyle\lim_{x\to{x_{0}}^{-}}f(x)=\infty$
 	- $\displaystyle  {\displaystyle (\forall M\in\mathbb{R})\,(\exists \delta >0)\,(\forall x\in \mathbb {R} )\,(x\in(x_{0}-\delta,x_{0}) \implies f(x)>M )}$
-	- $\forall(x_{n})^{\infty}_{n=1}~~(\displaystyle\lim_{ n \to \infty }(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}< x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=\infty$
+	- $\forall(x_{n})^{\infty}_{n=1}(\displaystyle\lim_{ n \to \infty }(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}< x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=\infty$
 - $-\infty$ is the **right-hand limit** of $f$ at $x_{0}$
 	- $\displaystyle\lim_{x\to{x_{0}}^{+}}f(x)=-\infty$
 	- $\displaystyle  {\displaystyle (\forall M\in\mathbb{R})\,(\exists \delta >0)\,(\forall x\in \mathbb {R} )\,(x_{0}<x<x_{0}+\delta) \implies f(x)<M )}$
-	- $\forall(x_{n})^{\infty}_{n=1}~~(\displaystyle\lim_{ n \to \infty }(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}> x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=-\infty$
+	- $\forall(x_{n})^{\infty}_{n=1}(\displaystyle\lim_{ n \to \infty }(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}> x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=-\infty$
 - $-\infty$ is the **left-hand limit** of $f$ at $x_{0}$
 	- $\displaystyle\lim_{x\to{x_{0}}^{-}}f(x)=-\infty$
 	- $\displaystyle  {\displaystyle (\forall M\in\mathbb{R})\,(\exists \delta >0)\,(\forall x\in \mathbb {R} )\,(x_{0}-\delta<x<x_{0}) \implies f(x)<M )}$
-	- $\forall(x_{n})^{\infty}_{n=1}~~(\displaystyle\lim_{ n \to \infty }(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}< x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=-\infty$
+	- $\forall(x_{n})^{\infty}_{n=1}(\displaystyle\lim_{ n \to \infty }(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}< x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=-\infty$
 
 ## Arithmetic of Infinite limits
 
@@ -99,18 +99,18 @@
 	- at $\infty$
 		- $\displaystyle\lim_{ x \to \infty }f(x)=L$
 		- ${\displaystyle \forall \varepsilon >0,\,\exists M:\,\forall x\in \mathbb {R},\,(x>M \implies |f(x)-L|<\varepsilon )}$
-		- $\forall(x_{n})^{\infty}_{n=1}~~\displaystyle\lim_{ n \to \infty}x_{n}=\infty\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
+		- $\forall(x_{n})^{\infty}_{n=1}\displaystyle\lim_{ n \to \infty}x_{n}=\infty\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
 	- at $-\infty$
 		- $\displaystyle\lim_{ x \to -\infty }f(x)=L$
 		- $\displaystyle  {\displaystyle (\forall \varepsilon >0)\,(\exists M)\,(\forall x\in \mathbb {R} )\,(x<M \implies |f(x)-L|<\varepsilon )}$ 
-		- $\forall(x_{n})^{\infty}_{n=1}~~\displaystyle\lim_{ n \to \infty}x_{n}=-\infty\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
+		- $\forall(x_{n})^{\infty}_{n=1}\displaystyle\lim_{ n \to \infty}x_{n}=-\infty\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
 
 
 -  $\infty$ is the **limit** of $f$ 
 	- at $\infty$
 		- $\displaystyle\lim_{ x \to \infty }f(x)=\infty$
 		- $\displaystyle  {\displaystyle (\forall M_{1} \in\mathbb{R})\,(\exists M_{2} \in\mathbb{R})\,(\forall x\in \mathbb {R} )\,(x>M_{2} \implies f(x)>M_{1} )}$ 
-		- $\forall(x_{n})^{\infty}_{n=1}~~\displaystyle\lim_{ n \to \infty}x_{n}=\infty\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=\infty$
+		- $\forall(x_{n})^{\infty}_{n=1}\displaystyle\lim_{ n \to \infty}x_{n}=\infty\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=\infty$
 	- at $-\infty$ #todo
 
 
@@ -212,14 +212,14 @@ ____
 
 - The vertical line $x=x_{0}$ is a **vertical asymptote** of the function $y = f(x)$ if
 	- $\displaystyle\lim_{x\to~x_{0}^{-}}f(x)=\pm \infty$, or
-	- $\displaystyle \lim _{x\to x_{0}^{+}}f(x)=\pm \infty$ 
+	- $\displaystyle \lim_{x\to x_{0}^{+}}f(x)=\pm \infty$ 
 
 -  The horizontal line $y=c$ is a **horizontal asymptote** of the function $y=f(x)$ if
-	- $\displaystyle \lim _{x\rightarrow -\infty }f(x)=c$, or 
-	- $\displaystyle \lim _{x\rightarrow +\infty }f(x)=c$
+	- $\displaystyle \lim_{x\rightarrow -\infty }f(x)=c$, or 
+	- $\displaystyle \lim_{x\rightarrow +\infty }f(x)=c$
 
 - The straight line $y = mx + n$ is an **oblique asymptote** of the function $y=f(x)$ if 
-	- $\displaystyle\lim _{x\to -\infty }\left[f(x)-(mx+n)\right]=0$, or
-	- $\displaystyle \lim _{x\to +\infty }\left[f(x)-(mx+n)\right]=0$ 
+	- $\displaystyle\lim_{x\to -\infty }\left[f(x)-(mx+n)\right]=0$, or
+	- $\displaystyle \lim_{x\to +\infty }\left[f(x)-(mx+n)\right]=0$ 
 
 

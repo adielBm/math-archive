@@ -60,14 +60,14 @@
 # Infinite Limits
 
 - **Infinity**
-	- $\displaystyle\lim _{n\to \infty }a_{n}=\infty$
+	- $\displaystyle\lim_{n\to \infty }a_{n}=\infty$
 	- $a_{n}\to \infty$
 	- $(a_{n})$ is **tend to infinity**
 	- For every real number $K$, there is a natural number $N$ such that for every natural number $n\geq N$, we have  $a_{n}>K$; that is, the sequence terms are eventually larger than any fixed $K$.
 	- $\forall K\in \mathbb {R} \left(\exists N\in \mathbb {N} \left(\forall n\in \mathbb {N} \left(n\geq N\implies a_{n}>K\right)\right)\right)$
 	- (2.39) $\displaystyle\lim_{n\to\infty}(-a_{n})=-\infty$
 - **Minus Infinity**
-	- $\displaystyle\lim _{n\to \infty }a_{n}=-\infty$
+	- $\displaystyle\lim_{n\to \infty }a_{n}=-\infty$
 	- $a_{n}\to -\infty$
 	- $(a_{n})$ is **tend to minus infinity**
 	- $\forall K\in \mathbb {R} \left(\exists N\in \mathbb {N} \left(\forall n\in \mathbb {N} \left(n\geq N\implies a_{n}<K\right)\right)\right)$
@@ -140,9 +140,9 @@
 - (2.49) assuming $k\in\mathbb{N}$, and $1<r\in\mathbb{R}$ 
 	- $\displaystyle\lim_{ n \to \infty }\left( \frac{n^k}{r^n} \right)=0$
 
-- (6.4) if $(q_{n})^{\infty}_{{n=1}}$ is a sequence of rationals that tends to 0, and $a>0$, then $\displaystyle\lim_{ n \to \infty }a^{q_{n}}=1$
-- (q2.29) Let $a_{1},\dots ,a_{k}\geq 0$, then $\displaystyle\lim_{n\to\infty} \sqrt[n]{\sum_{i=1}^k a_{i}^n}=\max\set{a_{1},\dots ,a_{k}}$
-- #todo For any continuous function $f$, if $\lim _{n\to \infty }a_{n}$ exists, then $\lim _{n\to \infty }f\left(a_{n}\right)$ exists too.
+- (6.4) if $(q_{n})^{\infty}_{n=1}$ is a sequence of rationals that tends to 0, and $a>0$, then $\displaystyle\lim_{ n \to \infty }a^{q_{n}}=1$
+- (q2.29) Let $a_{1},\dots ,a_{k}\geq 0$, then $\displaystyle\lim_{n\to\infty} \sqrt[n]{\sum_{i=1}^k a_{i}^n}=\max\{ {a_{1},\dots ,a_{k}} \}$
+- #todo For any continuous function $f$, if $\lim_{n\to \infty }a_{n}$ exists, then $\lim_{n\to \infty }f\left(a_{n}\right)$ exists too.
 
 
 
@@ -150,14 +150,14 @@
 
 - $(a_{n})$ is sequence (all are nonzero)
 
-- (2.48) $\displaystyle\lim _{n\to \infty }\left|{\frac {a_{n+1}}{a_{n}}}\right|<1\implies\lim_{ n \to \infty }(a_{n})=0$
-	- if $\lim _{n\to \infty }{\frac {a_{n+1}}{a_{n}}}>1$ (or $=\infty$) and $a_{n}>0$, then $\lim_{ n \to \infty }(a_{n})=\infty$
+- (2.48) $\displaystyle\lim_{n\to \infty }\left|{\frac {a_{n+1}}{a_{n}}}\right|<1\implies\lim_{ n \to \infty }(a_{n})=0$
+	- if $\lim_{n\to \infty }{\frac {a_{n+1}}{a_{n}}}>1$ (or $=\infty$) and $a_{n}>0$, then $\lim_{ n \to \infty }(a_{n})=\infty$
 	 
 
 # Cantor's Lemma
 
 - (3.22) **Cantor's intersection** theorem (Cantor's Lemma, Nested Intervals Theorem)
-	- A **sequence of nested intervals** is a sequence $(I_{n})^{\infty}_{n=1}$ of non-empty, closed intervals, $I_{n}=[a_{n},b_{n}]$, satisfying:
+	- A **sequence of nested intervals** is a sequence $(I_{n})^\infty_{n=1}$ of non-empty, closed intervals, $I_{n}=[a_{n},b_{n}]$, satisfying:
 		- $I_{1}\supseteq I_{2}\supseteq I_{3}\supseteq\dots$ 
 		- $\lim_{ n \to \infty }(b_{n}-a_{n})=0$
 	- The intersection of a sequence $(I_{n})^{\infty}_{n=1}$ of nested intervals is $\bigcap_{n=1}^{\infty}I_{n}=\{ x \}$, and $\displaystyle x=\lim_{ n \to \infty }(a_{n})=\lim_{ n \to \infty }(b_{n})$

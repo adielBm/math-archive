@@ -10,4 +10,4 @@
 		- #todo 
 
 
-- (q2.62) **Stolz–Cesàro theorem** - if $(b_{n})$ is a strictly monotone and divergent sequence, then $\displaystyle  \lim _{n\to \infty }{\frac {a_{n+1}-a_{n}}{b_{n+1}-b_{n}}}=\displaystyle  \lim _{n\to \infty }{\frac {a_{n}}{b_{n}}}$
+- (q2.62) **Stolz–Cesàro theorem** - if $(b_{n})$ is a strictly monotone and divergent sequence, then $\displaystyle  \lim_{n\to \infty }{\frac {a_{n+1}-a_{n}}{b_{n+1}-b_{n}}}=\displaystyle  \lim_{n\to \infty }{\frac {a_{n}}{b_{n}}}$
