@@ -100,16 +100,16 @@ The machine instructions are divided into three groups, according to the number 
 #### 1st set 
 
 - The `mov` (Move) instruction is used to transfer data between registers, memory locations, and immediate values.
-	- Syntax: `mov destination, source`
-	- Example: `mov A, r1` copies the value from register `A` to register `r1`.
+	- Syntax: `mov source, destination`
+	- Example: `mov A, r1` copies the value from variable `A` to register `r1`.
 - The `cmp` (Compare) instruction performs a comparison between its two operands. the content of the destination operand (the second) is subtracted from the content of the source operand (the first), without saving the result of the subtraction. The subtraction operation updates a flag called the `Z` variable in the status register (PSW).
 	- Syntax: `cmp operand1, operand2`
 	- Example: `cmp A, r1`, If the contents of the variable `A` equal to the contents of register `r1` then the zero flag, `Z`, in the status register (PSW) will be turn on, otherwise the flag will be reset.
 - The `add` (Addition) instruction performs integer addition between two operands and stores the result in the destination operand.
-	- Syntax: `add destination, source`
+	- Syntax: `add source, destination`
 	- Example: `add A, r0` adds the value in register `A` to the value in register `r0`.
 - The `sub` (Subtraction) instruction performs integer subtraction between two operands and stores the result in the destination operand.
-    - Syntax: `sub destination, source`
+    - Syntax: `sub source, destination`
     - Example: `sub #3, r1`, register `r1` receives the result of subtracting the value `3` from the current contents of register `r1`.
 - The `lea` (Load Effective Address) instruction places the address in memory represented by the label in the first operand (the source), to the destination operand (the second operand)
     - It does not access memory; it only computes the address.
