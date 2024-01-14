@@ -18,10 +18,16 @@
 	- $(f(x) \underset{n \to x_{0}}{\longrightarrow} L\land{f(x) \underset{n \to x_{0}}{\longrightarrow} M})\implies{L=M}$
 - (4.33) Limit of **Linear Function** 
 	- Let $f$ a linear function then for each $x_{0}\in\mathbb{R}$, we have $\displaystyle\lim_{ x \to {x_{0}} }f(x)=f(x_{0})$
-- (4.34) if $\displaystyle\lim_{x\to{x_0}}{f(x)}$ is defined, and $f(x)=g(x)$ for each $x$ such that $x_0-\delta<x\neq{x_0}<{x_0}+\delta$, then $\displaystyle\lim_{x\to{x_0}}{f(x)}=\lim_{x\to{x_0}}{g(x)}$
+
+- $\displaystyle\forall \varepsilon >0,\exists \delta >0:\forall x\in \mathbb {R}, \Big(0<|x-x_{0}|<\delta \implies |f(x)-L|<K\varepsilon \Big)\implies\displaystyle\lim_{ x \to x_{0} }f(x)=L$ (given $K$ is a constant positive real number)  
+
+- given $\displaystyle\lim_{x\to{x_0}}{f(x)}\in\mathbb{R}$
+	- (4.34, **Local Property**) $\displaystyle\exists\delta:\forall x \in(-\delta,x_{0})\cup(x_{0},\delta),f(x)=g(x)\implies \lim_{ x \to x_{0} }f(x)=\lim_{ x \to x_{0} }g(x)$
+- $f$ is defined on $(-\delta_{0},x_{0})\cup(x_{0},\delta_{0})$
+	- (4.36) $\displaystyle0\neq\lim_{x\to x_0}f(x)\in\mathbb{R}\implies \exists \delta:\forall x \in(-\delta,x_{0})\cup(x_{0},\delta),f(x)\neq 0$  
+
 - (4.43) Squeeze theorem for functions
 	- $\Big(f(x)\leq g(x)\leq h(x)\Big)\land\Big({\displaystyle\lim_{ x \to x_{0} }f(x)=\lim_{ x \to x_{0} }h(x)=L}\Big)\implies{\displaystyle\lim_{ x \to x_{0} }g(x)=L}$
-- if $\displaystyle  {\displaystyle (\forall \varepsilon >0)\,(\exists \delta >0)\,(\forall x\in \mathbb {R} )\,(0<|x-x_{0}|<\delta \implies |f(x)-L|<K\varepsilon )}$ where $K$ is a positive real number that does not depend on $\varepsilon$ or $x$ then $\displaystyle\lim_{ x \to x_{0} }f(x)=L$ 
 ### Arithmetic
 
 >Assuming $f,g$ are defined on $N^{*}_{\varepsilon}(x_{0})$, and their limits are exist
@@ -38,8 +44,8 @@
 
 - (q4.62) $\displaystyle\lim_{x\to0}{f(x)}=L\implies\lim_{x\to 0}{f(x^2)}=L$
 -  (q4.63) $\displaystyle\lim_{x\to0}{f(x)}=\lim_{x\to 0}{f(xk)}$  (where $k\neq 0$ and the limits exists)
-
-
+- $\displaystyle\lim_{x \to \infty} f(x) = 0\land\exists M: |g(x)|< M\implies\lim_{x \to \infty} f(x)g(x) = 0$ (analogously 2.22)
+- $\displaystyle\lim_{ x \to x_{0} }f(x)=0\iff\lim_{ x \to x_{0} }|f(x)|=0$ (analogously q2.20a)
 # One-Sided Limits
 
 - $L$ is the **right-hand limit** of $f$ at $x_{0}$
@@ -92,6 +98,9 @@
 - $1/\infty=0$
 - $1/0^{+}=\infty$
 - $\displaystyle\lim_{ x \to x_{0} }(f(x))=\infty \iff\displaystyle\lim_{ x \to x_{0} }(-f(x))=-\infty$
+- **Squeeze Theorem** for infinite limit 
+	- $f(x)\to \infty \land\exists M:\forall x>M,g(x)\geq f(x)\implies g(x)\to \infty$ (analogously to 2.45)
+
 
 # Limits at Infinity
 

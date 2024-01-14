@@ -4,6 +4,7 @@
 	- A statement is **atomic** if it cannot be divided into smaller statements, otherwise it is called **molecular**.
 
 
+
 - A **well-formed formula** (WFF, formula)
 	1. Any atomic statement is a WFF
 	2. Any WFF preceded by $¬$ is a WFF
@@ -11,6 +12,9 @@
 	4. Nothing else is a WFF
 
 - A **well-formed formula** is a finite sequence of symbols from a finite alphabet that is part of a formal language and validly constructed from the rules of that language. 
+
+
+
 
 
 - A formula of a formal language is a **valid** formula if and only if it is true under every possible interpretation of the language. (In [[Propositional Logic]], they are tautologies.)

@@ -17,15 +17,15 @@
 
 > Assuming $(a_{n})$ and $(b_{n})$ are convergent (2.28)
 
-| Sequence Limit Rules |  |
-| ---- | ---- |
-| Multiple Rule | $\displaystyle\lim_{ n \to \infty }({ca_{n})}=c\cdot\lim_{ n \to \infty }{a_{n}}$ |
-| Sum Rule | $\displaystyle\lim_{n\to\infty} (a_n \pm b_n) =  \lim_{n\to\infty} a_n \pm \lim_{n\to\infty} b_n$ |
-| Product Rule | $\displaystyle\lim_{n\to\infty} (a_n \cdot b_n) =  \left(\lim_{n\to\infty} a_n \right)\cdot \left( \lim_{n\to\infty} b_n \right)$ |
-| Quotient Rule | $\displaystyle\lim_{n\to\infty} \left(\frac{a_n}{b_n}\right) = \frac{\lim\limits_{n\to\infty} a_n}{\lim\limits_{n\to\infty} b_n}$ (provided $\displaystyle\lim_{n\to\infty} b_n \ne 0$) |
-| ---- Reciprocal Rule | $\displaystyle\lim_{n\to\infty} \left(\frac{1}{a_n}\right) = \frac{1}{\lim\limits_{n\to\infty} a_n}$ |
-|  | $\forall k\in \mathbb{N}, \displaystyle\lim_{n\to\infty} a_n^k =  \left( \lim_{n\to\infty} a_n \right)^k$ |
-|  | $(\forall{n},a_{n}>0)\implies\displaystyle\lim_{n\to\infty} \sqrt{ a_{n} } =  \sqrt{    \lim_{n\to\infty} a_n}$ |
+| Sequence Limit Rules |  |  |
+| ---- | ---- | ---- |
+| Multiple Rule | $\displaystyle\lim_{ n \to \infty }({ca_{n})}=c\cdot\lim_{ n \to \infty }{a_{n}}$ |  |
+| Sum Rule | $\displaystyle\lim_{n\to\infty} (a_n \pm b_n) =  \lim_{n\to\infty} a_n \pm \lim_{n\to\infty} b_n$ |  |
+| Product Rule | $\displaystyle\lim_{n\to\infty} (a_n \cdot b_n) =  \left(\lim_{n\to\infty} a_n \right)\cdot \left( \lim_{n\to\infty} b_n \right)$ |  |
+| Quotient Rule | $\displaystyle\lim_{n\to\infty} \left(\frac{a_n}{b_n}\right) = \frac{\lim\limits_{n\to\infty} a_n}{\lim\limits_{n\to\infty} b_n}$  | (provided $\displaystyle\lim_{n\to\infty} b_n \ne 0$) |
+| ---- Reciprocal Rule | $\displaystyle\lim_{n\to\infty} \left(\frac{1}{a_n}\right) = \frac{1}{\lim\limits_{n\to\infty} a_n}$ |  |
+|  | $\displaystyle\lim_{n\to\infty} a_n^k =  \left( \lim_{n\to\infty} a_n \right)^k$ | $\forall k\in \mathbb{N}$ |
+|  | $(\forall{n},a_{n}>0)\implies\displaystyle\lim_{n\to\infty} \sqrt{ a_{n} } =  \sqrt{    \lim_{n\to\infty} a_n}$ |  |
 
 ## Theorems
 
@@ -35,6 +35,9 @@
 	- (2.12) **Limit Uniqueness** $((a_n) \underset{n \to \infty}{\longrightarrow} L\land{(a_n) \underset{n \to \infty}{\longrightarrow} M})\implies{L=M}$
 	- (2.16) $(a_n)$ is bounded
 	- (2.17) A sequence $(b_{n})$ that obtained by changing a finite number of terms of $(a_{n})$, has the same limit as $(a_{n})$ 
+	- (2.25) if $\forall n,a_{n}\neq 0$ and $\displaystyle\lim_{ n \to \infty }{a_{n}}\neq 0$, then $(1/a_{n})$ is bounded
+	- (2.26) if $\displaystyle\lim_{ n \to \infty }{a_{n}}\neq 0$ then for almost all $n$, we have $b_{n}\neq 0$
+	- (q3.73) $\displaystyle\lim_{ n \to \infty }(a_{n+k}-a_{n})=0$  (for all $k\in\mathbb{N}$)
 
 
 - Let $(a_n)$ and $(b_n)$ be two convergent sequences:
@@ -50,7 +53,7 @@
 - $\forall \varepsilon > 0,\exists N \in \mathbb{N}: \forall n \in\mathbb{N},(n \geq N \implies |a_n| < \varepsilon)$
 
 - A null sequence is bounded sequence
-- (2.22) product of **null** and **bounded** sequences is **null** sequence
+- (2.22) A product of **null** and **bounded** sequences is **null** sequence
 - **Squeeze theorem** - if $(b_{n})$ is null sequence and $|a_{n}|<b_{n}$ for all $n$, then, $(a_{n})$ is null sequence
 
 > [!Strategy] Strategy for using the definition of null sequence 
@@ -87,18 +90,20 @@
 
 - (2.43, q2.39) **arithmetics of infinite limits**
 
-| $a_{n}$ | $b_{n}$ | $\implies$ | $a_{n}+b_{n}$ | $a_{n}b_{n}$ |
-| ---- | ---- | ---- | ---- | ---- |
-| $\infty$ | $\infty$ |  | $\infty$ | $\infty$ |
-| $-\infty$ | $-\infty$ |  | $-\infty$ | $\infty$ |
-| $-\infty$ | $\infty$ |  |  | $-\infty$ |
-| $\infty$ | $L\in\mathbb{R}$ |  | $\infty$ |  |
-| $\infty$ | $L>0$ |  |  | $\infty$ |
+| $a_{n}$ | $b_{n}$ | $\implies$ | $a_{n}+b_{n}$ | $a_{n}b_{n}$ | $a_{n}/b_{n}$ |
+| ---- | ---- | ---- | ---- | ---- | ---- |
+| $\infty$ | $\infty$ |  | $\infty$ | $\infty$ |  |
+| $-\infty$ | $-\infty$ |  | $-\infty$ | $\infty$ |  |
+| $-\infty$ | $\infty$ |  |  | $-\infty$ |  |
+| $\infty$ | $L\in\mathbb{R}$ |  | $\infty$ |  |  |
+| $\infty$ | $L>0$ |  |  | $\infty$ |  |
+| $0$ | $\infty$ |  | $\infty$ |  | $0$ |
 
 - ${a_{n}\to \infty}\implies 1/a_{n}\to0$
 - (q2.57a) ${|a_{n}|\to \infty}\implies 1/a_{n}\to0$
 - ${a_{n}\to 0}\land{a_{n}>0} \implies 1/a_{n}\to{\infty}$
 - ${a_{n}\to 0}\land{a_{n}<0} \implies 1/a_{n}\to{(-\infty)}$
+
 - ${a_{n}\to \infty}$ and ${b_{n}}$ is bounded $\implies a_{n}+b_{n}\to \infty$
 - $\displaystyle\frac{a_n}{b_n} \to 1\land a_{n}\to 0\implies b_{n}\to 0$
 
@@ -108,7 +113,6 @@
 - (e2.11) $\displaystyle\lim_{ n \to \infty } \frac{n}{n+1}=1$
 - (e2.12) $\displaystyle\lim_{ n \to \infty } \frac{1}{\sqrt{ n }}=0$
 - $\displaystyle\lim_{ n \to \infty }\sqrt[n]{ n }=1$
-
 
 
 - $c\in{\mathbb{R}}$
@@ -159,7 +163,7 @@
 - (3.22) **Cantor's intersection** theorem (Cantor's Lemma, Nested Intervals Theorem)
 	- A **sequence of nested intervals** is a sequence $(I_{n})^\infty_{n=1}$ of non-empty, closed intervals, $I_{n}=[a_{n},b_{n}]$, satisfying:
 		- $I_{1}\supseteq I_{2}\supseteq I_{3}\supseteq\dots$ 
-		- $\lim_{ n \to \infty }(b_{n}-a_{n})=0$
+		- $\displaystyle\lim_{ n \to \infty }(b_{n}-a_{n})=0$
 	- The intersection of a sequence $(I_{n})^{\infty}_{n=1}$ of nested intervals is $\bigcap_{n=1}^{\infty}I_{n}=\{ x \}$, and $\displaystyle x=\lim_{ n \to \infty }(a_{n})=\lim_{ n \to \infty }(b_{n})$
 
 > Other form of **Cantor's intersection** theorem: Let $(a_{n})^{\infty}_{n=1}$ and $(b_{n})^{\infty}_{n=1}$ be two sequence of real numbers that satisfy: $a_{n}\leq a_{n+1} < b_{n+1}\leq b_{n}$ for every $n\in\mathbb{N}$, and $\lim(b_{n}-a_{n})=0$. Then there exists a real number $c$ such that $\lim a_{n}=\lim b_{n}=c$. The number $c$ is the unique real number that satisfies $a_{n} \leq c\leq b_{n}$

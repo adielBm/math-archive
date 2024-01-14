@@ -18,8 +18,8 @@
 
 1. (Trichotomy Law, (asymmetric+connected)) **one and only one** of the following three statements is true: $a\neq{b},\quad{a<b},\quad{b<a}$ 
 2. (Transitivity) $a<b\land b<c\implies a<c$
-3. $a<b\implies a+c<b+c$
-4. $a<b \land c>0\implies ac<bc$
+3. (preservation of order under addition) $a<b\implies a+c<b+c$
+4. (preservation of order under multiplication) $a<b \land c>0\implies ac<bc$
 
 ## Completeness Axiom
 
@@ -30,9 +30,9 @@
 
 >See 3.16 about the term of "Completeness Axiom"
 
-> [!info] The rational numbers $\mathbb{Q}$ does not satisfy the completeness Axiom, therefore, the theorems that follow from this axiom do not hold in $\mathbb{Q}$. 
+> [!info] The rational numbers $\mathbb{Q}$ does not satisfy the completeness axiom, therefore, the theorems that follow from this axiom do not hold in $\mathbb{Q}$. 
 > - Cauchy theorem - In $\mathbb{Q}$ a cauchy sequence doesn't necessarily converge (to rational number).
-> - Least-upper-bound property - in $\mathbb{Q}$ can be non-empty upper-bounded set **without** **supremum**
+> - Least-upper-bound property - in $\mathbb{Q}$ can be non-empty upper-bounded set **without** **supremum**. (e.g. the set of rationals less than $\sqrt{ 2 }$)
 > - Monotone convergence theorem - There can be monotone bounded sequence of rationals that does not converge to a rational number.
 > - Cantor's Lemma - The **intersection** of a sequence of nested intervals (with rational endpoints) in which the endpoints differences tend to zero **is not necessarily rational**.
 
@@ -87,6 +87,7 @@
 	- $\displaystyle  |a|\geq b\iff a\leq -b \lor a\geq b$
 	- $-|a|\leq{a}\leq{|a|}$
 
+- $0<|x-a|<b\implies x\in(a-b,a+b)\setminus\set{a}$
 
 ## Density
 
@@ -115,5 +116,6 @@
 
 - $\text{floor}(x)=\displaystyle  \lfloor x\rfloor :=\max\{m\in \mathbb {Z} \mid m\leq x\}$ (also called *integral part* or *integer part*)
 	- (1.64) $x-1<\lfloor x\rfloor\leq{x}< \lfloor x\rfloor+1$
+	- $n<x<n+1\implies n=\lfloor x \rfloor$ for $n\in\mathbb{N}$
 - $\text{ceil}(x)=\displaystyle  \lceil x\rceil :=\min\{n\in \mathbb {Z} \mid n\geq x\}$
 

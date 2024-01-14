@@ -58,6 +58,7 @@ $$f(x)=(1+x^{a_1}+x^{2a_1}+\ldots)(1+x^{a_2}+x^{2a_2}+\ldots)\cdots(1+x^{a_n}+x^
 
 
 ### useful identities of factoring out  
+
 - $(x^3+x^4+\cdots)^n=(x^3)^n(1+x+x^2+\cdots)^n$
 - $(x+x^2+x^4+x^5+x^7+\ldots)^n=(x+x^2)^n(1+x^3+x^6+\ldots)^n$
 - $(1+x^2+x^3+\cdots)^n=(\frac{1}{1-x}-x)^n=(1-x(1-x))^n{\frac{1}{(1-x)^n}}=(1-x+x^2)^n\frac{1}{(1-x)^n}$

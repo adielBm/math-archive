@@ -125,3 +125,18 @@
 
 - #todo   $p\leftrightarrow{q}\equiv{q\leftrightarrow{p}\equiv{(p\rightarrow{q})\land{(q\rightarrow{p})}\equiv{(p\land{q})\lor{((\lnot{p})\land{(\lnot{q})})}}}}$
 - #todo  $((a\rightarrow{b})\rightarrow{c})\vdash(a\rightarrow({b}\rightarrow{c}))$
+
+
+# DRAFT HUTH & RYAN 
+
+## definitions
+
+- The **well-formed formulas of propositional logic** are those which we obtain by using the construction rules, and only those, finitely many times
+- A **valuation** or **model** of a formula $φ$ is an assignment of each propositional atom in $φ$ to a truth value.
+- Given a well-formed formula φ, we define its **height** to be 1 plus the length of the longest path of its parse tree.
+- If, for all valuations in which all $\varphi_{1}, \varphi_2,\dots,\varphi_n$ evaluate to $T$, $ψ$ evaluates to $T$ as well, we say that $\varphi_{1}, \varphi_2,\dots,\varphi_n \models ψ$ holds and call $\models$ the **semantic entailment** relation
+- A formula of propositional logic $\phi$ is called a **tautology** iff it evaluates to $T$ under all its valuations, i.e. iff $\models \phi$
+
+## theorems
+
+- Corollary 1.39 (Soundness and Completeness) Let $\phi_{1},\phi_{2},\dots,\phi_{n},\psi$ be formulas of propositional logic. Then $\phi_{1},\phi_{2},\dots,\phi_{n}\models\psi$ is holds iff the sequent $\phi_{1},\phi_{2},\dots,\phi_{n}\vdash\psi$ is valid

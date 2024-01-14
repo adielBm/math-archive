@@ -28,6 +28,8 @@
 
 - (7.9) if $f$ is differentiable at $x_{0}$, then it continuous at $x_{0}$
 
+ - (**Local Property**) $\exists\delta:\forall x \in(x_{0}-\delta,x_{0}+\delta), f (x) = g(x)\implies f'(x_{0})=g'(x_{0})$
+
 ## Derivative Rules
 
 | Derivative Rules |  |
