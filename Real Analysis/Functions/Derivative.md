@@ -1,10 +1,11 @@
 # Differentiability 
 
-> $\operatorname{dom}(f)$ contains an open interval $I$ containing $x_{0}$
+> $\operatorname{dom}(f)$ contains an interval $I$ containing $x_{0}$
 
-- $f(x)$ is **differentiable at a point** $x_{0}\in\operatorname{dom}(f)$
+- $f$ is **differentiable at a point** $x_{0}\in\operatorname{dom}(f)$
 -  The limit $\displaystyle  L=\lim_{h\to 0}{\frac {f(x_{0}+h)-f(x_{0})}{h}}=\lim_{x\to{x_{0}}}{\frac{f(x)-f(x_{0})}{x-x_{0}}}$ exists
-- $(\forall \varepsilon > 0 )(\exists\delta>0)\forall h\left(0<|h|<\delta\implies \left|L - \frac{f(x_{0}+h)-f(x_{0})}{h}\right| < \varepsilon \right)$
+- $\forall \varepsilon > 0,\exists\delta>0:\forall h\left(0<|h|<\delta\implies \left|L - \frac{f(x_{0}+h)-f(x_{0})}{h}\right| < \varepsilon \right)$
+- $f$ is **left-** and **right-differentiable** at $x_{0}$ and $f'_{+}(x_{0})=f'_{-}(x_{0})$ (in this case $f'(x_{0})=f'_{+}(x_{0})=f'_{-}(x_{0})$)
 - #todo  $\exists{A}\in\mathbb{R} : f(x_{0}+h)-f(x_{0})=Ah+\alpha(h)h$ where $\displaystyle\lim_{ h \to 0 }\alpha(h)=0$
 
 # Derivative
@@ -25,63 +26,47 @@
 > - The **average rate of change** of $y=f(x)$ with respect to $x$ over the interval $[x_{0},x_{1}]$ is $\frac{\Delta y}{\Delta x}=\frac{f(x_{1})-f(x_{0})}{x_{1}-x_{0}}=\frac{f(x_{0}+h)-f(x_{0})}{h}$ (where $h\neq 0$) 
 > - The **instantaneous rate of change** of $f$ with respect to $x$ at $x_{0}$ is the derivative $f'(x_{0})=\displaystyle\lim_{h\to 0}{\frac {f(x_{0}+h)-f(x_{0})}{h}}$. (provided the limit exists)
 
+## Theorems
 
-- (7.9) if $f$ is differentiable at $x_{0}$, then it continuous at $x_{0}$
+- if $f$ is differentiable at $x_{0}$, then
+	- (7.9) $f$ then it continuous at $x_{0}$
+- if $f$ and $g$ are differentiable at $x_{0}$ and $k(x)=\begin{cases} f(x) & x \leq x_0 \\ g(x) & x > x_0 \end{cases}$
+	- $k$ is continuous at $x_{0}$ $\iff f(x_{0})=g(x_{0})$
+	- $k$ is differentiable at $x_{0}$ $\iff f(x_{0})=g(x_{0})$ and $f'(x_{0})=g'(x_{0})$
 
- - (**Local Property**) $\exists\delta:\forall x \in(x_{0}-\delta,x_{0}+\delta), f (x) = g(x)\implies f'(x_{0})=g'(x_{0})$
+- (**Local Property**) $\exists\delta:\forall x \in(x_{0}-\delta,x_{0}+\delta), f (x) = g(x)\implies f'(x_{0})=g'(x_{0})$
 
 ## Derivative Rules
 
-| Derivative Rules |  |
-| ---- | ---- |
-| **Sum Rule** | $(f+g)'(x_{0})=f'(x_{0})+g'(x_{0})$ |
-| **Product Rule** | $(fg)'={fg'}+{f'g}$ |
-| ---- Constant Multiple Rule | $(cf)'(x_{0})=c\cdot f'(x_{0})$ |
-| ---- (7.17) | $(f^{n})'(x)=nf^{n-1}(x)\cdot f'(x)$ |
-| ---- Power Rule | $(x^n)'=nx^{n-1}$ (integer $n\neq 0$, *7.20*) <br>$(x^r)'=rx^{r-1}$ ($r\in\mathbb{R}$, $x>0$, *7.31*) |
-| **Quotient Rule** | $\displaystyle\left( \frac{f}{g} \right)'(x_{0})=\frac{f'g-fg'}{g^2}$ |
-| ---- (7.19) Reciprocal rule | $\displaystyle\left( \frac{1}{f} \right)'=\frac{{-f'}}{f^2}$<br>$\displaystyle\frac{d}{dx}\left[ \frac{1}{f(x)} \right]=\frac{{-f'(x)}}{[f(x)]^2}$ |
-| **Chain Rule** | $(f(g(x)))'=f'(g(x))\cdot g'(x)$ |
-|  | $(f(g(h(x))))'=f'(g(h(x))) \cdot g'(h(x)) \cdot h'(x)$ |
-|  | $\displaystyle  {\frac {dz}{dx}}={\frac {dz}{dy}}\cdot {\frac {dy}{dx}}$ |
-## Root Function 
+> Assuming the function are differentiable at the relevant points
 
-- $(\sqrt{ x })'=\frac{1}{2\sqrt{ x }}$
-- $(\sqrt{ f(x) })'=\frac{f'(x)}{2\sqrt{ f(x) }}$
+| Derivative Rules |  |  |
+| ---- | ---- | ---- |
+| **Sum/Difference Rule** | $(f\pm g)'(x_{0})=f'(x_{0})\pm g'(x_{0})$ |  |
+| **Product Rule** | $(fg)'={fg'}+{f'g}$ |  |
+| ---- Constant Multiple Rule | $(cf)'(x_{0})=c\cdot f'(x_{0})$ |  |
+| ---- (7.17) | $(f^{n})'(x)=nf^{n-1}(x)\cdot f'(x)$ |  |
+| ---- Power Rule | $(x^n)'=nx^{n-1}$ (integer $n\neq 0$, *7.20*) <br>$(x^r)'=rx^{r-1}$ ($r\in\mathbb{R}$, $x>0$, *7.31*) |  |
+| **Quotient Rule** | $\displaystyle\left( \frac{f}{g} \right)'(x_{0})=\frac{f'g-fg'}{g^2}$ | $g(x_{0})\neq 0$ |
+| ---- (7.19) Reciprocal rule | $\displaystyle\left( \frac{1}{f} \right)'=\frac{{-f'}}{f^2}$<br>$\displaystyle\frac{d}{dx}\left[ \frac{1}{f(x)} \right]=\frac{{-f'(x)}}{[f(x)]^2}$ | $f(x_{0})\neq 0$ |
+| **Chain Rule** | $(f(g(x)))'=f'(g(x))\cdot g'(x)$ | $\displaystyle  {\frac {dz}{dx}}={\frac {dz}{dy}}\cdot {\frac {dy}{dx}}$ |
+|  | $(f(g(h(x))))'=f'(g(h(x))) \cdot g'(h(x)) \cdot h'(x)$ |  |
+|  | $\displaystyle  f_{1\,.\,.\,n}'(x)=\prod _{k=1}^{n}f_{k}'\left(f_{(k+1\,.\,.\,n)}(x)\right)$ |  |
+## One Side
 
-## Inverse functions
-
-> assuming: $f$ is *continuous* and *monotonic* on $I$
-
-- (7.27) $\big(f^{−1}\big)'(x)=\frac{1}{f'\big(f^{−1}(x)\big)}$
-
-- if $f'(x_{0})=0$ then $(f^{-1})'(f(x_{0}))$ is undefined 
-
-## Trigonometric Functions 
-
-- $\sin'(x)=\cos x$
-- $\cos'(x)=-\sin x$
-- $\tan'(x)=\sec^2x=\frac{1}{\cos^2 x}=1+\tan^{2}x$
-- $\cot'(x)=-\frac{1}{\sin^2x}$
-
-## Inverse trigonometric functions
-
-- $\arcsin'(x)=\frac{1}{\sqrt{1-x^2}}$
-- $\arccos'(x)=\frac{-1}{\sqrt{1-x^2}}$
-- $\arctan'(x)=\frac{1}{1-x^2}$
-- $\text{arccot}'(x)=\frac{-1}{\sqrt{1-x^2}}$
-
-## Exponential functions
-
-- $(a^x)'=a^x\cdot{\ln a}$
-	- Natural Exponential - $(e^x)'=e^x$
-
-## Logarithmic functions
-
-- $(\log_{a}x)'=\frac{1}{x\ln a}$
-	- The natural logarithm function - $\ln'(x)=\frac{1}{x}$
+- $f$ is **right-differentiable at** $x_{0}$ if $\displaystyle  L=\lim_{h\to 0^+}{\frac {f(x_{0}+h)-f(x_{0})}{h}}$ exists. 
+	- (in that case $f'_{+}(x_{0})=L$ is the **right-derivative** of $f$ at $x_{0}$)
+- $f$ is **left-differentiable at** $x_{0}$ if $\displaystyle  L=\lim_{h\to 0^-}{\frac {f(x_{0}+h)-f(x_{0})}{h}}$ exists. 
+	- (in that case $f'_{-}(x_{0})=L$ is the **left-derivative** of $f$ at $x_{0}$)
 
 # Differentiability on Interval
+
+- $f$ is differentiable on the interval $I$
+- $f$ is **differentiable at every point** $x\in I\subseteq\operatorname{dom}(f)$
+- $I\subseteq\text{dom}(f')$
+## Theorems
+
+- $\mbox{dom}(f')\subseteq\mbox{dom}(f)$
 
 - $f$ is continuous on $[a,b]$, differentiable on the $(a,b)$
 	- **Rolle's theorem** - $f(a)=f(b)\implies\exists c\in(a,b):f'(c )=0$
@@ -111,8 +96,38 @@
 
 - **Constant Difference Theorem** #not-in-course If $f$ and $g$ are differentiable on an interval, and if $f'(x)=g'(x)$ for all $x$ in that interval, then $f − g$ is constant on the interval; that is, there is a constant k such that $f(x) − g(x) = k$ or, equivalently, $f(x) = g(x) + k$ for all $x$ in the interval. 
 
+## Examples
 
-### Concavity #todo 
+| $f(x)$ | $\text{dom}(f)$ | $f'(x)$ | $\text{dom}(f')$ |
+| ---- | ---- | ---- | ---- |
+| $\sqrt{x}$ | $[0, \infty)$ | $\frac{1}{2\sqrt{x}}$ | $(0, \infty)$ |
+| $\sqrt{g(x)}$ | $\{x\mid g(x)\geq 0 \}$ | $\frac{g'(x)}{2\sqrt{g(x)}}$ | $(0, \infty)$ |
+| $\sin(x)$ | $\mathbb{R}$ | $\cos(x)$ | $\mathbb{R}$ |
+| $\cos(x)$ | $\mathbb{R}$ | $-\sin(x)$ | $\mathbb{R}$ |
+| $\tan(x)$ | $\{ x\mid x \neq (2n + 1)\frac{\pi}{2},n\in \mathbb{Z} \}$ | $\frac{1}{\cos^2 x} = 1 + \tan^2(x)$ | $\mathbb{R} \setminus \left\{\frac{(2n + 1)\pi}{2} \mid n \in \mathbb{Z}\right\}$ |
+| $\cot(x)$ | $\left\{  x\mid \frac{x}{\pi}\notin\mathbb{Z}  \right\}$ | $-\frac{1}{\sin^2(x)}$ | $\mathbb{R} \setminus \left\{ n\pi \mid n \in \mathbb{Z}\right\}$ |
+| $\arcsin(x)$ | $[-1, 1]$ | $\frac{1}{\sqrt{1-x^2}}$ | $(-1, 1)$ |
+| $\arccos(x)$ | $[-1, 1]$ | $-\frac{1}{\sqrt{1-x^2}}$ | $(-1, 1)$ |
+| $\arctan(x)$ | $\mathbb{R}$ | $\frac{1}{1+x^2}$ | $\mathbb{R}$ |
+| $\text{arccot}(x)$ | $\mathbb{R}$ | $\frac{-1}{1+x^2}$ | $\mathbb{R}$ |
+| $a^x$ | $\mathbb{R}$ | $a^x \cdot \ln(a)$ | $\mathbb{R}$ |
+| $e^x$ | $\mathbb{R}$ | $e^x$ | $\mathbb{R}$ |
+| $\log_{a}(x)$ | $(0, \infty)$ | $\frac{1}{x \ln(a)}$ | $(0, \infty)$ |
+| $\ln(x)$ | $(0, \infty)$ | $\frac{1}{x}$ | $(0, \infty)$ |
+
+
+### Inverse functions
+
+> assuming: $f$ is *continuous* and *monotonic* on $I$
+
+- (7.27) $\big(f^{−1}\big)'(x)=\frac{1}{f'\big(f^{−1}(x)\big)}$
+
+- if $f'(x_{0})=0$ then $(f^{-1})'(f(x_{0}))$ is undefined 
+
+
+## Concavity 
+
+#todo 
 
 - The graph of a differentiable function y = ƒ(x) is
 	- **concave up** on an open interval $I$ if $f'$ is increasing on I

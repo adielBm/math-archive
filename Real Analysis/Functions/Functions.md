@@ -85,7 +85,7 @@ ___
 		- (Decreasing) $0<a<1\implies$ 
 			- $\displaystyle\lim_{ x \to -\infty }f(x)=\infty$
 			- $\displaystyle\lim_{ x \to \infty }f(x)=0$
-	- [[Derivative#Exponential functions|Derivative]]
+	- [[Derivative#Examples|Derivative]]
 
 # Logarithmic Functions
 
@@ -107,4 +107,4 @@ ___
 		- (Decreasing) $0<a<1\implies$ 
 			- $\displaystyle\lim_{ x \to 0^+ }f(x)=\infty$
 			- $\displaystyle\lim_{ x \to \infty }f(x)=-\infty$
-	- [[Derivative#Logarithmic functions|Derivative]]
+	- [[Derivative#Examples|Derivative]]
