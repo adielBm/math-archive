@@ -214,6 +214,7 @@ ____
 	- (6.18) $\displaystyle\lim_{ x \to 0 }(1+x)^{1/x}=e$
 
 
+
 - $\displaystyle\frac{x^r}{a^x}$ (assuming $a>1$, and $r\in\mathbb{R}$)
 	- $\displaystyle\lim_{ x \to \infty }\frac{x^r}{a^x}=0$
 

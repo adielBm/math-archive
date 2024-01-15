@@ -17,4 +17,12 @@
 - $1$ is neither prime nor composite
 - There are infinitely many primes.
 - For each composite number $n$ there exists a prime factor $p$ such that $p<n$
+
+
+- **GCD is a Linear Combination** - For any nonzero integers $a$ and $b$, there exist integers $s$ and $t$ such that $\gcd(a, b) = as + bt$. 
+	- Moreover, $\gcd(a, b)$ is the smallest positive integer of the form $as + bt$.
+- Euclid’s Lemma - $p|{ab} \implies p | a \lor p | b$
 - The integers $a$ and $b$, with $a\neq 0$ and $b \neq 0$, are **relatively prime** if $\gcd(a,b)=1$
+	- Integers $a$ and $b$ are relatively prime if and only if there exist integers $s$ and $t$ such that $as + bt = 1$
+
+

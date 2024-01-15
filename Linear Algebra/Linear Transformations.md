@@ -77,7 +77,6 @@ The following statements are **equivalent**:
 - (T is right-cancellable) $RT=ST\implies R=S$ 
 - (T is right-invertible) There exists $S:W\to V$ such that $TS=I$ 
 
-
 Theorems: 
 - if $\dim{V}<\dim{W}$ then $T$ cannot be onto 
 
@@ -111,7 +110,7 @@ Theorems
 ## Isomorphism
 
 - Definition: The following statements are **equivalent** (9.6.2)
-	- $T$ is an **isomorphism** (invertible linear transformation) from $V$ on $W$
+	- $T$ is a linear **isomorphism** (bijective linear transformation) from $V$ on $W$
 	- $T$ is **injective**
 	- $T$ is **surjective**
 	- $T$ is **bijective**
@@ -123,10 +122,12 @@ Theorems
 **Propreties:**
 - 
 
-## Linear Operator $T:V \to V$
+## Linear Endomorphism $T:V \to V$
+
+
+>In the case where $V=W$, a linear map is called a **linear endomorphism**. Sometimes the term **linear operator** refers to this case, but the term linear operator can have different meanings for different conventions (wikipedia)
 
 - $T^2=0\implies\mathrm{Im}T\subseteq\mathrm{Ker}T$
-
 
 ### Eigenvalues 
 
@@ -175,3 +176,5 @@ Definitions of the **eigenspace of** $T$ **associated with its eigenvalue** $\la
 
 - (d11.4.4) the characteristic polynomial of $T:V\to V$ is the characteristic polynomial of the transformation matrix by some basis
 - 2
+
+

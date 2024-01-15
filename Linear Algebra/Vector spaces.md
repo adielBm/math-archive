@@ -1,20 +1,31 @@
-
 # Vector space
 
-- Vector Addition
-	- Closure
-	- Associativity
-	- Commutativity
-	- Identity element
-	- Inverse elements	
-- Scalar Multiplication
-	- Closure
-	- Distributivity (_vector addition_)
-	- Distributivity (_field addition_)
-	- Associativity (_field multiplication_)
-	- Identity element	
+### Definition
 
-**Properties:** (7.2)
+A **vector space** over a field $F$ is a non-empty set $V$ together with a binary operation and a binary function that satisfy the eight axioms listed below. 
+- In this context, the elements of $V$ are commonly called **vectors**, and the elements of $F$ are called **scalars**.
+- The binary operation, called **vector addition** or simply **addition** assigns to any two vectors $v$ and $w$ in $V$ a third vector in $V$ which is commonly written as $v + w$, and called the sum of these two vectors.
+- The binary function, called **scalar multiplication**, assigns to any scalar $a$ in $F$ and any vector $v$ in $V$ another vector in $V$, which is denoted $av$
+
+|  | Vector space axioms |  |
+| ---- | ---- | ---- |
+| **Vector Addition** | Associativity | $u + (v + w) = (u + v) + w$ |
+|  | Commutativity | $u + v = v + u$ |
+|  | Identity element |  |
+|  | Inverse elements |  |
+| **Scalar Multiplication** | Distributivity (vector addition) | $a(u + v) = au + av$ |
+|  | Distributivity (field addition) | $(a + b)v = av + bv$ |
+|  | Compatibility with field multiplication | $a(bv) = (ab)v$ |
+|  | Identity element |  |
+
+>it has to add closure property (for vector addition and scalar mul.) depending on definition of binary operation
+
+> An equivalent definition of a vector space can be given: the first four axioms (related to vector addition) say that a vector space is an [[Group Theory#Abelian Group (Commutative Group)|abelian group]] under addition, and the four remaining axioms (related to the scalar multiplication) say that this operation defines a ring homomorphism from the field F into the endomorphism ring of this group
+
+## Properties
+
+(7.2)
+
 - $0\mathbf{u}=\mathbf{0}$
 - $k\mathbf{0}=\mathbf{0}$
 - $(-1)\mathbf{u}=-\mathbf{u}$
