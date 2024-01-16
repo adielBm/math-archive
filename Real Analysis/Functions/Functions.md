@@ -53,7 +53,7 @@ ___
 
 ## Extreme (maximum & minimum)
 
-- $f$ is defined on an interval $I=\operatorname {dom} (f)$
+- $f$ is defined on an interval $I=\text {dom} (f)$
 	- **Global Extreme**
 		- **Extremum point**: $x_{0}\in{I}$ is a **maximum point** (resp. **minimum point**) on $I$ of $f$ if $\displaystyle  \forall (x\in I),\,f(x_{0})\geq f(x)$ (resp. $f(x_{0})\leq f(x)$)
 			- **Extremum value:**  In this case, $f(x_{0})$ is called the **maximum** (resp. **minimum**) **(value)** on $I$, and $f$ is said to have a maximum (resp. minimum) (value) on $I$ at a point $x_{0}$

@@ -31,7 +31,7 @@ $$\large T:V\to W$$
 ## Image
 
 - Definition:
-	- $\operatorname{Im}(T) = \{\ T(v) \mid v \in V\,\}$
+	- $\text{Im}(T) = \{\ T(v) \mid v \in V\,\}$
 
 
 - (9.3.6) let $T:V\to W$, and $\text{Sp}\{ v_{1},\dots ,v_{n} \}=V$, then, $\text{Im}{T}=\text{Sp}{(\{ T(v_{1}),\dots,T(v_{n}) \})}$

@@ -1,8 +1,8 @@
 # Differentiability 
 
-> $\operatorname{dom}(f)$ contains an interval $I$ containing $x_{0}$
+> $\text{dom} \text{dom}  (f)$ contains an interval $I$ containing $x_{0}$
 
-- $f$ is **differentiable at a point** $x_{0}\in\operatorname{dom}(f)$
+- $f$ is **differentiable at a point** $x_{0}\in\text{dom}(f)$
 -  The limit $\displaystyle  L=\lim_{h\to 0}{\frac {f(x_{0}+h)-f(x_{0})}{h}}=\lim_{x\to{x_{0}}}{\frac{f(x)-f(x_{0})}{x-x_{0}}}$ exists
 - $\forall \varepsilon > 0,\exists\delta>0:\forall h\left(0<|h|<\delta\implies \left|L - \frac{f(x_{0}+h)-f(x_{0})}{h}\right| < \varepsilon \right)$
 - $f$ is **left-** and **right-differentiable** at $x_{0}$ and $f'_{+}(x_{0})=f'_{-}(x_{0})$ (in this case $f'(x_{0})=f'_{+}(x_{0})=f'_{-}(x_{0})$)
@@ -12,7 +12,7 @@
 
 - Derivative Function - $\displaystyle f'(x)=\frac{df}{dx}=\lim_{h\to 0}{\frac {f(x+h)-f(x)}{h}}$
 
-> $f(x)$ is **differentiable at a point** $x_{0}\in\operatorname{dom}(f)$
+> $f(x)$ is **differentiable at a point** $x_{0}\in\text{dom}(f)$
 
 - Derivative of $f$ at the point $x_{0}$ is $f'(x_{0})$
 	- $\displaystyle f'(x_{0})=\lim_{h\to 0}{\frac {f(x_{0}+h)-f(x_{0})}{h}}=\lim_{x\to{x_{0}}}{\frac{f(x)-f(x_{0})}{x-x_{0}}}$
@@ -67,7 +67,7 @@
 # Differentiability on Interval
 
 - $f$ is differentiable on the interval $I$
-- $f$ is **differentiable at every point** $x\in I\subseteq\operatorname{dom}(f)$
+- $f$ is **differentiable at every point** $x\in I\subseteq\text{dom}(f)$
 - $I\subseteq\text{dom}(f')$
 ## Theorems
 

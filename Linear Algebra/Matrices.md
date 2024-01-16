@@ -77,10 +77,10 @@ If $A$ and $B$ are row equivalent matrices, then:
 
 ## Rank
 
-**Notation**: $\operatorname{rank}{(A)}=\rho{(A)}$
+**Notation**: $\text{rank}{(A)}=\rho{(A)}$
 
 **Definitions:**
-- (d8.5.4) $\rho{(A)}=\dim(\operatorname{row-space(A)})=\dim(\operatorname{column-space(A)})$
+- (d8.5.4) $\rho{(A)}=\dim(\text{row-space(A)})=\dim(\text{column-space(A)})$
 - $\rho(A)$ is the number of linearly independent **rows**
 - $\rho(A)$ is the number of linearly independent **columns**
 - $\rho(A)=\dim(\text{Im}(T_{A}))$
@@ -278,7 +278,7 @@ Equivalent matrices represent the same linear transformation $T:V\to{W}$ under t
 
 ## Trace
 
-- $\operatorname{tr}({A}) = \sum_{i=1}^n a_{ii} = a_{11} + a_{22} + \dots + a_{nn}$
+- $\text{tr}({A}) = \sum_{i=1}^n a_{ii} = a_{11} + a_{22} + \dots + a_{nn}$
 - $\text{tr} A$ is the sum of its eigenvalues #todo 
 - (10.7.6) $\text{tr}(AB)=\text{tr}(BA)$
 - (10.7.5) similar matrices have the same trace
