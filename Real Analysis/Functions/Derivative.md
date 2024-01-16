@@ -72,21 +72,28 @@
 ## Theorems
 
 - $\mbox{dom}(f')\subseteq\mbox{dom}(f)$
-
 - $f$ is continuous on $[a,b]$, differentiable on the $(a,b)$
 	- **Rolle's theorem** - $f(a)=f(b)\implies\exists c\in(a,b):f'(c )=0$
 	- **Mean value theorem** (MVT, Lagrange) - $\exists c\in(a,b):f'(c )=\frac{{f(b)-f(a)}}{b-a}$
 
-- $f$ is *continuous* and *differentiable* on $(a,b)$
-	- (8.7, q7.12) $(\forall{x\in{(a,b)},f'(x)=0})\iff$ $f$ is constant on $(a,b)$ 
-	- (q8.28) $(\forall{x\in{(a,b)},f'(x)\geq 0})\iff$ $f$ is **increasing** on $(a,b)$
-		- (8.18) $(\forall{x\in{(a,b)},f'(x)>0})\implies$ $f$ is **strictly increasing** on $(a,b)$
-	- $(\forall{x\in{(a,b)},f'(x)\leq0})\iff$ $f$ is **decreasing** on $(a,b)$
-		- (8.18) $(\forall{x\in{(a,b)},f'(x)<0})\implies$ $f$ is **strictly decreasing** on $(a,b)$ #todo continuous on.. open/closed interval?
+- $f$ is continuous on $I$, differentiable at every inferior point of $I$
+	- **First Derivative Test for Monotonicity** (q8.28, 8.18, 8.7, q7.12b, q8.29) 
+		- $f'(x)\geq 0\iff$ $f$ is **weakly increasing** on $I$
+		- $f'(x)>0\implies$ $f$ is **increasing** on $I$
+		- $f'(x)\leq0\iff$ $f$ is **weakly decreasing** on $I$
+		- $f'(x)<0\implies$ $f$ is **decreasing** on $I$
+		- $f'(x)=0\iff$ $f$ is **constant** on $I$ 
+		- $f$ is **increasing** on $I$, if and only if, $f'(x)\geq0$, and there is no subinterval on which $f'(x)=0$ for all x in it
+		- $f$ is **decreasing** on $I$, if and only if, $f'(x)\leq0$, and there is no subinterval on which $f'(x)=0$ for all x in it
+
+
+
+- if $f$ is continuous on $[a,b]$ and **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$  (by q8.25)
+
 
 > Note: $a$ and $b$ can be $-\infty$ and $\infty$ (resp.)
 
-> By (q8.25) if $f$ is continuous on $[a,b]$ and **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$ 
+
 
 - $f$ and $g$ is continuous on $[a,b]$, differentiable on the $(a,b)$
 	- **Cauchy's mean value theorem** - if $\forall{x\in{(a,b)}},\, g'(x)\neq 0$, then:

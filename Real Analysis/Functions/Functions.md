@@ -4,11 +4,13 @@
 ## Monotonicity
 
 - $f$ is a real function that defined on interval $I$
-	- $f$ is **increasing** if $\forall x_{1},x_{2}\in{I},~~ x_{1}<x_{2}\implies{f(x_{1})\leq f(x_{2})}$
-		- $f$ is **strictly increasing** if $\forall x_{1},x_{2}\in{I},~~ x_{1}<x_{2}\implies{f(x_{1})< f(x_{2})}$
-	- $f$ is **decreasing** if $\forall x_{1},x_{2}\in{I},~~ x_{1}<x_{2}\implies{f(x_{1}) \geq f(x_{2})}$
-		- $f$ is **strictly decreasing** if $\forall x_{1},x_{2}\in{I},~~ x_{1}<x_{2}\implies{f(x_{1})> f(x_{2})}$
+	- $f$ is **(weakly) increasing** if $\forall x_{1},x_{2}\in{I},~~ x_{1}<x_{2}\implies{f(x_{1})\leq f(x_{2})}$
+		- $f$ is **(strictly) increasing** if $\forall x_{1},x_{2}\in{I},~~ x_{1}<x_{2}\implies{f(x_{1})< f(x_{2})}$
+	- $f$ is **(weakly) decreasing** if $\forall x_{1},x_{2}\in{I},~~ x_{1}<x_{2}\implies{f(x_{1}) \geq f(x_{2})}$
+		- $f$ is **(strictly) decreasing** if $\forall x_{1},x_{2}\in{I},~~ x_{1}<x_{2}\implies{f(x_{1})> f(x_{2})}$
 	- $f$ is **monotonic** if it's increasing or decreasing
+
+>in this course monotonic is strictly monotonic
 
 ## Bounded function 
 
@@ -49,31 +51,33 @@ ___
 
 ___
 
-## Extremum (maximum & minimum)
+## Extreme (maximum & minimum)
 
-> $f$ is defined on interval $I$
-
-> Some say *relative* instead of *local*, and *absolut* instead of *global*
-
-
-https://opal.openu.ac.il/pluginfile.php/8074449/mod_resource/content/30/tips%208.pdf
-
-- Extremum #todo 
-	- A function $f$ is said to have a **maximum** (resp. **minimum**) at the interval $I$ if $\exists x_{0}\in{I}$ s.t. $\displaystyle  \forall (x\in I),\,f(x_{0})\geq f(x)$ (resp. $f(x_{0})\leq f(x)$)
-- Local Extremum (נקודת קיצון, מקסימום/מינימום מקומי)
-	- A function $f$ is said to have a **local maximum** (resp. **local minimum**) at $x_{0}\in{\operatorname {dom} (f)}$ if there exists an open interval $I\subseteq{\operatorname {dom} (f)}$ containing $x_{0}$ such that $\forall{x\in{I}}$, $f(x_{0}) \geq f (x)$ (resp. $f(x_{0})\leq f(x)$)
+- $f$ is defined on an interval $I=\operatorname {dom} (f)$
+	- **Global Extreme**
+		- **Extremum point**: $x_{0}\in{I}$ is a **maximum point** (resp. **minimum point**) on $I$ of $f$ if $\displaystyle  \forall (x\in I),\,f(x_{0})\geq f(x)$ (resp. $f(x_{0})\leq f(x)$)
+			- **Extremum value:**  In this case, $f(x_{0})$ is called the **maximum** (resp. **minimum**) **(value)** on $I$, and $f$ is said to have a maximum (resp. minimum) (value) on $I$ at a point $x_{0}$
+	- **Local Extreme** (מקסימום/מינימום מקומי)
+		- **Local Extremum point**: $x_{0}\in{I}$ is a **local maximum point** (resp. **local minimum point**) at $I$ if there exists a neighborhood $N_{\varepsilon}(x_{0})$ such that $\forall x \in N_{\varepsilon}(x_{0}),f(x_{0})\geq f(x)$ (resp. $f(x)\geq f(x_{0})$) (in both cases נקודת קיצון)
+			- In this case, $f(x_{0})$ is called a **local maximum (value)** (resp. **local minimum (value)**) of $f$ at a point $x_{0}$. (in both cases $f(x_{0})$ is also called **local extremum value**, ערך קיצון)
 
 
-- if $\forall x \in(a,b), f(x)=c$ then every $x_{0}\in(a,b)$ is **both** local maximum and local minimum
-
-- (8.3) Extremum on $I$ is either *local extremum* of $f$ or *endpoint* of $I$
-- (8.4) **Fermat's theorem** (interior extremum theorem) - if $x_{0}\in{I}$ is local extremum of $f$, and $f$ is differentiable at $x_{0}$, then $f'(x_{0})=0$
+- (8.3) A Extremum point on $I$ is either a local extremum point of $f$ or an endpoint of $I$
+- (8.4) **Fermat's theorem** (interior extremum theorem) - if $x_{0}$ is a local extremum point of $f$, and $f$ is differentiable at $x_{0}$, then $f'(x_{0})=0$
+- Global Extreme points can be, either 
+	- endpoints of $I$, or 
+	- inferior points of $I$, in which $f$ is *not* differentiable, or 
+	- inferior points of $I$, in which the derivative of $f$ is $0$
 
 
 - $x_{0}$ is a **critical point** of $f$ if either $f'(x_{0})=0$ or $f'(x_{0})$ is undefined
 	- $x_{0}$ is a **stationary point** of $f$ if $f'(x)=0$
 - (8.19) if $x_{0}$ is local extremum (interior point) then $x_{0}$ a critical point
 
+
+
+
+> Some say *relative* instead of *local*, and *absolut* instead of *global*
 # Exponential Functions
 
 - $f(x)=a^x$ where $a>0$
