@@ -1,6 +1,6 @@
 ## Number of Relations
 
-Number of binary relations on a **single set** $A$ (s.t. $|A|=n$ ). ^[https://en.wikipedia.org/wiki/Template:Number_of_relations] ^[https://math24.net/counting-relations.html].
+Number of [[Binary Relations]] on a **single set** $A$ (s.t. $|A|=n$ ). ^[https://en.wikipedia.org/wiki/Template:Number_of_relations] ^[https://math24.net/counting-relations.html].
 
 | Relation type      | Number of relations on a **Single Set** of _n_-elemetns |
 | ----------- | ----------- | 

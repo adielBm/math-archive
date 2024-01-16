@@ -30,11 +30,16 @@
 
 - if $f$ is differentiable at $x_{0}$, then
 	- (7.9) $f$ then it continuous at $x_{0}$
-- if $f$ and $g$ are differentiable at $x_{0}$ and $k(x)=\begin{cases} f(x) & x \leq x_0 \\ g(x) & x > x_0 \end{cases}$
-	- $k$ is continuous at $x_{0}$ $\iff f(x_{0})=g(x_{0})$
-	- $k$ is differentiable at $x_{0}$ $\iff f(x_{0})=g(x_{0})$ and $f'(x_{0})=g'(x_{0})$
+- if $f$ and $g$ are differentiable at $x_{0}$ 
+	- (q7.19) **Piecewise Function** $k(x)=\begin{cases} f(x) & x \leq x_0 \\ g(x) & x > x_0 \end{cases}$
+		- $k$ is continuous at $x_{0}$ $\iff f(x_{0})=g(x_{0})$
+		- $k$ is differentiable at $x_{0}$ $\iff f(x_{0})=g(x_{0})$ and $f'(x_{0})=g'(x_{0})$
+		- https://en.wikipedia.org/wiki/Piecewise#Continuity_and_differentiability_of_piecewise-defined_functions #todo 
 
 - (**Local Property**) $\exists\delta:\forall x \in(x_{0}-\delta,x_{0}+\delta), f (x) = g(x)\implies f'(x_{0})=g'(x_{0})$
+
+
+- (q8.24) if $f$ is continuous at $x_{0}$, and $f$ differentiable at deleted neighborhood of $x_{0}$, and $\displaystyle\lim_{ x \to x_{0} }f'(x)\in\mathbb{R}$ then $f$ differentiable at $x_{0}$ and $f'(x_{0})=\displaystyle\lim_{ x \to x_{0} }f'(x)$
 
 ## Derivative Rules
 
@@ -77,7 +82,7 @@
 	- (q8.28) $(\forall{x\in{(a,b)},f'(x)\geq 0})\iff$ $f$ is **increasing** on $(a,b)$
 		- (8.18) $(\forall{x\in{(a,b)},f'(x)>0})\implies$ $f$ is **strictly increasing** on $(a,b)$
 	- $(\forall{x\in{(a,b)},f'(x)\leq0})\iff$ $f$ is **decreasing** on $(a,b)$
-		- (8.18) $(\forall{x\in{(a,b)},f'(x)<0})\implies$ $f$ is **strictly decreasing** on $(a,b)$
+		- (8.18) $(\forall{x\in{(a,b)},f'(x)<0})\implies$ $f$ is **strictly decreasing** on $(a,b)$ #todo continuous on.. open/closed interval?
 
 > Note: $a$ and $b$ can be $-\infty$ and $\infty$ (resp.)
 
@@ -101,11 +106,11 @@
 | $f(x)$ | $\text{dom}(f)$ | $f'(x)$ | $\text{dom}(f')$ |
 | ---- | ---- | ---- | ---- |
 | $\sqrt{x}$ | $[0, \infty)$ | $\frac{1}{2\sqrt{x}}$ | $(0, \infty)$ |
-| $\sqrt{g(x)}$ | $\{x\mid g(x)\geq 0 \}$ | $\frac{g'(x)}{2\sqrt{g(x)}}$ | $(0, \infty)$ |
+| $\sqrt{g(x)}$ | $\{x\mid g(x)\geq 0 \}$ | $\frac{g'(x)}{2\sqrt{g(x)}}$ | $\{x\mid g(x)> 0 \}$ |
 | $\sin(x)$ | $\mathbb{R}$ | $\cos(x)$ | $\mathbb{R}$ |
 | $\cos(x)$ | $\mathbb{R}$ | $-\sin(x)$ | $\mathbb{R}$ |
-| $\tan(x)$ | $\{ x\mid x \neq (2n + 1)\frac{\pi}{2},n\in \mathbb{Z} \}$ | $\frac{1}{\cos^2 x} = 1 + \tan^2(x)$ | $\mathbb{R} \setminus \left\{\frac{(2n + 1)\pi}{2} \mid n \in \mathbb{Z}\right\}$ |
-| $\cot(x)$ | $\left\{  x\mid \frac{x}{\pi}\notin\mathbb{Z}  \right\}$ | $-\frac{1}{\sin^2(x)}$ | $\mathbb{R} \setminus \left\{ n\pi \mid n \in \mathbb{Z}\right\}$ |
+| $\tan(x)$ | $\mathbb{R} \setminus \left\{ \frac{(2n + 1)\pi}{2} \mid n \in \mathbb{Z} \right\}$ | $\frac{1}{\cos^2 x} = 1 + \tan^2(x)$ | $\text{dom}(\tan(x))$ |
+| $\cot(x)$ | $\mathbb{R} \setminus \left\{ n\pi \mid n \in \mathbb{Z}\right\}$ | $-\frac{1}{\sin^2(x)}$ | $\text{dom}(\cot(x))$ |
 | $\arcsin(x)$ | $[-1, 1]$ | $\frac{1}{\sqrt{1-x^2}}$ | $(-1, 1)$ |
 | $\arccos(x)$ | $[-1, 1]$ | $-\frac{1}{\sqrt{1-x^2}}$ | $(-1, 1)$ |
 | $\arctan(x)$ | $\mathbb{R}$ | $\frac{1}{1+x^2}$ | $\mathbb{R}$ |
@@ -114,7 +119,6 @@
 | $e^x$ | $\mathbb{R}$ | $e^x$ | $\mathbb{R}$ |
 | $\log_{a}(x)$ | $(0, \infty)$ | $\frac{1}{x \ln(a)}$ | $(0, \infty)$ |
 | $\ln(x)$ | $(0, \infty)$ | $\frac{1}{x}$ | $(0, \infty)$ |
-
 
 ### Inverse functions
 
@@ -127,7 +131,7 @@
 
 ## Concavity 
 
-#todo 
+#todo #not-in-course 
 
 - The graph of a differentiable function y = ƒ(x) is
 	- **concave up** on an open interval $I$ if $f'$ is increasing on I

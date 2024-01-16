@@ -136,16 +136,18 @@ ____
 	- $\displaystyle\deg(f)=\deg(g)\implies\displaystyle\lim_{x\to\infty}\frac{\frac{a_nx^n}{x^n}+...+\frac{a_0}{x^n}}{\frac{b_nx^n}{x^n}+...+\frac{b_0}{x^n}}=\frac{a_{n}+...+0}{b_n+...+0}=\frac{a_{n}}{b_n}$
 	- $\displaystyle\deg(f)>\deg(g)\implies\lim_{x\rightarrow \infty}\frac{f(x)}{g(x)}=\pm \infty$ (depending on the sign of $\frac{a_{n}}{b_{m}}$)
 
+
+
 # L'Hôpital's rule
 
-- Suppose $f$ and $g$ are differentiable and $g'(x)\neq 0$ on an open interval $I$ that contains $a$ (except possibly at $a$). 
-	- "$\displaystyle\frac{0}{0}$" - If $\displaystyle\lim_{ x \to x_{0} }f(x)=\lim_{ x \to x_{0} }g(x)=0$, then $\displaystyle\lim_{ x \to x_{0} }\frac{f(x)}{g(x)}=\lim_{ x \to x_{0} }\frac{f'(x)}{g'(x)}$ (if the limit on the right side exists (finite, or is $\infty$ or $-\infty$)
+- $x_{0}\in I$ is finite, $\infty$ or $-\infty$
+- $I$ is an open interval with $x_0$ (for two-sided limits) or an open interval with endpoint $x_0$ (for one-sided limits or limits at infinity if $x_0$ is infinite).
+- $f$ and $g$ are differentiable on $I$ (except possibly at $x_0$), 
+- $\displaystyle g'(x) \neq 0$ on $I$ (except possibly at $x_0$)
+- $L=\displaystyle\lim_{ x \to x_{0} }\frac{f'(x)}{g'(x)}$ exists (finite, $\infty$ or $-\infty$)
+- $\displaystyle \lim_{{x \to x_0}} f(x) = \lim_{{x \to x_0}} g(x) = 0$   or   $\displaystyle \lim_{{x \to x_0}} |f(x)| = \lim_{{x \to x_0}} |g(x)| = \infty$
 
-
-	- "$\displaystyle\frac{\infty}{\infty}$" - If $\displaystyle\lim_{ x \to x_{0} }f(x)=\lim_{ x \to x_{0} }g(x)=0$, then $\displaystyle\lim_{ x \to x_{0} }\frac{f(x)}{g(x)}=\lim_{ x \to x_{0} }\frac{f'(x)}{g'(x)}$ (if the limit on the right side exists (finite, or is $\infty$ or $-\infty$)
-
-> There's similar theorems for one-side limits, limit *at-infinity*, 
-
+ $$\displaystyle \lim_{{x \to x_0}} \frac{f(x)}{g(x)} =  \lim_{{x \to x_0}} \frac{f'(x)}{g'(x)}$$
 
 
 # Examples
@@ -166,7 +168,7 @@ ____
 - $\displaystyle\lim_{x \to 0}{\frac{\arcsin{x}}{x}}=\lim_{x \to 0}{\frac{\arctan{x}}{x}}=1$
 - $\displaystyle\lim_{x\to\infty} (x \sin(1/x)) = 1$
 - (q4.85c) $\displaystyle\lim_{ x \to \infty }f(x)=\lim_{ x \to 0^+ }f(1/x)$ (assuming $f$ defined on $(M,\infty)$)
-
+- (q4.85d) $\displaystyle\lim_{ x \to -\infty }f(x)=\lim_{ x \to \infty }f(-x)$ (assuming $f$ defined on $(-\infty,M)$)
 
 - $(\cos{x})^{\sin x}$
 	- $\displaystyle\lim_{ x \to 0 }(\cos{x})^{\sin x}=$ #todo see e6.3 page 179

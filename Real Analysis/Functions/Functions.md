@@ -55,10 +55,16 @@ ___
 
 > Some say *relative* instead of *local*, and *absolut* instead of *global*
 
-- Extremum
+
+https://opal.openu.ac.il/pluginfile.php/8074449/mod_resource/content/30/tips%208.pdf
+
+- Extremum #todo 
 	- A function $f$ is said to have a **maximum** (resp. **minimum**) at the interval $I$ if $\exists x_{0}\in{I}$ s.t. $\displaystyle  \forall (x\in I),\,f(x_{0})\geq f(x)$ (resp. $f(x_{0})\leq f(x)$)
-- Local Extremum
+- Local Extremum (נקודת קיצון, מקסימום/מינימום מקומי)
 	- A function $f$ is said to have a **local maximum** (resp. **local minimum**) at $x_{0}\in{\operatorname {dom} (f)}$ if there exists an open interval $I\subseteq{\operatorname {dom} (f)}$ containing $x_{0}$ such that $\forall{x\in{I}}$, $f(x_{0}) \geq f (x)$ (resp. $f(x_{0})\leq f(x)$)
+
+
+- if $\forall x \in(a,b), f(x)=c$ then every $x_{0}\in(a,b)$ is **both** local maximum and local minimum
 
 - (8.3) Extremum on $I$ is either *local extremum* of $f$ or *endpoint* of $I$
 - (8.4) **Fermat's theorem** (interior extremum theorem) - if $x_{0}\in{I}$ is local extremum of $f$, and $f$ is differentiable at $x_{0}$, then $f'(x_{0})=0$
