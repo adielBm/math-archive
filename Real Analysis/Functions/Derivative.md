@@ -7,7 +7,7 @@
 - $\forall \varepsilon > 0,\exists\delta>0:\forall h\left(0<|h|<\delta\implies \left|L - \frac{f(x_{0}+h)-f(x_{0})}{h}\right| < \varepsilon \right)$
 - $f$ is **left-** and **right-differentiable** at $x_{0}$ and $f'_{+}(x_{0})=f'_{-}(x_{0})$ (in this case $f'(x_{0})=f'_{+}(x_{0})=f'_{-}(x_{0})$)
 - #todo  $\exists{A}\in\mathbb{R} : f(x_{0}+h)-f(x_{0})=Ah+\alpha(h)h$ where $\displaystyle\lim_{ h \to 0 }\alpha(h)=0$
-
+	
 # Derivative
 
 - Derivative Function - $\displaystyle f'(x)=\frac{df}{dx}=\lim_{h\to 0}{\frac {f(x+h)-f(x)}{h}}$
@@ -71,10 +71,17 @@
 - $I\subseteq\text{dom}(f')$
 ## Theorems
 
-- $\mbox{dom}(f')\subseteq\mbox{dom}(f)$
+- $\text{dom}(f')\subseteq\text{dom}(f)$
 - $f$ is continuous on $[a,b]$, differentiable on the $(a,b)$
 	- **Rolle's theorem** - $f(a)=f(b)\implies\exists c\in(a,b):f'(c )=0$
 	- **Mean value theorem** (MVT, Lagrange) - $\exists c\in(a,b):f'(c )=\frac{{f(b)-f(a)}}{b-a}$
+		- MVT is special case of Cauchy's MVT when $g(x)=x$
+
+- $f$ and $g$ is continuous on $[a,b]$, differentiable on the $(a,b)$
+	- **Cauchy's Mean Value Theorem** - if $\forall{x\in{(a,b)}},\, g'(x)\neq 0$, then:
+		- $g(a)\neq g(b)$
+		- $\displaystyle\exists{c\in{(a,b)}}:\frac{f'(c)}{g'(c)}=\frac{f(b)-f(a)}{g(b)-g(a)}$
+
 
 - $f$ is continuous on $I$, differentiable at every inferior point of $I$
 	- **First Derivative Test for Monotonicity** (q8.28, 8.18, 8.7, q7.12b, q8.29) 
@@ -86,25 +93,11 @@
 		- $f$ is **increasing** on $I$, if and only if, $f'(x)\geq0$, and there is no subinterval on which $f'(x)=0$ for all x in it
 		- $f$ is **decreasing** on $I$, if and only if, $f'(x)\leq0$, and there is no subinterval on which $f'(x)=0$ for all x in it
 
-
-
 - if $f$ is continuous on $[a,b]$ and **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$  (by q8.25)
 
 
-> Note: $a$ and $b$ can be $-\infty$ and $\infty$ (resp.)
-
-
-
-- $f$ and $g$ is continuous on $[a,b]$, differentiable on the $(a,b)$
-	- **Cauchy's mean value theorem** - if $\forall{x\in{(a,b)}},\, g'(x)\neq 0$, then:
-		- $g(a)\neq g(b)$
-		- $\displaystyle\exists{c\in{(a,b)}}:\frac{f'(c)}{g'(c)}=\frac{f(b)-f(a)}{g(b)-g(a)}$
-
-> MVT is special case of Cauchy's MVT when $g(x)=x$
-
-
-- **Darboux's theorem** - $f$ is differentiable on the $(a,b)$ then $f'$ has the intermediate value property.
-	- 
+- (8.10) **Darboux's theorem** - $f$ is differentiable on the $(a,b)$ then $f'$ has the intermediate value property.
+- (8.11) #todo 
 
 - **Constant Difference Theorem** #not-in-course If $f$ and $g$ are differentiable on an interval, and if $f'(x)=g'(x)$ for all $x$ in that interval, then $f − g$ is constant on the interval; that is, there is a constant k such that $f(x) − g(x) = k$ or, equivalently, $f(x) = g(x) + k$ for all $x$ in the interval. 
 
@@ -140,16 +133,23 @@
 
 #todo #not-in-course 
 
-- The graph of a differentiable function y = ƒ(x) is
+- The graph of a differentiable function $f(x)$ is
 	- **concave up** on an open interval $I$ if $f'$ is increasing on I
 	- **concave down** on an open interval $I$ if $f'$ is decreasing on I
-- A point $(c,f(c))$ where the graph of a function has a tangent line and where the concavity changes is a **point of inflection**
+- A point $(x_{0},f(x_{0}))$ where the graph of a function has a tangent line and where the concavity changes is an **inflection point** (or **point of inflection**)
 - The Second Derivative Test for Concavity #todo 
-- At a point of inflection (c, ƒ(c)), either ƒ″(c) = 0 or ƒ″(c) fails to exist.
+- At an inflection point $(x_{0},f(x_{0}))$, either $f''(x_{0})=0$ or $f''(x_{0})$ fails to exist
+- #todo  A stationary inflection point is not a local extremum
 
 # Second Derivative 
 
-- (8.23) if $f'(x_{0})=0$ and $f''(x_{0})\neq 0$ then $x_{0}$ is local extremum of $f$
-	- if $f''(x_{0})> 0$ then $x_{0}$ is local minimum of $f$
-	- if $f''(x_{0})< 0$ then $x_{0}$ is local maximum of $f$
+- (8.23) if $f'(x_{0})=0$ and $f''(x_{0})\neq 0$ then $x_{0}$ is local extremum point of $f$
+	- if $f''(x_{0})> 0$ then $x_{0}$ is local **minimum** point of $f$
+	- if $f''(x_{0})< 0$ then $x_{0}$ is local **maximum** point of $f$
+
+
+
+
+____
+
 

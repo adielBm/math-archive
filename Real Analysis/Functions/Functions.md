@@ -37,20 +37,6 @@
 		- if $f$ is **decreasing** then 
 			- $\displaystyle\lim_{ x \to b^{-} }f(x)=-\infty$ 
 
-
-___
-
-#### #todo 
-
-- (5.40) if $f$ is increasing on neighborhood of $x_{0}$, then the one-side limits $\displaystyle\lim_{ x \to x_{0}^{-} }f(x)$ and $\displaystyle\lim_{ x \to x_{0}^{+} }f(x)$ exist and $\displaystyle\lim_{ x \to x_{0}^{-} }f(x)\leq f(x_{0})\leq\lim_{ x \to x_{0}^{+} }f(x)$
-- (5.41) **Discontinuity of Monotonic Function** is Jump Discontinuity
-	- if $f$ is monotonic in $(a,b)$ and let $x_{0}\in{(a.b)}$ be a discontinuity point, then it's the *jump discontinuity* point
-- (5.42) $f$ is monotonic on $I$. if the interval image $f(I)$ is also an interval, then $f$ is continuous on $I$
-- $f$ is monotonic and continuous on $I$ then: 
-	- (5.43) there exist a inverse fucntion $f^{-1}$ whose domain is $f(I)$ and its image is $I$ which $f^{-1}$ itself is monotonic and continuous on $f(I)$. ($f^{-1}$ is increasing if $f$ is decreasing, and vice versa)
-
-___
-
 ## Extreme (maximum & minimum)
 
 - $f$ is defined on an interval $I=\text {dom} (f)$
@@ -61,24 +47,54 @@ ___
 		- **Local Extremum point**: $x_{0}\in{I}$ is a **local maximum point** (resp. **local minimum point**) at $I$ if there exists a neighborhood $N_{\varepsilon}(x_{0})$ such that $\forall x \in N_{\varepsilon}(x_{0}),f(x_{0})\geq f(x)$ (resp. $f(x)\geq f(x_{0})$) (in both cases נקודת קיצון)
 			- In this case, $f(x_{0})$ is called a **local maximum (value)** (resp. **local minimum (value)**) of $f$ at a point $x_{0}$. (in both cases $f(x_{0})$ is also called **local extremum value**, ערך קיצון)
 
-
-- (8.3) A Extremum point on $I$ is either a local extremum point of $f$ or an endpoint of $I$
-- (8.4) **Fermat's theorem** (interior extremum theorem) - if $x_{0}$ is a local extremum point of $f$, and $f$ is differentiable at $x_{0}$, then $f'(x_{0})=0$
-- Global Extreme points can be, either 
-	- endpoints of $I$, or 
-	- inferior points of $I$, in which $f$ is *not* differentiable, or 
-	- inferior points of $I$, in which the derivative of $f$ is $0$
-
-
-- $x_{0}$ is a **critical point** of $f$ if either $f'(x_{0})=0$ or $f'(x_{0})$ is undefined
-	- $x_{0}$ is a **stationary point** of $f$ if $f'(x)=0$
-- (8.19) if $x_{0}$ is local extremum (interior point) then $x_{0}$ a critical point
-
-
-
+- $x_{0}$ is called a **critical point** of $f$ if either $f'(x_{0})=0$ or $f'(x_{0})$ is undefined
+	- $x_{0}$ is called a **stationary point** of $f$ if $f'(x)=0$
 
 > Some say *relative* instead of *local*, and *absolut* instead of *global*
-# Exponential Functions
+
+
+### Theorems
+
+- (8.3) A extremum point on $I$ is either a local extremum point of $f$ or an endpoint of $I$
+- **Fermat's theorem** - equivalence theorems:
+	- (8.4) let $x_{0}$ a local extremum point of $f$. if $f$ is differentiable at $x_{0}$, then $f'(x_{0})=0$
+	- (8.19) if $x_{0}$ is a local extremum point of $f$, then, $f$ is not differentiable at $x_{0}$, **xor**, ($f$ is differentiable and $f'(x_{0})=0$)   
+- If $x_{0}$ is a global extremum of $f$, then one of the following is true: 
+	- $x_{0}$ is an endpoint of $I$ 
+	- $f$ is not differentiable at $x_{0}$ 
+	- $x_{0}$ is a stationary point of $f$, (i.e. $f'(x_{0})=0$)
+- (8.21) Let $f$ be a function that is continuous at a point $x_0$ and differentiable in a punctured neighborhood $N_{\varepsilon}(x_0)$ of $x_0$.
+	* If the derivative $f'$ changes its sign as it passes through $x_0$:
+		* If the sign change is from $-$ to $+$, then $x_0$ is a local minimum point of $f$.
+		* If the sign change is from $+$ to $-$, then $x_0$ is a local maximum point of $f$.
+	* If there exists a punctured neighborhood of $x_0$ in which the sign of $f'$ is constant, then $x_0$ is not an extremum point of $f$.
+
+## Misc 
+
+- (5.40) if $f$ is increasing on neighborhood of $x_{0}$, then the one-side limits $\displaystyle\lim_{ x \to x_{0}^{-} }f(x)$ and $\displaystyle\lim_{ x \to x_{0}^{+} }f(x)$ exist and $\displaystyle\lim_{ x \to x_{0}^{-} }f(x)\leq f(x_{0})\leq\lim_{ x \to x_{0}^{+} }f(x)$
+- (5.41) **Discontinuity of Monotonic Function** is Jump Discontinuity
+	- if $f$ is monotonic in $(a,b)$ and let $x_{0}\in{(a.b)}$ be a discontinuity point, then it's the *jump discontinuity* point
+- (5.42) $f$ is monotonic on $I$. if the interval image $f(I)$ is also an interval, then $f$ is continuous on $I$
+- $f$ is monotonic and continuous on $I$ then: 
+	- (5.43) there exist a inverse fucntion $f^{-1}$ whose domain is $f(I)$ and its image is $I$ which $f^{-1}$ itself is monotonic and continuous on $f(I)$. ($f^{-1}$ is increasing if $f$ is decreasing, and vice versa)
+
+
+# Classification
+
+## Elementary functions
+
+### Algebraic functions
+
+Algebraic functions are functions that can be expressed as the solution of a polynomial equation with integer coefficients.
+
+- Polynomials
+- Rational functions
+- nth root
+
+### Elementary Transcendental functions
+
+Transcendental functions are functions that are not algebraic.
+#### Exponential Functions
 
 - $f(x)=a^x$ where $a>0$
 	- $\text{dom}(f)=\mathbb{R}$
@@ -97,7 +113,9 @@ ___
 			- $\displaystyle\lim_{ x \to \infty }f(x)=0$
 	- [[Derivative#Examples|Derivative]]
 
-# Logarithmic Functions
+
+
+#### Logarithmic Functions
 
 - $f(x)=\log_{a}(x)$ where $a>0$ and $a\neq 1$
 	- $\text{dom}f=(0,\infty)$
@@ -118,3 +136,11 @@ ___
 			- $\displaystyle\lim_{ x \to 0^+ }f(x)=\infty$
 			- $\displaystyle\lim_{ x \to \infty }f(x)=-\infty$
 	- [[Derivative#Examples|Derivative]]
+
+
+#### Periodic functions
+
+##### Trigonometric Functions 
+
+
+

@@ -52,7 +52,7 @@ Theorems
 	- (5.43) if $f$ is monotonic then there exist a inverse fucntion $f^{-1}$ whose domain is $f(I)$ and its image is $I$ which $f^{-1}$ itself is monotonic and continuous on $f(I)$. ($f^{-1}$ is increasing if $f$ is decreasing, and vice versa)
 
 
-- (assuming $f$ is continuous on the interval $I=[a,b]$)
+- assuming $f$ is continuous on $I=[a,b]$
 	- (5.29) **Bolzano's Theorem**
 		- $f(a)\cdot f(b)<0\implies \exists c\in(a,b):f(c)=0$
 	- (5.31) **Intermediate Value Theorem** (IVT)

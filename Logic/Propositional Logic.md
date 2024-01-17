@@ -123,6 +123,8 @@
 	- $p\rightarrow{q}\equiv{\lnot{p}\lor{q}}$
 
 
+
+
 - #todo   $p\leftrightarrow{q}\equiv{q\leftrightarrow{p}\equiv{(p\rightarrow{q})\land{(q\rightarrow{p})}\equiv{(p\land{q})\lor{((\lnot{p})\land{(\lnot{q})})}}}}$
 - #todo  $((a\rightarrow{b})\rightarrow{c})\vdash(a\rightarrow({b}\rightarrow{c}))$
 

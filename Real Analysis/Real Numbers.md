@@ -88,7 +88,7 @@
 	- $-|a|\leq{a}\leq{|a|}$
 
 - $0<|x-a|<b\implies x\in(a-b,a+b)\setminus\set{a}$
-
+- $|x-a|<b\implies x\in(a-b,a+b)$
 ## Density
 
 - (d1.65) $A\subseteq\mathbb{R}$ **is dense in** $\mathbb{R}$ if for every reals $x<y$ there exists $a\in{A}$ such that $a\in(x,y)$
