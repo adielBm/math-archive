@@ -13,7 +13,7 @@ https://gist.github.com/riceissa/d9f191d934c23dc5e42388dfb91b6aca
 - IVT (5.31)
 
 
-```___mermaid
+```__mermaid
 graph TD;
 
   a1.52(Completeness Axiom - A1.52);

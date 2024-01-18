@@ -56,7 +56,7 @@ Theorems
 	- (5.29) **Bolzano's Theorem**
 		- $f(a)\cdot f(b)<0\implies \exists c\in(a,b):f(c)=0$
 	- (5.31) **Intermediate Value Theorem** (IVT)
-		- $(\displaystyle  {\min(f(a),f(b))\leq t\leq\max(f(a),f(b))})\implies{\exists~{c}\in{[a,b]}:f(c)=t}$
+		- $(\displaystyle  {\min(f(a),f(b))\leq t\leq\max(f(a),f(b))})\implies{\exists{c}\in{[a,b]}:f(c)=t}$
 	- (5.32) **Brouwer's Fixed Point Theorem** (1-dim) 
 		- $f:[a,b]\to[a,b]\implies\exists{x}\in{[a,b]}:f(x)=x$
 	- (5.34, 5.38) Preservation of intervals - $f(I)= \set{f(x):x\in{I}}$ is either an **closed interval** or a **point**

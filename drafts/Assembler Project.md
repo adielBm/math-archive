@@ -118,7 +118,6 @@ The machine instructions are divided into three groups, according to the number 
 
 #### 2nd set 
 
-
 | Instruction | Description | Syntax | Example |
 |-------------|-------------|--------|------------|
 | `not`       | Sets the complement of the value in the specified operand | `not [op]` | `not r2` will perform `r2 ← not r2` |
