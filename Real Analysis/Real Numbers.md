@@ -60,7 +60,7 @@
 
 ## Archimedean property
 
-- (1.61) $\forall{a}\in\mathbb{R^{+}},\;\forall{b}\in\mathbb{R},\;\exists n\in\mathbb{N}\;:\;na>b$
+- (1.60, 1.61) $\forall{a}\in\mathbb{R^{+}},\;\forall{b}\in\mathbb{R},\;\exists n\in\mathbb{N}\;:\;na>b$
 
 ## Absolut Value 
 

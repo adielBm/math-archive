@@ -42,7 +42,7 @@ Theorems
 	- $f$ is continuous on the interval $I$ 
 	- $f$ is **continuous** on **every inferior point** in $I$, and **right-continuous at** the **left-endpoint** (if exists), and **left-continuous at** the **right-endpoint** (if exists).
 	- $(\forall{x_{0}\in{I}})(\forall{\varepsilon>0})(\exists\delta>0):(\forall{x\in{I}}),~|x-x_{0}|<\delta\implies{|f(x)-f(x_{0})|<\varepsilon}$
-	- For each sequence $(x_{n})^{\infty}_{n=1}$ of points in the interval $I$. we have $\displaystyle\lim_{ n \to \infty }x_{n}=x_{0}\in{I}\implies{\lim_{ n \to \infty }}f(x_{n})=f(x_{0})$
+	- (5.27) For each sequence $(x_{n})^{\infty}_{n=1}$ of points in the interval $I$. we have $\displaystyle\lim_{ n \to \infty }x_{n}=x_{0}\in{I}\implies{\lim_{ n \to \infty }}f(x_{n})=f(x_{0})$
 
 
 #### Theorems

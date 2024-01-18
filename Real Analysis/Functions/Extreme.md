@@ -13,7 +13,6 @@
 
 > Some say *relative* instead of *local*, and *absolut* instead of *global*
 
-
 ### Theorems
 
 - (8.3) A extremum point on $I$ is either a local extremum point of $f$ or an endpoint of $I$
@@ -24,7 +23,7 @@
 	- $x_{0}$ is an endpoint of $I$ 
 	- $f$ is not differentiable at $x_{0}$ 
 	- $x_{0}$ is a stationary point of $f$, (i.e. $f'(x_{0})=0$)
-- (8.21) Let $f$ be a function that is continuous at a point $x_0$ and differentiable in a punctured neighborhood $N_{\varepsilon}(x_0)$ of $x_0$.
+- (8.21) **First Derivative Test for Local Extreme** - Let $f$ be a function that is continuous at a point $x_0$ and differentiable in a punctured neighborhood $N_{\varepsilon}(x_0)$ of $x_0$.
 	* If the derivative $f'$ changes its sign as it passes through $x_0$:
 		* If the sign change is from $-$ to $+$, then $x_0$ is a local minimum point of $f$.
 		* If the sign change is from $+$ to $-$, then $x_0$ is a local maximum point of $f$.

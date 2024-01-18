@@ -1,25 +1,6 @@
-# Aritmetic & Properties
-
-## Dot Product (scalar product)
-
-also *Euclidean inner product*
-
-**Definition:**
-- $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\sum _{i=1}^{n}a_{i}b_{i}=a_{1}b_{1}+a_{2}b_{2}+\cdots +a_{n}b_{n}}$
-- $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\left\|\mathbf {a} \right\|\left\|\mathbf {b} \right\|\cos \theta ,}$
-
-**Properties:** (12.1.2)
-- Symmetry $\textbf{a}\cdot\textbf{b}=\textbf{b}\cdot\textbf{a}$
-- Distributive $(\textbf{a}+\textbf{b})\cdot{\textbf{c}}=\textbf{a}\cdot\textbf{c}+\textbf{b}\cdot\textbf{c}$
-- Homogeneity $(t\textbf{a})\cdot\textbf{b}=t(\textbf{a}\cdot\textbf{b})$
-- Positivity $\textbf{a}\cdot\textbf{a}\geq 0$
-	- $\textbf{a}\cdot\textbf{a}= 0 \iff \textbf{a}=\textbf{0}$
-- $\textbf{0}\cdot\textbf{a}=\textbf{a}\cdot\textbf{0}=0$
-
 ## Norm of a Vector
 
 - (d12.1.3) - $\| \textbf{a} \|:=\sqrt{\textbf{a} \cdot \textbf{a}}=\sqrt{ \sum_{i=1}^{n}a_{i}^2 }$
-
 - (q12.1.4) $\|\textbf{a} \|=0 \iff \textbf{a}=\textbf{0}$
 - Homogeneity (q12.1.5) $\|t \textbf{a} \|=|t|\cdot\| \textbf{a} \|$
 - Cauchy–Schwarz inequality (12.1.4) $|\textbf{a}\cdot\textbf{b}| \leq  \| \textbf{a} \| \cdot{\| \textbf{b} \|}$

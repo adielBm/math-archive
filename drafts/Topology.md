@@ -17,4 +17,9 @@
 
 - A function $f: X \to Y$ is continuous at a point $x$ if $\forall$ open set $V$ containing $f(x)$, $\exists$ open set $U$ containing $x$ s.t. $f(U) \subset V$.
 
-- A subset $K$ of a metric space $(X, d)$ is compact if every open cover of $K$ has a finite subcover.
+- A subset $K$ of a metric space $(X, d)$ is **compact** if every open cover of $K$ has a finite subcover.
+	- **Heine–Borel theorem** - For any subset $A$ of Euclidean space, $A$ is compact if and only if it is closed and bounded; this is the
+
+
+
+

@@ -1,6 +1,6 @@
 # Vector space
 
-### Definition
+## Definition
 
 A **vector space** over a field $F$ is a non-empty set $V$ together with a binary operation and a binary function that satisfy the eight axioms listed below. 
 - In this context, the elements of $V$ are commonly called **vectors**, and the elements of $F$ are called **scalars**.
@@ -36,6 +36,31 @@ A **vector space** over a field $F$ is a non-empty set $V$ together with a binar
 - $-(\mathbf{u}+\mathbf{v})=(-\mathbf{u})+(-\mathbf{v})$
 - $\mathbf{u}-\mathbf{v}=\mathbf{0}\implies \mathbf{u}=\mathbf{v}$
 
+## Operations
+
+- [[#Definition|Scalar Multiplication]] ($\textit{scalar}\cdot\mathbf{vector}=\mathbf{vector}$)
+- [[#Definition|Vector Addition]] ($\mathbf{vector}+\mathbf{vector}=\mathbf{vector}$)
+- [[#Dot Product]] ($\mathbf{vector}\cdot\mathbf{vector}=\textit{saclar}$)
+- [[#Cross Product]] ($\mathbf{vector}\times\mathbf{vector}=\mathbf{vector}$)
+### Dot Product
+
+> also **scalar product** or **Euclidean inner product**
+
+**Definition:**
+- **Coordinate definition:** $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\sum _{i=1}^{n}a_{i}b_{i}=a_{1}b_{1}+a_{2}b_{2}+\cdots +a_{n}b_{n}}$
+- **Geometric definition:** $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\left\|\mathbf {a} \right\|\left\|\mathbf {b} \right\|\cos \theta ,}$
+
+**Properties:** (12.1.2)
+- Symmetry $\textbf{a}\cdot\textbf{b}=\textbf{b}\cdot\textbf{a}$
+- Distributive $(\textbf{a}+\textbf{b})\cdot{\textbf{c}}=\textbf{a}\cdot\textbf{c}+\textbf{b}\cdot\textbf{c}$
+- Homogeneity $(t\textbf{a})\cdot\textbf{b}=t(\textbf{a}\cdot\textbf{b})$
+- Positivity $\textbf{a}\cdot\textbf{a}\geq 0$
+	- $\textbf{a}\cdot\textbf{a}= 0 \iff \textbf{a}=\textbf{0}$
+- $\textbf{0}\cdot\textbf{a}=\textbf{a}\cdot\textbf{0}=0$
+
+### Cross Product
+
+- $\displaystyle  \mathbf {a} \times \mathbf {b} =\|\mathbf {a} \|\|\mathbf {b} \|\sin(\theta )\,\mathbf {n}$ #not-in-course 
 # Subspaces
 
 - A subset $W$ of a vector space $V$ is called a subspace of $V$ if $W$ is itself a vector space under the addition and scalar multiplication defined on $V$
