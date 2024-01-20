@@ -8,7 +8,7 @@
 	- $\displaystyle  {\displaystyle (\forall \varepsilon >0)\,(\exists \delta >0)\,(\forall x\in \mathbb {R} )\,(0<|x-x_{0}|<\delta \implies |f(x)-L|<\varepsilon )}$ 
 - (The Sequential Criterion for a Limit of a Function. Heine) 
 	- $\displaystyle\forall(x_{n})^{\infty}_{n=1}(\lim_{n\to \infty}(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}\neq x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
-- (**left** & **right**-hand limit) (4.47)
+- (**left** & **right**-hand limit) (4.48)
 	- $\displaystyle\lim_{x\to{x_{0}}^{-}}f(x)=\displaystyle\lim_{x\to{x_{0}}^{+}}f(x)=L$
 - (4.40) $\displaystyle\lim_{h\to 0}{f(x_0+h)}=L$
 
@@ -28,6 +28,11 @@
 
 - (4.43) Squeeze theorem for functions
 	- $\Big(f(x)\leq g(x)\leq h(x)\Big)\land\Big({\displaystyle\lim_{ x \to x_{0} }f(x)=\lim_{ x \to x_{0} }h(x)=L}\Big)\implies{\displaystyle\lim_{ x \to x_{0} }g(x)=L}$
+
+
+- given the limits of $f$ and $g$ is defined (finite or infinite) 
+	- (4.41) $\displaystyle{\color{gray}\exists{\varepsilon>0}:\forall x \in N^{*}_{\varepsilon}(x_{0}),\,}f(x)\leq g(x)\implies \lim_{ x \to x_{0} }f(x)\leq \lim_{ x \to x_{0} }g(x)$
+	- (4.42) $\displaystyle{\color{gray}\exists{\varepsilon>0}:\forall x \in N^{*}_{\varepsilon}(x_{0}),\,}f(x)< g(x)\impliedby\lim_{ x \to x_{0} }f(x)< \lim_{ x \to x_{0} }g(x)$
 ### Arithmetic
 
 >Assuming $f,g$ are defined on $N^{*}_{\varepsilon}(x_{0})$, and their limits are exist

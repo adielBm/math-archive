@@ -2,7 +2,7 @@
 
 ## Definition
 
-A **vector space** over a field $F$ is a non-empty set $V$ together with a binary operation and a binary function that satisfy the eight axioms listed below. 
+A **vector space** over a [[Field]] $F$ is a non-empty set $V$ together with a binary operation and a binary function that satisfy the eight axioms listed below. 
 - In this context, the elements of $V$ are commonly called **vectors**, and the elements of $F$ are called **scalars**.
 - The binary operation, called **vector addition** or simply **addition** assigns to any two vectors $v$ and $w$ in $V$ a third vector in $V$ which is commonly written as $v + w$, and called the sum of these two vectors.
 - The binary function, called **scalar multiplication**, assigns to any scalar $a$ in $F$ and any vector $v$ in $V$ another vector in $V$, which is denoted $av$
@@ -48,7 +48,7 @@ A **vector space** over a field $F$ is a non-empty set $V$ together with a binar
 
 **Definition:**
 - **Coordinate definition:** $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\sum _{i=1}^{n}a_{i}b_{i}=a_{1}b_{1}+a_{2}b_{2}+\cdots +a_{n}b_{n}}$
-- **Geometric definition:** $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\left\|\mathbf {a} \right\|\left\|\mathbf {b} \right\|\cos \theta ,}$
+- **Geometric definition:** $\displaystyle  {\displaystyle \mathbf {a} \cdot \mathbf {b} =\left\|\mathbf {a} \right\|\left\|\mathbf {b} \right\|\cos \theta }$
 
 **Properties:** (12.1.2)
 - Symmetry $\textbf{a}\cdot\textbf{b}=\textbf{b}\cdot\textbf{a}$

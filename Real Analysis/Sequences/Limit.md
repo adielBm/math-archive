@@ -82,7 +82,7 @@
 	- (2.41 it is divergent
 
 - (2.44) #todo like 2.29 but for infinite limit 
--  **Squeeze Theorem** for infinite limit 
+- **Squeeze Theorem** for infinite limit 
 	- (2.45) if $a_{n}\to \infty$ and $b_{n}\geq a_{n}$ for almost all $n$, then $b_{n}\to \infty$
 	- (q2.40) if $a_{n}\to -\infty$ and $b_{n}\leq a_{n}$ for almost all $n$, then $b_{n}\to -\infty$
 

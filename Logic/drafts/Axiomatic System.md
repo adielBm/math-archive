@@ -9,3 +9,9 @@
 - A **theory** is a consistent, relatively-self-contained body of knowledge which usually contains an axiomatic system and all its derived theorems.
 - A **model** for an axiomatic system is a well-defined set, which assigns meaning for the undefined terms presented in the system, in a manner that is correct with the relations defined in the system. 
 	- Two models are said to be **isomorphic** if a one-to-one correspondence can be found between their elements, in a manner that preserves their relationship
+
+
+___
+
+- A set of axioms is said to be **consistent** if there is no statement $A$ such that both $A$ and its negation are provable from the set of axioms. 
+	- Informally, a collection of axioms is consistent if there is a model for the axioms; the axioms of group theory are consistent as $G = {e}$, where $·$ is defined on $G$ by $e · e = e$, is a model of these axioms. 

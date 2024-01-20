@@ -31,20 +31,32 @@
 Let $(a_n)$ be a convergent sequence
 $$( \lim_{ n \to \infty } a_{n}=L \land{\lim_{ n \to \infty } a_{n}=M})\implies{L=M}$$
 
+#todo check it!!
 
-|  | Proof by Contradiction |  |
-| ---- | ---- | ---- |
-|  | $L\neq M$ | Assume by contradiction |
-|  | $\displaystyle\varepsilon=\frac{\vert L-M\vert}{3}>0$ | because $L\neq M$ |
-| 1 | $\exists N_{1}:\forall n>N_{1},\vert{a_{n}-L}\vert<\varepsilon$ | because $\displaystyle{\lim_{ n \to \infty } a_{n}=L}$ |
-| 2 | $\exists N_{2}:\forall n>N_{2},\vert{a_{n}-M}\vert<\varepsilon$ | because $\displaystyle{\lim_{ n \to \infty } a_{n}=M}$ |
-|  | $n:=\max\{ N_{1}, N_{2} \}+1$ |  |
-|  | $n>N_{1},n>N_{2}$ |  |
-|  | $\vert{a_{n}-L}\vert<\varepsilon,\vert{a_{n}-M}\vert<\varepsilon$ |  |
-|  | #todo  |  |
- 
+| Proof by Contradiction |  |
+| ---- | ---- |
+| $L\neq M$ | Assume by contradiction |
+| $\displaystyle\varepsilon=\frac{\vert L-M\vert}{3}>0$ | because $L\neq M$ |
+| $\exists N_{1}:\forall n>N_{1},\vert{a_{n}-L}\vert<\varepsilon$ | because $\displaystyle{\lim_{ n \to \infty } a_{n}=L}$ |
+| $\exists N_{2}:\forall n>N_{2},\vert{a_{n}-M}\vert<\varepsilon$ | because $\displaystyle{\lim_{ n \to \infty } a_{n}=M}$ |
+| $n:=\max\{ N_{1}, N_{2} \}+1$ |  |
+| $n>N_{1},n>N_{2}$ |  |
+| $\vert{a_{n}-L}\vert<\varepsilon,\vert{a_{n}-M}\vert<\varepsilon$ |  |
+| $\vert{L-M}\vert \leq \vert{a_{n}-L}\vert + \vert{a_{n}-M}\vert$ | Triangle inequality |
+| $\vert{L-M}\vert < \varepsilon + \varepsilon$ |  |
+| $\vert{L-M}\vert < \frac{\vert L-M\vert}{3} + \frac{\vert L-M\vert}{3}$ | Substituting $\varepsilon$ |
+| $\vert{L-M}\vert < \frac{2\vert L-M\vert}{3}$ | Combining like terms |
+| $3\vert{L-M}\vert < 2\vert L-M\vert$ | Multiplying both sides by 3 |
+| $3<2$ | Dividing by $\vert L-M\vert$ both sides |
+| **Contradiction!** |  |
+|  |  |
 
-## (2.16)
+## (2.16) Convergent sequence is Bounded
+
+| Proof by #todo  |  |
+| ---- | ---- |
+| a |  |
+
 
 ## (2.22)
 

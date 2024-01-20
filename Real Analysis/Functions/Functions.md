@@ -54,7 +54,9 @@
 
 ## Elementary functions
 
-All elementary functions are continuous on their domains.
+- All elementary functions are continuous on their domains.
+
+
 ### Algebraic functions
 
 Algebraic functions are functions that can be expressed as the solution of a polynomial equation with integer coefficients.

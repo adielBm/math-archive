@@ -1,18 +1,8 @@
 # Axioms
 
 ## Field Axioms
-  
-- Addition
-	- Associative $(a+b)+c = a+(b+c)$
-	- Commutative $a+b=b+a$
-	- Identity $\exists{0}:a + 0 = 0 + a = a$
-	- Inverse $\forall a \in \mathbb{F}, \exists b \in \mathbb{F} : a + b = 0$
-- Multiplication
-	- Associative $a · (b · c) = (a · b) · c$
-	- Commutative $a · b = b · a$
-	- Identity $∃ 1 \neq 0 : a · 1 = 1 · a = a$
-	- Inverse $\forall a \in \mathbb{F} \setminus \{0\}, \exists b \in \mathbb{F} : a \cdot b = 1$
-- Distributive $a · (b + c) = a · b + a · c$
+
+See [[Field]].
 
 ## Order Axioms
 
@@ -26,7 +16,6 @@
 - (a1.52) if $\emptyset\neq A,B\subseteq\mathbb{R}$ such that $\forall{a}\in{A}$ and $\forall{b}\in{B}$ we have $a\leq b$. then there exists $x\in\mathbb{R}$ such that:
 	- $\forall{a}\in{A}$, $a\leq{x}$
 	- $\forall{b}\in{B}$, $x\leq{b}$
-
 
 >See 3.16 about the term of "Completeness Axiom"
 
@@ -119,3 +108,71 @@
 	- $n<x<n+1\implies n=\lfloor x \rfloor$ for $n\in\mathbb{N}$
 - $\text{ceil}(x)=\displaystyle  \lceil x\rceil :=\min\{n\in \mathbb {Z} \mid n\geq x\}$
 
+## Sets of Reals
+$$\large A\subset\mathbb{R}$$
+### Greatest Element & Least Element
+
+- A set $A\subset\mathbb{R}$ **admits a maximum** if an element $\exists x_{M} \in A:\forall x \in A,x\leq x_{M}$
+	- $x_M$ (necessarily unique) is the **maximum** of the set $A$ and one denotes it by $x_{M} = \max A$. 
+- The **minimum** of a set A, denoted by $x_m = \min A$, is defined in a similar way
+### Upper & Lower Bounds
+
+#### Upper bound
+
+- (d3.1) real number $c$ is called **upper bound** of $A$, if $\forall a\in{A}: c\geq a$ 
+#### Lower bound 
+
+- (d3.1) $c \in \mathbb{R}$ is called a **lower bound** of $A$, if $\forall a\in{A}: c\leq a$
+#### Supremum (Least-upper-bound)
+
+  Definitions
+
+- $c=\sup{A}$. ($c$ is the **supremum** of $A$)
+- (d3.7) $c$ is minimal upper bound of $A$
+- (3.9) (1.) $c$ is an upper bound of $A$ (2.) $\forall\varepsilon>0 \;\exists{x\in{A}}:x>c-\varepsilon$
+- (3.9) (1.) $c$ is an upper bound of $A$ (2.) $c\leq d$ for all upper bounds $d$ of $A$
+
+Theorems
+
+- (3.6) **Least-upper-bound property** - If $A$ is **non-empty** and **bounded above**, then $A$ has **supremum**
+- (3.8) if $A$ has maximum, then $\sup{A}=\max{A}$
+- (3.10) $\sup{(A+B)}=\sup{A}+\sup{B}$
+- $a<b\implies \sup(a,b)=b$
+
+> *Least-upper-bound property* (3.6) is equivalence to the [[#Completeness Axiom]] (a1.52)
+
+> A lot of books called to Least-upper-bound property *completeness axiom*. (see q3.14)
+
+#### Infimum (Greatest-lower-bound)
+
+- definitions
+	- $y=\inf{A}$
+	- (d3.12) $y$ is maximal lower bound of $A$
+	- (q3.11a) $y$ is lower bound of $A$, and for every $\varepsilon>0$ there exists $x\in{A}$ such that $x<y+c$
+- theorems 
+	- (3.11) if $A$ is **non-empty** and **bounded below**, then $A$ has **infimum**
+	- $a<b\implies \inf(a,b)=a$
+	- (3.13b) if $A$ has minimum, then $\inf{A}=\min{A}$
+	- (3.10) $\sup{(A+B)}=\sup{A}+\sup{B}$
+
+#### theorems
+
+- (q3.13) if $A$ is **non-empty** and **bounded**, then $\inf{A}\leq\sup{A}$
+
+### Closed & Open Sets
+
+- open set
+	- equivalent **definitions** 
+		- $\forall{a\in{A}},{\exists{\varepsilon>0}}:(a-\varepsilon,a+\varepsilon)\subseteq{A}$
+		- $A\subseteq\mathbb{R}$ is **open set** 
+	- theorems 
+		- d
+
+- closed set
+	- equivalent definitions
+		- $A\subseteq\mathbb{R}$ is **closed set** 
+		- if given convergent sequence $(x_{n})$ of $A$ elements, we have also $\lim_{ n \to \infty }x_{n}\in{A}$
+		- $A^{\complement}=\mathbb{R}\setminus{A}$ is open set
+	- theorems 
+		- The set of subsequential limits is closed
+		- $[a,b]$ is closed

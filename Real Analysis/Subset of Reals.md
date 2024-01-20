@@ -1,11 +1,11 @@
 
-$$\large A\subseteq\mathbb{R}$$
+$$\large A\subset\mathbb{R}$$
 # Greatest Element & Least Element
 
-- max(A), min(A)
-
+- A set $A\subset\mathbb{R}$ **admits a maximum** if an element $\exists x_{M} \in A:\forall x \in A,x\leq x_{M}$
+	- $x_M$ (necessarily unique) is the **maximum** of the set $A$ and one denotes it by $x_{M} = \max A$. 
+- The **minimum** of a set A, denoted by $x_m = \min A$, is defined in a similar way
 # Upper & Lower Bounds
-
 
 ### Upper bound
 

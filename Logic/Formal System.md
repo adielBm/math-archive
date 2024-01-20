@@ -17,9 +17,11 @@
 		- A formal system will usually have associated with it a finite set of strings of symbols from $K∪P∪V∪{,⇒}$ . Strings in this set are called axioms.
 
 
+### Properties 
 
 - A formal system is **sound** if and only if every well-formed formula that can be proven in the system is logically valid with respect to the logical semantics of the system.
-- A formal system is **recursive** (i.e. effective) or recursively enumerable if the set of axioms and the set of inference rules are decidable sets or semidecidable sets, respectively.
+- A formal system is **recursive** (i.e. effective) or **recursively enumerable** if the set of axioms and the set of inference rules are decidable sets or semidecidable sets, respectively.
+
 
 > Although a formal language can be identified with its formulas, a formal system cannot be likewise identified by its theorems
 
