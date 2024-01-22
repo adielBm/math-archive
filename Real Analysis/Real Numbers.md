@@ -1,23 +1,23 @@
-# Axioms
+# Construction
 
-## Field Axioms
+## Axiomatic Definition
 
-See [[Field]].
+- The real numbers form the unique (up to an isomorphism) [[#Completeness of R|complete]] [[Field#Ordered Field|totally ordered field]]
 
-## Order Axioms
+## Other Constructions
 
-1. (Trichotomy Law, (asymmetric+connected)) **one and only one** of the following three statements is true: $a\neq{b},\quad{a<b},\quad{b<a}$ 
-2. (Transitivity) $a<b\land b<c\implies a<c$
-3. (preservation of order under addition) $a<b\implies a+c<b+c$
-4. (preservation of order under multiplication) $a<b \land c>0\implies ac<bc$
+Other common definitions of real numbers include equivalence classes of Cauchy sequences (of rational numbers), Dedekind cuts, and infinite decimal representations. All these definitions satisfy the axiomatic definition and are thus equivalent
 
-## Completeness Axiom
+https://en.wikipedia.org/wiki/Construction_of_the_real_numbers
 
-- (a1.52) if $\emptyset\neq A,B\subseteq\mathbb{R}$ such that $\forall{a}\in{A}$ and $\forall{b}\in{B}$ we have $a\leq b$. then there exists $x\in\mathbb{R}$ such that:
-	- $\forall{a}\in{A}$, $a\leq{x}$
-	- $\forall{b}\in{B}$, $x\leq{b}$
+# Completeness of R
 
->See 3.16 about the term of "Completeness Axiom"
+- Forms of Completeness
+	- [[#Supremum (Least-upper-bound)|Least upper bound property]]
+	- (a1.52) if $\emptyset\neq A,B\subseteq\mathbb{R}$ such that $\forall{a}\in{A}$ and $\forall{b}\in{B}$ we have $a\leq b$. then there exists $x\in\mathbb{R}$ such that:
+		- $\forall{a}\in{A}$, $a\leq{x}$
+		- $\forall{b}\in{B}$, $x\leq{b}$
+
 
 > [!info] The rational numbers $\mathbb{Q}$ does not satisfy the completeness axiom, therefore, the theorems that follow from this axiom do not hold in $\mathbb{Q}$. 
 > - Cauchy theorem - In $\mathbb{Q}$ a cauchy sequence doesn't necessarily converge (to rational number).
@@ -25,14 +25,14 @@ See [[Field]].
 > - Monotone convergence theorem - There can be monotone bounded sequence of rationals that does not converge to a rational number.
 > - Cantor's Lemma - The **intersection** of a sequence of nested intervals (with rational endpoints) in which the endpoints differences tend to zero **is not necessarily rational**.
 
+
 # Theorems & Properties
 
-- Theorems follow from the *field axioms*
-	- (1.25) Cancellation law (addition) $a+c=b+c\implies a+b$
-	- (1.26) Cancellation law (multiplication) $c\neq 0$ and $ac=bc\implies ab$
-	- (1.27) additive inverse uniqueness 
-	- (1.28) Multiplicative inverse uniqueness 
 
+- (1.25) Cancellation law (addition) $a+c=b+c\implies a+b$
+- (1.26) Cancellation law (multiplication) $c\neq 0$ and $ac=bc\implies ab$
+- (1.27) additive inverse uniqueness 
+- (1.28) Multiplicative inverse uniqueness 
 
 - Theorems
 	- #todo 1.36 etc...

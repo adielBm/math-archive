@@ -16,17 +16,38 @@
 	- Inverse $\forall a \in \mathbb{F} \setminus \{0\}, \exists b \in \mathbb{F} : a \cdot b = 1$
 - Distributive $a · (b + c) = a · b + a · c$
 
-
 ### Examples
 
 - Rational numbers
 - [[Real Numbers]]
 - Complex numbers
 
-____
+## Ordered Field
+
+>aka **totally ordered field**
+
+- A field $(F,+,\cdot \,)$ together with a [[Binary Relation#Transitive Relations|total order]] denoted $\leq$ on $F$ is an **ordered field** if the order satisfies the following properties for all $\displaystyle a,b,c\in F$
+	- $a\leq b\implies a+c\leq b+c$
+	- $0\leq a\land 0\leq b\implies 0\leq a\cdot b$
+
+### Alternative Definition $<$
+
+- A field $(F,+,\cdot \,)$ together with a [[Binary Relation#Transitive Relations|strict total order]] denoted $<$ on $F$ is an **ordered field** if the order satisfies the following properties for all $\displaystyle a,b,c\in F$
+	- $a<b\implies a+c<b+c$
+	- $a<b \land c>0\implies a \cdot c<b \cdot c$
+
+#todo check that both definitions are equivalent
+
+### Examples
+
+- Rational numbers
+- [[Real Numbers]]
 
 
-- Ordered fields https://en.wikipedia.org/wiki/Ordered_field
+
+- https://en.wikipedia.org/wiki/Ordered_field
 - https://en.wikipedia.org/wiki/Real_number#%22The_complete_ordered_field%22
+- https://en.wikipedia.org/wiki/Field_(mathematics)#Fields_with_additional_structure
+- #todo Properties of ordered fields https://en.wikipedia.org/wiki/Ordered_field#Properties_of_ordered_fields
 
-https://en.wikipedia.org/wiki/Field_(mathematics)#Fields_with_additional_structure
+

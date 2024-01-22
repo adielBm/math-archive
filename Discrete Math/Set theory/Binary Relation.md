@@ -38,10 +38,23 @@
 | Symmetric | $aRb \implies bRa$ |
 | Antisymmetric | $aRb \land bRa \implies a=b$ |
 | Asymmetric | $aRb \implies$ not $bRa$ |
-| Connected | $a\neq{b} \implies aRb \lor bRa$ |
+| Connected (total) | $a\neq{b} \implies aRb \lor bRa$ |
+| Strongly Connected | $aRb \lor bRa$ |
 | Transitive | $aRb \land bRc\implies aRc$ |
+| Trichotomy | exactly one of $aRb$, $bRa$ and $a=b$ holds |
+
 
 ## Theorems
+
+- (d2.10) - asymmetry implies antisymmetric
+- (q29) - asymmetry implies **irreflexivity**
+- (q54a) - **Irreflexivity** and **transitivity** together imply asymmetry
+- $R$ is connected if and only if $R^{-1}$ is antisymmetric
+- A relation is strongly connected if, and only if, it is connected and reflexive
+- If a strongly connected relation is symmetric, it is the universal relation.
+- A relation is trichotomous if, and only if, it is asymmetric and connected.
+
+
 ### Reflexivity
 
 - (q18) - if $R$ reflexive, then $R\subseteq{R^2}$
@@ -57,9 +70,7 @@
 - (q24) - composite of symmetric relations is symmetric
 - (q26) - if $R,S$ are symmetric, then $R\cap{S},R\cup{S}$ are symmetric
 - (q27) - let $R$ relation, then $R\cap{R}^{-1}$ and $R\cup{R}^{-1}$ are symmetric
-- (d2.10) - asymmetric implies antisymmetric
-- (q29) - asymmetry implies **irreflexivity**
-- (q54a) - **Irreflexivity** and **transitivity** together imply asymmetry
+
 - (q30a) - if $R$ is asymmetric, then $R^{-1}$ is also asymmetric
 - (q30b) - if $R$ is antisymmetric, then $R^{-1}$ is also antisymmetric
 - (q31a) -  if $R$ is asymmetric, then $S\subseteq{R}$ is also asymmetric.
@@ -70,27 +81,28 @@
 ### Transitivity
 
 - (theorem 2.12) $R$ is transitive if and only if $R^2\subseteq{R}$
+- $R$ is transitive if and only if $R^n ⊆ R$ (for $n = 1, 2, 3, …$ )
 - (q36a) - if $R,S$ are transitive, then $R\cap{S}$ is transitive
 
 ## Transitive Relations 
 
-> **TRUE** means this property is assigned by definition, or it follows from the definition (for example, Asymmetry follows from transitivity and irreflexivity; irreflexivity follows from asymmetry). Otherwise (empty cell), it indicates that the property is not guaranteed in general; it might or might not hold.
+> in general, *strict* means *irreflexive*, *total* means *connected*, *partial* means not (necessarily) *total*.
 
-
-|                                             | Reflexive | Irreflexive | Symmetric | Antisymmetric | Asymmetric | Connected |
-| ------------------------------------------- | --------- | ----------- | --------- | ------------- | ---------- | --------- |
-| [[#Equivalence relation]]                   | TRUE  |             | TRUE  |               |            |           |
-| **Strict partial order**   |           | TRUE    |           | TRUE        | TRUE     |           |
-| **Strict total order** |           | TRUE    |           | TRUE        | TRUE     | TRUE  |
-
-- **strict partial order** definitions
+- **partial order** (or **partial ordering**, or **order**)
+	- transitive, reflexive, antisymmetric
+- **total order** (or **linear order**)
+	- transitive, reflexive, antisymmetric, connected
+- **strict partial order**
 	- transitive, irreflexive
 	- transitive, asymmetric
-- **strict total order** definitions
+- **strict total order**
 	- transitive, connected, irreflexive
 	- transitive, connected, asymmetric
 
-> in general, *strict* means *irreflexive*, *total* means *connected*, *partial* means not (necessarily) *total*.
+### Ordered Sets
+
+- A **partially ordered set** (or **poset**) is a set on which a partial order is defined
+- A **totally ordered set** (or **linearly ordered set**, **chain**, **toset**) is a set on which a total order is defined
 
 ## Equivalence relation
 
