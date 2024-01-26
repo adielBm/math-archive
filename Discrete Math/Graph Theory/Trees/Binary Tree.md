@@ -7,7 +7,7 @@
 
 >[!warning] **Common terminology** will be used below
 
->**Notation:**  $n$ nodes,   $l$ leaves,   $h$ height,    $n_{k}$ nodes at depth $k$, 
+> [!notation] Notation:  $n$ nodes,   $l$ leaves,   $h$ height,    $n_{k}$ nodes at depth $k$, 
 
 - The **height (depth) of a node** is the number of edges on the longest simple downward path from the root to the node.
 

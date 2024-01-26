@@ -4,11 +4,11 @@
 	- $\displaystyle\lim_{ n \to \infty }{a_{n}}=L$
 	- The sequence $(a_n)$ **converges to** (or **tends to**) the limit $L$
 	- For each real number $\varepsilon >0$, there exists a natural number $N$ such that, for every natural number $n>N$, we have ${\displaystyle |a_{n}-L|<\varepsilon }$
-	- $\forall \varepsilon > 0 \left(\exists N \in \mathbb{N} \left(\forall n \in\mathbb{N}\left(n \geq N \implies |a_n - L| < \varepsilon \right)\right)\right)$
+	- $\forall\varepsilon>0,\exists N \in \mathbb{N}: \forall n \in\mathbb{N}\left(n \geq N \implies |a_n - L| < \varepsilon \right)$
 - Definitions: Convergent Sequence 
 	- $(a_n)$ is a **convergent sequence** 
 	- $\exists{x\in\mathbb{R}}:\displaystyle\lim_{ n \to \infty }{a_{n}}=x$
-	- $\exists{x\in\mathbb{R}}:\forall \varepsilon > 0 \left(\exists N \in \mathbb{N} \left(\forall n \in\mathbb{N}\left(n \geq N \implies |a_n - x| < \varepsilon \right)\right)\right)$
+	- $\exists{x\in\mathbb{R}}:\forall\varepsilon>0,\exists N \in \mathbb{N}: \forall n \in\mathbb{N}\left(n \geq N \implies |a_n - x| < \varepsilon \right)$
 	- #not-in-course  (3.36. Cauchy's convergence test) $\forall{\varepsilon>0}\;\exists{N\in\mathbb{N}}:{m,n>N}\implies{|{a_{n}-a_{m}}|<\varepsilon}.$ (in words: $(a_n)$ is **Cauchy sequence** )
 	- (3.34 #todo) $(a_n)$ is bounded and has only one **subsequential limit**
 	- (q3.56) $(a_n)$ is bounded and $\displaystyle  {\displaystyle \liminf _{n\to \infty }a_{n}=\limsup _{n\to \infty }a_{n}}$
@@ -36,7 +36,7 @@
 	- (2.16) $(a_n)$ is bounded
 	- (2.17) A sequence $(b_{n})$ that obtained by changing a finite number of terms of $(a_{n})$, has the same limit as $(a_{n})$ 
 	- (2.25) if $\forall n,a_{n}\neq 0$ and $\displaystyle\lim_{ n \to \infty }{a_{n}}\neq 0$, then $(1/a_{n})$ is bounded
-	- (2.26) if $\displaystyle\lim_{ n \to \infty }{a_{n}}\neq 0$ then for almost all $n$, we have $b_{n}\neq 0$
+	- (2.26) if $\displaystyle\lim_{ n \to \infty }{a_{n}}\neq 0$ then for almost all $n$, we have $a_{n}\neq 0$
 	- (q3.73) $\displaystyle\lim_{ n \to \infty }(a_{n+k}-a_{n})=0$  (for all $k\in\mathbb{N}$)
 
 

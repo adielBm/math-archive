@@ -637,7 +637,6 @@ Our assembler must separate, in the machine code it generates, the data section 
 ### Externals File Format
 
 
-
 # Summary & General Instructions
 
 - The length of the program, given as input to the assembler, is not known in advance, and therefore, the length of the translated program is not supposed to be predetermined. However, to facilitate the implementation of the assembler, a maximum size can be assumed. Therefore, it is possible to use arrays to store only the machine code image. Any other data structure (such as the symbol table and macro table) should be implemented efficiently and economically (for example, using a linked list and dynamic memory allocation).

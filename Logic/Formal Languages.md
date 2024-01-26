@@ -25,7 +25,8 @@
 - The set of all possible words over an alphabet $\Sigma$ is denoted by $\Sigma^*$
 - The **length** of a string $w$, written $|w|$, is the number of symbols that it contains.
 
-> notation: $a, b, c, ...$ for symbols, and $u, v, w,$ ... for string names
+> [!notation] 
+> $a, b, c, ...$ for symbols, and $u, v, w,$ ... for string names
 
 > In some applications, especially in logic, the **alphabet** is also known as the **vocabulary** and **words** are known as **formulas** or **sentences**; this breaks the letter/word metaphor and replaces it by a word/sentence metaphor.
 

@@ -13,11 +13,11 @@ ____
 # Direct-address tables 
 
 
-|        operation          |        |                
-| ---------------- | --------- |
-| direct-address-insert(T,k) | $O(1)$ |                                         
-| direct-address-delete(T,x) | $O(1)$ |                                     
-| direct-address-search(T,x) | $O(1)$ |   
+| operation |  |
+| ---- | ---- |
+| direct-address-insert(T,k) | $O(1)$ |
+| direct-address-delete(T,x) | $O(1)$ |
+| direct-address-search(T,x) | $O(1)$ |
 
 
 # Hash Tables

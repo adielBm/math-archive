@@ -142,7 +142,6 @@ ____
 	- $\displaystyle\deg(f)>\deg(g)\implies\lim_{x\rightarrow \infty}\frac{f(x)}{g(x)}=\pm \infty$ (depending on the sign of $\frac{a_{n}}{b_{m}}$)
 
 
-
 # L'Hôpital's rule
 
 - $x_{0}\in I$ is finite, $\infty$ or $-\infty$

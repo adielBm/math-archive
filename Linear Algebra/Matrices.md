@@ -77,7 +77,8 @@ If $A$ and $B$ are row equivalent matrices, then:
 
 ## Rank
 
-**Notation**: $\text{rank}{(A)}=\rho{(A)}$
+> [!notation] 
+> $\text{rank}{(A)}=\rho{(A)}$
 
 **Definitions:**
 - (d8.5.4) $\rho{(A)}=\dim(\text{row-space(A)})=\dim(\text{column-space(A)})$

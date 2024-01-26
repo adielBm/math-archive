@@ -47,6 +47,9 @@ Theorems
 
 #### Theorems
 
+- (assuming $f$ is defined on the interval $(a,b)$)
+	- if $f$ is continuous on each interval $[c,d]\subset(a,b)$ then $f$ is continuous $(a,b)$. (exam23A.tB.q9b)
+
 - (assuming $f$ is continuous on the interval $I$)
 	- if $f$ is injective then it's strictly monotonic 
 	- (5.43) if $f$ is monotonic then there exist a inverse fucntion $f^{-1}$ whose domain is $f(I)$ and its image is $I$ which $f^{-1}$ itself is monotonic and continuous on $f(I)$. ($f^{-1}$ is increasing if $f$ is decreasing, and vice versa)

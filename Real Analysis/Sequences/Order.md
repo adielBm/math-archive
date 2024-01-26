@@ -8,3 +8,5 @@
 		- (q2.44c) $a_{n}=O(1)\iff{(a_{n})}$ is bounded
 		- (q2.45c) **Transitivity** - $a_{n}=o(b_{n})\land{b_{n}=o(c_{n})}\implies a_{n}=o(c_{n})$
 		- (2.49) for each $k$ natural, and $r>1$ real: $\lim_{ n \to \infty }\left( \frac{n^k}{r^n} \right)=0$ (*i.e.* $n^k=o(r^n)$, 2.50) 
+
+> see also [[Asymptotic notation]]

@@ -131,6 +131,7 @@ $$\large A\subset\mathbb{R}$$
 - (d3.7) $c$ is minimal upper bound of $A$
 - (3.9) (1.) $c$ is an upper bound of $A$ (2.) $\forall\varepsilon>0 \;\exists{x\in{A}}:x>c-\varepsilon$
 - (3.9) (1.) $c$ is an upper bound of $A$ (2.) $c\leq d$ for all upper bounds $d$ of $A$
+- (q3.9) (1.) $c$ is an upper bound of $A$ (2.) There exists a sequence $(a_{n})$ that all its elements are in $A$, such that $\displaystyle\lim_{ n \to \infty }a_{n}=x$
 
 Theorems
 
@@ -155,9 +156,9 @@ Theorems
 	- (3.13b) if $A$ has minimum, then $\inf{A}=\min{A}$
 	- (3.10) $\sup{(A+B)}=\sup{A}+\sup{B}$
 
-#### theorems
+#### Theorems
 
-- (q3.13) if $A$ is **non-empty** and **bounded**, then $\inf{A}\leq\sup{A}$
+- (q3.13) if $A$ is non-empt and bounded, then $\inf{A}\leq\sup{A}$
 
 ### Closed & Open Sets
 

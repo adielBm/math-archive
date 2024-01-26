@@ -1,13 +1,14 @@
 # Differentiability 
 
-> $\text{dom} \text{dom}  (f)$ contains an interval $I$ containing $x_{0}$
+> given $x_{0} \in I \subseteq \text{dom}(f)$
 
-- $f$ is **differentiable at a point** $x_{0}\in\text{dom}(f)$
+- $f$ is **differentiable at a point** $x_{0}\in{I}$
 -  The limit $\displaystyle  L=\lim_{h\to 0}{\frac {f(x_{0}+h)-f(x_{0})}{h}}=\lim_{x\to{x_{0}}}{\frac{f(x)-f(x_{0})}{x-x_{0}}}$ exists
 - $\forall \varepsilon > 0,\exists\delta>0:\forall h\left(0<|h|<\delta\implies \left|L - \frac{f(x_{0}+h)-f(x_{0})}{h}\right| < \varepsilon \right)$
 - $f$ is **left-** and **right-differentiable** at $x_{0}$ and $f'_{+}(x_{0})=f'_{-}(x_{0})$ (in this case $f'(x_{0})=f'_{+}(x_{0})=f'_{-}(x_{0})$)
 - #todo  $\exists{A}\in\mathbb{R} : f(x_{0}+h)-f(x_{0})=Ah+\alpha(h)h$ where $\displaystyle\lim_{ h \to 0 }\alpha(h)=0$
-	
+- There exists a function $g$ defined on $I$ and continuous at $x_{0}$ s.t. $\forall x \in I,f(x)=g(x)\cdot(x-x_{0})+f(x_{0})$
+
 # Derivative
 
 - Derivative Function - $\displaystyle f'(x)=\frac{df}{dx}=\lim_{h\to 0}{\frac {f(x+h)-f(x)}{h}}$
@@ -19,12 +20,14 @@
 	- $f'(x_{0})$ is the **slope of the tangent line** to the graph of $f$ at the point $x_{0}$
 	- $f'(x_{0})$ is the **instantaneous rate of change** of $f$ with respect to $x$ at $x_{0}$
 
-> Notation $\displaystyle f'(x_{0})=\frac{df}{dx}(x_{0}) = \left.{\frac {df}{dx}}\right|_{x=x_{0}}$
 
+>[!notation] Notation $\displaystyle f'(x_{0})=\frac{df}{dx}(x_{0}) = \left.{\frac {df}{dx}}\right|_{x=x_{0}}$
 
 > [!note] Rate of Change 
 > - The **average rate of change** of $y=f(x)$ with respect to $x$ over the interval $[x_{0},x_{1}]$ is $\frac{\Delta y}{\Delta x}=\frac{f(x_{1})-f(x_{0})}{x_{1}-x_{0}}=\frac{f(x_{0}+h)-f(x_{0})}{h}$ (where $h\neq 0$) 
 > - The **instantaneous rate of change** of $f$ with respect to $x$ at $x_{0}$ is the derivative $f'(x_{0})=\displaystyle\lim_{h\to 0}{\frac {f(x_{0}+h)-f(x_{0})}{h}}$. (provided the limit exists)
+
+>$L(x)=f(x_{0})+f'(x)(x-x_{0})$ is called the **linearization** of $f$ at $x_{0}$. The approximation $f(x)\approx L(x)$ is called the **linear approximation** of $f$ at $x_{0}$  
 
 ## Theorems
 
@@ -64,6 +67,7 @@
 - $f$ is **left-differentiable at** $x_{0}$ if $\displaystyle  L=\lim_{h\to 0^-}{\frac {f(x_{0}+h)-f(x_{0})}{h}}$ exists. 
 	- (in that case $f'_{-}(x_{0})=L$ is the **left-derivative** of $f$ at $x_{0}$)
 
+
 # Differentiability on Interval
 
 - $f$ is differentiable on the interval $I$
@@ -72,16 +76,14 @@
 ## Theorems
 
 - $\text{dom}(f')\subseteq\text{dom}(f)$
-- $f$ is continuous on $[a,b]$, differentiable on the $(a,b)$
+
+- $f$ (and $g$) is continuous on $[a,b]$, differentiable on the $(a,b)$
 	- **Rolle's theorem** - $f(a)=f(b)\implies\exists c\in(a,b):f'(c )=0$
-	- **Mean value theorem** (MVT, Lagrange) - $\exists c\in(a,b):f'(c )=\frac{{f(b)-f(a)}}{b-a}$
+		- Rolle's theorem is special case of MVT when $f(a)=f(b)$
+	- **Mean Value Theorem** (MVT, Lagrange) - $\exists c\in(a,b):f'(c )=\frac{{f(b)-f(a)}}{b-a}$
 		- MVT is special case of Cauchy's MVT when $g(x)=x$
-
-- $f$ and $g$ is continuous on $[a,b]$, differentiable on the $(a,b)$
 	- **Cauchy's Mean Value Theorem** - if $\forall{x\in{(a,b)}},\, g'(x)\neq 0$, then:
-		- $g(a)\neq g(b)$
-		- $\displaystyle\exists{c\in{(a,b)}}:\frac{f'(c)}{g'(c)}=\frac{f(b)-f(a)}{g(b)-g(a)}$
-
+		- $g(a)\neq g(b)$ and $\displaystyle\exists{c\in{(a,b)}}:\frac{f'(c)}{g'(c)}=\frac{f(b)-f(a)}{g(b)-g(a)}$
 
 - $f$ is continuous on $I$, differentiable at every inferior point of $I$
 	- **First Derivative Test for Monotonicity** (q8.28, 8.18, 8.7, q7.12b, q8.29) 
@@ -96,8 +98,12 @@
 - if $f$ is continuous on $[a,b]$ and **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$  (by q8.25)
 
 
-- (8.10) **Darboux's theorem** - $f$ is differentiable on the $(a,b)$ then $f'$ has the intermediate value property.
+
+- $f$ is differentiable on $[a,b]$ 
+	- (8.10) **Darboux's theorem** - $f'$ has the intermediate value property, i.e. $(\displaystyle  {\min(f'(a),f'(b))\leq t\leq\max(f'(a),f'(b))})\implies{\exists{c}\in{[a,b]}:f'(c)=t}$
+	- (q8.17) If $f'(a)=f'(b)=0$ and $\forall x \in(a,b),f'(x)\neq 0$, then $\forall x \in(a,b),f'(x)> 0$ or $\forall x \in(a,b),f'(x)< 0$
 - (8.11) #todo 
+
 
 - **Constant Difference Theorem** #not-in-course If $f$ and $g$ are differentiable on an interval, and if $f'(x)=g'(x)$ for all $x$ in that interval, then $f − g$ is constant on the interval; that is, there is a constant k such that $f(x) − g(x) = k$ or, equivalently, $f(x) = g(x) + k$ for all $x$ in the interval. 
 
@@ -134,22 +140,12 @@
 #todo #not-in-course 
 
 - The graph of a differentiable function $f(x)$ is
-	- **concave up** on an open interval $I$ if $f'$ is increasing on I
-	- **concave down** on an open interval $I$ if $f'$ is decreasing on I
+	- **concave up** on an open interval $I$ if $f'$ is increasing on $I$
+	- **concave down** on an open interval $I$ if $f'$ is decreasing on $I$
 - A point $(x_{0},f(x_{0}))$ where the graph of a function has a tangent line and where the concavity changes is an **inflection point** (or **point of inflection**)
 - The Second Derivative Test for Concavity #todo 
 - At an inflection point $(x_{0},f(x_{0}))$, either $f''(x_{0})=0$ or $f''(x_{0})$ fails to exist
-- #todo  A stationary inflection point is not a local extremum
-
-# Second Derivative 
-
-- (8.23) if $f'(x_{0})=0$ and $f''(x_{0})\neq 0$ then $x_{0}$ is local extremum point of $f$
-	- if $f''(x_{0})> 0$ then $x_{0}$ is local **minimum** point of $f$
-	- if $f''(x_{0})< 0$ then $x_{0}$ is local **maximum** point of $f$
-
-
-
-
-____
-
-
+- An inflection point $x_{0}$ can be categorized by $f'$
+	- if $f'(x_{0})=0$, the point is a **stationary inflection point**
+	- if $f'(x_{0})\neq 0$, the point is a **non-stationary inflection point**
+- A stationary inflection point is not a local extremum point

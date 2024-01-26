@@ -10,3 +10,6 @@ $$\large x^n=a\quad\iff\quad x=\sqrt[n]{ a }$$
 - if $n$ is odd, then $\sqrt[n]{a^n}=a$
 - if $n$ is even, then $\sqrt[n]{a^n}=|a|$
 
+
+- The **conjugate** of an expression of the form $\displaystyle a+b{\sqrt {d}}$ is $\displaystyle a-b{\sqrt {d}}$, (provided that $\displaystyle {\sqrt {d}}$ does not appear in $a$ and $b$). 
+	- One says also that the two expressions are conjugate.

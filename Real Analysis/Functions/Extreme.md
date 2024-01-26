@@ -11,20 +11,36 @@
 - $x_{0}$ is called a **critical point** of $f$ if either $f'(x_{0})=0$ or $f'(x_{0})$ is undefined
 	- $x_{0}$ is called a **stationary point** of $f$ if $f'(x)=0$
 
+
+
 > Some say *relative* instead of *local*, and *absolut* instead of *global*
 
 ### Theorems
 
-- (8.3) A extremum point on $I$ is either a local extremum point of $f$ or an endpoint of $I$
-- **Fermat's theorem** - equivalence theorems:
-	- (8.4) let $x_{0}$ a local extremum point of $f$. if $f$ is differentiable at $x_{0}$, then $f'(x_{0})=0$
-	- (8.19) if $x_{0}$ is a local extremum point of $f$, then, $f$ is not differentiable at $x_{0}$, **xor**, ($f$ is differentiable and $f'(x_{0})=0$)   
-- If $x_{0}$ is a global extremum of $f$, then one of the following is true: 
-	- $x_{0}$ is an endpoint of $I$ 
-	- $f$ is not differentiable at $x_{0}$ 
-	- $x_{0}$ is a stationary point of $f$, (i.e. $f'(x_{0})=0$)
+
+- $f$ is defined on an interval $I$ and $x_{0}\in I$
+	- (8.3) A global extremum point on $I$ is either a local extremum point of $f$ or an endpoint of $I$
+	- **Fermat's theorem** - equivalence forms:
+		- (8.4) let $x_{0}$ a local extremum point of $f$. if $f$ is differentiable at $x_{0}$, then $f'(x_{0})=0$
+		- (8.19) if $x_{0}$ is a local extremum point of $f$, then, $f$ is not differentiable at $x_{0}$, **xor**, ($f$ is differentiable and $f'(x_{0})=0$)   
+	- (p93) If $x_{0}$ is a global extremum of $f$, then **at least** one of the following is true: 
+		- $x_{0}$ is an endpoint of $I$ 
+		- $f$ is not differentiable at $x_{0}$ 
+		- $f'(x_{0})=0$ (stationary point)
+	- (q8.3) if $f$ is monotonic on $I$, and $x_{0}$ is global extremum point of $f$, then $x_{0}$ is an endpoint of $I$
+	- if $x_{0}$ is a stationary point, then
+		- if the derivative $f'$ changes its sign as it passes through $x_0$ then $x_{0}$ is local extremum point
+		- if the derivative $f'$ does not changes its sign as it passes through $x_0$ then $x_{0}$ is an [[Derivative#Concavity|inflection point]]
+
+
 - (8.21) **First Derivative Test for Local Extreme** - Let $f$ be a function that is continuous at a point $x_0$ and differentiable in a punctured neighborhood $N_{\varepsilon}(x_0)$ of $x_0$.
 	* If the derivative $f'$ changes its sign as it passes through $x_0$:
 		* If the sign change is from $-$ to $+$, then $x_0$ is a local minimum point of $f$.
 		* If the sign change is from $+$ to $-$, then $x_0$ is a local maximum point of $f$.
 	* If there exists a punctured neighborhood of $x_0$ in which the sign of $f'$ is constant, then $x_0$ is not an extremum point of $f$.
+- (8.23) **Second Derivative Test for Local Extreme** - if $f'(x_{0})=0$ and $f''(x_{0})$ is defined
+	 - if$f''(x_{0})\neq 0$ then $x_{0}$ is local extremum point of $f$
+		- if $f''(x_{0})> 0$ then $x_{0}$ is local **minimum** point of $f$
+		- if $f''(x_{0})< 0$ then $x_{0}$ is local **maximum** point of $f$
+	 - if$f''(x_{0})=0$ then $x_{0}$ can **be** or **not be** a local extremum point of $f$
+

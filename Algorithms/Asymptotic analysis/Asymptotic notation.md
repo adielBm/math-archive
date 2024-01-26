@@ -13,6 +13,7 @@
 	- $g(n)=o(f(n))$
 	- ${\lim_{ n \to \infty }{\frac{f(n)}{g(n)}=\infty}}$
 
+> see also [[Order]] of sequences
 ## Theorems 
 
 ### Transitivity
