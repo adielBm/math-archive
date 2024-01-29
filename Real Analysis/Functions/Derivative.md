@@ -77,12 +77,12 @@
 
 - $\text{dom}(f')\subseteq\text{dom}(f)$
 
-- $f$ (and $g$) is continuous on $[a,b]$, differentiable on the $(a,b)$
-	- **Rolle's theorem** - $f(a)=f(b)\implies\exists c\in(a,b):f'(c )=0$
+- **Mean Value Theorem** - $f$ (and $g$) is continuous on $[a,b]$, differentiable on the $(a,b)$
+	- (8.5) (Rolle's Theorem) - $f(a)=f(b)\implies\exists c\in(a,b):f'(c )=0$
 		- Rolle's theorem is special case of MVT when $f(a)=f(b)$
-	- **Mean Value Theorem** (MVT, Lagrange) - $\exists c\in(a,b):f'(c )=\frac{{f(b)-f(a)}}{b-a}$
+	- (8.6) (Lagrange's MVT) - $\exists c\in(a,b):f'(c )=\frac{{f(b)-f(a)}}{b-a}$
 		- MVT is special case of Cauchy's MVT when $g(x)=x$
-	- **Cauchy's Mean Value Theorem** - if $\forall{x\in{(a,b)}},\, g'(x)\neq 0$, then:
+	- (8.9) (Cauchy's MVT) if $\forall{x\in{(a,b)}},\, g'(x)\neq 0$, then:
 		- $g(a)\neq g(b)$ and $\displaystyle\exists{c\in{(a,b)}}:\frac{f'(c)}{g'(c)}=\frac{f(b)-f(a)}{g(b)-g(a)}$
 
 - $f$ is continuous on $I$, differentiable at every inferior point of $I$

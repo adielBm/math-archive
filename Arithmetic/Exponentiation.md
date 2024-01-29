@@ -13,6 +13,7 @@
 	- $a^{n-m}=\frac{a^n}{a^m}$
 	- ${(\frac{a}{b})}^n=\frac{a^n}{b^n}$
 	- ${(\frac{a}{b})}^{-n}={(\frac{b}{a})}^n$
+	- $\log_{b}{b^x}=x$ (where $0<b\neq 1$)
 
 >  Order of operations $a^{n^m}=a^{(n^m)}$
 
@@ -29,4 +30,3 @@
 - Definition - $\displaystyle a^r:=\lim_{ n \to \infty }a^{q_{n}}$
 
 - The *exponents rules* also hold for real exponents
-

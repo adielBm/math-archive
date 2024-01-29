@@ -6,6 +6,6 @@
 
 - every subsequence of a bounded sequence is bounded
 - (3.25) if $(a_{n})$ converges to $x$ (or tends to $\pm \infty$) then every subsequence of $(a_{n})$ is also converges to $x$ (or $\pm \infty$)
-- (3.32) **Bolzano–Weierstrass theorem** - Every bounded sequence has a convergent subsequence
+- (3.32) (BW) **Bolzano–Weierstrass theorem** - Every bounded sequence has a convergent subsequence
 - (3.33) Every sequence has a *convergent* (or *tends to infinity*) subsequence
 - (q3.48) **Monotone Subsequence Theorem** - Every sequence has a monotonic subsequence

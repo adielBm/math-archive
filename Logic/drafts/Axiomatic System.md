@@ -15,3 +15,8 @@ ___
 
 - A set of axioms is said to be **consistent** if there is no statement $A$ such that both $A$ and its negation are provable from the set of axioms. 
 	- Informally, a collection of axioms is consistent if there is a model for the axioms; the axioms of group theory are consistent as $G = {e}$, where $·$ is defined on $G$ by $e · e = e$, is a model of these axioms. 
+
+
+___
+
+- A consistent theory T in a language L is categorical if all models of T are isomorphic.

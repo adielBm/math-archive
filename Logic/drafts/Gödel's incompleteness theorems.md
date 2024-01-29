@@ -26,3 +26,7 @@ https://en.wikipedia.org/wiki/G%C3%B6del%27s_incompleteness_theorems#Formal_syst
 - A formal system is said to be **effectively axiomatized** (also called **effectively generated**) if its set of theorems is **recursively enumerable**
 	- This means that there is a computer program that, in principle, could enumerate all the theorems of the system without listing any statements that are not theorems. Examples of effectively generated theories include Peano arithmetic and Zermelo–Fraenkel set theory (ZFC).
 
+
+___
+
+https://www.godel-universe.com/godels-theorems/

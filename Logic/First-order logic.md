@@ -1,6 +1,10 @@
- 
+---
+aliases:
+  - predicate logic
+  - predicate calculus
+---
 
-- **First-order logic** (aka: predicate logic) is an extension of *propositional calculus* which permits quantifiers over elements
+- **First-order logic** is an extension of [[propositional logic]] which permits quantifiers over elements
 
 
 - Predicate

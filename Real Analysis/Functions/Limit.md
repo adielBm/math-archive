@@ -5,7 +5,7 @@
 - The **limit** of $f$, as $x$ approaches $x_{0}$, is $L$
 - $\displaystyle\lim_{ x \to x_{0} }f(x)=L$ 
 - ((ε, δ)-definition of limit. Cauchy) 
-	- $\displaystyle  {\displaystyle (\forall \varepsilon >0)\,(\exists \delta >0)\,(\forall x\in \mathbb {R} )\,(0<|x-x_{0}|<\delta \implies |f(x)-L|<\varepsilon )}$ 
+	- ${\forall \varepsilon >0,\,\exists \delta >0,\,\forall x\in \mathbb {R} ,(\,0<|x-x_{0}|<\delta \implies |f(x)-L|<\varepsilon )}$
 - (The Sequential Criterion for a Limit of a Function. Heine) 
 	- $\displaystyle\forall(x_{n})^{\infty}_{n=1}(\lim_{n\to \infty}(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}\neq x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
 - (**left** & **right**-hand limit) (4.48)
@@ -37,15 +37,14 @@
 
 >Assuming $f,g$ are defined on $N^{*}_{\varepsilon}(x_{0})$, and their limits are exist
 
-| Limit Laws |  |
-| ---- | ---- |
-| Sum / Difference | $\displaystyle\lim_{x\to x_{0}}(f(x)\pm g(x))=\displaystyle \lim_{x\to x_{0}}f(x)\pm\lim_{x\to x_{0}}g(x)$ |
-| Product | $\displaystyle\lim_{x\to x_{0}}(f(x)\cdot g(x))=\displaystyle \lim_{x\to x_{0}}f(x)\cdot\lim_{x\to x_{0}}g(x)$ |
-|  | $\displaystyle\lim_{x\to x_{0}}(f(x)\cdot c)=\displaystyle \lim_{x\to x_{0}}f(x)\cdot c$ |
-|  | $\displaystyle\lim_{x\to x_{0}}(f(x))^n=\Big(\displaystyle \lim_{x\to x_{0}}f(x)\Big)^{n}$ |
-| Quotient | $\displaystyle\lim_{x\to x_{0}}(f/g)(x)=\displaystyle \lim_{x\to x_{0}}f(x)/\lim_{x\to x_{0}}g(x)$ where $\displaystyle\lim_{x\to x_{0}}g(x)\neq 0$ |
-| Composite Function | $\displaystyle\lim_{ t \to t_{0} }f(g(t))=\displaystyle\lim_{ x \to {(\lim_{ t \to t_{0} }g(t))} }f(x)$ |
-
+| Limit Laws |  |  |
+| ---- | ---- | ---- |
+| Sum / Difference | $\displaystyle\lim_{x\to x_{0}}(f(x)\pm g(x))=\displaystyle \lim_{x\to x_{0}}f(x)\pm\lim_{x\to x_{0}}g(x)$ |  |
+| Product | $\displaystyle\lim_{x\to x_{0}}(f(x)\cdot g(x))=\displaystyle \lim_{x\to x_{0}}f(x)\cdot\lim_{x\to x_{0}}g(x)$ |  |
+|  | $\displaystyle\lim_{x\to x_{0}}(f(x)\cdot c)=\displaystyle \lim_{x\to x_{0}}f(x)\cdot c$ |  |
+|  | $\displaystyle\lim_{x\to x_{0}}(f(x))^n=\Big(\displaystyle \lim_{x\to x_{0}}f(x)\Big)^{n}$ |  |
+| Quotient | $\displaystyle\lim_{x\to x_{0}}(f/g)(x)=\displaystyle \lim_{x\to x_{0}}f(x)/\lim_{x\to x_{0}}g(x)$ where $\displaystyle\lim_{x\to x_{0}}g(x)\neq 0$ |  |
+| Composite Function | $\displaystyle\lim_{ t \to t_{0} }f(g(t))=\displaystyle\lim_{ x \to {x_{0}} }f(x)$ |  $\displaystyle\lim_{ t \to t_{0} }g(t)=x_{0}$ is defined and ($f$ is continuous at $x_{0}$ or $g(t)\neq x_{0}$ for some deleted neighborhood of $t_{0}$) |
 
 - (q4.62) $\displaystyle\lim_{x\to0}{f(x)}=L\implies\lim_{x\to 0}{f(x^2)}=L$
 -  (q4.63) $\displaystyle\lim_{x\to0}{f(x)}=\lim_{x\to 0}{f(xk)}$  (where $k\neq 0$ and the limits exists)
@@ -149,10 +148,8 @@ ____
 - $f$ and $g$ are differentiable on $I$ (except possibly at $x_0$), 
 - $\displaystyle g'(x) \neq 0$ on $I$ (except possibly at $x_0$)
 - $L=\displaystyle\lim_{ x \to x_{0} }\frac{f'(x)}{g'(x)}$ exists (finite, $\infty$ or $-\infty$)
-- $\displaystyle \lim_{{x \to x_0}} f(x) = \lim_{{x \to x_0}} g(x) = 0$   or   $\displaystyle \lim_{{x \to x_0}} |f(x)| = \lim_{{x \to x_0}} |g(x)| = \infty$
-
+- $\displaystyle \lim_{{x \to x_0}} f(x) = \lim_{{x \to x_0}} g(x) = 0$       or      $\displaystyle \lim_{{x \to x_0}} |f(x)| = \lim_{{x \to x_0}} |g(x)| = \infty$
  $$\displaystyle \lim_{{x \to x_0}} \frac{f(x)}{g(x)} =  \lim_{{x \to x_0}} \frac{f'(x)}{g'(x)}$$
-
 
 # Examples
 

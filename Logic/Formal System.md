@@ -25,6 +25,11 @@
 
 > Although a formal language can be identified with its formulas, a formal system cannot be likewise identified by its theorems
 
+
+## Examples 
+
+- A predicate calculus is a formal system consisting of a first order language, the set of all well-formed formulas, a particular set � of well-formed formulas, which are called logical axioms, and a list of rules of deduction. 
+
 # Deductive system
 
 - A **deductive system**, (aka: *deductive apparatus*), consists of the axioms (or axiom schemata) and rules of inference that can be used to derive theorems of the system.

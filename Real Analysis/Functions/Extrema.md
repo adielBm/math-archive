@@ -1,4 +1,4 @@
-## Extreme (maximum & minimum)
+##  Extrema (maxima & minima)
 
 - $f$ is defined on an interval $I=\text {dom} (f)$
 	- **Global Extreme**
@@ -12,11 +12,8 @@
 	- $x_{0}$ is called a **stationary point** of $f$ if $f'(x)=0$
 
 
-
 > Some say *relative* instead of *local*, and *absolut* instead of *global*
-
 ### Theorems
-
 
 - $f$ is defined on an interval $I$ and $x_{0}\in I$
 	- (8.3) A global extremum point on $I$ is either a local extremum point of $f$ or an endpoint of $I$

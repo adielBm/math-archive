@@ -33,7 +33,7 @@ $$( \lim_{ n \to \infty } a_{n}=L \land{\lim_{ n \to \infty } a_{n}=M})\implies{
 
 #todo check it!!
 
-| Proof by Contradiction |  |
+| Proof by Contradiction | implied by |
 | ---- | ---- |
 | $L\neq M$ | Assume by contradiction |
 | $\displaystyle\varepsilon=\frac{\vert L-M\vert}{3}>0$ | because $L\neq M$ |
@@ -66,7 +66,7 @@ $$( \lim_{ n \to \infty } a_{n}=L \land{\lim_{ n \to \infty } a_{n}=M})\implies{
 
 A product of **null** and **bounded** sequences is **null** sequence
 
-|  |  |  |
+|  |  | implied by |
 | ---- | ---- | ---- |
 | 1 | $\displaystyle\lim_{ n \to \infty }a_{n}=0$ | given |
 | 2 | $\vert b_{n}\vert<M$ | given |
@@ -80,7 +80,7 @@ A product of **null** and **bounded** sequences is **null** sequence
 Let $(a_n)$ be a convergent sequence, if $\displaystyle\lim_{ n \to \infty }{a_{n}}\neq 0$, then for almost all $n$ we have $a_{n}\neq 0$
 
 
-|  |  |
+|  | implied by |
 | ---- | ---- |
 | $\displaystyle\lim_{ n \to \infty }a_{n}=L\neq 0$ | given |
 | $\varepsilon:= \vert L\vert>0$ |  |
@@ -121,7 +121,7 @@ Let $(a_n)$ be a convergent sequence, if $\displaystyle\lim_{ n \to \infty }{a_{
 
 - (3.10) $\sup{(A+B)}=\sup{A}+\sup{B}$
 
-|  |  |  |
+|  |  | implied by |
 | ---- | ---- | ---- |
 |  | $\forall a \in A,a\leq \sup{A}$ |  |
 |  | $\forall b \in B,b\leq \sup{B}$ |  |
@@ -144,11 +144,56 @@ Let $(a_n)$ be a convergent sequence, if $\displaystyle\lim_{ n \to \infty }{a_{
 
 # unit 4
 
-## 4.30
+## (4.30) (ε, δ)-definition ≡ Heine's definition
+
+|  | 1st Direction: (ε, δ)-definition => Heine's definition | implied by |
+| ---- | ---- | ---- |
+|  | $\displaystyle\lim_{ x \to x_{0} }f(x)=L$ | given |
+| 1 | ${\forall \varepsilon >0,\,\exists \delta >0,\,\forall x\in \mathbb {R} ,(\,0<\vert x-x_{0}\vert<\delta \implies \vert f(x)-L\vert<\varepsilon )}$ | by (ε, δ)-definition |
+|  | Let $(x_{n})$ a sequence such that $x_{n}\neq x_{0}$ for all $n$ and $\displaystyle\lim_{ n \to \infty }x_{n}=x_{0}$ |  |
+| 2 | $\forall\varepsilon>0,\exists N \in \mathbb{N}: \forall n \in\mathbb{N}\left(n \geq N \implies 0 <\vert x_n - x_{0}\vert < \varepsilon \right)$ | by def & $x_{n}\neq x_{0}$ |
+|  | $\forall n>N, \vert f(x_n) - L\vert < \varepsilon$ | by 1 & 2  |
+|  | $\displaystyle\lim_{ n \to \infty } f(x_{n})=L$ |  |
+
+
+
+|  | 2nd Direction: Heine's => (ε, δ); (Proof by Contradiction) |  |
+| ---- | ---- | ---- |
+|  |  | given |
+
+
+
 ## 4.41
+
+- $\displaystyle \lim_{ x \to x_{0} }f(x), \lim_{ x \to x_{0} }g(x)$ are defined
+	- $\displaystyle{\color{gray}\exists{\varepsilon>0}:\forall x \in N^{*}_{\varepsilon}(x_{0}),\,}f(x)\leq g(x)\implies \lim_{ x \to x_{0} }f(x)\leq \lim_{ x \to x_{0} }g(x)$
+
+|  |  |  |
+| ---- | ---- | ---- |
+|  | $\displaystyle \lim_{ x \to x_{0} }f(x), \lim_{ x \to x_{0} }g(x)$ are defined | given-1 |
+|  | $\displaystyle{\color{gray}\exists{\varepsilon>0}:\forall x \in N^{*}_{\varepsilon}(x_{0}),\,}f(x)\leq g(x)$ | given-2 |
+| 1 | let's define $x_{n}=x_{0}+1/n$ |  |
+|  | $\displaystyle\lim_{ x \to x_{0} }f(x)=\lim_{ n \to \infty }f(x_{n}),\,\lim_{ x \to x_{0} }g(x)=\lim_{ n \to \infty }g(x_{n})$ | by 1 & Heine & given-1 |
+|  | $\displaystyle\lim_{ n \to \infty }x_{n}=x_{0}$ | by 1 |
+|  | for almost all $n$: $x_{n}\in N_{\varepsilon}(x_{0})$ |  |
+|  | for almost all $n$: $x_{n}\in N^{*}_{\varepsilon}(x_{0})$ |  |
+|  | for almost all $n$: $f(x_{n})\leq g(x_{n})$ | by given-2 |
+|  | $\displaystyle\lim_{ n \to \infty }f(x_{n})\leq \lim_{ n \to \infty }g(x_{n})$ | by 2.31 |
+|  | $\displaystyle\lim_{ x \to x_{0} }f(x)\leq \lim_{ x \to x_{0} }g(x)$ |  |
 
 ## 4.42
 
+- (4.42) $\displaystyle{\color{gray}\exists{\varepsilon>0}:\forall x \in N^{*}_{\varepsilon}(x_{0}),\,}f(x)< g(x)\impliedby\lim_{ x \to x_{0} }f(x)< \lim_{ x \to x_{0} }g(x)$
+
+|  |  |  |
+| ---- | ---- | ---- |
+|  | $\displaystyle \lim_{ x \to x_{0} }f(x), \lim_{ x \to x_{0} }g(x)$ are defined | given-1 |
+|  | $\displaystyle \lim_{ x \to x_{0} }f(x)< \lim_{ x \to x_{0} }g(x)$ | given-2 |
+|  | let's defind $h(x)=g(x)-f(x)$ |  |
+|  | $L=\displaystyle\lim_{ x \to x_{0} }h(x)=\lim_{ x \to x_{0} }g(x)-\lim_{ x \to x_{0} }f(x)>0$ |  |
+|  | #todo  |  |
+
+#todo 
 
 ____
 
@@ -159,33 +204,190 @@ ____
 
 ## 5.29
 
-## 5.30
+- assuming $f$ is continuous on $I=[a,b]$
+	- (5.29) **Bolzano's Theorem**
+		- $f(a)\cdot f(b)<0\implies \exists c\in(a,b):f(c)=0$
 
-## 5.35
+|  | Statement | Implied By |
+| ---- | ---- | ---- |
+|  | $f$ is continuous on $I=[a,b]$ | Given-1 |
+|  | $f(a)\cdot f(b)<0$ | Given-2 |
+
+
+## (5.30) Existence of root for odd polynomial
+
+> it's sufficient that we'll proof for a odd polynomial that its leading coefficient is $a_{n}=1$, because if $a_{n}\neq 1$ then $P(x)/a_{n}$ is odd polynomial that its leading coefficient is $1$ and its roots are equal to $P$'s roots
+
+|  | implied by |
+| ---- | ---- |
+| $P=x^n+b_{n-1}x^{n-1}+\dots+b_{1}x^1+b_{0}$ | given-1 |
+| $\deg{P}=n$ is odd | given-2 |
+| $P=x^n\left( 1+\frac{b_{n-1}}{1}+\dots+\frac{b_{1}}{x^{n-1}}+\frac{b_{0}}{x^{n}} \right)$ | by given-1 |
+| $g(x):=\left( 1+\frac{b_{n-1}}{1}+\dots+\frac{b_{1}}{x^{n-1}}+\frac{b_{0}}{x^{n}} \right)$ | notation |
+| $P(x)=x^n{g(x)}$ |  |
+| $\displaystyle\lim_{ x \to \infty }g(x)=\displaystyle\lim_{ x \to -\infty }g(x)=1$ |  |
+| $\exists M \in \mathbb{R}^+ : \forall x, \, \vert{x}\vert > M \implies g(x) > 0$ |  |
+| $\exists a<0:P(a)=a^n\cdot{g(a)}<0$ | $g$ is positive; $n$ is odd  |
+| $\exists b>0:P(b)=b^n\cdot{g(b)}>0$ | $g$ is positive |
+| $P(a)\cdot P(b)<0$ |  |
+| $\exists c\in(a,b):P(c)=0$ | by 5.29 |
+
+
+## (5.35) W1
 
 - assuming $f$ is continuous on $I=[a,b]$
 	- (5.35) Boundedness theorem (*Weierstrass 1*)
 		- $f$ is **bounded** on $I=[a,b]$
 		- $\exists{m,M}: \displaystyle  {\displaystyle m\leq f(x)\leq M\quad \forall x\in [a,b]}$
 
-## 5.37
+
+| Step | Statement | Implied By |
+| ---- | ---- | ---- |
+| 1 | $f$ is continuous on $I=[a,b]$ | Given-1 |
+
+#todo 
+
+## (5.37) W2 (EVT)
 
 - assuming $f$ is continuous on $I=[a,b]$
 	- (5.37) **Extreme value theorem** (EVT) (*Weierstrass 2*)
 		- $f$ has both a maximum and a minimum on $I=[a,b]$
 		- $\exists c,d\in[a,b]:\forall{x}\in[a,b],~f(c)\geq f(x) \geq{f(d)}$
 
-# unit 6
+>this's a proof for maximum (for minimum is analogous)
+
+| Step | Statement | Implied By |
+| ---- | ---- | ---- |
+|  | $f$ is continuous on $I=[a,b]$ | Given |
+|  | $f$ is bounded on $I=[a,b]$ | (5.35) W1 |
+|  | $M:=\sup f([a,b])$ |  |
+|  | $\forall\varepsilon>0,\exists{y\in{f([a,b])}}:y>M-\varepsilon$ | by 3.9 |
+|  | $\forall\varepsilon>0,\exists{x_{0}\in{[a,b]}}:f(x_{0})>M-\varepsilon$ |  |
+|  | $\forall n \in\mathbb{N},\exists{x_{n}\in[a,b]}:f(x_{n})>M-\frac{1}{n}$ |  |
+|  | $\forall n \in\mathbb{N},\exists{x_{n}\in[a,b]}:f(x_{n})\leq M$ |  |
+| 1 | $\displaystyle\lim_{ n \to \infty }f(x_{n})=M$ | by squeeze |
+|  | $(x_{n})$ is bounded |  |
+|  | $(x_{n})$ has a convergent subsequence $(x_{n_{k}})$ | by BW (3.32) |
+|  | $x_{0}:=\displaystyle\lim_{ k \to \infty }x_{n_{k}}$ |  |
+|  | $a\leq x_{0} \leq b$ |  |
+|  | $\displaystyle\lim_{ k \to \infty }f(x_{n_{{k}}})=M$ | by 1 and 3.25 |
+|  | $f(x_{0})=\displaystyle\lim_{ k \to \infty }f(x_{n_{k}})=M$ | by 5.27 |
+|  | $x_{0}$ is maximum point of $f$ on $[a,b]$ |  |
+
+# Unit 6
 
 ## 6.15
+- (6.15) $\displaystyle\lim_{ n \to \infty }\left(a_{n}^{b_{n}}\right)=\left(\lim_{ n \to \infty }a_{n}\right)^{\left(\displaystyle\lim_{ n \to \infty }b_{n}\right)}$ (assuming $\lim a_{n}>0$, and $\lim b_{n}\in\mathbb{R}$)
 
-# unit 7
-## 7.9
 
-# unit 8
+|  | Statement | Implied By |
+| ---- | ---- | ---- |
+| Given-1 | $\displaystyle\lim_{ n \to \infty }a_{n}=a>0$ |  |
+| Given-2 | $\displaystyle\lim_{ n \to \infty }r_{n}=r\in \mathbb{R}$ |  |
+|  | for almost all $n$ we have $a_{n}>0$ | by Given-1 |
+|  | $a_{n}^{r_{n}}$ is defined |  |
+| 1 | $a_{n}^{r_{n}}=e^{r_{n}\ln a_{n}}$ |  |
+|  | $\displaystyle\ln{a}=\ln{(\lim_{ n \to \infty }a_{n})}=\lim_{ n \to \infty }\ln a_{n}$ | $\ln$ is continuous at $\displaystyle\lim_{ n \to \infty }a_{n}=a$ |
+|  | $\displaystyle\lim_{ n \to \infty }r_{n}\ln{a}=\lim_{ n \to \infty }r_{n}\lim_{ n \to \infty }\ln a_{n}$ | multiply by $\displaystyle\lim_{ n \to \infty }r_{n}=r$ |
+| 2 | $\displaystyle{r}\ln{a}=\lim_{ n \to \infty }r_{n}\ln a_{n}$ |  |
+|  | $\displaystyle\lim_{ n \to \infty }a_{n}^{r_{n}}\stackrel{\small(1)}{=}\lim_{ n \to \infty }e^{r_{n}\ln a_{n}}=e^{r\ln{a}}=a^r$ |  by 1; by 2; $e^x$ is continuous at $r \ln a$;   |
+
+#todo 
+
+# Unit 7
+## (7.9) Differentiability Implies Continuity
+
+(7.9) if $f$ is differentiable at $x_{0}$, then it is continuous at $x_{0}$
+
+|  | Statement | Implied By |
+| ---- | ---- | ---- |
+| Given-1 | $f$ is differentiable at $x_{0}$ |  |
+| 1 | $\displaystyle  f'(x_{0})=\lim_{x\to{x_{0}}}{\frac{f(x)-f(x_{0})}{x-x_{0}}}$ |  |
+|  | $f(x)-f(x_{0})=\frac{f(x)-f(x_{0})}{x-x_{0}}(x-x_{0})$ |  |
+|  | $\displaystyle\lim_{ x \to x_{0} }(f(x)-f(x_{0}))=\lim_{ x \to x_{0} }\left( \frac{f(x)-f(x_{0})}{x-x_{0}}(x-x_{0}) \right)$ |  |
+|  | $\displaystyle\lim_{ x \to x_{0} }(f(x)-f(x_{0}))=\lim_{ x \to x_{0} }\frac{f(x)-f(x_{0})}{x-x_{0}}\lim_{ x \to x_{0} }(x-x_{0})$ |  |
+|  | $\displaystyle\lim_{ x \to x_{0} }(f(x)-f(x_{0}))=f'(x_{0})\cdot0=0$ | by 1 |
+|  | $\displaystyle\lim_{ x \to x_{0} }f(x)=f(x_{0})$ |  |
+|  | $f$ is continuous at $x_{0}$ |  |
+# Unit 8
 
 ## 8.4 (Fermat's Theorem)
+
+- $f$ is defined on an interval $I$ and $x_{0}\in I$
+	- **Fermat's theorem** (8.4) - Let $x_{0}$ a local extremum point of $f$. if $f$ is differentiable at $x_{0}$, then $f'(x_{0})=0$
+
+>This a proof for local **maximum** point, a proof for local **minimum** point is similar.
+
+|  | Statement | Implied By |
+| ---- | ---- | ---- |
+| Given-1 | $f$ is defined on an interval $I$ and $x_{0}\in I$ |  |
+| Given-2 | $x_{0}$ a local **maximum** point of $f$ |  |
+| Given-3 | $f$ is differentiable at $x_{0}$ |  |
+| 1 | $\exists N_{\delta}(x_{0}):\forall{x},f(x)\leq f(x_{0})$ | Given-2 |
+| $\forall h:\vert{h}\vert<\delta$ | $x_{0}+h\in N_{\delta}(x_{0})$ | by 1; |
+|  | $f(x_{0}+h)\leq f(x_{0})$ |  |
+|  | $f(x_{0}+h)-f(x_{0})\leq 0$ |  |
+| if $h>0$ | $\frac{f(x_{0}+h)-f(x_{0})}{h}\leq 0$ |  |
+| if $h<0$ | $\frac{f(x_{0}+h)-f(x_{0})}{h}\geq 0$ |  |
+|  | $f'(x_{0})=f_{-}'(x_{0})=f_{+}'(x_{0})$ is defined | Given-3; 7.12 |
+|  | $f'(x_{0})=f'_{+}(x_{0})=\displaystyle\lim_{ h \to 0^+ }\frac{f(x_{0}+h)-f(x_{0})}{h}\leq 0$ |  |
+|  | $f'(x_{0})=f'_{-}(x_{0})=\displaystyle\lim_{ h \to 0^- }\frac{f(x_{0}+h)-f(x_{0})}{h}\geq 0$ |  |
+| **Conclusion** | $f'(x_{0})=0$ |  |
+
+
 ## 8.5 (Rolle's Theorem)
-## 8.6 (MVT-Lagrange)
-## 8.9 (MVT-Cauchy - 2nd proof)
-## 8.10 (Darboux's Theorem)
+
+|  | Statement | Implied By |
+| ---- | ---- | ---- |
+| Given-1 | $f$ is continuous on $[a,b]$ |  |
+| Given-2 | $f$ is differentiable on the $(a,b)$ |  |
+| Given-3 | $f(a)=f(b)$ |  |
+|  | $m=\min f([a,b])$, $M=\max f([a,b])$ | by W2 (5.37) |
+| if $m=M$ | $\forall x \in[a,b],f(x)=M$ |  |
+|  | $\forall c \in(a,b),f'(c)=0$ | derivative of constant function |
+| if $m\neq M$ | $\exists x_{1},x_{2}:f(x_{1})=m,f(x_{2})=M$ |  |
+|  | $f(x_{1})\neq f(x_{2})$ |  |
+|  | at least one of $x_{1},x_{2}$ is an inferior point | because Given-2: $f(a)=f(b)$ |
+|  | $\exists c\in(a,b):f'(c )=0$ | by Fermat (8.4); Given-2;  |
+
+
+## (8.6) Lagrange's MVT
+
+
+|  | Statement | Implied By |
+| ---- | ---- | ---- |
+| Given-1 | $f$ is continuous on $[a,b]$ |  |
+| Given-2 | $f$ is differentiable on the $(a,b)$ |  |
+|  | $\ell(x):=\left( \frac{f(b)-f(a)}{b-a} (x-a)+f(a)\right)$ |  |
+|  | $g(x):=f(x)-\ell(x)$ |  |
+|  | $g$ is continuous on $[a,b]$ | Given 1; difference of contentious functions; |
+|  | $g$ is differentiable on the $(a,b)$ | Given 2; difference of differentiable functions; |
+|  | $g(a)=f(a)-\ell(a)=0$ |  |
+|  | $g(b)=f(b)-\ell(b)=0$ |  |
+| $\exists c \in(a,b):$ | $g'(c)=0$ | by Rolle's Theorem; |
+|  | $f'(c)-\frac{f(b)-f(a)}{b-a} =0$ |  |
+|  | $f'(c)=\frac{f(b)-f(a)}{b-a}$ |  |
+
+
+## (8.9) Cauchy's MVT (2nd proof)
+
+
+
+
+## (8.10) Darboux's Theorem
+
+
+|  | Statement | Implied By |
+| ---- | ---- | ---- |
+| Given-1 | $f$ is differentiable on $[a,b]$ |  |
+| Given-2 | $f'(a)<t<f'(b)$ |  |
+|  | $H(x):=f(x)-tx$ |  |
+|  | $H$ is differentiable and continuous on $[a,b]$  |  |
+|  | $\exists c\in[a,b]:\forall{x}\in[a,b],~H(c)\leq H(x)$ | by EVT-W2 |
+|  | #todo show $c$ IS NOT ENDPOINT!!! |  |
+|  |  |  |
+|  | $c\in(a,b)$  |  |
+|  | $H'(c)=0$ | by Fermat; |
+|  | $H'(x)=f'(x)-t$ |  |
+|  | $H'(c)=f'(c)-t=0$ |  |
+|  | $f'(c)=t$ |  |

@@ -1,7 +1,6 @@
-
 # Continuous at Point
 
-Definitions
+## Definitions
 
 - $f$ is **continuous** in $x_{0}$
 - $\displaystyle\lim_{ x \to x_{0} }f(x)=f(x_{0})$
@@ -11,15 +10,13 @@ Definitions
 - (5.6) $\displaystyle\lim_{ h \to 0 }f(x_{0}+h)=f(x_{0})$
 - (5.18) $f$ is **right-** and **left-continuous at** $x_{0}$
 
-Theorems 
+## Theorems 
 
 - (q5.2) If $f(x)=g(x)$ for all $x$ in some neighborhood of $x_0$, then $f$ is continuous in $x_0$ iff $g$ is continuous in $x_0$ 
-
-- (7.9) if $f$ is differentiable at $x_{0}$, then it continuous at $x_{0}$
-
+- (7.9) if $f$ is differentiable at $x_{0}$, then it is continuous at $x_{0}$
 - (5.11) **Continuous Arithmetic** - If $f$ and $g$ are continuous at $x_{0}$, then $f\pm g$, $f\cdot g$, and $f/g$ (given $g\neq 0$), are continuous at $x_{0}$,
 - (5.15) **Composition Function** - if $g$ is continuous in $t_{0}$, and $f$ is continuous in $x_{0}$ where $x_{0}=g(t_{0})$, then $f(g(x))$ is continuous in $t_{0}$
-
+- $f$ is continuous at $\displaystyle\lim_{ n \to \infty }a_{n}$ then $\displaystyle f{(\lim_{ n \to \infty }a_{n})}=\lim_{ n \to \infty }f (a_{n})$
 
 ## One Side
 
@@ -71,6 +68,12 @@ Theorems
 		- $\exists c,d\in[a,b]:\forall{x}\in[a,b],~f(c)\geq f(x) \geq{f(d)}$
 	- (q8.25) if $f$ is **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$ 
 	- (5.48) **Heine–Cantor theorem** - $f$ is uniformly continuous on it.
+
+
+
+
+
+ 
 
 ## Examples
 

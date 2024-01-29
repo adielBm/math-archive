@@ -1,3 +1,7 @@
+---
+aliases:
+  - Propositional calculus
+---
 
 - A **propositional variable** (aka: sentential variable, sentential letter) is an input variable (that can either be true or false) of a truth function. 
 	- Propositional variables are the basic building-blocks of propositional formulas
