@@ -79,3 +79,14 @@ $$
 ## Common Trigonometric Values
 
 ![410](https://upload.wikimedia.org/wikipedia/commons/4/4c/Unit_circle_angles_color.svg)
+
+
+___
+
+|  | $\sin$ | $\cos$ |
+| ---- | ---- | ---- |
+| $1$ | $2k\pi+\frac{\pi}{2}$ | $2k\pi$ |
+| $0$ | $k\pi$ | $(2k+1)\frac{2}{\pi}$ |
+| $-1$ | $2k\pi-\frac{\pi}{2}$ | $(2k + 1)\pi$ |
+
+

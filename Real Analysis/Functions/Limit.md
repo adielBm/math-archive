@@ -6,8 +6,8 @@
 - $\displaystyle\lim_{ x \to x_{0} }f(x)=L$ 
 - ((ε, δ)-definition of limit. Cauchy) 
 	- ${\forall \varepsilon >0,\,\exists \delta >0,\,\forall x\in \mathbb {R} ,(\,0<|x-x_{0}|<\delta \implies |f(x)-L|<\varepsilon )}$
-- (The Sequential Criterion for a Limit of a Function. Heine) 
-	- $\displaystyle\forall(x_{n})^{\infty}_{n=1}(\lim_{n\to \infty}(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}\neq x_{0})\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
+- (Sequential Criterion for a Limit of a Function. Heine) 
+	- $\displaystyle\forall(x_{n})^{\infty}_{n=1},\Big((\lim_{n\to \infty}(x_{n})=x_{0})\land(\forall{n\in\mathbb{N}},x_{n}\neq x_{0})\Big)\implies\displaystyle\lim_{ n \to \infty }f(x_{n})=L$
 - (**left** & **right**-hand limit) (4.48)
 	- $\displaystyle\lim_{x\to{x_{0}}^{-}}f(x)=\displaystyle\lim_{x\to{x_{0}}^{+}}f(x)=L$
 - (4.40) $\displaystyle\lim_{h\to 0}{f(x_0+h)}=L$
@@ -44,12 +44,19 @@
 |  | $\displaystyle\lim_{x\to x_{0}}(f(x)\cdot c)=\displaystyle \lim_{x\to x_{0}}f(x)\cdot c$ |  |
 |  | $\displaystyle\lim_{x\to x_{0}}(f(x))^n=\Big(\displaystyle \lim_{x\to x_{0}}f(x)\Big)^{n}$ |  |
 | Quotient | $\displaystyle\lim_{x\to x_{0}}(f/g)(x)=\displaystyle \lim_{x\to x_{0}}f(x)/\lim_{x\to x_{0}}g(x)$ where $\displaystyle\lim_{x\to x_{0}}g(x)\neq 0$ |  |
-| Composite Function | $\displaystyle\lim_{ t \to t_{0} }f(g(t))=\displaystyle\lim_{ x \to {x_{0}} }f(x)$ |  $\displaystyle\lim_{ t \to t_{0} }g(t)=x_{0}$ is defined and ($f$ is continuous at $x_{0}$ or $g(t)\neq x_{0}$ for some deleted neighborhood of $t_{0}$) |
+| Composite Function | $\displaystyle\lim_{ t \to t_{0} }f(g(t))=\displaystyle\lim_{ x \to {x_{0}} }f(x)$ | $\displaystyle\lim_{ t \to t_{0} }g(t)=x_{0}$ is defined and ($f$ is continuous at $x_{0}$ or $g(t)\neq x_{0}$ for some deleted neighborhood of $t_{0}$) |
+
 
 - (q4.62) $\displaystyle\lim_{x\to0}{f(x)}=L\implies\lim_{x\to 0}{f(x^2)}=L$
 -  (q4.63) $\displaystyle\lim_{x\to0}{f(x)}=\lim_{x\to 0}{f(xk)}$  (where $k\neq 0$ and the limits exists)
 - $\displaystyle\lim_{x \to \infty} f(x) = 0\land\exists M: |g(x)|< M\implies\lim_{x \to \infty} f(x)g(x) = 0$ (analogously 2.22)
 - $\displaystyle\lim_{ x \to x_{0} }f(x)=0\iff\lim_{ x \to x_{0} }|f(x)|=0$ (analogously q2.20a)
+
+>for $\displaystyle\lim_{ x \to x_{0} }f(x)^{g(x)}$ you can use in these methods:
+> - Heine's Sequential Criterion with t6.15
+> - Using in the identity $f(x)^{g(x)}=e^{g(x)\ln(f(x))}$ (where $0<f(x)^{g(x)}$) and using in Composite Function (5.14)
+
+
 # One-Sided Limits
 
 - $L$ is the **right-hand limit** of $f$ at $x_{0}$
@@ -98,7 +105,7 @@
 - $\infty+\infty=\infty$
 - $\infty+r=\infty$
 - $\infty\cdot\infty=\infty$
-- $\infty\cdot{r}=\infty$
+- $\infty\cdot{r}_{>0}=\infty$
 - $1/\infty=0$
 - $1/0^{+}=\infty$
 - $\displaystyle\lim_{ x \to x_{0} }(f(x))=\infty \iff\displaystyle\lim_{ x \to x_{0} }(-f(x))=-\infty$
@@ -150,6 +157,23 @@ ____
 - $L=\displaystyle\lim_{ x \to x_{0} }\frac{f'(x)}{g'(x)}$ exists (finite, $\infty$ or $-\infty$)
 - $\displaystyle \lim_{{x \to x_0}} f(x) = \lim_{{x \to x_0}} g(x) = 0$       or      $\displaystyle \lim_{{x \to x_0}} |f(x)| = \lim_{{x \to x_0}} |g(x)| = \infty$
  $$\displaystyle \lim_{{x \to x_0}} \frac{f(x)}{g(x)} =  \lim_{{x \to x_0}} \frac{f'(x)}{g'(x)}$$
+# Indeterminate form
+
+$$\displaystyle  {\frac {0}{0}},~{\frac {\infty }{\infty }},~0\times \infty ,~\infty -\infty ,~0^{0},~1^{\infty },{\text{ and }}\infty ^{0}$$
+
+
+
+|  |  | Transformation to $\frac{0}{0}$ | Transformation to $\frac{∞}{∞}$ |
+| ---- | ---- | ---- | ---- |
+| $\displaystyle\frac{0}{0}$ | $\displaystyle\lim_{ x \to x_{0} }\frac{f(x)}{g(x)}$ | - | $\displaystyle\lim_{ x \to x_{0} }\frac{1/g(x)}{1/f(x)}$ |
+| $\displaystyle\frac{\infty}{\infty}$ | $\displaystyle\lim_{ x \to x_{0} }\frac{f(x)}{g(x)}$ | $\displaystyle\lim_{ x \to x_{0} }\frac{1/g(x)}{1/f(x)}$ | - |
+| $0\cdot \infty$ | $\displaystyle\lim_{ x \to x_{0} }f(x)\cdot g(x)$ |  |  |
+| $\infty-\infty$ | $\displaystyle\lim_{ x \to x_{0} }f(x)- g(x)$ |  | $\displaystyle\ln \lim _{x\to x_{0}}{\frac {e^{f(x)}}{e^{g(x)}}}\!$ |
+| $0^0$ | $\displaystyle  \lim _{x\to x_{0}}f(x)^{g(x)}$ |  |  |
+| $\displaystyle 1^{\infty}$ | $\displaystyle  \lim _{x\to x_{0}}f(x)^{g(x)}$ | $\displaystyle\exp \lim _{x\to x_{0}}{\frac {\ln f(x)}{1/g(x)}}$ | $\displaystyle\exp \lim _{x\to x_{0}}{\frac {g(x)}{1/\ln f(x)}}\!$ |
+| $\infty^0$ | $\displaystyle  \lim _{x\to x_{0}}f(x)^{g(x)}$ |  |  |
+
+
 
 # Examples
 
@@ -219,8 +243,8 @@ ____
 
 
 - $\displaystyle\frac{x^r}{a^x}$ (assuming $a>1$, and $r\in\mathbb{R}$)
-	- $\displaystyle\lim_{ x \to \infty }\frac{x^r}{a^x}=0$
-
+	- (q6.13) $\displaystyle\lim_{ x \to \infty }\frac{x^r}{a^x}=0$ 
+- (q6.17) $\displaystyle\lim_{ x \to \infty }\frac{\ln x}{x^a}=0$ where $a>0$
 # Asymptotes
 
 - The vertical line $x=x_{0}$ is a **vertical asymptote** of the function $y = f(x)$ if

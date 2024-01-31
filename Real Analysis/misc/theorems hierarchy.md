@@ -1,5 +1,4 @@
 
-https://gist.github.com/riceissa/d9f191d934c23dc5e42388dfb91b6aca
 ### textbook
 
 - BW theorem (3.32)
