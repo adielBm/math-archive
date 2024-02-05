@@ -42,6 +42,7 @@ A **vector space** over a [[Field]] $F$ is a non-empty set $V$ together with a b
 - [[#Definition|Vector Addition]] ($\mathbf{vector}+\mathbf{vector}=\mathbf{vector}$)
 - [[#Dot Product]] ($\mathbf{vector}\cdot\mathbf{vector}=\textit{saclar}$)
 - [[#Cross Product]] ($\mathbf{vector}\times\mathbf{vector}=\mathbf{vector}$)
+
 ### Dot Product
 
 > also **scalar product** or **Euclidean inner product**

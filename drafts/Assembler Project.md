@@ -23,8 +23,6 @@ The Project: to write an assembler for a specific assembly language defined here
 - A register named **Program Status Word** (PSW), which contains flags characterizing the processor's state at any given moment.
 
 
-
-
 ## Machine Instructions
 
 ### Machine Instruction Structure
@@ -47,7 +45,6 @@ The structure of the first word is always the same. The structure of the first w
 | Bits | `10 11 12 13` | `6 7 8 9` | `4 5` | `2 3` | `0 1` |
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | **Field** | Not used | `opcode` | Operand Ad. (Source) | Operand Ad. (Destination) | `A, R, E` |
-
 
 - Bits `0-1` (the [[#A.R.E field]]):
 	- In the first word of an instruction, these bits are always set to zero (`00`).
@@ -219,7 +216,7 @@ Description of the addressing modes in our machine:
 	- The **2nd additional word** consists of the index of the element in the array to be accessed (12 bits), and the ARE field (2 bits).  (as in the additional word in [[#(0) Immediate Addressing (מיעון מיידי)]])
 
 
-- The operand consists of a label indicating the **base address** (the address of the beginning of the array), followed by the index in the array to be accessed in square brackets. (The index can be given by a numerical constant defined with `.define`) 
+- The operand consists of a label indicating the **base address** (the address of the beginning of the array), followed by the index in the array to be accessed in square brackets. (The index can be given by a numerical constant defined with `.define`)
 - The array indexes start from 0
 - Examples:
 	- Given a definition of an array `x: .data 23,25,19,30`, then the instruction `mov x[2],r2` will copy the number `19` found in index `2` in the array `x` to the register `.r2`
@@ -243,7 +240,7 @@ Description of the addressing modes in our machine:
 
 ___
 
-> Note: It is allowed to refer to the label even before it is declared, but provided that it is indeed declared somewhere in the file.
+> Note: It is allowed to refer to the label even before it is declared, but provided that it is indeed declared somewhere in the file
 
 # Assembly Language
 ## Macros

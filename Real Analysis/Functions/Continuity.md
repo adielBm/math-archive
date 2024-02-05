@@ -60,10 +60,10 @@
 	- (5.32) **Brouwer's Fixed Point Theorem** (1-dim) 
 		- $f:[a,b]\to[a,b]\implies\exists{x}\in{[a,b]}:f(x)=x$
 	- (5.34, 5.38) Preservation of intervals - $f(I)= \set{f(x):x\in{I}}$ is either an **closed interval** or a **point**
-	- (5.35) Boundedness theorem (*Weierstrass 1*)
+	- (5.35) Boundedness theorem (W1, Weierstrass 1)
 		- $f$ is **bounded** on $I=[a,b]$
 		- $\exists{m,M}: \displaystyle  {\displaystyle m\leq f(x)\leq M\quad \forall x\in [a,b]}$
-	- (5.37) **Extreme value theorem** (EVT) (*Weierstrass 2*)
+	- (5.37) **Extreme value theorem** (EVT, W2, Weierstrass 2)
 		- $f$ has both a maximum and a minimum on $I=[a,b]$
 		- $\exists c,d\in[a,b]:\forall{x}\in[a,b],~f(c)\geq f(x) \geq{f(d)}$
 	- (q8.25) if $f$ is **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$ 

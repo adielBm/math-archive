@@ -44,7 +44,7 @@
 |  | $\displaystyle\lim_{x\to x_{0}}(f(x)\cdot c)=\displaystyle \lim_{x\to x_{0}}f(x)\cdot c$ |  |
 |  | $\displaystyle\lim_{x\to x_{0}}(f(x))^n=\Big(\displaystyle \lim_{x\to x_{0}}f(x)\Big)^{n}$ |  |
 | Quotient | $\displaystyle\lim_{x\to x_{0}}(f/g)(x)=\displaystyle \lim_{x\to x_{0}}f(x)/\lim_{x\to x_{0}}g(x)$ where $\displaystyle\lim_{x\to x_{0}}g(x)\neq 0$ |  |
-| Composite Function | $\displaystyle\lim_{ t \to t_{0} }f(g(t))=\displaystyle\lim_{ x \to {x_{0}} }f(x)$ | $\displaystyle\lim_{ t \to t_{0} }g(t)=x_{0}$ is defined and ($f$ is continuous at $x_{0}$ or $g(t)\neq x_{0}$ for some deleted neighborhood of $t_{0}$) |
+| Composite Function | $\displaystyle\lim_{ x \to {x_{0}} }f(x)=\displaystyle\lim_{ t \to t_{0} }f(g(t))$ | $\displaystyle\lim_{ t \to t_{0} }g(t)=x_{0}$ is defined and ($f$ is continuous at $x_{0}$ or $g(t)\neq x_{0}$ for some deleted neighborhood of $t_{0}$) |
 
 
 - (q4.62) $\displaystyle\lim_{x\to0}{f(x)}=L\implies\lim_{x\to 0}{f(x^2)}=L$
@@ -165,22 +165,17 @@ $$\displaystyle  {\frac {0}{0}},~{\frac {\infty }{\infty }},~0\times \infty ,~\i
 
 |  |  | Transformation to $\frac{0}{0}$ | Transformation to $\frac{∞}{∞}$ |
 | ---- | ---- | ---- | ---- |
-| $\displaystyle\frac{0}{0}$ | $\displaystyle\lim_{ x \to x_{0} }\frac{f(x)}{g(x)}$ | - | $\displaystyle\lim_{ x \to x_{0} }\frac{1/g(x)}{1/f(x)}$ |
-| $\displaystyle\frac{\infty}{\infty}$ | $\displaystyle\lim_{ x \to x_{0} }\frac{f(x)}{g(x)}$ | $\displaystyle\lim_{ x \to x_{0} }\frac{1/g(x)}{1/f(x)}$ | - |
-| $0\cdot \infty$ | $\displaystyle\lim_{ x \to x_{0} }f(x)\cdot g(x)$ |  |  |
-| $\infty-\infty$ | $\displaystyle\lim_{ x \to x_{0} }f(x)- g(x)$ |  | $\displaystyle\ln \lim _{x\to x_{0}}{\frac {e^{f(x)}}{e^{g(x)}}}\!$ |
-| $0^0$ | $\displaystyle  \lim _{x\to x_{0}}f(x)^{g(x)}$ |  |  |
-| $\displaystyle 1^{\infty}$ | $\displaystyle  \lim _{x\to x_{0}}f(x)^{g(x)}$ | $\displaystyle\exp \lim _{x\to x_{0}}{\frac {\ln f(x)}{1/g(x)}}$ | $\displaystyle\exp \lim _{x\to x_{0}}{\frac {g(x)}{1/\ln f(x)}}\!$ |
-| $\infty^0$ | $\displaystyle  \lim _{x\to x_{0}}f(x)^{g(x)}$ |  |  |
-
-
-
+| $\displaystyle\lim_{ x \to x_{0} }\frac{f(x)}{g(x)}$ | $\displaystyle\frac{0}{0}$ | - | $\displaystyle\lim_{ x \to x_{0} }\frac{1/g(x)}{1/f(x)}$ |
+|  | $\displaystyle\frac{\infty}{\infty}$ | $\displaystyle\lim_{ x \to x_{0} }\frac{1/g(x)}{1/f(x)}$ | - |
+| $\displaystyle\lim_{ x \to x_{0} }f(x)- g(x)$ | $\infty-\infty$ |  | $\displaystyle\ln \lim _{x\to x_{0}}{\frac {e^{f(x)}}{e^{g(x)}}}\!$ |
+| $\displaystyle\lim_{ x \to x_{0} }f(x)\cdot g(x)$ | $0\cdot \infty$ |  |  |
+| $\displaystyle  \lim _{x\to x_{0}}f(x)^{g(x)}$ | $\displaystyle 1^{\infty}$ | $\displaystyle\exp \lim _{x\to x_{0}}{\frac {\ln f(x)}{1/g(x)}}$ | $\displaystyle\exp \lim _{x\to x_{0}}{\frac {g(x)}{1/\ln f(x)}}\!$ |
+|  | $0^0$ |  |  |
+|  | $\infty^0$ |  |  |
+|  |  |  |  |
 # Examples
 
-
 - (e4.31) $\displaystyle\lim_{ x \to \infty }\sqrt{ x }=\infty$
-
-
 
 - (4.44a) $\displaystyle\lim_{ x \to 0 }\sin x=0$
 - (4.44b) $\displaystyle\lim_{ x \to 0 }\cos x=1$

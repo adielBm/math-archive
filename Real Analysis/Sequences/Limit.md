@@ -117,8 +117,6 @@
 
 - $c\in{\mathbb{R}}$
 	- $\displaystyle\lim_{ n \to \infty }{\frac{c^n}{n!}}=0$
-	- $\displaystyle\lim_{ n \to \infty }\left( 1+\frac{c}{n} \right)^n=e^c$
-		- $\displaystyle\lim_{ n \to \infty }\left(1+ \frac{1}{n} \right)^n=e$
 
 
 - $-1<c<1\equiv|c|<1$
@@ -135,8 +133,18 @@
 	- $\displaystyle\lim_{ n \to \infty }\frac{1}{c^n}=0$ (by 2.33,q2.20)
 
 
-- (6.19) $\displaystyle\lim_{ n \to \infty }\left( 1+\frac{c}{n} \right)=e^c$
-	- (special case c=1) $\displaystyle\lim_{ n \to \infty }\left( 1+\frac{1}{n} \right)=e$
+
+- (q3.20) $\displaystyle\lim_{ n \to \infty }\left( 1+\frac{1}{n} \right)=1$
+
+- (6.19) $\displaystyle\lim_{ n \to \infty }\left( \frac{n+c}{n}  \right)^n=e^c$
+	- (special case c=1) $\displaystyle\lim_{ n \to \infty }\left( 1+\frac{1}{n} \right)^n=\lim_{ n \to \infty }\left( \frac{n+1}{n} \right)^n=e$
+	- (q3.20d, special case c=2) $\displaystyle\lim_{ n \to \infty }\left( 1+\frac{2}{n} \right)^n=\lim_{ n \to \infty }\left( \frac{n+2}{n} \right)^n=e^2$
+	- (q3.20b) $\displaystyle\lim_{ n \to \infty }\left( 1+\frac{1}{n+1} \right)^n=e$
+	- (q3.20a) $\displaystyle\lim_{ n \to \infty }\left( 1+\frac{1}{n} \right)^{n+1}=e$
+
+
+
+
 
 - (6.15) $\displaystyle\lim_{ n \to \infty }\left(a_{n}^{b_{n}}\right)=\left(\lim_{ n \to \infty }a_{n}\right)^{\left(\displaystyle\lim_{ n \to \infty }b_{n}\right)}$ (assuming $\lim a_{n}>0$, and $\lim b_{n}\in\mathbb{R}$)
 
@@ -155,9 +163,8 @@
 - $(a_{n})$ is sequence (all are nonzero)
 
 - (2.48) $\displaystyle\lim_{n\to \infty }\left|{\frac {a_{n+1}}{a_{n}}}\right|<1\implies\lim_{ n \to \infty }(a_{n})=0$
-	- if $\lim_{n\to \infty }{\frac {a_{n+1}}{a_{n}}}>1$ (or $=\infty$) and $a_{n}>0$, then $\lim_{ n \to \infty }(a_{n})=\infty$
+	- if $\displaystyle\lim_{n\to \infty }{\frac {a_{n+1}}{a_{n}}}>1$ (or $=\infty$) and $a_{n}>0$, then $\displaystyle\lim_{ n \to \infty }(a_{n})=\infty$
 	 
-
 # Cantor's Lemma
 
 - (3.22) **Cantor's intersection** theorem (Cantor's Lemma, Nested Intervals Theorem)

@@ -123,42 +123,54 @@ $$\large A\subset\mathbb{R}$$
 #### Lower bound 
 
 - (d3.1) $c \in \mathbb{R}$ is called a **lower bound** of $A$, if $\forall a\in{A}: c\leq a$
+
+### Supremum & Infimum
 #### Supremum (Least-upper-bound)
 
-  Definitions
+- $b=\sup{A}$ ($b$ is the **supremum** of $A$)
+- (d3.7) $b$ is the minimal upper bound of $A$
+- (3.9) (1.) $b$ is an upper bound of $A$ (2.) $\forall\varepsilon>0 \;\exists{x\in{A}}:x>b-\varepsilon$
+- (3.9) (1.) $b$ is an upper bound of $A$ (2.) $b\leq d$ for all upper bounds $d$ of $A$
+- (q3.9) (1.) $b$ is an upper bound of $A$ (2.) There exists a sequence $(a_{n})$ consists of elements in $A$, such that $\displaystyle\lim_{ n \to \infty }a_{n}=b$
+###### Theorems
 
-- $c=\sup{A}$. ($c$ is the **supremum** of $A$)
-- (d3.7) $c$ is minimal upper bound of $A$
-- (3.9) (1.) $c$ is an upper bound of $A$ (2.) $\forall\varepsilon>0 \;\exists{x\in{A}}:x>c-\varepsilon$
-- (3.9) (1.) $c$ is an upper bound of $A$ (2.) $c\leq d$ for all upper bounds $d$ of $A$
-- (q3.9) (1.) $c$ is an upper bound of $A$ (2.) There exists a sequence $(a_{n})$ that all its elements are in $A$, such that $\displaystyle\lim_{ n \to \infty }a_{n}=x$
-
-Theorems
-
-- (3.6) **Least-upper-bound property** - If $A$ is **non-empty** and **bounded above**, then $A$ has **supremum**
 - (3.8) if $A$ has maximum, then $\sup{A}=\max{A}$
-- (3.10) $\sup{(A+B)}=\sup{A}+\sup{B}$
 - $a<b\implies \sup(a,b)=b$
+- Let $A$ (and $B$) is non-empty and bounded above:
+	- (3.6) **Least-upper-bound property**: $A$ has supremum
+	- (q3.60) $A$ has maximum, if and only if, $\sup{A}\in{A}$
+	- (q3.61a) $\forall x \in A,x\leq a\implies \sup{A}\leq a$
+	- (q3.61c) $\forall x \in A,x> a\implies \sup{A}> a$
+	- (3.10) $\sup{(A+B)}=\sup{A}+\sup{B}$
+	- (3.14) $\inf{(-A)}=-\sup{A}$
 
-> *Least-upper-bound property* (3.6) is equivalence to the [[#Completeness Axiom]] (a1.52)
+> Least-upper-bound property is equivalence to the [[#Completeness Axiom]] (a1.52)
 
 > A lot of books called to Least-upper-bound property *completeness axiom*. (see q3.14)
 
 #### Infimum (Greatest-lower-bound)
 
-- definitions
-	- $y=\inf{A}$
-	- (d3.12) $y$ is maximal lower bound of $A$
-	- (q3.11a) $y$ is lower bound of $A$, and for every $\varepsilon>0$ there exists $x\in{A}$ such that $x<y+c$
-- theorems 
-	- (3.11) if $A$ is **non-empty** and **bounded below**, then $A$ has **infimum**
-	- $a<b\implies \inf(a,b)=a$
-	- (3.13b) if $A$ has minimum, then $\inf{A}=\min{A}$
-	- (3.10) $\sup{(A+B)}=\sup{A}+\sup{B}$
+- $a=\inf{A}$. ($a$ is the **infimum** of $A$)
+- (d3.12) $a$ is the maximal lower bound of $A$
+- (q3.11a) (1.) $a$ is a lower bound of $A$ (2.) $\forall\varepsilon>0 \;\exists{x\in{A}}:x<a+\varepsilon$
+- (q3.11a) (1.) $a$ is a lower bound of $A$ (2.) $d\leq a$ for all lower bounds $d$ of $A$
+- (q3.11b) (1.) $a$ is a lower bound of $A$ (2.) There exists a sequence $(a_{n})$ consisting of elements in $A$, such that $\displaystyle\lim_{ n \to \infty }a_{n}=a$
+###### Theorems
 
+- (3.13b) if $A$ has minimum, then $\inf{A}=\min{A}$
+- (3.13a) $a<b\implies \inf(a,b)=a$
+- Let $A$ (and $B$) is non-empty and bounded below:
+	- (3.11) **Greatest-lower-bound property**: $A$ has infimum
+	- (q3.60) $A$ has minimum, if and only if, $\inf{A}\in{A}$
+	- (q3.61a) $\forall x \in A,x\leq a\implies \sup{A}\leq a$
+	- (q3.61c) $\forall x \in A,x> a\implies \sup{A}> a$
+	- (3.10) ${\displaystyle \inf(A+B)=(\inf A)+(\inf B)}$
+	
 #### Theorems
 
-- (q3.13) if $A$ is non-empt and bounded, then $\inf{A}\leq\sup{A}$
+- (q3.13) if $A$ is non-empty and bounded
+	- $\inf{A}\leq\sup{A}$ 
+		- $A=\{ a \}\iff\inf{A}=\sup{A}$
 
 ### Closed & Open Sets
 

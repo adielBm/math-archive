@@ -3,7 +3,7 @@
 > given $x_{0} \in I \subseteq \text{dom}(f)$
 
 - $f$ is **differentiable at a point** $x_{0}\in{I}$
--  The limit $\displaystyle  L=\lim_{h\to 0}{\frac {f(x_{0}+h)-f(x_{0})}{h}}=\lim_{x\to{x_{0}}}{\frac{f(x)-f(x_{0})}{x-x_{0}}}$ exists
+- (7.8) The limit $\displaystyle  L=\lim_{h\to 0}{\frac {f(x_{0}+h)-f(x_{0})}{h}}=\lim_{x\to{x_{0}}}{\frac{f(x)-f(x_{0})}{x-x_{0}}}$ exists
 - $\forall \varepsilon > 0,\exists\delta>0:\forall h\left(0<|h|<\delta\implies \left|L - \frac{f(x_{0}+h)-f(x_{0})}{h}\right| < \varepsilon \right)$
 - $f$ is **left-** and **right-differentiable** at $x_{0}$ and $f'_{+}(x_{0})=f'_{-}(x_{0})$ (in this case $f'(x_{0})=f'_{+}(x_{0})=f'_{-}(x_{0})$)
 - #todo  $\exists{A}\in\mathbb{R} : f(x_{0}+h)-f(x_{0})=Ah+\alpha(h)h$ where $\displaystyle\lim_{ h \to 0 }\alpha(h)=0$
@@ -97,6 +97,9 @@
 
 - if $f$ is continuous on $[a,b]$ and **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$  (by q8.25)
 
+
+- $f$ is continuous on $[0,\infty)$, differentiable on the $(0,\infty)$
+	- $\displaystyle(\exists c>0:\forall x>0,f'(x)\geq c)\implies \lim_{ x \to \infty }f(x)=\infty$ (e2019c.91.q2b)
 
 
 - $f$ is differentiable on $[a,b]$ 

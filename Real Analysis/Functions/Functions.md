@@ -38,7 +38,7 @@
 			- $\displaystyle\lim_{ x \to b^{-} }f(x)=-\infty$ 
 
 
-## Theorms 
+## Theorems 
 
 #todo 
 

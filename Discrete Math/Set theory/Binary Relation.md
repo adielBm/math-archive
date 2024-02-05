@@ -2,7 +2,7 @@
 - A **binary relation** $R$ defined as a subset of a [[Cartesian Product]] $A\times B$
 	- A [[#Homogeneous Relation]] over a set $X$ is a binary relation over $X$ and itself, i.e. it is a subset of the cartesian product
 		- It is also simply called a (binary) relation over $X$
-	- A **heterogeneous relation** is a subset of a cartesian product $A \times B$, where A and B are possibly distinct sets
+	- A **heterogeneous relation** is a subset of a cartesian product $A \times B$, where $A$ and $B$ are possibly distinct sets
 	- When an operation or proposition concerns a relation of either form, we sometimes give a hint 'possibly heterogeneous'
 
 # Operations

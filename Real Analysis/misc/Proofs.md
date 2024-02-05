@@ -241,9 +241,19 @@ ____
 		- $\exists{m,M}: \displaystyle  {\displaystyle m\leq f(x)\leq M\quad \forall x\in [a,b]}$
 
 
-| Step | Statement | Implied By |
+
+|  | Proof by Contradiction | Implied By |
 | ---- | ---- | ---- |
-| 1 | $f$ is continuous on $I=[a,b]$ | Given-1 |
+| Given-1 | $f$ is continuous on $I=[a,b]$ |  |
+|  | $f$ is **not bounded** above on $I=[a,b]$ | Assume by contradiction |
+|  | $\forall n \in \mathbb{N}, \exists x_{n} \in(a,b):f(x_{n})>n$ |  |
+|  | let's de |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
 
 #todo 
 
@@ -391,3 +401,34 @@ ____
 |  | $H'(x)=f'(x)-t$ |  |
 |  | $H'(c)=f'(c)-t=0$ |  |
 |  | $f'(c)=t$ |  |
+
+
+____
+
+
+# Limits
+
+## $\lim_{n\to\infty}(1+\frac{1}{n^2})^n = 1$
+
+| Step |  | Implied By |
+| ---- | ---- | ---- |
+| 1. | $\lim_{n\to\infty}(1+\frac{1}{n})^n = e$ |  |
+| 2. | $\exists K > 1: \forall n>0,1 < \left(1+\frac{1}{n}\right)^n < K$ |  |
+| 3. | $1 < \left(1+\frac{1}{n^2}\right)^n = \left(\left(1+\frac{1}{n^2}\right)^{n^2}\right)^{1/n} < K^{1/n}$ |  |
+| 4. | $\lim_{n\to\infty}\left(1+\frac{1}{n^2}\right)^n=\lim_{n\to\infty}\left(\left(1+\frac{1}{n^2}\right)^{n^2}\right)^{1/n}$ |  |
+| 5. | $\lim_{n\to\infty}\left(1+\frac{1}{n^2}\right)^{n^2} = 1$ | Consequence of given limit |
+| 6. | $\lim_{n\to\infty}\left(1+\frac{1}{n^2}\right)^n=\lim_{n\to\infty}1^{1/n}$ | Substituting the result from step 5 |
+| 7. | $\lim_{n\to\infty}1^{1/n} = 1$ | Limit of a constant raised to the power of $1/n$ is 1 |
+| 8. | $\lim_{n\to\infty}\left(1+\frac{1}{n^2}\right)^n = 1$ | Final result |
+
+The inequality $1 < \left(1+\frac{1}{n}\right)^n < K$ is a consequence of the fact that the limit $\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n$ exists and is equal to the mathematical constant $e$.
+
+Here's a more detailed explanation:
+
+1. **Given**: $\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n = e$
+
+2. **Consequence**: Since the limit is equal to $e$, there exists some positive constant $K > 1$ such that for every positive integer $n$, the expression $\left(1+\frac{1}{n}\right)^n$ is always between $1$ and $K$. In other words, $1 < \left(1+\frac{1}{n}\right)^n < K$ for all positive integers $n$.
+
+This is a general property of the limit $e$. It implies that the sequence $\left(1+\frac{1}{n}\right)^n$ is bounded between $1$ and some constant $K$ for sufficiently large $n$.
+
+Now, when proving $\lim_{n\to\infty}\left(1+\frac{1}{n^2}\right)^n = 1$, you can use this property to establish that $\left(1+\frac{1}{n^2}\right)^n$ is also bounded and, therefore, converges to $1$ as $n$ approaches infinity.

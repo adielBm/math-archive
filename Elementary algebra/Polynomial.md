@@ -11,19 +11,22 @@
 - A **monic polynomial** is a non-zero polynomial in which the leading coefficient is equal to 1.
 	- $\displaystyle  x^{n}+c_{n-1}x^{n-1}+\cdots +c_{2}x^{2}+c_{1}x+c_{0},$
 
+
 ## Theorems 
 
 - **Fundamental Theorem of Algebra** - every non-zero, single-variable, degree $n$ polynomial with complex coefficients has, counted with multiplicity, exactly $n$ complex roots
+- every non-zero, degree $n$ polynomial has at most $n$ real roots
+- every polynomial is a [[Continuity|continuous]] function on $\mathbb{R}$
 - **Factor theorem:** $p(c)=0\iff p(x)=(x-c)q(x)$. (where $\deg{q}=(n-1)$
 	- In words: $c$ is a root of the polynomial $p$ (of degree n) if and only if $(x−c)$ is a factor of $p$
 - Let $p(x)$ be a polynomial of odd degree. 
 	- Then $p$ has at least one real root
 	- $p:\mathbb{R}\to \mathbb{R}$ is surjective
 - **Remainder Theorem** - If a polynomial $p(x)$ is divided by $x − k$, then the remainder is $r = p(k)$. 
-- **Factors of a Polynomial** - Every polynomial of degree $n > 0$ with real coefficients can be written as  the product of linear and quadratic factors with real coefficients, where the quadratic factors have no real zeros. #todo 
+- **Factors of a Polynomial** - Every polynomial of degree $n > 0$ with real coefficients can be written as the product of linear and quadratic factors with real coefficients, where the quadratic factors have no real zeros. #todo 
 - **Descartes' rule of signs** - The number of strictly positive roots (counting multiplicity) of $p$ is equal to the number of sign changes in the coefficients of $p$, minus a nonnegative even number
 	- The number of negative roots is the number of sign changes after multiplying the coefficients of odd-power terms by $−1$, or fewer than it by an even number
-
-
-
-
+- $\deg{pq}=\deg{p}+\deg{q}$ (where $p,q$ are not zero polynomial)
+- $\deg{(p+q)}\leq \max\{ {\deg{p},\deg{q}} \}$ (where $p,q$ are not zero polynomial)
+- If $p$ has $n$ distinct roots, then $p'$ has at least $n-1$ roots
+- if even degree polynomial $p$ has a root $c$ and $p'(c)\neq 0$ then $p$ has at least two roots
