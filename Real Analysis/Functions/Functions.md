@@ -62,6 +62,7 @@
 Algebraic functions are functions that can be expressed as the solution of a polynomial equation with integer coefficients.
 
 - Polynomials
+	- [[Real Analysis/Functions/Limit#Polynomials|Limit]]
 - Rational functions
 - nth root
 
@@ -78,7 +79,7 @@ Transcendental functions are functions that are not algebraic.
 	- y-intercept:  $(0,1)$
 	- $\text{Im}f=(0,\infty)$
 	- Inverse Function $f^{-1}=\log_{a}(x)$ (where $a\neq 1$)
-	- Limit  
+	- [[Limit#Exponential functions|limit]]  
 		- (Increasing) $a>1\implies$ 
 			- $\displaystyle\lim_{ x \to -\infty }f(x)=0$
 			- $\displaystyle\lim_{ x \to \infty }f(x)=\infty$
@@ -86,7 +87,6 @@ Transcendental functions are functions that are not algebraic.
 			- $\displaystyle\lim_{ x \to -\infty }f(x)=\infty$
 			- $\displaystyle\lim_{ x \to \infty }f(x)=0$
 	- [[Derivative#Examples|Derivative]]
-
 
 
 #### Logarithmic Functions
@@ -102,7 +102,7 @@ Transcendental functions are functions that are not algebraic.
 		- Vertical asymptote at $x=0$
 		- Horizontal asymptote as $x$ approaches infinity
 	- Inverse Function $f^{-1}=a^x$
-	- Limit  
+	- [[Limit#Logarithmic functions|limit]]  
 		- (Increasing) $a>1\implies$ 
 			- $\displaystyle\lim_{ x \to 0^+}f(x)= -\infty$
 			- $\displaystyle\lim_{ x \to \infty }f(x)=\infty$
@@ -116,5 +116,6 @@ Transcendental functions are functions that are not algebraic.
 
 ##### Trigonometric Functions 
 
-
+- [[Real Analysis/Functions/Limit#Trigonometric functions|Limit]]
+- [[Derivative#Examples|Derivative]]
 

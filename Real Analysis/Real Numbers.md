@@ -144,9 +144,7 @@ $$\large A\subset\mathbb{R}$$
 	- (3.10) $\sup{(A+B)}=\sup{A}+\sup{B}$
 	- (3.14) $\inf{(-A)}=-\sup{A}$
 
-> Least-upper-bound property is equivalence to the [[#Completeness Axiom]] (a1.52)
-
-> A lot of books called to Least-upper-bound property *completeness axiom*. (see q3.14)
+> Least-upper-bound property is equivalence to the [[#Completeness Axiom]] (a1.52). A lot of books called to Least-upper-bound property *completeness axiom*. (see q3.14)
 
 #### Infimum (Greatest-lower-bound)
 

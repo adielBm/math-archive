@@ -1,3 +1,37 @@
+
+
+| Unit | Theorem |  |
+| ---- | ---- | ---- |
+| [[#Unit 1]] | [[#(1.43) Bernoulli's Inequality]] | induction  |
+|  | [[#(1.47) Existence minimum and maximum of set]] | induction (maximum)  |
+| [[#Unit 2]] | [[#(2.12) Limit Uniqueness]] | by contradiction, trianlge inequality |
+|  | [[#(2.16) Convergent sequence is Bounded]] | define eps=1, triangle ineq, define max as abs val of (first elements, a_N, L) +1 |
+|  | [[#(2.22) Null * Bounded = Null]] | lim-def, 2.18 |
+|  | [[#(2.26)]] |  |
+|  | [[#(2.32)]] |  |
+|  | [[#(2.43e) 1/00=0]] |  |
+|  | [[#(2.47)]] |  |
+| [[#Unit 3]] | [[#(3.10)]] | 3.9 |
+|  | [[#3.16 & 3.17]] |  |
+|  | [[#3.22 (Cantor's Lemma)]] |  |
+|  | [[#3.32 (BW)]] |  |
+| [[#Unit 4]] | [[#(4.30) (ε, δ)-definition = Heine's definition]] |  |
+|  | [[#(4.41)]] |  |
+|  | [[#(4.42)]] |  |
+| [[#Unit 5]] | [[#5.29]] |  |
+|  | [[#(5.30) Existence of root for odd polynomial]] | factor-out x^n |
+|  | [[#(5.35) W1]] | by contradiction |
+|  | [[#(5.37) W2 (EVT)]] | W1, 3.9, Squeeze, BW  |
+| [[#Unit 6]] | [[#6.15]] |  |
+| [[#Unit 7]] | [[#(7.9) Differentiability Implies Continuity]] |  |
+| [[#Unit 8]] | [[#8.4 (Fermat's Theorem)]] | left & right derivative is >= (or =<) 0, 7.12|
+|  | [[#8.5 (Rolle's Theorem)]] | W2, Fermat |
+|  | [[#(8.6) Lagrange's MVT]] | g:=f-l, Rolle |
+|  | [[#(8.9) Cauchy's MVT (2nd proof)]] |   |
+|  | [[#(8.10) Darboux's Theorem]] | H:=f-tx, W2 (H), Fermat (H') |
+
+
+
 # Unit 1
 
 ## (1.43) Bernoulli's Inequality 

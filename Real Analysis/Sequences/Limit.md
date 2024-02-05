@@ -164,7 +164,7 @@
 
 - (2.48) $\displaystyle\lim_{n\to \infty }\left|{\frac {a_{n+1}}{a_{n}}}\right|<1\implies\lim_{ n \to \infty }(a_{n})=0$
 	- if $\displaystyle\lim_{n\to \infty }{\frac {a_{n+1}}{a_{n}}}>1$ (or $=\infty$) and $a_{n}>0$, then $\displaystyle\lim_{ n \to \infty }(a_{n})=\infty$
-	 
+
 # Cantor's Lemma
 
 - (3.22) **Cantor's intersection** theorem (Cantor's Lemma, Nested Intervals Theorem)

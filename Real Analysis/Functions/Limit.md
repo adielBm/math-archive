@@ -161,21 +161,20 @@ ____
 
 $$\displaystyle  {\frac {0}{0}},~{\frac {\infty }{\infty }},~0\times \infty ,~\infty -\infty ,~0^{0},~1^{\infty },{\text{ and }}\infty ^{0}$$
 
-
-
 |  |  | Transformation to $\frac{0}{0}$ | Transformation to $\frac{∞}{∞}$ |
 | ---- | ---- | ---- | ---- |
 | $\displaystyle\lim_{ x \to x_{0} }\frac{f(x)}{g(x)}$ | $\displaystyle\frac{0}{0}$ | - | $\displaystyle\lim_{ x \to x_{0} }\frac{1/g(x)}{1/f(x)}$ |
 |  | $\displaystyle\frac{\infty}{\infty}$ | $\displaystyle\lim_{ x \to x_{0} }\frac{1/g(x)}{1/f(x)}$ | - |
 | $\displaystyle\lim_{ x \to x_{0} }f(x)- g(x)$ | $\infty-\infty$ |  | $\displaystyle\ln \lim _{x\to x_{0}}{\frac {e^{f(x)}}{e^{g(x)}}}\!$ |
 | $\displaystyle\lim_{ x \to x_{0} }f(x)\cdot g(x)$ | $0\cdot \infty$ |  |  |
-| $\displaystyle  \lim _{x\to x_{0}}f(x)^{g(x)}$ | $\displaystyle 1^{\infty}$ | $\displaystyle\exp \lim _{x\to x_{0}}{\frac {\ln f(x)}{1/g(x)}}$ | $\displaystyle\exp \lim _{x\to x_{0}}{\frac {g(x)}{1/\ln f(x)}}\!$ |
+| $\displaystyle  \lim _{x\to x_{0}}f(x)^{g(x)}$ | $\displaystyle 1^\infty$ | $\displaystyle\exp \lim _{x\to x_{0}}{\frac {\ln f(x)}{1/g(x)}}$ | $\displaystyle\exp \lim _{x\to x_{0}}{\frac {g(x)}{1/\ln f(x)}}\!$ |
 |  | $0^0$ |  |  |
 |  | $\infty^0$ |  |  |
-|  |  |  |  |
+
 # Examples
 
-- (e4.31) $\displaystyle\lim_{ x \to \infty }\sqrt{ x }=\infty$
+
+### Trigonometric functions
 
 - (4.44a) $\displaystyle\lim_{ x \to 0 }\sin x=0$
 - (4.44b) $\displaystyle\lim_{ x \to 0 }\cos x=1$
@@ -187,36 +186,81 @@ $$\displaystyle  {\frac {0}{0}},~{\frac {\infty }{\infty }},~0\times \infty ,~\i
 - $\displaystyle\lim_{ x \to 0 }{\frac{\sin (x)}{cx}}=\frac{1}{c}$
 - $\displaystyle\lim_{x \to 0}{\frac{\arcsin{x}}{x}}=\lim_{x \to 0}{\frac{\arctan{x}}{x}}=1$
 - $\displaystyle\lim_{x\to\infty} (x \sin(1/x)) = 1$
-- (q4.85c) $\displaystyle\lim_{ x \to \infty }f(x)=\lim_{ x \to 0^+ }f(1/x)$ (assuming $f$ defined on $(M,\infty)$)
-- (q4.85d) $\displaystyle\lim_{ x \to -\infty }f(x)=\lim_{ x \to \infty }f(-x)$ (assuming $f$ defined on $(-\infty,M)$)
 
 - $(\cos{x})^{\sin x}$
 	- $\displaystyle\lim_{ x \to 0 }(\cos{x})^{\sin x}=$ #todo see e6.3 page 179
 
 
-- $x$
-	- (q4.82a) $\displaystyle\lim_{ x \to \infty } {x}=\infty$
-	- $\displaystyle\lim_{ x \to x_{0} } {x}=x_{0}$
 
-- $x^c$
-	- $c>0$
-		- $\displaystyle\lim_{ x \to \infty }x^c=\infty$
-		- $\displaystyle\lim_{ x \to 0^+ }x^c=0$
+### Exponential functions 
+
+#### Functions of the form c^g(x)
+
+#### $\lim c^x$
+
+(6.9)
+
+| ${c^x}$ | $x\to -\infty$ | $x\to x_{0}$ | $x\to \infty$ |
+| ---- | ---- | ---- | ---- |
+| $0<c<1$ | $\lim=\infty$ |  | $\lim=0$ |
+| $c=1$ | $\lim=1$ | $\lim=1$ | $\lim=1$ |
+| $1<c$ | $\lim=0$ | $\lim=c^{x_{0}}$ | $\lim=\infty$ |
+#### $\lim c^{1/x}$
+
+$\displaystyle  \lim _{x\to \infty }{\sqrt[{x}]{c}}=\lim _{x\to \infty }{c}^{1/x}={\begin{cases}1,&c>0\\0,&c=0\\{\text{does not exist}},&c<0\end{cases}}$
+
+#### Functions of the form $f(x)^{g(x)}$
+
+- (6.16) $\displaystyle\lim_{ x \to \infty }\left( 1+\frac{1}{x} \right)^x=e$
+- (6.17) $\displaystyle\lim_{ x \to -\infty }\left( 1+\frac{1}{x} \right)^x=e$
+- (6.18) $\displaystyle\lim_{ x \to 0 }(1+x)^{1/x}=e$
+
+- $\displaystyle\lim_{ x \to \infty }\left( 1-\frac{1}{x} \right)^x=\frac{1}{e}$
 
 
+### Polynomials
 
-- $c^x$
-	- $c>1$
-		- $\displaystyle\lim_{ x \to \infty }c^x=\infty$
-		- $\displaystyle\lim_{ x \to -\infty }c^x=0$
-		- $\displaystyle\lim_{ x \to x_{0} }c^x=c^{x_{0}}$ #todo 
-	- $0<c<1$
-		- $\displaystyle\lim_{ x \to \infty }c^x=0$
-		- $\displaystyle\lim_{ x \to -\infty }c^x=\infty$
+- $\displaystyle  {\displaystyle \lim _{x\to c}p(x)=p(c)}$
+- $p$ is n degree polynomial and $a_{n}\neq 0$
+	- $\displaystyle\lim_{x\rightarrow \infty} p(x) = \text{sign}(a_n) \cdot \infty$
+	- $\displaystyle\lim_{x\rightarrow-\infty}p(x)=\begin{cases} \phantom{-}{\rm sign}(a_n) \infty & n\text{ even} \\ {-}{\rm sign}(a_{n}) \infty & n \text{ odd} \end{cases}$
 
-- $\ln x$
-	- $\displaystyle\lim_{ x \to \infty }\ln x=\infty$
-	- $\displaystyle\lim_{ x \to 0^+ }\ln x=-\infty$
+### Functions of the form x^c
+
+- (e4.31) $\displaystyle\lim_{ x \to \infty }\sqrt{ x }=\lim_{ x \to \infty }x^{1/2}=\infty$
+- (q4.82a) $\displaystyle\lim_{ x \to \infty } {x}=\infty$
+- $\displaystyle\lim_{ x \to x_{0} } {x}=x_{0}$
+- $\displaystyle\lim_{ x \to x_{0} } {x^c}=x_{0}^c$
+
+- $c>0$
+	- $\displaystyle\lim_{ x \to \infty }x^c=\infty$
+	- $\displaystyle\lim_{ x \to 0^+ }x^c=0$
+
+
+### Logarithmic functions
+
+#### b<1
+
+- $\displaystyle\lim_{ x \to \infty }\log_{b} x=-\infty$
+- $\displaystyle\lim_{ x \to 0^+ }\log_{b} x=\infty$
+
+#### b>1
+
+- $\displaystyle\lim_{ x \to \infty }\log_{b} x=\infty$
+- $\displaystyle\lim_{ x \to 0^+ }\log_{b} x=-\infty$
+
+##### Natural logarithms
+
+- $\displaystyle\lim_{ x \to x_{0} }\ln x=\ln x_{0}$
+- $\displaystyle\lim_{ x \to \infty }\ln x=\infty$
+- $\displaystyle\lim_{ x \to 0^+ }\ln x=-\infty$
+
+### Other
+
+- (q4.85c) $\displaystyle\lim_{ x \to \infty }f(x)=\lim_{ x \to 0^+ }f(1/x)$ (assuming $f$ defined on $(M,\infty)$)
+- (q4.85d) $\displaystyle\lim_{ x \to -\infty }f(x)=\lim_{ x \to \infty }f(-x)$ (assuming $f$ defined on $(-\infty,M)$)
+
+
 
 
 - $\displaystyle\lim_{ x \to 0^+ }x^x=1$
@@ -228,18 +272,11 @@ $$\displaystyle  {\frac {0}{0}},~{\frac {\infty }{\infty }},~0\times \infty ,~\i
 		- $\displaystyle\lim_{x\to {0}} \frac{1}{x}$ *does **not** exist* $\impliedby\displaystyle\lim_{x\to {0}^{+}} \frac{1}{x}=\infty\land\lim_{x\to {0}^{-}} \frac{1}{x}=-\infty$
 		- (q4.78) $\displaystyle\lim_{ x \to \infty } \frac{1}{x}=0$
 
-
-- $\displaystyle\left( 1+\frac{1}{x} \right)^x$
-	- (6.16) $\displaystyle\lim_{ x \to \infty }\left( 1+\frac{1}{x} \right)^x=e$
-	- (6.17) $\displaystyle\lim_{ x \to -\infty }\left( 1+\frac{1}{x} \right)^x=e$
-- $(1+x)^{1/x}$
-	- (6.18) $\displaystyle\lim_{ x \to 0 }(1+x)^{1/x}=e$
-
-
-
 - $\displaystyle\frac{x^r}{a^x}$ (assuming $a>1$, and $r\in\mathbb{R}$)
 	- (q6.13) $\displaystyle\lim_{ x \to \infty }\frac{x^r}{a^x}=0$ 
 - (q6.17) $\displaystyle\lim_{ x \to \infty }\frac{\ln x}{x^a}=0$ where $a>0$
+
+
 # Asymptotes
 
 - The vertical line $x=x_{0}$ is a **vertical asymptote** of the function $y = f(x)$ if
