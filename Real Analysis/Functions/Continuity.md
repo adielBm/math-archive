@@ -41,18 +41,17 @@
 	- $(\forall{x_{0}\in{I}})(\forall{\varepsilon>0})(\exists\delta>0):(\forall{x\in{I}}),~|x-x_{0}|<\delta\implies{|f(x)-f(x_{0})|<\varepsilon}$
 	- (5.27) For each sequence $(x_{n})^{\infty}_{n=1}$ of points in the interval $I$. we have $\displaystyle\lim_{ n \to \infty }x_{n}=x_{0}\in{I}\implies{\lim_{ n \to \infty }}f(x_{n})=f(x_{0})$
 
-
 #### Theorems
 
 - (assuming $f$ is defined on the interval $(a,b)$)
 	- if $f$ is continuous on each interval $[c,d]\subset(a,b)$ then $f$ is continuous $(a,b)$. (exam23A.tB.q9b)
 
 - (assuming $f$ is continuous on the interval $I$)
-	- if $f$ is injective then it's strictly monotonic 
+	- $f$ is injective $\iff$ $f$ is [[Classification#Monotonicity|monotonic]] 
 	- (5.43) if $f$ is monotonic then there exist a inverse fucntion $f^{-1}$ whose domain is $f(I)$ and its image is $I$ which $f^{-1}$ itself is monotonic and continuous on $f(I)$. ($f^{-1}$ is increasing if $f$ is decreasing, and vice versa)
 
 
-- assuming $f$ is continuous on $I=[a,b]$
+- (assuming $f$ is continuous on $I=[a,b]$)
 	- (5.29) **Bolzano's Theorem**
 		- $f(a)\cdot f(b)<0\implies \exists c\in(a,b):f(c)=0$
 	- (5.31) **Intermediate Value Theorem** (IVT)
@@ -69,11 +68,6 @@
 	- (q8.25) if $f$ is **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$ 
 	- (5.48) **Heine–Cantor theorem** - $f$ is uniformly continuous on it.
 
-
-
-
-
- 
 
 ## Examples
 

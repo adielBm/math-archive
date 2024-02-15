@@ -171,8 +171,30 @@ $$\displaystyle  {\frac {0}{0}},~{\frac {\infty }{\infty }},~0\times \infty ,~\i
 |  | $0^0$ |  |  |
 |  | $\infty^0$ |  |  |
 
-# Examples
 
+# Bounded Monotonic Function 
+
+- (5.39) **Bounded Monotonic Function** - $f$ is **monotonic** and defined on open interval $(a,b)$.
+	- $f$ is **bounded** on an open interval $(a,b)$, then both $\displaystyle\lim_{ x \to b^{-} }f(x)$ and $\displaystyle\lim_{ x \to a^{+} }f(x)$ exist (finite)
+		- if $f$ is **increasing** then 
+			- $\displaystyle\lim_{ x \to b^{-} }f(x)=\sup f\big((a,b)\big)$ 
+			- $\displaystyle\lim_{ x \to a^{+} }f(x)=\inf f\big((a,b)\big)$ 
+		- if $f$ is **decreasing** then 
+			- $\displaystyle\lim_{ x \to b^{-} }f(x)=\inf f\big((a,b)\big)$ 
+			- $\displaystyle\lim_{ x \to a^{+} }f(x)=\sup f\big((a,b)\big)$ 
+	- if $f$ is **not bounded above**
+		- if $f$ is **increasing** then 
+			- $\displaystyle\lim_{ x \to b^{-} }f(x)=+\infty$ 
+		- if $f$ is **decreasing** then 
+			- $\displaystyle\lim_{ x \to a^{+} }f(x)=+\infty$ 
+	- if $f$ is **not bounded below**
+		- if $f$ is **increasing** then 
+			- $\displaystyle\lim_{ x \to a{+} }f(x)=-\infty$ 
+		- if $f$ is **decreasing** then 
+			- $\displaystyle\lim_{ x \to b^{-} }f(x)=-\infty$ 
+
+
+# Examples
 
 ### Trigonometric functions
 

@@ -20,3 +20,10 @@ ___
 ___
 
 - A consistent theory T in a language L is categorical if all models of T are isomorphic.
+
+
+
+- A theory is categorical if it has exactly one model (up to isomorphism)
+	- In first-order logic, only theories with a finite model can be categorical. 
+	- Higher-order logic contains categorical theories with an infinite model. 
+		- For example, the second-order Peano axioms are categorical, having a unique model whose domain is the set of natural numbers 

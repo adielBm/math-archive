@@ -1,16 +1,4 @@
-	
 
-
-
-![trigo\|250](https://upload.wikimedia.org/wikipedia/commons/7/72/Sinus_und_Kosinus_am_Einheitskreis_1.svg)
-
-
-- $\cos:\mathbb{R}\to[-1,1]$
-- $\sin:\mathbb{R}\to[-1,1]$
-
-- **SOH-CAH-TOA**
-
-## Fundamental Identities 
 
 - $\displaystyle\sin\theta=\cos\left(\frac{\pi}{2} - \theta \right)$
 - $\displaystyle\cos\theta = \sin\left(\frac{\pi}{2} - \theta \right)$
@@ -25,9 +13,6 @@
 - $\displaystyle\sec\theta=\frac{1}{\cos \theta}$
 - $\displaystyle\csc\theta=\frac{1}{\sin \theta}$
 
-### Inverse trigonometric functions
-
-- $\arcsin(x),~ \arccos(x), ~\arctan(x)$
 
 ### Pythagorean identities
 $$
@@ -83,10 +68,21 @@ $$
 
 ___
 
+
+![trigo\|250](https://upload.wikimedia.org/wikipedia/commons/7/72/Sinus_und_Kosinus_am_Einheitskreis_1.svg)
+
+___
+
+
 |  | $\sin$ | $\cos$ |
 | ---- | ---- | ---- |
 | $1$ | $2k\pi+\frac{\pi}{2}$ | $2k\pi$ |
 | $0$ | $k\pi$ | $(2k+1)\frac{2}{\pi}$ |
 | $-1$ | $2k\pi-\frac{\pi}{2}$ | $(2k + 1)\pi$ |
 
+___
 
+
+### Inverse trigonometric functions
+
+- $\arcsin(x),~ \arccos(x), ~\arctan(x)$

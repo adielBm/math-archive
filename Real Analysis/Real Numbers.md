@@ -143,6 +143,8 @@ $$\large A\subset\mathbb{R}$$
 	- (q3.61c) $\forall x \in A,x> a\implies \sup{A}> a$
 	- (3.10) $\sup{(A+B)}=\sup{A}+\sup{B}$
 	- (3.14) $\inf{(-A)}=-\sup{A}$
+	- (q3.62) $\sup(A \cup B)=\max\{ \sup{A},\sup{B} \}$
+
 
 > Least-upper-bound property is equivalence to the [[#Completeness Axiom]] (a1.52). A lot of books called to Least-upper-bound property *completeness axiom*. (see q3.14)
 
@@ -163,7 +165,7 @@ $$\large A\subset\mathbb{R}$$
 	- (q3.61a) $\forall x \in A,x\leq a\implies \sup{A}\leq a$
 	- (q3.61c) $\forall x \in A,x> a\implies \sup{A}> a$
 	- (3.10) ${\displaystyle \inf(A+B)=(\inf A)+(\inf B)}$
-	
+	- (q3.62) $\inf(A \cup B)=\min\{ \inf{A},\inf{B} \}$
 #### Theorems
 
 - (q3.13) if $A$ is non-empty and bounded

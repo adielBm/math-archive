@@ -1,14 +1,14 @@
-
+# Table of Content
 
 | Unit | Theorem |  |
 | ---- | ---- | ---- |
-| [[#Unit 1]] | [[#(1.43) Bernoulli's Inequality]] | induction  |
-|  | [[#(1.47) Existence minimum and maximum of set]] | induction (maximum)  |
-| [[#Unit 2]] | [[#(2.12) Limit Uniqueness]] | by contradiction, trianlge inequality |
-|  | [[#(2.16) Convergent sequence is Bounded]] | define eps=1, triangle ineq, define max as abs val of (first elements, a_N, L) +1 |
-|  | [[#(2.22) Null * Bounded = Null]] | lim-def, 2.18 |
-|  | [[#(2.26)]] |  |
-|  | [[#(2.32)]] |  |
+| [[#Unit 1]] | [[#(1.43) Bernoulli's Inequality]] | by-induction; multiplying by $(1+x)\geq 0$ (because $x>-1$) |
+|  | [[#(1.47) Existence minimum and maximum of set]] | by-induction (for max.); |
+| [[#Unit 2]] | [[#(2.12) Limit Uniqueness]] | by-contra.; $\varepsilon:=\frac{\mid L-M\mid}{3}$ trianlge ineq; |
+|  | [[#(2.16) Convergent sequence is Bounded]] | $\varepsilon:=1$; triangle ineq; $M:=\max\{ \vert a_{1}\vert ,\vert a_{2}\vert , \dots, \vert a_{N}\vert , \vert L\vert  \}+1$ |
+|  | [[#(2.22) Null * Bounded = Null]] | lim-def, 2.18 $\|a_{n}\|<\varepsilon\implies \|a_{n}\|<\frac{\varepsilon}{M}$ |
+|  | [[#(2.26)]] | $\varepsilon:= \vert L\vert>0$ |
+|  | [[#(2.32)]] | N:=max(N1,N2) |
 |  | [[#(2.43e) 1/00=0]] |  |
 |  | [[#(2.47)]] |  |
 | [[#Unit 3]] | [[#(3.10)]] | 3.9 |
@@ -18,16 +18,17 @@
 | [[#Unit 4]] | [[#(4.30) (ε, δ)-definition = Heine's definition]] |  |
 |  | [[#(4.41)]] |  |
 |  | [[#(4.42)]] |  |
-| [[#Unit 5]] | [[#5.29]] |  |
+| [[#Unit 5]] | 5.15 Composition Function - Continuous  | by 5.14; con-def-5.1; |
+|  | [[#5.29]] |  |
 |  | [[#(5.30) Existence of root for odd polynomial]] | factor-out x^n |
 |  | [[#(5.35) W1]] | by contradiction |
-|  | [[#(5.37) W2 (EVT)]] | W1, 3.9, Squeeze, BW  |
+|  | [[#(5.37) W2 (EVT)]] | W1, 3.6, 3.9, Squeeze, BW, 5.27 |
 | [[#Unit 6]] | [[#6.15]] |  |
 | [[#Unit 7]] | [[#(7.9) Differentiability Implies Continuity]] |  |
-| [[#Unit 8]] | [[#8.4 (Fermat's Theorem)]] | left & right derivative is >= (or =<) 0, 7.12|
+| [[#Unit 8]] | [[#8.4 (Fermat's Theorem)]] | left (& right) derivative is $\geq$ (& $\leq$) 0; 7.12 |
 |  | [[#8.5 (Rolle's Theorem)]] | W2, Fermat |
 |  | [[#(8.6) Lagrange's MVT]] | g:=f-l, Rolle |
-|  | [[#(8.9) Cauchy's MVT (2nd proof)]] |   |
+|  | [[#(8.9) Cauchy's MVT (2nd proof)]] |  |
 |  | [[#(8.10) Darboux's Theorem]] | H:=f-tx, W2 (H), Fermat (H') |
 
 
@@ -83,7 +84,6 @@ $$( \lim_{ n \to \infty } a_{n}=L \land{\lim_{ n \to \infty } a_{n}=M})\implies{
 | $3\vert{L-M}\vert < 2\vert L-M\vert$ | Multiplying both sides by 3 |
 | $3<2$ | Dividing by $\vert L-M\vert$ both sides |
 | **Contradiction!** |  |
-|  |  |
 
 ## (2.16) Convergent sequence is Bounded
 
@@ -105,23 +105,25 @@ A product of **null** and **bounded** sequences is **null** sequence
 | 1 | $\displaystyle\lim_{ n \to \infty }a_{n}=0$ | given |
 | 2 | $\vert b_{n}\vert<M$ | given |
 |  | $\forall \varepsilon>0,\exists N:\forall n \in \mathbb{N},(n>N\implies \vert{a_{n}}\vert<\varepsilon)$ | by 1 |
-| 3 | $\forall \varepsilon>0,\exists N:\forall n \in \mathbb{N},\left( n>N\implies \vert{a_{n}}\vert<{\color{red}\frac{\varepsilon}{M}} \right)$ | by 2.18  |
+| 3 | $\forall \varepsilon>0,\exists N:\forall n \in \mathbb{N},\left( n>N\implies \vert{a_{n}}\vert<{\color{red}\frac{\varepsilon}{M}} \right)$ | by 2.18 |
 |  | $\vert a_{n}b_{n}\vert=\vert a_{n}\vert\vert b_{n}\vert<\frac{\varepsilon}{M} M=\varepsilon$ | by 2 & 3 |
 |  | $\displaystyle\lim_{ n \to \infty }a_{n}b_{n}=0$ |  |
+|  |  |  |
 
 ## (2.26)
 
 Let $(a_n)$ be a convergent sequence, if $\displaystyle\lim_{ n \to \infty }{a_{n}}\neq 0$, then for almost all $n$ we have $a_{n}\neq 0$
 
 
-|  | implied by |
-| ---- | ---- |
-| $\displaystyle\lim_{ n \to \infty }a_{n}=L\neq 0$ | given |
-| $\varepsilon:= \vert L\vert>0$ |  |
-| $\forall \varepsilon>0,\exists N:\forall n \in \mathbb{N},(n>N\implies \vert{a_{n}-L}\vert<\vert L \vert)$ | by definition |
-| for almost all $n$ we have $a_{n}\neq 0$ |  |
+|  |  | implied by |
+| ---- | ---- | ---- |
+|  | $\displaystyle\lim_{ n \to \infty }a_{n}=L\neq 0$ | given |
+| $\forall \varepsilon>0,\exists N:\forall n \in \mathbb{N},n>N\implies$ | $\vert{a_{n}-L}\vert<\varepsilon$ | by definition |
+|  | $\vert{a_{n}-L}\vert<\vert{L}\vert$ | $\varepsilon:= \vert L\vert>0$ |
+| for almost all $n$ we have $a_{n}\neq 0$ |  |  |
 
-## (2.32)
+ 
+## (2.32) Squeeze (Sequences)
 
 - Let $(a_n)$ and $(b_n)$ be two convergent sequences:
 - Let $(x_n)$ be a sequence, where $a_{n}\leq x_{n}\leq b_{n}$ for almost all $n$, then, $\displaystyle\lim_{n \to \infty} a_n =\lim_{n \to \infty} b_n=L\implies\displaystyle\lim_{n \to \infty} x_n=L$
@@ -137,13 +139,13 @@ Let $(a_n)$ be a convergent sequence, if $\displaystyle\lim_{ n \to \infty }{a_{
 
 ## (2.43e) 1/∞=0
  
-|  |  |
-| ---- | ---- |
-| $\displaystyle\lim_{n \to \infty} a_n=\infty$ | given |
-| $\forall K \in \mathbb{R},\exists N \in \mathbb{N}:\forall n \in \mathbb{N},(n\geq N\implies a_{n}>K)$ |  |
-| $\forall K \in \mathbb{R},\exists N \in \mathbb{N}:\forall n \in \mathbb{N},\left( n\geq N\implies a_{n}<\frac{1}{K} \right)$ |  |
-| $\forall K \in \mathbb{R},\exists N \in \mathbb{N}:\forall n \in \mathbb{N},\left( n\geq N\implies K<\frac{1}{a_{n}} \right)$ |  |
-| #todo  |  |
+|  |  |  |
+| ---- | ---- | ---- |
+|  | $\displaystyle\lim_{n \to \infty} a_n=\infty$ |  |
+| $\forall K \in \mathbb{R},\exists N:\forall n \in \mathbb{N},n\geq N\implies$ | $a_{n}>K$ |  |
+|  | $a_{n}>K>\frac{1}{K}$ |  |
+|  | $\frac{1}{a_{n}}<K$ |  |
+|  | $\displaystyle\lim_{n \to \infty} \frac{1}{a_n}=0$ |  |
 
 ## (2.47)
 
@@ -168,15 +170,57 @@ Let $(a_n)$ be a convergent sequence, if $\displaystyle\lim_{ n \to \infty }{a_{
 
 ## 3.16 & 3.17
  
- [[Monotonicity#Monotone Convergence Theorem]]
+ [[Real Analysis/Sequences/Monotonicity#Monotone Convergence Theorem]]
 
 ## 3.22 (Cantor's Lemma)
 
+
+- (3.22) **Cantor's intersection** theorem (Cantor's Lemma, Nested Intervals Theorem)
+	- A **sequence of nested intervals** is a sequence $(I_{n})^\infty_{n=1}$ of non-empty, closed intervals, $I_{n}=[a_{n},b_{n}]$, satisfying:
+		- $I_{1}\supseteq I_{2}\supseteq I_{3}\supseteq\dots$ 
+		- $\displaystyle\lim_{ n \to \infty }(b_{n}-a_{n})=0$
+	- The intersection of a sequence $(I_{n})^{\infty}_{n=1}$ of nested intervals is $\bigcap_{n=1}^{\infty}I_{n}=\{ x \}$, and $\displaystyle x=\lim_{ n \to \infty }(a_{n})=\lim_{ n \to \infty }(b_{n})$
+
+|  |  | implied by |
+| ---- | ---- | ---- |
+| Given-1 | $I_{1}\supseteq I_{2}\supseteq I_{3}\supseteq\dots$ |  |
+| Given-2 | $\displaystyle\lim_{ n \to \infty }(b_{n}-a_{n})=0$ |  |
+|  | $[a_{n},b_{n}]\supseteq[a_{n+1},b_{n+1}]$ | by Given-1 |
+|  | $a_{n}\leq a_{n+1}\leq b_{n+1}\leq b_{n}$ |  |
+|  | $(a_{n})$ and $(b_{n})$ are bounded<br>$(a_{n})$ is increasing, $(b_{n})$ is decreasing |  |
+|  | $(a_{n})$ and $(b_{n})$ are convergent | 3.16 |
+|  | $x:=\displaystyle\lim_{ n \to \infty }(a_{n})=\lim_{ n \to \infty }(b_{n})$ | by Given-2 |
+|  | $x=\sup\{ a_{n}:n \in \mathbb{N} \}=\inf\{ b_{n}:n \in \mathbb{N} \}$ |  |
+|  | $\forall n \in \mathbb{N}, a_{n}\leq x \leq b_{n}$ |  |
+|  | $\displaystyle x \in \bigcap_{n=1}^{\infty}I_{n}$ |  |
+|  | ($x$ is the only element in this union: if $a_{n}\leq y \leq b_{n}$, then by squeeze we have $\displaystyle y=\lim_{ n \to \infty }y=\lim_{ n \to \infty }a_{n}=x$)<br> | squeeze |
+
 ## 3.32 (BW)
 
+**BW:** Every bounded sequence has a convergent subsequence.
+
+**Proof:** Let $(x_n)$ be a bounded sequence. 
+
+A sequence of intervals $(I_n=[a_{n},b_{n}])^{\infty}_{n=1}$ satisfying the following conditions:
+
+1. Each interval contains the interval that follows it.
+2. The length of each interval is half the length of the interval that precedes it.
+3. Each interval contains infinitely many terms of the sequence $(x_{n})$
+
+From 2, it follows that the length of the interval $I_n$ is $\frac{1}{2^{n - 1}} (b - a)$, and therefore this length tends to 0 as $n$ tends to infinity. Therefore, the conditions of the Cantor Lemma are satisfied. It follows that the intervals $(I_n)$ have a unique common point, which we denote by $L$.
+
+Now we construct a subsequence $(x_{n_k})$ of $(x_n)$ that converges to $L$. We define the sequence of indices $(n_{k})$ recursively:
+
+* $n_1 = 1$.
+* For $k \ge 2$, we choose $n_k$ to be the smallest index such that $x_{n_k} \in I_{n_{k - 1}}'$ and $x_{n_k} < L$. (This choice is possible because there are infinitely many indices $n$ such that $x_n \in I_{n_{k - 1}}'$.)
+
+In this way, we obtain a subsequence $(x_{n_k})$ such that $x_{n_{k - 1}} \ge x_{n_k} > L \ge x_{n_{k + 1}}.$ By the squeeze theorem, $\displaystyle\lim_{k \to \infty} x_{n_k} = L,$ and we have proven that there exists a convergent subsequence of $(x_n)$.
 
 
-# unit 4
+
+
+
+# Unit 4
 
 ## (4.30) (ε, δ)-definition ≡ Heine's definition
 
@@ -232,21 +276,28 @@ Let $(a_n)$ be a convergent sequence, if $\displaystyle\lim_{ n \to \infty }{a_{
 ____
 
 
-# unit 5
+# Unit 5
+
+## 5.15 Composition Function - Continuous
 
 - (5.15) **Composition Function** - if $g$ is continuous in $t_{0}$, and $f$ is continuous in $x_{0}$ where $x_{0}=g(t_{0})$, then $f(g(x))$ is continuous in $t_{0}$
 
 ## 5.29
 
-- assuming $f$ is continuous on $I=[a,b]$
-	- (5.29) **Bolzano's Theorem**
-		- $f(a)\cdot f(b)<0\implies \exists c\in(a,b):f(c)=0$
+#todo 
 
-|  | Statement | Implied By |
+- (Bolzano's Theorem) assuming $f$ is continuous on $I=[a,b]$
+	- $f(a)\cdot f(b)<0\implies \exists c\in(a,b):f(c)=0$
+
+|  |  | Implied By |
 | ---- | ---- | ---- |
-|  | $f$ is continuous on $I=[a,b]$ | Given-1 |
-|  | $f(a)\cdot f(b)<0$ | Given-2 |
-
+| Given-1 | $f$ is continuous on $I=[a,b]$ |  |
+| Given-2 | $f(a)\cdot f(b)<0$ |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
 
 ## (5.30) Existence of root for odd polynomial
 
@@ -275,22 +326,20 @@ ____
 		- $\exists{m,M}: \displaystyle  {\displaystyle m\leq f(x)\leq M\quad \forall x\in [a,b]}$
 
 
-
 |  | Proof by Contradiction | Implied By |
 | ---- | ---- | ---- |
 | Given-1 | $f$ is continuous on $I=[a,b]$ |  |
-|  | $f$ is **not bounded** above on $I=[a,b]$ | Assume by contradiction |
-|  | $\forall n \in \mathbb{N}, \exists x_{n} \in(a,b):f(x_{n})>n$ |  |
-|  | let's de |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-
-#todo 
-
+|  | $f$ is **not bounded** on $I=[a,b]$ | Assume by contradiction |
+|  | $\lnot\exists M :\forall x \in [a,b],\vert f(x)\vert\leq M$ |  |
+|  | $\forall n \in \mathbb{N}, \exists x_{n} \in[a,b]:\vert f(x_{n})\vert\geq n$ |  |
+| 1 | $\displaystyle\lim_{ n \to \infty }\vert{f(x_{n})}\vert=\infty$ |  |
+|  | $(x_{n})$ is bounded | $a\leq x_{n}\leq b_{}$ |
+|  | $(x_{n})$ has a convergent subsequent $(x_{n_{k}})$ | BW |
+|  | $\displaystyle\lim_{ k \to \infty }x_{n_{k}}=c$ |  |
+|  | $\displaystyle\lim_{ k \to \infty }f(x_{n_{k}})=f(c)$ | 5.27 |
+| 2 | $\displaystyle\lim_{ k \to \infty }\vert f(x_{n_{k}})\vert=\vert f(c)\vert$ |  |
+| 3 | $\displaystyle\lim_{ k \to \infty }\vert f(x_{n_{k}})\vert=\infty$ | by 1 & 3.25  |
+|  | **Contradiction!** 2 & 3 |  |
 ## (5.37) W2 (EVT)
 
 - assuming $f$ is continuous on $I=[a,b]$
@@ -303,21 +352,20 @@ ____
 | Step | Statement | Implied By |
 | ---- | ---- | ---- |
 |  | $f$ is continuous on $I=[a,b]$ | Given |
-|  | $f$ is bounded on $I=[a,b]$ | (5.35) W1 |
-|  | $M:=\sup f([a,b])$ |  |
-|  | $\forall\varepsilon>0,\exists{y\in{f([a,b])}}:y>M-\varepsilon$ | by 3.9 |
-|  | $\forall\varepsilon>0,\exists{x_{0}\in{[a,b]}}:f(x_{0})>M-\varepsilon$ |  |
-|  | $\forall n \in\mathbb{N},\exists{x_{n}\in[a,b]}:f(x_{n})>M-\frac{1}{n}$ |  |
-|  | $\forall n \in\mathbb{N},\exists{x_{n}\in[a,b]}:f(x_{n})\leq M$ |  |
+|  | $f$ is bounded on $I=[a,b]$ by $M$ | (5.35) W1 |
+|  | $M=\sup f([a,b])$ | 3.6 (LUB) |
+|  | $\forall\varepsilon>0,\exists{y\in{f([a,b])}}:M-\varepsilon<y$ | by 3.9 |
+|  | $\forall\varepsilon>0,\exists{x\in{[a,b]}}:M-\varepsilon<f(x)$ |  |
+|  | $\forall n \in\mathbb{N},\exists{x_{n}\in[a,b]}:M-\frac{1}{n}<f(x_{n})$ | $\varepsilon:=\frac{1}{n}$ |
+|  | ${\color{gray}\forall n \in\mathbb{N},\exists{x_{n}\in[a,b]}:}M-\frac{1}{n}<f(x_{n})\leq M$ |  |
 | 1 | $\displaystyle\lim_{ n \to \infty }f(x_{n})=M$ | by squeeze |
 |  | $(x_{n})$ is bounded |  |
 |  | $(x_{n})$ has a convergent subsequence $(x_{n_{k}})$ | by BW (3.32) |
 |  | $x_{0}:=\displaystyle\lim_{ k \to \infty }x_{n_{k}}$ |  |
 |  | $a\leq x_{0} \leq b$ |  |
 |  | $\displaystyle\lim_{ k \to \infty }f(x_{n_{{k}}})=M$ | by 1 and 3.25 |
-|  | $f(x_{0})=\displaystyle\lim_{ k \to \infty }f(x_{n_{k}})=M$ | by 5.27 |
+|  | $f(x_{0})=\displaystyle\lim_{ k \to \infty }f(x_{n_{k}})=M$ | by 5.27 (f is cont.) |
 |  | $x_{0}$ is maximum point of $f$ on $[a,b]$ |  |
-
 # Unit 6
 
 ## 6.15
@@ -377,7 +425,7 @@ ____
 |  | $f'(x_{0})=f'_{+}(x_{0})=\displaystyle\lim_{ h \to 0^+ }\frac{f(x_{0}+h)-f(x_{0})}{h}\leq 0$ |  |
 |  | $f'(x_{0})=f'_{-}(x_{0})=\displaystyle\lim_{ h \to 0^- }\frac{f(x_{0}+h)-f(x_{0})}{h}\geq 0$ |  |
 | **Conclusion** | $f'(x_{0})=0$ |  |
-
+|  |  |  |
 
 ## 8.5 (Rolle's Theorem)
 
@@ -391,7 +439,7 @@ ____
 |  | $\forall c \in(a,b),f'(c)=0$ | derivative of constant function |
 | if $m\neq M$ | $\exists x_{1},x_{2}:f(x_{1})=m,f(x_{2})=M$ |  |
 |  | $f(x_{1})\neq f(x_{2})$ |  |
-|  | at least one of $x_{1},x_{2}$ is an inferior point | because Given-2: $f(a)=f(b)$ |
+|  | at least one of $x_{1},x_{2}$ is an inferior point | because Given-3: $f(a)=f(b)$ |
 |  | $\exists c\in(a,b):f'(c )=0$ | by Fermat (8.4); Given-2;  |
 
 
@@ -420,22 +468,21 @@ ____
 
 ## (8.10) Darboux's Theorem
 
-
 |  | Statement | Implied By |
 | ---- | ---- | ---- |
 | Given-1 | $f$ is differentiable on $[a,b]$ |  |
 | Given-2 | $f'(a)<t<f'(b)$ |  |
 |  | $H(x):=f(x)-tx$ |  |
-|  | $H$ is differentiable and continuous on $[a,b]$  |  |
-|  | $\exists c\in[a,b]:\forall{x}\in[a,b],~H(c)\leq H(x)$ | by EVT-W2 |
-|  | #todo show $c$ IS NOT ENDPOINT!!! |  |
+|  | $H$ is differentiable and continuous on $[a,b]$ | arithmetic |
+| 1 | $\exists{c}\in[a,b]:\forall{x}\in[a,b],~H(c)\leq H(x)$ | by EVT-W2 |
 |  |  |  |
-|  | $c\in(a,b)$  |  |
+|  | #todo  $c$ is NOT an endpoint |  |
+| 2 | $c\in(a,b)$ |  |
+|  | $c$ is a local min point of $H$ | 1, 2 |
 |  | $H'(c)=0$ | by Fermat; |
 |  | $H'(x)=f'(x)-t$ |  |
 |  | $H'(c)=f'(c)-t=0$ |  |
 |  | $f'(c)=t$ |  |
-
 
 ____
 

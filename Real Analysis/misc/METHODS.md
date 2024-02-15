@@ -9,5 +9,46 @@
 	- if so $f$ is (strictly) monotonic therefore is one-to-one therefore $c$ is unique root
 
 
+___
 
+- show that $f(x)\geq 0$ for all $x \in (a,b)$
+
+
+- find $f'$
+	- if $f'>0$ for all $x \in (a,b)$ then $f$ is increaing on $(a,b)$
+	- else, if $f'$ is sometimes positive and sometimes negative, then find $f''$.
+
+
+___
+
+- show that continuous function $f$ is **one-to-one** (or equivalently, **monotonic**)
+
+
+___
+
+- show that continuous function $f>0$
+
+
+
+___
+
+The Closed Interval Method 
+
+To find the absolute maximum and minimum values of a continuous function f on a closed interval $[a,b]$:
+1. Find the values of f at the critical numbers of f in a, a.
+2. Find the values of f at the endpoints of the interval.
+3. The largest of the values from Steps 1 and 2 is the absolute maximum value;
+the smallest of these values is the absolute minimum value.
+
+another version 
+
+A Procedure for Finding the Absolute Extrema of a Continuous Function f on a
+Finite Closed Interval $[a, b]$
+Step 1. Find the critical points of f in $(a, b)$.
+Step 2. Evaluate f at all the critical points and at the endpoints a and b.
+Step 3. The largest of the values in Step 2 is the absolute maximum value of f on $[a, b]$
+and the smallest value is the absolute minimu
+
+
+___
 

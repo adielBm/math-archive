@@ -156,6 +156,12 @@
 - (q2.29) Let $a_{1},\dots ,a_{k}\geq 0$, then $\displaystyle\lim_{n\to\infty} \sqrt[n]{\sum_{i=1}^k a_{i}^n}=\max\{ {a_{1},\dots ,a_{k}} \}$
 - #todo For any continuous function $f$, if $\lim_{n\to \infty }a_{n}$ exists, then $\lim_{n\to \infty }f\left(a_{n}\right)$ exists too.
 
+- (some exam) 
+
+
+	- $\displaystyle\lim_{ n \to \infty }(a_{n})>0\implies \lim_{ n \to \infty }\sqrt{ a_{n} }=1$
+
+	- $\displaystyle\lim_{ n \to \infty }(a_{n})=\infty\implies \lim_{ n \to \infty }\sqrt{ a_{n} }>1$
 
 
 # Ratio test
@@ -167,7 +173,7 @@
 
 # Cantor's Lemma
 
-- (3.22) **Cantor's intersection** theorem (Cantor's Lemma, Nested Intervals Theorem)
+- (3.22) **Cantor's intersection** theorem (Cantor's Lemma, Nested Intervals Theorem (Property))
 	- A **sequence of nested intervals** is a sequence $(I_{n})^\infty_{n=1}$ of non-empty, closed intervals, $I_{n}=[a_{n},b_{n}]$, satisfying:
 		- $I_{1}\supseteq I_{2}\supseteq I_{3}\supseteq\dots$ 
 		- $\displaystyle\lim_{ n \to \infty }(b_{n}-a_{n})=0$

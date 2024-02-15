@@ -159,6 +159,8 @@ The machine instructions are divided into three groups, according to the number 
 | Absolute (A) | `00` | indicate that the content of the word does not depend on the place in memory where the machine code of the program will actually be loaded during its execution. (thus, requiring no changes in the linkage and loading stages) | a word containing an immediate operand |
 | Relocatable (R) | `10` | indicate that the content of the word depends on the place in memory where the machine code of the program will actually be loaded when it is executed (thus, requiring changes linkage & loading) | a word containing the address of a label defined in the source file |
 | External (E) | `01` | indicates that the content of the word depends on the value of an external symbol (thus, requiring changes linkage & loading) | a word containing the address of an external label, i.e. a label that is not defined in the source file |
+
+
 ### Addressing Modes
 
 In our language, there are four addressing modes, marked with the numbers `0`, `1`, `2`, and `3`.
@@ -621,12 +623,54 @@ Our assembler must separate, in the machine code it generates, the data section 
 - First pass (18 steps)
 - Second pass (10 steps)
 
-### Input and Output Files of the Assembler
+### Assembler Input and Output Files
+
+When using the assembler, provide a list of source file names as command line arguments.
+
+- **Input files:** source files written in the assembly language specified here. Thier names must end with `.as`. For example, `y.as`, `x.as`, and `hello.as` are valid. 
+- When passing file names to the assembler, omit the extension. (For instance, if the assembler is called `assembler`, running `assembler x y hello` processes `x.as`, `y.as`, and `hello.as`.)
+
+**Each input file processed individually**, resulting in the creation of the following output files:
+
+| File | Extension | Content | Notes |
+| ---- | ---- | ---- | ---- |
+| Extended source file | `.am` | Source file after preprocessing (macro expansion). | If no macros are present, the `.am` file is identical to the `.as` file |
+| **Object file** | `.ob` | Machine code |  |
+| **Externals file** | `.ext` | Details about all the places (addresses) in the machine code where a data word encoding the value of a symbol declared as external appears (a symbol that appeared as an operand of the extern directive and is characterized in the symbol table as external). | The file is omitted if there are no extern directives. |
+| **Entries file** | `.evt` | Details about each symbol declared as an entry point (a symbol that appeared as an operand of the entry directive and is characterized in the symbol table as entry). | The file is omitted if there are no entry directives. |
+
+- Output file names are based on the input file names, for exmaple, running `assembler x` processes the file `x.as` and creates the files `x.ob`, `x.am` (and `x.ext`, and `x.ent` if needed)
+
+### Assembler Operation Details
+
+#todo 
+
+In addition to the outline algorithm provided earlier, let's expand on how the assembler operates.
+
+The assembler maintains two arrays, referred to as the **instruction array** (מערך ההוראות) and the **data array** (מערך הנתונים). These arrays essentially represent the machine memory (each entry's size in these arrays is the same as that of a machine word: 14 bits). 
+
+- The instruction array stores the encoding of machine instructions encountered during the traversal of the source file.
+- The data array stores the encoding of data read from the source file (lines of the type `.string` and `.data`).
+
+The assembler has two counters: **Instruction Counter** (IC) and **Data Counter** (DC). These counters indicate the next available location in the respective arrays. When the assembler starts processing a source file, both counters are reset.
+
+Additionally, the assembler maintains a symbol table, where all labels encountered during file traversal are collected. This table, also known as the symbol table, stores the name, value, and various attributes previously defined, such as location (data or code), or update mode (relocatable or external).
+
+- The assembler reads the source file line by line, determining the type of each line (comment, constant, instruction, directive, or empty line), and acts accordingly:
+	- Empty or comment line: The assembler ignores the line and proceeds to the next one.
+	- Constant line: The assembler adds the constant name to the symbol table with the mdefine attribute.
+	- Instruction line:
+
+    - The assembler identifies the operation and addressing modes of the operands. (The number of operands it seeks is determined based on the instruction encountered).
+    - For each operand, the assembler determines its value as follows:
+        - If it's a register: The operand is the register number.
+        - If it's a label (direct addressing): The operand is the value of the label as it appears in the symbol table (the label may not be present in the symbol table yet).
 
 
-### Operation of the Assembler
 
 ### Object File Format
+
+
 
 ### Entries File Format
 
@@ -644,3 +688,42 @@ Our assembler must separate, in the machine code it generates, the data section 
 - It should be possible to have extra spaces in the assembly language input file. For example, if an instruction line has two operands separated by a comma, spaces and tabs are allowed before and after the comma, as well as before and after the operation name. Empty lines are also allowed. The assembler will ignore unnecessary spaces (i.e., skip over them).
 - The input (assembly code) may contain syntax errors. The assembler should detect and report all incorrect lines in the input. Processing of the input file should not stop after the first error is detected. Detailed messages should be printed to the screen whenever possible, so that it will be possible to understand what and where each error is. Of course, if the input file contains errors, there is no point in generating the output files (`ob`, `ext`, `ent`) for it.
 
+____
+
+# Strurctures used in the assembler 
+
+### Label Table
+
+   - This table associates labels with numbers. Each label is mapped to a numerical value, typically representing a memory address or a constant value.
+   - It may have different sections for labels defined by directives like `.define`, `.data`, and instructions (`.code`).
+   - Operations:
+     - Insert: Add a new label and its associated number to the table.
+     - Find: Retrieve the number associated with a given label.
+     - Sort: Arrange the labels in a particular order, usually between passes.
+     - FreeAll: Clear the label table.
+
+### Machine Image Table
+
+- This table holds the machine code generated by the assembler.
+- It may store the binary representation of instructions, data values, and constants.
+- Typically implemented as a constant-size array to represent memory.
+- Operations:
+	- None explicitly mentioned, but likely involves inserting machine code instructions or data values at specific memory addresses.
+
+### Macro Table
+
+- This table is specifically used for managing macros and their expansions.
+- Implemented as a hash table for efficient lookup.
+- Operations:
+	- Insert: Add a new macro definition and its expansion to the table.
+	- Get: Retrieve the expansion of a specific macro.
+	- FreeAll: Clear the macro table.
+
+### Define Table
+
+- This table stores the definitions of constants using the `.define` directive.
+- Can be implemented as either a hash table or a dynamic array.
+- Operations:
+	- Insert: Add a new constant definition and its value to the table.
+	- Find: Retrieve the value associated with a specific constant.
+	- FreeAll: Clear the define table.

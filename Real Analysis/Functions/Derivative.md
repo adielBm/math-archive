@@ -31,8 +31,9 @@
 
 ## Theorems
 
-- if $f$ is differentiable at $x_{0}$, then
-	- (7.9) $f$ then it continuous at $x_{0}$
+- if $f$ is differentiable at $x_{0}$
+	- (7.9) $f$ continuous at $x_{0}$
+	- (q7.62) There exists a neighborhood on which $f$ is bounded 
 - if $f$ and $g$ are differentiable at $x_{0}$ 
 	- (q7.19) **Piecewise Function** $k(x)=\begin{cases} f(x) & x \leq x_0 \\ g(x) & x > x_0 \end{cases}$
 		- $k$ is continuous at $x_{0}$ $\iff f(x_{0})=g(x_{0})$
@@ -48,6 +49,7 @@
 
 > Assuming the function are differentiable at the relevant points
 
+
 | Derivative Rules |  |  |
 | ---- | ---- | ---- |
 | **Sum/Difference Rule** | $(f\pm g)'(x_{0})=f'(x_{0})\pm g'(x_{0})$ |  |
@@ -60,6 +62,9 @@
 | **Chain Rule** | $(f(g(x)))'=f'(g(x))\cdot g'(x)$ | $\displaystyle  {\frac {dz}{dx}}={\frac {dz}{dy}}\cdot {\frac {dy}{dx}}$ |
 |  | $(f(g(h(x))))'=f'(g(h(x))) \cdot g'(h(x)) \cdot h'(x)$ |  |
 |  | $\displaystyle  f_{1\,.\,.\,n}'(x)=\prod _{k=1}^{n}f_{k}'\left(f_{(k+1\,.\,.\,n)}(x)\right)$ |  |
+| linearity of differentiation | $\displaystyle  {\frac {\mbox{d}}{{\mbox{d}}x}}(\alpha \cdot f(x)+\beta \cdot g(x))=\alpha \cdot f'(x)+\beta \cdot g'(x)$ | from the sum and constant factor rules |
+
+
 ## One Side
 
 - $f$ is **right-differentiable at** $x_{0}$ if $\displaystyle  L=\lim_{h\to 0^+}{\frac {f(x_{0}+h)-f(x_{0})}{h}}$ exists. 
@@ -85,6 +90,10 @@
 	- (8.9) (Cauchy's MVT) if $\forall{x\in{(a,b)}},\, g'(x)\neq 0$, then:
 		- $g(a)\neq g(b)$ and $\displaystyle\exists{c\in{(a,b)}}:\frac{f'(c)}{g'(c)}=\frac{f(b)-f(a)}{g(b)-g(a)}$
 
+
+
+	
+
 - $f$ is continuous on $I$, differentiable at every inferior point of $I$
 	- **First Derivative Test for Monotonicity** (q8.28, 8.18, 8.7, q7.12b, q8.29) 
 		- $f'(x)\geq 0\iff$ $f$ is **weakly increasing** on $I$
@@ -92,10 +101,17 @@
 		- $f'(x)\leq0\iff$ $f$ is **weakly decreasing** on $I$
 		- $f'(x)<0\implies$ $f$ is **decreasing** on $I$
 		- $f'(x)=0\iff$ $f$ is **constant** on $I$ 
-		- $f$ is **increasing** on $I$, if and only if, $f'(x)\geq0$, and there is no subinterval on which $f'(x)=0$ for all x in it
-		- $f$ is **decreasing** on $I$, if and only if, $f'(x)\leq0$, and there is no subinterval on which $f'(x)=0$ for all x in it
+		- $f$ is **increasing** on $I$, if and only if, $f'(x)\geq0$, and there is no subinterval on which $f'(x)=0$ for all $x$ in it
+		- $f$ is **decreasing** on $I$, if and only if, $f'(x)\leq0$, and there is no subinterval on which $f'(x)=0$ for all $x$ in it
 
 - if $f$ is continuous on $[a,b]$ and **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$  (by q8.25)
+
+
+
+
+- $f$ is differentiable at every inferior point of $I$
+	- (q8.11) $f'(x)=0\implies f(x)=c$
+
 
 
 - $f$ is continuous on $[0,\infty)$, differentiable on the $(0,\infty)$
