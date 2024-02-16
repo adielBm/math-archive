@@ -643,7 +643,6 @@ When using the assembler, provide a list of source file names as command line ar
 
 ### Assembler Operation Details
 
-#todo 
 
 In addition to the outline algorithm provided earlier, let's expand on how the assembler operates.
 
@@ -654,20 +653,83 @@ The assembler maintains two arrays, referred to as the **instruction array** (מ
 
 The assembler has two counters: **Instruction Counter** (IC) and **Data Counter** (DC). These counters indicate the next available location in the respective arrays. When the assembler starts processing a source file, both counters are reset.
 
-Additionally, the assembler maintains a symbol table, where all labels encountered during file traversal are collected. This table, also known as the symbol table, stores the name, value, and various attributes previously defined, such as location (data or code), or update mode (relocatable or external).
+- **The Symbol Table**: The assembler maintains a symbol table, where all labels encountered during file traversal are collected. This table, also known as the symbol table, stores the name, value, and various attributes previously defined, such as location (data or code), or update mode (relocatable or external).
 
-- The assembler reads the source file line by line, determining the type of each line (comment, constant, instruction, directive, or empty line), and acts accordingly:
-	- Empty or comment line: The assembler ignores the line and proceeds to the next one.
-	- Constant line: The assembler adds the constant name to the symbol table with the mdefine attribute.
-	- Instruction line:
-
-    - The assembler identifies the operation and addressing modes of the operands. (The number of operands it seeks is determined based on the instruction encountered).
-    - For each operand, the assembler determines its value as follows:
-        - If it's a register: The operand is the register number.
-        - If it's a label (direct addressing): The operand is the value of the label as it appears in the symbol table (the label may not be present in the symbol table yet).
+The assembler reads the source file line by line, determining the type of each line (constant, instruction, directive, comment or empty line), and acts accordingly:
 
 
+#### Empty or comment line 
 
+The assembler ignores the line and proceeds to the next one.
+
+#### Constant line
+
+The assembler adds the constant name to the symbol table with the `mdefine` attribute.
+
+
+#### Instruction line
+
+- The assembler identifies: 
+	- the operation 
+	- addressing modes of the operand(s). (The number of operands it seeks is determined based on the instruction)
+
+For each operand, the assembler determines its value as follows:
+
+|  | Operand | Addressing Mode |
+| ---- | ---- | ---- |
+| Register | the register number | Register Addressing |
+| Label | the value of the label as it appears in the symbol table (the label may not be present in the symbol table yet) | Direct Addressing - ישיר |
+| `#` followed by a number or constant name (`.define`) | the number | Immediate Addressing - מיידי |
+
+- The determination of the addressing method is done according to the operand's syntax, as explained above in the definition of addressing methods. For example, a number denotes immediate addressing, a label denotes direct addressing, and so on.
+
+After the assembler analyzes the line and decides on the operation, the source operand addressing mode (if relevant) and the destination operand addressing mode (if relevant), it operates as follows:
+
+- If it is an operation with two operands, then: 
+	- the assembler enters into the instruction array, at the position indicated by the instruction counter (IC), the machine code of the first word of the instruction (in the instruction representation method as described earlier). This word contains the operation code and the addressing methods. 
+	- Additionally, the assembler allocates space in the array for the additional words required for this instruction, and increments the instruction counter accordingly. If one or both operands are in register or immediate addressing mode, the assembler now encodes the relevant words in the instruction array.
+- If it is an operation with only one operand, i.e., there is no source operand, then: 
+	- the encoding is identical to above, except for the bits representing the addressing method of the source operand in the first word, which will always contain 0, since they are irrelevant to the operation.
+- If it is an operation with no operands, then: 
+	- only the first (and only) word is encoded. The bits representing the addressing methods of the two operands will contain 0.
+
+> If there is a label in the instruction line, then the label is inserted into the symbol table under the appropriate name. the value of the label is the value of the instruction counter before encoding the instruction.
+
+#### Directive line
+
+When the assembler reads a directive line in the source file, it operates according to the type of directive as follows:
+
+- `.data` 
+	- The assembler does:
+		- reads the list of numbers following `.data` 
+		- inserts each number into the data array, 
+		- increments the data counter (DC) by one for each number entered. 
+	- Note that a defined constant name can also serve instead of a number
+	- If there is a label in `.data` line, then: 
+		- this label is inserted into the symbol table. 
+		- the label's value is the value of the data counter (DC) before inserting the numbers into the data array. 
+		- The label's type is relocatable, and it is marked as defined in the data section. 
+		- At the end of the first pass, the label's value is updated in the symbol table by adding the instruction counter (IC) (i.e., adding the total length of encoding all instructions). The reason for this is that in the machine code image, the data are separated from the instructions, and all the data appear after all the instructions (see description of output files below).
+- `.string` - Handling of `.string` is similar to `.data`, except that: 
+	- the ASCII codes of the characters are those inserted into the data array (each character in a separate entry). 
+	- Then the value `0` (indicating the end of the string) is inserted into the data array. 
+		- The data counter (DC) is incremented by the length of the string + 1 (the extra space for the 0 at the end of the string).
+		- Handling of a defined label in this line is the same as handling in the `.data` directive.
+- `.entry` - This is a request for the assembler to insert the label appearing as an operand of `.entry` into the entries file. The assembler records the request, and at the end, that label will be recorded in the entries file.
+- `.extern` - This is a declaration of a symbol (label) defined in another file, and which the assembly segment in the current file uses. 
+	- The assembler inserts the symbol into the symbol table. Its value is 0 (the actual value is unknown and will only be determined at the linking stage), 
+	- and its type is external. 
+	- It is unknown in which file the definition of the symbol is located (and it doesn't matter for the assembler).
+
+
+Note: In an instruction or directive, it is possible to use the name of a symbol whose declaration is given later in the file (either directly by defining a label or indirectly by using the `.extern` directive).
+
+At the end of the first pass, the assembler updates in the symbol table every symbol characterized as data by adding 100+IC (in decimal) to its value. The reason for this is that in the complete picture of the machine code, the data are separated from the instructions, and all the data are required to appear after all the instructions. A symbol of type data is essentially a label in the data area, and the update adds to the symbol's value (i.e., its memory address) the total length of encoding all the instructions, plus the starting address of the code, which is 100.
+
+The symbol table now contains all the necessary values for completing the encoding (except for values of external symbols).
+
+In the second pass, the assembler encodes using the symbol table all the words in the instruction array that were not encoded in the first pass. These are words that need to contain addresses of labels (the ARE field in these words will be `10` or `01`).
+ 
 ### Object File Format
 
 
