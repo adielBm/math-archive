@@ -119,4 +119,4 @@
 
  - A **partition of a set** (quotient set) is a grouping of its elements into non-empty subsets that called **cells** (equivalence classes), in such a way that every element is included in exactly one subset.
  - Every equivalence relation on a set defines a partition of this set, and every partition defines an equivalence relation. (theorem 2.16)
- - A partition $P_1$ is called a **refinement** ^[עידון] of the partition $P_2$ if every set in $P_1$ is a subset of one of the sets in $P_2$.
+ - A partition $P_1$ is called a **refinement** (עידון) of the partition $P_2$ if every set in $P_1$ is a subset of one of the sets in $P_2$.

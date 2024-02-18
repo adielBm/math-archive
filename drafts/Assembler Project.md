@@ -52,7 +52,7 @@ The structure of the first word is always the same. The structure of the first w
 - Bits `4-5`: Encode the number of the addressing mode for the **source operand**. If there is no source operand in the instruction, the value of these bits is `0`.
 - Bits `6-9`: In the first word of the instruction, these bits represent the **operation code** (opcode). Each opcode is symbolically represented in assembly language by an **operation name**.
 
-| opcode | Operation Name |
+| opcode | operation name |
 | ------ | -------------- |
 | 0      | mov            |
 | 1      | cmp            |
@@ -298,15 +298,16 @@ mov A,r1
 
 #### Assumptions & guidelines
 
-- There are no nested macro definitions in the system (no need to check this).
 - The name of an instruction or directive cannot be the name of a macro.
+
+- There are no nested macro definitions (no need to check this).
 - It can be assumed that each macro line in the source code has a closure with an `endmcr` line (there is no need to check this).
 - Defining a macro will always be before calling the macro (no need to check it).
-- It is required that the pre-assembler create a file with the extended code that includes the macro expansion. (extension of the source file described below). The "extended source file" is a "source file" after the macro has been removed, compared to an "initial source file" which is the input file to the system, including the definition of the macros.
+
 
 ## Statements
 
-- A **source file** consist of lines (max length `80`) that contains statements. (each statements is on a separate line, using `\n`)
+- The source file consist of lines (max length `80`) that contains statements. (each statements is on a separate line, using `\n`)
 - A **statement** is individual line or units of code in a program
 ### Statement Types
 
@@ -362,17 +363,17 @@ mov A,r1
 - **label** (optional)
 	- If a label is defined on the instruction line, then it will be inserted into the symbol table (see [[#Two-Pass Assembler]])
 	- The value of the label will be the address of the first word of the instruction within the code image that the assembler builds.
-- `opcode` of **operation-name** (one of 16 operations, see [[#Machine instructions specification]])
+- `operation-name` (one of 16 [[#Machine instructions specification|operations]])
 	- lower case
 	- separated from the first operand using space(s) or tab(s).
 - **operand(s)** 
 	- 0-2, depending on operation type
 	- separated by `,`. (can be space(s) and tab(s) on both sides the comma)
 
-- Structure 
-	- (2 operands) `label: opcode source-operand, target-operand` (e.g. `HELLO: add r7, B`)
-	- (1 operand) `label: opcode target-operand` (e.g.  `HELLO: bne XYZ`)
-	- (no operand) `label: opcode` (e.g. `END: hlt`)
+- Syntax 
+	- (2 operands) `label: operation-name source-operand, target-operand` (e.g. `HELLO: add r7, B`)
+	- (1 operand) `label: operation-name target-operand` (e.g.  `HELLO: bne XYZ`)
+	- (no operand) `label: operation-name` (e.g. `END: hlt`)
 
 #### Constant Definition Statement (משפט הגדרת קבוע)
 
@@ -400,15 +401,19 @@ mov A,r1
 ### Fields in Statements
 
 - A **label** is a symbol that is defined at the beginning of an instruction statements, or at the beginning of a `.data` or `.string` directive
-	- A valid label begins with an alphabetic letter (uppercase or lowercase), followed by some series of alphabetic letters (uppercase or lowercase) and/or digits.
-	- maximum length: 31 characters
-	- A label definition ends with `:` (colon). This character is not part of the label, but only a mark indicating the end of the definition. The letter `:` must be adjacent to the label (without spaces).
+	- A valid label begins with an alphabetic letter, followed by some series of alphabetic letters and/or digits
+	- uppercase/lowercase
+	- maximal length: 31 characters
+	- **Label Definition:** A label definition ends with `:` (colon). This character is not part of the label, but only a mark indicating the end of the definition. The letter `:` must be adjacent to the label (without spaces).
 	- The same label must not be defined more than once (of course in different lines). Uppercase and lowercase letters are treated differently.
 	- Examples: `hEllo:`, `x:`, `He78902:`
-	- Please note: Assembly language reserved words (that is, the name of an operation or directive, or the name of a register) cannot also be used as a label name. 
+	- **Reserved words**: (operation name, directive name, or register name)
+		- Reserved words cannot also be used as a label name
 	- Also, the same symbol must not be used both as a label and as the name of a macro or constant. 
-	- The label receives its value according to the context in which it is defined. A label defined in the directives `.data`, `.string`, will receive the current value of the *data counter*, while a label defined in an instruction line will receive the current value of the instruction counter (IC). (see [[#The First Pass]])
-	- Attention: it is allowed in an instruction statement to use an operand that is a symbol that is not defined as a label in the current file, as long as the symbol is characterized as external (using some extern directive in the current file). 
+	- **Label value**: The label receives its value according to the context in which it is defined. 
+		- A label defined in the directives `.data`, `.string`, has the current value of the data counter
+		- A label defined in an instruction line has the current value of the instruction counter (IC). (see [[#The First Pass]])
+	- It is allowed in an instruction statement to use an operand that is a symbol that is not defined as a label in the current file, as long as the symbol is characterized as external (using `.extern` directive in the current file). 
 - **Number**: valid number starts with an optional sign: `-` or `+` followed by some sequence of digits in decimal base. 
 	- For example: `-5`, `76`, `+123` are valid numbers. 
 	- Our assembly language does not support representation in a base other than decimal, and there is no support for non-integer numbers. 
@@ -428,7 +433,6 @@ mov A,r1
 
 - When the assembler receives an assembly language program as input, it must first handle the macro expansion, and only then go over the program to which the macros were expanded. That is, the macro expansion will be done in the "pre-assembler" phase, before the assembler phase (described later). 
 - If the program does not contain a macro, the retirement program will be the same as the source program.
-- #todo 
 
 #### Example
 
@@ -623,23 +627,24 @@ Our assembler must separate, in the machine code it generates, the data section 
 - First pass (18 steps)
 - Second pass (10 steps)
 
-### Assembler Input and Output Files
+### Input & Output Files
 
-When using the assembler, provide a list of source file names as command line arguments.
-
-- **Input files:** source files written in the assembly language specified here. Thier names must end with `.as`. For example, `y.as`, `x.as`, and `hello.as` are valid. 
-- When passing file names to the assembler, omit the extension. (For instance, if the assembler is called `assembler`, running `assembler x y hello` processes `x.as`, `y.as`, and `hello.as`.)
+- **Input files:** ( `.as` files) source files written in the assembly language specified here. (e.g. `y.as`, `x.as`, and `hello.as`) (these files include the definition of the macros)
+- When using the assembler, provide a list of source file names as command line arguments. 
+- We need omit the extension. (e.g. if the assembler is called `assembler`, running `assembler x y hello` processes `x.as`, `y.as`, and `hello.as`.)
 
 **Each input file processed individually**, resulting in the creation of the following output files:
 
-| File | Extension | Content | Notes |
+| File | Ext. | Content | Notes |
 | ---- | ---- | ---- | ---- |
-| Extended source file | `.am` | Source file after preprocessing (macro expansion). | If no macros are present, the `.am` file is identical to the `.as` file |
+| **Extended source file** | `.am` | Source file after preprocessing (macro expansion).  | generate by the pre-assembler. If no macros are present, the `.am` file is identical to the `.as` file.  |
 | **Object file** | `.ob` | Machine code |  |
-| **Externals file** | `.ext` | Details about all the places (addresses) in the machine code where a data word encoding the value of a symbol declared as external appears (a symbol that appeared as an operand of the extern directive and is characterized in the symbol table as external). | The file is omitted if there are no extern directives. |
-| **Entries file** | `.evt` | Details about each symbol declared as an entry point (a symbol that appeared as an operand of the entry directive and is characterized in the symbol table as entry). | The file is omitted if there are no entry directives. |
+| **Externals file** | `.ext` | Details about all the places (addresses) in the machine code where a data word encoding the value of a symbol declared as external appears (a symbol that appeared as an operand of the extern directive and is characterized in the symbol table as external). | The file is omitted if there are no `.extern` directives |
+| **Entries file** | `.evt` | Details about each symbol declared as an entry point (a symbol that appeared as an operand of the entry directive and is characterized in the symbol table as entry). | The file is omitted if there are no `.entry` directives |
 
 - Output file names are based on the input file names, for exmaple, running `assembler x` processes the file `x.as` and creates the files `x.ob`, `x.am` (and `x.ext`, and `x.ent` if needed)
+
+> See also [[#Output Files Format]] 
 
 ### Assembler Operation Details
 
@@ -729,30 +734,40 @@ At the end of the first pass, the assembler updates in the symbol table every sy
 The symbol table now contains all the necessary values for completing the encoding (except for values of external symbols).
 
 In the second pass, the assembler encodes using the symbol table all the words in the instruction array that were not encoded in the first pass. These are words that need to contain addresses of labels (the ARE field in these words will be `10` or `01`).
- 
-### Object File Format
+
+### Output Files Format
+
+> The names of the output files should match the input file name, except for the extensions. For example, if the input file is `prog.as`, then the output files created will be: `prog.ob`, `prog.ext`, `prog.ent`.
+
+##### Object File Format
 
 
-
-### Entries File Format
-
-
-### Externals File Format
+##### Entries File Format
 
 
-# Summary & General Instructions
+##### Externals File Format
 
-- The length of the program, given as input to the assembler, is not known in advance, and therefore, the length of the translated program is not supposed to be predetermined. However, to facilitate the implementation of the assembler, a maximum size can be assumed. Therefore, it is possible to use arrays to store only the machine code image. Any other data structure (such as the symbol table and macro table) should be implemented efficiently and economically (for example, using a linked list and dynamic memory allocation).
-- The names of the output files should match the input file name, except for the extensions. For example, if the input file is `prog.as`, then the output files created will be: `prog.ob`, `prog.ext`, `prog.ent`.
+
+# General Guidelines
+
+
 - The assembler's execution mode should be as required by the specification, without any changes. In particular, the user interface will be solely through the command line. Specifically, the names of the source files will be passed to the assembler as arguments on the command line. Interactive input menus, graphical windows, etc., should not be added.
-- It is important to modularize the implementation of the assembler into several modules (C language files) according to tasks. Different tasks should not be concentrated in a single module. Recommended modules include: first pass, second pass, helper functions (such as translation to binary, syntax analysis of a line), symbol table, memory map, constant tables (operation codes, legal addressing modes for each operation, etc.).
+- **Modularity**: It is important to modularize the implementation of the assembler into several modules (C language files) according to tasks. Different tasks should not be concentrated in a single module. Recommended modules include: 
+	- first pass, 
+	- second pass, 
+	- helper functions (such as translation to binary, syntax analysis of a line), 
+	- symbol table, 
+	- memory map, 
+	- constant tables (operation codes, legal addressing modes for each operation, etc.).
 - Care should be taken to document the implementation thoroughly and clearly, using detailed comments in the code.
 - It should be possible to have extra spaces in the assembly language input file. For example, if an instruction line has two operands separated by a comma, spaces and tabs are allowed before and after the comma, as well as before and after the operation name. Empty lines are also allowed. The assembler will ignore unnecessary spaces (i.e., skip over them).
-- The input (assembly code) may contain syntax errors. The assembler should detect and report all incorrect lines in the input. Processing of the input file should not stop after the first error is detected. Detailed messages should be printed to the screen whenever possible, so that it will be possible to understand what and where each error is. Of course, if the input file contains errors, there is no point in generating the output files (`ob`, `ext`, `ent`) for it.
+- **Errors**: The input (assembly code) may contain syntax errors. The assembler should detect and report all incorrect lines in the input. Processing of the input file should not stop after the first error is detected. Detailed messages should be printed to the screen whenever possible, so that it will be possible to understand what and where each error is. Of course, if the input file contains errors, there is no point in generating the output files (`ob`, `ext`, `ent`) for it.
 
 ____
 
 # Strurctures used in the assembler 
+
+-  Any other data structure (such as the symbol table and macro table) should be implemented efficiently (for example, using a linked list and dynamic memory allocation).
 
 ### Label Table
 
@@ -771,6 +786,7 @@ ____
 - Typically implemented as a constant-size array to represent memory.
 - Operations:
 	- None explicitly mentioned, but likely involves inserting machine code instructions or data values at specific memory addresses.
+- The length of the assembly program, given as input to the assembler, is not known in advance, and therefore, the length of the translated program is not supposed to be predetermined. However, to facilitate the implementation of the assembler, a maximum size can be assumed. Therefore, it is possible to use arrays to store only the machine code image.
 
 ### Macro Table
 
