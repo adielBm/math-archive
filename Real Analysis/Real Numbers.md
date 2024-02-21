@@ -171,6 +171,7 @@ $$\large A\subset\mathbb{R}$$
 - (q3.13) if $A$ is non-empty and bounded
 	- $\inf{A}\leq\sup{A}$ 
 		- $A=\{ a \}\iff\inf{A}=\sup{A}$
+- (INF2.1.9) if $\sup{A}\leq\inf{B}$ then $\sup{A}=\inf{B}\iff \forall \varepsilon>0,\exists a\in A,b\in B:b-a<\varepsilon$
 
 ### Closed & Open Sets
 
