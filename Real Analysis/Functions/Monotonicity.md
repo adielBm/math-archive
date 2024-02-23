@@ -9,6 +9,10 @@
 
 >in this course monotonic is strictly monotonic
 
+- (INFI2.d1.16) A function $f:[a,b] \to \mathbb{R}$ is said to be **piecewise monotone** if there exists a partition of $[a, b]$ into subintervals such that $f$ is weakly monotone on each *internal* of the subintervals
+	- Each piecewise monotone function is also weakly monotone
+
+
 ___
 
 

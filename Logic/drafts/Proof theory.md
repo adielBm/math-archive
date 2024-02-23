@@ -7,3 +7,8 @@
 	- Also known as: axiom system, mathematical theory
 - Formal Proof
 - **formation rules** are rules for describing which strings of symbols formed from the alphabet of a formal language are syntactically valid within the language.
+
+
+- A proof system is **complete** if every valid formula is provable
+- A proof system is **sound** if every provable formula is valid
+

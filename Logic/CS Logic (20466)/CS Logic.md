@@ -155,4 +155,20 @@ function build_structure_tree(alpha):
 ___
 
 
+# Structural Induction
+
+- We can define function from the set of propositions to a set $A$
+	- Define $f(e)$ for each elementary proposition $e$
+	- Define $f(\lnot{\psi})$ (by the value of $f(\psi)$ given exists)
+	- Define $f(\psi @\theta )$ for each binary connective $@$. (by the values of $f(\psi)$ and $f(\theta)$  given exist)
+
+
+- Let $f_{e}$ a function from the set of elementary propositions to the set $A$
+	- Let $C_{\lnot}(x):A\to A$ a function
+
+
+___
+
+
+
 - Backus–Naur form (see section 2.12) #todo 

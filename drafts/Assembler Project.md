@@ -74,24 +74,24 @@ The machine instructions are divided into three groups, according to the number 
 
 #### Operation Table
 
-| opcode | operation name |
-| ---- | ---- |
-| 0 | mov |
-| 1 | cmp |
-| 2 | add |
-| 3 | sub |
-| 4 | not |
-| 5 | clr |
-| 6 | lea |
-| 7 | inc |
-| 8 | dec |
-| 9 | jmp |
-| 10 | bne |
-| 11 | red |
-| 12 | prn |
-| 13 | jsr |
-| 14 | rts |
-| 15 | hlt |
+| operands num | opcode | operation name |
+| ------------ | ------ | -------------- |
+| 2            | 0      | mov            |
+| 2            | 1      | cmp            |
+| 2            | 2      | add            |
+| 2            | 3      | sub            |
+| 1            | 4      | not            |
+| 1            | 5      | clr            |
+| 2            | 6      | lea            |
+| 1            | 7      | inc            |
+| 1            | 8      | dec            |
+| 1            | 9      | jmp            |
+| 1            | 10     | bne            |
+| 1            | 11     | red            |
+| 1            | 12     | prn            |
+| 1            | 13     | jsr            |
+| 0            | 14     | rts            |
+| 0            | 15     | hlt            |
 #### 1st set 
 
 - The `mov` (Move) instruction is used to transfer data between registers, memory locations, and immediate values.
@@ -175,12 +175,12 @@ When encoding the instruction, if there are two additional data words, the first
 
 Description of the addressing modes in our machine:
 
-| Value | Addressing Mode | Additional Word(s) |  |
-| ---- | ---- | ---- | ---- |
-| `0` | Immediate Addressing | 1 | מיעון מיידי |
-| `1` | Direct Addressing | 2 | מיעון ישיר |
-| `2` | Index Addressing | 1 | מיעון אינדקס קבוע |
-| `3` | Register Addressing | 1 | מיעון רגיסטר ישיר |
+| Value | Addressing Mode      | content        | Additional Word(s) |                   |
+| ----- | -------------------- | -------------- | ------------------ | ----------------- |
+| `0`   | Immediate Addressing | `#integer`     | 1                  | מיעון מיידי       |
+| `1`   | Direct Addressing    | `label`        | 1                  | מיעון ישיר        |
+| `2`   | Index Addressing     | `array[index]` | 2                  | מיעון אינדקס קבוע |
+| `3`   | Register Addressing  | `register`     | 1                  | מיעון רגיסטר ישיר |
 
 #### (0) Immediate Addressing (מיעון מיידי) 
 
@@ -510,27 +510,27 @@ This is a skeletal algorithm for the pre-assembler process.
 
   Assume that the code snippet in the above example (instructions and data) is loaded into memory starting at address `100` (decimal). In this case we get the following "translation":
   
-| Address (Decimal) | Source Code | Explanation | Binary Machine Code <br>(1-5 words of 14 bits) |
-| ---- | ---- | ---- | ---- |
-| 0100<br>0101<br>0102<br>0103 | `MAIN: mov r3, LIST[sz]` | 1st word of instruction<br>Source register 3<br>Address of label `LIST` (int array)<br>Value of constant `sz` (index 2) | 0000.0000.11.10.00<br>00000001100000<br>00001000010010<br>00000000001000 |
-| 0104<br>0105 | `LOOP: jmp L1` | Address of label L1 | 0000.1001.00.01.00<br>00000111100010 |
-| 0106<br>0107 | `prn #-5` | Immediate value `-5` | 0000.1100.00.00.00<br>11111111101100 |
-| 0108<br>0109<br>0110<br>0111<br>0112 | `mov STR[5], STR[2]` | Address of label `STR` (string)<br>Index 5<br>Address of label `STR`<br>Index 2 | 0000.0000.10.10.00<br>000001111100.10<br>000000000101.00<br>000001111100.10<br>000000000010.00 |
-| 0113<br>0114 | `sub r1, r4` | -<br>Source register 1 and target register 4 | 0000.0011.11.11.00<br>000000.001.100.00 |
-| 0115<br>0116<br>0117 | `cmp r3, #sz` | -<br>Source register 3<br>Value of constant `sz` (immediate `#2`) | 0000.0001.11.00.00<br>000000.011.00000<br>000000000010.00 |
-| 0118<br>0119 | `bne END` | - <br>Address of label `END` | 0000.1010.00.01.00<br>00000111110010 |
-| 0120<br>0121 | `L1: inc K` | -<br>Address of label `K` (integer) | 0000.0111.00.01.00<br>000010000111.10 |
-| 0122<br>0123 | `bne LOOP` | -<br>Address of label `LOOP` | 0000.1010.00.01.00<br>000001101000.10 |
-| 0124 | `END: hlt` |  | 0000.1111.00.00.00 |
-| 0125 | `STR: .string "abcdef"` | ASCII code `'a'` | 00000001100001 |
-| 0126 |  | ASCII code `'b'` | 00000001100010 |
-| 0127 |  | ASCII code `'c'` | 00000001100011 |
-| 0128 |  | ASCII code `'d'` | 00000001100100 |
-| 0129 |  | ASCII code `'e'` | 00000001100101 |
-| 0130 |  | ASCII code `'f'` | 00000001100110 |
-| 0131 |  | ASCII code `'\0'` (end of string) | 00000000000000 |
-| 0132<br>0133<br>0134 | `LIST: .data 6, -9, len` | Integer 6 (first in array of 3 words)<br>Integer -9<br>Value of constant `len` (integer 4) | 00000000000110<br>11111111110111<br>00000000000100 |
-| 0135 | `K: .data 22` | Integer 22 (single word) | 00000000010110 |
+| Address (Decimal)                    | Source Code              | Explanation                                                                                                             | Binary Machine Code <br>(1-5 words of 14 bits)                                                 |
+| ------------------------------------ | ------------------------ | ----------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| 0100<br>0101<br>0102<br>0103         | `MAIN: mov r3, LIST[sz]` | 1st word of instruction<br>Source register 3<br>Address of label `LIST` (int array)<br>Value of constant `sz` (index 2) | 0000.0000.11.10.00<br>00000001100000<br>00001000010010<br>00000000001000                       |
+| 0104<br>0105                         | `LOOP: jmp L1`           | Address of label L1                                                                                                     | 0000.1001.00.01.00<br>00000111100010                                                           |
+| 0106<br>0107                         | `prn #-5`                | Immediate value `-5`                                                                                                    | 0000.1100.00.00.00<br>11111111101100                                                           |
+| 0108<br>0109<br>0110<br>0111<br>0112 | `mov STR[5], STR[2]`     | Address of label `STR` (string)<br>Index 5<br>Address of label `STR`<br>Index 2                                         | 0000.0000.10.10.00<br>000001111100.10<br>000000000101.00<br>000001111100.10<br>000000000010.00 |
+| 0113<br>0114                         | `sub r1, r4`             | -<br>Source register 1 and target register 4                                                                            | 0000.0011.11.11.00<br>000000.001.100.00                                                        |
+| 0115<br>0116<br>0117                 | `cmp r3, #sz`            | -<br>Source register 3<br>Value of constant `sz` (immediate `#2`)                                                       | 0000.0001.11.00.00<br>000000.011.00000<br>000000000010.00                                      |
+| 0118<br>0119                         | `bne END`                | - <br>Address of label `END`                                                                                            | 0000.1010.00.01.00<br>00000111110010                                                           |
+| 0120<br>0121                         | `L1: inc K`              | -<br>Address of label `K` (integer)                                                                                     | 0000.0111.00.01.00<br>000010000111.10                                                          |
+| 0122<br>0123                         | `bne LOOP`               | -<br>Address of label `LOOP`                                                                                            | 0000.1010.00.01.00<br>000001101000.10                                                          |
+| 0124                                 | `END: hlt`               |                                                                                                                         | 0000.1111.00.00.00                                                                             |
+| 0125                                 | `STR: .string "abcdef"`  | ASCII code `'a'`                                                                                                        | 00000001100001                                                                                 |
+| 0126                                 |                          | ASCII code `'b'`                                                                                                        | 00000001100010                                                                                 |
+| 0127                                 |                          | ASCII code `'c'`                                                                                                        | 00000001100011                                                                                 |
+| 0128                                 |                          | ASCII code `'d'`                                                                                                        | 00000001100100                                                                                 |
+| 0129                                 |                          | ASCII code `'e'`                                                                                                        | 00000001100101                                                                                 |
+| 0130                                 |                          | ASCII code `'f'`                                                                                                        | 00000001100110                                                                                 |
+| 0131                                 |                          | ASCII code `'\0'` (end of string)                                                                                       | 00000000000000                                                                                 |
+| 0132<br>0133<br>0134                 | `LIST: .data 6, -9, len` | Integer 6 (first in array of 3 words)<br>Integer -9<br>Value of constant `len` (integer 4)                              | 00000000000110<br>11111111110111<br>00000000000100                                             |
+| 0135                                 | `K: .data 22`            | Integer 22 (single word)                                                                                                | 00000000010110                                                                                 |
 
 - Symbols table
 	- The **symbol table** (טבלת הסמלים) is a structure that associates symbols in the source code with a numerical value (memory address or a constant value defined by `.define`)
