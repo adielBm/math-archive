@@ -125,11 +125,14 @@ aliases:
 	-  $\lnot(p\rightarrow{q})\equiv{{p}\land(\lnot{q})}$
 - Material implication 
 	- $p\rightarrow{q}\equiv{\lnot{p}\lor{q}}$
+- Logical biconditional
+	- ${p\leftrightarrow{q}}\equiv(p\rightarrow{q})\land (q\rightarrow{p})$
+	- $p\leftrightarrow q\equiv(p\land{q})\lor((\lnot{p})\land{(\lnot{q})})$
 
 
 
 
-- #todo   $p\leftrightarrow{q}\equiv{q\leftrightarrow{p}\equiv{(p\rightarrow{q})\land{(q\rightarrow{p})}\equiv{(p\land{q})\lor{((\lnot{p})\land{(\lnot{q})})}}}}$
+- #todo 
 - #todo  $((a\rightarrow{b})\rightarrow{c})\vdash(a\rightarrow({b}\rightarrow{c}))$
 
 

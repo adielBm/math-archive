@@ -1,27 +1,19 @@
 
-# Language
 
-- An **alphabet** (or **keyboard**) is any finite or infinite set $\Sigma$ of **letters** (arbitrary symbols)
-- A **string** is a finite sequence of letters over an alphabet
-- The set of strings is called the **set of words over** $\Sigma$, denoted by $\Sigma^*$
-- In $\Sigma^*$, the **concatenation** (symbol $\cdot$) binary operation is defined. 
-	- $α⋅β$ or $\alpha \beta$ is the string composed of the concatenation of $α$ and $β$. Its beginning is the string $α$, and its continuation is the string β. 
-	- If a word can be written as $α⋅β$, then $α$ is the **prefix** of the word, and $β$ is its **suffix**.
-- Empty string $\varepsilon \in\Sigma^*$
-- Every subset $L\subseteq \Sigma^*$ is a **language over** $\Sigma$
-
-
-# Propositional Language
-
-- Unary connective: $\lnot$
-- Binary connective: $\lor,\land,\rightarrow,\leftrightarrow$. (notation: we use in $@$ for any binary connective)
-- $n$-ary connective: $\lor,\land,\rightarrow,\leftrightarrow$
+- Logical Connectives
+	- Unary connective
+		- **negation**, (or **logical not**, **logical complement**) $\lnot$
+	- Binary connectives (notation: we use in $@$ for any binary connective)
+		- **Logical disjunction** $\lor$
+		- **Logical conjunction** $\land$
+		- **Material conditional** (or **material implication**) $\rightarrow$
+		- **logical biconditional** (or **material biconditional**) $\leftrightarrow$ 
+	- $n$-ary connective
 
  - The keyboard $\Sigma_{n}=\{ P_{1},\dots,P_{n},\lnot,\lor,\land,\rightarrow,\leftrightarrow,(,) \}$ is the **propositional keyboard** (המקלדת הפסוקית) 
 - המקלדת המלאה
 	 - The keyboard $\Sigma_{\infty}=\{ \lnot,\lor,\land,\rightarrow,\leftrightarrow,(,),P_{1},\dots,P_{n},\dots \}$
 	 - Therefore, for all $n$ we have, $\Sigma_{n}\subset \Sigma_{n+1}\subset \Sigma_{\infty}$
-
 
 
 - השפה הפסוקית (המלאה) 
@@ -37,10 +29,7 @@
 			- A proposition $\varphi$ is an elementary proposition, if and only if, $d(\varphi)=0$
 
 
-- A string $T$ is a **prefix** of a string $S$ if and only if $S$ can be formed by concatenating $T$ with another string $T'$ as $S=TT'$
-	- A **proper prefix** of a string $S$ is a prefix of $S$ which does not equal the whole of $S$
-- A string $T$ is a **suffix** of a string $S$ if and only if $S$ can be formed by concatenating $T$ with another string $T'$ as $S=T'T$
-	- A **proper suffix** of a string $S$ is a suffix of $S$ which does not equal the whole of $S$
+
 
 
 - Theorem 2.1
@@ -154,21 +143,42 @@ function build_structure_tree(alpha):
 
 ___
 
+## Structural Induction
 
-# Structural Induction
+### משפט ההגדרה באינדוקציה מבנית (2.3)
 
-- We can define function from the set of propositions to a set $A$
+- (informal version) We can define function from the set of propositions to a set $A$
 	- Define $f(e)$ for each elementary proposition $e$
 	- Define $f(\lnot{\psi})$ (by the value of $f(\psi)$ given exists)
 	- Define $f(\psi @\theta )$ for each binary connective $@$. (by the values of $f(\psi)$ and $f(\theta)$  given exist)
 
+- (formal version) Let $f_{e}$ a function from the set of elementary propositions to the set $A$, and let $C_{\lnot}(x):A\to A$ a function, and for each binary contective $@$ let $C_{@}(x,y):A \times A\to A$, then, there only one function $f$ from the set of elementary propositions to the set $A$, such that:
+	- if $\varphi$ is an elementary proposition, then $f(\varphi)=f_e(\varphi)$
+	- if $\varphi=\lnot\psi$, then $f(\varphi)=C_{\lnot}(f_{e}(\psi))$
+	- if $\varphi=(\psi @ \theta)$ then $f(\varphi)=C_{@}(f(\psi),f(\theta))$
 
-- Let $f_{e}$ a function from the set of elementary propositions to the set $A$
-	- Let $C_{\lnot}(x):A\to A$ a function
+### לוקליות ההגדרה באינדוקציה (2.4)
+
+- Let $L_{1}$ and $L_{2}$ be proportional languages (possibly the same), and let $\varphi$ be a proposition in both (and therefore the elementary propositions in $\varphi$ are in both languages). and let $A$ be a set. and let $F_{1}:L_{1}\to A$ and $F_{2}:L_{2}\to A$ functions defiend in structural Induction, such that, 
+	- (1.) the functions $C_{\lnot}:A\to A$ and $C_{@}:A \times A\to A$ in the function defintions of $F_{1}$ and $F_{2}$ are the same.
+	- (2.) $F_{1}(Q)=F_{2}(Q)$ for each elementary proposition $Q$ in the string $\varphi$.
+	- Then: $F_{1}(\varphi)=F_{2}(\varphi)$.
+
 
 
 ___
 
 
+- (2.5) $\psi$ is a **subproposition** of $\varphi$ if and only if it is substring of $\varphi$ which is also a proposition
+	- (2.6) Let $\varphi$ and $\theta$ propositions such that $\theta$ is also substring of $\varphi$, i.e. there exist strings $\alpha$ and $\beta$ such that $\varphi=\alpha \theta \beta$. let $\psi$ be a proposition. let $\varphi '$ the string by replacing the substring $\theta$ in $\psi$ such that $\varphi'=\alpha \psi \beta$. then $\varphi'$ is also a proposition.
 
-- Backus–Naur form (see section 2.12) #todo 
+## Summary 
+
+- Necessary and sufficient conditions for a string to be a proposition
+	- It is a proposition
+	- It is construct from elementary proposition and connectives according to the allowed construction rules
+	- it is in one of the sets $E_{n}$
+	- It has a structure tree
+	- It has a structure sequence
+
+

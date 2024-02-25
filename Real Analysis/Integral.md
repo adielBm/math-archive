@@ -52,11 +52,14 @@ $${\color{gray} f=F'\implies}\displaystyle\int f(x) dx=F(x)+C$$
 
 - (d1.8) A bounded function $f:[a,b]\to \mathbb{R}$ is called **Reimann-integrable** (or **integrable**) if $\displaystyle {\overline {\int _{a}^{b}}}f(x)\,\mathrm {d} x= {\underline {\int _{a}^{b}}}f(x)\,\mathrm {d} x$, in such case, the common value is called the **definite integral** of $f$ and denote as $\displaystyle\int^{b}_{a} f(x) \, dx$
 	- (1.10) $f$ is integrable, if and only if, $\forall \varepsilon>0,\exists P:U_{f,P}-L_{f,P}<\varepsilon$
-	- (1.11) $\displaystyle\lim_{ n \to \infty }(U(P_{n})-L(P_{n}))=d_{0}\implies \int_{a}^{b} f(x) \, dx=\lim_{ n \to \infty }U(P_{n})=\lim_{ n \to \infty }L(P_{n})$
-	- (1.15) if $f$ is weakly monotonic on $[a,b]$ then $f$ is integrable on $[a,b]$ 
+	- (1.11) $\displaystyle\lim_{ n \to \infty }(U(P_{n})-L(P_{n}))=0\implies \int_{a}^{b} f(x) \, dx=\lim_{ n \to \infty }U(P_{n})=\lim_{ n \to \infty }L(P_{n})$
 
-
-
+- sufficient conditions for integrabletly of $f$ on $[a,b]$
+	- (1.11) $\displaystyle\lim_{ n \to \infty }(U(P_{n})-L(P_{n}))=0$
+	- (1.15) if $f$ is weakly monotonic on $[a,b]$
+	- (1.17) if $f$ is bounded and piecewise monotone on $[a,b]$
+	- (1.18) if $f$ is continuous (thus bounded) on $[a,b]$ 
+	- (1.19) if $f$ is bounded and continuous on $[a,b]$ (possibly expect finites number of discontinuity points), then
 
 ## Fundamental Theorem
 
