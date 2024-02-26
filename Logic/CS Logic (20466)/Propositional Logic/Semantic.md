@@ -1,5 +1,6 @@
 
 
+
 - A **model** (or **interpretation**) of a language is a function $M$ from the elementary propositions set in to the set of two symbols $\{ \mathsf{T},\mathsf{F} \}$ that are called **truth values**
 	- For each an elementary proposition $Q$, 
 		- if $M(Q)=\mathsf{T}$ we say that $Q$ is **true** in the model $M$, and denote $M \models Q$
@@ -43,6 +44,15 @@
 | פסוק דיסיונקטיבי נורמלי | דיסיונקציה של קוניוקציות פשוטות                                             | **Disjunctive normal form (DNF)**<br>*DNF→(Conjunction)∨DNF*<br>*DNF→(Conjunction)*<br> |
 | קוניונקציה פשוטה מלאה   | קוניונקציה פשוטה שמופיעה בה כל פסוק אלמנטרי (לחיוב או לשלילה) בדיוק פעם אחת | **Full Conjunction**                                                                    |
 
+# 4.1 Dialects
+
+- Language $L_{\to}$
+	- $\leftrightarrow ,\rightarrow ,\lor,\land$
+	- $\otimes$ (XOR)
+
+
+
 
 
  
+ -
