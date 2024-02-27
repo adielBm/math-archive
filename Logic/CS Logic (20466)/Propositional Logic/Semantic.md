@@ -22,11 +22,11 @@
 	- A proposition $\varphi$ is a **tautology** (and denoted $\models \varphi$) if and only if it is true in every model in the language of the proposition. A proposition is a **contradiction** if and only if it is false in every model in the language of the proposition.
 		- $\varphi$ is tautology if and only if $\lnot \varphi$ is contradiction
 		- $\varphi$ is contradiction if and only if $\lnot \varphi$ is tautology
-	- **Logical equivalence:** Propositions $\varphi$ and $\psi$ are **logically equivalent** (and denoted $\varphi \equiv \psi$) if and only if they are true in the same models exactly
+	- **Logical equivalence:** Propositions $\varphi$ and $\psi$ are **logically equivalent** (and denoted $\varphi \equiv \psi$ or $\varphi\iff \psi$) if and only if they are true in the same models exactly
 		- Propositions are logically equivalent if and only if $\varphi\leftrightarrow{\psi}$ is a tautology
 		- Propositions are logically equivalent if and only if they always have the same truth values
-		- see [[Propositional Logic#Rules of Replacement (Logical Equivalences)]]
-	- **Logical implication**: A propositions $\varphi$ **logically implies** a proposition $\psi$ (and $\psi$ **logically implied by** $\varphi$) if and only if in every model $M$, if $M\models{\varphi}$ then $M\models{\psi}$. We denote $\varphi \implies \psi$
+		- Examples: [[Propositional Logic#Rules of Replacement (Logical Equivalences)]]
+	- **Logical implication**: A proposition $\varphi$ **logically implies** a proposition $\psi$ (and $\psi$ **logically implied by** $\varphi$) if and only if in every model $M$, if $M\models{\varphi}$ then $M\models{\psi}$. We denote $\varphi \implies \psi$
 		- $\varphi$ logically implies a proposition $\psi$ if and only if $\varphi\rightarrow{\psi}$ is a tautology. In other words, $\varphi \implies \psi$ if and only if $\models (\varphi\rightarrow{\psi})$
 		- A set propositions $K$ **logically implies** a proposition $\psi$ (and $\psi$ **logically implied by** $K$) if and only if $\psi$ is true in every model in which all proposition in $K$ are true. We denote $K \implies \psi$
 		- If $K=\{ \varphi_{1},\dots ,\varphi_{n} \}$ is a finite set of propositions, then, $K\implies \psi$ if and only if $\varphi_{1}\land\dots\land\varphi_{n}\implies \psi$. Hence, $\{ \varphi_{1},\dots ,\varphi_{n} \}\implies \psi$ if and only if $\models((\varphi_{1}\land\dots\land\varphi_{n})\to \psi)$

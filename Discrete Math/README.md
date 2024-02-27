@@ -79,7 +79,7 @@
 | Field                                         | שדה                                         |
 | First order logic                             | לוגיקה מסדר ראשון                           |
 | formalization                                 | הצרנה                                       |
-| Formation sequence                            | סדרת בניה                                   |
+| Formation sequence, construction sequence     | סדרת בניה                                   |
 | Formula                                       | נוסחה                                       |
 | Free variable                                 | משתנה חופשי                                 |
 | Fuzzy logic                                   | לוגיקה עמומה                                |

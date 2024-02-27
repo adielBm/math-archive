@@ -69,7 +69,7 @@ The propositions are naturally divided into three types:
 - (q2.6) A proper prefix of a proposition is not a proposition
 
 
-## Structure Tree (or Parsing Tree)
+## Structure Tree 
 
 The unique readability theorem provides us with an algorithm that, given a string of propositional keyboard symbols, does the following:
 
@@ -172,6 +172,11 @@ ___
 - (2.5) $\psi$ is a **subproposition** of $\varphi$ if and only if it is substring of $\varphi$ which is also a proposition
 	- (2.6) Let $\varphi$ and $\theta$ propositions such that $\theta$ is also substring of $\varphi$, i.e. there exist strings $\alpha$ and $\beta$ such that $\varphi=\alpha \theta \beta$. let $\psi$ be a proposition. let $\varphi '$ the string by replacing the substring $\theta$ in $\psi$ such that $\varphi'=\alpha \psi \beta$. then $\varphi'$ is also a proposition.
 
+
+## Formation Sequence
+
+A formation Sequence is #todo 
+
 ## Summary 
 
 - Necessary and sufficient conditions for a string to be a proposition
@@ -179,6 +184,6 @@ ___
 	- It is construct from elementary proposition and connectives according to the allowed construction rules
 	- it is in one of the sets $E_{n}$
 	- It has a structure tree
-	- It has a structure sequence
+	- It has a formation sequence
 
 
