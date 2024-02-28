@@ -68,7 +68,11 @@
 			- If $K\cup \{ \lnot \varphi \}$ is inconsistent, then $K\vdash{\varphi}$
 		- examples #todo 
 - section 4.3.4
-	- 4.4. theorem - התחשיב נאות Soundness
+	- (4.4) Soundness Theorem for Propositional Logic (נאותות)
+		- Let $K$ be a set of wffs and $\psi$ be a wff. If $K\vdash \psi$, then $K \models\psi$
+
+
+
 	- definitions: Complete theory
 	- 4.5 theorem 
 	- 4.6 theorem
