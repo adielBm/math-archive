@@ -8,3 +8,4 @@ This is my math (and some cs) notebook, I started writing in the fall of 2022.
 I'd welcome any suggestions for improvement.
 
 Written using [obsidian.md](https://obsidian.md/) 💜
+

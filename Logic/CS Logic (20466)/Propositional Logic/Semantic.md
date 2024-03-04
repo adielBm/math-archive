@@ -12,10 +12,10 @@
 		- if $\varphi=(\psi \rightarrow \theta)$ then $M(\varphi)=\begin{cases}\mathsf{T} & M(\psi)=\mathsf{F} \text{ or } M(\theta)=\mathsf{T}\\ \mathsf{F} & \text{otherwise} \end{cases}$
 		- if $\varphi=(\psi \leftrightarrow \theta)$ then $M(\varphi)=\begin{cases}\mathsf{T} & (M(\psi)=\mathsf{T} \text{ and } M(\theta)=\mathsf{T}) \text{ or } (M(\psi)=\mathsf{F} \text{ and } M(\theta)=\mathsf{F})\\ \mathsf{F} & \text{otherwise} \end{cases}$
 	- Therefore, by structural induction (2.3), there exist an unique function $M:\overline{\mathcal{S}}\to\{ \mathsf{T},\mathsf{F} \}$
-- **Truth value** of a Proposition
+- Model of a proposition
 	- if $M(\varphi)=\mathsf{T}$ we say that $\varphi$ is **true** in the model $M$, and denote $M \models \varphi$
 	- if $M(\varphi)=\mathsf{F}$ we say that $\varphi$ is **false** in the model $M$, and denote $M \not\models \varphi$
-- **Truth value** of a Propositions Set
+- Model of a propositions Set
 	- Let $K$ a set of propositions, $M$ is a **structure** (see §5.2.3 #todo ), we say that $M$ is a **model** of $K$ and denote $M \models K$ if and only if every proposition in $K$ is true in $M$
 		- If $K=\{ \varphi_{1},\dots ,\varphi_{n} \}$ is a finite set of propositions then $M \models K$ if and only if $M \models \varphi_{1}\land\dots\land\varphi_{n}$
 
@@ -36,15 +36,18 @@
 - Propositions $\varphi$ and $\psi$ are **logically equivalent** (and denoted $\varphi \equiv \psi$ or $\varphi\iff \psi$) if and only if they are true in the same models exactly
 	- Propositions are logically equivalent if and only if $\varphi\leftrightarrow{\psi}$ is a tautology
 	- Propositions are logically equivalent if and only if they always have the same truth values
-	- Examples: [[Propositional Logic#Rules of Replacement (Logical Equivalences)]]
+	- Examples: [[Rules of Replacement]]
 
 ## Logical Implication
 
-- A proposition $\varphi$ **logically implies** a proposition $\psi$ (or $\psi$ **logically implied by** $\varphi$), and denoted by $\varphi \implies \psi$, if and only if, in every model $M$, if $M\models{\varphi}$ then $M\models{\psi}$. 
+
+- A proposition $\varphi$ **logically implies** a proposition $\psi$ (or $\psi$ **logically implied by** $\varphi$), and denoted by $\varphi \implies \psi$ (or more common $\varphi \models \psi$), if and only if, in every model $M$, if $M\models{\varphi}$ then $M\models{\psi}$. 
 	- $\varphi$ logically implies a proposition $\psi$ if and only if $\varphi\rightarrow{\psi}$ is a tautology. In other words, $\varphi \implies \psi$ if and only if $\models (\varphi\rightarrow{\psi})$
-- A set propositions $K$ **logically implies** a proposition $\psi$ (and $\psi$ **logically implied by** $K$), and denoted by $K \implies \psi$, if and only if, $\psi$ is true in every model in which all proposition in $K$ are true. 
+- A set propositions $K$ **logically implies** a proposition $\psi$ (and $\psi$ **logically implied by** $K$), and denoted by $K \implies \psi$ (or more common $K \models \psi$), if and only if, in every model in which all proposition in $K$ are true, also $\psi$ is true
 	- If $K=\{ \varphi_{1},\dots ,\varphi_{n} \}$ is a finite set of propositions, then, $K\implies \psi$ if and only if $\varphi_{1}\land\dots\land\varphi_{n}\implies \psi$. Hence, $\{ \varphi_{1},\dots ,\varphi_{n} \}\implies \psi$ if and only if $\models((\varphi_{1}\land\dots\land\varphi_{n})\to \psi)$
 	- (3.6 **Compactness theorem**) if $K\implies \psi$ then there exists a finite subset $\{ \varphi_{1},\dots ,\varphi_{n} \}\subseteq K$ such that $\{ \varphi_{1},\dots ,\varphi_{n} \}\implies \psi$
+
+> $\varphi \implies \psi$ and $K\implies \varphi$ in this course are more commonly denoted by notations $\varphi \models \psi$ and $K\models \varphi$
 
 ## CNF & DNF
 

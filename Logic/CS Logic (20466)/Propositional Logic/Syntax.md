@@ -1,4 +1,4 @@
-
+### The language of the Propositional Logic
 
 - Logical Connectives
 	- Unary connective
@@ -27,9 +27,7 @@
 		- A string is called a **proposition** if and only if, it's in one of the sets $E_{n}$ 
 		- The **degree** of a proposition $\varphi$ which denote $d(\varphi)$ is the smallest number $n$ such that $\varphi\in E_{n}$
 			- A proposition $\varphi$ is an elementary proposition, if and only if, $d(\varphi)=0$
-
-
-
+			- ( #todo  compare with the following definition: Given a well-formed formula φ, we define its **height** to be 1 plus the length of the longest path of its parse tree.)
 
 
 - Theorem 2.1

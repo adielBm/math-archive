@@ -109,17 +109,17 @@ The machine instructions are divided into three groups, according to the number 
 
 #### 2nd set 
 
-| Instruction | Description | Syntax | Example |
-|-------------|-------------|--------|------------|
-| `not`       | Sets the complement of the value in the specified operand | `not [op]` | `not r2` will perform `r2 ← not r2` |
-| `clr`       | Clears the value in the specified register, setting it to 0 | `clr [op]` | `clr r2` will perform `r2 ← 0` |
-| `inc`       | Increments the value in the specified operand by 1 | `inc [op]` | `inc r2` will perform `r2 ← r2 + 1` |
-| `dec`       | Decrements the value in the specified operand by 1 | `dec [op]` | `dec C` will perform `C ← C - 1` |
-| `jmp`       | Unconditional jump to the instruction specified by the label. | `jmp LABEL` | `jmp LINE` will perform `PC ← LINE` |
-| `bne`       | Conditional branch if the `Z` flag in the status register is not equal to zero. | `bne LINE` | If `Z` is not zero, then `PC ← LINE` |
-| `red`       | Reads a character from `stdin` and stores its ASCII code in the specified operand. | `red REGISTER` | `red r1` |
-| `prn`       | Prints the ASCII character represented by the operand to `stdout`. | `prn OPERAND` | `prn r1` |
-| `jsr`       | Calls a subroutine, pushing the current program counter onto the stack and updating PC to the specified label. | `jsr LABEL` | `push(PC)`, then `PC ← FUNC` |
+| Instruction | Description                                                                                                    | Syntax         | Example                              |
+| ----------- | -------------------------------------------------------------------------------------------------------------- | -------------- | ------------------------------------ |
+| `not`       | Sets the complement of the value in the specified operand                                                      | `not [op]`     | `not r2` will perform `r2 ← not r2`  |
+| `clr`       | Clears the value in the specified register, setting it to 0                                                    | `clr [op]`     | `clr r2` will perform `r2 ← 0`       |
+| `inc`       | Increments the value in the specified operand by 1                                                             | `inc [op]`     | `inc r2` will perform `r2 ← r2 + 1`  |
+| `dec`       | Decrements the value in the specified operand by 1                                                             | `dec [op]`     | `dec C` will perform `C ← C - 1`     |
+| `jmp`       | Unconditional jump to the instruction specified by the label.                                                  | `jmp LABEL`    | `jmp LINE` will perform `PC ← LINE`  |
+| `bne`       | Conditional branch if the `Z` flag in the status register is not equal to zero.                                | `bne LINE`     | If `Z` is not zero, then `PC ← LINE` |
+| `red`       | Reads a character from `stdin` and stores its ASCII code in the specified operand.                             | `red REGISTER` | `red r1`                             |
+| `prn`       | Prints the ASCII character represented by the operand to `stdout`.                                             | `prn OPERAND`  | `prn r1`                             |
+| `jsr`       | Calls a subroutine, pushing the current program counter onto the stack and updating PC to the specified label. | `jsr LABEL`    | `push(PC)`, then `PC ← FUNC`         |
 
 
 
@@ -145,7 +145,7 @@ The machine instructions are divided into three groups, according to the number 
 
 ### A.R.E. field 
 
-	- At each word in the machine code of an instruction (not of data), the assembler inserts information for the linking and loading process. This is the A,R,E field. The information will be used to make corrections to the code every time it is loaded into memory for execution. The assembler builds from scratch code that is intended to be loaded starting from the start address. The fixes will make it possible to load the code in a different place each time, without having to repeat the assembly process.
+- At each word in the machine code of an instruction (not of data), the assembler inserts information for the linking and loading process. This is the A,R,E field. The information will be used to make corrections to the code every time it is loaded into memory for execution. The assembler builds from scratch code that is intended to be loaded starting from the start address. The fixes will make it possible to load the code in a different place each time, without having to repeat the assembly process.
 - The A.R.E field is added to each word in the instruction encoding
 
 | Encoding Type   | Bits | Meaning                                                                                                                                                                                                                         | Example                                                                                                 |
@@ -171,12 +171,12 @@ When encoding the instruction, if there are two additional data words, the first
 
 Description of the addressing modes in our machine:
 
-| Value | Addressing Mode      | content        | Additional Word(s) |                   |
-| ----- | -------------------- | -------------- | ------------------ | ----------------- |
-| `0`   | Immediate Addressing | `#integer`     | 1                  | מיעון מיידי       |
-| `1`   | Direct Addressing    | `label`        | 1                  | מיעון ישיר        |
-| `2`   | Index Addressing     | `array[index]` | 2                  | מיעון אינדקס קבוע |
-| `3`   | Register Addressing  | `register`     | 1                  | מיעון רגיסטר ישיר |
+| Value | Addressing Mode      | content                | Additional Word(s) |                   |
+| ----- | -------------------- | ---------------------- | ------------------ | ----------------- |
+| `0`   | Immediate Addressing | `#integer` or `#const` | 1                  | מיעון מיידי       |
+| `1`   | Direct Addressing    | `label`                | 1                  | מיעון ישיר        |
+| `2`   | Index Addressing     | `array[index]`         | 2                  | מיעון אינדקס קבוע |
+| `3`   | Register Addressing  | `register`             | 1                  | מיעון רגיסטר ישיר |
 
 #### (0) Immediate Addressing (מיעון מיידי) 
 
@@ -615,9 +615,9 @@ In any case, it is always possible to build in the first pass the full binary en
 6. Turn on the "symbol-definition-exists" flag. 
 7. Is this a directive to store data, (.`data` or `.string`)? If not, go to 10. 
 8. If there is a symbol (label) definition, insert it into the symbol table with the `.data` property. Its value will be `DC`. (If the symbol is already in the table, an error must be thrown). 
-9. Identify the data type, encode it in memory, and update the data counter DC according to its length. If this is a `.data` directive., and it has a data that is a symbol, check that the symbol appears in the table with the `mdefine` property, and use its value. (If the symbol is not in the table or is not `mdefine`, an error should be reported). Return to 2. 
+9. Identify the data type, encode it in memory, and update the data counter DC according to its length. If this is a `.data` directive., and it has a data that is a symbol, check that the symbol appears in the table with the `mdefine` property, and use its value. (If the symbol is not in the table or is not `mdefine`, an error should be reported). go back to 2. 
 10. Is this an `.extern` or `.entry` directive? If not, go to 12. 
-11. Is this an `.extern` directive? If so, insert each symbol (one or more) that appears as an operand of the directive into the symbol table without a value, with the `.external` property. Return to 2. 
+11. Is this an `.extern` directive? If so, insert each symbol (one or more) that appears as an operand of the directive into the symbol table without a value, with the `.external` property. go back to 2. 
 12. If there is a symbol definition, insert it into the symbol table with the code property. Its value will be `100 + IC` (if the symbol is already in the table, an error must be thrown). 
 13. Look for the operation name in the operation table, if not found throw an error in the name of the instruction. 
 14. Analyze the structure of the instruction's operands and calculate L. Now construct the binary code of the first word of the instruction. 

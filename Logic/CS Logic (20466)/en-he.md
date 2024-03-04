@@ -19,11 +19,11 @@
 |     | אינדוקציה מבנית (הוכחה, הגדרה) |                        |                                                 |
 | 2   | סדרת בניה                      | Formation sequence     | construction sequence                           |
 |     |                                |                        |                                                 |
-|     | סדרת הוכחה                     | proof sequence         |                                                 |
+|     | סדרת הוכחה                     | proof sequence         | deduction, derivation                           |
 |     |                                |                        |                                                 |
 |     |                                |                        |                                                 |
-|     |                                |                        |                                                 |
-|     |                                |                        |                                                 |
+|     | תורה, מערכת אקסיומות           | theory                 |                                                 |
+|     | תורה שלמה                      | complete theory        |                                                 |
 |     |                                |                        |                                                 |
 |     |                                |                        |                                                 |
 |     |                                |                        |                                                 |
@@ -41,3 +41,14 @@
 |     |                                |                        |                                                 |
 |     |                                |                        |                                                 |
 |     |                                |                        |                                                 |
+
+
+# Unit 5 (Predicate Logic)
+
+| Heb. Course Term | Notebook Term | Other Terms    |
+| ---------------- | ------------- | -------------- |
+| שם עצם           | Term          |                |
+|                  |               |                |
+| פסוק             | Sentence      | Closed Formula |
+|                  |               |                |
+|                  |               |                |

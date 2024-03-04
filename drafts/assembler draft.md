@@ -50,6 +50,7 @@ macro table
 define table
 	can be hash table or dynamic array 
 
+
 ___
 ### output 
 
