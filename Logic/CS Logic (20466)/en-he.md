@@ -45,10 +45,13 @@
 
 # Unit 5 (Predicate Logic)
 
-| Heb. Course Term | Notebook Term | Other Terms    |
-| ---------------- | ------------- | -------------- |
-| שם עצם           | Term          |                |
-|                  |               |                |
-| פסוק             | Sentence      | Closed Formula |
-|                  |               |                |
-|                  |               |                |
+| Heb. Course Term     | Notebook Term                   | Other Terms    |
+| -------------------- | ------------------------------- | -------------- |
+| שם עצם               | Term                            |                |
+| מופע                 | Occurrence                      |                |
+| פסוק                 | Sentence                        | Closed Formula |
+| מודל, מבנה           | Structure                       | model          |
+| השמה                 | Variable Assignment             |                |
+| השמה רלוונטית לנוסחה | Variable Assignment for formula |                |
+|                      |                                 |                |
+|                      |                                 |                |

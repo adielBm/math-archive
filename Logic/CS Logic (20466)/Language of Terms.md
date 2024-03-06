@@ -10,7 +10,6 @@
 	- Each individual variable $x_{k}$ and each constant symbol $c$ is a **term**
 	- If $F$ is an $k$-ary function symbol, and $t_{1},\dots, t_{k}$ are terms, then $F(t_{1},\dots,t_{n})$ is a term
 
-
 ## Structural Induction
 
 

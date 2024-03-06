@@ -41,6 +41,7 @@ char *w[] = {"mno", "pqr", "stuv", "w", NULL}, x, *y=&x, z[]=”mnopqrs”;
 
 Assuming the address starts at 4 bytes:
 
+```
 - sizeof(w);
 - sizeof(*w);
 - *(w+4);
@@ -49,6 +50,7 @@ Assuming the address starts at 4 bytes:
 - sizeof(*y);
 - sizeof(z);
 - sizeof(*z);
+```
 
 1. In ANSI C, it is possible to pass an array as an argument to a function in order to modify it inside the function without the changes being felt outside the function.
 2. When a variable is defined as a register variable, it is **guaranteed** that the access and execution time will be faster.

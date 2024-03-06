@@ -640,9 +640,6 @@ In any case, it is always possible to build in the first pass the full binary en
 9. The source file is read in its entirety. If errors are found on the second pass, stop here. 
 10. Build the output files (more details below).
 
-
-
-
 ### Assembler Operation Details
 
 
