@@ -2,7 +2,7 @@ The incompleteness theorems apply to formal systems that are of sufficient compl
 
 Particularly in the context of first-order logic, formal systems are also called formal theories. 
 
-In general, a **formal system** is a deductive apparatus that consists of a particular set of axioms along with rules of symbolic manipulation (or rules of inference) that allow for the derivation of new theorems from the axioms. 
+In general, a **formal system** is a deductive system that consists of a particular set of axioms along with rules of symbolic manipulation (or rules of inference) that allow for the derivation of new theorems from the axioms. 
 
 One example of such a system is **first-order Peano arithmetic**, a system in which all variables are intended to denote natural numbers. 
 

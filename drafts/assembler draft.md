@@ -28,7 +28,7 @@ int f() {
 }
 ```
 
-
+	
 # data strurctures used in the assembler 
 
 label table - label - number

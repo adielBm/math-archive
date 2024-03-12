@@ -51,14 +51,27 @@
 
 ## CNF & DNF
 
-| Course Term             |                                                                             |                                                                                         |
-| ----------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| קוניונקציה מרובה        | $\varphi_{1} \land\dots \land \varphi_{n}$                                  |                                                                                         |
-| דיסיונקציה מרובה        | $\varphi_{1} \lor\dots \lor \varphi_{n}$                                    |                                                                                         |
-| פסוק בסיסי              | $P$ or $\lnot P$                                                            | **Literal**<br>*Literal→¬Variable*<br>*Literal→Variable*<br>                            |
-| קוניונקציה פשוטה        | קוניונקציה מרובה של פסוקים בסיסיים                                          | **Conjunction**<br>*Conjunction→Literal∧Conjunction*<br>*Conjunction→Literal*           |
-| פסוק דיסיונקטיבי נורמלי | דיסיונקציה של קוניוקציות פשוטות                                             | **Disjunctive normal form (DNF)**<br>*DNF→(Conjunction)∨DNF*<br>*DNF→(Conjunction)*<br> |
-| קוניונקציה פשוטה מלאה   | קוניונקציה פשוטה שמופיעה בה כל פסוק אלמנטרי (לחיוב או לשלילה) בדיוק פעם אחת | **Full Conjunction**                                                                    |
+| Course Term             |                                                                             | BNF                                                                             |
+| ----------------------- | --------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| קוניונקציה מרובה        | $\varphi_{1} \land\dots \land \varphi_{n}$                                  |                                                                                 |
+| דיסיונקציה מרובה        | $\varphi_{1} \lor\dots \lor \varphi_{n}$                                    |                                                                                 |
+| פסוק בסיסי              | $P$ or $\lnot P$                                                            | **Literal**<br>*Literal→¬Variable*<br>*Literal→Variable*<br>                    |
+|                         |                                                                             | **Disjunction**<br>Disjunction→Literal∨Disjunction<br>Disjunction→Literal       |
+| קוניונקציה פשוטה        | קוניונקציה מרובה של פסוקים בסיסיים                                          | **Conjunction**<br>Conjunction→Literal∧Conjunction<br>Conjunction→Literal       |
+| פסוק דיסיונקטיבי נורמלי | דיסיונקציה של קוניוקציות פשוטות                                             | **Disjunctive normal form (DNF)**<br>DNF→(Conjunction)∨DNF<br>DNF→(Conjunction) |
+|                         |                                                                             | **Conjunctive normal form (CNF)**<br>CNF→(Disjunction)∨CNF<br>CNF→(Disjunction) |
+| קוניונקציה פשוטה מלאה   | קוניונקציה פשוטה שמופיעה בה כל פסוק אלמנטרי (לחיוב או לשלילה) בדיוק פעם אחת | **Full Conjunction**                                                            |
+|                         |                                                                             |                                                                                 |
+
+
+- Notation of full conjunction: $C=\varepsilon_{1}P_{1}\land\dots \land \varepsilon_nP_{n}$
+- In a language $L_{n}$ with the elementary propositions $\{ P_{1},\dots,P_{n} \}$ there are exactly $2^n$ full conjunctions 
+
+- (3.5) Every proposition has an equivalent DNF (see algorithm 3.3.2.1 #todo )
+
+- A CNF is a conjunction of clauses
+- A **clause** is a disjunction (or rarely, conjunction) of literals
+
 
 # 4.1 Dialects
 

@@ -64,7 +64,7 @@ The formulas obtained from the first two rules are said to be **atomic formulas*
 		- $x$ occurs free in $(φ → ψ)$ if and only if $x$ occurs free in either $φ$ or $ψ$. 
 		- $x$ occurs bound in $(φ → ψ)$ if and only if $x$ occurs bound in either $φ$ or $ψ$. 
 		- (The same rule applies to any other binary connective in place of $→$.)
-	- Quantifiers: ($Q$ is $\forall$ or $\exists$)
+	- Quantifiers: ($Q$ is either $\forall$ or $\exists$)
 		- $x$ occurs free in $Qyφ$, if and only if $x$ occurs free in $φ$ and $x$ is a different symbol from $y$. 
 		- $x$ occurs bound in $Qyφ$, if and only if $x$ is $y$ or $x$ occurs bound in $φ$. 
 
@@ -94,8 +94,9 @@ The formulas obtained from the first two rules are said to be **atomic formulas*
 
 #### Variable Assignment
 
+- $V(\varphi)$ is the set of variables which occur freely in $\varphi$
 - A **(variable) assignment** for a structure $M$ with the domain $A$ is a mapping $S:\text{dom}(S)\to A$ where $\text{dom}(S)\subseteq{VAR}$
-	- A **(variable) assignment** for a formula $\varphi$ is a mapping $S:\text{dom}(S)\to A$ where $V(\varphi)\subseteq\text{dom}(S)\subseteq{VAR}$ and $V(\varphi)$ is the set of variables which occur freely in $\varphi$
+	- A **(variable) assignment** for a formula $\varphi$ is a mapping $S:\text{dom}(S)\to A$ where $V(\varphi)\subseteq\text{dom}(S)\subseteq{VAR}$ 
 		- If $\varphi$ is a sentence, then every assignment is *for a formula* $\varphi$, because $V(\varphi)=\emptyset$
 	- If $S$ is an assignment for a structure $M$, and $x \in \text{VAR}$, and $a\in{A}$ we denote $S\langle{x|a}\rangle$ if $S(x)=a$
 
@@ -109,5 +110,56 @@ Given structure $M$, and an assignment $S$ for a formula $\varphi$.
 - If $\varphi$ is the formula $\forall x\psi$ then $\varphi$ is **true** if and only if for each element $a\in A$ the formula $\psi$ is true in $S\langle{x|a}\rangle$
 - The **truth value** of a formula is **truth** if it is true, and **falsity**
 - Notaion: if $\varphi$ is true we can denote $S(\varphi)=\mathsf{T}$ or $S\models{\varphi}$ or $M\models_{S}\varphi$. If $\varphi$ is false we denote $S(\varphi)=\mathsf{F}$ or $S\nvDash\varphi$ or $M\nvDash_{S}\varphi$.
+- Given structure $M$, and two assignments $S_{1}$ and $S_{2}$ for a formula $\varphi$, such that $S_{1}(x)=S_{2}(x)$ for each $x \in V(\varphi)$, then $S_{1}(\varphi)=S_{2}(\varphi)$.
+	- Especially, if $\varphi$ is a sentence, then all assignments in $M$ give to $\varphi$ the same value. 
+		- In case a sentence $\varphi$ is true (in some assignment, and therefore in every assignment) then we say that the sentence $\varphi$ is **true in the structure** $M$, and denote $M\models{\varphi}$. 
+		- Otherwise, if a sentence $\varphi$ is false (in some assignment, and therefore in every assignment) then we say that the sentence $\varphi$ is **false in the structure** $M$, and denote $M\nvDash{\varphi}$.
+- Given structure $M$, then we say that $\varphi$ is **true in structure** $M$ if and only if $\varphi$ is true in every assignment $S$ for a formula $\varphi$
+	- If $x$ is a variable, then $\varphi$ is true in structure $M$ if and only if $\forall x\varphi$ is true in $M$
+- Given $V(\varphi)=\{ x_{1},\dots,x_{r} \}$, then $\forall x_{1}\dots \forall x_{r}\varphi$ the **universal closure** of the formula $\varphi$
+	- The formula $\varphi$ is true in $M$ if and only if its universal closure $\forall x_{1}\dots \forall x_{r}\varphi$ is true in $M$
 
-## Prenex normal form (5.7.2)
+
+### Restricted languages
+
+```
+If the set of relation symbols, function symbols, and constant symbols of a language $L$ is a subset of the set of alphabet symbols of $L'$, then $L$ is called a **reduction** of the language $L'$, and $L'$ is called an **enrichment** of the language L. Every noun in $L$ is also a noun in $L'$, and every formula in $L$ is also a formula in $L'$. If M is a model in the extended language $L'$, then the reduction of M to the language $L$ is obtained by ignoring the relations and functions that have been named in $L'$ but are not in the language $L$ (on the other hand, if M is a model in the language L, then there are many enrichments of the model to a model in the language $L'$, because there are many functions and relations in the structure to which the additional names can be assigned). It is important to note that the locality of the definition by induction (of the value of a noun in an assignment, and of the truth value of a formula in an assignment) ensures that the definition of the truth value of a formula does not depend on the interpretation that the model gives to the symbols that are not mentioned in the formula. In precise terms, this means:
+
+- (Theorem 5.7) Let $M_{1}$ and $M_{2}$ be two models in the languages $L_{1}$ and $L_{2}$, respectively, whose domain is the same set $A$, such that every assignment in one model is also an assignment in the other model. Let $\varphi$ be a formula that is in the intersection of the two languages. If the two models interpret the relation symbols, the function symbols, and the constant symbols that appear in the formula ϕ in the same way, then for every assignment S in the domain A: $M_{1}⊨_{S}​\varphi\iff M_{2}⊨_{S}​\varphi$
+	- In particular, if $L_{2}$ is a reduction of $L_{1}$ and $M_{2}$ is the reduction of $M_{1}$, then for every assignment $S$ and for every formula $\varphi$ in $L_{2}$: we have $M_{1}⊨_{S}​\varphi\iff M_{2}⊨_{S}​\varphi$
+
+
+```
+
+#todo 5.4.6
+#todo 5.4.7
+
+
+## Logical validity
+
+- A formula $\varphi$ is **logical valid** if and only if it is true in every structure (in particular, and in every assignment of $\varphi$) and denote by $\models \varphi$
+
+## Logical Equivalence
+
+- Two formulas $φ$ and $ψ$ are **logically equivalent** (denoted by $φ\equiv ψ$) if and only if, $\varphi\leftrightarrow\psi$ is logical valid. i.e.
+	- $φ\equiv ψ$ if and only if for each structure $M$ and for each assignment $S$, we hold $S\models\varphi$ if and only if $S\models\psi$ 
+	- (Theorem 5.8) 
+		- if $\varphi\equiv \psi$ then: 
+			- $\lnot\varphi\equiv \lnot\psi$
+			- $\varphi@\theta\equiv\psi@\theta$ and $\theta@\varphi\equiv\theta@\psi$ (for any binary connective $@$)
+			- $\forall x\varphi\equiv \forall x\psi$ and $\exists x\varphi\equiv \exists x\psi$ (for each varaible $x$)
+		- If $\varphi'$ is arrived from $\varphi$ by replacing sub-formula $\psi$ in $\psi'$ where $\psi\equiv \psi'$ then $\varphi'\equiv \varphi$
+
+- #todo tautology (5.9)
+
+
+- #todo like Logical Implication in propositional logic but for predicate logic  
+### minimal language
+
+#todo 
+
+#### Prenex Normal Form (5.7.2)
+
+- A formula $\varphi$ is said to be in **prenex form** if it is of the form $Q_{1}x_{1}Q_{2}x_{2} \dots Q_{n} x_{n} B$ where each $Q$ is either $∃$ or $∀$, and where $B$ contains no quantifiers. The sequence of quantifiers and variables at the beginning is called the **prefix**, and the quantifier-free formula that follows the **matrix**.
+	- If $\varphi$ is in prenex form and its metrix is DNF then it is said to be in  **prenex normal form**
+

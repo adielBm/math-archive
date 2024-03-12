@@ -1,4 +1,3 @@
-# Rule of inference
 
 - A **rule of inference** is a logical form consisting of a function which takes premises, analyzes their syntax, and returns a conclusion (or conclusions).
 
@@ -6,8 +5,8 @@
 
 - **Formal System**
 	- A **formal system** is an abstract structure or formalization of an *axiomatic system* used for inferring theorems from axioms by a set of inference rules.
-	- A **formal system** consists of a formal language together with a *deductive apparatus* (also called a _deductive system_).
-	- A **formal system** is a formal language $L$ together with a deductive apparatus for $L$
+	- A **formal system** consists of a formal language together with a deductive system
+	- A **formal system** is a formal language $L$ together with a deductive system for $L$
 	- A **formal system** is $(D, R)$ where D is a set of data structures, and R is a set of rules which determine which transitions between objects in D are allowed.
 	- A **formal system** is any well-defined system of abstract thought based on the model of mathematics
 	- A **formal system** $S=(K,P,V)$ consists of three finite and disjoint sets of symbols $K,P,V$ and two additional separate symbols $⇒$ for "implication" and , a comma for punctuation. 
@@ -32,11 +31,15 @@
 
 # Deductive system
 
-- A **deductive system**, (aka: *deductive apparatus*), consists of the axioms (or axiom schemata) and rules of inference that can be used to derive theorems of the system.
-- The **deductive apparatus** may consist of a set of transformation rules, which may be interpreted as valid rules of inference, or a set of axioms, or have both.
-- **Deductive system**, deductive apparatus, or proof system, which has rules of inference that take axioms and infers theorems, both of which are part of the formal language.
+- aka: deductive system, deductive apparatus, proof system
 
-- A **deductive apparatus** for a formal language $\mathcal{L}$ is a formally specified system for deriving conclusions about the well-formed formulas of $\mathcal{L}$
+- A **deductive system**, consists of: 
+	- the axioms (or axiom schemata)
+	- rules of inference, that can be used to derive theorems of the system.
+- The **deductive system** may consist of a set of transformation rules, which may be interpreted as valid rules of inference, or a set of axioms, or have both.
+- **Deductive system**, which has rules of inference that take axioms and infers theorems, both of which are part of the formal language.
+
+- A **deductive system** for a formal language $\mathcal{L}$ is a formally specified system for deriving conclusions about the well-formed formulas of $\mathcal{L}$
 
 - An example of deductive system is first order logic.
 

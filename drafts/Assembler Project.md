@@ -154,7 +154,6 @@ The machine instructions are divided into three groups, according to the number 
 | Relocatable (R) | `10` | indicate that the content of the word depends on the place in memory where the machine code of the program will actually be loaded when it is executed (thus, requiring changes linkage & loading)                              | a word containing the address of a label defined in the source file                                     |
 | External (E)    | `01` | indicates that the content of the word depends on the value of an external symbol (thus, requiring changes linkage & loading)                                                                                                   | a word containing the address of an external label, i.e. a label that is not defined in the source file |
 
-
 ### Addressing Modes
 
 In our language, there are four addressing modes, marked with the numbers `0`, `1`, `2`, and `3`.
@@ -737,12 +736,12 @@ In the second pass, the assembler encodes using the symbol table all the words i
 
 **Each input file processed individually**, resulting in the creation of the following output files:
 
-| File | Ext. | Content | Notes |
-| ---- | ---- | ---- | ---- |
-| **Extended source file** | `.am` | Source file after preprocessing (macro expansion). | generate by the pre-assembler. If no macros are present, the `.am` file is identical to the `.as` file. |
-| **Object file** | `.ob` | Machine code |  |
-| **Entries file** | `.evt` | Details about each symbol declared as an entry point (a symbol that appeared as an operand of the entry directive and is characterized in the symbol table as entry). | The file is omitted if there are no `.entry` directives |
-| **Externals file** | `.ext` | Details about all the places (addresses) in the machine code where a data word encoding the value of a symbol declared as external appears (a symbol that appeared as an operand of the extern directive and is characterized in the symbol table as external). | The file is omitted if there are no `.extern` directives |
+| File                     | Ext.   | Content                                                                                                                                                                                                                                                         | Notes                                                                                                   |
+| ------------------------ | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| **Extended source file** | `.am`  | Source file after preprocessing (macro expansion).                                                                                                                                                                                                              | generate by the pre-assembler. If no macros are present, the `.am` file is identical to the `.as` file. |
+| **Object file**          | `.ob`  | Machine code                                                                                                                                                                                                                                                    |                                                                                                         |
+| **Entries file**         | `.evt` | Details about each symbol declared as an entry point (a symbol that appeared as an operand of the entry directive and is characterized in the symbol table as entry).                                                                                           | The file is omitted if there are no `.entry` directives                                                 |
+| **Externals file**       | `.ext` | Details about all the places (addresses) in the machine code where a data word encoding the value of a symbol declared as external appears (a symbol that appeared as an operand of the extern directive and is characterized in the symbol table as external). | The file is omitted if there are no `.extern` directives                                                |
 
 - Output file names are based on the input file names, for exmaple, running `assembler x` processes the file `x.as` and creates the files `x.ob`, `x.am` (and `x.ext`, and `x.ent` if needed)
 
@@ -762,12 +761,12 @@ An object file contains the memory image. An object file consists of rows of tex
 
 > Note that variables appear in the memory image after the instructions. This is why it is necessary to update the symbol table, at the end of the first pass, with the values of symbols defining data (symbols of type `.data`).
 
-|  | Base 4 Encoding |
-| ---- | ---- |
-| `0` | `*` |
-| `1` | `#` |
-| `2` | `%` |
-| `3` | `!` |
+|     | Base 4 Encoding |
+| --- | --------------- |
+| `0` | `*`             |
+| `1` | `#`             |
+| `2` | `%`             |
+| `3` | `!`             |
 ##### Entries File (`.evt`)
 
 - Each row consists of: 

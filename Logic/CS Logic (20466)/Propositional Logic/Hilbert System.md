@@ -1,21 +1,22 @@
 
-- A **formal proof** (סדרת הוכחה פורמלית) of a given proposition $\varphi$ is a finite sequence of propositions such that $\varphi$ is the last in the sequence, and each proposition in the sequence is either axiom or derived from the previous propositions in the sequence.
-- A **proof calculus** (תחשיב, or **proof system**)
 
-## 4.3 Hilbert calculus
+- **Hilbert Systems** are a class of proof systems for propositional and predicate logic. Their characteristics include
+	- Axioms
+	- Rule of Inferences: (Typically only Modus Ponens)
 
-- A **Hilbert calculus** (תחשיב הילברט, or **Hilbert system**) 
+
+- A **Hilbert system**
 	- A set of propositions that will be called the **logical axioms** (אקסיומות לוגיות) of the calculus. 
 		- Naturally, these should be propositions whose truth we trust, but it is equally important that they be useful. The selection of axioms is not a process of discovering everything that is certainly true, but rather a process of identifying the facts that are clearly likely to be helpful in proving additional facts.
 	- A set of rules, which will be called the **inference rules** (כללי גזירה) of the calculus. 
 		- If we accept as proven several propositions, called the **assumptions** (הנחות), then according to the inference rules, we are allowed to add an additional proposition to the proven claims, which will be called the **conclusion** (מסקנה)
 
 
+
 - A **proof sequence** (סדרת הוכחה) is a finite sequence of propositions in which each proposition is either a logical axiom or derived from propositions that appeared before it in the sequence through inference rules. (Typically, we think of the proof sequence as proving the last proposition appearing in the sequence, and we say it is a proof sequence for that proposition.) 
 - A proposition that has a proof sequence is called a **provable** (יכיח) proposition (in the calculus)
 
-
-#### Example of Hilbert calculus
+#### Example (c4.3)
 
 - **Our calculus** is an example of Hilbert calculus:
 	- Language: The dialect $L_{\rightarrow }$ of the proposional language 
@@ -82,61 +83,26 @@
 - A a set of propositions is a **theory** iff it is consistent
 	- i.e. $K$ is a **theory** iff there is no proposition $\varphi$ such that both $K\vdash{\varphi}$ and $K\vdash{\lnot{\varphi}}$ 
 	- (In some books, the definitions requires the set is closed under logical implication)
-- A theory is a **complete theory** iff every proposition in it can be **proved** or **disproved**
+- Syntactical completeness
+	- A theory is a **complete theory** iff every proposition in it can be **proved** or **disproved**
 	- A theory is a **complete theory** iff for every proposition $\varphi$, either $K\vdash{\varphi}$ or $K\vdash{\lnot{\varphi}}$
 
 ##### Completeness Theorem
 
 - (4.5) A complete theory has unique model ( #todo is it iff?)
 - (4.6) For each theory $K$ there exist a complete theory $\overline{K}$ such that $K\subseteq{\overline{K}}$
-- (4.7) **Completeness Theorem**
-	- A theory has a model, or in an equivalence way
-	- If a theory $K$ [[Semantic#Logical Implication|logically implies]] a proposition $\psi$ (denoted by $K \implies \psi$) then $\psi$ is provable from (or theorem of) $K$ (denoted by $K \vdash \psi$)
+- (4.7) **Completeness Theorem** (*Semantic completeness*)
+	- A theory has a model, or in an equivalence way, 
+	- If a theory $K$ [[Semantic#Logical Implication|logically implies]] a proposition $\psi$ (denoted by $K \implies \psi$) then $\psi$ is *provable from* (or *theorem of*) $K$ (denoted by $K \vdash \psi$)
 
 
+#### Example (c4.3.5)
+
+- (4.3.5) Like Hilbert System (4.3) but with $L=\{ \lnot,\land,\lor,\to,\leftrightarrow \}$ and other axioms #todo
 
 
+#### Example (q4.9)
 
+q4.9 - $L=\{ \lnot,\to,\land \}$ and other axioms  #todo
 
-
-
-- section 4.3.5 complete calc - -
-
-
-
-
-## 4.4 Compactness Theorem
-
-- **Compactness theorem** (4.8)
-	- Let $K$ be a propositions set, 
-		- if every finite subset of $K$ has at least one model, then there exist a model of $K$
-		- if $K \implies \psi$ then there is a finite subset $\{ \varphi_{1},\dots,\varphi_{n} \}\subseteq K$ such that $\{ \varphi_{1},\dots ,\varphi_{n} \}\implies \psi$. (see t3.6)
-
-## 4.5 summary
-
-
-
-
-
-____
-
-- section 4.1.2, 4.1.3 see wiki Functional completeness, truth functionally complete
-	- קבוצת קשרים שלמה
-
-
-
-___
-
-# other 
-
-
-
-- Let L be a formal language. A **proof system** P for L comprises: Axioms and/or axiom schemata; Rules of inference for deriving theorems.
-	- Also known as: axiom system, mathematical theory
-- Formal Proof
-- **formation rules** are rules for describing which strings of symbols formed from the alphabet of a formal language are syntactically valid within the language.
-
-
-- A proof system is **complete** if every valid formula is provable
-- A proof system is **sound** if every provable formula is valid
-
+#todo 

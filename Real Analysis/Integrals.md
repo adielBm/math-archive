@@ -1,0 +1,116 @@
+# Antiderivative
+
+- (d1.12) $F$ is called an **antiderivative** of $f$ on some interval if $F'(x)=f(x)$ for all $x$ in that interval
+
+> The process of finding a function from its derivative (i.e. finding an antiderivative) is called **antidifferentiation** (or **integration**). A procedure for finding areas via antidifferentiation is called the **antiderivative method**
+
+
+# Definite Integral
+
+## Riemann Sum
+
+- Suppose $f : [a, b] \to \mathbb{R}$ is bounded and $P=\set{x_{0}, x_{1}, x_{2},\dots, x_n}$ is a partition of $[a, b]$ and $\Delta x_i = x_i - x_{i-1}$
+	- A **Riemann sum** is represented as: $\displaystyle R(P) = \sum_{i=1}^{n} f(c_i) \cdot \Delta x_i$ where $c_i$ is a chosen point in the $i$-th subinterval $[x_{i-1}, x_i]$
+	- **Darboux Sums**: 
+		- The **Lower Darboux Sum** 
+			- $\displaystyle L(P)=\sum^{n}_{i=1} m_{i}\cdot\Delta x_i$ where $\displaystyle{m_{i}=\inf _{x\in [x_{i-1},x_{i}]}f(x)}$
+		- The **Upper Darboux Sum**
+			- $\displaystyle U(P)=\sum^{n}_{i=1} M_{i}\cdot\Delta x_i$ where $\displaystyle{M_{i}=\sup _{x\in [x_{i-1},x_{i}]}f(x)}$ 
+		- $L(P)\leq U(Q)$ (for any partitions)
+		- $\displaystyle\sup_{P}L(P)\leq\inf_{P}U(P)$
+
+
+>[!notation] $s(P)=L(P)$ and $S(P)=U(P)$
+
+### Darboux Integrals
+
+- Let $\mathcal{P}$ represent all possible [[Interval#Partition|partitions]] over $[ a , b ]$
+- The **upper Darboux integral** of $f$ is 
+	- $\displaystyle U_{f}= {\overline {\int _{a}^{b}}}f(x)\,\mathrm {d} x=\inf \{ U_{f,P}:P \in \mathcal{P} \}$
+
+- The **lower Darboux integral** of $f$ is
+	- $\displaystyle L_{f}= {\underline {\int _{a}^{b}}}f(x)\,\mathrm {d} x=\sup \{ L_{f,P}:P\in \mathcal{P} \}$
+-  $L_{f}\leq U_{f}$
+
+- Let $P'$ be a refinement of the partition $P$ of the given interval $[a, b]$ then:
+	- $U(P')\leq U(P)$
+	- $L(P)\leq L(P')$
+
+- (d1.8) A bounded function $f:[a,b]\to \mathbb{R}$ is called **Reimann-integrable** (or **integrable**) if $\displaystyle {\overline {\int _{a}^{b}}}f(x)\,\mathrm {d} x= {\underline {\int _{a}^{b}}}f(x)\,\mathrm {d} x$, in such case, the common value is called the **definite integral** of $f$ and denote as $\displaystyle\int^{b}_{a} f(x) \, dx$
+	- (1.10) $f$ is integrable, if and only if, $\forall \varepsilon>0,\exists P:U_{f,P}-L_{f,P}<\varepsilon$
+	- (1.11) $\displaystyle\lim_{ n \to \infty }(U(P_{n})-L(P_{n}))=0\implies \int_{a}^{b} f(x) \, dx=\lim_{ n \to \infty }U(P_{n})=\lim_{ n \to \infty }L(P_{n})$
+
+#### Theorems & Properties 
+
+- (1.20,q1.34) Additivity - If $a<c<b$ then $f$ is integrable on $[a,b]$ iff $f$ is ingerable on $[a,c]$ and $[c,b]$. In that case: $\displaystyle\int_a^b f(x) \; dx = \int_a^c f(x) \; dx \, + \int_c^b f(x) \; dx$
+- (1.21) Given $f$ is integrable on $[a,b]$, If $c$ and $d$ are numbers such that $a\leq c<d\leq b$, then $f$ is integrable on $[c,d]$
+- (1.22a) $\displaystyle\int ^b_{a}f(x) \, dx=-\int ^a_{b}f(x) \, dx$
+- (1.22b) $\displaystyle\int ^a_{a}f(x) \, dx=0$
+- Given $f$ and $g$ are integrable on $[a,b]$ :
+	- (1.24) Linearity
+		- $\displaystyle\int ^b_{a}cf(x) \, dx=c\int ^b_{a}f(x) \, dx$
+		- $\displaystyle\int ^b_{a}(-f(x)) \, dx=-\int ^b_{a}f(x) \, dx$
+		- $\displaystyle\int ^b_{a}(f(x)\pm g(x)) \, dx=\int ^b_{a} f(x)\, dx\pm\int ^b_{a} g(x)\, dx$
+		- If $f,g$ are continuous then, $\displaystyle A =\left|{\int^{x_{2}}_{x_{1}}(f(x)-g(x))  \, dx}\right|$ represents the area between the curves $f(x)$ and $g(x)$ over the interval $[x_1, x_2]$
+	- (1.26) If $\forall x \in[a,b], f(x)\leq g(x)$ then $\displaystyle\int ^b_{a}f(x) \, dx\leq\int ^b_{a}g(x) \, dx$
+- (1.25) If $f(x)=g(x)$ for every $x$ excluding finite number of points on $[a,b]$, then, if $g$ integrable on $[a,b]$ then $f$ integrable on $[a,b]$, and $\int ^b_{a}f(x) \, dx=\int ^b_{a}g(x) \, dx$
+- $\forall a,b,c$ we have $\displaystyle\int ^b_{a}c \, dt=c(b-a)$ 
+- if $f$ is integrable on an interval where $a$ and $b$ are its endpoints and $|f(x)|\leq M$ for all $x$ in that interval, then $\displaystyle\left|\int^b_{a} f(t) \, dt\right|\leq M|b-a|$
+
+# Indefinite Integral
+
+- (d1.30) if $f$ is integrable on $[a,b]$ and $c \in [a,b]$ then the function $\displaystyle F_{c}(x)=\int ^x_{c}f(t) \, dt$ which is defined on $[a,b]$ is called an **indefinite integral** of $f$ on $[a,b]$ 
+- (d2.1) The **(class of) indefinite integral** of the $f$ with respect to $x$ is $\displaystyle\int f(x) dx= \{ F(x):F'(x)=f(x),x \in I \}$
+
+### Properties
+
+- Suppose that $F(x)$ and $G(x)$ are antiderivatives of $f(x)$ and $g(x)$, respectively
+
+|                         | Formula                                                            |                          |
+| ----------------------- | ------------------------------------------------------------------ | ------------------------ |
+| Constant Multiplication | $\displaystyle\int cf(x)dx=c\int f(x)dx$                           | $c\in\mathbb{R}$         |
+|                         | $\displaystyle\int x^n \, dx=\frac{x^{n+1}}{n+1}+C$                | (for integers $n\geq 0$) |
+| Sum                     | $\displaystyle \int [f(x)\pm g(x)]dx= \int f(x)dx\pm \int  g(x)dx$ |                          |
+| U-Substitution          | $\displaystyle\int f(g(x)) g'(x)=F(g(x))+C$                        |                          |
+
+# Theorems
+
+### Sufficient Conditions for Integrabletly
+
+- sufficient conditions for integrabletly of $f$ on $[a,b]$
+	- (1.11) $\displaystyle\lim_{ n \to \infty }(U(P_{n})-L(P_{n}))=0$
+	- (1.15) if $f$ is weakly monotonic on $[a,b]$
+	- (1.17) if $f$ is bounded and piecewise monotone on $[a,b]$
+	- (1.18) if $f$ is continuous (thus bounded) on $[a,b]$ 
+	- (1.19) if $f$ is bounded and continuous on $[a,b]$ (possibly expect finites number of discontinuity points), then
+
+### Outcomes of Integrable Function
+
+- If $f$ is integrable on $[a,b]$ then: 
+	- (1.13, הנוסחה היסודית, Newton–Leibniz theorem) 
+		- if $F$ is any antiderivative of $f$ on $[a,b]$, then $\displaystyle\int^{b}_{a} f(x) \, dx=F(b)-F(a)=F(x) \big|_a^b$
+	- (1.27) $|f|$ is also integrable on $[a,b]$
+	- (1.32) every indefinite integral of $f$ on $[a,b]$ is continuous on $[a,b]$
+	- (1.31) the difference of each two indefinite integrals of $f$ on $[a,b]$ is constant
+	- (1.34) if $f$ has an antiderivative function on $[a,b]$ then the indefinite integral $\displaystyle\int ^x_{c}f(t) \, dt$ is an antiderivative of $f$ on $[a,b]$
+
+### Outcomes of Continuous Function
+
+- if $f$ is continuous on $[a,b]$ then:
+	- (1.18) $f$ is integrable (thus bounded) on $[a,b]$ 
+	- (1.29 - MVT for Integrals) $\exists c \in[a,b]:\displaystyle\int ^b_{a}f(x) \, dx=f(c)(b-a)$
+	- (q1.57) for all $c \in [a,b]$, the indefinite integral $\displaystyle\int ^x_{c}f(t) \, dt$ is an antiderivative of $f$ on $[a,b]$
+	- (1.33) The Fundamental Theorem of Calculus 
+		- $\displaystyle F_{a}(x)=\int_{a}^{x}f(t)  \, dt$ is differentiable on $[a,b]$ and 
+		- $\displaystyle F'_{a}(x)=\frac{d}{dx}\left[ \int_{a}^{x}f(t)  \, dt \right]=f(x)$
+	- (1.33') The Fundamental Theorem of Calculus
+		- $f$ has an antiderivative function on $[a,b]$
+		- every antiderivative function of $f$ on $[a,b]$ is of the form $\displaystyle\int ^x_{a}f(t) \, dt+C$ where $C$ is some real number
+
+
+# Applications
+## The Area Problem 
+
+- Given a continuous function $f$
+	- $\displaystyle\int^{b}_{a} |f(x)| \, dx$ is the area of of the region that lies between the graph of $f$ and the interval $[a, b]$ on the $x$-axis
+

@@ -1,5 +1,5 @@
 
-- A **proof calculus** (or **proof system**) includes the components
+- A **proof system** includes the components
 	- Formal language: The set L of formulas admitted by the system, for example, propositional logic or first-order logic.
 	- Rules of inference: List of rules that can be employed to prove theorems from axioms and theorems.
 	- Axioms: Formulas in L assumed to be valid. All theorems are derived from axioms.

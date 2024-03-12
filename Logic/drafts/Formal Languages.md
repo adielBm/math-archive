@@ -49,8 +49,14 @@
 	- A **formal language** $L$ is a possibly infinite set of strings over a finite alphabet $\Sigma$
 	- A formal language is a language that is defined by a formal system.
 	- Formal language, which is a set of well-formed formulas, which are strings of symbols from an alphabet, formed by a formal grammar (consisting of production rules or formation rules).
-	- A **formal language** over an alphabet $\Sigma$ is a set of words over $\Sigma$. 
-	- A **formal language** over $\Sigma$ is a subset of $\Sigma^*$
+
+	- A **formal language** consist of:
+		- an alphabet made of an initial (usually finite) stock of basic symbols
+		- a set (usually finite) of rules to produce expressions (usually with finite length) that are called formulas
+
+
+- A **formal language** over an alphabet $\Sigma$ is a set of words over $\Sigma$. 
+- A **formal language** over $\Sigma$ is a subset of $\Sigma^*$
 
 > The adjective *formal* is often omitted as redundant
 
