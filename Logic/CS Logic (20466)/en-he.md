@@ -62,4 +62,5 @@
 | כלל ההכללה       | Universal generalization | generalization, universal introduction, GEN, UG |
 |                  |                          |                                                 |
 |                  |                          |                                                 |
+|                  |                          |                                                 |
 

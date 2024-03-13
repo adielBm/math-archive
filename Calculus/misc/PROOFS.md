@@ -170,7 +170,7 @@ Let $(a_n)$ be a convergent sequence, if $\displaystyle\lim_{ n \to \infty }{a_{
 
 ## 3.16 & 3.17
  
- [[Real Analysis/Sequences/Monotonicity#Monotone Convergence Theorem]]
+ [[Calculus/Sequences/Monotonicity#Monotone Convergence Theorem]]
 
 ## 3.22 (Cantor's Lemma)
 

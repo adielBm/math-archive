@@ -4,14 +4,15 @@
 	- punctuation symbols: parentheses and commas
 - Signature  https://www.cs.ox.ac.uk/people/james.worrell/lecture09.pdf
 	- Constant symbols
-	- Function symbols
+	- Function symbols 
 
 - **Terms**
 	- Each individual variable $x_{k}$ and each constant symbol $c$ is a **term**
 	- If $F$ is an $k$-ary function symbol, and $t_{1},\dots, t_{k}$ are terms, then $F(t_{1},\dots,t_{n})$ is a term
 
-## Structural Induction
+## Structural Induction 
 
+we can define a func
 
 - We can define a function $H$ from the set of terms to any other set
 	- We define $H(t)$ for each atomic term

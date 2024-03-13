@@ -7,7 +7,7 @@
 **Algebraic functions** are functions that can be expressed as the solution of a polynomial equation with integer coefficients.
 
 - [[Polynomial|Polynomials]]
-	- [[Real Analysis/Functions/Limit#Polynomials|Limit]]
+	- [[Calculus/Functions/Limit#Polynomials|Limit]]
 - Rational functions: A ratio of two polynomials.
 - nth root
 
@@ -24,7 +24,7 @@
 	- y-intercept:  $(0,1)$
 	- $\text{Im}f=(0,\infty)$
 	- Inverse Function $f^{-1}=\log_{a}(x)$ (where $a\neq 1$)
-	- [[Limit#Exponential functions|limit]]  
+	- [[Calculus/Functions/Limit#Exponential functions|limit]]  
 		- (Increasing) $a>1\implies$ 
 			- $\displaystyle\lim_{ x \to -\infty }f(x)=0$
 			- $\displaystyle\lim_{ x \to \infty }f(x)=\infty$
@@ -46,7 +46,7 @@
 		- Vertical asymptote at $x=0$
 		- Horizontal asymptote as $x$ approaches infinity
 	- Inverse Function $f^{-1}=a^x$
-	- [[Limit#Logarithmic functions|limit]]  
+	- [[Calculus/Functions/Limit#Logarithmic functions|limit]]  
 		- (Increasing) $a>1\implies$ 
 			- $\displaystyle\lim_{ x \to 0^+}f(x)= -\infty$
 			- $\displaystyle\lim_{ x \to \infty }f(x)=\infty$
@@ -65,10 +65,10 @@
 
 ##### Trigonometric Functions 
 
-- [[Real Analysis/Functions/Limit#Trigonometric functions|Limit]]
+- [[Calculus/Functions/Limit#Trigonometric functions|Limit]]
 - [[Derivative#Examples|Derivative]]
 
 ##### Inverse trigonometric functions
 
-- [[Real Analysis/Functions/Limit#Trigonometric functions|Limit]]
+- [[Calculus/Functions/Limit#Trigonometric functions|Limit]]
 - [[Derivative#Examples|Derivative]]

@@ -14,7 +14,7 @@
 | $\Lambda$  | $\lambda$              | `\lambda`              | `/ˈlæmdə/`     |
 | $M$        | $\mu$                  | `\mu`                  | `/ˈm(j)uː/`    |
 | $N$        | $\nu$                  | `\nu`                  | `/ˈnjuː/`      |
-| $\Xi$      | $\xi$                  | `\xi`                  | `/zaɪ/`        |
+| $\Xi$      | $\xi$                  | `\xi`                  | `/ksaɪ/`       |
 | $O$        | $o$                    | `o`                    | `/ˈoʊməˌkɹɑn/` |
 | $\Pi$      | $\pi$                  | `\pi`                  | `/ˈpaɪ/`       |
 | $P$        | $\rho$                 | `\rho`                 | `/ˈroʊ/`       |
