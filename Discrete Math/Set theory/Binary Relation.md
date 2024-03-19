@@ -106,10 +106,16 @@
 
 ## Equivalence relation
 
-- An **equivalence relation** is a binary relation $R$ on $A$ that is **reflexive**, **symmetric** and **transitive**
-- The **quotient set** $A/R$ is the set of equivalence classes.
+- An **equivalence relation** is a binary relation $R$ on $A$ that is reflexive, symmetric and transitive
+
+### Equivalence Class
+
 - The **equivalence class** of $a\in{A}$ under equivalence relation $R$ is the set $[a]=\{x \in A : x R a\}$ ^[20476 notation: $\overline{a}$]
 - The [[Bell numbers|Bell number]] $B_{n}$ counts **the number of different ways to partition a set** that has exactly $n$ elements, or equivalently, **the number of equivalence relations** on it.
+
+### Quotient Set
+
+- The **quotient set** of $A$ induced by $R$ is the set of all equivalence classes of A under R, and denote by $R/A:=\{ [x]:x \in A \}$
 
 #### Theorems 
 

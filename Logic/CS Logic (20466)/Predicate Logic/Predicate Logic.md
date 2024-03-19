@@ -70,6 +70,8 @@ The formulas obtained from the first two rules are said to be **atomic formulas*
 
 - A variable $x$ is a **free variable** in $φ$, if and only if, it has at least one free occurrence in $\varphi$ 
 - A variable $x$ is a **bound variable** in $φ$, if and only if, all occurrences of $x$ in $φ$ are bound
+##### Sentence
+
 - A formula $\varphi$ is called a **sentence**, if these is no free variable in $\varphi$, i.e. all occurrences of $x$ in $φ$ are bound
 
 ### Substitution
@@ -81,12 +83,11 @@ The formulas obtained from the first two rules are said to be **atomic formulas*
 
 ## Structure (Model)
 
-- A **model** or **structure** $M = \langle A; c_1^M, \ldots; F_1^M, \ldots ;P_{1}^{M},\dots\rangle$ is defined as
+- (C5.4) A **model** or **structure** $M = \langle A; c_1^M, \ldots; F_1^M, \ldots ;P_{1}^{M},\dots\rangle$ is defined as
 	- $A$ is a non-empty set called the **domain** ($A$ is sometimes denoted by $|M|$)
-	- **Interpretation Function** $I$ mapping non-logical symbols for predicates, functions, and constants.
-		- For each constant symbol $c$, assigns a member $c^M$ of the domain $A$
-		- For each each $n$-ary predicate symbol $P$, assigns an $n$-place relation $P^M\subseteq A^n$
-		- For each each $n$-ary function symbol $F$, assigns an $n$-ary function $F^{M}: A^{n}\to{A}$. 
+	- For each constant symbol $c$, assigns a member $c^M$ of the domain $A$
+	- For each each $n$-ary predicate symbol $P$, assigns an $n$-place relation $P^M\subseteq A^n$
+	- For each each $n$-ary function symbol $F$, assigns an $n$-ary function $F^{M}: A^{n}\to{A}$. 
 
 
 > If we don't mention other, we are in **first-order logic with equality**, which means, the equality symbol ̇$=$ is defined as the identity relation $R = \{(x, x) : x \in A\}$
@@ -102,6 +103,8 @@ The formulas obtained from the first two rules are said to be **atomic formulas*
 
 ### Truth Value
 
+#### Truth Value of formula in Assignment
+
 Given structure $M$, and an assignment $S$ for a formula $\varphi$.
 
 - If $\varphi$ is an atomic formula $P(t_{1},\dots,t_{n})$, then $\varphi$ is **true** if $(t_{1}^S,\dots,t_{n}^S)\in{P^M}$, otherwise $\varphi$ is **false**
@@ -111,11 +114,29 @@ Given structure $M$, and an assignment $S$ for a formula $\varphi$.
 - The **truth value** of a formula is **truth** if it is true, and **falsity**
 - Notaion: if $\varphi$ is true we can denote $S(\varphi)=\mathsf{T}$ or $S\models{\varphi}$ or $M\models_{S}\varphi$. If $\varphi$ is false we denote $S(\varphi)=\mathsf{F}$ or $S\nvDash\varphi$ or $M\nvDash_{S}\varphi$.
 - Given structure $M$, and two assignments $S_{1}$ and $S_{2}$ for a formula $\varphi$, such that $S_{1}(x)=S_{2}(x)$ for each $x \in V(\varphi)$, then $S_{1}(\varphi)=S_{2}(\varphi)$.
-	- Especially, if $\varphi$ is a sentence, then all assignments in $M$ give to $\varphi$ the same value. 
-		- In case a sentence $\varphi$ is true (in some assignment, and therefore in every assignment) then we say that the sentence $\varphi$ is **true in the structure** $M$, and denote $M\models{\varphi}$. 
-		- Otherwise, if a sentence $\varphi$ is false (in some assignment, and therefore in every assignment) then we say that the sentence $\varphi$ is **false in the structure** $M$, and denote $M\nvDash{\varphi}$.
-- Given structure $M$, then we say that $\varphi$ is **true in structure** $M$ if and only if $\varphi$ is true in every assignment $S$ for a formula $\varphi$
+
+#### Truth Value of formula in Model
+
+Given a model $M$
+
+- $\varphi$ is a sentence, then all assignments in $M$ give to $\varphi$ the same value. 
+	- In case a sentence $\varphi$ is true (in some assignment, and therefore in every assignment) then we say that the sentence $\varphi$ is **true in the structure** $M$, and denote $M\models{\varphi}$. 
+	- Otherwise, if a sentence $\varphi$ is false (in some assignment, and therefore in every assignment) then we say that the sentence $\varphi$ is **false in the structure** $M$, and denote $M\nvDash{\varphi}$.
+- A formula $\varphi$ is **true in** $M$ if and only if $\varphi$ is true in every assignment $S$ for $\varphi$ 
+	- notation: $M\models{\varphi}$, other terminology: $M$ **satisfied** $\varphi$; $M$ is a model of $\varphi$; $\varphi$ holds in $M$
 	- If $x$ is a variable, then $\varphi$ is true in structure $M$ if and only if $\forall x\varphi$ is true in $M$
+
+
+#### Model of Set
+
+- A model $M$ is said to be a **model of** a set of sentences $K$, written $M\models K$, whenever $M\models{\varphi}$ for each $\varphi \in K$
+
+##### Satisfiable Set
+
+- A set of sentences $K$ is said to be **satisfiable** iff there is some $M$ such that $M\models K$.
+
+#### Universal closure
+
 - Given $V(\varphi)=\{ x_{1},\dots,x_{r} \}$, then $\forall x_{1}\dots \forall x_{r}\varphi$ the **universal closure** of the formula $\varphi$
 	- The formula $\varphi$ is true in $M$ if and only if its universal closure $\forall x_{1}\dots \forall x_{r}\varphi$ is true in $M$
 
@@ -163,3 +184,9 @@ If the set of relation symbols, function symbols, and constant symbols of a lang
 - A formula $\varphi$ is said to be in **prenex form** if it is of the form $Q_{1}x_{1}Q_{2}x_{2} \dots Q_{n} x_{n} B$ where each $Q$ is either $∃$ or $∀$, and where $B$ contains no quantifiers. The sequence of quantifiers and variables at the beginning is called the **prefix**, and the quantifier-free formula that follows the **matrix**.
 	- If $\varphi$ is in prenex form and its metrix is DNF then it is said to be in  **prenex normal form**
 
+
+____
+## Theory
+
+- A set of sentences $K$ is said to be **inconsistent** if there exists a sentence $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. Moreover, $K$ is **consistent** if for no sentences $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
+- A **theory** is a consistent set of [[Predicate Logic#Free & Bound Variables|sentences]]

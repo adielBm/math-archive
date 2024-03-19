@@ -34,15 +34,17 @@ If it is first-order logic with equality, then we have also
 - Universal generalization $\displaystyle\frac{\varphi}{\forall x\varphi}$
 - Modus ponens $\displaystyle\frac{\varphi,(\varphi\to \psi)}{\psi}$
 
+
 # Definitions
 
-- A **theory** is a set of [[Predicate Logic#Free & Bound Variables|sentences]]
-- Let $K$ be a theory, a **proof sequence from a theory** $K$ (in our calculus) is a sequence of formulas such that each formula in the sequence is either:
+- Let $K$ be a theory, a **proof sequence** from a [[Predicate Logic#Theory|theory]] $K$ (in our calculus) is a sequence of formulas such that each formula in the sequence is either:
 	- A logical axiom
 	- A formula in the set $K$
 	- Derived from two previous formulas in the sequence using one of the rules of inference
 
-> **Note**: Here we restrict a theory to be set of *sentences*. but there are definitions with this restriction. Also, in a *proof sequence* (unlike to a *theory*), may be formulas that are *not* sentences.
+
+
+> **Note**: Here we restrict a theory to be set of *sentences*. but there are definitions without this restriction. Also, in a *proof sequence* (unlike to a *theory*), may be formulas that are *not* sentences.
 
 # Theorems
 
@@ -55,5 +57,13 @@ If it is first-order logic with equality, then we have also
 - (6.2) Soundness Theorem
 	- This proof system is [[Proof System#Soundness|sound]], i.e.
 	- Let $K$ be a set of formulas and $\psi$ be a proposition. If $K\vdash \varphi$ (provable), then $K \models\varphi$ ([[Semantic#Logical Implication|logically implied]])
-- 
+- Given $K$ is a [[Predicate Logic#Theory|theory]], $\psi$ is a sentence and $\varphi$ is a formula. 
+	- (6.3) Deduction theorem - If $K\cup \{ \psi \}\vdash \varphi$ then $K \vdash ( \psi \to \varphi)$
+	- (6.4a) Principle of explosion - $\{ \psi,\lnot \psi \}\vdash \varphi$ (thus, every inconsistent set of sentences prove every formula)
+	- (6.4b) if $K\cup \{ \lnot \varphi \}$ is inconsistent then $K \vdash \varphi$
+	- (6.5a) if $K\vdash \forall x\varphi$ and the variable $v$ does not appear in $\varphi$ then $K \vdash \forall y \varphi[y/x]$
+	- (6.5b) Given the constant $c$ that does not appear neither in the sentences of $K$ nor in $\varphi$. If $K \vdash \varphi[c / x]$ then $K \vdash \forall x \varphi$
+- Given $L'$ a language that adds constants to a language $L$, and $K$ a set of sentences in $L$
+	- (6.5c) for every sentence $\varphi$ in $L$, if $K \vdash \varphi$ in $L'$ then $K \vdash \varphi$ in $L$
+	- (6.5d) if $K$ is consistent in $L$, then it is consistent in $L'$
 

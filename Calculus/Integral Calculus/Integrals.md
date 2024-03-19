@@ -110,6 +110,8 @@ Equivalence of Definitions of Riemann and Darboux Integrals
 
 ### Outcomes of Integrable Function
 
+
+
 - If $f$ is integrable on $[a,b]$ then: 
 	- (1.13, הנוסחה היסודית, Newton–Leibniz theorem) 
 		- if $F$ is any antiderivative of $f$ on $[a,b]$, then $\displaystyle\int^{b}_{a} f(x) \, dx=F(b)-F(a)=F(x) \big|_a^b$
