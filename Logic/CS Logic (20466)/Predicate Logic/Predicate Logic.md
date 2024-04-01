@@ -188,5 +188,16 @@ If the set of relation symbols, function symbols, and constant symbols of a lang
 ____
 ## Theory
 
+
 - A set of sentences $K$ is said to be **inconsistent** if there exists a sentence $\varphi$ such that $K ⊢ \varphi$ and $K ⊢ ¬\varphi$. Moreover, $K$ is **consistent** if for no sentences $\varphi$ we have $K ⊢ \varphi$ and $K ⊢ ¬\varphi$
 - A **theory** is a consistent set of [[Predicate Logic#Free & Bound Variables|sentences]]
+- A theory $K$ is said to be **complete** if for every sentence $φ$, either $K \vdash\varphi$ or $K \vdash\lnot\varphi$
+
+
+- examples:
+	- $P$ : [[Peano axioms]] 
+
+
+- #todo antoher definition  (from *D. Cunningham*)  
+	- A set of sentences $K$ is said to be a **theory** if and only if $K$ is closed under logical implication, that is, for any sentence $\varphi$ of the language, if $K \models \varphi$, then $\varphi \in K$
+	- A theory $K$ is said to be **complete** if for every sentence $φ$, either $φ ∈ K$ or $¬φ ∈ K$

@@ -27,8 +27,6 @@
 > - The **average rate of change** of $y=f(x)$ with respect to $x$ over the interval $[x_{0},x_{1}]$ is $\frac{\Delta y}{\Delta x}=\frac{f(x_{1})-f(x_{0})}{x_{1}-x_{0}}=\frac{f(x_{0}+h)-f(x_{0})}{h}$ (where $h\neq 0$) 
 > - The **instantaneous rate of change** of $f$ with respect to $x$ at $x_{0}$ is the derivative $f'(x_{0})=\displaystyle\lim_{h\to 0}{\frac {f(x_{0}+h)-f(x_{0})}{h}}$. (provided the limit exists)
 
->$L(x)=f(x_{0})+f'(x)(x-x_{0})$ is called the **linearization** of $f$ at $x_{0}$. The approximation $f(x)\approx L(x)$ is called the **linear approximation** of $f$ at $x_{0}$  
-
 ## Theorems
 
 - if $f$ is differentiable at $x_{0}$
@@ -128,22 +126,22 @@
 
 ## Examples
 
-| $f(x)$ | $\text{dom}(f)$ | $f'(x)$ | $\text{dom}(f')$ |
-| ---- | ---- | ---- | ---- |
-| $\sqrt{x}$ | $[0, \infty)$ | $\frac{1}{2\sqrt{x}}$ | $(0, \infty)$ |
-| $\sqrt{g(x)}$ | $\{x\mid g(x)\geq 0 \}$ | $\frac{g'(x)}{2\sqrt{g(x)}}$ | $\{x\mid g(x)> 0 \}$ |
-| $\sin(x)$ | $\mathbb{R}$ | $\cos(x)$ | $\mathbb{R}$ |
-| $\cos(x)$ | $\mathbb{R}$ | $-\sin(x)$ | $\mathbb{R}$ |
-| $\tan(x)$ | $\mathbb{R} \setminus \left\{ \frac{(2n + 1)\pi}{2} \mid n \in \mathbb{Z} \right\}$ | $\frac{1}{\cos^2 x} = 1 + \tan^2(x)$ | $\text{dom}(\tan(x))$ |
-| $\cot(x)$ | $\mathbb{R} \setminus \left\{ n\pi \mid n \in \mathbb{Z}\right\}$ | $-\frac{1}{\sin^2(x)}$ | $\text{dom}(\cot(x))$ |
-| $\arcsin(x)$ | $[-1, 1]$ | $\frac{1}{\sqrt{1-x^2}}$ | $(-1, 1)$ |
-| $\arccos(x)$ | $[-1, 1]$ | $-\frac{1}{\sqrt{1-x^2}}$ | $(-1, 1)$ |
-| $\arctan(x)$ | $\mathbb{R}$ | $\frac{1}{1+x^2}$ | $\mathbb{R}$ |
-| $\text{arccot}(x)$ | $\mathbb{R}$ | $\frac{-1}{1+x^2}$ | $\mathbb{R}$ |
-| $a^x$ | $\mathbb{R}$ | $a^x \cdot \ln(a)$ | $\mathbb{R}$ |
-| $e^x$ | $\mathbb{R}$ | $e^x$ | $\mathbb{R}$ |
-| $\log_{a}(x)$ | $(0, \infty)$ | $\frac{1}{x \ln(a)}$ | $(0, \infty)$ |
-| $\ln(x)$ | $(0, \infty)$ | $\frac{1}{x}$ | $(0, \infty)$ |
+| $f(x)$             | $\text{dom}(f)$                                                                     | $f'(x)$                              | $\text{dom}(f')$      |
+| ------------------ | ----------------------------------------------------------------------------------- | ------------------------------------ | --------------------- |
+| $\sqrt{x}$         | $[0, \infty)$                                                                       | $\frac{1}{2\sqrt{x}}$                | $(0, \infty)$         |
+| $\sqrt{g(x)}$      | $\{x\mid g(x)\geq 0 \}$                                                             | $\frac{g'(x)}{2\sqrt{g(x)}}$         | $\{x\mid g(x)> 0 \}$  |
+| $\sin(x)$          | $\mathbb{R}$                                                                        | $\cos(x)$                            | $\mathbb{R}$          |
+| $\cos(x)$          | $\mathbb{R}$                                                                        | $-\sin(x)$                           | $\mathbb{R}$          |
+| $\tan(x)$          | $\mathbb{R} \setminus \left\{ \frac{(2n + 1)\pi}{2} \mid n \in \mathbb{Z} \right\}$ | $\frac{1}{\cos^2 x} = 1 + \tan^2(x)$ | $\text{dom}(\tan(x))$ |
+| $\cot(x)$          | $\mathbb{R} \setminus \left\{ n\pi \mid n \in \mathbb{Z}\right\}$                   | $-\frac{1}{\sin^2(x)}$               | $\text{dom}(\cot(x))$ |
+| $\arcsin(x)$       | $[-1, 1]$                                                                           | $\frac{1}{\sqrt{1-x^2}}$             | $(-1, 1)$             |
+| $\arccos(x)$       | $[-1, 1]$                                                                           | $-\frac{1}{\sqrt{1-x^2}}$            | $(-1, 1)$             |
+| $\arctan(x)$       | $\mathbb{R}$                                                                        | $\frac{1}{1+x^2}$                    | $\mathbb{R}$          |
+| $\text{arccot}(x)$ | $\mathbb{R}$                                                                        | $\frac{-1}{1+x^2}$                   | $\mathbb{R}$          |
+| $a^x$              | $\mathbb{R}$                                                                        | $a^x \cdot \ln(a)$                   | $\mathbb{R}$          |
+| $e^x$              | $\mathbb{R}$                                                                        | $e^x$                                | $\mathbb{R}$          |
+| $\log_{a}(x)$      | $(0, \infty)$                                                                       | $\frac{1}{x \ln(a)}$                 | $(0, \infty)$         |
+| $\ln(x)$           | $(0, \infty)$                                                                       | $\frac{1}{x}$                        | $(0, \infty)$         |
 
 ### Inverse functions
 

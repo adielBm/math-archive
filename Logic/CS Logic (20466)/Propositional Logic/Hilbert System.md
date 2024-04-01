@@ -29,7 +29,7 @@
 	- Inference rules (actually one here)
 		- Modus ponens $\displaystyle\frac{\varphi,(\varphi \rightarrow \psi)}{\psi}$
 
-- Definitions for our calculus:
+	- Definitions for our calculus:
 	- Let $K$ be a set of propositions, a **proof sequence from a set** $K$ (in our calculus) is a sequence of propositions $\varphi_{1},\dots,\varphi_{n}$ such that each proposition in the sequence is either: 
 		- A logical axiom
 		- A proposition in the set $K$

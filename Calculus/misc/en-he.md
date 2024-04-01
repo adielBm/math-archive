@@ -26,6 +26,8 @@
 	- supremum limit, limit supremum, limsup, superior limit, upper limit, outer limit
 	- גבול עליון
 
+- linearization
+	- קירוב לינארי, קירוב מסדר ראשון
 
 - point of tangency
 	- נקודת השקה
