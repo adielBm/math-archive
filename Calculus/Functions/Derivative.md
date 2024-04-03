@@ -73,9 +73,9 @@
 
 # Differentiability on Interval
 
-- $f$ is differentiable on the interval $I$
-- $f$ is **differentiable at every point** $x\in I\subseteq\text{dom}(f)$
-- $I\subseteq\text{dom}(f')$
+- $f$ is said to be **differentiable** on the interval $I$ if $f$ is differentiable at every point $x\in I\subseteq\text{dom}(f)$
+- $f$ is said to be **continuously differentiable** if its derivative is also a continuous function over the domain of the function $f$
+
 ## Theorems
 
 - $\text{dom}(f')\subseteq\text{dom}(f)$

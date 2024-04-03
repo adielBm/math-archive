@@ -70,6 +70,7 @@
 - $\displaystyle\int \cot x\, dx=\ln\left|\sin x\right|+C$
 - $\displaystyle\int \frac{1}{\sin x} \, dx=\ln\left|\tan \frac{x}{2}\right|+C$
 - $\displaystyle\int \frac{1}{\cos x} \, dx=-\ln\left|\tan \left( \frac{x}{2}-\frac{\pi}{4} \right)\right|+C$
+- $\int \frac{1}{\sqrt{ x }} \, dx=2\sqrt{ x }+C$
 
 
 

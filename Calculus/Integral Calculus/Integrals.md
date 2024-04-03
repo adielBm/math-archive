@@ -150,3 +150,8 @@ if $f$ is continuous on $[a,b]$ then:
 - If $f$ (and $g$) are continuous
 	- $\displaystyle\int^{b}_{a} |f(x)| \, dx$ is the area of of the region that lies between the graph of $f$ and the interval $[a, b]$ on the $x$-axis
 	-  $\displaystyle A =\left|{\int^{x_{2}}_{x_{1}}(f(x)-g(x))  \, dx}\right|$ is the area between the curves $f(x)$ and $g(x)$ over the interval $[x_1, x_2]$
+
+## Arc Length
+
+- If $f'$ is [[Derivative#Differentiability on Interval|continuously differentiable]] on $[a,b]$, then the **length** (**arc length**) of the curve $y=f(x)$ from the point $(a, f(a))$ to the point $(b, f(b))$ is $\displaystyle L=\int ^b_{a}\sqrt{ 1+(f'(x))^2 } \, dx=\int ^b_{a}\sqrt{ 1+\left(\frac{dy}{dx}\right)^2 } \, dx$ 
+

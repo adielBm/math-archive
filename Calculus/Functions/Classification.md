@@ -8,7 +8,7 @@
 
 - [[Polynomial|Polynomials]]
 	- [[Calculus/Functions/Limit#Polynomials|Limit]]
-- Rational functions: A ratio of two polynomials.
+- [[Rational function|Rational functions]]: A ratio of two polynomials.
 - nth root
 
 ### Transcendental functions
@@ -48,11 +48,11 @@
 	- Inverse Function $f^{-1}=a^x$
 	- [[Calculus/Functions/Limit#Logarithmic functions|limit]]  
 		- (Increasing) $a>1\implies$ 
-			- $\displaystyle\lim_{ x \to 0^+}f(x)= -\infty$
-			- $\displaystyle\lim_{ x \to \infty }f(x)=\infty$
+			- $\displaystyle\lim_{ x \to 0^+}\log_{a}(x)= -\infty$
+			- $\displaystyle\lim_{ x \to \infty }\log_{a}(x)=\infty$
 		- (Decreasing) $0<a<1\implies$ 
-			- $\displaystyle\lim_{ x \to 0^+ }f(x)=\infty$
-			- $\displaystyle\lim_{ x \to \infty }f(x)=-\infty$
+			- $\displaystyle\lim_{ x \to 0^+ }\log_{a}(x)=\infty$
+			- $\displaystyle\lim_{ x \to \infty }\log_{a}(x)=-\infty$
 	- [[Derivative#Examples|Derivative]]
 
 
