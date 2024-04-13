@@ -48,19 +48,23 @@
 > Assuming the function are differentiable at the relevant points
 
 
-| Derivative Rules |  |  |
-| ---- | ---- | ---- |
-| **Sum/Difference Rule** | $(f\pm g)'(x_{0})=f'(x_{0})\pm g'(x_{0})$ |  |
-| **Product Rule** | $(fg)'={fg'}+{f'g}$ |  |
-| ---- Constant Multiple Rule | $(cf)'(x_{0})=c\cdot f'(x_{0})$ |  |
-| ---- (7.17) | $(f^{n})'(x)=nf^{n-1}(x)\cdot f'(x)$ |  |
-| ---- Power Rule | $(x^n)'=nx^{n-1}$ (integer $n\neq 0$, *7.20*) <br>$(x^r)'=rx^{r-1}$ ($r\in\mathbb{R}$, $x>0$, *7.31*) |  |
-| **Quotient Rule** | $\displaystyle\left( \frac{f}{g} \right)'(x_{0})=\frac{f'g-fg'}{g^2}$ | $g(x_{0})\neq 0$ |
-| ---- (7.19) Reciprocal rule | $\displaystyle\left( \frac{1}{f} \right)'=\frac{{-f'}}{f^2}$<br>$\displaystyle\frac{d}{dx}\left[ \frac{1}{f(x)} \right]=\frac{{-f'(x)}}{[f(x)]^2}$ | $f(x_{0})\neq 0$ |
-| **Chain Rule** | $(f(g(x)))'=f'(g(x))\cdot g'(x)$ | $\displaystyle  {\frac {dz}{dx}}={\frac {dz}{dy}}\cdot {\frac {dy}{dx}}$ |
-|  | $(f(g(h(x))))'=f'(g(h(x))) \cdot g'(h(x)) \cdot h'(x)$ |  |
-|  | $\displaystyle  f_{1\,.\,.\,n}'(x)=\prod _{k=1}^{n}f_{k}'\left(f_{(k+1\,.\,.\,n)}(x)\right)$ |  |
-| linearity of differentiation | $\displaystyle  {\frac {\mbox{d}}{{\mbox{d}}x}}(\alpha \cdot f(x)+\beta \cdot g(x))=\alpha \cdot f'(x)+\beta \cdot g'(x)$ | from the sum and constant factor rules |
+| Derivative Rules                |                                                                                                                                                    |                                                                          |
+| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| **Sum/Difference Rule**         | $(f\pm g)'(x_{0})=f'(x_{0})\pm g'(x_{0})$                                                                                                          |                                                                          |
+| **Product Rule** (Leibniz rule) | $(fg)'={fg'}+{f'g}$                                                                                                                                |                                                                          |
+| ---- Constant Multiple Rule     | $(cf)'(x_{0})=c\cdot f'(x_{0})$                                                                                                                    |                                                                          |
+| ---- (7.17)                     | $(f^{n})'(x)=nf^{n-1}(x)\cdot f'(x)$                                                                                                               |                                                                          |
+| ---- Power Rule                 | $(x^n)'=nx^{n-1}$ (integer $n\neq 0$, *7.20*) <br>$(x^r)'=rx^{r-1}$ ($r\in\mathbb{R}$, $x>0$, *7.31*)                                              |                                                                          |
+| **Quotient Rule**               | $\displaystyle\left( \frac{f}{g} \right)'(x_{0})=\frac{f'g-fg'}{g^2}$                                                                              | $g(x_{0})\neq 0$                                                         |
+| ---- (7.19) Reciprocal rule     | $\displaystyle\left( \frac{1}{f} \right)'=\frac{{-f'}}{f^2}$<br>$\displaystyle\frac{d}{dx}\left[ \frac{1}{f(x)} \right]=\frac{{-f'(x)}}{[f(x)]^2}$ | $f(x_{0})\neq 0$                                                         |
+| **Chain Rule**                  | $(f(g(x)))'=f'(g(x))\cdot g'(x)$                                                                                                                   | $\displaystyle  {\frac {dz}{dx}}={\frac {dz}{dy}}\cdot {\frac {dy}{dx}}$ |
+|                                 | $(f(g(h(x))))'=f'(g(h(x))) \cdot g'(h(x)) \cdot h'(x)$                                                                                             |                                                                          |
+|                                 | $\displaystyle  f_{1\,.\,.\,n}'(x)=\prod _{k=1}^{n}f_{k}'\left(f_{(k+1\,.\,.\,n)}(x)\right)$                                                       |                                                                          |
+| linearity of differentiation    | $\displaystyle  {\frac {\mbox{d}}{{\mbox{d}}x}}(\alpha \cdot f(x)+\beta \cdot g(x))=\alpha \cdot f'(x)+\beta \cdot g'(x)$                          | from the sum and constant factor rules                                   |
+
+
+
+
 
 
 ## One Side
@@ -74,8 +78,6 @@
 # Differentiability on Interval
 
 - $f$ is said to be **differentiable** on the interval $I$ if $f$ is differentiable at every point $x\in I\subseteq\text{dom}(f)$
-- $f$ is said to be **continuously differentiable** if its derivative is also a continuous function over the domain of the function $f$
-
 ## Theorems
 
 - $\text{dom}(f')\subseteq\text{dom}(f)$
@@ -166,3 +168,37 @@
 	- if $f'(x_{0})=0$, the point is a **stationary inflection point**
 	- if $f'(x_{0})\neq 0$, the point is a **non-stationary inflection point**
 - A stationary inflection point is not a local extremum point
+
+# Higher-order derivatives
+
+- A function $f$ is **twice differentiable** if and both $f'$ and $(f')'$ exist. In such case $(f')'=f''$ is called the **second derivative** of $f$
+- A function $f$ is **n-times differentiable** if $f',f'',f'''=f^{(3)}, \dots, f ^{(n)}$ all exist. In such case $f^{(n)}$ is called the **$n$-th derivative** of $f$
+- $f^{(n+1)}(x)=(f^{(n)})'(x)$ for every $x$ in which $f^{(n+1)}$ is defined
+- $f=f^{(0)}$
+- for infinite times see *smooth function*
+
+#### Derivative Rules
+
+- (IN2-4.1) if $f$ (and $g$) [[#Higher-order derivatives|n-times differentiable functions]] in an interval $D$ then:
+	- $(f\pm g)$ is n-times differentiable in $D$ and $(f\pm g)^{(n)}=f^{(n)}\pm g^{(n)}$
+	- $(f\cdot g)$ is n-times differentiable in $D$ and for all $x$ in $D$ we have 
+		- (**General Leibniz rule**) $\displaystyle(f \cdot g)^{(n)}(x)=\sum^n_{k=0}\binom{n}{k}f^{(n-k)}(x)\cdot g^{(k)}(x)$
+		- $(c\cdot f)^{(n)}=c\cdot f^{(n)}$
+-  if $f_{1},\dots f_{m}$ n-times differentiable in an interval $D$ then $f_{1}+ \dots+f_{m}$ is n-times differentiable in $D$ and $(f_{1}+ \dots+f_{m})^{(n)}=f_{1}^{(n)}+\dots+ f_{m}^{(n)}$
+- if $f(x)=x^n$ then
+	- if $k<n$ then $f^{(k)}(x)=n\cdot(n-1)\cdots(n-k+1)x^{n-k}$
+	- if $k=n$ then $f^{(k)}(x)\equiv n!$
+	- if $k>n$ then $f^{(k)}(x)\equiv 0$
+
+# Continuously Differentiability
+
+- A function $f$ is said to be of class $C^0$ if it is continuous (the class $C^0$ consists of all continuous functions)
+- A function $f$ is said to be **continuously differentiable** and of class $C^1$ if the derivative $f'(x)$ exists and is itself a continuous function.
+- A function $f$ is of class $\displaystyle C^{2}$ if the first and second derivative of the function both exist and are continuous. 
+- A function $f$ is said to be of class $\displaystyle C^{k}$ if the first $k$ derivatives ${\textstyle f^{\prime }(x),f^{\prime \prime }(x),\ldots ,f^{(k)}(x)}$ all exist and are continuous. 
+- A function $f$ is to be **smooth** (or **infinitely differentiable**) and of class $C^\infty$ if it has derivatives of all orders (so all these derivatives are continuous)
+
+> The classes $C^{k}$ can be defined recursively by declaring $C^{0}$ to be the set of all continuous functions, and declaring $\displaystyle C^{k}$ for any positive integer $k$ to be the set of all differentiable functions whose derivative is in $C^{k-1}$. In particular, $C^{k}\subset C^{k-1}$ for every $k>0$. The class $\displaystyle C^{\infty }$ of smooth functions, is the intersection of the classes $C^{k}$ as $k$ varies over the non-negative integers.
+
+> Although the derivative of a differentiable function never has a [[Continuity#Discontinuity point|jump discontinuity]], it is possible for the derivative to have an essential discontinuity
+

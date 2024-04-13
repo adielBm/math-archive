@@ -1,3 +1,5 @@
+
+
 - $(a_{n})$ and $(b_{n})$ are **positive (!!!)**
 	- definitions
 		- $a_{n}=O(b_{n})\iff \exists{c>0}:{a_{n}\leq cb_{n}}$ (for all $n$) $\iff$ $(a_{n}/b_{n})$ is bounded (q2.44a)

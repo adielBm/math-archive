@@ -15,3 +15,5 @@ while $r\neq0$ and $\deg(r) \geq \deg(d)$ do
 2. Multiply $d(x)$ by the result just obtained, and write the product result under the first two terms of the dividend.
 3. Subtract the product just obtained from $r(x)$
 4. Bring down the next term from $f(x)$
+
+

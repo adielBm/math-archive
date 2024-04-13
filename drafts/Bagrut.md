@@ -8,6 +8,7 @@
 | Trigonometry              | V       | V       | V       |
 | Geometric progression     | V       | V       | V       |
 | Trigonometry in Space     | V       | V       | V       |
+| ------------------        |         |         |         |
 | **Differential calculus** |         |         |         |
 | Rational Functions        | V       | V       | V       |
 | Functions with Sq-Root    | V       | V       | V       |
@@ -15,7 +16,7 @@
 | Trigonometric Functions   |         | V       | V       |
 | Explorational funtions    |         | V       | V       |
 | Logarithmic functions     |         | V       | V       |
-| ---------                 |         |         |         |
+| ------------------        |         |         |         |
 | Growth and Decay Problems | V       | V       | V       |
 | Sequences (Recurrence)    |         | V       | V       |
 | Verbal Problems           |         | V       | V       |

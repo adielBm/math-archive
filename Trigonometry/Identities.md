@@ -1,18 +1,7 @@
 
-
-- $\displaystyle\sin\theta=\cos\left(\frac{\pi}{2} - \theta \right)$
-- $\displaystyle\cos\theta = \sin\left(\frac{\pi}{2} - \theta \right)$
-
-### Quotient Identities 
-
-- $\displaystyle\tan\theta = \frac{\sin \theta}{\cos \theta}$
-- $\displaystyle\cot\theta = \frac{\cos \theta}{\sin \theta}$
-
-### Reciprocal Identities 
-
-- $\displaystyle\sec\theta=\frac{1}{\cos \theta}$
-- $\displaystyle\csc\theta=\frac{1}{\sin \theta}$
-
+| $\displaystyle\sin\theta=\cos\left(\frac{\pi}{2} - \theta \right)$ | $\displaystyle\cos\theta = \sin\left(\frac{\pi}{2} - \theta \right)$ | $\displaystyle\tan\theta = \frac{\sin \theta}{\cos \theta}$ |
+| ------------------------------------------------------------------ | -------------------------------------------------------------------- | ----------------------------------------------------------- |
+| $\displaystyle\csc\theta=\frac{1}{\sin \theta}$                    | $\displaystyle\sec\theta=\frac{1}{\cos \theta}$                      | $\displaystyle\cot\theta = \frac{\cos \theta}{\sin \theta}$ |
 
 ### Pythagorean identities
 $$
@@ -79,10 +68,7 @@ ___
 | $1$ | $2k\pi+\frac{\pi}{2}$ | $2k\pi$ |
 | $0$ | $k\pi$ | $(2k+1)\frac{2}{\pi}$ |
 | $-1$ | $2k\pi-\frac{\pi}{2}$ | $(2k + 1)\pi$ |
-
-___
-
-
 ### Inverse trigonometric functions
 
 - $\arcsin(x),~ \arccos(x), ~\arctan(x)$
+

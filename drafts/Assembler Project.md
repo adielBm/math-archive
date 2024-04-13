@@ -767,7 +767,7 @@ An object file contains the memory image. An object file consists of rows of tex
 | `1` | `#`             |
 | `2` | `%`             |
 | `3` | `!`             |
-##### Entries File (`.evt`)
+	##### Entries File (`.evt`)
 
 - Each row consists of: 
 	- the name of a symbol defined as `.entry` 

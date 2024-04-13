@@ -16,8 +16,7 @@
 - (2.6) Integration by parts
 	- $\int f(x)g'(x) \, dx=f(x)g(x) -\int f'(x)g(x) \, dx$ 
 
-- (2.10) Integration by parts for definite integrals
-	- $\int ^b_{a}uv' \, dx=uv|^b_{a}-\int ^{b}_{a}u'v \, dx$
+
 
 - (2.7) 
 	- 
@@ -46,9 +45,7 @@
 	- $\displaystyle\int f(x) \, dx=F(x)+C\implies\displaystyle\int f(\alpha x+\beta) \, dx=\frac{1}{\alpha}F(\alpha x+\beta)+C$ 
 
 
-- #todo  Substitution in Definite Integrals
-
-# Basic integration formulas
+# Basic Integration Formulas
 
 - $\displaystyle\int 0 \, dx=C$
 - Cavalieri's quadrature formula
@@ -77,17 +74,12 @@
 - $\displaystyle\int \frac{1}{\sqrt{ a^2+x^2 }} \, dx=\arcsin \frac{x}{a}+C$
 
 
-
-
-
 ## Examples 
 
 - (2.8a) $\displaystyle\int x\ln x \, dx=\frac{x^2\ln x}{2}-\frac{x^2}{4}+C$
 - (2.9) $\displaystyle\int \ln x \, dx=x\ln x-x+C$
 - (2.10) $\displaystyle\int \ln^2x \, dx=x\ln^2x-2x\ln x+2x+C$
 - (e2.12) $\displaystyle I_{m}=\int \frac{1}{(x^2+a^2)^{m}} \, dx={\begin{cases}I_{1}=\frac{1}{a}\arctan \frac{x}{a}+C \\ I_{m+1}=\frac{1}{2ma^2}\cdot \frac{x}{(x^2+a^2)^m}+\frac{2m-1}{2ma^2}I_{m} \end{cases}}$
-
-___
 
 # Rational Functions
 
@@ -123,12 +115,28 @@ Decomposition of a [[rational function]] $N(x)/D(x)$ into partial fractions
 4. Quadratic factors: For each factor of the form $(ax^2 + bx + c)^n$, the partial fraction decomposition must include the following sum of $n$ fractions. $\displaystyle \frac{B_{1}x+C_{1}}{ax^2+bx+c}+\frac{B_{2}x+C_{2}}{(ax^2+bx+c)^2}+\dots+\frac{B_{n}x+C_{n}}{(ax^2+bx+c)^n}$
 
 
+# Trigonometric substitution
 
+- Integrands containing $a^2-x^2$
+	- Substitution:
+		- $x=a\sin t$ 
+		- $dx=a\cos t \,dt$ 
+		- $t =\arcsin {\frac {x}{a}}$
 
+- Integrands containing $a^2+x^2$
+	- Substitution:
+		- $x=a\tan t$ 
+		- $dx=a\sec^2 t \,dt$ 
+		- $t =\arctan {\frac {x}{a}}$
+
+- Integrands containing $x^2-a^2$
+	- Substitution:
+		- $x=a\sec t$ 
+		- $dx=a\sec t\tan t \,dt$ 
+		- $t =\text{arcsec} {\frac {x}{a}}$
 
 
 # Tangent half-angle substitution
-
 
 - $\displaystyle \sin x={\frac {2t}{1+t^{2}}}$
 - $\displaystyle\cos x={\frac {1-t^{2}}{1+t^{2}}}$
@@ -147,17 +155,46 @@ Decomposition of a [[rational function]] $N(x)/D(x)$ into partial fractions
 		- $n=2k+1$
 		- $\cos ^n x=\cos^{2k+1}x=(\cos^2x)^{k}\cos x=(1-\sin^{2} x)^{k}\cos x$
 	- $m,n$ are even:
-		- 
+		- #todo 
+
+# Definite Integrals
+
+
+|                |                                                                                   |                                          |
+| -------------- | --------------------------------------------------------------------------------- | ---------------------------------------- |
+| Additivity     | $\displaystyle\int_a^b f(x) \; dx = \int_a^c f(x) \; dx \, + \int_c^b f(x) \; dx$ | $a<c<b$ and $f$ is integrable on $[a,b]$ |
+| Shift Property | $\displaystyle\int_a^b f(x) \; dx = \int_{a-c}^{b-c} f(x+c) \; dx$                |                                          |
+|                | $\displaystyle\int_0^a f(x) \; dx = \int_{0}^{a} f(a-x) \; dx$                    |                                          |
+
+## Integration by parts
+
+- (2.10) Integration by parts for definite integrals
+	- $\int ^b_{a}uv' \, dx=uv|^b_{a}-\int ^{b}_{a}u'v \, dx$
+
+## Substitution in Definite Integrals
+
+(2.11) conditions:
+
+- $f$ is defined and continuous on $[a,b]$
+- $\varphi$ is a function defined, continuous and continuously differentiable on an interval $J=[\alpha,\beta]$ or $J=[\beta,\alpha]$
+- $\varphi(J)\subseteq[a,b]$ (that is, $f$ is continuous on $\varphi$'s image)
+- $\varphi(\alpha)=a$ and $\varphi(\beta)=b$
+- Substitutions
+	- (substitute $x=\varphi(t)$)  $\displaystyle \int ^b_{a}f(x) \, dx =\int ^\beta_{\alpha}f(\varphi(t))\varphi'(t) \, dt$
+	- (substitute $t=\varphi(x)$)  $\displaystyle  \int ^\beta_{\alpha}f(\varphi(t))\varphi'(x) \, dx =\int ^{\varphi(\beta)}_{\varphi(\alpha)}f(t) \, dt$
 
 
 
-___
-
-- if $\deg p \geq \deg q$ then
-	- long div
-- if $\deg p < \deg q$
-	- פירוק לשברים חלקיים
-	- השלמה לריבוע 
-	- השלמה לנגזרת
 
 
+## Substitution in Definite Integrals
+
+(2.11) conditions:
+
+- $f$ is defined and continuous on $[a,b]$
+- $g$ is a function defined, continuous and continuously differentiable on an interval $J=[\alpha,\beta]$ or $J=[\beta,\alpha]$
+- $g(J)\subseteq[a,b]$ (that is, $f$ is continuous on $g$'s image)
+- $g(\alpha)=a$ and $g(\beta)=b$
+- Substitutions
+	- (substitute $x=g(t)$)  $\displaystyle \int ^b_{a}f(x) \, dx =\int ^\beta_{\alpha}f(g(t))g'(t) \, dt$
+	- (substitute $t=g(x)$)  $\displaystyle  \int ^\beta_{\alpha}f(g(x))g'(x) \, dx =\int ^{g(\beta)}_{g(\alpha)}f(t) \, dt$
