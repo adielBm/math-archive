@@ -37,14 +37,14 @@
 
 >Assuming $f,g$ are defined on $N^{*}_{\varepsilon}(x_{0})$, and their limits are exist
 
-| Limit Laws |  |  |
-| ---- | ---- | ---- |
-| Sum / Difference | $\displaystyle\lim_{x\to x_{0}}(f(x)\pm g(x))=\displaystyle \lim_{x\to x_{0}}f(x)\pm\lim_{x\to x_{0}}g(x)$ |  |
-| Product | $\displaystyle\lim_{x\to x_{0}}(f(x)\cdot g(x))=\displaystyle \lim_{x\to x_{0}}f(x)\cdot\lim_{x\to x_{0}}g(x)$ |  |
-|  | $\displaystyle\lim_{x\to x_{0}}(f(x)\cdot c)=\displaystyle \lim_{x\to x_{0}}f(x)\cdot c$ |  |
-|  | $\displaystyle\lim_{x\to x_{0}}(f(x))^n=\Big(\displaystyle \lim_{x\to x_{0}}f(x)\Big)^{n}$ |  |
-| Quotient | $\displaystyle\lim_{x\to x_{0}}(f/g)(x)=\displaystyle \lim_{x\to x_{0}}f(x)/\lim_{x\to x_{0}}g(x)$ where $\displaystyle\lim_{x\to x_{0}}g(x)\neq 0$ |  |
-| Composite Function | $\displaystyle\lim_{ x \to {x_{0}} }f(x)=\displaystyle\lim_{ t \to t_{0} }f(g(t))$ | $\displaystyle\lim_{ t \to t_{0} }g(t)=x_{0}$ is defined and ($f$ is continuous at $x_{0}$ or $g(t)\neq x_{0}$ for some deleted neighborhood of $t_{0}$) |
+| Limit Laws                |                                                                                                                                                     |                                                                                                                                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sum / Difference          | $\displaystyle\lim_{x\to x_{0}}(f(x)\pm g(x))=\displaystyle \lim_{x\to x_{0}}f(x)\pm\lim_{x\to x_{0}}g(x)$                                          |                                                                                                                                                          |
+| Product                   | $\displaystyle\lim_{x\to x_{0}}(f(x)\cdot g(x))=\displaystyle \lim_{x\to x_{0}}f(x)\cdot\lim_{x\to x_{0}}g(x)$                                      |                                                                                                                                                          |
+|                           | $\displaystyle\lim_{x\to x_{0}}(f(x)\cdot c)=\displaystyle \lim_{x\to x_{0}}f(x)\cdot c$                                                            |                                                                                                                                                          |
+|                           | $\displaystyle\lim_{x\to x_{0}}(f(x))^n=\Big(\displaystyle \lim_{x\to x_{0}}f(x)\Big)^{n}$                                                          |                                                                                                                                                          |
+| Quotient                  | $\displaystyle\lim_{x\to x_{0}}(f/g)(x)=\displaystyle \lim_{x\to x_{0}}f(x)/\lim_{x\to x_{0}}g(x)$ where $\displaystyle\lim_{x\to x_{0}}g(x)\neq 0$ |                                                                                                                                                          |
+| Composite Function (4.39) | $\displaystyle\lim_{ x \to {x_{0}} }f(x)=\displaystyle\lim_{ t \to t_{0} }f(g(t))$                                                                  | $\displaystyle\lim_{ t \to t_{0} }g(t)=x_{0}$ is defined and ($f$ is continuous at $x_{0}$ or $g(t)\neq x_{0}$ for some deleted neighborhood of $t_{0}$) |
 
 
 - (q4.62) $\displaystyle\lim_{x\to0}{f(x)}=L\implies\lim_{x\to 0}{f(x^2)}=L$

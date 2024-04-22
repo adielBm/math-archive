@@ -23,3 +23,7 @@
 		- if $|r|\geq1$, $\sum_{n=0}^{\infty}ar^n$ diverges.
 - A **harmonic series** is a series of the form $\sum_{n=1}^{\infty}\frac{1}{n}$.
   - The harmonic series diverges.
+
+
+- Strategy for Series https://eddieguo.ca/assets/downloads/notes/math101.pdf
+

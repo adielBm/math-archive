@@ -1,36 +1,3 @@
-# Table of Content
-
-| Unit | Theorem |  |
-| ---- | ---- | ---- |
-| [[#Unit 1]] | [[#(1.43) Bernoulli's Inequality]] | by-induction; multiplying by $(1+x)\geq 0$ (because $x>-1$) |
-|  | [[#(1.47) Existence minimum and maximum of set]] | by-induction (for max.); |
-| [[#Unit 2]] | [[#(2.12) Limit Uniqueness]] | by-contra.; $\varepsilon:=\frac{\mid L-M\mid}{3}$ trianlge ineq; |
-|  | [[#(2.16) Convergent sequence is Bounded]] | $\varepsilon:=1$; triangle ineq; $M:=\max\{ \vert a_{1}\vert ,\vert a_{2}\vert , \dots, \vert a_{N}\vert , \vert L\vert  \}+1$ |
-|  | [[#(2.22) Null * Bounded = Null]] | lim-def, 2.18 $\|a_{n}\|<\varepsilon\implies \|a_{n}\|<\frac{\varepsilon}{M}$ |
-|  | [[#(2.26)]] | $\varepsilon:= \vert L\vert>0$ |
-|  | [[#(2.32)]] | N:=max(N1,N2) |
-|  | [[#(2.43e) 1/00=0]] |  |
-|  | [[#(2.47)]] |  |
-| [[#Unit 3]] | [[#(3.10)]] | 3.9 |
-|  | [[#3.16 & 3.17]] |  |
-|  | [[#3.22 (Cantor's Lemma)]] |  |
-|  | [[#3.32 (BW)]] |  |
-| [[#Unit 4]] | [[#(4.30) (ε, δ)-definition = Heine's definition]] |  |
-|  | [[#(4.41)]] |  |
-|  | [[#(4.42)]] |  |
-| [[#Unit 5]] | 5.15 Composition Function - Continuous  | by 5.14; con-def-5.1; |
-|  | [[#5.29]] |  |
-|  | [[#(5.30) Existence of root for odd polynomial]] | factor-out x^n |
-|  | [[#(5.35) W1]] | by contradiction |
-|  | [[#(5.37) W2 (EVT)]] | W1, 3.6, 3.9, Squeeze, BW, 5.27 |
-| [[#Unit 6]] | [[#6.15]] |  |
-| [[#Unit 7]] | [[#(7.9) Differentiability Implies Continuity]] |  |
-| [[#Unit 8]] | [[#8.4 (Fermat's Theorem)]] | left (& right) derivative is $\geq$ (& $\leq$) 0; 7.12 |
-|  | [[#8.5 (Rolle's Theorem)]] | W2, Fermat |
-|  | [[#(8.6) Lagrange's MVT]] | g:=f-l, Rolle |
-|  | [[#(8.9) Cauchy's MVT (2nd proof)]] |  |
-|  | [[#(8.10) Darboux's Theorem]] | H:=f-tx, W2 (H), Fermat (H') |
-
 
 
 # Unit 1
@@ -87,28 +54,28 @@ $$( \lim_{ n \to \infty } a_{n}=L \land{\lim_{ n \to \infty } a_{n}=M})\implies{
 
 ## (2.16) Convergent sequence is Bounded
 
-|  |  |
-| ---- | ---- |
-| $\displaystyle\lim_{ n \to \infty }(a_{n})=L$ | given |
-| $\varepsilon:=1$ |  |
-| $\exists N:n>N\implies\vert a_{n}-L\vert<1$ |  |
-| $\vert a_{n}\vert=\vert(a_{n}-L)+L\vert\leq\vert a_{n}-L \vert+\vert L\vert<1+\vert L \vert$ | triangle inequality |
-| $M:=\max\{ \vert a_{1}\vert ,\vert a_{2}\vert , \dots, \vert a_{N}\vert , \vert L\vert  \}+1$ |  |
-| $\vert{a_{n}}\vert<M$ |  |
+|                                                                                               |                     |
+| --------------------------------------------------------------------------------------------- | ------------------- |
+| $\displaystyle\lim_{ n \to \infty }(a_{n})=L$                                                 | given               |
+| $\varepsilon:=1$                                                                              |                     |
+| $\exists N:n>N\implies\vert a_{n}-L\vert<1$                                                   |                     |
+| $\vert a_{n}\vert=\vert(a_{n}-L)+L\vert\leq\vert a_{n}-L \vert+\vert L\vert<1+\vert L \vert$  | triangle inequality |
+| $M:=\max\{ \vert a_{1}\vert ,\vert a_{2}\vert , \dots, \vert a_{N}\vert , \vert L\vert  \}+1$ |                     |
+| $\vert{a_{n}}\vert<M$                                                                         |                     |
 
 ## (2.22) Null * Bounded = Null 
 
 A product of **null** and **bounded** sequences is **null** sequence
 
-|  |  | implied by |
-| ---- | ---- | ---- |
-| 1 | $\displaystyle\lim_{ n \to \infty }a_{n}=0$ | given |
-| 2 | $\vert b_{n}\vert<M$ | given |
-|  | $\forall \varepsilon>0,\exists N:\forall n \in \mathbb{N},(n>N\implies \vert{a_{n}}\vert<\varepsilon)$ | by 1 |
-| 3 | $\forall \varepsilon>0,\exists N:\forall n \in \mathbb{N},\left( n>N\implies \vert{a_{n}}\vert<{\color{red}\frac{\varepsilon}{M}} \right)$ | by 2.18 |
-|  | $\vert a_{n}b_{n}\vert=\vert a_{n}\vert\vert b_{n}\vert<\frac{\varepsilon}{M} M=\varepsilon$ | by 2 & 3 |
-|  | $\displaystyle\lim_{ n \to \infty }a_{n}b_{n}=0$ |  |
-|  |  |  |
+|     |                                                                                                                                            | implied by |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------ | ---------- |
+| 1   | $\displaystyle\lim_{ n \to \infty }a_{n}=0$                                                                                                | given      |
+| 2   | $\vert b_{n}\vert<M$                                                                                                                       | given      |
+|     | $\forall \varepsilon>0,\exists N:\forall n \in \mathbb{N},(n>N\implies \vert{a_{n}}\vert<\varepsilon)$                                     | by 1       |
+| 3   | $\forall \varepsilon>0,\exists N:\forall n \in \mathbb{N},\left( n>N\implies \vert{a_{n}}\vert<{\color{red}\frac{\varepsilon}{M}} \right)$ | by 2.18    |
+|     | $\vert a_{n}b_{n}\vert=\vert a_{n}\vert\vert b_{n}\vert<\frac{\varepsilon}{M} M=\varepsilon$                                               | by 2 & 3   |
+|     | $\displaystyle\lim_{ n \to \infty }a_{n}b_{n}=0$                                                                                           |            |
+|     |                                                                                                                                            |            |
 
 ## (2.26)
 
@@ -149,6 +116,22 @@ Let $(a_n)$ be a convergent sequence, if $\displaystyle\lim_{ n \to \infty }{a_{
 
 ## (2.47)
 
+ (given $0<r<1$) if $\displaystyle\left|{\frac {a_{n+1}}{a_{n}}}\right|\leq r$ for almost all $n$ then $\displaystyle\lim_{ n \to \infty }(a_{n})=0$
+
+
+|     |                                                                                                                                 | implied by                                               |
+| --- | ------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| 1   | $0<r<1$                                                                                                                         | given                                                    |
+| 2   | $\displaystyle\left\vert{\frac {a_{n+1}}{a_{n}}}\right\vert\leq r$ for all $n$                                                  | the given is "for almost all", but it's the same by 2.29 |
+|     | $\displaystyle\left\vert{{a_{n+1}}}\right\vert\leq r\left\vert{a_{n}}\right\vert$                                               |                                                          |
+|     | $\displaystyle\left\vert{a_{n}}\right\vert\leq\left\vert{a_{1}}\right\vert{r^{n-1}}= \frac{\left\vert{a_{1}}\right\vert}{r}r^n$ | using induction                                          |
+|     | $\displaystyle{0}\leq\left\vert{a_{n}}\right\vert\leq \frac{\left\vert{a_{1}}\right\vert}{r}r^n$                                |                                                          |
+| 3   | $\displaystyle\lim_{ n \to \infty }r^{n}=0$                                                                                     | $0<r<1$                                                  |
+|     | $\displaystyle\lim_{ n \to \infty }\left\vert a_{n}\right\vert=0$                                                               | by squeeze                                               |
+|     | $\displaystyle\lim_{ n \to \infty } a_{n}=0$                                                                                    | q2.20                                                    |
+
+
+
 
 
 # Unit 3
@@ -157,16 +140,17 @@ Let $(a_n)$ be a convergent sequence, if $\displaystyle\lim_{ n \to \infty }{a_{
 
 - (3.10) $\sup{(A+B)}=\sup{A}+\sup{B}$
 
-|  |  | implied by |
-| ---- | ---- | ---- |
-|  | $\forall a \in A,a\leq \sup{A}$ |  |
-|  | $\forall b \in B,b\leq \sup{B}$ |  |
-|  | $a+b\leq \sup{A} +\sup{B}$ |  |
-| 1 | $\sup{A} +\sup{B}$ is upper bound of $A+B$ |  |
-|  | $\forall \varepsilon>0,\exists a \in A:a>\sup{A}-\frac{\varepsilon}{2}$ | by 3.9 |
-|  | $\forall \varepsilon>0,\exists b \in B:b>\sup{B}-\frac{\varepsilon}{2}$ | by 3.9 |
-| 2 | $\forall \varepsilon>0,\exists (a+b)\in(A+B): a+b >\sup{A}+\sup{B}-\varepsilon$ |  |
-|  | $\sup{A} +\sup{B}=\sup(A+B)$ | by 3.9 using 1 & 2 |
+|     |                                                                                 | implied by         |
+| --- | ------------------------------------------------------------------------------- | ------------------ |
+|     | $\forall a \in A,a\leq \sup{A}$                                                 |                    |
+|     | $\forall b \in B,b\leq \sup{B}$                                                 |                    |
+|     | $a+b\leq \sup{A} +\sup{B}$                                                      |                    |
+| 1   | $\sup{A} +\sup{B}$ is upper bound of $A+B$                                      |                    |
+|     | $\forall \varepsilon>0,\exists a \in A:a>\sup{A}-\frac{\varepsilon}{2}$         | by 3.9             |
+|     | $\forall \varepsilon>0,\exists b \in B:b>\sup{B}-\frac{\varepsilon}{2}$         | by 3.9             |
+| 2   | $\forall \varepsilon>0,\exists (a+b)\in(A+B): a+b >\sup{A}+\sup{B}-\varepsilon$ |                    |
+|     | $\sup{A} +\sup{B}=\sup(A+B)$                                                    | by 3.9 using 1 & 2 |
+|     |                                                                                 |                    |
 
 ## 3.16 & 3.17
  
@@ -194,6 +178,8 @@ Let $(a_n)$ be a convergent sequence, if $\displaystyle\lim_{ n \to \infty }{a_{
 |  | $\forall n \in \mathbb{N}, a_{n}\leq x \leq b_{n}$ |  |
 |  | $\displaystyle x \in \bigcap_{n=1}^{\infty}I_{n}$ |  |
 |  | ($x$ is the only element in this union: if $a_{n}\leq y \leq b_{n}$, then by squeeze we have $\displaystyle y=\lim_{ n \to \infty }y=\lim_{ n \to \infty }a_{n}=x$)<br> | squeeze |
+
+
 
 ## 3.32 (BW)
 
@@ -349,23 +335,23 @@ ____
 
 >this's a proof for maximum (for minimum is analogous)
 
-| Step | Statement | Implied By |
-| ---- | ---- | ---- |
-|  | $f$ is continuous on $I=[a,b]$ | Given |
-|  | $f$ is bounded on $I=[a,b]$ by $M$ | (5.35) W1 |
-|  | $M=\sup f([a,b])$ | 3.6 (LUB) |
-|  | $\forall\varepsilon>0,\exists{y\in{f([a,b])}}:M-\varepsilon<y$ | by 3.9 |
-|  | $\forall\varepsilon>0,\exists{x\in{[a,b]}}:M-\varepsilon<f(x)$ |  |
-|  | $\forall n \in\mathbb{N},\exists{x_{n}\in[a,b]}:M-\frac{1}{n}<f(x_{n})$ | $\varepsilon:=\frac{1}{n}$ |
-|  | ${\color{gray}\forall n \in\mathbb{N},\exists{x_{n}\in[a,b]}:}M-\frac{1}{n}<f(x_{n})\leq M$ |  |
-| 1 | $\displaystyle\lim_{ n \to \infty }f(x_{n})=M$ | by squeeze |
-|  | $(x_{n})$ is bounded |  |
-|  | $(x_{n})$ has a convergent subsequence $(x_{n_{k}})$ | by BW (3.32) |
-|  | $x_{0}:=\displaystyle\lim_{ k \to \infty }x_{n_{k}}$ |  |
-|  | $a\leq x_{0} \leq b$ |  |
-|  | $\displaystyle\lim_{ k \to \infty }f(x_{n_{{k}}})=M$ | by 1 and 3.25 |
-|  | $f(x_{0})=\displaystyle\lim_{ k \to \infty }f(x_{n_{k}})=M$ | by 5.27 (f is cont.) |
-|  | $x_{0}$ is maximum point of $f$ on $[a,b]$ |  |
+| Step | Statement                                                                                   | Implied By                 |
+| ---- | ------------------------------------------------------------------------------------------- | -------------------------- |
+|      | $f$ is continuous on $I=[a,b]$                                                              | Given                      |
+|      | $f$ is bounded on $I=[a,b]$ by $M$                                                          | (5.35) W1                  |
+|      | $M=\sup f([a,b])$                                                                           | 3.6 (LUB)                  |
+|      | $\forall\varepsilon>0,\exists{y\in{f([a,b])}}:M-\varepsilon<y$                              | by 3.9                     |
+|      | $\forall\varepsilon>0,\exists{x\in{[a,b]}}:M-\varepsilon<f(x)$                              |                            |
+|      | $\forall n \in\mathbb{N},\exists{x_{n}\in[a,b]}:M-\frac{1}{n}<f(x_{n})$                     | $\varepsilon:=\frac{1}{n}$ |
+|      | ${\color{gray}\forall n \in\mathbb{N},\exists{x_{n}\in[a,b]}:}M-\frac{1}{n}<f(x_{n})\leq M$ |                            |
+| 1    | $\displaystyle\lim_{ n \to \infty }f(x_{n})=M$                                              | by squeeze                 |
+|      | $(x_{n})$ is bounded                                                                        |                            |
+|      | $(x_{n})$ has a convergent subsequence $(x_{n_{k}})$                                        | by BW (3.32)               |
+|      | $x_{0}:=\displaystyle\lim_{ k \to \infty }x_{n_{k}}$                                        |                            |
+|      | $a\leq x_{0} \leq b$                                                                        |                            |
+|      | $\displaystyle\lim_{ k \to \infty }f(x_{n_{{k}}})=M$                                        | by 1 and 3.25              |
+|      | $f(x_{0})=\displaystyle\lim_{ k \to \infty }f(x_{n_{k}})=M$                                 | by 5.27 (f is cont.)       |
+|      | $x_{0}$ is maximum point of $f$ on $[a,b]$                                                  |                            |
 # Unit 6
 
 ## 6.15

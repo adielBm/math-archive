@@ -1,3 +1,7 @@
+
+- showing that a piecewise function is differentiable continuously
+	- 2019b.82
+
 # Existence of an Unique Solution of an Equation given by two differentiable functions
 
 - Given functions $g_1(x), g_2(x)$ that are differentiable on $\mathbb{R}$. Prove that there is only one solution of the equation $g_1(x)=g_2(x)$
@@ -17,6 +21,17 @@ ___
 - find $f'$
 	- if $f'>0$ for all $x \in (a,b)$ then $f$ is increaing on $(a,b)$
 	- else, if $f'$ is sometimes positive and sometimes negative, then find $f''$.
+
+
+
+
+- we need to show that: $\forall x>0,f(x)> 0$
+	- if we show that:
+		- 1. $\forall x>0,f'(x)> 0$. (if so, then $f$ is strictly increasing for $x>0$)
+		- 2. $\displaystyle\lim_{ x \to 0^+ }f(x)=0$ or $f(0)=0$
+	- if we show 1 and 2, then we get $\forall x>0,f(x)> 0$
+
+
 
 
 ___

@@ -21,31 +21,113 @@
 - (2.7) 
 	- 
 
-# _u_-substitution
+# Substitution
 
-- u-sub
-	- $\int f(x) \, dx$
-	- $f(x)=g(\varphi (x))\varphi'(x)$
-	- $\int g(\varphi(x))\varphi'(x) \, dx=\int g(t) \, dt$
+#### Version 1
 
-- u-sub (Thomas')
-	- $u=g(x)$ is differentiable is a differentiable function whose range is an interval I, and ƒ is continuous on I
-	- $\int f(g(x)) \cdot g'(x) \, dx=\int f(t) \, du$
+- substitute and evaluate:
+$$\int f(\varphi(x))\varphi'(x)\, dx={\color{gray}\left[\begin{align} t &= \varphi(x) \\ dt &= \varphi'(x)dx \end{align}\right]}=\int f(t) \, dt$$
+- return to $x$ by substitute $t=\varphi(x)$
+
+- assumptions:
+	- (assume $\varphi$ is continuously differentiable on $J$ )
+	- (assume $f$ is continuous on $I$, and $\varphi(J)\subseteq I$ (so that $f \circ \varphi$ is defined))
 
 
-- trigo functions
-	- $\int \frac{f'(x)}{f(x)} \, dx=\ln|f(x)|+C$
 
-- version 2
-	- $t=\varphi^{-1}(x)$
-	- $\int f(x) \, dx=\int f(\varphi(t))\varphi'(t) \, dt$ 
+
+
+
+
+###### Logarithmic Differentiation
+
+- $\displaystyle\int \frac{f'(x)}{f(x)} \, dx=\ln|f(x)|+C$
+
+###### Thomas' & Stewart
+
+- $u=g(x)$ is a differentiable function whose range is an interval I, and $f$ is continuous on I
+- $\int f(g(x)) \cdot g'(x) \, dx=\int f(u) \, du$
+
+###### Goldstein-Lay-Calculus
+
+- substitute $\begin{align} u &= g(x) \\ du &= g'(x)dx \end{align}$ (assume $g$ is continuously differentiable on $J$ )
+- Integrate the resulting function of $u$.
+- Rewrite the answer in terms of $x$ by replacing $u$ by $g(x)$
+
+
+###### Briggs
+
+
+- Given an indefinite integral involving a composite function $f(g(x))$, indentify the inner function $u=g(x)$ such that a constant multiple of the $g'(x)$ appears in the integrand.
+- Substitute $\begin{align} u &= g(x) \\ du &= g'(x)dx \end{align}$
+- Evaluate the new indefinite integral with respect to $u$.
+- Write the result in terms of $x$ by replacing $u$ by $g(x)$.
+
+
+####  Version 2
+
+- first, substitute and evaluate:
+$$\int f(x) \, dx={\color{gray}\left[\begin{align} x &= \varphi(t) \\ dx &= \varphi'(t)dt \end{align}\right]}=\int f(\varphi(t))\varphi'(t) \, dt$$
+- and then return to $x$ by substitute $t=\varphi^{-1}(x)$
+
+
+
+
+$\int f(x) \, dx=\int f(g(t))g'(t) \, dt\Big\vert_{t=g'(x)}$
 
 
 - (2.5)  $f(\alpha x+\beta)$ from (where $\alpha\neq 0$)
 	- $\displaystyle\int f(x) \, dx=F(x)+C\implies\displaystyle\int f(\alpha x+\beta) \, dx=\frac{1}{\alpha}F(\alpha x+\beta)+C$ 
 
+#### Trigonometric substitution
 
-# Basic Integration Formulas
+| Integrand containing | Substitution                                                            | Identity            |                                                       | Result of Substitution | After Simplification |
+| -------------------- | ----------------------------------------------------------------------- | ------------------- | ----------------------------------------------------- | ---------------------- | -------------------- |
+| ${a^2-x^2}$          | $x=a\sin t$ <br>$dx=a\cos t \,dt$ <br>$t=\arcsin {\frac {x}{a}}$        | $\sin^2t+\cos^2t=1$ | $-\frac{\pi}{2}\leq t\leq \frac{\pi}{2}$              | $a^2(1-\sin^2 t)$      | $a^2\cos^2t$         |
+| ${a^2+x^2}$          | $x=a\tan t$  <br>$dx=a\sec^2 t \,dt$ <br>$t=\arctan {\frac {x}{a}}$     | $\tan^2t+1=\sec^2t$ | $-\frac{\pi}{2}<t<\frac{\pi}{2}$                      | $a^2(1+\tan^2t)$       | $a^2\sec ^2t$        |
+| ${x^2-a^2}$          | $x=a\sec t$$dx=a\sec t\tan t \,dt$ <br>$t=\text{arcsec} {\frac {x}{a}}$ | $\sec^2t-1=\tan^2t$ | $0\leq t<\frac{\pi}{2}$ or $\pi\leq t<\frac{3\pi}{2}$ | $a^2(\sec^2t-1)$       | $a^2\tan ^2t$        |
+
+
+
+
+| Integrands                                     | Substitutions                                                             |
+| ---------------------------------------------- | ------------------------------------------------------------------------- |
+| $a^{2}+(f(x))^{2}$                             | $f(x)=a\tan\theta$ or<br>$a\cot\theta$ or<br>$a\sinh\theta$               |
+| $a^{2}-(f(x))^{2}$                             | $f(x)=a\sin\theta$ or <br>$a\cos\theta$                                   |
+| $(f(x))^{2}-a^{2}$                             | $f(x)=a\sec\theta$ or <br>$a \csc$ or <br>$a\cosh\theta$                  |
+| $a+f(x)$                                       | $f(x)=a\tan^{2}\theta$ or <br>$a\cot^{2}\theta$ or <br>$a\sinh^{2}\theta$ |
+| $a-f(x)$                                       | $f(x)=a\sin^{2}\theta$ or <br>$a\cos^{2}\theta$                           |
+| $f(x)-a$                                       | $f(x)=a\sec^{2}\theta$ or <br>$a \csc^2 \theta$ or <br>$\cosh^{2}\theta$  |
+| $ax-x^{2}$                                     | $x=a\sin^{2}\theta$ or<br>$a \cos² 0$                                     |
+| $(a-x)(x-b)$                                   | $x=a\cos^{2}\theta+b\sin^{2}\theta$                                       |
+| $\displaystyle\frac{a^{n}-x^{n}}{a^{n}+x^{n}}$ | $x^{n}=a^{n}\cos\theta$                                                   |
+
+
+
+
+#### Tangent half-angle substitution
+
+
+- $\displaystyle \sin x={\frac {2t}{1+t^{2}}}$
+- $\displaystyle\cos x={\frac {1-t^{2}}{1+t^{2}}}$
+- $\displaystyle dx={\frac {2}{1+t^{2}}} dt$
+
+
+- $\int f(\cos x)\sin x \, dx$ then we can substitute $t=\cos x$
+- $\int f(\sin x)\cos x \, dx$ then we can substitute $t=\sin x$
+
+
+- $\displaystyle\int \sin^{m}x\cos^{n}x \, dx$ ($m,n$ are nonnegative integers)
+	- $m$ is odd:
+		- $m=2k+1$
+		- $\sin ^m x=\sin^{2k+1}x=(\sin^2x)^{k}\sin x=(1-\cos^{2} x)^{k}\sin x$
+	- $n$ is odd: 
+		- $n=2k+1$
+		- $\cos ^n x=\cos^{2k+1}x=(\cos^2x)^{k}\cos x=(1-\sin^{2} x)^{k}\cos x$
+	- $m,n$ are even:
+		- #todo 
+
+# Integration Formulas
 
 - $\displaystyle\int 0 \, dx=C$
 - Cavalieri's quadrature formula
@@ -115,47 +197,7 @@ Decomposition of a [[rational function]] $N(x)/D(x)$ into partial fractions
 4. Quadratic factors: For each factor of the form $(ax^2 + bx + c)^n$, the partial fraction decomposition must include the following sum of $n$ fractions. $\displaystyle \frac{B_{1}x+C_{1}}{ax^2+bx+c}+\frac{B_{2}x+C_{2}}{(ax^2+bx+c)^2}+\dots+\frac{B_{n}x+C_{n}}{(ax^2+bx+c)^n}$
 
 
-# Trigonometric substitution
 
-- Integrands containing $a^2-x^2$
-	- Substitution:
-		- $x=a\sin t$ 
-		- $dx=a\cos t \,dt$ 
-		- $t =\arcsin {\frac {x}{a}}$
-
-- Integrands containing $a^2+x^2$
-	- Substitution:
-		- $x=a\tan t$ 
-		- $dx=a\sec^2 t \,dt$ 
-		- $t =\arctan {\frac {x}{a}}$
-
-- Integrands containing $x^2-a^2$
-	- Substitution:
-		- $x=a\sec t$ 
-		- $dx=a\sec t\tan t \,dt$ 
-		- $t =\text{arcsec} {\frac {x}{a}}$
-
-
-# Tangent half-angle substitution
-
-- $\displaystyle \sin x={\frac {2t}{1+t^{2}}}$
-- $\displaystyle\cos x={\frac {1-t^{2}}{1+t^{2}}}$
-- $\displaystyle dx={\frac {2}{1+t^{2}}} dt$
-
-
-- $\int f(\cos x)\sin x \, dx$ then we can substitute $t=\cos x$
-- $\int f(\sin x)\cos x \, dx$ then we can substitute $t=\sin x$
-
-
-- $\displaystyle\int \sin^{m}x\cos^{n}x \, dx$ ($m,n$ are nonnegative integers)
-	- $m$ is odd:
-		- $m=2k+1$
-		- $\sin ^m x=\sin^{2k+1}x=(\sin^2x)^{k}\sin x=(1-\cos^{2} x)^{k}\sin x$
-	- $n$ is odd: 
-		- $n=2k+1$
-		- $\cos ^n x=\cos^{2k+1}x=(\cos^2x)^{k}\cos x=(1-\sin^{2} x)^{k}\cos x$
-	- $m,n$ are even:
-		- #todo 
 
 # Definite Integrals
 
@@ -165,7 +207,14 @@ Decomposition of a [[rational function]] $N(x)/D(x)$ into partial fractions
 | Additivity     | $\displaystyle\int_a^b f(x) \; dx = \int_a^c f(x) \; dx \, + \int_c^b f(x) \; dx$ | $a<c<b$ and $f$ is integrable on $[a,b]$ |
 | Shift Property | $\displaystyle\int_a^b f(x) \; dx = \int_{a-c}^{b-c} f(x+c) \; dx$                |                                          |
 |                | $\displaystyle\int_0^a f(x) \; dx = \int_{0}^{a} f(a-x) \; dx$                    |                                          |
+|                | $\displaystyle\int ^b_{a}\alpha \, dx=\alpha(b-a)$                                |                                          |
+|                | $\displaystyle\int ^a_{a}f(x) \, dx=0$                                            |                                          |
+|                |                                                                                   |                                          |
 
+
+
+
+	
 ## Integration by parts
 
 - (2.10) Integration by parts for definite integrals
@@ -180,21 +229,7 @@ Decomposition of a [[rational function]] $N(x)/D(x)$ into partial fractions
 - $\varphi(J)\subseteq[a,b]$ (that is, $f$ is continuous on $\varphi$'s image)
 - $\varphi(\alpha)=a$ and $\varphi(\beta)=b$
 - Substitutions
-	- (substitute $x=\varphi(t)$)  $\displaystyle \int ^b_{a}f(x) \, dx =\int ^\beta_{\alpha}f(\varphi(t))\varphi'(t) \, dt$
 	- (substitute $t=\varphi(x)$)  $\displaystyle  \int ^\beta_{\alpha}f(\varphi(t))\varphi'(x) \, dx =\int ^{\varphi(\beta)}_{\varphi(\alpha)}f(t) \, dt$
+	- (substitute $x=\varphi(t)$)  $\displaystyle \int ^b_{a}f(x) \, dx =\int ^\beta_{\alpha}f(\varphi(t))\varphi'(t) \, dt$
 
-
-
-
-
-## Substitution in Definite Integrals
-
-(2.11) conditions:
-
-- $f$ is defined and continuous on $[a,b]$
-- $g$ is a function defined, continuous and continuously differentiable on an interval $J=[\alpha,\beta]$ or $J=[\beta,\alpha]$
-- $g(J)\subseteq[a,b]$ (that is, $f$ is continuous on $g$'s image)
-- $g(\alpha)=a$ and $g(\beta)=b$
-- Substitutions
-	- (substitute $x=g(t)$)  $\displaystyle \int ^b_{a}f(x) \, dx =\int ^\beta_{\alpha}f(g(t))g'(t) \, dt$
-	- (substitute $t=g(x)$)  $\displaystyle  \int ^\beta_{\alpha}f(g(x))g'(x) \, dx =\int ^{g(\beta)}_{g(\alpha)}f(t) \, dt$
+> notation: others use in $u$ and $g$ instead of $t$ and $\varphi$

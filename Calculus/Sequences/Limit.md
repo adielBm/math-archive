@@ -167,9 +167,9 @@
 # Ratio test
 
 - $(a_{n})$ is sequence (all are nonzero)
-
-- (2.48) $\displaystyle\lim_{n\to \infty }\left|{\frac {a_{n+1}}{a_{n}}}\right|<1\implies\lim_{ n \to \infty }(a_{n})=0$
-	- if $\displaystyle\lim_{n\to \infty }{\frac {a_{n+1}}{a_{n}}}>1$ (or $=\infty$) and $a_{n}>0$, then $\displaystyle\lim_{ n \to \infty }(a_{n})=\infty$
+	- (2.47) (given $0<r<1$) if $\displaystyle\left|{\frac {a_{n+1}}{a_{n}}}\right|\leq r$ for almost all $n$ then $\displaystyle\lim_{ n \to \infty }(a_{n})=0$
+	- (2.48) $\displaystyle\lim_{n\to \infty }\left|{\frac {a_{n+1}}{a_{n}}}\right|<1\implies\lim_{ n \to \infty }(a_{n})=0$
+		- if $\displaystyle\lim_{n\to \infty }{\frac {a_{n+1}}{a_{n}}}>1$ (or $=\infty$) and $a_{n}>0$, then $\displaystyle\lim_{ n \to \infty }(a_{n})=\infty$
 
 # Cantor's Lemma
 
