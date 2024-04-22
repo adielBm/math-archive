@@ -1,6 +1,9 @@
-.obsidian
-CR.md
+
+# obsidian
+.obsidian/*
+!.obsidian/community-plugins.json
+!.obsidian/core-plugins.json
+!.obsidian/core-plugins-migration.json
+!.obsidian/snippets/
+
 .gitignore
-Sandbox.md
-Table of contents.md
-Combination and Permutation.md
