@@ -1,7 +1,7 @@
 
-| Common terminology   | CLRS                        | Diagram                     |
-| -------------------- | --------------------------- | --------------------------- |
-| **Full** Binary Tree     |                             | ![cBt\|110](fullBT.svg)     |
+| Common terminology       | CLRS                            | Diagram                     |
+| ------------------------ | ------------------------------- | --------------------------- |
+| **Full** Binary Tree     |                                 | ![cBt\|110](fullBT.svg)     |
 | **Complete** Binary Tree | **Nearly Complete** Binary Tree | ![cBt\|110](completeBT.svg) |
 | **Perfect** Binary Tree  | **Complete** Binary Tree        | ![pBt\|110](perfectBT.svg)  |
 

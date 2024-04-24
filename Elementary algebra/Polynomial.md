@@ -22,9 +22,9 @@
 - every polynomial is a [[Continuity|continuous]] function on $\mathbb{R}$
 - **Factor theorem:** $p(c)=0\iff p(x)=(x-c)q(x)$. (where $\deg{q}=(n-1)$
 	- In words: $c$ is a root of the polynomial $p$ (of degree n) if and only if $(x−c)$ is a factor of $p$
-- Let $p(x)$ be a polynomial of odd degree. 
-	- Then $p$ has at least one real root
-	- $p:\mathbb{R}\to \mathbb{R}$ is surjective
+- Let $p:\mathbb{R}\to \mathbb{R}$ be a polynomial of odd degree
+	- $\exists c\in{\mathbb{R}}:p(c)=0$ (in words, $p$ has at least one real root)
+	- $p$ is surjective
 - **Remainder Theorem** - If a polynomial $p(x)$ is divided by $x − k$, then the remainder is $r = p(k)$. 
 - **Factors of a Polynomial** - Every polynomial of degree $n > 0$ with real coefficients can be written as the product of linear and quadratic factors with real coefficients, where the quadratic factors have no real zeros. #todo 
 - **Descartes' rule of signs** - The number of strictly positive roots (counting multiplicity) of $p$ is equal to the number of sign changes in the coefficients of $p$, minus a nonnegative even number

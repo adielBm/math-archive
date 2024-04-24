@@ -377,16 +377,16 @@ ____
 
 (7.9) if $f$ is differentiable at $x_{0}$, then it is continuous at $x_{0}$
 
-|  | Statement | Implied By |
-| ---- | ---- | ---- |
-| Given-1 | $f$ is differentiable at $x_{0}$ |  |
-| 1 | $\displaystyle  f'(x_{0})=\lim_{x\to{x_{0}}}{\frac{f(x)-f(x_{0})}{x-x_{0}}}$ |  |
-|  | $f(x)-f(x_{0})=\frac{f(x)-f(x_{0})}{x-x_{0}}(x-x_{0})$ |  |
-|  | $\displaystyle\lim_{ x \to x_{0} }(f(x)-f(x_{0}))=\lim_{ x \to x_{0} }\left( \frac{f(x)-f(x_{0})}{x-x_{0}}(x-x_{0}) \right)$ |  |
-|  | $\displaystyle\lim_{ x \to x_{0} }(f(x)-f(x_{0}))=\lim_{ x \to x_{0} }\frac{f(x)-f(x_{0})}{x-x_{0}}\lim_{ x \to x_{0} }(x-x_{0})$ |  |
-|  | $\displaystyle\lim_{ x \to x_{0} }(f(x)-f(x_{0}))=f'(x_{0})\cdot0=0$ | by 1 |
-|  | $\displaystyle\lim_{ x \to x_{0} }f(x)=f(x_{0})$ |  |
-|  | $f$ is continuous at $x_{0}$ |  |
+|         | Statement                                                                                                                         | Implied By |
+| ------- | --------------------------------------------------------------------------------------------------------------------------------- | ---------- |
+| Given-1 | $f$ is differentiable at $x_{0}$                                                                                                  |            |
+| 1       | $\displaystyle  f'(x_{0})=\lim_{x\to{x_{0}}}{\frac{f(x)-f(x_{0})}{x-x_{0}}}$                                                      |            |
+|         | $f(x)-f(x_{0})=\frac{f(x)-f(x_{0})}{x-x_{0}}(x-x_{0})$                                                                            |            |
+|         | $\displaystyle\lim_{ x \to x_{0} }(f(x)-f(x_{0}))=\lim_{ x \to x_{0} }\left( \frac{f(x)-f(x_{0})}{x-x_{0}}(x-x_{0}) \right)$      |            |
+|         | $\displaystyle\lim_{ x \to x_{0} }(f(x)-f(x_{0}))=\lim_{ x \to x_{0} }\frac{f(x)-f(x_{0})}{x-x_{0}}\lim_{ x \to x_{0} }(x-x_{0})$ |            |
+|         | $\displaystyle\lim_{ x \to x_{0} }(f(x)-f(x_{0}))=f'(x_{0})\cdot0=0$                                                              | by 1       |
+|         | $\displaystyle\lim_{ x \to x_{0} }f(x)=f(x_{0})$                                                                                  |            |
+|         | $f$ is continuous at $x_{0}$                                                                                                      |            |
 # Unit 8
 
 ## 8.4 (Fermat's Theorem)
@@ -415,18 +415,18 @@ ____
 
 ## 8.5 (Rolle's Theorem)
 
-|  | Statement | Implied By |
-| ---- | ---- | ---- |
-| Given-1 | $f$ is continuous on $[a,b]$ |  |
-| Given-2 | $f$ is differentiable on the $(a,b)$ |  |
-| Given-3 | $f(a)=f(b)$ |  |
-|  | $m=\min f([a,b])$, $M=\max f([a,b])$ | by W2 (5.37) |
-| if $m=M$ | $\forall x \in[a,b],f(x)=M$ |  |
-|  | $\forall c \in(a,b),f'(c)=0$ | derivative of constant function |
-| if $m\neq M$ | $\exists x_{1},x_{2}:f(x_{1})=m,f(x_{2})=M$ |  |
-|  | $f(x_{1})\neq f(x_{2})$ |  |
-|  | at least one of $x_{1},x_{2}$ is an inferior point | because Given-3: $f(a)=f(b)$ |
-|  | $\exists c\in(a,b):f'(c )=0$ | by Fermat (8.4); Given-2;  |
+|              | Statement                                          | Implied By                      |
+| ------------ | -------------------------------------------------- | ------------------------------- |
+| Given-1      | $f$ is continuous on $[a,b]$                       |                                 |
+| Given-2      | $f$ is differentiable on the $(a,b)$               |                                 |
+| Given-3      | $f(a)=f(b)$                                        |                                 |
+|              | $m=\min f([a,b])$, $M=\max f([a,b])$               | by W2 (5.37)                    |
+| if $m=M$     | $\forall x \in[a,b],f(x)=M$                        |                                 |
+|              | $\forall c \in(a,b),f'(c)=0$                       | derivative of constant function |
+| if $m\neq M$ | $\exists x_{1},x_{2}:f(x_{1})=m,f(x_{2})=M$        |                                 |
+|              | $f(x_{1})\neq f(x_{2})$                            |                                 |
+|              | at least one of $x_{1},x_{2}$ is an inferior point | because Given-3: $f(a)=f(b)$    |
+|              | $\exists c\in(a,b):f'(c )=0$                       | by Fermat (8.4); Given-2;       |
 
 
 ## (8.6) Lagrange's MVT

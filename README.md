@@ -9,6 +9,9 @@ I'd welcome any suggestions for improvement.
 
 Written using [obsidian.md](https://obsidian.md/) 💜
 
+### Tools 
 
+
+ - https://github.com/varkor/quiver - commutative diagram editor (tikzcd)
 
  
