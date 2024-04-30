@@ -92,8 +92,6 @@
 
 
 
-	
-
 - $f$ is continuous on $I$, differentiable at every inferior point of $I$
 	- **First Derivative Test for Monotonicity** (q8.28, 8.18, 8.7, q7.12b, q8.29) 
 		- $f'(x)\geq 0\iff$ $f$ is **weakly increasing** on $I$

@@ -24,8 +24,13 @@ ___
 
 
 
+- $f''>0$ for all $x \in(a,b)$, then by (8.18) $f'$ increaing on $(a,b)$ and if also $f'(0)=0$ then $f$ increasing on $(a,b)$ and if $f(0)=0$ then $f>0$ for all $x \in(a,b)$
 
-- we need to show that: $\forall x>0,f(x)> 0$
+
+___
+
+
+- we need to show that: $f(x)> 0$ for all $x \in(0,\infty)$
 	- if we show that:
 		- 1. $\forall x>0,f'(x)> 0$. (if so, then $f$ is strictly increasing for $x>0$)
 		- 2. $\displaystyle\lim_{ x \to 0^+ }f(x)=0$ or $f(0)=0$

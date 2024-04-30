@@ -67,6 +67,7 @@
 		- $\exists c,d\in[a,b]:\forall{x}\in[a,b],~f(c)\geq f(x) \geq{f(d)}$
 	- (q8.25) if $f$ is **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$ 
 	- (5.48) **Heine–Cantor theorem** - $f$ is uniformly continuous on it.
+	- $\forall x \in[a,b],f(x)>0\implies \inf{f((a,b))>0}$ (e2019b91q9)
 
 
 ## Examples

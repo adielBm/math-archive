@@ -10,7 +10,7 @@ I'd welcome any suggestions for improvement.
 
 ### Tools 
 
-- Written using [obsidian.md](https://obsidian.md/) 💜, a note taking app using markdown files
+- Written using [obsidian.md](https://obsidian.md/) a note taking app using markdown files
 	- plugins https://github.com/adielBm/math/blob/main/.obsidian/community-plugins.json
 - [obsidian-zole](https://github.com/ppeetteerrs/obsidian-zola) - to publish obsidian notes as a static site on Netlify 
 - https://www.wolframalpha.com/ 

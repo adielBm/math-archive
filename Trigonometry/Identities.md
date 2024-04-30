@@ -63,11 +63,11 @@ ___
 ___
 
 
-|  | $\sin$ | $\cos$ |
-| ---- | ---- | ---- |
-| $1$ | $2k\pi+\frac{\pi}{2}$ | $2k\pi$ |
-| $0$ | $k\pi$ | $(2k+1)\frac{2}{\pi}$ |
-| $-1$ | $2k\pi-\frac{\pi}{2}$ | $(2k + 1)\pi$ |
+|      | $\sin$                | $\cos$                                         |
+| ---- | --------------------- | ---------------------------------------------- |
+| $1$  | $2k\pi+\frac{\pi}{2}$ | $2k\pi$                                        |
+| $0$  | $k\pi$                | $(2k\pm 1)\frac{\pi}{2}=\pi k\pm\frac{\pi}{2}$ |
+| $-1$ | $2k\pi-\frac{\pi}{2}$ | $(2k + 1)\pi$                                  |
 ### Inverse trigonometric functions
 
 - $\arcsin(x),~ \arccos(x), ~\arctan(x)$
