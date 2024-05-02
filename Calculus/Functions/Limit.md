@@ -159,7 +159,7 @@ ____
  $$\displaystyle \lim_{{x \to x_0}} \frac{f(x)}{g(x)} =  \lim_{{x \to x_0}} \frac{f'(x)}{g'(x)}$$
 # Indeterminate form
 
-$$\displaystyle  {\frac {0}{0}},~{\frac {\infty }{\infty }},~0\times \infty ,~\infty -\infty ,~0^{0},~1^{\infty },{\text{ and }}\infty ^{0}$$
+$$\displaystyle  {\frac {0}{0}},\quad{\frac {\infty }{\infty }},\quad0\times \infty ,\quad\infty -\infty ,\quad0^{0},\quad1^{\infty },\quad\infty ^{0}$$
 
 |  |  | Transformation to $\frac{0}{0}$ | Transformation to $\frac{∞}{∞}$ |
 | ---- | ---- | ---- | ---- |
