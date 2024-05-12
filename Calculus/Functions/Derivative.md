@@ -93,28 +93,25 @@
 
 
 - $f$ is continuous on $I$, differentiable at every inferior point of $I$
-	- **First Derivative Test for Monotonicity** (q8.28, 8.18, 8.7, q7.12b, q8.29) 
+	- **First Derivative Test for Monotonicity** (q8.28, 8.18, q8.29) 
 		- $f'(x)\geq 0\iff$ $f$ is **weakly increasing** on $I$
 		- $f'(x)>0\implies$ $f$ is **increasing** on $I$
 		- $f'(x)\leq0\iff$ $f$ is **weakly decreasing** on $I$
 		- $f'(x)<0\implies$ $f$ is **decreasing** on $I$
-		- $f'(x)=0\iff$ $f$ is **constant** on $I$ 
 		- $f$ is **increasing** on $I$, if and only if, $f'(x)\geq0$, and there is no subinterval on which $f'(x)=0$ for all $x$ in it
 		- $f$ is **decreasing** on $I$, if and only if, $f'(x)\leq0$, and there is no subinterval on which $f'(x)=0$ for all $x$ in it
-
 - if $f$ is continuous on $[a,b]$ and **monotonic** on $(a,b)$ then $f$ is **monotonic** on $[a,b]$  (by q8.25)
 
-
-
-
-- $f$ is differentiable at every inferior point of $I$
-	- (q8.11) $f'(x)=0\implies f(x)=c$
-
+- Constant function theorem
+	- (q7.12b) $f \text{ is constant on dom}(f) \implies\forall x \in \text{dom}(f),f'(x)=0$ 
+	- (8.7) $f$ is continuous on $[a,b]$ and differentiable $(a,b)$ then: 
+		- $\forall x \in(a,b), f'(x)=0\implies f \text{ is constant on } [a,b]$
+	- $f$ is differentiable on $I=(a,b),(a,\infty),(-\infty,b),(-\infty,\infty)$
+		- (8.8, q8.11) $\forall x \in I,\left(f'(x)=0\implies f(x)=c\right)$
 
 
 - $f$ is continuous on $[0,\infty)$, differentiable on the $(0,\infty)$
 	- $\displaystyle(\exists c>0:\forall x>0,f'(x)\geq c)\implies \lim_{ x \to \infty }f(x)=\infty$ (e2019c.91.q2b)
-
 
 - $f$ is differentiable on $[a,b]$ 
 	- (8.10) **Darboux's theorem** - $f'$ has the intermediate value property, i.e. $(\displaystyle  {\min(f'(a),f'(b))\leq t\leq\max(f'(a),f'(b))})\implies{\exists{c}\in{[a,b]}:f'(c)=t}$

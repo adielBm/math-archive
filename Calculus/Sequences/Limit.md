@@ -156,13 +156,10 @@
 - (q2.29) Let $a_{1},\dots ,a_{k}\geq 0$, then $\displaystyle\lim_{n\to\infty} \sqrt[n]{\sum_{i=1}^k a_{i}^n}=\max\{ {a_{1},\dots ,a_{k}} \}$
 - #todo For any continuous function $f$, if $\lim_{n\to \infty }a_{n}$ exists, then $\lim_{n\to \infty }f\left(a_{n}\right)$ exists too.
 
-- (some exam) 
-
-
+- (some exam) given $(a_{n})$ is positive
 	- $\displaystyle\lim_{ n \to \infty }(a_{n})>0\implies \lim_{ n \to \infty }\sqrt{ a_{n} }=1$
-
 	- $\displaystyle\lim_{ n \to \infty }(a_{n})=\infty\implies \lim_{ n \to \infty }\sqrt{ a_{n} }>1$
-
+	- $\displaystyle\lim_{ n \to \infty }(a_{n})=\infty\implies\sqrt{ a_{n} }>1$ for almost all $n$
 
 # Ratio test
 

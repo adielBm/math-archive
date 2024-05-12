@@ -36,7 +36,6 @@ A **proof system** consists of a language, rules of inference and axioms
 
 #todo 
 
-____
 
-- section 4.1.2, 4.1.3 see wiki Functional completeness, truth functionally complete
-	- קבוצת קשרים שלמה
+
+

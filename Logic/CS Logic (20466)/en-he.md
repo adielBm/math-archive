@@ -13,7 +13,7 @@
 | קשר $n$-מקומי                  | $n$-ary connective     |                                                                         |     |
 | (העומק הקשרי, הדרגה            | degree                 |                                                                         |     |
 | עצי הצגה                       |                        |                                                                         |     |
-| מודל, פירוש                    | model                  | Valuation, truth assignment, valuation function                         |     |
+| מודל, פירוש                    | model                  | Valuation, truth assignment, valuation function, השמה                   |     |
 | כלל הניתוק                     | Modus Ponens           | MP                                                                      |     |
 |                                |                        |                                                                         |     |
 | אינדוקציה מבנית (הוכחה, הגדרה) |                        |                                                                         |     |

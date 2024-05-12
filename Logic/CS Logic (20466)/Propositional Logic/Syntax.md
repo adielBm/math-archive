@@ -1,4 +1,6 @@
-### The language of the Propositional Logic
+### Language
+
+The language of the Propositional Logic:
 
 - Logical Connectives
 	- Unary connective

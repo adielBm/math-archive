@@ -1,5 +1,4 @@
 
-
 | Heb. Course         | Eng                                                      |                         |
 | ------------------- | -------------------------------------------------------- | ----------------------- |
 | פולינום טיילור      | $n$th order **Taylor polynomial** of $f$ centered at $a$ | $P_{n},P_{n}(x;a),T(x)$ |
@@ -9,8 +8,7 @@
 - Let $f$ be a [[Derivative#Higher-order derivatives|n-times differentiable]] function, the polynomial $$\displaystyle P_{n}(x)=\sum _{k=0}^{n}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k}$$ is called the $n$th order **Taylor polynomial** of $f$ centered at $a$.
 - When $a=0$, the polynomial $$P_{n}(x)=\sum _{n=0}^{n}{\frac {f^{(k)}(0)}{k!}}x^{k}$$ is called also the **Maclaurin polynomial** of $f$
 - The function $R_{n}(x)=f(x)-P_{n}(x)$ is called the n-th **remainder** of $f$ at $a$
-	- (פיתוח טיילור) $$f(x)=P_{n}(x)+R_{n}(x)$$ 
-
+	- (פיתוח טיילור) $f(x)=P_{n}(x)+R_{n}(x)$ 
 - Properties
 	- $P_{n}^{(m)}(a)=f^{(m)}(a)$ (for all $m=0,\dots,n$)
 	- (q4.11) Let $f(x)=x^k$ for $k\in\mathbb{N}$, and $P_{n}(x)$ Maclaurin polynomial of $f$, and $R_{n}(x)$ the reminder, then
