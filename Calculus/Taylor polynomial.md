@@ -1,19 +1,38 @@
 
-| Heb. Course         | Eng                                                      |                         |
-| ------------------- | -------------------------------------------------------- | ----------------------- |
-| פולינום טיילור      | $n$th order **Taylor polynomial** of $f$ centered at $a$ | $P_{n},P_{n}(x;a),T(x)$ |
-| פיתוח טיילור/מקלורן |                                                          | $f(x)=P_{n}+R_{n}$      |
-| שארית של $f$        |                                                          | $R_{n}=f(x)-P_{n}(x)$   |
 
-- Let $f$ be a [[Derivative#Higher-order derivatives|n-times differentiable]] function, the polynomial $$\displaystyle P_{n}(x)=\sum _{k=0}^{n}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k}$$ is called the $n$th order **Taylor polynomial** of $f$ centered at $a$.
+
+- Let $f$ be a [[Derivative#Higher-order derivatives|n-times differentiable]] function, the polynomial $$\displaystyle P_{n}(x)=\sum _{k=0}^{n}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k}$$ is called the $n$th order **Taylor polynomial** (פולינום טיילור) of $f$ centered at $a$.
+	- The function $R_{n}(x)=f(x)-P_{n}(x)$ is called the $n$-th [[#Remainder Term|remainder]] of $f$ at $a$
+	- The representation $f(x)=P_{n}(x)+R_{n}(x)$ of $f$ is called $n$th order (פיתוח טיילור) of $f$ centered at $a$ 
+
+
+
 - When $a=0$, the polynomial $$P_{n}(x)=\sum _{n=0}^{n}{\frac {f^{(k)}(0)}{k!}}x^{k}$$ is called also the **Maclaurin polynomial** of $f$
-- The function $R_{n}(x)=f(x)-P_{n}(x)$ is called the n-th **remainder** of $f$ at $a$
-	- (פיתוח טיילור) $f(x)=P_{n}(x)+R_{n}(x)$ 
+
 - Properties
 	- $P_{n}^{(m)}(a)=f^{(m)}(a)$ (for all $m=0,\dots,n$)
 	- (q4.11) Let $f(x)=x^k$ for $k\in\mathbb{N}$, and $P_{n}(x)$ Maclaurin polynomial of $f$, and $R_{n}(x)$ the reminder, then
 		- for all $k>n$, $f(x)=R_{n}(x)$
 		- for all $k\leq n$, $f(x)=P_{n}(x)$
+
+
+
+
+
+
+# Remainder Term
+
+- (4.7) If $f$ is a $n$ times differentiable (at $a$) function where $R_{n}(x)$ is its n-th remainder at $a$, then $\displaystyle\lim_{ x \to a }\frac{R_{n}(x)}{(x-a)^n}=0$
+- (4.8) (**Uniqueness of Taylor Polynomial**)  If $f$ is a $n$ times differentiable (at $a$) function and $P_{n}$ is a polynomial and $\displaystyle\lim_{ x \to a }\frac{f(x)-P_{n}(x)}{(x-a)}=\lim_{ x \to a }\frac{R_{n}(x)}{(x-a)}=0$ then $P_{n}$ is the $n$th order **Taylor polynomial** of $f$ centered at $a$
+
+#### Lagrange’s Form
+
+- (4.4) if $f$ is a $n+1$ times differentiable function on $I$ where $a\in I$ and $R_{n}(x)$ is the n-th remainder of $f$ at $a$. then:
+	- (**Lagrange’s Form**) there exists a number $c$ between $a$ and $x$ s.t: $$\displaystyle R_{n}(x)=\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$$
+
+
+- (page-70) if $f$ is continuous on $[a,b]$ (or $[b,a]$), and $n+1$ times differentiable in $(a,b)$ (or $(b,a)$), and and $n$ times differentiable in $a$ such that $f^{(n)}(x)$ is continuous at $a$, then there exists $c$ between $a$ and $b$ for which $\displaystyle R_{n}(b)=\frac{f^{(n+1)}(c)}{(n+1)!}(b-a)^{n+1}$ that is $\displaystyle f(b)=\sum^{n}_{k=0}\frac{f^{(n)}(a)}{k!}(b-a)^k+\frac{f^{(n+1)}(c)}{(n+1)!}(b-a)^{n+1}$
+	- for $n=0$ it is [[Derivative#Differentiability on Interval|Lagrange's MVT]]
 
 
 
@@ -35,18 +54,11 @@
 
 > Given a number $x$, we want to evaluate $f(x)$ using $P_{n}(x)$ such that the error is less then some nubmer, what $n$ we need for that?
 
-## Remainder Term
-
-- (4.4) $f$ is a $n+1$ times differentiable function on $I$ where $a\in I$ and $R_{n}(x)$ is the n-th remainder of $f$ at $a$. then:
-	- (**Lagrange’s Form**) there exists a number $c$ between $a$ and $x$ s.t: $$\displaystyle R_{n}(x)=\frac{f^{(n+1)}(c)}{(n+1)!}(x-a)^{n+1}$$
-
-
-- (page-70) if $f$ is continuous on $[a,b]$ (or $[b,a]$), and $n+1$ times differentiable in $(a,b)$ (or $(b,a)$), and and $n$ times differentiable in $a$ such that $f^{(n)}(x)$ is continuous at $a$, then there exists $c$ between $a$ and $b$ for which $R_{n}(b)=\frac{f^{(n+1)}(c)}{(n+1)!}(b-a)^{n+1}$ that is $f(b)=\sum^{n}_{k=0}\frac{f^{(n)}(a)}{k!}(b-a)^k+\frac{f^{(n+1)}(c)}{(n+1)!}(b-a)^{n+1}$
-	- for $n=0$ it is [[Derivative#Differentiability on Interval|Lagrange's MVT]]
 
 
 
-- (4.7) $\displaystyle\lim_{ x \to a }\frac{R_{n}(x)}{(x-a)^n}=0$
-- (4.8) if $P_{n}$ is a polynomial and $\displaystyle\lim_{ x \to a }\frac{f(x)-P_{n}(x)}{(x-a)}=0$ then $P_{n}$ is the $n$th order **Taylor polynomial** of $f$ centered at $a$
 
+# draft 
+
+- definition lecture-4 - if $\lim_{x\to x_0}{\frac{f(x)}{{(x-x_0)}^n}}=0$ we denote $f(x)=o((x-x_0)^n)$
 

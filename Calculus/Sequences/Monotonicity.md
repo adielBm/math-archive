@@ -1,11 +1,10 @@
 
-| Monotone Sequence | $\forall n\in\mathbb{N}$ |
-| ---- | ---- |
-| Monotonically Increasing | $a_n \leq a_{n+1}$ |
-| Strictly Monotonically Increasing | $a_n < a_{n+1}$ |
-| Monotonically Decreasing | $a_n \geq a_{n+1}$ |
-| Strictly Monotonically Decreasing | $a_n > a_{n+1}$ |
-
+| Monotone Sequence                 | $\forall n\in\mathbb{N}$ |
+| --------------------------------- | ------------------------ |
+| Monotonically Increasing          | $a_n \leq a_{n+1}$       |
+| Strictly Monotonically Increasing | $a_n < a_{n+1}$          |
+| Monotonically Decreasing          | $a_n \geq a_{n+1}$       |
+| Strictly Monotonically Decreasing | $a_n > a_{n+1}$          |
 ## Monotone Convergence Theorem
 
 (3.16, 3.17)
