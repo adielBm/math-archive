@@ -98,21 +98,119 @@ then
 
 $$P_{n}(x)=\sum _{k=0}^{n}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k}=ae^{a}+({e^a + ae^a}){(x-a)}+\dots+\frac{n e^a + a e^a}{n!}(x-a)^{n}$$
 
+and then 
+
+$\boxed{P_{n}(x)=\sum _{k=0}^{n}{\frac {(a+k)e^{a}}{k!}}(x-a)^{k}}$
+
 ## Answer for B
 
-The Maclaurin polynomial of $f(x)=xe^{x}$ of order $n$ is:
+> Find the Maclaurin polynomial of $f$ of order n. 
 
-$$P_{n}(x)=\sum _{k=0}^{n}{\frac{k}{k!}}x^{k}=\sum _{k=0}^{n}{\frac{1}{(k-1)!}}x^{k}$$
+We substitute $a=0$ in the previous result:
 
-Now we have to show that for all $x$, the limit $\displaystyle\lim_{n\to\infty}R_{n}(x)=\lim_{n\to\infty}{(xe^{x}-P_{n}(x))}=0$.
+$$P_{n}(x)=\sum _{k=0}^{n}{\frac {k}{k!}}x^{k}=\sum _{k=1}^{n}{\frac{1}{(k-1)!}}x^{k}$$
 
+> And prove that for all x the remainder is approaching 0 as $n\to\infty$.
+
+the limit $\displaystyle\lim_{n\to\infty}R_{n}(x)=\lim_{n\to\infty}{(xe^{x}-P_{n}(x))}=0$.
 
 The remainder of $f$ at $a$ is:
 
 $$R_{n}(x)=\frac{f^{(n+1)}(c)}{(n+1)!}(x)^{n+1}$$
 
-where $\vert c \vert < \vert x \vert$
+where $\vert c \vert < \vert x \vert$ therfore
+
+$|e^{c}|\leq e^{|c|}\leq e^{|x|}$
+
+$$\vert R_{n}(x) \vert = \frac{\vert f^{(n+1)}(c) \vert}{(n+1)!}\vert x \vert^{n+1}= \\ = \frac{\vert (n+1)e^{c}+ce^{c} \vert}{(n+1)!}\vert x \vert^{n+1}<\frac{(n+1)e^{|x|}+|x|e^{|x|}}{(n+1)!}\vert x \vert^{n+1}= \\ = e^{|x|}\frac{n+1+|x|}{(n+1)!}\vert x \vert^{n+1}=e^{|x|}\left(\frac{ n+1}{(n+1)!}+\frac{|x|}{(n+1)!}\right)\vert x \vert^{n+1}= \\ = e^{|x|}\left(\frac{\vert x \vert^{n+1}}{n!}+\frac{\vert x \vert^{n+2}}{(n+1)!}\right)\underset{n\to\infty}{\longrightarrow}0$$
+
+
+## Answer for C
+
+> (C.) Calculate f(1/3) with an error of at most 0.5 * 10^(-2).
+
+We have to find $P_{n}(1/3)$ and $R_{n}(1/3)$, where $P_{n}(1/3)$ is the Maclaurin polynomial of $f$ of order $n$.
+
+by B, we have: $\forall x, \lim_{n\to\infty}R_{n}(x)=0$, then $\lim_{n\to\infty}R_{n}(1/3)=0$.
+
+when $n=3$, we have:
+
+$$P_{3}(x)=\sum _{k=1}^{3}{\frac{1}{(k-1)!}}x^{k}=\frac{1}{0!}x^{1}+\frac{1}{1!}x^{2}+\frac{1}{2!}x^{3}=x+x^{2}+\frac{1}{2}x^{3}$$
+
+#todo
+
+
+# Exercise 3
+
+for all $x>-1$, $x\neq 0$, show that
+
+- if $\alpha>1$ or $\alpha<0$, then $(1+x)^{\alpha}>1+\alpha x$.
+- if $0<\alpha<1$, then $(1+x)^{\alpha}<1+\alpha x$.
+
+## Answer
+
+> if $\alpha>1$ or $\alpha<0$, then $(1+x)^{\alpha}>1+\alpha x$.
+
+#todo
+
+
+# Exercise 4
+
+given $f(x)$ is a function that is $3$ times differentiable at $x=0$, and $f(0)=0$.
+
+prove that $\displaystyle\lim_{x\to 0}\frac{f(x)-f'(0)\sin x-\frac{1}{2}f''(0)\sin^2 x}{x^{3}}=\frac{f^{(3)}(0)+f'(0)}{6}$.
+
+note: it is not imply from the given that $f^{(3)}$ is defined at $x\neq 0$.
+
+hint: using Maclaurin expansion of $f(x)$ and substituting.
+
+## Answer
+
+by Maclaurin expansion of $f(x)$, we have:
+
+$$f(x)=f(0)+f'(0)x+\frac{f''(0)}{2}x^{2}+\frac{f^{(3)}(0)}{6}x^{3}+R_{3}(x)$$
+
+now we substitute in the numerator:
+
+$$f(x)-f'(0)\sin x-\frac{1}{2}f''(0)\sin^2 x = \\ = f'(0)x+\frac{f''(0)}{2}x^{2}+\frac{f^{(3)}(0)}{6}x^{3}+R_{3}(x)-f'(0)\sin x-\frac{1}{2}f''(0)\sin^2 x = \\ = f'(0)(x-\sin x)+\frac{f''(0)}{2}(x^{2}-\sin^2 x)+\frac{f^{(3)}(0)}{6}(x^{3})+R_{3}(x)$$ 
+
+by Maclaurin expansion of $\sin x$, we have:
+
+$$\sin x=x-\frac{x^{3}}{3!}+S_{3}(x)\implies x-\sin x=\frac{x^{3}}{3!}-S_{3}(x)$$
+
+and also $x^{2}-\sin^2 x=(x-\sin x)(x+\sin x)=\left(\frac{x^{3}}{3!}-S_{3}(x)\right)(x+\sin x)$.
 
 then
 
-$$\vert R_{n}(x) \vert = \frac{\vert f^{(n+1)}(c) \vert}{(n+1)!}\vert x \vert^{n+1}= \frac{\vert (n+1)e^{c}+ce^{c} \vert}{(n+1)!}\vert x \vert^{n+1}$$
+$$f(x)-f'(0)\sin x-\frac{1}{2}f''(0)\sin^2 x = \\ = f'(0)\left(\frac{x^{3}}{3!}-S_{3}(x)\right)+\frac{f''(0)}{2}\left( \left(\frac{x^{3}}{3!}-S_{3}(x)\right)(x+\sin x)\right)+\frac{f^{(3)}(0)}{6}(x^{3})+R_{3}(x)$$
+
+now divide by $x^{3}$:
+
+- $\displaystyle\lim_{x\to 0}f'(0)\left(\frac{1}{3!}-\frac{S_{3}(x)}{x^{3}}\right)=\frac{f'(0)}{3!}$
+- $\displaystyle\lim_{x\to 0}\frac{f''(0)}{2}\left(\frac{1}{3!}-\frac{S_{3}(x)}{x^{3}}\right)\left(x+\sin x\right)=0$ (by 4.7)
+- $\displaystyle\lim_{x\to 0}\frac{f^{(3)}(0)}{6}=\frac{f^{(3)}(0)}{6}$
+- $\displaystyle\lim_{x\to 0}\frac{R_{3}(x)}{x^{3}}=0$ (by 4.7)
+
+therefore
+
+$$\displaystyle\lim_{x\to 0}\frac{f(x)-f'(0)\sin x-\frac{1}{2}f''(0)\sin^2 x}{x^{3}}=\frac{f^{(3)}(0)+f'(0)}{6}$$
+
+
+
+
+
+# Exercise 5
+
+use in MacLaurin expansion in appropriate n-order to calculate the following limits:
+
+- (A.) $\displaystyle\lim_{x\to 0}\left(\frac{1}{\ln(1+x^2)}-\frac{x^2+x^4}{(x^2-2x^4)^2}\right)$.
+- (B.) $\displaystyle\lim_{n \to \infty}\left(n^3 \tan\left(\frac{1}{n}\right)-n^2 \exp\left(\frac{1}{n^2}\right)\right)$. (note: it's a limit of a sequence).
+
+
+## Answer for A
+
+#todo
+
+## Answer for B
+
+#todo

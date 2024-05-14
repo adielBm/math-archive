@@ -1,4 +1,4 @@
-
+	
 
 
 - Let $f$ be a [[Derivative#Higher-order derivatives|n-times differentiable]] function, the polynomial $$\displaystyle P_{n}(x)=\sum _{k=0}^{n}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k}$$ is called the $n$th order **Taylor polynomial** (פולינום טיילור) of $f$ centered at $a$.
@@ -14,9 +14,6 @@
 	- (q4.11) Let $f(x)=x^k$ for $k\in\mathbb{N}$, and $P_{n}(x)$ Maclaurin polynomial of $f$, and $R_{n}(x)$ the reminder, then
 		- for all $k>n$, $f(x)=R_{n}(x)$
 		- for all $k\leq n$, $f(x)=P_{n}(x)$
-
-
-
 
 
 

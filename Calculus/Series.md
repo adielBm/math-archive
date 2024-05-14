@@ -18,7 +18,7 @@
 
 - A **geomorphic series** is a series of the form $\sum_{n=0}^{\infty}ar^n$ where $a\neq0$ and the **common ratio** $r$ are constants.
 	- Finite series
-		-  ${\sum _{k=1}^{n}ar^{k-1}={\frac {a(1-r^{n})}{1-r}}}$
+		- ${\displaystyle\sum _{k=1}^{n}ar^{k-1}={\begin{cases}a\left({\frac {1-r^{n}}{1-r}}\right)&r\neq 1\\an&{\text{otherwise}}\end{cases}}}$
 	- Infinite series
 		- if $|r|<1$, $\sum_{n=0}^{\infty}ar^n=\frac{a}{1-r}$.
 		- if $|r|\geq1$, $\sum_{n=0}^{\infty}ar^n$ diverges.
@@ -86,6 +86,7 @@
 	- If $\sum a_n$ diverges, then $\sum b_n$ diverges.	(they both diverge to infinity)
 
 ## Limit Comparison Test
+ 
 
 - The Limit Comparison Test (5.15, "second") - Given series $\sum a_n$ and $\sum b_n$. If $\displaystyle\lim_{n\to\infty}\frac{a_n}{b_n}=c$, where $c$ is a positive real number, then
 	- The series $\sum a_n$ converges, if and only if the series $\sum b_n$ converges.
@@ -120,7 +121,16 @@
 
 ## Cauchy Condensation Test
 
-- (5.18) Cauchy condensation test - Let $(a_n)$ be a [[Calculus/Sequences/Monotonicity|decreasing]] sequence of nonnegative terms. The series $\sum_{n=1}^{\infty}a_n$ converges if and only if the series $\sum_{n=1}^{\infty}2^na_{2^n}$ converges.
+- (5.18) Cauchy condensation test - Let $(a_n)$ be a [[Sequences/Monotonicity|decreasing]] sequence of nonnegative terms. The series $\sum_{n=1}^{\infty}a_n$ converges if and only if the series $\sum_{n=1}^{\infty}2^na_{2^n}$ converges.
+
+
+## Alternating series test
+
+
+#todo 
+
+
+
 
 # Convergence Absolutely
 
