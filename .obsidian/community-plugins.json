@@ -1,8 +1,9 @@
 [
   "obsidian-git",
-  "quick-latex",
   "obsidian-hide-sidebars-when-narrow",
   "obsidian-minimal-settings",
+  "obsidian-tikzjax",
   "obsidian-latex-suite",
-  "obsidian-tikzjax"
+  "quick-latex",
+  "darlal-switcher-plus"
 ]
