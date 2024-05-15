@@ -17,10 +17,10 @@ Let $f$ be a [[Derivative#Higher-order derivatives|n-times differentiable]] func
 
 # Exercise 1
 
-- Show that $1+\frac{x-1}{2}-\frac{(x-1)^2}{8}$ approachs $\sqrt{x}$ in $[\frac{1}{2},\frac{3}{2}]$ in approximation of one digit after the decimal point. (i.e. in apporx of 0.5 * 10^(-1)).
+Show that $1+\frac{x-1}{2}-\frac{(x-1)^2}{8}$ approachs $\sqrt{x}$ in $[\frac{1}{2},\frac{3}{2}]$ in approximation of one digit after the decimal point. (i.e. in apporx of 0.5 * 10^(-1)).
 
 
-answer:
+## Answer 1
 
 We have to show that $\displaystyle\left|\sqrt{x}-(1+\frac{x-1}{2}-\frac{(x-1)^2}{8})\right|< 0.5 \cdot 10^{-1}=\frac{1}{20}$ for all $x\in[\frac{1}{2},\frac{3}{2}]$.
 
@@ -77,7 +77,7 @@ Given $f(x)=xe^{x}$.
 	- Remark: The point c of lagrange's form is dependent on n.
 - (C.) Calculate f(1/3) with an error of at most 0.5 * 10^(-2).
 
-## Answer for A
+## Answer 2a
 
 The $n$th order Taylor polynomial of $f$ centered at $x=a$ is:
 
@@ -102,7 +102,7 @@ and then
 
 $\boxed{P_{n}(x)=\sum _{k=0}^{n}{\frac {(a+k)e^{a}}{k!}}(x-a)^{k}}$
 
-## Answer for B
+## Answer 2b
 
 > Find the Maclaurin polynomial of $f$ of order n. 
 
@@ -125,7 +125,7 @@ $|e^{c}|\leq e^{|c|}\leq e^{|x|}$
 $$\vert R_{n}(x) \vert = \frac{\vert f^{(n+1)}(c) \vert}{(n+1)!}\vert x \vert^{n+1}= \\ = \frac{\vert (n+1)e^{c}+ce^{c} \vert}{(n+1)!}\vert x \vert^{n+1}<\frac{(n+1)e^{|x|}+|x|e^{|x|}}{(n+1)!}\vert x \vert^{n+1}= \\ = e^{|x|}\frac{n+1+|x|}{(n+1)!}\vert x \vert^{n+1}=e^{|x|}\left(\frac{ n+1}{(n+1)!}+\frac{|x|}{(n+1)!}\right)\vert x \vert^{n+1}= \\ = e^{|x|}\left(\frac{\vert x \vert^{n+1}}{n!}+\frac{\vert x \vert^{n+2}}{(n+1)!}\right)\underset{n\to\infty}{\longrightarrow}0$$
 
 
-## Answer for C
+## Answer 2c
 
 > (C.) Calculate f(1/3) with an error of at most 0.5 * 10^(-2).
 
@@ -147,12 +147,43 @@ for all $x>-1$, $x\neq 0$, show that
 - if $\alpha>1$ or $\alpha<0$, then $(1+x)^{\alpha}>1+\alpha x$.
 - if $0<\alpha<1$, then $(1+x)^{\alpha}<1+\alpha x$.
 
-## Answer
+## Answer 3
 
-> if $\alpha>1$ or $\alpha<0$, then $(1+x)^{\alpha}>1+\alpha x$.
+### Case 1: $\alpha>1$ or $\alpha<0$
 
-#todo
+The maclaurin expansion of $f(x)=(1+x)^{\alpha}$ (in order 1) is:
 
+$$f(x)=P_{1}(x)+R_{1}(x)=1+\alpha x+R_{1}(x)$$
+
+where: 
+- $P_{1}(x)=\sum _{k=0}^{1}{\frac {f^{(k)}(0)}{k!}}x^{k}=1+\alpha x$.
+- $R_{1}(x)=\frac{f^{(2)}(c)}{2!}x^{2}=\frac{\alpha(\alpha-1)}{2}x^{2}$ where $c\in(0,x)$ or $c\in(x,0)$.
+
+therefore $$f(x)=1+\alpha x+\frac{\alpha(\alpha-1)}{2}x^{2}$$
+
+also $\alpha>1\implies \alpha-1>0\implies \alpha(\alpha-1)>0$ 
+
+or $\alpha<0\implies \alpha-1<0\implies \alpha(\alpha-1)>0$.
+
+then $\alpha(\alpha-1)>0$.
+
+therefore $\frac{\alpha(\alpha-1)}{2}>0$.
+
+then $f(x)=(1+x)^{\alpha}>1+\alpha x$.
+
+### Case 2: $0<\alpha<1$
+
+as in the previous case, we have:
+
+$$f(x)=1+\alpha x+\frac{\alpha(\alpha-1)}{2}x^{2}$$
+
+and $\alpha(\alpha-1)<0$.
+
+then $\frac{\alpha(\alpha-1)}{2}<0$.
+
+then $\frac{\alpha(\alpha-1)}{2}x^{2}<0$.
+
+then $f(x)=(1+x)^{\alpha}<1+\alpha x$.
 
 # Exercise 4
 
@@ -164,7 +195,7 @@ note: it is not imply from the given that $f^{(3)}$ is defined at $x\neq 0$.
 
 hint: using Maclaurin expansion of $f(x)$ and substituting.
 
-## Answer
+## Answer 4
 
 by Maclaurin expansion of $f(x)$, we have:
 
@@ -207,10 +238,10 @@ use in MacLaurin expansion in appropriate n-order to calculate the following lim
 - (B.) $\displaystyle\lim_{n \to \infty}\left(n^3 \tan\left(\frac{1}{n}\right)-n^2 \exp\left(\frac{1}{n^2}\right)\right)$. (note: it's a limit of a sequence).
 
 
-## Answer for A
+## Answer 5a
 
 #todo
 
-## Answer for B
+## Answer 5b
 
 #todo
