@@ -7,6 +7,12 @@
 		- If $\displaystyle\lim_{n\to\infty}s_n=\infty$, then we say that the series **diverges to infinity**. And denote its sum by $\sum_{n=1}^{\infty}a_n=\infty$. 
 		- If $\displaystyle\lim_{n\to\infty}s_n=-\infty$, then we say that the series **diverges to negative infinity**. And denote its sum by $\sum_{n=1}^{\infty}a_n=-\infty$.
 
+
+#### Convergence Absolutely
+
+- (d5.7) A series $\sum_{n=1}^{\infty}a_n$ is said to **converge absolutely** if the series of absolute values $\sum_{n=1}^{\infty}|a_n|$ converges.
+- (d5.8) A series $\sum_{n=1}^{\infty}a_n$ is said to **converge conditionally** if it converges but does not converge absolutely.
+
 # Well-known Series
 
 ## Telescoping series
@@ -61,10 +67,7 @@
 
 - (5.6) If the seires $\sum \left|a_n\right|$ converges, then $\sum a_n$ converges as well.
 
-## Integral Test
-
-- Let $\sum_{k=1}^{\infty}a_k$ be a series of positive terms. If $f$ is a continuous, positive, and decreasing function on $[a, \infty)$ such that $f(k)=a_k$ for all $k\geq a$, then the series $\displaystyle\sum_{k=1}^{\infty}a_k$ and the improper integral $\displaystyle\int_{a}^{\infty}f(x)dx$ either both converge or both diverge.
-
+## todo 
 
 - (5.11) #todo 
 - (5.12) Let $k$ be a natural number. The series $\sum_{n=1}^{\infty}a_n$ converges if and only if the series $\sum_{n=1}^{\infty}a_{n+k}$ converges.
@@ -78,22 +81,24 @@
 		- In this case, $\sum_{n=1}^{\infty}a_n=\lim(s_n)=\sup\{s_n:n\in\mathbb{N}\}$ 
 	- The series $\sum_{n=1}^{\infty}a_n$ diverges to infinity if and only if $(s_n)$ is unbounded. 
 
+## Comparison test
 
-## Direct Comparison test
+Given series $\sum a_n$ and $\sum b_n$.
+#### Direct Comparison test
 
-- The Comparison Test (5.14, "first") - Given series $\sum a_n$ and $\sum b_n$. If $0\leq a_n\leq b_n$ for all $n>N$, then
+- The Comparison Test (5.14, "first") If $0\leq a_n\leq b_n$ for all $n>N$, then
 	- If $\sum b_n$ converges, then $\sum a_n$ converges.
-	- If $\sum a_n$ diverges, then $\sum b_n$ diverges.	(they both diverge to infinity)
+	- If $\sum a_n$ diverges, then $\sum b_n$ diverges. (they both diverge to infinity)
 
-## Limit Comparison Test
- 
+#### Limit Comparison Test
 
-- The Limit Comparison Test (5.15, "second") - Given series $\sum a_n$ and $\sum b_n$. If $\displaystyle\lim_{n\to\infty}\frac{a_n}{b_n}=c$, where $c$ is a positive real number, then
+Given $a_n\geq0$ and $b_n\geq0$ for all $n>N$.
+
+- (5.15, "second") If $\displaystyle\lim_{n\to\infty}\frac{a_n}{b_n}=c$, where $c$ is a positive real number, then
 	- The series $\sum a_n$ converges, if and only if the series $\sum b_n$ converges.
-- (q5.21) Given $a_n\geq0$ and $b_n\geq0$ for all $n>N$. 
+- (q5.21) 
 	- If $\displaystyle\lim_{n\to\infty}\frac{a_n}{b_n}=0$, and $\sum b_n$ converges, then $\sum a_n$ converges.
 	- If $\displaystyle\lim_{n\to\infty}\frac{a_n}{b_n}=\infty$, and $\sum b_n$ diverges, then $\sum a_n$ diverges.
-
 ## Root test (Cauchy)
 
 - (5.16) Root test (Cauchy)
@@ -123,21 +128,53 @@
 
 - (5.18) Cauchy condensation test - Let $(a_n)$ be a [[Sequences/Monotonicity|decreasing]] sequence of nonnegative terms. The series $\sum_{n=1}^{\infty}a_n$ converges if and only if the series $\sum_{n=1}^{\infty}2^na_{2^n}$ converges.
 
+## Integral Test
 
-## Alternating series test
+(5.19) 
+
+- Given a series $\sum a_k$ of nonnegative terms, where $a_k$ is decreasing. 
+- Given $f(x)$ is decreasing (weakly), nonnegative on $[1,\infty)$, and integrable every fintie interval. And $a_n=f(n)$ for all $n\in\mathbb{N}$.
+
+The series $\sum a_k$ converges if and only if the improper integral $\int_{1}^{\infty}f(x)dx$ converges.
+
+> We can use integral test also when $f$ is decreasing and nonnegative on $[k_0,\infty)$ for some $k_0\in\mathbb{N}$. In this case, the series $\sum_{k=k_0}^{\infty}a_k$ converges if and only if the improper integral $\int_{k_0}^{\infty}f(x)dx$ converges. Hence, the series $\sum_{k=1}^{\infty}a_k$ converges if and only if the series $\sum_{k=k_0}^{\infty}a_k$ converges.
+
+## Alternating Series Test (Leibniz)
+
+- (5.20) Let $(a_n)$ be a decreasing, null, (thus nonnegative) sequence. Then:
+	- (A.) The series $\sum_{n=1}^{\infty}(-1)^{n+1}a_n$ converges. (This is a special case of [[#Dirichlet's test]]. see q5.32)
+	- Alternating Series Estimation Theorem - If $S=\sum (-1)^{n+1}a_n$, and $S_n$ is the $n$-th partial sum, then for all $n$ we have:
+		- (B.) $S$ is between $S_n$ and $S_{n+1}$.
+		- (C.) The error $|S-S_n|$ is less than $a_{n+1}$.
+
+> A seires of the form $\sum (-1)^{n+1}a_n$ is called an **alternating series**
+
+> These conclusions hold also for the series $\sum (-1)^{n}a_n$.
+
+## Dirichlet's test
+
+- (5.22) Let $\sum a_k$ be a bounded series (i.e., the sequence of partial sums is bounded). Let $(b_k)$ be a monotone sequence that converges to $0$. Then the series $\sum a_kb_k$ converges.
 
 
-#todo 
+## Abel's test
+
+- (5.23) Let $\sum a_k$ be a convergent series, and let $(b_k)$ be a sequence that is bounded and monotone. Then the series $\sum a_kb_k$ converges.
+
+# Rearranging Series
+
+- If $\sum a_n$ absolutely converges, then every series obtained by reordering the terms of $\sum a_n$ absolutely converges to the same sum. (Known as Riemann's theorem, or the Riemann rearrangement theorem or Riemann's theorem on rearrangement of series.)
+- If $\sum a_n$ converges conditionally, then there exists a permutation of the terms of $\sum a_n$ that converges to any real number or diverges. (Known as the Riemann series theorem)
+- If $\sum a_n$ converges, then every series obtained by inserting parentheses, converges to the same sum. (Known as the associative law for series.)
 
 
+- (5.25) If $\sum a_n$ is a series of nonnegative terms, and $\sum b_n$ that obtains by rearranging the terms of $\sum a_n$, then $\sum b_n$ converges if and only if $\sum a_n$ converges. In this case, $\sum a_n=\sum b_n$. (Riemann's theorem)
 
+- (5.26) If $\sum a_n$ is a series, and $\sum b_n$ that obtains by rearranging the terms of $\sum a_n$, then $\sum b_n$ absolutely converges if and only if $\sum a_n$ absolutely converges. In this case, $\sum a_n=\sum b_n$. (Riemann's theorem)
 
-# Convergence Absolutely
-
-- (d5.7) A series $\sum_{n=1}^{\infty}a_n$ is said to **converge absolutely** if the series of absolute values $\sum_{n=1}^{\infty}|a_n|$ converges.
-- (d5.8) A series $\sum_{n=1}^{\infty}a_n$ is said to **converge conditionally** if it converges but does not converge absolutely.
-
-
+- (5.27) Riemann series theorem for conditional convergence - If $\sum a_n$ converges conditionally, then: 
+	- for every $S\in\mathbb{R}$, there exists a series that obtains by rearranging the terms of $\sum a_n$ such that $S$ is its sum. 
+	- Also there exists series that obtains by rearranging the terms of $\sum a_n$ that diverges to $\infty$ and $-\infty$.
+	- Also, there exists a series that obtains by rearranging the terms of $\sum a_n$ that diverges. (not to $\infty$ or $-\infty$)
 
 # Exmaples
 
@@ -149,8 +186,23 @@
 - $\displaystyle\ln(1-x)=-\sum_{n=1}^{\infty}\frac{1}{n}x^{n}$
 
 
+# Series of Functions (6)
 
+## Pointwise Convergence and Uniform Convergence (6.1)
 
+- Sequences of Functions, Pointwise Convergence
+- Uniform Convergence
+- Series of Functions
+- Uniform Convergence and Continuity of Limit Function
+- Cauchy Test for Uniform Convergence
+- Differentiation and Integration Term-by-Term
+
+## Power Series (6.2)
+
+- Convergence Radius of Power Series
+- Behavior of Power Series at Points $|x|=R$
+- Taylor Series
+- Expansion of the Function $(1+x)^\alpha$ into Power Series
 
 
 
