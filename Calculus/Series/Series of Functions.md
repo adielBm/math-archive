@@ -7,4 +7,10 @@
 - Cauchy Test for Uniform Convergence
 - Differentiation and Integration Term-by-Term
 
- 
+
+
+
+___
+
+
+#todo  https://en.wikipedia.org/wiki/Series_expansion

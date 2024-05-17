@@ -10,8 +10,9 @@ Number of ways to distribute **$k$ identical Balls** into **$n$ distinct Boxes**
 $$D(n,k)=\left(\!\!{n\choose k}\!\!\right)=\binom{n+k-1}{n-1}=\binom{n+k-1}{k}=\frac{(n+k-1)!}{k!\,(n-1)!}$$
 
 ## Counting solutions of equation
-can also be used for number of **nonnegative** solutions^[for the equation $x_1+x_2=10$, there are also solution $6+4=10$ and $4+6=10$ and these are considered as two solution. for consider them as a single solution use in [[Generating function#Partition]]] of equation $t_1+\cdots+t_n=k$. i.e. the number of solutions is: $$\binom{n+k-1}{k}=\binom{n+k-1}{n-1}$$.
+can also be used for number of **nonnegative** solutions of equation $t_1+\cdots+t_n=k$. i.e. the number of solutions is: $$\binom{n+k-1}{k}=\binom{n+k-1}{n-1}$$.
 
+> (for the equation $x_1+x_2=10$, there are also solution $6+4=10$ and $4+6=10$ and these are considered as two solution. for consider them as a single solution use in [[Generating Functions#Partition|generating function]] ) 
 ### Restrictions
 #### Minimum restrictions
 - positive integers (strictly) solutions ($t_i \ge 1$ for any $i \le n$) for $t_1+\cdots+t_n=k$ need to add $-1\cdot n$ to $k$
@@ -25,7 +26,7 @@ $$\binom{n+k-p-1}{k-p}$$
 $$\binom{n+k-(p\cdot m)-1}{k-(p\cdot m)}$$
 
 ##### Maximum restrictions
-- by [[Generating function]]
+- by [[Generating Functions]]
 - by [[Inclusion–exclusion principle]] with Minimum restrictions. for e.g, the solutions for $t_1+\cdots+t_n=k$ such that $t_i \lt p$. for each $i \leq n$
 $$\sum^{n}_{i=0}{(-1)^i\binom{n}{i}\binom{n+k-pi-1}{n-1}}$$
 
