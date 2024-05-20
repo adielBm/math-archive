@@ -18,4 +18,4 @@ I'd welcome any suggestions for improvement.
 - https://detexify.kirelabs.org/classify.html LaTeX handwritten symbol recognition
 - https://github.com/varkor/quiver - commutative diagram editor (tikzcd)
 
- 
+

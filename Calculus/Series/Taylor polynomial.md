@@ -3,7 +3,7 @@
 
 - Let $f$ be a [[Derivative#Higher-order derivatives|n-times differentiable]] function, the polynomial $$\displaystyle P_{n}(x)=\sum _{k=0}^{n}{\frac {f^{(k)}(a)}{k!}}(x-a)^{k}$$ is called the $n$th order **Taylor polynomial** (פולינום טיילור) of $f$ centered at $a$.
 	- The function $R_{n}(x)=f(x)-P_{n}(x)$ is called the $n$-th [[#Remainder Term|remainder]] of $f$ at $a$
-	- The representation $f(x)=P_{n}(x)+R_{n}(x)$ of $f$ is called $n$th order (פיתוח טיילור) of $f$ centered at $a$ 
+	- The representation $f(x)=P_{n}(x)+R_{n}(x)$ of $f$ is called $n$th order **Taylor’s formula with remainder** (פיתוח טיילור) of $f$ centered at $a$ 
 
 
 
